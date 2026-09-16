@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>My Collection — Cyberpunk TCG Tracker</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="collection.css" />
+</head>
+<body class="collection-body">
+  <header class="collection-header">
+    <h1>MY <span class="accent">COLLECTION</span></h1>
+    <div class="tabs" id="type-tabs">
+      <button class="tab-btn" data-type="Legend">LEGENDS</button>
+      <button class="tab-btn" data-type="Unit">UNITS</button>
+      <button class="tab-btn" data-type="Gear">GEAR</button>
+      <button class="tab-btn" data-type="Program">PROGRAMS</button>
+    </div>
+    <button id="close-btn" class="btn">Close</button>
+  </header>
+
+  <div class="filter-bar" id="filter-bar">
+    <span class="filter-bar-label">Show:</span>
+    <button class="filter-chip active" data-filter="all">All</button>
+    <button class="filter-chip" data-filter="full">Full Set</button>
+    <button class="filter-chip" data-filter="partial">Partial</button>
+  </div>
+
+  <main class="fan-board" id="fan-board">
+    <div class="fan-row" data-color="Red">
+      <div class="fan-row-label color-Red">RED</div>
+      <div class="fan-stack" data-row="Red"></div>
+    </div>
+    <div class="fan-row" data-color="Blue">
+      <div class="fan-row-label color-Blue">BLUE</div>
+      <div class="fan-stack" data-row="Blue"></div>
+    </div>
+    <div class="fan-row" data-color="Green">
+      <div class="fan-row-label color-Green">GREEN</div>
+      <div class="fan-stack" data-row="Green"></div>
+    </div>
+    <div class="fan-row" data-color="Yellow">
+      <div class="fan-row-label color-Yellow">YELLOW</div>
+      <div class="fan-stack" data-row="Yellow"></div>
+    </div>
+  </main>
+
+  <div id="popped-overlay" class="popped-overlay" hidden>
+    <div class="popped-card" id="popped-card">
+      <img id="popped-img" src="" alt="" />
+      <div class="popped-info">
+        <div class="popped-name" id="popped-name"></div>
+        <div class="popped-subname" id="popped-subname"></div>
+        <div class="popped-buckets" id="popped-buckets"></div>
+        <div class="popped-meta" id="popped-meta"></div>
+        <div class="popped-rarity" id="popped-rarity"></div>
+        <div class="popped-rules" id="popped-rules"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="collection.js"></script>
+</body>
+</html>

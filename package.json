@@ -1,0 +1,26 @@
+{
+  "name": "cyberpunk-tcg-tracker",
+  "version": "1.0.0",
+  "description": "Personal collection tracker for the Cyberpunk TCG",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.personal.cyberpunktcgtracker",
+    "productName": "Cyberpunk TCG Tracker",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}

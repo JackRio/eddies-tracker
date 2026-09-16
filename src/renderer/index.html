@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Cyberpunk TCG Tracker</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="title-block">
+      <h1>CYBERPUNK <span class="accent">TCG</span> TRACKER</h1>
+      <p class="subtitle">Personal collection database</p>
+    </div>
+    <div class="stats-block" id="stats-block">
+      <div class="stat">
+        <span class="stat-value" id="stat-owned">0</span>
+        <span class="stat-label">Printings Owned</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-complete">0%</span>
+        <span class="stat-label">Collection Complete</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="stat-total-copies">0</span>
+        <span class="stat-label">Total Copies</span>
+      </div>
+      <div class="stat-tracking" id="stat-tracking"></div>
+    </div>
+    <div class="header-actions">
+      <span id="last-updated" class="last-updated"></span>
+      <div class="header-buttons">
+        <button id="save-backup-btn" class="btn">Save</button>
+        <button id="collection-view-btn" class="btn">My Collection</button>
+        <button id="refresh-btn" class="btn btn-primary">Refresh Card Data</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-body">
+    <aside class="filters">
+      <div class="filter-group">
+        <input type="text" id="search-input" placeholder="Search cards..." />
+      </div>
+
+      <div class="filter-group">
+        <h3>Ownership</h3>
+        <select id="ownership-filter">
+          <option value="all">All Cards</option>
+          <option value="owned">Owned</option>
+          <option value="missing">Missing</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <h3>Color</h3>
+        <div id="color-filters" class="chip-list"></div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Type</h3>
+        <div id="type-filters" class="chip-list"></div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Rarity</h3>
+        <div id="rarity-filters" class="chip-list"></div>
+      </div>
+
+      <div class="filter-group">
+        <h3>Set</h3>
+        <select id="set-filter">
+          <option value="all">All Sets</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <h3>Sort</h3>
+        <select id="sort-select">
+          <option value="default">Default (Color / Type / Cost)</option>
+          <option value="name">Name (A-Z)</option>
+          <option value="cost">Cost (Low-High)</option>
+          <option value="power">Power (High-Low)</option>
+          <option value="rarity">Rarity</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <h3>Restore Backup</h3>
+        <select id="backup-select">
+          <option value="">No backups yet</option>
+        </select>
+        <button id="restore-backup-btn" class="btn btn-block" disabled>Restore Selected</button>
+      </div>
+    </aside>
+
+    <main class="card-grid-wrapper">
+      <div id="result-count" class="result-count"></div>
+      <div id="card-grid" class="card-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>No cards match your filters.</div>
+      <div id="loading-state" class="loading-state">Loading card database...</div>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
