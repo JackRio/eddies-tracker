@@ -71,8 +71,9 @@ async function init() {
 
   attachControls();
   renderPending();
-  // Anything staged from a previous visit (tab closed before the 4s flush
-  // timer fired) gets a chance to commit now instead of sitting forever.
+  // Syncing is manual (the "Commit Trades" link) - these two are just a safety
+  // net so anything staged but never synced (e.g. the tab was closed) still
+  // gets a chance to commit, without auto-syncing *during* active editing.
   if (Object.keys(getStagedDeltas()).length) flushStaged();
   window.addEventListener('pagehide', () => {
     if (Object.keys(getStagedDeltas()).length) flushStaged();
@@ -191,7 +192,7 @@ function selectCard(id) {
   el('record-status').textContent = '';
   el('record-status').className = 'status-line';
   applyBucketVisibility();
-  updatePendingCounts();
+  updateOwnedCounts();
 }
 
 function renderGiveAwayResults(query) {
@@ -244,10 +245,15 @@ function pendingDeltaFor(id, bucket) {
   return committed + stagedDeltaFor(id, bucket);
 }
 
-function updatePendingCounts() {
+// "Owned" = the last-published snapshot's count for this bucket (catalog.js
+// entries carry main/reserve/extras from collection.json as of the last
+// desktop Publish) plus whatever's been queued/staged since - i.e. what
+// you're about to actually own, not a stale number from before this trade.
+function updateOwnedCounts() {
   if (!selected) return;
   ['main', 'reserve', 'extras'].forEach((bucket) => {
-    el(`pending-${bucket}`).textContent = pendingDeltaFor(selected.id, bucket);
+    const owned = (selected[bucket] || 0) + pendingDeltaFor(selected.id, bucket);
+    el(`owned-${bucket}`).textContent = owned;
   });
 }
 
@@ -266,15 +272,14 @@ function adjust(bucket, delta) {
   stageDelta(selected.id, selected.displayName || selected.name, bucket, delta);
   if (tradedAway) stageDelta(giveAway.id, giveAway.displayName || giveAway.name, 'extras', -1);
 
-  updatePendingCounts();
+  updateOwnedCounts();
   renderPending();
   const status = el('record-status');
-  status.textContent = tradedAway ? `Queued. Also queued -1 Extras for ${giveAway.name}.` : 'Queued.';
+  status.textContent = tradedAway
+    ? `Queued. Also queued -1 Extras for ${giveAway.name}. Click "Commit Trades" when ready.`
+    : 'Queued. Click "Commit Trades" when ready.';
   status.className = 'status-line ok';
   if (tradedAway) clearGiveAway();
-
-  clearTimeout(flushTimer);
-  flushTimer = setTimeout(flushStaged, 4000);
 }
 
 // Commits everything staged since the last flush in one write - so 5 rapid
@@ -315,7 +320,7 @@ async function flushStaged() {
     });
     setStagedDeltas(map);
     renderPending();
-    if (selected) updatePendingCounts();
+    if (selected) updateOwnedCounts();
     status.textContent = `Synced ${staged.length} change${staged.length === 1 ? '' : 's'} at ${new Date().toLocaleTimeString()}.`;
     status.classList.add('ok');
   } catch (err) {
@@ -373,7 +378,7 @@ async function refreshPending() {
     const { content } = await ghGetFile('docs/data/pending-changes.json');
     pending = content;
     renderPending();
-    if (selected) updatePendingCounts();
+    if (selected) updateOwnedCounts();
     status.textContent = `Up to date as of ${new Date().toLocaleTimeString()}.`;
     status.classList.add('ok');
   } catch (err) {

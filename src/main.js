@@ -444,21 +444,31 @@ ipcMain.handle('publish:run', async () => {
   await copyNeededImages(needed);
 
   // A lightweight full catalog (no images) so the Record page can log a
-  // trade for *any* card, not just ones currently needed.
-  const catalog = cache.cards.map((c) => ({
-    id: c.id,
-    cardId: c.cardId,
-    name: c.name,
-    subname: c.subname,
-    displayName: c.displayName,
-    slug: c.slug,
-    color: c.color,
-    cardType: c.cardType,
-    rarity: c.rarity,
-    rulesText: c.rulesText,
-    set: c.set,
-    collectorNumber: c.collectorNumber
-  }));
+  // trade for *any* card, not just ones currently needed. Ownership counts
+  // are a snapshot as of this publish - the Record page adds any since-
+  // queued delta on top itself (pendingDeltaFor) to show what you're about
+  // to actually own, not just this stale snapshot.
+  const catalog = cache.cards.map((c) => {
+    const entry = collection[c.id] || { main: 0, reserve: 0, extras: 0 };
+    return {
+      id: c.id,
+      cardId: c.cardId,
+      name: c.name,
+      subname: c.subname,
+      displayName: c.displayName,
+      slug: c.slug,
+      color: c.color,
+      cardType: c.cardType,
+      rarity: c.rarity,
+      rulesText: c.rulesText,
+      set: c.set,
+      collectorNumber: c.collectorNumber,
+      cap: mainSetCap(c.cardType),
+      main: entry.main || 0,
+      reserve: entry.reserve || 0,
+      extras: entry.extras || 0
+    };
+  });
   await fs.writeFile(path.join(docsDataDir(), 'catalog.json'), JSON.stringify(catalog), 'utf-8');
   await fs.writeFile(pendingChangesPath(), JSON.stringify([], null, 2), 'utf-8');
   steps.push(`Published ${needed.main.length} Main / ${needed.reserve.length} Reserve needed.`);

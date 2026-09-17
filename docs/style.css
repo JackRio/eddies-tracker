@@ -517,8 +517,10 @@ select {
 
 .pending-panel-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .pending-panel h3 {
@@ -529,10 +531,23 @@ select {
   margin-bottom: 8px;
 }
 
-.pending-panel-header a {
+.pending-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.pending-action-btn {
   font-size: 12px;
+  font-weight: 700;
   color: var(--cyan);
-  margin-left: 12px;
+  border: 1px solid var(--cyan);
+  border-radius: 6px;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.pending-action-btn:active {
+  background: rgba(29, 225, 225, 0.15);
 }
 
 .pending-time {

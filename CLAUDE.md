@@ -256,21 +256,27 @@ immediately, even though the underlying files haven't actually changed yet.
 - `docs/record.html` + `record.js` — **Record** page. Token-gated (shows
   `#token-gate` until a token is saved and passes `verifyToken()`). Search
   box over `catalog.json`, then +/−1 buttons per bucket for the selected
-  card. Clicking one does **not** commit immediately — it nets into a
+  card, showing **Owned: N** (the last-published snapshot's count for that
+  bucket, from `catalog.json`'s `main`/`reserve`/`extras` fields, plus
+  anything queued/staged since — see `updateOwnedCounts()` — so it reads as
+  "what you're about to own," not a stale number).
+  Clicking +/− does **not** commit immediately — it nets into an
   `eddies_staged_deltas` map in `localStorage` (`stageDelta()`/
   `getStagedDeltas()` in `shared.js`) and updates the screen instantly.
-  A debounced `flushStaged()` (4s after the last click, or the "Sync now"
-  link) batches everything currently staged into **one** `ghUpdateJsonFile`
-  read-modify-write against `docs/data/pending-changes.json`. This exists
-  because committing on every single click (the original design) meant
-  every click was its own Pages rebuild, and two quick clicks on the same
-  card would race each other's `sha` into a 409 — batching means clicks
-  that cancel out (+1 then -1) never reach GitHub at all, and a burst of
-  clicks becomes one commit. If the tab closes before the timer fires, the
-  staged map persists and flushes on next load instead of being lost.
+  Committing is **manual only** (the "Commit Trades" button calls
+  `flushStaged()`, one `ghUpdateJsonFile` read-modify-write batching
+  everything currently staged) — there is deliberately no auto-flush timer
+  while editing; that was tried and explicitly rejected (see "Things
+  explicitly not wanted"). The only automatic flushes are safety nets: on
+  next page load if a previous visit staged something and never committed
+  it, and best-effort on `pagehide` — neither fires *during* active
+  editing. Batching this way also means clicks that cancel out (+1 then
+  -1) never reach GitHub as a write at all, and a burst of clicks becomes
+  one commit instead of one-per-click (which used to race two quick clicks
+  on the same card into a 409, since each commit changes the file's `sha`).
   Shows a running "Pending" list combining committed + still-staged
-  entries, plus a "Refresh" link to re-pull the committed side from
-  GitHub (this tab's own `pending` array only reflects what it has
+  entries, plus a "Refresh Trades" button to re-pull the committed side
+  from GitHub (this tab's own `pending` array only reflects what it has
   fetched/written itself).
 - `docs/needed.js`'s `pendingDeltaFor()` also reads `stagedDeltaFor()` from
   the same `localStorage` map, and a `storage` event listener re-renders
@@ -420,3 +426,7 @@ folder; use the local server instead.
 - The website's write path (Record page) is deliberately delta-queue-only
   (see "Web publish") — don't let it write directly to anything resembling
   the real collection state, even for convenience.
+- No auto-flush/auto-sync timer on the Record page while actively clicking
+  +/− — tried (a 4s debounce after the last click), explicitly rejected as
+  unwanted background activity. Committing staged deltas to GitHub is a
+  manual "Commit Trades" click only; see `docs/record.html`.
