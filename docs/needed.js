@@ -165,9 +165,9 @@ function cardHtml(c) {
     <a class="need-card" href="record.html?id=${encodeURIComponent(c.id)}&bucket=${state.bucket}">
       <div class="need-card-img-wrap">
         ${imgTag}
-        <div class="need-badge">${c.needed}</div>
       </div>
       <div class="need-card-info">
+        <div class="need-badge">Need ${c.needed}</div>
         <div class="need-card-name">${c.name}</div>
         ${c.subname ? `<div class="need-card-subname">${c.subname}</div>` : ''}
         <div class="need-card-meta ${rarityClass(c.rarity)}">${c.rarity} · ${c.set?.name || ''}</div>
