@@ -238,35 +238,40 @@ async function adjust(bucket, delta) {
   const status = el('record-status');
   status.textContent = 'Saving...';
   status.className = 'status-line';
+  // A trade-away is only implied by a positive pickup (+1), not by undoing
+  // a mistaken click (-1) - that shouldn't also silently give the traded
+  // card back.
+  const tradedAway = delta > 0 && giveAway;
   try {
-    const { content, sha } = await ghGetFile('docs/data/pending-changes.json');
-    const ts = new Date().toISOString();
-    content.push({
-      id: selected.id,
-      name: selected.displayName || selected.name,
-      bucket,
-      delta,
-      ts
-    });
-    let message = `Record: ${delta > 0 ? '+' : ''}${delta} ${bucket} — ${selected.name}`;
-
-    // A trade-away is only implied by a positive pickup (+1), not by
-    // undoing a mistaken click (-1) - that shouldn't also silently give
-    // the traded card back.
-    const tradedAway = delta > 0 && giveAway;
-    if (tradedAway) {
-      content.push({
-        id: giveAway.id,
-        name: giveAway.displayName || giveAway.name,
-        bucket: 'extras',
-        delta: -1,
-        ts
-      });
-      message += ` (traded away ${giveAway.name})`;
-    }
-
-    await ghPutFile('docs/data/pending-changes.json', content, sha, message);
-    pending = content;
+    const next = await ghUpdateJsonFile(
+      'docs/data/pending-changes.json',
+      (content) => {
+        const ts = new Date().toISOString();
+        content.push({
+          id: selected.id,
+          name: selected.displayName || selected.name,
+          bucket,
+          delta,
+          ts
+        });
+        if (tradedAway) {
+          content.push({
+            id: giveAway.id,
+            name: giveAway.displayName || giveAway.name,
+            bucket: 'extras',
+            delta: -1,
+            ts
+          });
+        }
+        return content;
+      },
+      () => {
+        let message = `Record: ${delta > 0 ? '+' : ''}${delta} ${bucket} — ${selected.name}`;
+        if (tradedAway) message += ` (traded away ${giveAway.name})`;
+        return message;
+      }
+    );
+    pending = next;
     updatePendingCounts();
     renderPending();
     status.textContent = tradedAway ? `Saved. Also queued -1 Extras for ${giveAway.name}.` : 'Saved.';

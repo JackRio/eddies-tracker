@@ -76,6 +76,27 @@ async function verifyToken(token) {
   return res.ok;
 }
 
+// Read-modify-write against a single JSON file, retrying on a 409 (the
+// file's sha changed between our read and write - e.g. the desktop app's
+// "Publish Site" reset pending-changes.json at nearly the same moment as
+// this write). Re-reading and re-applying the mutation on the fresh content
+// is safe here because mutateFn is a pure append, not a diff against what
+// we last saw.
+async function ghUpdateJsonFile(path, mutateFn, messageFn, attempts = 3) {
+  for (let i = 0; i < attempts; i++) {
+    const { content, sha } = await ghGetFile(path);
+    const next = mutateFn(content);
+    try {
+      await ghPutFile(path, next, sha, messageFn(next));
+      return next;
+    } catch (err) {
+      const isConflict = /\(409\)/.test(err.message);
+      if (!isConflict || i === attempts - 1) throw err;
+      // Stale sha - loop back and re-read+re-apply against the latest content.
+    }
+  }
+}
+
 async function fetchJson(path) {
   const res = await fetch(path, { cache: 'no-store' });
   if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
