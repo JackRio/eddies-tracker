@@ -273,11 +273,12 @@ immediately, even though the underlying files haven't actually changed yet.
   the Record page between publishes.
 - `docs/images/` — copied subset of `userData/images/` (only currently- or
   previously-needed printings, not the full 509).
-- `docs/build-info.json` — `{ deployedAt }`, shown in a small strip under
-  the header on both pages (`renderBuildInfo()` in `shared.js`) so a stale
-  browser tab/cache is obvious. **Bump this to the current time by hand on
-  every push to `docs/`** (there's no CI to do it automatically) — it's the
-  only way the deployed timestamp actually changes.
+- `renderBuildInfo()` in `shared.js` — shown in a small strip under the
+  header on both pages, so a stale browser tab/cache is obvious. "Site
+  updated" comes straight from GitHub's public commits API (most recent
+  commit touching `docs/`), not a hand-maintained file — no CI/build step
+  exists here to keep a stored timestamp fresh, so asking GitHub directly
+  is the only version that can't go stale itself.
 
 ### Local preview (without a real repo/token)
 
