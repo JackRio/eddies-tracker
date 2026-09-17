@@ -13,7 +13,8 @@ const MIME = {
   '.css': 'text/css',
   '.json': 'application/json',
   '.png': 'image/png',
-  '.webp': 'image/webp'
+  '.webp': 'image/webp',
+  '.svg': 'image/svg+xml'
 };
 
 http

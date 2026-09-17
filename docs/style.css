@@ -24,6 +24,13 @@
 
 * { box-sizing: border-box; }
 
+/* Any element toggled via the `hidden` attribute must actually hide,
+   even if it (or a class on it, e.g. .bucket-action-row's `display: flex`)
+   also sets its own `display` elsewhere - an author rule normally beats
+   the UA stylesheet's `[hidden] { display: none }`, which silently no-ops
+   `el.hidden = true` on anything with its own display rule. */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   background: var(--bg);
@@ -340,6 +347,47 @@ select {
 .selected-card-name { font-size: 17px; font-weight: 800; }
 .selected-card-subname { font-size: 13px; color: var(--text-dim); font-style: italic; margin-bottom: 8px; }
 
+.selected-rules {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 8px;
+  white-space: pre-line;
+}
+
+/* Inline keyword badge icons (Call/Spend/Blocker/etc.) swapped in for the
+   raw "{Keyword}" tokens rulesText/FAQ text comes with from the API - see
+   renderRulesText() in record.js. Sized to sit on the text baseline like
+   the real cards. */
+.keyword-icon {
+  height: 1.1em;
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.popped-faq {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.popped-faq h4 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.faq-q { font-weight: 700; color: var(--text); }
+.faq-a { color: var(--text-dim); margin-top: 2px; }
+
 .bucket-actions {
   display: flex;
   flex-direction: column;
@@ -371,6 +419,62 @@ select {
 }
 
 .bucket-action-row button:active { border-color: var(--cyan); color: var(--cyan); }
+
+.search-different-link {
+  display: block;
+  font-size: 12px;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+
+.toggle-other-buckets {
+  display: block;
+  font-size: 12px;
+  color: var(--cyan);
+  margin-top: 8px;
+}
+
+.give-away-section {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.give-away-label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.optional-tag {
+  font-weight: 400;
+  color: var(--text-dim);
+  text-transform: none;
+}
+
+.give-away-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-card);
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.give-away-chip button {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.give-away-chip button:hover { color: var(--red); }
 
 .pending-panel {
   margin-top: 20px;

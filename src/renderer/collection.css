@@ -387,6 +387,7 @@ html, body.collection-body {
   gap: 32px;
   align-items: center;
   max-width: 900px;
+  max-height: 90vh;
   padding: 20px;
   transform: scale(0.92);
   transition: transform 0.2s ease;
@@ -396,7 +397,7 @@ html, body.collection-body {
   transform: scale(1);
 }
 
-.popped-card img {
+.popped-card > img {
   width: 340px;
   border-radius: 14px;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--yellow);
@@ -404,8 +405,43 @@ html, body.collection-body {
 
 .popped-info {
   max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
   color: var(--text);
+  padding-right: 8px;
 }
+
+/* Inline keyword badge icons (Call/Spend/Blocker/etc.) swapped in for the
+   raw "{Keyword}" tokens rulesText/FAQ text comes with from the API - see
+   renderRulesText(). Sized to sit on the text baseline like the real cards. */
+.keyword-icon {
+  height: 1.1em;
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.popped-faq {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.popped-faq h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.faq-q { font-weight: 700; color: var(--text); }
+.faq-a { color: var(--text-dim); margin-top: 2px; }
 
 .popped-name {
   font-size: 26px;

@@ -387,13 +387,14 @@ body {
 
 .card-tile {
   position: relative;
+  z-index: 1;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.15s ease, transform 0.1s ease;
+  transition: border-color 0.15s ease, transform 0.18s ease, box-shadow 0.18s ease, z-index 0.18s ease;
 }
 
 /* One color per bucket: Main = yellow, Extras = purple, Reserve = cyan.
@@ -434,7 +435,15 @@ body {
   border-image-source: var(--band-gradient);
 }
 
-.card-tile:hover { transform: translateY(-2px); }
+/* "Pop" the hovered card up above its neighbors, matching the Collection
+   window's hover-raise feel. Unlike the Collection window's fan-stack rows,
+   this grid has no horizontal-scroll clipping ancestor, so a plain
+   transform + raised z-index is enough - no ghost-element trick needed. */
+.card-tile:hover {
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--yellow);
+  z-index: 20;
+}
 
 .card-image-wrap {
   position: relative;
@@ -638,4 +647,176 @@ body {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Full-size click-to-open card popup, matching the Collection window's
+   popped-overlay (same markup/behavior, minus the read-only bucket pills -
+   this window's popup keeps the same editable Main/Reserve/Extras counters
+   the grid tile has, via .mini-counter/.mini-max-btn reused as-is). */
+.popped-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 8, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 2000;
+}
+
+.popped-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popped-nav {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0 24px;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.popped-nav:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+  background: rgba(245, 228, 0, 0.08);
+}
+
+.popped-card {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  max-width: 900px;
+  max-height: 90vh;
+  padding: 20px;
+  transform: scale(0.92);
+  transition: transform 0.2s ease;
+}
+
+.popped-overlay.open .popped-card {
+  transform: scale(1);
+}
+
+.popped-card > img {
+  width: 340px;
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--yellow);
+}
+
+.popped-info {
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: var(--text);
+  padding-right: 8px;
+}
+
+/* Inline keyword badge icons (Call/Spend/Blocker/etc.) swapped in for the
+   raw "{Keyword}" tokens rulesText/FAQ text comes with from the API - see
+   renderRulesText() in renderer.js/collection.js. Sized to sit on the text
+   baseline like the real cards. */
+.keyword-icon {
+  height: 1.1em;
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.popped-faq {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.popped-faq h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.faq-q { font-weight: 700; color: var(--text); }
+.faq-a { color: var(--text-dim); margin-top: 2px; }
+
+.popped-name {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.popped-subname {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.popped-meta {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.popped-rarity {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.popped-owned-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+/* Bigger variant of the grid tile's .mini-counter/.mini-max-btn, reusing
+   the same classes so the buttons behave identically (same onCounterClick
+   handler) - just scaled up to match this popup's larger scale. */
+.popped-owned-controls .mini-counter {
+  gap: 8px;
+}
+
+.popped-owned-controls .mini-label {
+  width: 48px;
+}
+
+.popped-owned-controls .mini-counter button:not(.mini-max-btn) {
+  width: 26px;
+  height: 26px;
+  font-size: 15px;
+}
+
+.popped-owned-controls .counter-value {
+  min-width: 22px;
+  font-size: 15px;
+}
+
+.popped-owned-controls .mini-max-btn {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+.popped-rules {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: pre-line;
 }

@@ -1,5 +1,6 @@
 let allCards = [];
 let collection = {};
+let faqData = {};
 let state = {
   search: '',
   ownership: 'all',
@@ -31,6 +32,34 @@ function rarityClass(rarity) {
   return 'rarity-' + String(rarity || '').toLowerCase().replace(/\s+/g, '-');
 }
 
+// Card rulesText comes from the API with {Keyword} tokens (e.g. "{Call}",
+// "{Go Solo}") standing in for the game's official badge icons. Swap each
+// one for the matching SVG (scraped from cyberpunktcg.com's own rules-faq
+// page, same icons/colors as the real cards) instead of showing the raw
+// bracketed text. Kept in sync with the same helper in collection.js.
+function renderRulesText(text) {
+  if (!text) return '';
+  return text
+    .split(/(\{[^}]+\})/g)
+    .map((part) => {
+      const m = part.match(/^\{([^}]+)\}$/);
+      if (!m) return escapeHtml(part);
+      const slug = m[1].toLowerCase().replace(/\s+/g, '-');
+      const label = escapeHtml(m[1]);
+      return `<img class="keyword-icon" src="assets/keywords/${slug}.svg" alt="${label}" title="${label}">`;
+    })
+    .join('');
+}
+
+function faqHtml(slug) {
+  const entry = faqData[slug];
+  if (!entry || !entry.faqs.length) return '';
+  const items = entry.faqs
+    .map((f) => `<div class="faq-item"><div class="faq-q">${renderRulesText(f.q)}</div><div class="faq-a">${renderRulesText(f.a)}</div></div>`)
+    .join('');
+  return `<div class="popped-faq"><h4>Rules FAQ</h4>${items}</div>`;
+}
+
 async function init() {
   try {
     const cached = await window.api.getCards();
@@ -41,6 +70,11 @@ async function init() {
       await doRefresh();
     }
     collection = await window.api.getCollection();
+    try {
+      faqData = await fetch('faq-data.json').then((r) => r.json());
+    } catch {
+      faqData = {};
+    }
     buildFilterOptions();
     render();
     await refreshBackupList();
@@ -158,8 +192,12 @@ function getTotalCount(cardId) {
   return getBucketCount(cardId, 'main') + getBucketCount(cardId, 'reserve') + getBucketCount(cardId, 'extras');
 }
 
+let poppedRowCards = [];
+let poppedIndex = -1;
+
 function render() {
   const cards = getFilteredCards();
+  poppedRowCards = cards;
   const grid = el('card-grid');
   el('result-count').textContent = `${cards.length} printing${cards.length === 1 ? '' : 's'}`;
   el('empty-state').hidden = cards.length !== 0;
@@ -168,6 +206,13 @@ function render() {
 
   grid.querySelectorAll('[data-action]').forEach((btn) => {
     btn.addEventListener('click', onCounterClick);
+  });
+
+  grid.querySelectorAll('.card-tile').forEach((tile) => {
+    tile.addEventListener('click', (e) => {
+      if (e.target.closest('[data-action]')) return;
+      openPopped(tile.dataset.cardId);
+    });
   });
 
   grid.querySelectorAll('.card-image-wrap').forEach((wrap) => {
@@ -184,6 +229,79 @@ function render() {
   });
 
   updateStats();
+
+  // The popup may be open across a re-render (e.g. clicking +/- inside it),
+  // so refresh its contents in place instead of leaving stale counts shown.
+  if (!el('popped-overlay').hidden && poppedIndex >= 0 && poppedRowCards[poppedIndex]) {
+    openPopped(poppedRowCards[poppedIndex].id);
+  }
+}
+
+function poppedOwnedControlsHtml(c) {
+  const cap = mainSetCap(c.cardType);
+  return BUCKETS.map(
+    ({ key, label, showMax }) => `
+          <div class="mini-counter">
+            <span class="mini-label">${label}</span>
+            <button data-action="dec" data-bucket="${key}" data-card-id="${c.id}">-</button>
+            <span class="counter-value">${getBucketCount(c.id, key)}</span>
+            <button data-action="inc" data-bucket="${key}" data-card-id="${c.id}">+</button>
+            ${showMax ? `<button class="mini-max-btn" data-action="setmax" data-bucket="${key}" data-cap="${cap}" data-card-id="${c.id}" title="Set ${label} to ${cap}">MAX</button>` : ''}
+          </div>`
+  ).join('');
+}
+
+function stepPopped(delta) {
+  if (!poppedRowCards.length) return;
+  const next = (poppedIndex + delta + poppedRowCards.length) % poppedRowCards.length;
+  openPopped(poppedRowCards[next].id);
+}
+
+function openPopped(cardId) {
+  const c = poppedRowCards.find((x) => x.id === cardId) || allCards.find((x) => x.id === cardId);
+  if (!c) return;
+
+  poppedIndex = poppedRowCards.findIndex((x) => x.id === cardId);
+
+  el('popped-img').src = c.imageUrl;
+  el('popped-img').alt = c.displayName;
+  el('popped-name').textContent = c.name;
+  el('popped-subname').textContent = c.subname || '';
+  el('popped-subname').hidden = !c.subname;
+
+  const meta = [
+    c.cost != null ? `Cost ${c.cost}` : '',
+    c.power != null ? `Power ${c.power}` : '',
+    c.ram != null ? `RAM ${c.ram}` : '',
+    c.cardType
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  el('popped-meta').textContent = meta;
+
+  const rarityEl = el('popped-rarity');
+  rarityEl.textContent = c.rarity || '';
+  rarityEl.className = `popped-rarity ${rarityClass(c.rarity)}`;
+
+  el('popped-owned-controls').innerHTML = poppedOwnedControlsHtml(c);
+  el('popped-owned-controls').querySelectorAll('[data-action]').forEach((btn) => {
+    btn.addEventListener('click', onCounterClick);
+  });
+
+  el('popped-rules').innerHTML = renderRulesText(c.rulesText);
+  el('popped-faq').innerHTML = faqHtml(c.slug);
+
+  const overlay = el('popped-overlay');
+  overlay.hidden = false;
+  requestAnimationFrame(() => overlay.classList.add('open'));
+}
+
+function closePopped() {
+  const overlay = el('popped-overlay');
+  overlay.classList.remove('open');
+  setTimeout(() => {
+    if (!overlay.classList.contains('open')) overlay.hidden = true;
+  }, 200);
 }
 
 // Deck legality: a unique Legend only needs 1 copy in your Main set; every
@@ -498,6 +616,23 @@ function attachControls() {
   el('sort-select').addEventListener('change', (e) => {
     state.sort = e.target.value;
     render();
+  });
+  el('popped-overlay').addEventListener('click', (e) => {
+    if (e.target === el('popped-overlay')) closePopped();
+  });
+  el('popped-prev').addEventListener('click', (e) => {
+    e.stopPropagation();
+    stepPopped(-1);
+  });
+  el('popped-next').addEventListener('click', (e) => {
+    e.stopPropagation();
+    stepPopped(1);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!el('popped-overlay').classList.contains('open')) return;
+    if (e.key === 'Escape') closePopped();
+    if (e.key === 'ArrowLeft') stepPopped(-1);
+    if (e.key === 'ArrowRight') stepPopped(1);
   });
 }
 

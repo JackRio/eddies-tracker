@@ -35,34 +35,51 @@
         <a href="#" id="forget-token-btn">Forget saved token</a>
       </div>
 
-      <input type="text" class="search-input" id="search-input" placeholder="Search for a card..." />
-      <div class="search-results" id="search-results"></div>
+      <a href="#" id="search-different-link" class="search-different-link" hidden>&larr; Search a different card instead</a>
+      <div id="search-section">
+        <input type="text" class="search-input" id="search-input" placeholder="Search for a card..." />
+        <div class="search-results" id="search-results"></div>
+      </div>
 
       <div class="selected-card" id="selected-card" hidden>
         <div class="selected-card-name" id="selected-name"></div>
         <div class="selected-card-subname" id="selected-subname"></div>
         <div class="need-card-meta" id="selected-meta"></div>
+        <div class="selected-rules" id="selected-rules"></div>
+        <div id="selected-faq"></div>
 
         <div class="bucket-actions">
-          <div class="bucket-action-row">
+          <div class="bucket-action-row" data-bucket-row="main">
             <span class="bucket-name">Main</span>
             <span>Queued: <span id="pending-main">0</span></span>
             <button data-bucket="main" data-delta="-1">−</button>
             <button data-bucket="main" data-delta="1">+</button>
           </div>
-          <div class="bucket-action-row">
+          <div class="bucket-action-row" data-bucket-row="reserve">
             <span class="bucket-name">Reserve</span>
             <span>Queued: <span id="pending-reserve">0</span></span>
             <button data-bucket="reserve" data-delta="-1">−</button>
             <button data-bucket="reserve" data-delta="1">+</button>
           </div>
-          <div class="bucket-action-row">
+          <div class="bucket-action-row" data-bucket-row="extras">
             <span class="bucket-name">Extras</span>
             <span>Queued: <span id="pending-extras">0</span></span>
             <button data-bucket="extras" data-delta="-1">−</button>
             <button data-bucket="extras" data-delta="1">+</button>
           </div>
         </div>
+        <a href="#" id="toggle-other-buckets" class="toggle-other-buckets" hidden>Show Main/Reserve/Extras separately</a>
+
+        <div class="give-away-section">
+          <div class="give-away-label">Trading away a card? <span class="optional-tag">(optional)</span></div>
+          <div class="give-away-chip" id="give-away-chip" hidden>
+            <span id="give-away-name"></span>
+            <button id="give-away-remove" title="Remove">&times;</button>
+          </div>
+          <input type="text" class="search-input" id="give-away-search" placeholder="Search a card you're giving away..." />
+          <div class="search-results" id="give-away-results"></div>
+        </div>
+
         <div class="status-line" id="record-status"></div>
       </div>
 

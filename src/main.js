@@ -451,9 +451,11 @@ ipcMain.handle('publish:run', async () => {
     name: c.name,
     subname: c.subname,
     displayName: c.displayName,
+    slug: c.slug,
     color: c.color,
     cardType: c.cardType,
     rarity: c.rarity,
+    rulesText: c.rulesText,
     set: c.set,
     collectorNumber: c.collectorNumber
   }));

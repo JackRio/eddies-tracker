@@ -160,7 +160,7 @@ function cardHtml(c) {
   const safeName = c.name.replace(/'/g, '&#39;');
   const imgTag = `<img src="images/${c.id}.webp" alt="${c.displayName}" loading="lazy" onerror="this.closest('.need-card-img-wrap').classList.add('no-image'); this.insertAdjacentHTML('afterend', '<span>${safeName}</span>'); this.remove();" />`;
   return `
-    <a class="need-card" href="record.html?q=${encodeURIComponent(c.name)}">
+    <a class="need-card" href="record.html?id=${encodeURIComponent(c.id)}&bucket=${state.bucket}">
       <div class="need-card-img-wrap">
         ${imgTag}
         <div class="need-badge">${c.needed}</div>

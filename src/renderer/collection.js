@@ -1,5 +1,6 @@
 let allCards = [];
 let collection = {};
+let faqData = {};
 let activeType = 'All';
 let activeCompletion = 'all';
 let activeSet = 'welcometonightcitybeta';
@@ -10,6 +11,40 @@ const el = (id) => document.getElementById(id);
 
 function rarityClass(rarity) {
   return 'rarity-' + String(rarity || '').toLowerCase().replace(/\s+/g, '-');
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Card rulesText comes from the API with {Keyword} tokens (e.g. "{Call}",
+// "{Go Solo}") standing in for the game's official badge icons. Swap each
+// one for the matching SVG (scraped from cyberpunktcg.com's own rules-faq
+// page, same icons/colors as the real cards) instead of showing the raw
+// bracketed text.
+function renderRulesText(text) {
+  if (!text) return '';
+  return text
+    .split(/(\{[^}]+\})/g)
+    .map((part) => {
+      const m = part.match(/^\{([^}]+)\}$/);
+      if (!m) return escapeHtml(part);
+      const slug = m[1].toLowerCase().replace(/\s+/g, '-');
+      const label = escapeHtml(m[1]);
+      return `<img class="keyword-icon" src="assets/keywords/${slug}.svg" alt="${label}" title="${label}">`;
+    })
+    .join('');
+}
+
+function faqHtml(slug) {
+  const entry = faqData[slug];
+  if (!entry || !entry.faqs.length) return '';
+  const items = entry.faqs
+    .map((f) => `<div class="faq-item"><div class="faq-q">${renderRulesText(f.q)}</div><div class="faq-a">${renderRulesText(f.a)}</div></div>`)
+    .join('');
+  return `<div class="popped-faq"><h4>Rules FAQ</h4>${items}</div>`;
 }
 
 function getBucketCount(cardId, bucket) {
@@ -47,6 +82,11 @@ async function init() {
   const cache = await window.api.getCards();
   allCards = (cache && cache.cards) || [];
   collection = await window.api.getCollection();
+  try {
+    faqData = await fetch('faq-data.json').then((r) => r.json());
+  } catch {
+    faqData = {};
+  }
   buildSetOptions();
 
   document.querySelectorAll('.tab-btn').forEach((btn) => {
@@ -427,7 +467,8 @@ function openPopped(cardId, rowCards) {
   rarityEl.textContent = c.rarity || '';
   rarityEl.className = `popped-rarity ${rarityClass(c.rarity)}`;
 
-  el('popped-rules').textContent = c.rulesText || '';
+  el('popped-rules').innerHTML = renderRulesText(c.rulesText);
+  el('popped-faq').innerHTML = faqHtml(c.slug);
 
   const overlay = el('popped-overlay');
   overlay.hidden = false;
