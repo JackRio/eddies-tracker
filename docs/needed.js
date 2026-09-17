@@ -11,9 +11,18 @@ let state = {
 
 const COLOR_ORDER = ['Red', 'Blue', 'Green', 'Yellow'];
 const TYPE_ORDER = ['Legend', 'Unit', 'Gear', 'Program'];
-const RARITY_ORDER = [
-  'Common', 'Uncommon', 'Rare', 'Epic', 'Nova Rare',
-  'Iconic Legend', 'Iconic Other', 'Secret', 'Iconic Secret'
+
+// The 9 raw rarity values collapse to the 7 official tiers (icons), matching
+// collection.js's rarity sidebar - all three "Iconic ..." rarities share one
+// Iconic icon/button.
+const RARITY_GROUPS = [
+  { key: 'Common', title: 'Common', icon: 'common', match: ['Common'] },
+  { key: 'Uncommon', title: 'Uncommon', icon: 'uncommon', match: ['Uncommon'] },
+  { key: 'Rare', title: 'Rare', icon: 'rare', match: ['Rare'] },
+  { key: 'Epic', title: 'Epic Rare', icon: 'epic', match: ['Epic'] },
+  { key: 'Secret', title: 'Secret Rare', icon: 'secret-rare', match: ['Secret'] },
+  { key: 'Iconic', title: 'Iconic Rare', icon: 'iconic-rare', match: ['Iconic Legend', 'Iconic Other', 'Iconic Secret'] },
+  { key: 'Nova Rare', title: 'Nova Rare', icon: 'nova-rare', match: ['Nova Rare'] }
 ];
 
 const el = (id) => document.getElementById(id);
@@ -45,13 +54,13 @@ function buildFilterOptions() {
     .sort((a, b) => COLOR_ORDER.indexOf(a) - COLOR_ORDER.indexOf(b));
   const types = [...new Set(all.map((c) => c.cardType).filter(Boolean))]
     .sort((a, b) => TYPE_ORDER.indexOf(a) - TYPE_ORDER.indexOf(b));
-  const rarities = [...new Set(all.map((c) => c.rarity).filter(Boolean))]
-    .sort((a, b) => RARITY_ORDER.indexOf(a) - RARITY_ORDER.indexOf(b));
+  const presentRarities = new Set(all.map((c) => c.rarity).filter(Boolean));
+  const rarityGroups = RARITY_GROUPS.filter((g) => g.match.some((r) => presentRarities.has(r)));
   const sets = [...new Map(all.map((c) => [c.set?.code, c.set])).values()].filter(Boolean);
 
   renderChipGroup('color-filters', colors, state.colors, (v) => `color-${v}`);
-  renderChipGroup('type-filters', types, state.types);
-  renderChipGroup('rarity-filters', rarities, state.rarities);
+  renderChipGroup('type-filters', types, state.types, (v) => `type-${v}`);
+  renderRarityFilters(rarityGroups);
 
   const select = el('set-filter');
   select.innerHTML = '<option value="all">All Sets</option>' +
@@ -72,6 +81,27 @@ function renderChipGroup(containerId, values, activeSet, extraClass) {
       if (activeSet.has(val)) activeSet.delete(val);
       else activeSet.add(val);
       chip.classList.toggle('active');
+      render();
+    });
+  });
+}
+
+function renderRarityFilters(groups) {
+  const container = el('rarity-filters');
+  container.innerHTML = groups
+    .map((g) => `
+      <button class="rarity-filter-btn" data-value="${g.key}" title="${g.title}">
+        <span class="rarity-icon rarity-icon-${g.icon}"></span>
+      </button>
+    `)
+    .join('');
+  container.querySelectorAll('.rarity-filter-btn').forEach((btn) => {
+    if (state.rarities.has(btn.dataset.value)) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      const val = btn.dataset.value;
+      if (state.rarities.has(val)) state.rarities.delete(val);
+      else state.rarities.add(val);
+      btn.classList.toggle('active');
       render();
     });
   });
@@ -109,7 +139,10 @@ function render() {
 
   if (state.colors.size) cards = cards.filter((c) => state.colors.has(c.color));
   if (state.types.size) cards = cards.filter((c) => state.types.has(c.cardType));
-  if (state.rarities.size) cards = cards.filter((c) => state.rarities.has(c.rarity));
+  if (state.rarities.size) {
+    const activeGroups = RARITY_GROUPS.filter((g) => state.rarities.has(g.key));
+    cards = cards.filter((c) => activeGroups.some((g) => g.match.includes(c.rarity)));
+  }
   if (state.set !== 'all') cards = cards.filter((c) => c.set?.code === state.set);
 
   cards.sort((a, b) =>

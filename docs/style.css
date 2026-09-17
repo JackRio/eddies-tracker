@@ -15,6 +15,11 @@
   --color-blue: #3d8bfd;
   --color-green: #3ecf6e;
   --color-yellow: #e8c93a;
+
+  --type-legend: #ffb833;
+  --type-unit: #4da6ff;
+  --type-gear: #ff9f43;
+  --type-program: #b866ff;
 }
 
 * { box-sizing: border-box; }
@@ -130,10 +135,83 @@ main {
 }
 
 .chip.active { border-color: var(--cyan); color: var(--cyan); background: rgba(29, 225, 225, 0.1); }
-.chip.color-Red.active { border-color: var(--color-red); color: var(--color-red); background: rgba(232, 70, 90, 0.12); }
-.chip.color-Blue.active { border-color: var(--color-blue); color: var(--color-blue); background: rgba(61, 139, 253, 0.12); }
-.chip.color-Green.active { border-color: var(--color-green); color: var(--color-green); background: rgba(62, 207, 110, 0.12); }
-.chip.color-Yellow.active { border-color: var(--color-yellow); color: var(--color-yellow); background: rgba(232, 201, 58, 0.12); }
+
+/* Color chips are tinted at rest, not just when active, so Red/Blue/Green/
+   Yellow are identifiable at a glance instead of all reading as flat gray. */
+.chip.color-Red { border-color: rgba(232, 70, 90, 0.4); color: var(--color-red); }
+.chip.color-Blue { border-color: rgba(61, 139, 253, 0.4); color: var(--color-blue); }
+.chip.color-Green { border-color: rgba(62, 207, 110, 0.4); color: var(--color-green); }
+.chip.color-Yellow { border-color: rgba(232, 201, 58, 0.4); color: var(--color-yellow); }
+
+.chip.color-Red.active { border-color: var(--color-red); background: rgba(232, 70, 90, 0.18); }
+.chip.color-Blue.active { border-color: var(--color-blue); background: rgba(61, 139, 253, 0.18); }
+.chip.color-Green.active { border-color: var(--color-green); background: rgba(62, 207, 110, 0.18); }
+.chip.color-Yellow.active { border-color: var(--color-yellow); background: rgba(232, 201, 58, 0.18); }
+
+/* Type chips get their own fixed accent (unrelated to faction color) so the
+   Color row and Type row don't read as one visually-identical gray block. */
+.chip.type-Legend { border-color: rgba(255, 184, 51, 0.4); color: var(--type-legend); }
+.chip.type-Unit { border-color: rgba(77, 166, 255, 0.4); color: var(--type-unit); }
+.chip.type-Gear { border-color: rgba(255, 159, 67, 0.4); color: var(--type-gear); }
+.chip.type-Program { border-color: rgba(184, 102, 255, 0.4); color: var(--type-program); }
+
+.chip.type-Legend.active { border-color: var(--type-legend); background: rgba(255, 184, 51, 0.18); }
+.chip.type-Unit.active { border-color: var(--type-unit); background: rgba(77, 166, 255, 0.18); }
+.chip.type-Gear.active { border-color: var(--type-gear); background: rgba(255, 159, 67, 0.18); }
+.chip.type-Program.active { border-color: var(--type-program); background: rgba(184, 102, 255, 0.18); }
+
+/* Rarity filters: icon buttons (mask-image technique, matching the desktop
+   app's Collection window rarity sidebar) instead of text chips. The 9 raw
+   rarity values collapse to 7 icons - all three "Iconic ..." rarities share
+   the one Iconic icon, same as collection.js's rarityMatchesFilter(). */
+.rarity-filter-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.rarity-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.rarity-icon-common { -webkit-mask-image: url('assets/rarity/common.png'); mask-image: url('assets/rarity/common.png'); background-color: #9a9aa5; }
+.rarity-icon-uncommon { -webkit-mask-image: url('assets/rarity/uncommon.png'); mask-image: url('assets/rarity/uncommon.png'); background-color: #5fdc84; }
+.rarity-icon-rare { -webkit-mask-image: url('assets/rarity/rare.png'); mask-image: url('assets/rarity/rare.png'); background-color: #4da6ff; }
+.rarity-icon-epic { -webkit-mask-image: url('assets/rarity/epic.png'); mask-image: url('assets/rarity/epic.png'); background-color: #b866ff; }
+.rarity-icon-secret-rare { -webkit-mask-image: url('assets/rarity/secret-rare.png'); mask-image: url('assets/rarity/secret-rare.png'); background-color: #ff4d4d; }
+.rarity-icon-iconic-rare { -webkit-mask-image: url('assets/rarity/iconic-rare.png'); mask-image: url('assets/rarity/iconic-rare.png'); background-color: #ffb833; }
+.rarity-icon-nova-rare {
+  -webkit-mask-image: url('assets/rarity/nova-rare.png');
+  mask-image: url('assets/rarity/nova-rare.png');
+  background-color: #ff5fa8;
+  -webkit-mask-size: 160%;
+  mask-size: 160%;
+}
+
+.rarity-filter-btn:hover { border-color: var(--text); }
+.rarity-filter-btn:hover .rarity-icon { filter: brightness(1.3); }
+.rarity-filter-btn.active {
+  background: rgba(245, 228, 0, 0.12);
+  border-color: var(--yellow);
+  box-shadow: 0 0 8px rgba(245, 228, 0, 0.35);
+}
 
 select {
   width: 100%;
