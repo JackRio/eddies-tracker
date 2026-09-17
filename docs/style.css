@@ -511,6 +511,41 @@ select {
 
 .give-away-chip button:hover { color: var(--red); }
 
+.give-away-bucket-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.give-away-bucket-label {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.give-away-bucket-btn {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dim);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.give-away-bucket-btn.active {
+  color: var(--purple);
+  border-color: var(--purple);
+  background: rgba(184, 102, 255, 0.12);
+}
+
+.give-away-owned {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-left: 4px;
+}
+
 .pending-panel {
   margin-top: 20px;
 }

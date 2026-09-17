@@ -3,6 +3,7 @@ let pending = [];
 let selected = null;
 let faqData = {};
 let giveAway = null;
+let giveAwayBucket = 'extras';
 // Set from a Needed-page link (?bucket=main|reserve) so the bucket the user
 // was already filtering by there doesn't have to be picked again here.
 let impliedBucket = null;
@@ -125,6 +126,13 @@ function attachControls() {
   });
   el('give-away-search').addEventListener('input', (e) => renderGiveAwayResults(e.target.value));
   el('give-away-remove').addEventListener('click', clearGiveAway);
+  document.querySelectorAll('.give-away-bucket-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      giveAwayBucket = btn.dataset.bucket;
+      document.querySelectorAll('.give-away-bucket-btn').forEach((b) => b.classList.toggle('active', b === btn));
+      updateGiveAwayOwned();
+    });
+  });
   el('refresh-pending-link').addEventListener('click', (e) => {
     e.preventDefault();
     refreshPending();
@@ -225,16 +233,33 @@ function renderGiveAwayResults(query) {
 function selectGiveAway(id) {
   giveAway = catalog.find((c) => c.id === id);
   if (!giveAway) return;
+  giveAwayBucket = 'extras';
   el('give-away-search').value = '';
   el('give-away-results').innerHTML = '';
   el('give-away-search').hidden = true;
   el('give-away-chip').hidden = false;
   el('give-away-name').textContent = giveAway.displayName || giveAway.name;
+  el('give-away-bucket-picker').hidden = false;
+  document.querySelectorAll('.give-away-bucket-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.bucket === giveAwayBucket);
+  });
+  updateGiveAwayOwned();
+}
+
+// Shows what you currently have in whichever bucket is picked for the
+// give-away card, so it's clear how many you'll have left after this trade
+// - same "last-published + anything staged/queued since" math as Owned.
+function updateGiveAwayOwned() {
+  if (!giveAway) return;
+  const owned = (giveAway[giveAwayBucket] || 0) + pendingDeltaFor(giveAway.id, giveAwayBucket);
+  el('give-away-owned').textContent = `${owned} owned in ${giveAwayBucket}`;
 }
 
 function clearGiveAway() {
   giveAway = null;
+  giveAwayBucket = 'extras';
   el('give-away-chip').hidden = true;
+  el('give-away-bucket-picker').hidden = true;
   el('give-away-search').hidden = false;
 }
 
@@ -270,13 +295,13 @@ function adjust(bucket, delta) {
   // card back.
   const tradedAway = delta > 0 && giveAway;
   stageDelta(selected.id, selected.displayName || selected.name, bucket, delta);
-  if (tradedAway) stageDelta(giveAway.id, giveAway.displayName || giveAway.name, 'extras', -1);
+  if (tradedAway) stageDelta(giveAway.id, giveAway.displayName || giveAway.name, giveAwayBucket, -1);
 
   updateOwnedCounts();
   renderPending();
   const status = el('record-status');
   status.textContent = tradedAway
-    ? `Queued. Also queued -1 Extras for ${giveAway.name}. Click "Commit Trades" when ready.`
+    ? `Queued. Also queued -1 ${giveAwayBucket} for ${giveAway.name}. Click "Commit Trades" when ready.`
     : 'Queued. Click "Commit Trades" when ready.';
   status.className = 'status-line ok';
   if (tradedAway) clearGiveAway();
