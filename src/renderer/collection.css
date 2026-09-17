@@ -72,6 +72,43 @@ html, body.collection-body {
   margin-right: 4px;
 }
 
+.bucket-toggle {
+  display: flex;
+  margin-left: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bucket-toggle-btn {
+  border: none;
+  background: var(--bg-card);
+  color: var(--text-dim);
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bucket-toggle-btn:not(:first-child) {
+  border-left: 1px solid var(--border);
+}
+
+.bucket-toggle-btn:hover { color: var(--text); }
+
+.bucket-toggle-btn.active {
+  background: var(--yellow);
+  color: #0a0a0f;
+}
+
+#set-filter {
+  width: 220px;
+  flex-shrink: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
 .filter-chip {
   border: 1px solid var(--border);
   background: var(--bg-card);
@@ -92,11 +129,66 @@ html, body.collection-body {
   border-color: var(--cyan);
 }
 
+.board-layout {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* Shared across all 4 color rows at once - unlike the per-row color label,
+   this sits once for the whole board. Toggling a rarity pops every matching
+   card in every row (see applyRarityHighlight in collection.js) rather than
+   filtering the row contents like the Show/Set controls do. */
+.rarity-sidebar {
+  width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0;
+  background: var(--bg-panel);
+  border-right: 1px solid var(--border);
+}
+
+.rarity-filter-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rarity-filter-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.rarity-filter-btn:hover {
+  border-color: var(--text);
+  color: var(--text);
+}
+
+.rarity-filter-btn.active {
+  background: rgba(245, 228, 0, 0.12);
+  border-color: var(--yellow);
+  color: var(--yellow);
+  box-shadow: 0 0 10px rgba(245, 228, 0, 0.35);
+}
+
 .fan-board {
   flex: 1;
   display: flex;
   flex-direction: column;
   min-height: 0;
+  min-width: 0;
   padding: 8px 0;
 }
 
@@ -136,7 +228,11 @@ html, body.collection-body {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 24px 50px;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+
+.fan-stack::-webkit-scrollbar {
+  display: none;
 }
 
 .fan-empty {
@@ -147,7 +243,13 @@ html, body.collection-body {
   padding-left: 12px;
 }
 
+@keyframes fanCardIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .fan-card {
+  position: relative;
   flex-shrink: 0;
   width: 150px;
   aspect-ratio: 5 / 7;
@@ -158,6 +260,9 @@ html, body.collection-body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.55);
   transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.3, 1), box-shadow 0.22s ease, z-index 0s;
   background: #000;
+  opacity: 0;
+  animation: fanCardIn 0.3s ease forwards;
+  animation-delay: var(--enter-delay, 0ms);
 }
 
 .fan-card:first-child { margin-left: 0; }
@@ -175,6 +280,14 @@ html, body.collection-body {
    appended to <body>, so it can't be clipped by this row's horizontal
    scroll container. The real card just fades its image out underneath. */
 .fan-card.hovered img { opacity: 0; }
+
+/* A card "pinned" by the rarity sidebar stays permanently raised (same
+   ghost mechanism as hover) until its rarity is toggled off again. */
+.fan-card.pinned-source img { opacity: 0; }
+
+.fan-ghost.pinned.raised {
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.75), 0 0 0 2px var(--cyan);
+}
 
 .fan-card.push-left { transform: translateX(-30px); }
 .fan-card.push-right { transform: translateX(30px); }
@@ -221,6 +334,26 @@ html, body.collection-body {
 .popped-overlay.open {
   opacity: 1;
   pointer-events: auto;
+}
+
+.popped-nav {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin: 0 24px;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.popped-nav:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+  background: rgba(245, 228, 0, 0.08);
 }
 
 .popped-card {

@@ -20,6 +20,49 @@
 
 * { box-sizing: border-box; }
 
+/* Both windows are frameless (no native title bar), so this custom strip is
+   the only way to drag, minimize, maximize/restore or close them. Shared
+   here since both index.html and collection.html use it identically. */
+.window-titlebar {
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  -webkit-app-region: drag;
+}
+
+.window-controls {
+  margin-left: auto;
+  display: flex;
+  height: 100%;
+  -webkit-app-region: no-drag;
+}
+
+.win-btn {
+  width: 46px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-btn svg { width: 11px; height: 11px; }
+
+.win-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.win-btn-close:hover {
+  background: #e81123;
+  color: #fff;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -37,6 +80,20 @@ body {
   background: linear-gradient(90deg, #14141c 0%, #0a0a0f 100%);
   border-bottom: 2px solid var(--yellow);
   flex-wrap: wrap;
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.app-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(245, 228, 0, 0.45));
 }
 
 .title-block h1 {
@@ -115,6 +172,17 @@ body {
   gap: 8px;
 }
 
+.publish-status {
+  margin-top: 6px;
+  max-width: 320px;
+  font-size: 11px;
+  text-align: right;
+  color: var(--text-dim);
+}
+
+.publish-status-ok { color: var(--green); }
+.publish-status-error { color: var(--red); }
+
 .btn {
   border: 1px solid var(--border);
   background: var(--bg-panel);
@@ -143,6 +211,93 @@ body {
 .btn-block {
   width: 100%;
   margin-top: 8px;
+}
+
+.backup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.backup-empty {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.backup-item {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: var(--bg-card);
+}
+
+.backup-item.locked {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 1px rgba(245, 228, 0, 0.2);
+}
+
+.backup-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  cursor: text;
+}
+
+.backup-label[data-renameable]:hover {
+  color: var(--cyan);
+  text-decoration: underline dotted;
+}
+
+.backup-rename-input {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 6px;
+  background: var(--bg-panel);
+  border: 1px solid var(--cyan);
+  border-radius: 3px;
+  color: var(--text);
+}
+
+.backup-rename-input:focus {
+  outline: none;
+}
+
+.backup-date {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.backup-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.backup-actions button {
+  flex: 1;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+  color: var(--text-dim);
+  padding: 4px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.backup-actions button:hover { border-color: var(--cyan); color: var(--cyan); }
+.backup-item.locked .backup-actions button[data-backup-action="lock"] { border-color: var(--yellow); color: var(--yellow); }
+
+.backup-actions button.backup-danger {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.backup-actions button.backup-danger:hover {
+  background: rgba(255, 77, 77, 0.12);
 }
 
 .app-body {
@@ -231,6 +386,7 @@ body {
 }
 
 .card-tile {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -240,14 +396,42 @@ body {
   transition: border-color 0.15s ease, transform 0.1s ease;
 }
 
-.card-tile.owned {
+/* One color per bucket: Main = yellow, Extras = purple, Reserve = cyan.
+   Thicker than the default 1px border so each band stays legible even
+   when a card has all three stacked (own-multi below). */
+.card-tile.own-main {
+  border-width: 3px;
   border-color: var(--yellow);
   box-shadow: 0 0 0 1px rgba(245, 228, 0, 0.25);
 }
 
-.card-tile.owned-other {
+.card-tile.own-extras {
+  border-width: 3px;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 1px rgba(184, 102, 255, 0.25);
+}
+
+.card-tile.own-reserve {
+  border-width: 3px;
   border-color: var(--cyan);
   box-shadow: 0 0 0 1px rgba(29, 225, 225, 0.25);
+}
+
+/* A card held in more than one bucket gets a banded border (top-to-bottom:
+   Main, Extras, Reserve, skipping any bucket that's empty) instead of a
+   single color. border-image paints the gradient directly onto the border
+   itself - far more reliable than the mask/pseudo-element ring trick this
+   used to use, which silently failed to render anything above the card's
+   halfway point. The gradient itself is computed in JS (see
+   ownershipVisual in renderer.js) and passed in via --band-gradient.
+   Note: border-image doesn't respect border-radius, so multi-bucket cards
+   have visibly square corners while single-bucket ones stay rounded - an
+   acceptable trade for a border that actually renders correctly. */
+.card-tile.own-multi {
+  border-style: solid;
+  border-width: 3px;
+  border-image-slice: 1;
+  border-image-source: var(--band-gradient);
 }
 
 .card-tile:hover { transform: translateY(-2px); }
@@ -264,6 +448,41 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Shared "shimmer" placeholder shown while a card image hasn't loaded yet,
+   used by both the main grid (.card-image-wrap) and the collection window's
+   carousel (.fan-card) so a slow/pending image reads as loading instead of
+   a flat black box. */
+@keyframes cardShimmer {
+  0% { background-position: -150% 0; }
+  100% { background-position: 150% 0; }
+}
+
+.card-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, #141414 30%, #262626 45%, #141414 60%);
+  background-size: 200% 100%;
+  animation: cardShimmer 1.3s ease-in-out infinite;
+}
+
+.card-image-wrap img,
+.fan-card img {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.card-image-wrap img.loaded,
+.fan-card img.loaded {
+  opacity: 1;
+}
+
+.card-image-wrap.img-loaded .card-shimmer,
+.fan-card.img-loaded .card-shimmer {
+  display: none;
 }
 
 .owned-badge {

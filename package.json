@@ -1,5 +1,5 @@
 {
-  "name": "cyberpunk-tcg-tracker",
+  "name": "eddies",
   "version": "1.0.0",
   "description": "Personal collection tracker for the Cyberpunk TCG",
   "main": "src/main.js",
@@ -13,14 +13,15 @@
     "electron-builder": "^25.0.0"
   },
   "build": {
-    "appId": "com.personal.cyberpunktcgtracker",
-    "productName": "Cyberpunk TCG Tracker",
+    "appId": "com.personal.eddies",
+    "productName": "Eddies",
     "files": [
       "src/**/*",
       "package.json"
     ],
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/icon.ico"
     }
   }
 }

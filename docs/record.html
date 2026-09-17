@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Record — Eddies</title>
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
+    <h1><span class="accent">EDDIES</span></h1>
+    <nav class="nav-tabs">
+      <a href="index.html">Needed</a>
+      <a href="record.html" class="active">Record</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="token-gate" id="token-gate" hidden>
+      <p>
+        Recording a trade writes directly to this GitHub repo, which needs a
+        personal access token. Create a <strong>fine-grained</strong> token at
+        <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">github.com/settings/tokens</a>
+        scoped to just this repo, with <strong>Contents: Read and write</strong> permission.
+      </p>
+      <input type="password" id="token-input" placeholder="Paste your token here" autocomplete="off" />
+      <button class="btn btn-primary" id="save-token-btn">Save Token</button>
+      <div class="status-line" id="token-status"></div>
+    </div>
+
+    <div id="record-body" hidden>
+      <div class="forget-token" id="forget-token-row">
+        <a href="#" id="forget-token-btn">Forget saved token</a>
+      </div>
+
+      <input type="text" class="search-input" id="search-input" placeholder="Search for a card..." />
+      <div class="search-results" id="search-results"></div>
+
+      <div class="selected-card" id="selected-card" hidden>
+        <div class="selected-card-name" id="selected-name"></div>
+        <div class="selected-card-subname" id="selected-subname"></div>
+        <div class="need-card-meta" id="selected-meta"></div>
+
+        <div class="bucket-actions">
+          <div class="bucket-action-row">
+            <span class="bucket-name">Main</span>
+            <span>Queued: <span id="pending-main">0</span></span>
+            <button data-bucket="main" data-delta="-1">−</button>
+            <button data-bucket="main" data-delta="1">+</button>
+          </div>
+          <div class="bucket-action-row">
+            <span class="bucket-name">Reserve</span>
+            <span>Queued: <span id="pending-reserve">0</span></span>
+            <button data-bucket="reserve" data-delta="-1">−</button>
+            <button data-bucket="reserve" data-delta="1">+</button>
+          </div>
+          <div class="bucket-action-row">
+            <span class="bucket-name">Extras</span>
+            <span>Queued: <span id="pending-extras">0</span></span>
+            <button data-bucket="extras" data-delta="-1">−</button>
+            <button data-bucket="extras" data-delta="1">+</button>
+          </div>
+        </div>
+        <div class="status-line" id="record-status"></div>
+      </div>
+
+      <div class="pending-panel">
+        <h3>Pending (not yet synced to the app)</h3>
+        <div id="pending-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="record.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "docs-preview",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve-docs.js"],
+      "port": 4173
+    }
+  ]
+}

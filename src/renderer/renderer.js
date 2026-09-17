@@ -170,6 +170,19 @@ function render() {
     btn.addEventListener('click', onCounterClick);
   });
 
+  grid.querySelectorAll('.card-image-wrap').forEach((wrap) => {
+    const img = wrap.querySelector('img');
+    const markLoaded = () => {
+      img.classList.add('loaded');
+      wrap.classList.add('img-loaded');
+    };
+    if (img.complete && img.naturalWidth > 0) markLoaded();
+    else {
+      img.addEventListener('load', markLoaded);
+      img.addEventListener('error', markLoaded);
+    }
+  });
+
   updateStats();
 }
 
@@ -187,11 +200,30 @@ const BUCKETS = [
   { key: 'extras', label: 'Xtra', showMax: false }
 ];
 
+// Each bucket gets its own border color; a card held in more than one
+// bucket gets a banded border instead of a single color, stacked top to
+// bottom in this fixed order so it reads the same way on every card.
+const OWNERSHIP_BANDS = [
+  { bucket: 'main', color: 'var(--yellow)', cls: 'own-main' },
+  { bucket: 'extras', color: 'var(--purple)', cls: 'own-extras' },
+  { bucket: 'reserve', color: 'var(--cyan)', cls: 'own-reserve' }
+];
+
+function ownershipVisual(cardId) {
+  const active = OWNERSHIP_BANDS.filter((b) => getBucketCount(cardId, b.bucket) > 0);
+  if (active.length === 0) return { cls: '', style: '' };
+  if (active.length === 1) return { cls: active[0].cls, style: '' };
+
+  const step = 100 / active.length;
+  const stops = active
+    .map((b, i) => `${b.color} ${(i * step).toFixed(2)}%, ${b.color} ${((i + 1) * step).toFixed(2)}%`)
+    .join(', ');
+  return { cls: 'own-multi', style: `--band-gradient: linear-gradient(to bottom, ${stops});` };
+}
+
 function cardTileHtml(c) {
-  const main = getBucketCount(c.id, 'main');
+  const visual = ownershipVisual(c.id);
   const total = getTotalCount(c.id);
-  const isMain = main > 0;
-  const isOwnedOnly = total > 0 && main === 0;
   const cap = mainSetCap(c.cardType);
   const statLine = [
     c.cost != null ? `<span>CST ${c.cost}</span>` : '',
@@ -211,9 +243,10 @@ function cardTileHtml(c) {
   ).join('');
 
   return `
-    <div class="card-tile ${isMain ? 'owned' : ''} ${isOwnedOnly ? 'owned-other' : ''}" data-card-id="${c.id}">
+    <div class="card-tile ${visual.cls}" style="${visual.style}" data-card-id="${c.id}">
       <div class="card-image-wrap">
-        <img src="${c.imageUrl}" alt="${c.displayName}" loading="lazy" />
+        <div class="card-shimmer"></div>
+        <img src="${c.imageUrl}" alt="${c.displayName}" loading="lazy" decoding="async" />
         ${total > 0 ? `<div class="owned-badge">${total}</div>` : ''}
       </div>
       <div class="color-bar ${c.color || ''}"></div>
@@ -263,18 +296,99 @@ function updateStats() {
   el('stat-tracking').textContent = `Tracking: ${setName}`;
 }
 
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Electron's window.prompt() is unreliable (silently no-ops in some builds),
+// which is why "Rename" used to do nothing. Renaming and destructive actions
+// (restore/overwrite) use inline UI states on the item itself instead of any
+// native dialog.
+let backupUiState = { filename: null, mode: null };
+
 async function refreshBackupList() {
   const backups = await window.api.listBackups();
-  const select = el('backup-select');
+  const container = el('backup-list');
   if (!backups.length) {
-    select.innerHTML = '<option value="">No backups yet</option>';
-    el('restore-backup-btn').disabled = true;
+    container.innerHTML = '<div class="backup-empty">No saves yet</div>';
     return;
   }
-  select.innerHTML = backups
-    .map((b) => `<option value="${b.filename}">${new Date(b.mtime).toLocaleString()}</option>`)
-    .join('');
-  el('restore-backup-btn').disabled = false;
+  container.innerHTML = backups.map(backupItemHtml).join('');
+  container.querySelectorAll('[data-backup-action]').forEach((btn) => {
+    btn.addEventListener('click', onBackupAction);
+  });
+  container.querySelectorAll('.backup-label[data-renameable]').forEach((label) => {
+    label.addEventListener('dblclick', () => {
+      backupUiState = { filename: label.dataset.filename, mode: 'rename' };
+      refreshBackupList();
+    });
+  });
+  const renameInput = container.querySelector('.backup-rename-input');
+  if (renameInput) {
+    renameInput.focus();
+    renameInput.select();
+    renameInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        container.querySelector('[data-backup-action="confirm-rename"]').click();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        container.querySelector('[data-backup-action="cancel"]').click();
+      }
+    });
+  }
+}
+
+function backupItemHtml(b) {
+  const date = new Date(b.mtime).toLocaleString();
+  const isActive = backupUiState.filename === b.filename;
+
+  if (isActive && backupUiState.mode === 'rename') {
+    return `
+      <div class="backup-item ${b.locked ? 'locked' : ''}">
+        <div class="backup-info">
+          <input type="text" class="backup-rename-input" data-filename="${b.filename}" value="${escapeHtml(b.label || '')}" placeholder="${date}" />
+        </div>
+        <div class="backup-actions">
+          <button data-backup-action="confirm-rename" data-filename="${b.filename}">Save</button>
+          <button data-backup-action="cancel" data-filename="${b.filename}">Cancel</button>
+        </div>
+      </div>
+    `;
+  }
+
+  if (isActive && (backupUiState.mode === 'confirm-restore' || backupUiState.mode === 'confirm-overwrite')) {
+    const verb = backupUiState.mode === 'confirm-restore' ? 'Restore' : 'Overwrite';
+    const confirmAction = backupUiState.mode === 'confirm-restore' ? 'confirm-restore' : 'confirm-overwrite';
+    return `
+      <div class="backup-item ${b.locked ? 'locked' : ''}">
+        <div class="backup-info">
+          <div class="backup-label">${b.label ? escapeHtml(b.label) : date}</div>
+          <div class="backup-date">${verb} this save?</div>
+        </div>
+        <div class="backup-actions">
+          <button class="backup-danger" data-backup-action="${confirmAction}" data-filename="${b.filename}">Yes, ${verb}</button>
+          <button data-backup-action="cancel" data-filename="${b.filename}">Cancel</button>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="backup-item ${b.locked ? 'locked' : ''}">
+      <div class="backup-info">
+        <div class="backup-label" data-renameable data-filename="${b.filename}" title="Double-click to rename">${b.label ? escapeHtml(b.label) : date}</div>
+        ${b.label ? `<div class="backup-date">${date}</div>` : ''}
+      </div>
+      <div class="backup-actions">
+        <button data-backup-action="ask-restore" data-filename="${b.filename}">Restore</button>
+        <button data-backup-action="ask-overwrite" data-filename="${b.filename}">Overwrite</button>
+        <button data-backup-action="lock" data-filename="${b.filename}" data-locked="${b.locked}">${b.locked ? 'Unlock' : 'Lock'}</button>
+      </div>
+    </div>
+  `;
 }
 
 async function onSaveBackup() {
@@ -290,22 +404,85 @@ async function onSaveBackup() {
   }
 }
 
-async function onRestoreBackup() {
-  const select = el('backup-select');
-  const filename = select.value;
-  if (!filename) return;
-  const label = select.options[select.selectedIndex].textContent;
-  if (!confirm(`Restore collection from backup saved at ${label}? Your current state will be backed up first.`)) return;
-  collection = await window.api.restoreBackup(filename);
-  await refreshBackupList();
-  render();
+async function onPublishSite() {
+  const btn = el('publish-site-btn');
+  const status = el('publish-status');
+  btn.disabled = true;
+  btn.textContent = 'Publishing...';
+  status.hidden = false;
+  status.className = 'publish-status';
+  status.textContent = 'Pulling latest, applying any phone-recorded changes, and pushing...';
+  try {
+    const result = await window.api.publishSite();
+    collection = result.collection;
+    render();
+    status.classList.add('publish-status-ok');
+    status.textContent = result.steps.join(' ');
+  } catch (err) {
+    status.classList.add('publish-status-error');
+    status.textContent = `Publish failed: ${err.message}`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Publish Site';
+  }
+}
+
+async function onBackupAction(e) {
+  const action = e.currentTarget.dataset.backupAction;
+  const filename = e.currentTarget.dataset.filename;
+
+  if (action === 'ask-restore' || action === 'ask-overwrite') {
+    backupUiState = { filename, mode: action === 'ask-restore' ? 'confirm-restore' : 'confirm-overwrite' };
+    await refreshBackupList();
+    return;
+  }
+
+  if (action === 'cancel') {
+    backupUiState = { filename: null, mode: null };
+    await refreshBackupList();
+    return;
+  }
+
+  if (action === 'confirm-rename') {
+    const input = document.querySelector(`.backup-rename-input[data-filename="${CSS.escape(filename)}"]`);
+    const next = input ? input.value.trim() : '';
+    await window.api.renameBackup(filename, next);
+    backupUiState = { filename: null, mode: null };
+    await refreshBackupList();
+    return;
+  }
+
+  if (action === 'confirm-restore') {
+    collection = await window.api.restoreBackup(filename);
+    backupUiState = { filename: null, mode: null };
+    await refreshBackupList();
+    render();
+    return;
+  }
+
+  if (action === 'confirm-overwrite') {
+    await window.api.overwriteBackup(filename);
+    backupUiState = { filename: null, mode: null };
+    await refreshBackupList();
+    return;
+  }
+
+  if (action === 'lock') {
+    const isLocked = e.currentTarget.dataset.locked === 'true';
+    await window.api.setBackupLocked(filename, !isLocked);
+    await refreshBackupList();
+    return;
+  }
 }
 
 function attachControls() {
+  el('win-minimize').addEventListener('click', () => window.api.windowMinimize());
+  el('win-maximize').addEventListener('click', () => window.api.windowToggleMaximize());
+  el('win-close').addEventListener('click', () => window.api.windowClose());
   el('refresh-btn').addEventListener('click', doRefresh);
   el('collection-view-btn').addEventListener('click', () => window.api.openCollectionView());
   el('save-backup-btn').addEventListener('click', onSaveBackup);
-  el('restore-backup-btn').addEventListener('click', onRestoreBackup);
+  el('publish-site-btn').addEventListener('click', onPublishSite);
   el('search-input').addEventListener('input', (e) => {
     state.search = e.target.value;
     render();
