@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T18:28:33.809Z",
+  "generatedAt": "2026-09-17T19:39:08.984Z",
   "main": [
     {
       "id": "3fc63c58-5954-4744-a5af-047bfc5cb159",
@@ -621,7 +621,7 @@
       "displayName": "Kerry Eurodyne: The Last Rockerboy",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -639,7 +639,7 @@
       "displayName": "Kerry Eurodyne: The Last Rockerboy",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -945,7 +945,7 @@
       "displayName": "Minotaur",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -963,7 +963,7 @@
       "displayName": "Minotaur",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -1233,7 +1233,7 @@
       "displayName": "Satori: Sword of Saburo",
       "color": "Red",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -1251,7 +1251,7 @@
       "displayName": "Satori: Sword of Saburo",
       "color": "Red",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -1832,7 +1832,7 @@
         "code": "edgerunneropens1",
         "name": "Edgerunner Open S 1"
       },
-      "collectorNumber": "037",
+      "collectorNumber": "038",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -2007,7 +2007,7 @@
       "displayName": "Secondhand Bombus",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -2025,7 +2025,7 @@
       "displayName": "Secondhand Bombus",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -2511,7 +2511,7 @@
       "displayName": "Jackie Welles: Ride or Die Choom",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -2529,7 +2529,7 @@
       "displayName": "Jackie Welles: Ride or Die Choom",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -2673,7 +2673,7 @@
       "displayName": "Adam Smasher: Metal Over Meat",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -2691,7 +2691,7 @@
       "displayName": "Adam Smasher: Metal Over Meat",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -2853,7 +2853,7 @@
       "displayName": "Mandibular Upgrade",
       "color": "Yellow",
       "cardType": "Gear",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -2871,7 +2871,7 @@
       "displayName": "Mandibular Upgrade",
       "color": "Yellow",
       "cardType": "Gear",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3177,7 +3177,7 @@
       "displayName": "Cyberpsychosis",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3195,7 +3195,7 @@
       "displayName": "Cyberpsychosis",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3249,7 +3249,7 @@
       "displayName": "Bootleg Black Sapphire Show",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3267,7 +3267,7 @@
       "displayName": "Bootleg Black Sapphire Show",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3789,7 +3789,7 @@
       "displayName": "Corpo Security",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -3807,7 +3807,7 @@
       "displayName": "Corpo Security",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4005,7 +4005,7 @@
       "displayName": "MaxTac Squadron",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4023,7 +4023,7 @@
       "displayName": "MaxTac Squadron",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4257,7 +4257,7 @@
       "displayName": "Wraith Marauders",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4275,7 +4275,7 @@
       "displayName": "Wraith Marauders",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4509,7 +4509,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -4527,7 +4527,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -4545,7 +4545,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -4833,7 +4833,7 @@
       "displayName": "We Gotta Live Together",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4851,7 +4851,7 @@
       "displayName": "We Gotta Live Together",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4905,7 +4905,7 @@
       "displayName": "(Don't Fear) The Reaper",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -4923,7 +4923,7 @@
       "displayName": "(Don't Fear) The Reaper",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -5607,7 +5607,7 @@
       "displayName": "Delamain Cab",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -5625,7 +5625,7 @@
       "displayName": "Delamain Cab",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -5805,7 +5805,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -5823,7 +5823,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -5841,7 +5841,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6201,7 +6201,7 @@
       "displayName": "Dying Night: V's Pistol",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6219,7 +6219,7 @@
       "displayName": "Dying Night: V's Pistol",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6255,7 +6255,7 @@
       "displayName": "NetWatch Netdriver",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6273,7 +6273,7 @@
       "displayName": "NetWatch Netdriver",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6363,7 +6363,7 @@
       "displayName": "Floor It",
       "color": "Blue",
       "cardType": "Program",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -6381,7 +6381,7 @@
       "displayName": "Floor It",
       "color": "Blue",
       "cardType": "Program",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -7319,7 +7319,7 @@
       "displayName": "Kerry Eurodyne: The Last Rockerboy",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -7337,7 +7337,7 @@
       "displayName": "Kerry Eurodyne: The Last Rockerboy",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -7380,8 +7380,8 @@
       },
       "collectorNumber": "β014",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "40db55a6-0220-4cb9-8854-0e23f7cb91f8",
@@ -7470,8 +7470,8 @@
       },
       "collectorNumber": "β009",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "b749ce16-1b44-47d8-bce4-4fd373007a5c",
@@ -7679,7 +7679,7 @@
       "displayName": "Minotaur",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -7697,7 +7697,7 @@
       "displayName": "Minotaur",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -7985,7 +7985,7 @@
       "displayName": "Satori: Sword of Saburo",
       "color": "Red",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -8003,7 +8003,7 @@
       "displayName": "Satori: Sword of Saburo",
       "color": "Red",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -8638,7 +8638,7 @@
         "code": "edgerunneropens1",
         "name": "Edgerunner Open S 1"
       },
-      "collectorNumber": "037",
+      "collectorNumber": "038",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -8831,7 +8831,7 @@
       "displayName": "Secondhand Bombus",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -8849,7 +8849,7 @@
       "displayName": "Secondhand Bombus",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -9036,8 +9036,8 @@
       },
       "collectorNumber": "β046",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "005dfb9e-7bdd-4cc1-ade2-08dd28ed5998",
@@ -9353,7 +9353,7 @@
       "displayName": "Jackie Welles: Ride or Die Choom",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -9371,7 +9371,7 @@
       "displayName": "Jackie Welles: Ride or Die Choom",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -9515,7 +9515,7 @@
       "displayName": "Adam Smasher: Metal Over Meat",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -9533,7 +9533,7 @@
       "displayName": "Adam Smasher: Metal Over Meat",
       "color": "Yellow",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -9695,7 +9695,7 @@
       "displayName": "Mandibular Upgrade",
       "color": "Yellow",
       "cardType": "Gear",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -9713,7 +9713,7 @@
       "displayName": "Mandibular Upgrade",
       "color": "Yellow",
       "cardType": "Gear",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -9827,6 +9827,24 @@
         "name": "Welcome to Night City — Retail"
       },
       "collectorNumber": "063",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "a55809aa-170d-42b4-8768-f0b873fd0dc4",
+      "cardId": "1263e2bf-bc15-4550-ad07-b028602d1354",
+      "name": "The Relic",
+      "subname": "Experimental Biochip",
+      "displayName": "The Relic: Experimental Biochip",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β063",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -10001,7 +10019,7 @@
       "displayName": "Cyberpsychosis",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10019,7 +10037,7 @@
       "displayName": "Cyberpsychosis",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10073,7 +10091,7 @@
       "displayName": "Bootleg Black Sapphire Show",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10091,7 +10109,7 @@
       "displayName": "Bootleg Black Sapphire Show",
       "color": "Yellow",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10667,7 +10685,7 @@
       "displayName": "Corpo Security",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10685,7 +10703,7 @@
       "displayName": "Corpo Security",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10883,7 +10901,7 @@
       "displayName": "MaxTac Squadron",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -10901,7 +10919,7 @@
       "displayName": "MaxTac Squadron",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11135,7 +11153,7 @@
       "displayName": "Wraith Marauders",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11153,7 +11171,7 @@
       "displayName": "Wraith Marauders",
       "color": "Green",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11286,8 +11304,8 @@
       },
       "collectorNumber": "β088",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
@@ -11340,8 +11358,8 @@
       },
       "collectorNumber": "β089",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "ce570725-0de7-438a-a9c8-33074a7180ba",
@@ -11423,7 +11441,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -11441,7 +11459,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -11459,7 +11477,7 @@
       "displayName": "Sandevistan",
       "color": "Green",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcityshowdowns1",
         "name": "Night City Showdown S1"
@@ -11747,7 +11765,7 @@
       "displayName": "We Gotta Live Together",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11765,7 +11783,7 @@
       "displayName": "We Gotta Live Together",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11819,7 +11837,7 @@
       "displayName": "(Don't Fear) The Reaper",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -11837,7 +11855,7 @@
       "displayName": "(Don't Fear) The Reaper",
       "color": "Green",
       "cardType": "Program",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -12546,8 +12564,8 @@
       },
       "collectorNumber": "β119",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "354fd7d3-070d-4767-989c-5b3efbd9f30d",
@@ -12647,7 +12665,7 @@
       "displayName": "Delamain Cab",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -12665,7 +12683,7 @@
       "displayName": "Delamain Cab",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -12845,7 +12863,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -12863,7 +12881,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -12881,7 +12899,7 @@
       "displayName": "Maman Brigitte: Spirit of Death",
       "color": "Blue",
       "cardType": "Unit",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13122,8 +13140,8 @@
       },
       "collectorNumber": "β123",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 2,
+      "needed": 1
     },
     {
       "id": "576f82ff-3c4d-4637-aa91-2773de43bbc8",
@@ -13259,7 +13277,7 @@
       "displayName": "Dying Night: V's Pistol",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13277,7 +13295,7 @@
       "displayName": "Dying Night: V's Pistol",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Rare",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13313,7 +13331,7 @@
       "displayName": "NetWatch Netdriver",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13331,7 +13349,7 @@
       "displayName": "NetWatch Netdriver",
       "color": "Blue",
       "cardType": "Gear",
-      "rarity": "Uncommon",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13421,7 +13439,7 @@
       "displayName": "Floor It",
       "color": "Blue",
       "cardType": "Program",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
@@ -13439,7 +13457,7 @@
       "displayName": "Floor It",
       "color": "Blue",
       "cardType": "Program",
-      "rarity": "Common",
+      "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
