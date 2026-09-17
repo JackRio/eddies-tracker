@@ -115,19 +115,63 @@ async function fetchJson(path) {
 // has no build step/CI, so a stored timestamp would only be as fresh as
 // whoever remembered to bump it. The commits API is public and needs no
 // token, same as everything else this page reads without auth.
+let firstSeenDeploySha = null;
+
 async function renderBuildInfo(dataGeneratedAt) {
   const el = document.getElementById('build-info');
-  if (!el) return;
+  const sha = await fetchLatestDeploySha();
+
+  if (el) {
+    if (sha) {
+      const parts = [`Site updated ${new Date(sha.deployedAt).toLocaleString()}`];
+      if (dataGeneratedAt) parts.push(`Data published ${new Date(dataGeneratedAt).toLocaleString()}`);
+      el.textContent = parts.join(' · ');
+    } else {
+      el.textContent = '';
+    }
+  }
+
+  if (sha) {
+    if (firstSeenDeploySha === null) {
+      firstSeenDeploySha = sha.value;
+      // A cached HTML/JS bundle can't know its own age, but the code in it
+      // can still make a live, uncached call to GitHub - so re-checking
+      // periodically while the tab stays open catches a deploy that landed
+      // *after* this page loaded, which a one-time check on load can't.
+      setInterval(checkForNewerDeploy, 2 * 60 * 1000);
+    } else if (sha.value !== firstSeenDeploySha) {
+      showUpdateBanner();
+    }
+  }
+}
+
+async function fetchLatestDeploySha() {
   try {
     const { owner, repo } = window.EDDIES_CONFIG;
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=docs&per_page=1`);
     if (!res.ok) throw new Error(`commits lookup failed: ${res.status}`);
     const [latest] = await res.json();
-    const deployedAt = latest.commit.committer.date;
-    const parts = [`Site updated ${new Date(deployedAt).toLocaleString()}`];
-    if (dataGeneratedAt) parts.push(`Data published ${new Date(dataGeneratedAt).toLocaleString()}`);
-    el.textContent = parts.join(' · ');
+    return { value: latest.sha, deployedAt: latest.commit.committer.date };
   } catch {
-    el.textContent = '';
+    return null;
   }
+}
+
+async function checkForNewerDeploy() {
+  if (document.getElementById('update-banner')) return; // already showing
+  const sha = await fetchLatestDeploySha();
+  if (sha && firstSeenDeploySha && sha.value !== firstSeenDeploySha) showUpdateBanner();
+}
+
+function showUpdateBanner() {
+  const banner = document.createElement('div');
+  banner.id = 'update-banner';
+  banner.className = 'update-banner';
+  banner.innerHTML = 'A newer version of this site is live. <button id="update-reload-btn">Reload</button>';
+  document.body.prepend(banner);
+  document.getElementById('update-reload-btn').addEventListener('click', () => {
+    // A fresh query string is always a cache miss, bypassing the stale
+    // copy of this exact URL sitting in the browser's HTTP cache.
+    location.href = location.pathname + location.search + (location.search ? '&' : '?') + 'v=' + Date.now();
+  });
 }
