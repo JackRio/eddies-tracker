@@ -26,11 +26,32 @@ get the same `window.api`):
 
 - **Main window** — `src/renderer/index.html` + `renderer.js` + `style.css`.
   The card browser/filter grid where you set Main/Reserve/Extras counts.
+  Hovering a tile pops it up slightly (`.card-tile:hover`, plain CSS
+  transform + raised `z-index` — no ghost-element trick needed here since,
+  unlike the Collection window's fan rows, this grid has no horizontal-
+  scroll clipping ancestor). Clicking a tile (anywhere except its counter
+  buttons) opens a full-size click-to-close popup (`#popped-overlay` /
+  `openPopped()`) with the card art, editable Main/Reserve/Extras counters,
+  rules text, and a Rules FAQ section — same popup pattern as the
+  Collection window's, described below.
 - **Collection window** — `src/renderer/collection.html` + `collection.js` +
   `collection.css`. Opened via the "My Collection" button (IPC
   `collection-view:open`). Visual binder: 5 tabs (All/Legend/Unit/Gear/
   Program) × 4 color rows, a rarity-filter sidebar, and a Main Set/Reserve
-  Set toggle that changes what every filter on the page means.
+  Set toggle that changes what every filter on the page means. Same
+  click-to-open full-size popup as the Main window (read-only bucket pills
+  here instead of editable counters).
+
+Rules text (from the API) comes with `{Keyword}` tokens — e.g. `{Call}`,
+`{Go Solo}`, `{Spend}` — standing in for the game's official badge icons.
+`renderRulesText()` (duplicated in `renderer.js`/`collection.js`/
+`docs/record.js`) swaps each for the matching SVG at
+`assets/keywords/<slug>.svg` (scraped once from cyberpunktcg.com's own
+rules-faq page — same shapes/colors as the real cards; see conversation
+history if these ever need re-scraping). The popup's Rules FAQ section
+(`faqHtml()`) looks up the card's `slug` in a bundled `faq-data.json`
+(also scraped from cyberpunktcg.com/rules-faq, 140 cards/244 Q&As as of
+this writing) and renders each Q&A through the same `renderRulesText()`.
 
 All Node-side logic (API fetching, file I/O, image caching, backups, web
 publish) lives in `src/main.js` and is exposed to both renderers through
@@ -197,6 +218,12 @@ in both windows; `icon.png`/`icon.ico` (opaque badge) are for the window/
 taskbar icon and the electron-builder installer icon
 (`package.json`'s `build.win.icon`).
 
+`icon.ico` must be a proper **multi-resolution** ICO (16/32/48/64/128/256px
+entries, full alpha) — a single 256px/16-color entry (what an early pass
+produced) renders fine as a window icon but shows as a blank/generic icon
+for a Windows desktop shortcut. If regenerating, write all six sizes into
+one ICO rather than just the largest.
+
 ## Web publish (`docs/` — a separate static website)
 
 A **second, independent deliverable**: a static site (meant for GitHub
@@ -224,8 +251,10 @@ which:
 3. Recomputes `docs/data/needed.json` (both Main and Reserve "still need
    N more" lists, for every printing under its cap) and
    `docs/data/catalog.json` (lightweight, no images — every printing's
-   name/set/rarity/etc, so the Record page can search *any* card, not just
-   currently-needed ones)
+   name/set/rarity/rulesText/slug/etc, so the Record page can search *any*
+   card, not just currently-needed ones — plus each printing's `main`/
+   `reserve`/`extras` counts and `cap` as of this publish, so the Record
+   page can show "Owned: N")
 4. Copies any newly-needed printings' images from `userData/images/` into
    `docs/images/` (never removes old ones, so a link someone still has open
    doesn't 404)
@@ -278,6 +307,14 @@ immediately, even though the underlying files haven't actually changed yet.
   entries, plus a "Refresh Trades" button to re-pull the committed side
   from GitHub (this tab's own `pending` array only reflects what it has
   fetched/written itself).
+  Optional "Trading away a card?" picker (`giveAway`/`selectGiveAway()`):
+  searches the same `catalog.json`, and when set, the next `+1` click also
+  stages a `-1` for it — from whichever of Main/Reserve/Extras you pick
+  via the "From:" button row (defaults to Extras; don't hardcode it to
+  Extras again, a real trade can come from any bucket), with a live
+  "N owned in `<bucket>`" readout next to the picker. Only a *positive*
+  pickup (`+1`) implies a trade-away — undoing a mistaken `-1` click
+  shouldn't also silently return the traded card.
 - `docs/needed.js`'s `pendingDeltaFor()` also reads `stagedDeltaFor()` from
   the same `localStorage` map, and a `storage` event listener re-renders
   it — so a trade staged on the Record page (even before its background
@@ -286,23 +323,51 @@ immediately, even though the underlying files haven't actually changed yet.
 - `docs/shared.js` — GitHub Contents API helpers (`ghGetFile`, `ghPutFile`,
   `verifyToken`) and token storage (`localStorage`, key `eddies_gh_token`).
   Always hits `api.github.com` directly (never the Pages CDN), so the `sha`
-  used for a PUT is fresh.
-- `docs/config.js` — `window.EDDIES_CONFIG = { owner, repo }`. **Currently
-  a placeholder** (`owner: 'REPLACE_WITH_GITHUB_USERNAME'`) — the repo
-  hasn't been created/connected yet as of this writing. Fill in the real
-  owner once known, and set up the git remote (`git remote add origin
-  <url>`) before the "Publish Site" button's `git push` will work.
-- `docs/data/{needed,catalog,pending-changes}.json` — generated by
-  `publish:run`; `pending-changes.json` starts as `[]` and is written to by
-  the Record page between publishes.
+  used for a PUT is fresh. `ghUpdateJsonFile(path, mutateFn, messageFn,
+  attempts=3, onAttempt)` wraps the read→mutate→write pattern with a
+  retry-on-409: if the `sha` went stale between the read and the write
+  (another writer landed in between), it just re-reads and re-applies
+  `mutateFn` against the fresh content instead of surfacing the error —
+  `onAttempt(attempt, total)` lets the caller show retry progress instead
+  of a silent retry. Also home to the staged-delta helpers
+  (`stageDelta`/`getStagedDeltas`/`stagedDeltaFor`, see the Record page
+  bullet above) and `renderBuildInfo()`/the update-banner check below.
+- `docs/config.js` — `window.EDDIES_CONFIG = { owner: 'JackRio', repo:
+  'eddies-tracker' }`. Real repo, connected and live at
+  **https://jackrio.lol** (custom domain via `docs/CNAME`, DNS pointed at
+  GitHub Pages' 4 standard A-record IPs; GitHub Pages redirects the
+  `jackrio.github.io/eddies-tracker` URL to it automatically once a
+  `CNAME` file is present).
+- `docs/data/{needed,catalog,pending-changes,faq}.json` — `needed`/
+  `catalog` generated by `publish:run` (see "Web publish" above);
+  `pending-changes.json` starts as `[]` and is written to by the Record
+  page between publishes; `faq.json` is the bundled cyberpunktcg.com FAQ
+  scrape (static, not regenerated by publish — see the FAQ note above).
 - `docs/images/` — copied subset of `userData/images/` (only currently- or
   previously-needed printings, not the full 509).
+- `docs/assets/keywords/*.svg` + `docs/assets/rarity/*.svg` — same keyword
+  badge icons and rarity icons the desktop app uses (`src/renderer/assets/
+  keywords/` and `.../rarity/`), duplicated here so the website's
+  `renderRulesText()`/rarity filter buttons can reference them too. Keep
+  both copies in sync if these ever get regenerated.
 - `renderBuildInfo()` in `shared.js` — shown in a small strip under the
   header on both pages, so a stale browser tab/cache is obvious. "Site
   updated" comes straight from GitHub's public commits API (most recent
   commit touching `docs/`), not a hand-maintained file — no CI/build step
   exists here to keep a stored timestamp fresh, so asking GitHub directly
   is the only version that can't go stale itself.
+  GitHub Pages doesn't support custom response headers, so its fixed
+  `Cache-Control: max-age=600` can't be shortened — a phone browser can
+  sit on a stale cached page longer than expected with no way around it
+  from our side. As a partial mitigation, once any page has loaded,
+  `checkForNewerDeploy()` re-polls that same commits API every 2 minutes
+  while the tab stays open and shows a sticky "A newer version is live —
+  Reload" banner (`showUpdateBanner()`) if the latest commit sha changed
+  since this tab's first check; the banner's reload appends a `?v=<ts>`
+  cache-busting query string so it can't just re-serve the same cached
+  response. This only helps once a version *with this check* has loaded at
+  least once — it can't retroactively un-stale an already-cached page that
+  predates it.
 
 ### Local preview (without a real repo/token)
 
@@ -323,6 +388,8 @@ folder; use the local server instead.
 - "Needed" means **missing + partial** (anything under the type's cap),
   not just fully-missing-at-zero.
 - Publishing is a **manual button click**, not automatic on every save.
+- Custom domain (`jackrio.lol`) is live, DNS'd straight at GitHub Pages —
+  no other host/CDN in front of it.
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 
@@ -374,6 +441,25 @@ folder; use the local server instead.
   queue (`loadCardImagesQueued`, `IMAGE_LOAD_CONCURRENCY = 8`) that assigns
   `<img src>` from `data-src` in small batches — don't go back to setting
   `src` directly in the initial HTML for any view with many cards at once.
+- **A bare descendant selector on a popup's card image also matches icons
+  nested deep inside it.** The popup's `.popped-card img { width: 340px;
+  box-shadow: ...var(--yellow) }` rule was meant for just the card art, but
+  also matched every `.keyword-icon` image inside `.popped-rules`/the FAQ
+  section (also a descendant of `.popped-card`), stretching each one to
+  340px with a yellow ring — looked exactly like a broken image at a
+  glance, wasn't one. Fixed by scoping to `.popped-card > img` (direct
+  child only). Any time a new element gets nested inside an existing
+  "the one big image in here" container, check for this before assuming
+  the new element is broken.
+- **Toggling the `hidden` property does nothing on an element that also
+  has its own `display` set via a class.** An author stylesheet rule (e.g.
+  `.bucket-action-row { display: flex }`) always beats the browser's
+  default `[hidden] { display: none }`, regardless of selector
+  specificity or source order — so `el.hidden = true` silently no-ops on
+  anything styled that way. Bit several of the Record page's conditionally
+  shown elements at once. Fixed globally in `docs/style.css` with
+  `[hidden] { display: none !important; }` at the top of the file, rather
+  than hunting down every individual element case-by-case.
 
 ## Windows dev-environment notes
 
