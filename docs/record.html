@@ -88,8 +88,12 @@
       <div class="pending-panel">
         <div class="pending-panel-header">
           <h3>Pending (not yet synced to the app)</h3>
-          <a href="#" id="refresh-pending-link">Refresh</a>
+          <span>
+            <a href="#" id="sync-now-link">Sync now</a>
+            <a href="#" id="refresh-pending-link">Refresh</a>
+          </span>
         </div>
+        <div class="status-line" id="sync-status"></div>
         <div class="status-line" id="pending-status"></div>
         <div id="pending-list"></div>
       </div>

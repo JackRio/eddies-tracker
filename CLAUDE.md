@@ -256,9 +256,27 @@ immediately, even though the underlying files haven't actually changed yet.
 - `docs/record.html` + `record.js` — **Record** page. Token-gated (shows
   `#token-gate` until a token is saved and passes `verifyToken()`). Search
   box over `catalog.json`, then +/−1 buttons per bucket for the selected
-  card, each doing a read-modify-write (`ghGetFile` → append → `ghPutFile`)
-  against `docs/data/pending-changes.json`. Shows a running "Pending" list
-  of everything queued since the last desktop publish.
+  card. Clicking one does **not** commit immediately — it nets into a
+  `eddies_staged_deltas` map in `localStorage` (`stageDelta()`/
+  `getStagedDeltas()` in `shared.js`) and updates the screen instantly.
+  A debounced `flushStaged()` (4s after the last click, or the "Sync now"
+  link) batches everything currently staged into **one** `ghUpdateJsonFile`
+  read-modify-write against `docs/data/pending-changes.json`. This exists
+  because committing on every single click (the original design) meant
+  every click was its own Pages rebuild, and two quick clicks on the same
+  card would race each other's `sha` into a 409 — batching means clicks
+  that cancel out (+1 then -1) never reach GitHub at all, and a burst of
+  clicks becomes one commit. If the tab closes before the timer fires, the
+  staged map persists and flushes on next load instead of being lost.
+  Shows a running "Pending" list combining committed + still-staged
+  entries, plus a "Refresh" link to re-pull the committed side from
+  GitHub (this tab's own `pending` array only reflects what it has
+  fetched/written itself).
+- `docs/needed.js`'s `pendingDeltaFor()` also reads `stagedDeltaFor()` from
+  the same `localStorage` map, and a `storage` event listener re-renders
+  it — so a trade staged on the Record page (even before its background
+  commit lands) makes the card disappear/reappear on an already-open
+  Needed tab on the same device immediately.
 - `docs/shared.js` — GitHub Contents API helpers (`ghGetFile`, `ghPutFile`,
   `verifyToken`) and token storage (`localStorage`, key `eddies_gh_token`).
   Always hits `api.github.com` directly (never the Pages CDN), so the `sha`

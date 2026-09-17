@@ -71,6 +71,12 @@ async function init() {
 
   attachControls();
   renderPending();
+  // Anything staged from a previous visit (tab closed before the 4s flush
+  // timer fired) gets a chance to commit now instead of sitting forever.
+  if (Object.keys(getStagedDeltas()).length) flushStaged();
+  window.addEventListener('pagehide', () => {
+    if (Object.keys(getStagedDeltas()).length) flushStaged();
+  });
 
   const params = new URLSearchParams(location.search);
   const bucket = params.get('bucket');
@@ -121,6 +127,11 @@ function attachControls() {
   el('refresh-pending-link').addEventListener('click', (e) => {
     e.preventDefault();
     refreshPending();
+  });
+  el('sync-now-link').addEventListener('click', (e) => {
+    e.preventDefault();
+    clearTimeout(flushTimer);
+    flushStaged();
   });
 }
 
@@ -226,8 +237,11 @@ function clearGiveAway() {
   el('give-away-search').hidden = false;
 }
 
+// Committed (from GitHub) + staged-but-not-yet-committed (this device,
+// this browser only) both count toward what's "queued" for a card.
 function pendingDeltaFor(id, bucket) {
-  return pending.filter((p) => p.id === id && p.bucket === bucket).reduce((sum, p) => sum + p.delta, 0);
+  const committed = pending.filter((p) => p.id === id && p.bucket === bucket).reduce((sum, p) => sum + p.delta, 0);
+  return committed + stagedDeltaFor(id, bucket);
 }
 
 function updatePendingCounts() {
@@ -237,83 +251,107 @@ function updatePendingCounts() {
   });
 }
 
-async function adjust(bucket, delta) {
+let flushTimer = null;
+let isFlushing = false;
+let reflushNeeded = false;
+
+// The actual +/- click handler: instant, local, no network call at all.
+// The real GitHub commit happens later in flushStaged(), batched.
+function adjust(bucket, delta) {
   if (!selected) return;
-  const buttons = document.querySelectorAll('.bucket-action-row button');
-  buttons.forEach((b) => (b.disabled = true));
-  const status = el('record-status');
-  status.textContent = 'Saving...';
-  status.className = 'status-line';
   // A trade-away is only implied by a positive pickup (+1), not by undoing
   // a mistaken click (-1) - that shouldn't also silently give the traded
   // card back.
   const tradedAway = delta > 0 && giveAway;
+  stageDelta(selected.id, selected.displayName || selected.name, bucket, delta);
+  if (tradedAway) stageDelta(giveAway.id, giveAway.displayName || giveAway.name, 'extras', -1);
+
+  updatePendingCounts();
+  renderPending();
+  const status = el('record-status');
+  status.textContent = tradedAway ? `Queued. Also queued -1 Extras for ${giveAway.name}.` : 'Queued.';
+  status.className = 'status-line ok';
+  if (tradedAway) clearGiveAway();
+
+  clearTimeout(flushTimer);
+  flushTimer = setTimeout(flushStaged, 4000);
+}
+
+// Commits everything staged since the last flush in one write - so 5 rapid
+// clicks (even across different cards) become 1 commit/Pages rebuild, not
+// 5, and same-card clicks that net to 0 never get committed at all.
+async function flushStaged() {
+  if (isFlushing) {
+    reflushNeeded = true;
+    return;
+  }
+  const staged = Object.values(getStagedDeltas());
+  if (!staged.length) return;
+
+  isFlushing = true;
+  const status = el('sync-status');
+  status.textContent = 'Syncing to GitHub...';
+  status.className = 'status-line';
   try {
     const next = await ghUpdateJsonFile(
       'docs/data/pending-changes.json',
-      (content) => {
-        const ts = new Date().toISOString();
-        content.push({
-          id: selected.id,
-          name: selected.displayName || selected.name,
-          bucket,
-          delta,
-          ts
-        });
-        if (tradedAway) {
-          content.push({
-            id: giveAway.id,
-            name: giveAway.displayName || giveAway.name,
-            bucket: 'extras',
-            delta: -1,
-            ts
-          });
-        }
-        return content;
-      },
-      () => {
-        let message = `Record: ${delta > 0 ? '+' : ''}${delta} ${bucket} — ${selected.name}`;
-        if (tradedAway) message += ` (traded away ${giveAway.name})`;
-        return message;
-      },
+      (content) => [...content, ...staged],
+      () =>
+        staged.length === 1
+          ? `Record: ${staged[0].delta > 0 ? '+' : ''}${staged[0].delta} ${staged[0].bucket} — ${staged[0].name}`
+          : `Record: ${staged.length} changes`,
       3,
       (attempt, total) => {
-        // Visible progress instead of a silent retry - a conflict here just
-        // means another write (the phone, or a desktop Publish) landed in
-        // between our read and write, not that anything went wrong.
-        status.textContent = attempt === 1 ? 'Saving...' : `Saving... (retry ${attempt}/${total} after a conflict with another write)`;
+        status.textContent = attempt === 1 ? 'Syncing to GitHub...' : `Syncing... (retry ${attempt}/${total} after a conflict with another write)`;
       }
     );
     pending = next;
-    updatePendingCounts();
+    // Only clear the deltas we actually just committed - not anything
+    // staged in the moment between reading `staged` above and now.
+    const map = getStagedDeltas();
+    staged.forEach((s) => {
+      const key = `${s.id}::${s.bucket}`;
+      if (map[key]?.ts === s.ts) delete map[key];
+    });
+    setStagedDeltas(map);
     renderPending();
-    status.textContent = tradedAway ? `Saved. Also queued -1 Extras for ${giveAway.name}.` : 'Saved.';
+    if (selected) updatePendingCounts();
+    status.textContent = `Synced ${staged.length} change${staged.length === 1 ? '' : 's'} at ${new Date().toLocaleTimeString()}.`;
     status.classList.add('ok');
-    if (tradedAway) clearGiveAway();
   } catch (err) {
     status.textContent = /\(409\)/.test(err.message)
-      ? 'Kept hitting a conflict with another write after 3 tries - wait a moment and try again.'
-      : err.message;
+      ? 'Kept hitting a conflict with another write after 3 tries - will retry shortly.'
+      : `Sync failed, will retry: ${err.message}`;
     status.classList.add('error');
+    clearTimeout(flushTimer);
+    flushTimer = setTimeout(flushStaged, 8000);
   } finally {
-    buttons.forEach((b) => (b.disabled = false));
+    isFlushing = false;
+    if (reflushNeeded) {
+      reflushNeeded = false;
+      flushStaged();
+    }
   }
 }
 
 function renderPending() {
   const list = el('pending-list');
-  if (!pending.length) {
+  const combined = [
+    ...pending.map((p) => ({ ...p, synced: true })),
+    ...Object.values(getStagedDeltas()).map((p) => ({ ...p, synced: false }))
+  ];
+  if (!combined.length) {
     list.innerHTML = '<div class="empty-state">Nothing queued yet.</div>';
     return;
   }
-  list.innerHTML = pending
-    .slice()
+  list.innerHTML = combined
+    .sort((a, b) => (a.ts || '').localeCompare(b.ts || ''))
     .reverse()
     .map(
       (p) => `
     <div class="pending-item">
       <div>
-        <div>${p.name} — ${p.bucket}</div>
+        <div>${p.name} — ${p.bucket}${p.synced ? '' : ' <span class="pending-unsynced">· syncing soon</span>'}</div>
         <div class="pending-time">${p.ts ? new Date(p.ts).toLocaleString() : ''}</div>
       </div>
       <span class="pending-delta ${p.delta > 0 ? 'positive' : 'negative'}">${p.delta > 0 ? '+' : ''}${p.delta}</span>
@@ -323,9 +361,10 @@ function renderPending() {
     .join('');
 }
 
-// This list only reflects what THIS tab has done/seen since load - another
-// device (or a desktop Publish clearing it) won't show up until refreshed,
-// which otherwise looks like "nothing happened" even though something did.
+// This list's committed half only reflects what THIS tab has fetched/synced
+// since load - another device's writes (or a desktop Publish clearing it)
+// won't show up until refreshed, which otherwise looks like nothing
+// happened even though something did.
 async function refreshPending() {
   const status = el('pending-status');
   status.textContent = 'Refreshing from GitHub...';

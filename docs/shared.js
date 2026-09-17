@@ -22,6 +22,45 @@ function mainSetCap(cardType) {
   return cardType === 'Legend' ? 1 : 3;
 }
 
+// Record page writes used to commit straight to GitHub on every single
+// +/- click, which is both a needless Pages rebuild per click and the
+// direct cause of the 409s two quick clicks on the same card would hit
+// (each commit changes the file's sha out from under the other). Instead,
+// clicks stage a *net* delta here first - same-origin localStorage, so the
+// Needed page (pendingDeltaFor there) sees it update instantly too, before
+// it's ever committed. record.js batches everything staged into one
+// commit after a short pause, or on next load if the tab closed first.
+const STAGED_DELTAS_KEY = 'eddies_staged_deltas';
+
+function getStagedDeltas() {
+  try {
+    return JSON.parse(localStorage.getItem(STAGED_DELTAS_KEY) || '{}');
+  } catch {
+    return {};
+  }
+}
+
+function setStagedDeltas(map) {
+  localStorage.setItem(STAGED_DELTAS_KEY, JSON.stringify(map));
+}
+
+function stagedDeltaFor(id, bucket) {
+  const entry = getStagedDeltas()[`${id}::${bucket}`];
+  return entry ? entry.delta : 0;
+}
+
+// Nets the new delta into whatever's already staged for this id+bucket -
+// two clicks that cancel out (+1 then -1) collapse back to nothing staged,
+// so they never even reach GitHub as a write.
+function stageDelta(id, name, bucket, delta) {
+  const map = getStagedDeltas();
+  const key = `${id}::${bucket}`;
+  const net = (map[key]?.delta || 0) + delta;
+  if (net === 0) delete map[key];
+  else map[key] = { id, name, bucket, delta: net, ts: new Date().toISOString() };
+  setStagedDeltas(map);
+}
+
 function utf8ToBase64(str) {
   return btoa(unescape(encodeURIComponent(str)));
 }

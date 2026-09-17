@@ -532,12 +532,18 @@ select {
 .pending-panel-header a {
   font-size: 12px;
   color: var(--cyan);
+  margin-left: 12px;
 }
 
 .pending-time {
   font-size: 11px;
   color: var(--text-dim);
   margin-top: 2px;
+}
+
+.pending-unsynced {
+  color: var(--yellow);
+  font-style: italic;
 }
 
 .pending-item {

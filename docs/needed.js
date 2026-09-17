@@ -48,6 +48,13 @@ async function init() {
   attachControls();
   render();
   renderBuildInfo(neededData.generatedAt);
+
+  // Fires when another tab on this device (i.e. the Record page) changes
+  // localStorage - lets an already-open Needed tab reflect a just-staged
+  // trade without needing a manual reload.
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'eddies_staged_deltas') render();
+  });
 }
 
 function buildFilterOptions() {
@@ -125,11 +132,16 @@ function attachControls() {
 
 // Pending changes recorded on the Record page (not yet pulled into the
 // desktop app) haven't regenerated needed.json yet, so we adjust the
-// last-published numbers client-side - keeps this page feeling live.
+// last-published numbers client-side - keeps this page feeling live. This
+// also counts deltas the Record page has only *staged* locally and hasn't
+// committed to GitHub yet (see stageDelta() in shared.js) - same origin,
+// same localStorage, so a card recorded a second ago on this same device
+// disappears here immediately, not just after its background sync commit.
 function pendingDeltaFor(id, bucket) {
-  return pendingChanges
+  const committed = pendingChanges
     .filter((c) => c.id === id && c.bucket === bucket)
     .reduce((sum, c) => sum + (c.delta || 0), 0);
+  return committed + stagedDeltaFor(id, bucket);
 }
 
 function render() {
