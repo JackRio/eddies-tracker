@@ -489,12 +489,29 @@ select {
   margin-top: 20px;
 }
 
+.pending-panel-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .pending-panel h3 {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--text-dim);
   margin-bottom: 8px;
+}
+
+.pending-panel-header a {
+  font-size: 12px;
+  color: var(--cyan);
+}
+
+.pending-time {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 2px;
 }
 
 .pending-item {

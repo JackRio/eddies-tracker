@@ -118,6 +118,10 @@ function attachControls() {
   });
   el('give-away-search').addEventListener('input', (e) => renderGiveAwayResults(e.target.value));
   el('give-away-remove').addEventListener('click', clearGiveAway);
+  el('refresh-pending-link').addEventListener('click', (e) => {
+    e.preventDefault();
+    refreshPending();
+  });
 }
 
 // When a card was clicked from the Needed page, the bucket (Main/Reserve)
@@ -271,6 +275,13 @@ async function adjust(bucket, delta) {
         let message = `Record: ${delta > 0 ? '+' : ''}${delta} ${bucket} — ${selected.name}`;
         if (tradedAway) message += ` (traded away ${giveAway.name})`;
         return message;
+      },
+      3,
+      (attempt, total) => {
+        // Visible progress instead of a silent retry - a conflict here just
+        // means another write (the phone, or a desktop Publish) landed in
+        // between our read and write, not that anything went wrong.
+        status.textContent = attempt === 1 ? 'Saving...' : `Saving... (retry ${attempt}/${total} after a conflict with another write)`;
       }
     );
     pending = next;
@@ -280,7 +291,9 @@ async function adjust(bucket, delta) {
     status.classList.add('ok');
     if (tradedAway) clearGiveAway();
   } catch (err) {
-    status.textContent = err.message;
+    status.textContent = /\(409\)/.test(err.message)
+      ? 'Kept hitting a conflict with another write after 3 tries - wait a moment and try again.'
+      : err.message;
     status.classList.add('error');
   } finally {
     buttons.forEach((b) => (b.disabled = false));
@@ -299,12 +312,35 @@ function renderPending() {
     .map(
       (p) => `
     <div class="pending-item">
-      <span>${p.name} — ${p.bucket}</span>
+      <div>
+        <div>${p.name} — ${p.bucket}</div>
+        <div class="pending-time">${p.ts ? new Date(p.ts).toLocaleString() : ''}</div>
+      </div>
       <span class="pending-delta ${p.delta > 0 ? 'positive' : 'negative'}">${p.delta > 0 ? '+' : ''}${p.delta}</span>
     </div>
   `
     )
     .join('');
+}
+
+// This list only reflects what THIS tab has done/seen since load - another
+// device (or a desktop Publish clearing it) won't show up until refreshed,
+// which otherwise looks like "nothing happened" even though something did.
+async function refreshPending() {
+  const status = el('pending-status');
+  status.textContent = 'Refreshing from GitHub...';
+  status.className = 'status-line';
+  try {
+    const { content } = await ghGetFile('docs/data/pending-changes.json');
+    pending = content;
+    renderPending();
+    if (selected) updatePendingCounts();
+    status.textContent = `Up to date as of ${new Date().toLocaleTimeString()}.`;
+    status.classList.add('ok');
+  } catch (err) {
+    status.textContent = err.message;
+    status.classList.add('error');
+  }
 }
 
 async function onSaveToken() {

@@ -82,8 +82,9 @@ async function verifyToken(token) {
 // this write). Re-reading and re-applying the mutation on the fresh content
 // is safe here because mutateFn is a pure append, not a diff against what
 // we last saw.
-async function ghUpdateJsonFile(path, mutateFn, messageFn, attempts = 3) {
+async function ghUpdateJsonFile(path, mutateFn, messageFn, attempts = 3, onAttempt) {
   for (let i = 0; i < attempts; i++) {
+    onAttempt?.(i + 1, attempts);
     const { content, sha } = await ghGetFile(path);
     const next = mutateFn(content);
     try {
