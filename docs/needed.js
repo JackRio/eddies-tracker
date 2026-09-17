@@ -32,6 +32,7 @@ function rarityClass(rarity) {
 }
 
 async function init() {
+  renderBuildInfo();
   try {
     [neededData, pendingChanges] = await Promise.all([
       fetchJson('data/needed.json'),
@@ -46,6 +47,7 @@ async function init() {
   buildFilterOptions();
   attachControls();
   render();
+  renderBuildInfo(neededData.generatedAt);
 }
 
 function buildFilterOptions() {

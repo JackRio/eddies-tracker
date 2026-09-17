@@ -46,6 +46,8 @@ function faqHtml(slug) {
 }
 
 async function init() {
+  renderBuildInfo();
+
   if (!getToken()) {
     el('token-gate').hidden = false;
     el('record-body').hidden = true;

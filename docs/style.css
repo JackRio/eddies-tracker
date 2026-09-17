@@ -87,6 +87,15 @@ a { color: var(--cyan); text-decoration: none; }
   border-color: var(--yellow);
 }
 
+.build-info {
+  text-align: center;
+  font-size: 10px;
+  color: var(--text-dim);
+  padding: 4px 12px;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
 main {
   padding: 12px;
   max-width: 720px;
