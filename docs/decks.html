@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Decks — Eddies</title>
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="decks.css" />
+</head>
+<body>
+  <header class="app-header">
+    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
+    <h1><span class="accent">EDDIES</span></h1>
+    <nav class="nav-tabs">
+      <a href="/">Needed</a>
+      <a href="record.html">Record</a>
+      <a href="decks.html" class="active">Decks</a>
+    </nav>
+  </header>
+
+  <div class="build-info" id="build-info"></div>
+
+  <main>
+    <div id="decks-list">
+      <div class="result-count" id="deck-result-count"></div>
+      <div id="deck-list-grid" class="deck-list-grid"></div>
+      <div class="empty-state" id="decks-empty" hidden>Nothing published right now — open the Deck Builder and hit "Publish Selected" to bring a deck here.</div>
+    </div>
+
+    <div id="deck-detail" hidden>
+      <a href="#" id="back-to-decks-link" class="search-different-link">&larr; Back to all decks</a>
+      <h2 id="detail-title"></h2>
+      <div id="detail-links" class="detail-links"></div>
+
+      <div id="detail-status" class="deck-status">
+        <div>
+          <div class="deck-status-title">Deck Status</div>
+          <div id="detail-status-sub" class="deck-status-sub"></div>
+        </div>
+        <div id="detail-status-badge" class="deck-status-badge"></div>
+      </div>
+
+      <div class="deck-section">
+        <h3>Legends <span id="detail-legends-count" class="count-badge"></span></h3>
+        <div id="detail-legends" class="tile-grid"></div>
+      </div>
+
+      <div id="detail-description" class="deck-description"></div>
+
+      <div class="deck-section">
+        <h3>Eddie Cost Curve</h3>
+        <div id="detail-cost-curve"></div>
+      </div>
+
+      <div id="detail-donuts" class="donut-row"></div>
+
+      <div id="detail-card-sections"></div>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="decks.js"></script>
+</body>
+</html>

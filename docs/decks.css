@@ -1,0 +1,302 @@
+/* Deck list ---------------------------------------------------------- */
+
+.deck-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deck-list-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+.deck-list-card-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.deck-list-legends {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.deck-list-legend-thumb {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.deck-list-legend-empty {
+  width: 40px;
+  height: 56px;
+  border-radius: 4px;
+  border: 1px dashed var(--border);
+}
+
+.deck-list-card-meta {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* Deck detail ---------------------------------------------------------- */
+
+#deck-detail h2 {
+  margin: 4px 0 8px;
+  font-size: 18px;
+}
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.detail-link-chip {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--cyan) !important;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.deck-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.deck-status.invalid { border-left-color: var(--red); }
+
+.deck-status-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.deck-status-sub { font-size: 13px; margin-top: 2px; }
+
+.deck-status-badge {
+  padding: 5px 12px;
+  border: 1px solid var(--green);
+  color: var(--green);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.deck-status.invalid .deck-status-badge { border-color: var(--red); color: var(--red); }
+
+.deck-section { margin-bottom: 22px; }
+
+.deck-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  margin: 0 0 10px;
+}
+
+.count-badge {
+  font-size: 11px;
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1px 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+}
+
+/* Same "height: 0 + inline padding-bottom" trick as the app's
+   .view-deck-tile - see TILE_RAISE_PX in decks.js. */
+.deck-tile {
+  position: relative;
+  height: 0;
+}
+
+.deck-tile-layer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 63 / 88;
+  object-fit: cover;
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.deck-tile-empty {
+  aspect-ratio: 63 / 88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  font-size: 11px;
+  background: var(--bg-card);
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+}
+
+.deck-description {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.deck-description:empty { display: none; }
+
+/* Eddie Cost Curve --------------------------------------------------- */
+
+.ram-curve {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.ram-curve-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+}
+
+.ram-curve-bar {
+  width: 100%;
+  background: var(--cyan);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ram-curve-bar-count {
+  font-size: 10px;
+  font-weight: 800;
+  color: #0a0a0f;
+  margin-top: 3px;
+}
+
+.ram-curve-label {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+/* Donuts -------------------------------------------------------------- */
+
+.donut-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.donut-block {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 8px;
+}
+
+.donut-block h4 {
+  margin: 0 0 6px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.donut {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px auto;
+  flex-shrink: 0;
+}
+
+.donut-hole {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: var(--bg-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.donut-pct { font-size: 16px; font-weight: 800; line-height: 1; }
+.donut-sublabel { font-size: 9px; font-weight: 700; margin-top: 2px; }
+.donut-count { font-size: 9px; color: var(--text-dim); }
+
+.donut-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.donut-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-dim);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 3px 8px;
+}
+
+.donut-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
