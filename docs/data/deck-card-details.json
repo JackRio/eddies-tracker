@@ -319,26 +319,6 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "7a8c2032-e753-43ab-9c3b-adefb4281241": {
-    "id": "7a8c2032-e753-43ab-9c3b-adefb4281241",
-    "cardId": "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3",
-    "name": "Memory Relapse",
-    "subname": null,
-    "displayName": "Memory Relapse",
-    "slug": "memory-relapse",
-    "cardType": "Program",
-    "color": "Green",
-    "rarity": "Uncommon",
-    "ram": 2,
-    "cost": 4,
-    "power": null,
-    "isEddiable": true,
-    "rulesText": "Spend a rival Unit. It can't ready until your next turn. If your ☆ (Street Cred) is an even number, draw 1.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
   "873656f0-c32a-46fb-856f-8a5ee44b8d21": {
     "id": "873656f0-c32a-46fb-856f-8a5ee44b8d21",
     "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
@@ -379,26 +359,6 @@
       "name": "Box Toppers — Beta"
     }
   },
-  "d74468ab-6024-4ae6-b69a-ac41f6e9cfce": {
-    "id": "d74468ab-6024-4ae6-b69a-ac41f6e9cfce",
-    "cardId": "4560f3d0-5f63-466b-93b7-fc9d822a556e",
-    "name": "Judy Álvarez",
-    "subname": "Braindance Maestro",
-    "displayName": "Judy Álvarez: Braindance Maestro",
-    "slug": "judy-a-lvarez-braindance-maestro",
-    "cardType": "Legend",
-    "color": "Blue",
-    "rarity": "Epic",
-    "ram": 2,
-    "cost": null,
-    "power": null,
-    "isEddiable": true,
-    "rulesText": "When you play a BRAINDANCE Program, give a friendly Unit +1 power this turn.\n{Spend} Trash the top card of your deck. If it's a Program, you may add it to your hand.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
   "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": {
     "id": "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1",
     "cardId": "b0453570-7ed8-4031-9562-cb73d7a979e5",
@@ -414,26 +374,6 @@
     "power": 2,
     "isEddiable": false,
     "rulesText": "This Unit can't attack unless you played a Program this turn.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "32f8d89a-1e4b-46b8-9323-77c297c5b5ae": {
-    "id": "32f8d89a-1e4b-46b8-9323-77c297c5b5ae",
-    "cardId": "3bb1f191-927e-45b3-86ca-cb30baabfe0d",
-    "name": "Delamain",
-    "subname": "Rideshare AI",
-    "displayName": "Delamain: Rideshare AI",
-    "slug": "delamain-rideshare-ai",
-    "cardType": "Unit",
-    "color": "Blue",
-    "rarity": "Uncommon",
-    "ram": 3,
-    "cost": 3,
-    "power": 0,
-    "isEddiable": false,
-    "rulesText": "{Play} Draw 2.\n(Units with power 0 don't steal Gigs.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
