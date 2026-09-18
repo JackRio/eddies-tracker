@@ -1,4 +1,204 @@
 {
+  "5ade304e-8e0e-4484-944a-18d8d08caf9f": {
+    "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+    "cardId": "5a441989-2997-40a2-a72e-08ca1442a7f3",
+    "name": "Kerry Eurodyne",
+    "subname": "Axe, Attitude, Audience",
+    "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
+    "slug": "kerry-eurodyne-axe-attitude-audience",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Iconic Legend",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "When you roll in a Gig from your fixer area, you may ignore the result and reroll it once.\nWhen you roll a min or max value on a Gig, draw 1. If it's a d20, draw 3 instead.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b217ae88-52a6-44b3-b021-964db4534dbd": {
+    "id": "b217ae88-52a6-44b3-b021-964db4534dbd",
+    "cardId": "e64e2978-695b-4fc5-b17b-62c710a11c47",
+    "name": "River Ward",
+    "subname": "Detective on the Hunt",
+    "displayName": "River Ward: Detective on the Hunt",
+    "slug": "river-ward-detective-on-the-hunt",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} {Spend} Play a Gear with cost 2 or less from your hand for free.\nWhen a friendly equipped Unit is defeated, search the top 2 cards of your deck and trash 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "58cffb40-0914-4c6b-81cf-cdd8b2b83f17": {
+    "id": "58cffb40-0914-4c6b-81cf-cdd8b2b83f17",
+    "cardId": "7ea6eecc-e55e-4634-93eb-b2b46e79635d",
+    "name": "Rockn' Rockerboy",
+    "subname": null,
+    "displayName": "Rockn' Rockerboy",
+    "slug": "rockn-rockerboy",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 5,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "[Flavor] Scream your throat raw for something. Anything.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "ade4a2d5-df74-44fe-ab5f-222dc6e2ce27": {
+    "id": "ade4a2d5-df74-44fe-ab5f-222dc6e2ce27",
+    "cardId": "92d23553-8b0d-49cd-8cbe-6f00b3377298",
+    "name": "Viktor Vektor",
+    "subname": "Drop Your Illusions",
+    "displayName": "Viktor Vektor: Drop Your Illusions",
+    "slug": "viktor-vektor-drop-your-illusions",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": 5,
+    "power": 5,
+    "isEddiable": false,
+    "rulesText": "Play your first CYBERWARE Gear each turn for -3 €$, to a minimum of 1 €$.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "93f68b18-e15c-44be-883b-8db7990646f1": {
+    "id": "93f68b18-e15c-44be-883b-8db7990646f1",
+    "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
+    "name": "Jackie Welles",
+    "subname": "Ride or Die Choom",
+    "displayName": "Jackie Welles: Ride or Die Choom",
+    "slug": "jackie-welles-ride-or-die-choom",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Attack} Give this Unit +2 power this turn for each friendly Gig with an even value.\n{Defeated} Draw 1 for each friendly Gig with an odd value.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "dc0a7e03-54b6-4334-965f-27a3d469fed6": {
+    "id": "dc0a7e03-54b6-4334-965f-27a3d469fed6",
+    "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+    "name": "Mandibular Upgrade",
+    "subname": null,
+    "displayName": "Mandibular Upgrade",
+    "slug": "mandibular-upgrade",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 1,
+    "power": 0,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "ccb79cf1-fc2d-4b52-bea5-b427583bfe1b": {
+    "id": "ccb79cf1-fc2d-4b52-bea5-b427583bfe1b",
+    "cardId": "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39",
+    "name": "Adrenaline Converter",
+    "subname": null,
+    "displayName": "Adrenaline Converter",
+    "slug": "adrenaline-converter",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 4,
+    "cost": 2,
+    "power": 3,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nIf a Rival controls at least 2 more Gigs than you, this Unit has {Adrenaline}. (This Unit can attack the turn it's played.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "25077971-70cc-4524-b7cf-cd8258abc28c": {
+    "id": "25077971-70cc-4524-b7cf-cd8258abc28c",
+    "cardId": "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df",
+    "name": "Zetatech Faceplate",
+    "subname": null,
+    "displayName": "Zetatech Faceplate",
+    "slug": "zetatech-faceplate",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 2,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit or Legend is spent, adjust a Gig by up to 1. Then, if you control 3 or more Gigs with different values, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b2d6aeff-8fa3-4151-9e67-a83188a78197": {
+    "id": "b2d6aeff-8fa3-4151-9e67-a83188a78197",
+    "cardId": "793d9650-0a59-4c89-9d85-05a9d6873d2e",
+    "name": "Live with the Aftermath",
+    "subname": null,
+    "displayName": "Live with the Aftermath",
+    "slug": "live-with-the-aftermath",
+    "cardType": "Program",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 3,
+    "cost": 3,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Each player defeats one of their Units.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "20c23b0f-187d-41d8-9670-b8e603049b3d": {
+    "id": "20c23b0f-187d-41d8-9670-b8e603049b3d",
+    "cardId": "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3",
+    "name": "Bootleg Black Sapphire Show",
+    "subname": null,
+    "displayName": "Bootleg Black Sapphire Show",
+    "slug": "bootleg-black-sapphire-show",
+    "cardType": "Program",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 4,
+    "cost": 5,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Sell the top card of your deck.\nIf you control a Gig with an even value and a Gig with an odd value, draw 2.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "1435b785-967e-48a7-8ef7-f7fecbb27aaf": {
     "id": "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
     "cardId": "380b5e52-2651-4cde-8222-1db2ae6469e2",
@@ -119,6 +319,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "7a8c2032-e753-43ab-9c3b-adefb4281241": {
+    "id": "7a8c2032-e753-43ab-9c3b-adefb4281241",
+    "cardId": "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3",
+    "name": "Memory Relapse",
+    "subname": null,
+    "displayName": "Memory Relapse",
+    "slug": "memory-relapse",
+    "cardType": "Program",
+    "color": "Green",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 4,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Spend a rival Unit. It can't ready until your next turn. If your ☆ (Street Cred) is an even number, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "873656f0-c32a-46fb-856f-8a5ee44b8d21": {
     "id": "873656f0-c32a-46fb-856f-8a5ee44b8d21",
     "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
@@ -159,6 +379,26 @@
       "name": "Box Toppers — Beta"
     }
   },
+  "d74468ab-6024-4ae6-b69a-ac41f6e9cfce": {
+    "id": "d74468ab-6024-4ae6-b69a-ac41f6e9cfce",
+    "cardId": "4560f3d0-5f63-466b-93b7-fc9d822a556e",
+    "name": "Judy Álvarez",
+    "subname": "Braindance Maestro",
+    "displayName": "Judy Álvarez: Braindance Maestro",
+    "slug": "judy-a-lvarez-braindance-maestro",
+    "cardType": "Legend",
+    "color": "Blue",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "When you play a BRAINDANCE Program, give a friendly Unit +1 power this turn.\n{Spend} Trash the top card of your deck. If it's a Program, you may add it to your hand.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": {
     "id": "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1",
     "cardId": "b0453570-7ed8-4031-9562-cb73d7a979e5",
@@ -174,6 +414,66 @@
     "power": 2,
     "isEddiable": false,
     "rulesText": "This Unit can't attack unless you played a Program this turn.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "32f8d89a-1e4b-46b8-9323-77c297c5b5ae": {
+    "id": "32f8d89a-1e4b-46b8-9323-77c297c5b5ae",
+    "cardId": "3bb1f191-927e-45b3-86ca-cb30baabfe0d",
+    "name": "Delamain",
+    "subname": "Rideshare AI",
+    "displayName": "Delamain: Rideshare AI",
+    "slug": "delamain-rideshare-ai",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Uncommon",
+    "ram": 3,
+    "cost": 3,
+    "power": 0,
+    "isEddiable": false,
+    "rulesText": "{Play} Draw 2.\n(Units with power 0 don't steal Gigs.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "859345fa-c791-49dc-9258-505982b5adea": {
+    "id": "859345fa-c791-49dc-9258-505982b5adea",
+    "cardId": "ef77dd1f-3abd-4ce2-becc-97dd768a5022",
+    "name": "Mox Inciters",
+    "subname": null,
+    "displayName": "Mox Inciters",
+    "slug": "mox-inciters",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 3,
+    "power": 2,
+    "isEddiable": false,
+    "rulesText": "{Play} A rival Unit must attack next turn if it can.\n{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "6b5606c9-12a2-46d6-b13f-a672c6bd5f07": {
+    "id": "6b5606c9-12a2-46d6-b13f-a672c6bd5f07",
+    "cardId": "65a14367-da52-4578-8162-3c4bac11007d",
+    "name": "Rita Wheeler",
+    "subname": "No Stupid Questions",
+    "displayName": "Rita Wheeler: No Stupid Questions",
+    "slug": "rita-wheeler-no-stupid-questions",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 4,
+    "power": 4,
+    "isEddiable": false,
+    "rulesText": "{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)\nThe first time this Unit is spent each turn, draw 1, then discard 1.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -334,6 +634,26 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "A rival Unit can't attack until your next turn. If you control a min Gig, you may Call a Legend for free. (You can only Call a Legend once per turn.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": {
+    "id": "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc",
+    "cardId": "e4af26f0-e25d-4e30-8bac-6701f54f3e97",
+    "name": "Nocturne OP55 N1",
+    "subname": null,
+    "displayName": "Nocturne OP55 N1",
+    "slug": "nocturne-op55-n1",
+    "cardType": "Program",
+    "color": "Blue",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 3,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "If your fixer area is empty, play this Program for 1 €$. Choose one effect.\nDraw 2. // A Unit can't attack until your next turn. // A friendly Legend may use {Go Solo} for -2 €$ this turn, to a minimum of 1 €$.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"

@@ -38,5 +38,82 @@
     ],
     "createdAt": "2026-09-17T23:19:52.515Z",
     "updatedAt": "2026-09-17T23:19:52.515Z"
+  },
+  {
+    "id": "d1789686501261ddeftk",
+    "name": "BBR ~ Mass Removal",
+    "legendCardIds": [
+      "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "4560f3d0-5f63-466b-93b7-fc9d822a556e",
+      "380b5e52-2651-4cde-8222-1db2ae6469e2"
+    ],
+    "legendPrintingIds": [
+      "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "d74468ab-6024-4ae6-b69a-ac41f6e9cfce",
+      "1435b785-967e-48a7-8ef7-f7fecbb27aaf"
+    ],
+    "cards": {
+      "b0453570-7ed8-4031-9562-cb73d7a979e5": 3,
+      "3bb1f191-927e-45b3-86ca-cb30baabfe0d": 3,
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": 3,
+      "5380dea3-4d21-445b-af02-487b45d40395": 3,
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 2,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "20484778-9294-4148-bd8c-fa78572f4452": 3,
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
+      "2993d637-d44d-4add-8473-26d67c0d1bc0": 3,
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "7977a175-0516-478e-b166-3edb035849a4": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 2,
+      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": 3
+    },
+    "links": [
+      {
+        "label": "RareTotem",
+        "url": "https://www.youtube.com/watch?v=76UtfK7BVZI&t=783s"
+      }
+    ],
+    "createdAt": "2026-09-17T23:10:18.737Z",
+    "updatedAt": "2026-09-17T23:16:55.803Z"
+  },
+  {
+    "id": "d1789676922540r8ifeb",
+    "name": "Placid YYB",
+    "legendCardIds": [
+      "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "5a441989-2997-40a2-a72e-08ca1442a7f3",
+      "e64e2978-695b-4fc5-b17b-62c710a11c47"
+    ],
+    "legendPrintingIds": [
+      "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+      "b217ae88-52a6-44b3-b021-964db4534dbd"
+    ],
+    "cards": {
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 2,
+      "ef77dd1f-3abd-4ce2-becc-97dd768a5022": 3,
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": 2,
+      "65a14367-da52-4578-8162-3c4bac11007d": 3,
+      "7ea6eecc-e55e-4634-93eb-b2b46e79635d": 3,
+      "b665e103-456b-4c51-9551-95b0bc87212a": 2,
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 3,
+      "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39": 3,
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
+      "793d9650-0a59-4c89-9d85-05a9d6873d2e": 3,
+      "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "92d23553-8b0d-49cd-8cbe-6f00b3377298": 1
+    },
+    "links": [
+      {
+        "label": "KP Cyberpunk",
+        "url": "https://www.youtube.com/watch?v=LklmuEzUuZw&t=456s"
+      }
+    ],
+    "createdAt": "2026-09-17T20:32:11.399Z",
+    "updatedAt": "2026-09-17T20:38:38.995Z"
   }
 ]
