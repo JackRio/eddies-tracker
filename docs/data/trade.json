@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T19:34:09.587Z",
+  "generatedAt": "2026-09-25T19:37:19.926Z",
   "pricesAsOf": "2026-09-25T02:48:48+0200",
   "cards": [
     {
@@ -21,60 +21,6 @@
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
     {
-      "id": "fa80313c-9aeb-4ae8-ad81-35b3f45fcbfe",
-      "name": "Sasha Yakovleva",
-      "subname": "Won't Let You Down",
-      "displayName": "Sasha Yakovleva: Won't Let You Down",
-      "color": "Blue",
-      "cardType": "Legend",
-      "rarity": "Secret",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β109",
-      "qty": 1,
-      "price": 17.9,
-      "priceGuess": false,
-      "cmName": "Sasha Yakovleva - Won't Let You Down"
-    },
-    {
-      "id": "98b18e2d-a955-43c7-880c-6233166c673a",
-      "name": "Judy Álvarez",
-      "subname": "Nothing to Doubt",
-      "displayName": "Judy Álvarez: Nothing to Doubt",
-      "color": "Blue",
-      "cardType": "Unit",
-      "rarity": "Secret",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β116",
-      "qty": 1,
-      "price": 13.5,
-      "priceGuess": false,
-      "cmName": "Judy Álvarez - Nothing to Doubt"
-    },
-    {
-      "id": "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72",
-      "name": "Towerfall",
-      "subname": null,
-      "displayName": "Towerfall",
-      "color": "Blue",
-      "cardType": "Program",
-      "rarity": "Iconic Other",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β167",
-      "qty": 1,
-      "price": 28,
-      "priceGuess": false,
-      "cmName": "Towerfall"
-    },
-    {
       "id": "0cb4ae83-a7ca-4ca6-9c83-6c0581baae57",
       "name": "Saburo Arasaka",
       "subname": "Stubborn Patriarch",
@@ -91,42 +37,6 @@
       "price": 17.5,
       "priceGuess": false,
       "cmName": "Saburo Arasaka - Stubborn Patriarch"
-    },
-    {
-      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
-      "name": "Sandayu Oda",
-      "subname": "Hanako's Guardian",
-      "displayName": "Sandayu Oda: Hanako's Guardian",
-      "color": "Green",
-      "cardType": "Unit",
-      "rarity": "Iconic Other",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β164",
-      "qty": 1,
-      "price": 9,
-      "priceGuess": false,
-      "cmName": "Sandayu Oda - Hanako's Guardian"
-    },
-    {
-      "id": "775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43",
-      "name": "Overwatch",
-      "subname": "Panam's Gift",
-      "displayName": "Overwatch: Panam's Gift",
-      "color": "Green",
-      "cardType": "Gear",
-      "rarity": "Iconic Other",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β165",
-      "qty": 1,
-      "price": 12,
-      "priceGuess": false,
-      "cmName": "Overwatch - Panam's Gift"
     },
     {
       "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
