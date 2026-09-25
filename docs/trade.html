@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!-- Unlisted share-by-URL page: deliberately not linked from (and doesn't
+     link to) any other page, and asks search engines not to index it. -->
+<meta name="robots" content="noindex, nofollow" />
+<title>For Trade — Eddies</title>
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
+    <h1><span class="accent">EDDIES</span> · For Trade</h1>
+  </header>
+
+  <div class="build-info" id="build-info"></div>
+
+  <main>
+    <div class="filter-bar">
+      <input type="text" id="search" class="search-input" placeholder="Search cards..." />
+      <div class="chip-row" id="color-filters"></div>
+      <div class="chip-row" id="type-filters"></div>
+      <select id="sort">
+        <option value="price">Price (High-Low)</option>
+        <option value="name">Name (A-Z)</option>
+        <option value="color">Color / Type</option>
+      </select>
+    </div>
+
+    <div class="result-count" id="result-count"></div>
+    <div class="card-grid" id="card-grid"></div>
+    <div class="empty-state" id="empty-state" hidden>Nothing listed right now.</div>
+  </main>
+
+  <script src="trade.js"></script>
+</body>
+</html>
