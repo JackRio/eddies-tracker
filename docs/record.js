@@ -174,7 +174,7 @@ function renderSearchResults(query) {
     <div class="search-result-item" data-id="${c.id}">
       <div>
         <div>${c.name}${c.subname ? ` <span class="search-result-meta">— ${c.subname}</span>` : ''}</div>
-        <div class="search-result-meta">${c.set?.name || ''} · ${c.rarity}</div>
+        <div class="search-result-meta">${c.set?.name || ''} · ${c.rarity}${c.price != null ? ` · ${formatEur(c.price)}${c.priceGuess ? '?' : ''}` : ''}</div>
       </div>
     </div>
   `
@@ -183,6 +183,11 @@ function renderSearchResults(query) {
   container.querySelectorAll('.search-result-item').forEach((item) => {
     item.addEventListener('click', () => selectCard(item.dataset.id));
   });
+}
+
+// Cardmarket trend price snapshot from catalog.json (see needed.js).
+function formatEur(v) {
+  return `€${v >= 100 ? Math.round(v) : v.toFixed(2)}`;
 }
 
 function selectCard(id) {
@@ -195,6 +200,12 @@ function selectCard(id) {
   el('selected-subname').textContent = selected.subname || '';
   el('selected-subname').hidden = !selected.subname;
   el('selected-meta').textContent = `${selected.set?.name || ''} · ${selected.rarity} · ${selected.cardType}`;
+  const cmName = selected.cmName || `${selected.name}${selected.subname ? ` - ${selected.subname}` : ''}`;
+  el('selected-price').innerHTML =
+    (selected.price != null
+      ? `<span class="price-value${selected.priceGuess ? ' price-guess' : ''}">${formatEur(selected.price)}${selected.priceGuess ? ' (best guess)' : ''}</span> Cardmarket trend · `
+      : '') +
+    `<a href="https://www.cardmarket.com/en/Cyberpunk/Products/Search?searchString=${encodeURIComponent(cmName)}" target="_blank" rel="noopener">View on Cardmarket ↗</a>`;
   el('selected-rules').innerHTML = renderRulesText(selected.rulesText);
   el('selected-faq').innerHTML = faqHtml(selected.slug);
   el('record-status').textContent = '';

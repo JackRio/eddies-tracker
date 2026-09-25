@@ -165,9 +165,20 @@ function render() {
     a.name.localeCompare(b.name)
   );
 
-  el('result-count').textContent = `${cards.length} card${cards.length === 1 ? '' : 's'} needed`;
+  // Rough "what would buying the rest cost" - Cardmarket trend x copies
+  // still needed, only over cards that have a price at all.
+  const total = cards.reduce((sum, c) => sum + (c.price != null ? c.price * c.needed : 0), 0);
+  const unpriced = cards.filter((c) => c.price == null).length;
+  el('result-count').textContent = `${cards.length} card${cards.length === 1 ? '' : 's'} needed` +
+    (total ? ` · ~${formatEur(total)} on Cardmarket${unpriced ? ` (${unpriced} unpriced)` : ''}` : '');
   el('empty-state').hidden = cards.length !== 0;
   el('card-grid').innerHTML = cards.map(cardHtml).join('');
+}
+
+// Cardmarket trend price snapshot, written into needed.json/catalog.json by
+// the desktop app's Publish (see priceFieldsFor in src/main.js).
+function formatEur(v) {
+  return `€${v >= 100 ? Math.round(v) : v.toFixed(2)}`;
 }
 
 function cardHtml(c) {
@@ -183,6 +194,7 @@ function cardHtml(c) {
         <div class="need-card-name">${c.name}</div>
         ${c.subname ? `<div class="need-card-subname">${c.subname}</div>` : ''}
         <div class="need-card-meta ${rarityClass(c.rarity)}">${c.rarity} · ${c.set?.name || ''}</div>
+        ${c.price != null ? `<div class="need-card-price${c.priceGuess ? ' price-guess' : ''}" title="Cardmarket trend${c.priceGuess ? ' (best-guess match)' : ''}">${formatEur(c.price)}${c.priceGuess ? '?' : ''}</div>` : ''}
       </div>
     </a>
   `;
