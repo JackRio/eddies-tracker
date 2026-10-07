@@ -1,0 +1,294 @@
+{
+  "generatedAt": "2026-10-07T17:01:38.354Z",
+  "pricesAsOf": "2026-10-07T02:50:07+0200",
+  "cards": [
+    {
+      "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
+      "name": "Overwatch",
+      "subname": "Panam's Gift",
+      "displayName": "Overwatch: Panam's Gift",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "093",
+      "needed": 1,
+      "price": 0.99,
+      "priceGuess": false,
+      "cmName": "Overwatch - Panam's Gift"
+    },
+    {
+      "id": "3193a6bd-3e99-4501-9c5c-8d5ea32c779c",
+      "name": "Rogue Amendiares",
+      "subname": "Queen of the Afterlife",
+      "displayName": "Rogue Amendiares: Queen of the Afterlife",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "126",
+      "needed": 2,
+      "price": 0.99,
+      "priceGuess": false,
+      "cmName": "Rogue Amendiares - Queen of the Afterlife"
+    },
+    {
+      "id": "38d14168-c182-4a34-a3b2-1b8380ab6635",
+      "name": "The Relic",
+      "subname": "Experimental Biochip",
+      "displayName": "The Relic: Experimental Biochip",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "063",
+      "needed": 1,
+      "price": 1.5,
+      "priceGuess": false,
+      "cmName": "The Relic - Experimental Biochip"
+    },
+    {
+      "id": "2285cd3a-7010-4ba4-b23a-ba40aba296f9",
+      "name": "Viktor Vektor",
+      "subname": "Drop Your Illusions",
+      "displayName": "Viktor Vektor: Drop Your Illusions",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "057",
+      "needed": 1,
+      "price": 1.8,
+      "priceGuess": false,
+      "cmName": "Viktor Vektor - Drop Your Illusions"
+    },
+    {
+      "id": "c1747b7d-de5c-43eb-a4ed-b632f1861712",
+      "name": "V",
+      "subname": "Roamer of the Badlands",
+      "displayName": "V: Roamer of the Badlands",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "020",
+      "needed": 1,
+      "price": 1.99,
+      "priceGuess": false,
+      "cmName": "V - Roamer of the Badlands"
+    },
+    {
+      "id": "d23e322f-ad60-431d-b33e-1e8a813248ff",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "041",
+      "needed": 2,
+      "price": 2.2,
+      "priceGuess": false,
+      "cmName": "Adam Smasher - Metal Over Meat"
+    },
+    {
+      "id": "12d44604-ad7b-4e82-b517-9edb0be44427",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "048",
+      "needed": 1,
+      "price": 4.8,
+      "priceGuess": false,
+      "cmName": "Jackie Welles - Ride or Die Choom"
+    },
+    {
+      "id": "14ab188f-2ce3-4790-8823-5a352371ff1f",
+      "name": "Johnny Silverhand",
+      "subname": "Never Stop Fighting",
+      "displayName": "Johnny Silverhand: Never Stop Fighting",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "011",
+      "needed": 2,
+      "price": 4.99,
+      "priceGuess": false,
+      "cmName": "Johnny Silverhand - Never Stop Fighting"
+    },
+    {
+      "id": "384b716d-fe9c-4a09-86b3-fe9b25928c51",
+      "name": "Goro Takemura",
+      "subname": "Losing His Way",
+      "displayName": "Goro Takemura: Losing His Way",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "arasakademodeck",
+        "name": "Arasaka Demo Deck"
+      },
+      "collectorNumber": "013",
+      "needed": 1,
+      "price": 5,
+      "priceGuess": false,
+      "cmName": "Goro Takemura - Losing His Way"
+    },
+    {
+      "id": "6e023192-0834-4d6f-935a-e5d6d4d6eff0",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "arasakademodeck",
+        "name": "Arasaka Demo Deck"
+      },
+      "collectorNumber": "002",
+      "needed": 1,
+      "price": 6,
+      "priceGuess": false,
+      "cmName": "Minotaur"
+    },
+    {
+      "id": "15920617-a06f-4302-9dfb-c85d3470c7eb",
+      "name": "Towerfall",
+      "subname": null,
+      "displayName": "Towerfall",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "138",
+      "needed": 1,
+      "price": 6.49,
+      "priceGuess": false,
+      "cmName": "Towerfall"
+    },
+    {
+      "id": "f7742fc7-0abe-45ee-a6ce-22caf159e06d",
+      "name": "MT0D12 Flathead",
+      "subname": null,
+      "displayName": "MT0D12 Flathead",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "mercdemodeck",
+        "name": "Merc Demo Deck"
+      },
+      "collectorNumber": "011",
+      "needed": 1,
+      "price": 7.03,
+      "priceGuess": false,
+      "cmName": "MT0D12 Flathead"
+    },
+    {
+      "id": "e2f38541-ecc9-41dc-ae15-164171391bff",
+      "name": "Dexter DeShawn",
+      "subname": "One Last Chance",
+      "displayName": "Dexter DeShawn: One Last Chance",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck",
+        "name": "The Heist — Retail Starter Deck"
+      },
+      "collectorNumber": "002",
+      "needed": 1,
+      "price": 8.65,
+      "priceGuess": false,
+      "cmName": "Dexter DeShawn - One Last Chance"
+    },
+    {
+      "id": "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5",
+      "name": "Panam Palmer",
+      "subname": "Strength Through Family",
+      "displayName": "Panam Palmer: Strength Through Family",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "085",
+      "needed": 3,
+      "price": 10,
+      "priceGuess": false,
+      "cmName": "Panam Palmer - Strength Through Family"
+    },
+    {
+      "id": "dcfe8370-9abf-4395-b50b-efea505609ba",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "116",
+      "needed": 2,
+      "price": 10.99,
+      "priceGuess": false,
+      "cmName": "Judy Álvarez - Nothing to Doubt"
+    },
+    {
+      "id": "a8a7d286-0c66-4f01-aca7-45570474d9e4",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "003",
+      "needed": 1,
+      "price": 25.99,
+      "priceGuess": false,
+      "cmName": "Johnny Silverhand - Rocking Renegade"
+    }
+  ]
+}

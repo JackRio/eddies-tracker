@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Trading — Eddies</title>
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="trading.css" />
+</head>
+<body>
+  <header class="app-header">
+    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
+    <h1><span class="accent">EDDIES</span></h1>
+    <nav class="nav-tabs">
+      <a href="/">Needed</a>
+      <a href="trading.html" class="active">Trading</a>
+      <a href="record.html">Record</a>
+      <a href="decks.html">Decks</a>
+    </nav>
+  </header>
+
+  <div class="build-info" id="build-info"></div>
+
+  <main class="trading-main">
+    <div class="seg" id="seg">
+      <span data-v="L">Looking</span><span data-v="B" class="on">Both</span><span data-v="S" class="cy">Selling</span>
+    </div>
+    <div class="trading-search"><input type="text" id="search" placeholder="Search cards..." /></div>
+
+    <div class="cols" id="cols">
+      <div class="panel" id="p-looking">
+        <header><h3>Looking<em id="count-looking">0</em></h3><div class="total">Total Est Amount: <b id="total-looking"></b></div></header>
+        <div class="list" id="list-looking"></div>
+      </div>
+      <div class="panel s" id="p-selling">
+        <header><h3>Selling<em id="count-selling">0</em></h3><div class="total">Total Est Amount: <b id="total-selling"></b></div></header>
+        <div class="list" id="list-selling"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="shared.js"></script>
+  <script src="trading.js"></script>
+</body>
+</html>

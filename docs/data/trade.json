@@ -1,5 +1,96 @@
 {
-  "generatedAt": "2026-10-07T09:57:57.493Z",
+  "generatedAt": "2026-10-07T17:01:38.351Z",
   "pricesAsOf": "2026-10-07T02:50:07+0200",
-  "cards": []
+  "cards": [
+    {
+      "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
+      "name": "Muamar Reyes",
+      "subname": "El Capitán",
+      "displayName": "Muamar Reyes: El Capitán",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β147",
+      "qty": 1,
+      "price": 69,
+      "priceGuess": false,
+      "cmName": "Muamar Reyes - El Capitán"
+    },
+    {
+      "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+      "name": "Kerry Eurodyne",
+      "subname": "Axe, Attitude, Audience",
+      "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β146",
+      "qty": 1,
+      "price": 65.99,
+      "priceGuess": false,
+      "cmName": "Kerry Eurodyne - Axe, Attitude, Audience"
+    },
+    {
+      "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersbeta",
+        "name": "Box Toppers — Beta"
+      },
+      "collectorNumber": "β005",
+      "qty": 1,
+      "price": 49.89,
+      "priceGuess": false,
+      "cmName": "Jackie Welles - Pour One Out For Me"
+    },
+    {
+      "id": "0cb4ae83-a7ca-4ca6-9c83-6c0581baae57",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersbeta",
+        "name": "Box Toppers — Beta"
+      },
+      "collectorNumber": "β004",
+      "qty": 1,
+      "price": 20,
+      "priceGuess": false,
+      "cmName": "Saburo Arasaka - Stubborn Patriarch"
+    },
+    {
+      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β164",
+      "qty": 1,
+      "price": 11,
+      "priceGuess": false,
+      "cmName": "Sandayu Oda - Hanako's Guardian"
+    }
+  ]
 }
