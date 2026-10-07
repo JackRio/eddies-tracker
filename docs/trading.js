@@ -39,9 +39,9 @@ function tileHtml(c, qty, badgeHtml) {
     <div class="stack" style="padding-bottom: calc(${TILE_ASPECT_PCT}% + ${extra}px)">${layers}</div>
     <div class="cap">
       <div class="cqty">${badgeHtml}</div>
-      <div class="cname" title="${escapeHtml(c.displayName)}">${escapeHtml(c.displayName)}</div>
+      <div class="cname" title="${escapeHtml(c.displayName)}">${escapeHtml(c.name)}</div>
       <div class="cmeta"><span class="rarity-icon rarity-icon-${icon}"></span><span>${escapeHtml(c.rarity)}</span></div>
-      <div class="cprice" title="Cardmarket price"><img src="assets/cardmarket.png" alt="Cardmarket" width="95" height="13" /><b>${formatEur(c.price)}</b></div>
+      <div class="cprice" title="Cardmarket price"><img src="assets/cardmarket.png" alt="Cardmarket" width="88" height="12" /><b>${formatEur(c.price)}</b></div>
     </div>
   </div>`;
 }

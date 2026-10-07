@@ -18,7 +18,7 @@
 .total { text-align: right; font-size: 13px; color: var(--text-dim); }
 .total b { font-size: 18px; margin-left: 4px; color: var(--yellow); }
 .panel.s .total b { color: var(--cyan); }
-.list { padding: 14px; display: grid; grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 18px 14px; align-items: start; min-height: 70px; }
+.list { padding: 14px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 18px 14px; align-items: start; min-height: 70px; }
 .empty-row { grid-column: 1 / -1; color: var(--text-dim); font-size: 12px; padding: 14px; text-align: center; }
 
 /* Same stacked-tile technique as the Deck Builder's deck view: height 0 plus
@@ -35,13 +35,13 @@
 .qty-badge.need { background: var(--yellow); color: #0a0a0f; }
 .qty-badge.sell { background: var(--cyan); color: #0a0a0f; }
 .cap { margin-top: 10px; display: flex; flex-direction: column; gap: 3px; }
-.cname { font-size: 13px; font-weight: 700; line-height: 17px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cname { font-size: 13px; font-weight: 700; line-height: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .cmeta { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-dim); }
 .cmeta .rarity-icon { width: 14px; height: 14px; flex: none; }
-.cprice { display: flex; align-items: center; flex-wrap: wrap; gap: 3px 8px; }
-.cprice img { height: 13px; width: auto; flex: none; opacity: .95; }
-.cprice b { font-size: 15px; font-weight: 800; }
-@media (max-width: 520px) { .list { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 16px 10px; padding: 10px; } }
+.cprice { display: flex; align-items: center; flex-wrap: nowrap; gap: 8px; white-space: nowrap; }
+.cprice img { height: 12px; width: auto; flex: none; opacity: .95; }
+.cprice b { font-size: 14px; font-weight: 800; }
+@media (max-width: 520px) { .cprice { flex-direction: column; align-items: flex-start; gap: 3px; } .list { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 16px 10px; padding: 10px; } }
 
 #card-popup { position: fixed; z-index: 50; pointer-events: none; }
 #card-popup img { display: block; width: 340px; max-height: 92vh; object-fit: contain; border-radius: 14px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px var(--yellow); }
