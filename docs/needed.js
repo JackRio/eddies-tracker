@@ -1,12 +1,14 @@
 let neededData = { main: [], reserve: [] };
 let pendingChanges = [];
+let catalog = [];
 
 let state = {
   bucket: 'main',
   colors: new Set(),
   types: new Set(),
   rarities: new Set(),
-  set: 'welcometonightcitybeta'
+  set: 'welcometonightcitybeta',
+  unique: false
 };
 
 const COLOR_ORDER = ['Red', 'Blue', 'Green', 'Yellow'];
@@ -34,9 +36,10 @@ function rarityClass(rarity) {
 async function init() {
   renderBuildInfo();
   try {
-    [neededData, pendingChanges] = await Promise.all([
+    [neededData, pendingChanges, catalog] = await Promise.all([
       fetchJson('data/needed.json'),
-      fetchJson('data/pending-changes.json')
+      fetchJson('data/pending-changes.json'),
+      fetchJson('data/catalog.json').catch(() => [])
     ]);
   } catch (err) {
     el('empty-state').hidden = false;
@@ -44,6 +47,7 @@ async function init() {
     return;
   }
 
+  keyById = new Map(catalog.map((c) => [c.id, `${c.displayName || c.name}|${c.rulesText || c.cardId}`]));
   buildFilterOptions();
   attachControls();
   render();
@@ -124,6 +128,11 @@ function attachControls() {
       render();
     });
   });
+  el('unique-filter').addEventListener('click', (e) => {
+    state.unique = !state.unique;
+    e.currentTarget.classList.toggle('active', state.unique);
+    render();
+  });
   el('set-filter').addEventListener('change', (e) => {
     state.set = e.target.value;
     render();
@@ -144,20 +153,70 @@ function pendingDeltaFor(id, bucket) {
   return committed + stagedDeltaFor(id, bucket);
 }
 
+// Cards that read the same (same name + rules text) are one "mechanical"
+// card no matter how many printings/rarities exist.
+// needed.json entries lack rulesText, so keys are resolved through the catalog by id.
+let keyById = new Map();
+function mechKey(c) {
+  return keyById.get(c.id) || `${c.displayName || c.name}|${c.cardId}`;
+}
+
+// Lowest rarity first; Iconic variants and Nova Rare are the priciest tiers.
+const RARITY_RANK = ['Common', 'Uncommon', 'Rare', 'Epic', 'Secret', 'Iconic Other', 'Iconic Legend', 'Iconic Secret', 'Nova Rare'];
+function rarityRank(r) {
+  const i = RARITY_RANK.indexOf(r);
+  return i === -1 ? RARITY_RANK.length : i;
+}
+
+// Total copies owned in the bucket across every printing of each mechanical
+// card (catalog snapshot + pending/staged deltas).
+function ownedByMechKey(bucket) {
+  const owned = new Map();
+  for (const c of catalog) {
+    const k = mechKey(c);
+    owned.set(k, (owned.get(k) || 0) + (c[bucket] || 0) + pendingDeltaFor(c.id, bucket));
+  }
+  return owned;
+}
+
+// Collapse to one entry per mechanical card: needed = cap - total owned over
+// all printings, shown as the lowest-rarity printing that passes `keep`.
+function collapseUnique(cards, keep) {
+  const owned = ownedByMechKey(state.bucket);
+  const best = new Map();
+  for (const c of cards) {
+    if (!keep(c)) continue;
+    const k = mechKey(c);
+    const cur = best.get(k);
+    if (!cur || rarityRank(c.rarity) < rarityRank(cur.rarity) ||
+        (rarityRank(c.rarity) === rarityRank(cur.rarity) && (c.price ?? Infinity) < (cur.price ?? Infinity))) {
+      best.set(k, c);
+    }
+  }
+  return [...best.entries()]
+    .map(([k, c]) => ({ ...c, needed: Math.max(0, c.cap - (owned.get(k) || 0)) }))
+    .filter((c) => c.needed > 0);
+}
+
 function render() {
   const source = state.bucket === 'main' ? neededData.main : neededData.reserve;
 
-  let cards = source
-    .map((c) => ({ ...c, needed: Math.max(0, c.needed - pendingDeltaFor(c.id, state.bucket)) }))
-    .filter((c) => c.needed > 0);
+  const activeGroups = RARITY_GROUPS.filter((g) => state.rarities.has(g.key));
+  const passesSet = (c) => state.set === 'all' || c.set?.code === state.set;
+  const passesRarity = (c) => !state.rarities.size || activeGroups.some((g) => g.match.includes(c.rarity));
+  const passesOther = (c) =>
+    (!state.colors.size || state.colors.has(c.color)) && (!state.types.size || state.types.has(c.cardType));
 
-  if (state.colors.size) cards = cards.filter((c) => state.colors.has(c.color));
-  if (state.types.size) cards = cards.filter((c) => state.types.has(c.cardType));
-  if (state.rarities.size) {
-    const activeGroups = RARITY_GROUPS.filter((g) => state.rarities.has(g.key));
-    cards = cards.filter((c) => activeGroups.some((g) => g.match.includes(c.rarity)));
+  let cards;
+  if (state.unique && catalog.length) {
+    // Rarity filter applies to the chosen (lowest) printing, set filter
+    // narrows which printings are candidates; ownership counts all printings.
+    cards = collapseUnique(source, (c) => passesSet(c) && passesOther(c)).filter(passesRarity);
+  } else {
+    cards = source
+      .map((c) => ({ ...c, needed: Math.max(0, c.needed - pendingDeltaFor(c.id, state.bucket)) }))
+      .filter((c) => c.needed > 0 && passesSet(c) && passesOther(c) && passesRarity(c));
   }
-  if (state.set !== 'all') cards = cards.filter((c) => c.set?.code === state.set);
 
   cards.sort((a, b) =>
     COLOR_ORDER.indexOf(a.color) - COLOR_ORDER.indexOf(b.color) ||
