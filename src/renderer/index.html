@@ -21,7 +21,7 @@
   </div>
   <header class="app-header">
     <div class="title-block">
-      <img class="app-logo" src="../../build/eddies-glyph-yellow.png" alt="" />
+      <img class="app-logo" id="app-logo" src="../../build/eddies-glyph-yellow.png" alt="" title="View Highlights" />
       <div>
         <h1><span class="accent">EDDIES</span></h1>
         <p class="subtitle">Cyberpunk TCG collection tracker</p>
@@ -48,6 +48,8 @@
         <button id="save-backup-btn" class="btn">Save</button>
         <button id="publish-site-btn" class="btn">Publish Site</button>
         <button id="collection-view-btn" class="btn">My Collection</button>
+        <button id="deck-builder-btn" class="btn">Deck Builder</button>
+        <button id="trading-btn" class="btn">Trading</button>
         <button id="refresh-btn" class="btn btn-primary">Refresh Card Data</button>
       </div>
       <div id="publish-status" class="publish-status" hidden></div>
@@ -99,6 +101,7 @@
           <option value="cost">Cost (Low-High)</option>
           <option value="power">Power (High-Low)</option>
           <option value="rarity">Rarity</option>
+          <option value="price">Price (High-Low)</option>
         </select>
       </div>
 
@@ -126,11 +129,42 @@
         <div class="popped-meta" id="popped-meta"></div>
         <div class="popped-rarity" id="popped-rarity"></div>
         <div class="popped-owned-controls" id="popped-owned-controls"></div>
+        <div id="popped-price"></div>
         <div class="popped-rules" id="popped-rules"></div>
         <div id="popped-faq"></div>
       </div>
     </div>
     <button id="popped-next" class="popped-nav popped-nav-right" title="Next (Right arrow)">&#10095;</button>
+  </div>
+
+  <div id="highlight-overlay" class="highlight-overlay" hidden>
+    <div class="highlight-title">Highlights</div>
+    <button id="highlight-close" class="highlight-close-btn" title="Close (Esc)">&#10005;</button>
+    <div class="highlight-stage" id="highlight-stage">
+      <div class="highlight-bg-wrap" id="highlight-bg-wrap">
+        <div class="highlight-cylinder-bg" id="highlight-cylinder-bg"></div>
+      </div>
+      <div class="highlight-cylinder" id="highlight-cylinder"></div>
+    </div>
+
+    <div id="highlight-detail" class="highlight-detail" hidden>
+      <button id="highlight-detail-close" class="highlight-close-btn" title="Close (Esc)">&#10005;</button>
+      <div class="highlight-detail-card">
+        <div class="highlight-detail-info">
+          <div class="popped-name" id="hd-name"></div>
+          <div class="popped-subname" id="hd-subname"></div>
+          <div class="popped-meta" id="hd-meta"></div>
+          <div class="popped-rarity" id="hd-rarity"></div>
+          <div class="popped-bucket-row" id="hd-buckets"></div>
+          <div class="popped-rules" id="hd-rules"></div>
+          <div id="hd-faq"></div>
+          <div id="hd-other-sets"></div>
+        </div>
+        <div class="highlight-detail-img-wrap">
+          <img id="hd-img" src="" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="renderer.js"></script>

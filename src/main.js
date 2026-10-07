@@ -1,8 +1,9 @@
-const { app, BrowserWindow, ipcMain, protocol, net } = require('electron');
+const { app, BrowserWindow, ipcMain, protocol, net, shell } = require('electron');
 const path = require('path');
 const fs = require('fs/promises');
 const pathToFileURL = require('url').pathToFileURL;
 const execFileAsync = require('util').promisify(require('child_process').execFile);
+const prices = require('./prices');
 
 // Electron derives the default userData path (%APPDATA%/<name>) from this
 // app name, which otherwise silently follows package.json's "name" field.
@@ -35,6 +36,10 @@ function imagesDir() {
 
 function backupsDir() {
   return path.join(app.getPath('userData'), 'backups');
+}
+
+function decksPath() {
+  return path.join(app.getPath('userData'), 'decks.json');
 }
 
 function backupsMetaPath() {
@@ -116,6 +121,46 @@ async function fetchAllCards() {
   }
   return items;
 }
+
+// Localized card names for deck import. The list endpoint takes `language=`
+// and returns the same cardId with translated name/subname. Cached per
+// language in userData/alt-names.json; a failed download falls back to it.
+function altNamesPath() {
+  return path.join(app.getPath('userData'), 'alt-names.json');
+}
+
+async function fetchAltNames() {
+  let cache = {};
+  try { cache = JSON.parse(fs.readFileSync(altNamesPath(), 'utf8')); } catch {}
+  const week = 7 * 24 * 3600 * 1000;
+  if (cache.fetchedAt && Date.now() - cache.fetchedAt < week) return cache.names || [];
+  try {
+    const fres = await fetch(`${API_BASE}/filters`);
+    const filters = await fres.json();
+    const langs = (filters.filters.find((f) => f.key === 'language')?.options || []).map((o) => o.value).filter((v) => v !== 'en');
+    const names = [];
+    for (const lang of langs) {
+      let offset = 0;
+      let total = Infinity;
+      while (offset < total) {
+        const res = await fetch(`${API_BASE}?limit=${PAGE_LIMIT}&offset=${offset}&language=${lang}`);
+        if (!res.ok) throw new Error(`alt names ${lang}: ${res.status}`);
+        const data = await res.json();
+        total = data.total;
+        for (const it of data.items) names.push({ cardId: it.id, name: it.name, subname: it.subname || null });
+        offset += data.items.length;
+        if (!data.items.length) break;
+      }
+    }
+    fs.writeFileSync(altNamesPath(), JSON.stringify({ fetchedAt: Date.now(), names }));
+    return names;
+  } catch (err) {
+    console.error('[alt-names]', err.message);
+    return cache.names || [];
+  }
+}
+
+ipcMain.handle('cards:altNames', () => fetchAltNames());
 
 async function fetchCardDetail(slug) {
   const res = await fetch(`${API_BASE}/${slug}`);
@@ -231,6 +276,56 @@ ipcMain.handle('cards:refresh', async () => {
   return cache;
 });
 
+// --- Cardmarket prices (see prices.js) ------------------------------------
+
+function pricesCachePath() {
+  return path.join(app.getPath('userData'), 'prices-cache.json');
+}
+
+// { [printingId]: idProduct | null } - null means "explicitly no match".
+function priceOverridesPath() {
+  return path.join(app.getPath('userData'), 'price-overrides.json');
+}
+
+// Re-downloads if the cache is older than a day's Cardmarket regeneration
+// (or `force`); a failed download falls back to whatever is cached, so
+// being offline just means slightly older prices, not none.
+async function loadPriceData(force = false) {
+  const cached = await readJsonSafe(pricesCachePath(), null);
+  if (!force && !prices.isStale(cached)) return cached;
+  try {
+    const fresh = await prices.downloadCardmarketData();
+    await fs.writeFile(pricesCachePath(), JSON.stringify(fresh), 'utf-8');
+    return fresh;
+  } catch (err) {
+    console.log(`[prices] ${err.message}`);
+    if (force && !cached) throw err;
+    return cached;
+  }
+}
+
+async function getPriceView(force = false) {
+  const [data, cache, overrides] = await Promise.all([
+    loadPriceData(force),
+    readJsonSafe(cardsCachePath(), { cards: [] }),
+    readJsonSafe(priceOverridesPath(), {})
+  ]);
+  return prices.buildPriceView(cache.cards, data, overrides);
+}
+
+ipcMain.handle('prices:get', async () => getPriceView(false));
+ipcMain.handle('prices:refresh', async () => getPriceView(true));
+
+// idProduct: a Cardmarket product id, null for "no match", or 'auto' to
+// clear the override and go back to the automatic match.
+ipcMain.handle('prices:setOverride', async (_event, printingId, idProduct) => {
+  const overrides = await readJsonSafe(priceOverridesPath(), {});
+  if (idProduct === 'auto') delete overrides[printingId];
+  else overrides[printingId] = idProduct === null ? null : Number(idProduct);
+  await fs.writeFile(priceOverridesPath(), JSON.stringify(overrides, null, 2), 'utf-8');
+  return getPriceView(false);
+});
+
 const BUCKETS = ['main', 'reserve', 'extras'];
 
 ipcMain.handle('collection:get', async () => {
@@ -315,6 +410,108 @@ ipcMain.handle('collection:overwriteBackup', async (_event, filename) => {
   return listBackups();
 });
 
+// --- Deck builder -----------------------------------------------------
+//
+// Decks are stored separately from collection.json (same privacy tier -
+// never committed). A deck slot is keyed by a card's *cardId*, not a
+// printing id, because the game's copy-limit ("max 3 of a card with an
+// identical name+subtitle") and Legend-uniqueness rules both operate on the
+// card itself, not the specific art/printing - see CLAUDE.md's "Printings,
+// not cards" note. The renderer owns all deckbuilding legality logic
+// (RAM/color ceilings, copy limits); this process is just CRUD storage.
+
+ipcMain.handle('decks:get', async () => {
+  return readJsonSafe(decksPath(), {});
+});
+
+ipcMain.handle('decks:save', async (_event, deck) => {
+  const decks = await readJsonSafe(decksPath(), {});
+  const now = new Date().toISOString();
+  const id = deck.id || `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+  const existing = decks[id];
+  decks[id] = {
+    ...deck,
+    id,
+    createdAt: existing?.createdAt || deck.createdAt || now,
+    updatedAt: now
+  };
+  await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
+  return decks;
+});
+
+ipcMain.handle('decks:delete', async (_event, deckId) => {
+  const decks = await readJsonSafe(decksPath(), {});
+  delete decks[deckId];
+  await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
+  return decks;
+});
+
+// { [printingId]: qty } - how many copies of a printing are up for sale on
+// the website's trade page (docs/trade.html). Local-only like
+// collection.json; publish:run snapshots it into docs/data/trade.json.
+function tradeListPath() {
+  return path.join(app.getPath('userData'), 'trade-list.json');
+}
+
+ipcMain.handle('trade:get', async () => readJsonSafe(tradeListPath(), {}));
+
+async function updateTradeList(updates) {
+  const list = await readJsonSafe(tradeListPath(), {});
+  for (const [printingId, qty] of Object.entries(updates)) {
+    if (qty > 0) list[printingId] = qty;
+    else delete list[printingId];
+  }
+  await fs.writeFile(tradeListPath(), JSON.stringify(list, null, 2), 'utf-8');
+  return list;
+}
+
+ipcMain.handle('trade:set', async (_event, printingId, qty) => updateTradeList({ [printingId]: qty }));
+// { printingId: qty } in one write - the main window's "Sell all shown" toggle.
+ipcMain.handle('trade:setMany', async (_event, updates) => updateTradeList(updates));
+
+// { [printingId]: true } - cards on the "Looking" list (the Trading window,
+// published to docs/data/looking.json). Local-only like trade-list.json; the
+// quantity still needed is derived live from the collection, never stored.
+function lookingListPath() {
+  return path.join(app.getPath('userData'), 'looking-list.json');
+}
+
+ipcMain.handle('looking:get', async () => readJsonSafe(lookingListPath(), {}));
+
+// { printingId: boolean } in one write.
+ipcMain.handle('looking:setMany', async (_event, updates) => {
+  const list = await readJsonSafe(lookingListPath(), {});
+  for (const [printingId, on] of Object.entries(updates)) {
+    if (on) list[printingId] = true;
+    else delete list[printingId];
+  }
+  await fs.writeFile(lookingListPath(), JSON.stringify(list, null, 2), 'utf-8');
+  return list;
+});
+
+// Re-write a { id: value } list in the given id order (the Trading window's
+// drag/arrow reordering). The key order in the file IS the list order, and
+// publish:run iterates it, so the website shows the same order. Ids missing
+// from `ids` keep their relative order after the listed ones.
+async function reorderList(filePath, ids) {
+  const list = await readJsonSafe(filePath, {});
+  const next = {};
+  for (const id of ids) if (id in list) next[id] = list[id];
+  for (const id of Object.keys(list)) if (!(id in next)) next[id] = list[id];
+  await fs.writeFile(filePath, JSON.stringify(next, null, 2), 'utf-8');
+  return next;
+}
+
+ipcMain.handle('looking:reorder', async (_event, ids) => reorderList(lookingListPath(), ids));
+ipcMain.handle('trade:reorder', async (_event, ids) => reorderList(tradeListPath(), ids));
+
+ipcMain.handle('shell:openExternal', async (_event, url) => {
+  if (typeof url !== 'string' || !/^https?:\/\//i.test(url)) {
+    throw new Error('Only http/https URLs can be opened.');
+  }
+  await shell.openExternal(url);
+});
+
 // --- Web publish (needed-list website, see docs/) -------------------------
 //
 // The published site is fully static (GitHub Pages serves docs/ as-is) and
@@ -350,6 +547,12 @@ function mainSetCap(cardType) {
   return cardType === 'Legend' ? 1 : 3;
 }
 
+// Printings with the same name + rules text are one mechanical card. Keep in
+// sync with mechKey() in trading.js and docs/trading.js.
+function mechKey(c) {
+  return `${c.displayName || c.name}|${c.rulesText || c.cardId}`;
+}
+
 async function runGit(args) {
   return execFileAsync('git', args, { cwd: projectRoot() });
 }
@@ -369,7 +572,17 @@ async function applyPendingChanges(collection, pending) {
   return collection;
 }
 
-function computeNeeded(cards, collection) {
+// Snapshot of each printing's Cardmarket price for the website (the site
+// can't run the matcher itself - no userData, no overrides).
+function priceFieldsFor(priceView, printingId) {
+  const m = priceView?.matches?.[printingId];
+  const p = m && m.idProduct != null ? priceView.products[m.idProduct] : null;
+  const price = prices.headlinePrice(p);
+  if (price == null) return {};
+  return { price, priceGuess: m.source === 'guess', cmName: p.name };
+}
+
+function computeNeeded(cards, collection, priceView) {
   const main = [];
   const reserve = [];
   for (const c of cards) {
@@ -386,19 +599,24 @@ function computeNeeded(cards, collection) {
       rarity: c.rarity,
       set: c.set,
       collectorNumber: c.collectorNumber,
-      cap
+      cap,
+      ...priceFieldsFor(priceView, c.id)
     };
     const mainNeeded = cap - (entry.main || 0);
     if (mainNeeded > 0) main.push({ ...base, have: entry.main || 0, needed: mainNeeded });
     const reserveNeeded = cap - (entry.reserve || 0);
     if (reserveNeeded > 0) reserve.push({ ...base, have: entry.reserve || 0, needed: reserveNeeded });
   }
-  return { generatedAt: new Date().toISOString(), main, reserve };
+  return { generatedAt: new Date().toISOString(), pricesAsOf: priceView?.priceDate || null, main, reserve };
 }
 
 async function copyNeededImages(needed) {
+  await copyImagesToDocs([...needed.main, ...needed.reserve].map((c) => c.id));
+}
+
+async function copyImagesToDocs(printingIds) {
   await fs.mkdir(docsImagesDir(), { recursive: true });
-  const ids = new Set([...needed.main, ...needed.reserve].map((c) => c.id));
+  const ids = new Set(printingIds);
   for (const id of ids) {
     const dest = path.join(docsImagesDir(), `${id}.webp`);
     try {
@@ -438,7 +656,13 @@ ipcMain.handle('publish:run', async () => {
   }
 
   const cache = await readJsonSafe(cardsCachePath(), { cards: [] });
-  const needed = computeNeeded(cache.cards, collection);
+  let priceView = null;
+  try {
+    priceView = await getPriceView(false);
+  } catch (err) {
+    steps.push(`Prices skipped: ${err.message}`);
+  }
+  const needed = computeNeeded(cache.cards, collection, priceView);
   await fs.mkdir(docsDataDir(), { recursive: true });
   await fs.writeFile(path.join(docsDataDir(), 'needed.json'), JSON.stringify(needed, null, 2), 'utf-8');
   await copyNeededImages(needed);
@@ -466,12 +690,83 @@ ipcMain.handle('publish:run', async () => {
       cap: mainSetCap(c.cardType),
       main: entry.main || 0,
       reserve: entry.reserve || 0,
-      extras: entry.extras || 0
+      extras: entry.extras || 0,
+      ...priceFieldsFor(priceView, c.id)
     };
   });
   await fs.writeFile(path.join(docsDataDir(), 'catalog.json'), JSON.stringify(catalog), 'utf-8');
+
+  // Trade list (docs/trade.html) - unlinked share-by-URL page. Only the
+  // for-sale quantity is published, never the Main/Reserve/Extras split;
+  // capped at total owned in case copies were removed after marking them.
+  const tradeList = await readJsonSafe(tradeListPath(), {});
+  const cardsById = new Map(cache.cards.map((c) => [c.id, c]));
+  const trade = [];
+  for (const [id, qty] of Object.entries(tradeList)) {
+    const c = cardsById.get(id);
+    if (!c) continue;
+    const entry = collection[id] || {};
+    const owned = BUCKETS.reduce((sum, b) => sum + (entry[b] || 0), 0);
+    const forSale = Math.min(qty, owned);
+    if (forSale <= 0) continue;
+    trade.push({
+      id: c.id,
+      name: c.name,
+      subname: c.subname,
+      displayName: c.displayName,
+      color: c.color,
+      cardType: c.cardType,
+      rarity: c.rarity,
+      set: c.set,
+      collectorNumber: c.collectorNumber,
+      qty: forSale,
+      ...priceFieldsFor(priceView, c.id)
+    });
+  }
+  await fs.writeFile(
+    path.join(docsDataDir(), 'trade.json'),
+    JSON.stringify({ generatedAt: new Date().toISOString(), pricesAsOf: priceView?.priceDate || null, cards: trade }, null, 2),
+    'utf-8'
+  );
+  await copyImagesToDocs(trade.map((c) => c.id));
+
+  // Looking list (docs/trading.html): the "still needed" quantity counts
+  // Main copies across every printing of the same card (same name + rules
+  // text), so it matches the Trading window's NEED x badge.
+  const lookingList = await readJsonSafe(lookingListPath(), {});
+  const mainOwnedByKey = new Map();
+  for (const c of cache.cards) {
+    const k = mechKey(c);
+    mainOwnedByKey.set(k, (mainOwnedByKey.get(k) || 0) + ((collection[c.id] || {}).main || 0));
+  }
+  const looking = [];
+  for (const id of Object.keys(lookingList)) {
+    const c = cardsById.get(id);
+    if (!c) continue;
+    const needed = mainSetCap(c.cardType) - (mainOwnedByKey.get(mechKey(c)) || 0);
+    if (needed <= 0) continue;
+    looking.push({
+      id: c.id,
+      name: c.name,
+      subname: c.subname,
+      displayName: c.displayName,
+      color: c.color,
+      cardType: c.cardType,
+      rarity: c.rarity,
+      set: c.set,
+      collectorNumber: c.collectorNumber,
+      needed,
+      ...priceFieldsFor(priceView, c.id)
+    });
+  }
+  await fs.writeFile(
+    path.join(docsDataDir(), 'looking.json'),
+    JSON.stringify({ generatedAt: new Date().toISOString(), pricesAsOf: priceView?.priceDate || null, cards: looking }, null, 2),
+    'utf-8'
+  );
+  await copyImagesToDocs(looking.map((c) => c.id));
   await fs.writeFile(pendingChangesPath(), JSON.stringify([], null, 2), 'utf-8');
-  steps.push(`Published ${needed.main.length} Main / ${needed.reserve.length} Reserve needed.`);
+  steps.push(`Published ${needed.main.length} Main / ${needed.reserve.length} Reserve needed, ${trade.length} for sale, ${looking.length} looking.`);
 
   await runGit(['add', 'docs']);
   try {
@@ -487,11 +782,152 @@ ipcMain.handle('publish:run', async () => {
   return { steps, collection };
 });
 
+// --- Deck publishing ("Now Playing" website page, see docs/decks.html) ----
+//
+// decks.json itself never leaves this machine - publishing a deck copies
+// only the selected decks' data plus a lookup of the specific card details
+// needed to render them into docs/, as their own dedicated files. This is
+// deliberately a separate git add/commit/push cycle from publish:run above
+// (a different concern - "which decks am I bringing to an event" vs "what
+// do I still need for my collection" - edited from a different window, on
+// its own schedule).
+
+function deckPublishStatePath() {
+  return path.join(app.getPath('userData'), 'deck-publish-state.json');
+}
+
+function docsDeckDataPaths() {
+  return {
+    decks: path.join(docsDataDir(), 'published-decks.json'),
+    cardDetails: path.join(docsDataDir(), 'deck-card-details.json')
+  };
+}
+
+ipcMain.handle('decks:getPublishState', async () => {
+  return readJsonSafe(deckPublishStatePath(), { deckIds: [], publishedAt: null });
+});
+
+ipcMain.handle('decks:publish', async (_event, deckIds) => {
+  await runGit(['pull', '--ff-only']);
+
+  const allDecks = await readJsonSafe(decksPath(), {});
+  const published = deckIds.map((id) => allDecks[id]).filter(Boolean);
+  const cache = await readJsonSafe(cardsCachePath(), { cards: [] });
+  const collection = await readJsonSafe(collectionPath(), {});
+
+  const printingsByCardId = new Map();
+  for (const c of cache.cards) {
+    if (!printingsByCardId.has(c.cardId)) printingsByCardId.set(c.cardId, []);
+    printingsByCardId.get(c.cardId).push(c);
+  }
+
+  // Every printing referenced as a Legend or a regular card by any
+  // published deck, denormalized with just the fields the site's deck view
+  // needs (catalog.json is close but lacks ram/cost/power/isEddiable, which
+  // the cost curve / RAM display / sellable stat all need).
+  const referencedIds = new Set();
+  for (const deck of published) {
+    for (const pid of deck.legendPrintingIds || []) {
+      if (pid) referencedIds.add(pid);
+    }
+    for (const split of Object.values(deck.cardPrintings || {})) {
+      for (const pid of Object.keys(split)) referencedIds.add(pid);
+    }
+    // cardPrintings is only populated lazily, the first time the Deck
+    // Builder's renderer actually looks at a card's split (see
+    // getPrintingSplit() in deckbuilder.js) - a deck saved before that
+    // feature existed, or a card never opened in the split picker since,
+    // can have entries in `cards` with no matching cardPrintings key at
+    // all. Fall back to any owned printing (any printing at all, failing
+    // that) so every card in the deck still resolves to *something* to
+    // render, same preference order as defaultPrintingSplit() client-side.
+    for (const cardId of Object.keys(deck.cards || {})) {
+      const printings = printingsByCardId.get(cardId) || [];
+      const alreadyCovered = printings.some((p) => referencedIds.has(p.id));
+      if (alreadyCovered) continue;
+      const owned = printings.find((p) => (collection[p.id]?.main || 0) > 0) || printings[0];
+      if (owned) referencedIds.add(owned.id);
+    }
+  }
+
+  const cardDetails = {};
+  for (const c of cache.cards) {
+    if (!referencedIds.has(c.id)) continue;
+    cardDetails[c.id] = {
+      id: c.id,
+      cardId: c.cardId,
+      name: c.name,
+      subname: c.subname,
+      displayName: c.displayName,
+      slug: c.slug,
+      cardType: c.cardType,
+      color: c.color,
+      rarity: c.rarity,
+      ram: c.ram,
+      cost: c.cost,
+      power: c.power,
+      isEddiable: c.isEddiable,
+      rulesText: c.rulesText,
+      set: c.set
+    };
+  }
+
+  await fs.mkdir(docsImagesDir(), { recursive: true });
+  for (const id of referencedIds) {
+    const dest = path.join(docsImagesDir(), `${id}.webp`);
+    try {
+      await fs.access(dest);
+      continue; // already published (e.g. also currently "needed")
+    } catch {
+      // fall through and copy it
+    }
+    try {
+      await fs.copyFile(path.join(imagesDir(), `${id}.webp`), dest);
+    } catch (err) {
+      console.log(`[deck publish] couldn't copy image ${id}: ${err.message}`);
+    }
+  }
+
+  const { decks: publishedDecksPath, cardDetails: cardDetailsPath } = docsDeckDataPaths();
+  await fs.mkdir(docsDataDir(), { recursive: true });
+  await fs.writeFile(publishedDecksPath, JSON.stringify(published, null, 2), 'utf-8');
+  await fs.writeFile(cardDetailsPath, JSON.stringify(cardDetails, null, 2), 'utf-8');
+
+  const state = { deckIds, publishedAt: new Date().toISOString() };
+  await fs.writeFile(deckPublishStatePath(), JSON.stringify(state, null, 2), 'utf-8');
+
+  await runGit(['add', 'docs']);
+  const label = published.length ? `Publish decks: ${published.map((d) => d.name || 'Untitled Deck').join(', ')}` : 'Unpublish all decks';
+  try {
+    await runGit(['commit', '-m', label]);
+  } catch (err) {
+    if (!/nothing to commit/i.test(err.stdout || '')) throw err;
+  }
+  await runGit(['push']);
+
+  return state;
+});
+
+// Windows are created hidden and maximized right before their first paint,
+// so they never flash at the 1400x900 "restored" size first. That size is
+// what dragging the title bar (or the restore button) drops back to.
+function showMaximized(win) {
+  win.once('ready-to-show', () => {
+    win.maximize();
+    win.show();
+  });
+}
+
 function createWindow() {
   const win = new BrowserWindow({
     width: 1400,
     height: 900,
-    fullscreen: true,
+    // Maximized, not fullscreen: Windows won't let you drag a true-
+    // fullscreen window at all, and a minimize/restore used to silently
+    // drop it out of fullscreen while Electron still reported it as
+    // fullscreen - so dragging "sometimes worked" and the maximize button
+    // cycled unpredictably. See showMaximized().
+    show: false,
     frame: false,
     icon: path.join(__dirname, '..', 'build', 'icon.png'),
     backgroundColor: '#0a0a0f',
@@ -508,6 +944,7 @@ function createWindow() {
   win.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
     console.log(`[did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
   });
+  showMaximized(win);
   win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
 
@@ -519,7 +956,14 @@ function createCollectionWindow() {
     return;
   }
   collectionWin = new BrowserWindow({
-    fullscreen: true,
+    width: 1400,
+    height: 900,
+    // Maximized, not fullscreen: Windows won't let you drag a true-
+    // fullscreen window at all, and a minimize/restore used to silently
+    // drop it out of fullscreen while Electron still reported it as
+    // fullscreen - so dragging "sometimes worked" and the maximize button
+    // cycled unpredictably. See showMaximized().
+    show: false,
     frame: false,
     icon: path.join(__dirname, '..', 'build', 'icon.png'),
     backgroundColor: '#0a0a0f',
@@ -536,6 +980,7 @@ function createCollectionWindow() {
   collectionWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
     console.log(`[collection did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
   });
+  showMaximized(collectionWin);
   collectionWin.loadFile(path.join(__dirname, 'renderer', 'collection.html'));
   collectionWin.on('closed', () => {
     collectionWin = null;
@@ -544,6 +989,87 @@ function createCollectionWindow() {
 
 ipcMain.handle('collection-view:open', () => {
   createCollectionWindow();
+});
+
+let deckBuilderWin = null;
+
+function createDeckBuilderWindow() {
+  if (deckBuilderWin && !deckBuilderWin.isDestroyed()) {
+    deckBuilderWin.focus();
+    return;
+  }
+  deckBuilderWin = new BrowserWindow({
+    width: 1400,
+    height: 900,
+    // Maximized, not fullscreen: Windows won't let you drag a true-
+    // fullscreen window at all, and a minimize/restore used to silently
+    // drop it out of fullscreen while Electron still reported it as
+    // fullscreen - so dragging "sometimes worked" and the maximize button
+    // cycled unpredictably. See showMaximized().
+    show: false,
+    frame: false,
+    icon: path.join(__dirname, '..', 'build', 'icon.png'),
+    backgroundColor: '#0a0a0f',
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      nodeIntegration: false
+    }
+  });
+  deckBuilderWin.setMenuBarVisibility(false);
+  deckBuilderWin.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
+    console.log(`[deckbuilder-renderer] ${message} (${sourceId}:${line})`);
+  });
+  deckBuilderWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
+    console.log(`[deckbuilder did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
+  });
+  showMaximized(deckBuilderWin);
+  deckBuilderWin.loadFile(path.join(__dirname, 'renderer', 'deckbuilder.html'));
+  deckBuilderWin.on('closed', () => {
+    deckBuilderWin = null;
+  });
+}
+
+ipcMain.handle('deck-builder:open', () => {
+  createDeckBuilderWindow();
+});
+
+let tradingWin = null;
+
+function createTradingWindow() {
+  if (tradingWin && !tradingWin.isDestroyed()) {
+    tradingWin.focus();
+    return;
+  }
+  tradingWin = new BrowserWindow({
+    width: 1400,
+    height: 900,
+    show: false,
+    frame: false,
+    icon: path.join(__dirname, '..', 'build', 'icon.png'),
+    backgroundColor: '#0a0a0f',
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+      contextIsolation: true,
+      nodeIntegration: false
+    }
+  });
+  tradingWin.setMenuBarVisibility(false);
+  tradingWin.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
+    console.log(`[trading-renderer] ${message} (${sourceId}:${line})`);
+  });
+  tradingWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
+    console.log(`[trading did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
+  });
+  showMaximized(tradingWin);
+  tradingWin.loadFile(path.join(__dirname, 'renderer', 'trading.html'));
+  tradingWin.on('closed', () => {
+    tradingWin = null;
+  });
+}
+
+ipcMain.handle('trading:open', () => {
+  createTradingWindow();
 });
 
 // Both windows are frameless (frame: false) for a consistent look, so
@@ -561,6 +1087,8 @@ ipcMain.handle('window:toggle-maximize', (event) => {
   const win = BrowserWindow.fromWebContents(event.sender);
   if (!win) return;
   if (win.isFullScreen()) {
+    // Not reachable from our own UI anymore (windows open maximized), but
+    // keep a sane way out if something ever puts a window in fullscreen.
     win.setFullScreen(false);
     win.maximize();
   } else if (win.isMaximized()) {

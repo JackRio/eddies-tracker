@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Trading — Eddies</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="trading.css" />
+</head>
+<body class="trading-body">
+  <div class="window-titlebar">
+    <div class="window-controls">
+      <button id="win-minimize" class="win-btn" title="Minimize">
+        <svg viewBox="0 0 12 12"><rect x="1" y="5.4" width="10" height="1.2" fill="currentColor"/></svg>
+      </button>
+      <button id="win-maximize" class="win-btn" title="Maximize / Restore">
+        <svg viewBox="0 0 12 12"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
+      <button id="win-close" class="win-btn win-btn-close" title="Close">
+        <svg viewBox="0 0 12 12"><path d="M1.5 1.5 L10.5 10.5 M10.5 1.5 L1.5 10.5" stroke="currentColor" stroke-width="1.4"/></svg>
+      </button>
+    </div>
+  </div>
+  <header class="trading-header">
+    <div class="title-block">
+      <img class="app-logo" src="../../build/eddies-glyph-yellow.png" alt="" />
+      <h1>TRADING <span class="accent">DESK</span></h1>
+    </div>
+    <div class="seg" id="seg">
+      <span data-v="L">Looking</span><span data-v="B" class="on">Both</span><span data-v="S" class="cy">Selling</span>
+    </div>
+    <button id="close-btn" class="btn">Close</button>
+  </header>
+
+  <div class="trading-scroll">
+    <div class="bar">
+      <div class="grp"><span class="lbl">Suggest</span>
+        <span class="pill on" data-sg="all">All</span>
+        <span class="pill" data-sg="need">Unique needs</span>
+        <span class="pill" data-sg="spare">Spare upgrades</span>
+      </div>
+      <div class="grp"><span class="lbl">Color</span><span id="f-color" class="grp"></span></div>
+      <div class="grp"><span class="lbl">Type</span><span id="f-type" class="grp"></span></div>
+      <div class="grp"><span class="lbl">Rarity</span><span id="f-rarity" class="grp"></span></div>
+      <div class="grp">
+        <input id="f-search" type="text" placeholder="Search cards..." />
+        <span class="lbl">Min price</span>
+        <select id="f-min">
+          <option value="0">Any</option><option value="5">€5+</option><option value="10" selected>€10+</option><option value="25">€25+</option>
+        </select>
+        <select id="f-set"></select>
+        <select id="f-sort">
+          <option value="price">Sort: price high to low</option>
+          <option value="name">Sort: name</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="sec-h"><h2>Pool</h2><small id="pool-info"></small></div>
+    <div class="pool" id="pool"></div>
+
+    <div class="sec-h"><h2>Your lists</h2><small>Published to the website with "Publish Site"</small></div>
+    <div class="cols" id="cols">
+      <div class="panel" id="p-looking">
+        <header><h3>Looking<em id="count-looking">0</em></h3><select class="sort-select" data-sort-list="looking" title="Reorder this list once; drag afterwards to fine-tune" aria-label="Sort"></select><div class="total">Total Est Amount: <b id="total-looking"></b></div></header>
+        <div class="list" id="list-looking"></div>
+      </div>
+      <div class="panel s" id="p-selling">
+        <header><h3>Selling<em id="count-selling">0</em></h3><select class="sort-select" data-sort-list="selling" title="Reorder this list once; drag afterwards to fine-tune" aria-label="Sort"></select><div class="total">Total Est Amount: <b id="total-selling"></b></div></header>
+        <div class="list" id="list-selling"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="trading.js"></script>
+</body>
+</html>

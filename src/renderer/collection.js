@@ -78,6 +78,113 @@ function buildSetOptions() {
   select.value = activeSet;
 }
 
+// --- Cardmarket prices (matching/fetching lives in src/prices.js). Kept in
+// sync with the same helpers in renderer.js.
+let priceView = null;
+
+function formatEur(v) {
+  if (v == null) return '—';
+  return `€${v >= 100 ? Math.round(v).toLocaleString('en') : v.toFixed(2)}`;
+}
+
+function headlinePrice(p) {
+  return p ? p.trend ?? p.low ?? p.trendFoil ?? p.lowFoil ?? null : null;
+}
+
+function priceMatchFor(printingId) {
+  return priceView?.matches?.[printingId] || null;
+}
+
+function priceProductFor(printingId) {
+  const m = priceMatchFor(printingId);
+  return m && m.idProduct != null ? priceView.products[m.idProduct] || null : null;
+}
+
+const PRICE_SOURCE_LABELS = {
+  auto: 'Auto-matched',
+  guess: 'Best guess — check the match below',
+  manual: 'Matched by you',
+  none: 'No Cardmarket listing found',
+  'none-manual': 'Set to "no match" by you'
+};
+
+function cardmarketUrl(name) {
+  return `https://www.cardmarket.com/en/Cyberpunk/Products/Search?searchString=${encodeURIComponent(name)}`;
+}
+
+// Cardmarket lists several same-named products per expansion (one per art
+// version) with nothing but an id to tell them apart - number them V1, V2...
+// in id order, which is also Cardmarket's own version order.
+function candidateLabel(idProduct, candidates) {
+  const p = priceView.products[idProduct];
+  const sameExp = candidates.filter((id) => priceView.products[id]?.exp === p.exp);
+  const version = sameExp.length > 1 ? ` · V${sameExp.indexOf(idProduct) + 1}` : '';
+  return `${p.expName}${version} · ${formatEur(headlinePrice(p))}`;
+}
+
+function priceSectionHtml(c) {
+  if (!priceView) {
+    return `<div class="popped-price"><h4>Cardmarket</h4><div class="price-note">Prices unavailable right now (offline?).</div></div>`;
+  }
+  const m = priceMatchFor(c.id) || { idProduct: null, source: 'none', candidates: [] };
+  const p = priceProductFor(c.id);
+  const rows = p
+    ? [
+        ['Trend', p.trend],
+        ['From', p.low],
+        ['7-day avg', p.avg7],
+        ['30-day avg', p.avg30],
+        ...(p.trendFoil != null || p.lowFoil != null ? [['Foil trend', p.trendFoil ?? p.lowFoil]] : [])
+      ]
+        .map(([label, v]) => `<div class="price-cell"><span>${label}</span><strong>${formatEur(v)}</strong></div>`)
+        .join('')
+    : '';
+  const selected = m.source === 'manual' ? String(m.idProduct) : m.source === 'none-manual' ? 'none' : 'auto';
+  const options = [
+    `<option value="auto">Automatic</option>`,
+    ...(m.candidates || []).map((id) => `<option value="${id}">${escapeHtml(candidateLabel(id, m.candidates))}</option>`),
+    `<option value="none">No match</option>`
+  ].join('');
+  const asOf = priceView.priceDate ? new Date(priceView.priceDate).toLocaleDateString() : '';
+  return `
+    <div class="popped-price">
+      <div class="price-head">
+        <h4>Cardmarket</h4>
+        <span class="price-source price-source-${m.source}">${PRICE_SOURCE_LABELS[m.source] || ''}</span>
+      </div>
+      ${rows ? `<div class="price-grid">${rows}</div>` : ''}
+      <div class="price-match-row">
+        <label>Match
+          <select data-price-override data-selected="${selected}">${options}</select>
+        </label>
+        <button class="price-link-btn" data-price-link="${escapeHtml(cardmarketUrl(p ? p.name : c.displayName.replace(': ', ' - ')))}">Cardmarket ↗</button>
+      </div>
+      ${asOf ? `<div class="price-note">Cardmarket price guide as of ${asOf}</div>` : ''}
+    </div>`;
+}
+
+function wirePriceSection(container, c, onChange) {
+  const sel = container.querySelector('[data-price-override]');
+  if (sel) {
+    sel.value = sel.dataset.selected;
+    sel.addEventListener('change', async () => {
+      const v = sel.value;
+      priceView = await window.api.setPriceOverride(c.id, v === 'auto' ? 'auto' : v === 'none' ? null : Number(v));
+      onChange();
+    });
+  }
+  const link = container.querySelector('[data-price-link]');
+  if (link) link.addEventListener('click', () => window.api.openExternalLink(link.dataset.priceLink));
+}
+
+async function loadPrices(force = false) {
+  try {
+    priceView = await (force ? window.api.refreshPrices() : window.api.getPrices());
+  } catch (err) {
+    console.error('Price load failed:', err);
+  }
+}
+
 async function init() {
   const cache = await window.api.getCards();
   allCards = (cache && cache.cards) || [];
@@ -143,6 +250,7 @@ async function init() {
   });
 
   selectType('All');
+  loadPrices();
 }
 
 function selectType(type) {
@@ -466,6 +574,9 @@ function openPopped(cardId, rowCards) {
   const rarityEl = el('popped-rarity');
   rarityEl.textContent = c.rarity || '';
   rarityEl.className = `popped-rarity ${rarityClass(c.rarity)}`;
+
+  el('popped-price').innerHTML = priceSectionHtml(c);
+  wirePriceSection(el('popped-price'), c, () => openPopped(c.id));
 
   el('popped-rules').innerHTML = renderRulesText(c.rulesText);
   el('popped-faq').innerHTML = faqHtml(c.slug);

@@ -20,8 +20,8 @@ directly by Electron.
 
 ## Architecture at a glance
 
-Two Electron `BrowserWindow`s, both fullscreen-by-default and frameless
-(custom title bar, see below), both using the same `preload.js` (so both
+Three Electron `BrowserWindow`s, all maximized-by-default and frameless
+(custom title bar, see below), all using the same `preload.js` (so all three
 get the same `window.api`):
 
 - **Main window** — `src/renderer/index.html` + `renderer.js` + `style.css`.
@@ -41,6 +41,16 @@ get the same `window.api`):
   Set toggle that changes what every filter on the page means. Same
   click-to-open full-size popup as the Main window (read-only bucket pills
   here instead of editable counters).
+- **Trading window** — `src/renderer/trading.html` + `trading.js` +
+  `trading.css`. Opened via the "Trading" button (IPC `trading:open`). One
+  filtered pool of suggested cards with one-click "+ LOOK" / "+ SELL", and two
+  side-by-side lists (Looking / Selling, switchable via the Looking|Both|
+  Selling toggle). See "Trading window" below.
+- **Deck Builder window** — `src/renderer/deckbuilder.html` + `deckbuilder.js`
+  + `deckbuilder.css`. Opened via the "Deck Builder" button (IPC
+  `deck-builder:open`). See "Deck Builder" below for the rules engine and
+  data model — this is the one window that writes its own storage file
+  (`decks.json`) instead of `collection.json`.
 
 Rules text (from the API) comes with `{Keyword}` tokens — e.g. `{Call}`,
 `{Go Solo}`, `{Spend}` — standing in for the game's official badge icons.
@@ -145,6 +155,9 @@ Base: `https://api.netdeck.gg/api/cards/cyberpunk`
   **Never committed to git** — this is the one file that stays purely
   local/private; the published website only ever sees derived, need-only
   data (see "Web publish").
+- `prices-cache.json` / `price-overrides.json` — see "Cardmarket prices".
+- `decks.json` — saved decks, keyed by deck id. **Never committed to git**,
+  same privacy tier as `collection.json`. See "Deck Builder" below.
 - `images/<printingId>.webp` — cached card art.
 - `backups/collection-<ISO timestamp>.json` — rotating backups, **max 3
   unlocked** ones (locked backups are exempt from the rotation entirely and
@@ -191,7 +204,54 @@ windowMinimize()                    window:minimize
 windowToggleMaximize()              window:toggle-maximize
 windowClose()                       window:close
 publishSite()                       publish:run                see "Web publish"
+openDeckBuilder()                   deck-builder:open
+getDecks()                          decks:get
+saveDeck(deck)                      decks:save                 upserts by deck.id
+deleteDeck(deckId)                  decks:delete
+openExternalLink(url)               shell:openExternal          http(s) only, opens OS default browser
+getPrices()                         prices:get                 see "Cardmarket prices"
+refreshPrices()                     prices:refresh             forces a re-download
+setPriceOverride(id, idProduct)     prices:setOverride         idProduct | null (no match) | 'auto'
+getTradeList()                      trade:get                  see "Trade page"
+setTradeQty(id, qty)                trade:set                  0 removes the entry
+setTradeQtys({ id: qty })           trade:setMany              bulk, same semantics
 ```
+
+## Cardmarket prices (`src/prices.js`)
+
+Per-printing EUR prices from **Cardmarket** (Europe's main singles
+marketplace). Its real API is closed to new applicants, but Cardmarket
+publishes free, daily-regenerated JSON dumps per game on its own S3 bucket;
+Cyberpunk is **game id 23**:
+- `downloads.s3.cardmarket.com/productCatalog/productList/products_singles_23.json`
+  (idProduct, name, idExpansion - **no rarity, no collector number**)
+- `downloads.s3.cardmarket.com/productCatalog/priceGuide/price_guide_23.json`
+  (low/trend/avg1/avg7/avg30 + foil variants, EUR, keyed by idProduct)
+
+Cached in `userData/prices-cache.json`, re-downloaded when older than 12h
+(on `prices:get`, which the main window calls after the grid renders) or on
+"Refresh Card Data". A failed download silently falls back to the cache.
+
+**Matching is heuristic** because Cardmarket's file never says which art
+version a product is. `SET_TO_EXPANSION` maps our 15 set codes onto
+Cardmarket's 9 expansions (Retail+Beta share one; all tournament-prize
+sets share 6722). Within one expansion+name group, printings collapse to
+"versions" by collector number (`β` prefix and zero-padding stripped, so
+Retail `005a` = Beta `β005a`). If the version count equals Cardmarket's
+product count, they're zipped in collector-number / idProduct order
+(`auto` - verified zero rarity-vs-price inversions at launch); otherwise
+rarer version ↔ pricier product (`guess`, shown with a `?`). Manual
+overrides (`userData/price-overrides.json`, `{ printingId: idProduct |
+null }`) win over both, set from the popup's "Match" dropdown. Headline
+price = trend, falling back to low, then foil trend/low.
+
+Shown as: a trend badge on every main-grid tile (+ "Price" sort), a full
+price box in both windows' popups (duplicated helpers in `renderer.js`/
+`collection.js`), and on the website - `publish:run` snapshots
+`price`/`priceGuess`/`cmName` into each `needed.json`/`catalog.json`
+entry (`priceFieldsFor()`), so the site only updates prices on Publish.
+The "Cardmarket ↗" links use Cardmarket's search URL (product pages need
+an expansion/version slug the dumps don't provide).
 
 ## Custom window chrome
 
@@ -199,10 +259,19 @@ Both windows are created with `frame: false` (plus `icon:` pointing at
 `build/icon.png`) — there's no native title bar, so `index.html` and
 `collection.html` each draw their own slim `.window-titlebar` strip with
 minimize/maximize-restore/close buttons wired to the `window:*` IPC calls
-above. `window:toggle-maximize` cycles fullscreen → maximized-windowed →
-restored, using whichever `BrowserWindow` actually sent the IPC
+above. `window:toggle-maximize` toggles maximized ↔ restored (1400×900),
+using whichever `BrowserWindow` actually sent the IPC
 (`BrowserWindow.fromWebContents(event.sender)`), not a hardcoded window
-reference. If you add a third window, give it the same treatment.
+reference. If you add another window, give it the same treatment.
+
+**Windows open maximized, not `fullscreen: true`** (created with `show:
+false`, then `showMaximized()` maximizes + shows on `ready-to-show`, so
+there's no flash at the restored size). They used to open in true
+fullscreen, which Windows refuses to drag at all - and the minimize handler
+dropping fullscreen meant dragging only started working after a minimize/
+restore, with the window state drifting ("acts funky"). Don't go back to
+`fullscreen: true`; a maximized frameless window gets native drag-to-
+restore from the `-webkit-app-region: drag` title bar for free.
 
 ## App icon / logo
 
@@ -369,6 +438,29 @@ immediately, even though the underlying files haven't actually changed yet.
   least once — it can't retroactively un-stale an already-cached page that
   predates it.
 
+### Trade page (`docs/trade.html` + `trade.js` — unlisted)
+
+A "cards I'm selling" page shared by URL only (`jackrio.lol/trade.html`).
+Access control is **just being unlinked** — no nav in or out, `noindex`
+meta, standalone JS (no `shared.js`/`config.js`). The user explicitly chose
+this over password encryption / Cloudflare Access, knowing anyone with the
+URL (or browsing the public repo) can see it. It only shows name/set/
+rarity/Cardmarket price + the for-sale quantity — never the Main/Reserve/
+Extras split.
+
+For-sale quantities live in `userData/trade-list.json` (`{ printingId:
+qty }`, local-only like `collection.json`), set from the "Sell" row at the
+bottom of the main window's card popup, or the Sell -/+ sharing each grid
+tile's Xtra row (capped at total owned). Tiles show a green "SELL N" badge.
+Next to the result count/owned value: "On sale only" (a filter checkbox,
+combinable with the Ownership dropdown) and "Sell all shown" - lists every
+owned printing in the current filter at its full owned count, or unlists
+them all if they already are (`trade:setMany`, one write). That bulk toggle
+only touches the trade list, never collection buckets - the "no bulk
+mutate" rule below is about the collection.
+`publish:run` snapshots it into `docs/data/trade.json` (qty re-capped at
+current total owned) and copies those images via `copyImagesToDocs()`.
+
 ### Local preview (without a real repo/token)
 
 `scripts/serve-docs.js` is a tiny static file server (no deps) for
@@ -390,6 +482,211 @@ folder; use the local server instead.
 - Publishing is a **manual button click**, not automatic on every save.
 - Custom domain (`jackrio.lol`) is live, DNS'd straight at GitHub Pages —
   no other host/CDN in front of it.
+
+## Trading window (`trading.html`/`.js`/`.css`) and `docs/trading.html`
+
+Two lists, edited **only in the app**, published read-only to the website:
+- **Selling** = the existing `trade-list.json` (`{ printingId: qty }`, same
+  `trade:*` IPC the main window's Sell controls use) - the old unlisted
+  `docs/trade.html` still reads `trade.json`.
+- **Looking** = `looking-list.json` (`{ printingId: true }`, IPC
+  `looking:get`/`looking:setMany`). Only ids are stored; the "NEED ×N"
+  quantity is derived live (cap - Main copies summed across every printing of
+  the card).
+
+**List order** is user-arranged: drag a row (or ▲/▼) in the Trading window;
+`looking:reorder`/`trade:reorder` rewrite the JSON with keys in the new
+order (UUID keys keep insertion order), `publish:run` iterates in that
+order, and `docs/trading.js` shows it as published (no price re-sort).
+The "Sort by…" dropdown in each panel header (price, name, rarity, color, type, set, plus need qty / for-sale qty) is a one-shot reorder, not a persistent mode.
+
+**Mechanical identity**: printings with the same `displayName` + `rulesText`
+are one card (`mechKey()`, duplicated in `trading.js`, `main.js` and
+`docs/trading.js`/`needed.js`). Pool suggestions:
+- *Unique needs*: per card, cap - Main total > 0 → the lowest-rarity printing
+  (ties: cheaper), ranked via `RARITY_RANK`.
+- *Spare upgrades*: a printing you own where, after selling one copy, total
+  owned across ALL buckets/printings is still >= the cap AND a lower-rarity,
+  cheaper printing is owned ("covered by"). Don't loosen this - e.g. 2 of 3
+  owned across rarities must NOT suggest selling the pricier one.
+
+`publish:run` also writes `docs/data/looking.json` (needed qty snapshot, prices,
+images copied). `docs/trading.html`/`trading.js` render both lists read-only
+(Looking | Both | Selling, search, "Total Est Amount"); "Trading" is in each
+site page's nav. The Needed page also has a "Unique cards only" chip with the
+same logic.
+
+## Deck Builder (`deckbuilder.html`/`.js`/`.css` — its own window)
+
+Builds real, constructed-legal Cyberpunk TCG decks from cards you own in
+your **Main** bucket. Two views inside the one window, toggled by a `view`
+state var: **My Decks** (list of saved decks with stats + Edit/Duplicate/
+Delete) and **Builder** (editing one deck). `main.js` only does CRUD on
+`decks.json` (`decks:get`/`decks:save`/`decks:delete`) — all deckbuilding
+rule logic lives in the renderer.
+
+**Decks are keyed by `cardId`, not printing `id`.** The game's copy-limit
+rule ("max 3 of a card with an identical name+subtitle") and Legend
+uniqueness rule ("unique names") both operate on the *card*, not the
+specific art/printing — see "Printings, not cards" above. So:
+- `buildUniqueCards()` collapses `allCards` (per-printing) down to one row
+  per `cardId`, each annotated with `ownedMain` = the sum of the `main`
+  bucket count across every printing that shares that `cardId`, and a
+  representative printing (prefers one you own copies of, purely for which
+  art to display).
+- A deck's `cards` field is `{ cardId: quantity }`. A deck slot's ownership
+  cap is that summed `ownedMain`, not any single printing's count.
+- Legend uniqueness is checked by `name` (not `cardId`), since two
+  printings of "V" with different subtitles (e.g. Streetkid vs. Corporate
+  Exile) still can't both be Legends in the same deck.
+- The Set filter/dropdown in the main card browser is built from every
+  printing's set across a card's whole group (a `sets` array on each
+  `uniqueCards` entry), not just the representative printing's set —
+  otherwise a card owned via, say, its Beta printing but displayed with its
+  Retail art would silently vanish from a "Retail" Set filter.
+- A Legend slot separately tracks `legendCardIds[i]` (the card) and
+  `legendPrintingIds[i]` (which specific owned printing's art to show).
+  Picking a Legend with more than one owned printing (e.g. an Epic Retail
+  copy and a Nova Rare Box Toppers copy of the same card) opens an
+  art-variant sub-view in the Legend picker instead of finalizing
+  immediately; a filled slot's "↺ Art" button (shown only when
+  `ownedPrintingsFor(cardId).length > 1`) reopens that sub-view directly to
+  change it later. Selecting a Legend you own zero copies of (reachable via
+  the picker's "Show All" ownership toggle) is blocked the same way an
+  over-cap card add is — Legends are subject to the same "hard-capped at
+  owned copies" rule as every other card.
+- Regular (non-Legend) cards can run up to 3 copies, and unlike a Legend
+  slot those copies don't all have to be the same printing — e.g. 2 Epic +
+  1 Iconic Other copy of the same named card is a completely normal
+  ownership split. `deck.cardPrintings: { [cardId]: { [printingId]: count
+  } }` records exactly which owned printings make up a card's copies; a
+  card whose owned printings map already sums to its deck quantity keeps
+  that mapping (see `getPrintingSplit()`), otherwise it's regenerated via
+  `defaultPrintingSplit()` (greedily fills from owned printings in order).
+  The "🎨" button on a Deck List row (shown when
+  `ownedPrintingsFor(cardId).length > 1`) opens the printing-split picker
+  (`#printing-split-overlay`), where each owned printing gets its own
+  stepper capped at its own owned count, with "+" additionally disabled
+  once the running total hits the card's deck quantity — you free up room
+  by decrementing another printing first, since the total itself is fixed
+  by the card's normal qty stepper, not by this picker.
+  `printingsForCardEntry()` expands a split into one printing per physical
+  copy (back-most first) for the stacked-tile art in both the Builder's
+  Deck List and the read-only Deck View — this is also why a mixed-rarity
+  stack's peeking layers show genuinely different card art instead of the
+  same representative printing repeated `qty` times.
+- Which printing is front-facing (fully visible, on top of the stack) is
+  just whichever printing's key comes *last* in the split object - no
+  separate field, since JS objects preserve string-key insertion order.
+  `setFrontPrinting()` deletes and re-inserts a printing's entry to move it
+  there. In the read-only Deck View, hovering a mixed-rarity tile reveals a
+  row of mini swatches (`.view-deck-tile-switch`, one per distinct owned
+  printing) - clicking one calls `switchFrontPrinting()`, which is the one
+  edit Deck View makes directly (auto-saved on click) rather than requiring
+  "Edit Deck" first, since it's purely cosmetic and never touches legality
+  or counts.
+- `deck.description` is a free-text field: edited as raw HTML source in a
+  `<textarea>` next to the Legend row in the Builder, and rendered via
+  `innerHTML` (deliberately not escaped) next to Deck View's Legends
+  section. That's intentional, not an oversight — it's the deck's own
+  author writing markup into their own local `decks.json`, not untrusted
+  input from anyone else.
+
+**RAM/color legality** (`computeCeilings()` + `canSetCardQty()`): each of
+the 3 selected Legends has a `color` and a `ram` value. Sum `ram` per color
+across the selected Legends — that's the RAM ceiling for that color for
+this deck. A non-Legend card is only addable if its `color` has a nonzero
+ceiling and its own `ram` is `<=` that ceiling. Cards with no `color` are
+always legal (none currently exist in the pool, but the check is written to
+allow for it).
+
+**Enforcement is hard-block, not warn-and-allow**, for anything that makes
+an action nonsensical: a 4th copy of a card, exceeding a card's own
+`ownedMain`, a 4th Legend, two Legends sharing a `name`, or a card whose
+`ram` exceeds its color's current ceiling. Each rejection sets
+`deckMessage` (rendered in `#deck-message`, styled red) instead of mutating
+state — see `canSetCardQty()`/`legendNameConflict()`. Being under 40 cards,
+over 50, or short a Legend is deliberately **not** blocked this way (a deck
+is often mid-edit) — those show up as persistent lines in the stats panel
+via `computeDeckWarnings()` instead.
+
+**Ownership filtering**: the card browser defaults to "Owned Only"
+(`builderState.ownership`), hiding any card with `ownedMain === 0`.
+Switching to "Show All" only changes *visibility* — the add/quantity
+buttons are still hard-capped at `ownedMain` (0 owned means the `+` stays
+disabled with an explanatory `title`), so "Show All" is for seeing what a
+deck still needs, not for building with cards you don't have.
+
+**"Legal for current Legends" filter** (`builderState.legalOnly`, on by
+default): hides any card `cardFitsCeilings()` rejects — same check
+`canSetCardQty()` uses to hard-block an add, just applied as a pool filter
+instead of a per-card disable. Since it's evaluated fresh inside
+`getFilteredPoolCards()` on every `renderCardPool()` call (which every
+Legend add/remove/art-change already triggers via `renderBuilder()`), the
+pool narrows live the instant a Legend's color/RAM ceiling changes — no
+separate wiring needed. Unchecking it falls back to the old behavior
+(everything shown, illegal cards just individually disabled).
+
+**Reference links** (`deck.links: [{ label, url }]`) are for citing where a
+deck came from (a YouTube guide, a blog post, a community deckbuilder
+export, etc). They open via `window.api.openExternalLink()` →
+`shell:openExternal` in `main.js`, which validates the URL starts with
+`http://`/`https://` before calling Electron's `shell.openExternal` — never
+render them as a plain `<a target="_blank">`, since contextIsolation means
+the renderer has no window-open handler wired for that.
+
+**Prep List** (My Decks list, `listUiState.selectedIds`): you only ever
+physically build *one* selected deck at a time, reusing shared cards
+between them, so `computePrepList()` combines several decks' card lists by
+**max quantity across the selection**, not a sum - e.g. 2 copies of a card
+if the neediest of your selected decks wants 2, even though 3 is legal and
+some other selected deck might also run it. Legends are just a name-deduped
+union (always qty 1, no max needed). Rendered via the same
+`viewDeckTileHtml()` as the read-only Deck View, but since every stacked
+layer here is deliberately the *same* art (there's no per-deck printing
+split to preserve), the usual raise-and-peek effect doesn't read as "more
+than one" on its own - `viewDeckTileHtml()`'s 4th param is an optional
+extra badge HTML string, used here (only here) to show an explicit "×N".
+
+**Publishing decks to the website** (`docs/decks.html`) is a separate
+concern from the Prep List and from the collection "Publish Site" button -
+a deliberate, independent `git pull`/commit/push cycle
+(`decks:publish` in `main.js`), triggered from "Publish Selected" in the
+Deck Builder's My Decks toolbar. `decks.json` itself never leaves the
+machine; publishing copies only the *exact* selected decks' data plus a
+denormalized `docs/data/deck-card-details.json` lookup (printing id →
+name/color/ram/cost/power/isEddiable/rulesText - `catalog.json` is close
+but lacks the numeric stats the cost curve/donuts need) into
+`docs/data/published-decks.json`, and copies each referenced printing's
+image into `docs/images/` if not already there (generalizes the existing
+`copyNeededImages()` pattern). "Publish Selected" always **replaces** the
+whole published set with the current checkbox selection - unpublishing one
+deck is just the small "📡 Live" badge on its My Decks card, which
+re-publishes the current set minus that one deck. `userData/deck-publish-
+state.json` (app-local, never committed) tracks `{ deckIds, publishedAt }`
+so the toolbar can show "Last published: ..." and so `deckCardHtml()` knows
+which cards need the badge.
+
+A deck's `cardPrintings` split (see above) is only populated *lazily*, the
+first time the Builder's renderer actually looks at it - an older deck, or
+one whose split-eligible cards were never opened in the split picker, can
+have `cards` entries with no matching `cardPrintings` key at all.
+`decks:publish` accounts for this: any card in `deck.cards` not already
+covered by a `cardPrintings`/`legendPrintingIds` reference falls back to
+any owned printing of that `cardId` (any printing at all, failing that),
+so every card in a published deck still resolves to *something* renderable
+on the site - `docs/decks.js`'s `printingsForCardEntry()` has the matching
+client-side fallback for the same reason.
+
+`docs/decks.js` is a **duplicated, read-only port** of `renderDeckView()`/
+`computeDeckStats()`/`viewDeckTileHtml()`/`donutBlockHtml()`/
+`costCurveHtml()` from `deckbuilder.js` - not shared code, matching this
+repo's existing convention (`mainSetCap()`, `renderRulesText()` are
+already duplicated 3+ places). It intentionally does *not* port the
+card-detail popup or the front-facing art switch - those are editing/
+inspection conveniences, not needed for "which cards do I need for this
+deck," and porting them would mean duplicating `renderRulesText()`/
+`faqHtml()` too for comparatively little value here.
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 
@@ -461,6 +758,14 @@ folder; use the local server instead.
   `[hidden] { display: none !important; }` at the top of the file, rather
   than hunting down every individual element case-by-case.
 
+- **`.card-tile` needs `content-visibility: auto`** (+ `contain-intrinsic-
+  size: auto 480px`, ~one tile's real height). Without it every window
+  resize re-lays-out all 170-509 grid tiles, and on Windows a title-bar drag
+  out of maximized blocks on that layout - the window froze ~1.4s mid-drag
+  (vs ~0.14s with it, same as an empty page; hiding the images alone made
+  no difference, it's layout, not image decode). Measured with a scripted
+  drag + `--remote-debugging-port` CSS injection; see conversation history.
+
 ## Windows dev-environment notes
 
 - `npm install`'s postinstall electron download can silently fail to fully
@@ -484,7 +789,7 @@ folder; use the local server instead.
   `node_modules\electron\dist\electron.exe .` directly (not `npm start`) if
   you need `Start-Process` with separate stdout/stderr redirection for log
   capture, then screenshot with `System.Drawing` + `CopyFromScreen`
-  (windows are fullscreen so `Screen.PrimaryScreen.Bounds` = the window
+  (windows open maximized, so `Screen.PrimaryScreen.Bounds` covers the window
   rect). Main window controls' approximate screen coordinates shift
   whenever header buttons are added/removed — re-screenshot before
   clicking rather than reusing old coordinates. `main.js` forwards each

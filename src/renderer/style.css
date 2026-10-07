@@ -71,6 +71,46 @@ body {
   min-height: 100vh;
 }
 
+/* The Highlights overlay is full-screen and has nothing for the page's own
+   scrollbar to do - hidden (see openHighlights/closeHighlights) so it isn't
+   sitting inert on top of the cylinder view. */
+body.highlights-open {
+  overflow: hidden;
+}
+
+/* Themed scrollbar (Electron/Chromium's -webkit-scrollbar pseudo-elements)
+   in place of the plain OS one - applies to the page itself and to every
+   scrollable panel (filters sidebar, popup info panes, backup list, etc). */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--yellow) var(--bg-panel);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-panel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--yellow), var(--cyan));
+  border-radius: 8px;
+  border: 3px solid var(--bg-panel);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-panel);
+}
+
 .app-header {
   display: flex;
   align-items: center;
@@ -94,6 +134,13 @@ body {
   object-fit: contain;
   flex-shrink: 0;
   filter: drop-shadow(0 0 6px rgba(245, 228, 0, 0.45));
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.app-logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(245, 228, 0, 0.7));
 }
 
 .title-block h1 {
@@ -379,6 +426,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+.result-total {
+  color: var(--green);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-unpriced {
+  text-transform: none;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -395,6 +452,13 @@ body {
   display: flex;
   flex-direction: column;
   transition: border-color 0.15s ease, transform 0.18s ease, box-shadow 0.18s ease, z-index 0.18s ease;
+  /* Skip layout/paint for off-screen tiles. Without this, every window
+     resize re-lays-out all ~170-500 tiles, and on Windows a window drag
+     waits on that: dragging out of maximized froze the window ~1.4s
+     (0.14s with this). "auto" remembers each tile's real height once it's
+     been rendered, so the scrollbar settles after the first scroll-through. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
 }
 
 /* One color per bucket: Main = yellow, Extras = purple, Reserve = cyan.
@@ -552,6 +616,143 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 2px;
+}
+
+.card-rarity-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+/* Cardmarket trend price (see priceTagHtml in renderer.js). */
+.price-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-tag.price-guess {
+  color: var(--text-dim);
+}
+
+.popped-price {
+  margin: 0 0 18px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-panel);
+}
+
+.price-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.popped-price h4 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.price-source {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.price-source-guess {
+  color: var(--yellow);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.price-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.price-cell span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.price-cell strong {
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+
+.price-cell:first-child strong {
+  color: var(--green);
+}
+
+.price-match-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-match-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.price-match-row select {
+  flex: 1;
+  min-width: 0;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
+.price-link-btn {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.price-link-btn:hover {
+  background: rgba(29, 225, 225, 0.12);
+}
+
+.price-link-btn:focus-visible,
+.price-match-row select:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.price-note {
+  margin-top: 8px;
+  font-size: 10px;
+  color: var(--text-dim);
 }
 
 /* Rarity colors escalate from muted (Common) to increasingly saturated
@@ -820,3 +1021,330 @@ body {
   color: var(--text);
   white-space: pre-line;
 }
+
+/* Highlights view - opened by clicking the header logo, overlays the main
+   window with a slowly, continuously spinning 3D "cylinder" of rare-card
+   thumbnails from the currently-selected Set. The cylinder's children sit
+   on a circle via rotateY+translateZ, and rotating the cylinder element
+   itself (not the children) spins the whole ring around a shared vertical
+   axis - the standard CSS 3D carousel trick. Rotation is driven every frame
+   from JS (renderer.js's highlightTick), so no CSS transition here - one
+   would fight the per-frame angle updates and look stuttery. Read-only:
+   clicking a tile (or the periodic auto-spotlight) opens #highlight-detail
+   instead of any edit control. */
+.highlight-overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(24, 20, 8, 0.94), rgba(4, 4, 7, 0.98));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 2500;
+  overflow: hidden;
+}
+
+.highlight-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.highlight-title {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--yellow);
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 800;
+  pointer-events: none;
+}
+
+.highlight-close-btn {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.highlight-close-btn:hover {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.highlight-stage {
+  width: 100%;
+  height: 100%;
+  perspective: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-cylinder {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transform-style: preserve-3d;
+}
+
+/* A second, wider ring of the same cards sits further back (pushed away via
+   .highlight-bg-wrap's static translateZ, then spun in lockstep with the
+   foreground ring every frame - see applyHighlightRotation), blurred and
+   dimmed. It has no interaction of its own - purely there so the gaps
+   between foreground cards, and the space above/below them, show a hint of
+   more cards curving away into the distance, reinforcing that this is a
+   full cylinder and not just a flat row of cards swinging in place. */
+.highlight-bg-wrap {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transform-style: preserve-3d;
+}
+
+.highlight-cylinder-bg {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.highlight-tile-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -240px;
+  backface-visibility: hidden;
+}
+
+.highlight-tile-bg img {
+  width: 320px;
+  border-radius: 60px;
+  display: block;
+  filter: blur(2.5px) brightness(0.55) saturate(0.8);
+  opacity: 0.75;
+}
+
+.highlight-tile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  margin-left: -160px;
+  margin-top: -240px;
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.highlight-tile:hover img {
+  filter: brightness(1.15);
+}
+
+.highlight-tile img {
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 0 2px var(--yellow);
+  display: block;
+  /* border-radius/filter are also written inline per-frame from JS
+     (highlightTick -> updateTileCurvature) - as a tile rotates toward the
+     screen edge its outer corners round out more and it darkens slightly,
+     selling the illusion of a curved surface wrapping around a cylinder
+     rather than a flat card swinging on a hinge. */
+  transition: filter 0.15s ease;
+}
+
+.highlight-tile-label {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.highlight-empty {
+  color: var(--text-dim);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Full-size read-only popup shown for a clicked or auto-spotlighted tile.
+   Same visual language as .popped-card, minus the arrows and edit buttons
+   (see #popped-overlay/.popped-owned-controls), plus a "which other sets is
+   this card printed in" list. */
+.highlight-detail {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 7, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.highlight-detail.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Split layout: info reads on the left, the card owns the whole right side
+   of the window (big, not a thumbnail) - a deliberate switch from the
+   side-by-side-and-centered .popped-card layout used elsewhere. */
+.highlight-detail-card {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  width: 94vw;
+  height: 92vh;
+  max-width: none;
+  transform: scale(0.96);
+  transition: transform 0.2s ease;
+}
+
+.highlight-detail.open .highlight-detail-card {
+  transform: scale(1);
+}
+
+.highlight-detail-info {
+  flex: 0 0 38%;
+  max-width: 620px;
+  overflow-y: auto;
+  color: var(--text);
+  padding: 48px 40px 40px 8px;
+}
+
+.highlight-detail-img-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 20px 0;
+}
+
+.highlight-detail-img-wrap img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75), 0 0 0 2px var(--yellow);
+}
+
+/* Read-only Main/Reserve/Extras pills - same classes/colors as the
+   Collection window's popped-card (collection.css), duplicated here since
+   this window otherwise has no read-only owned display. */
+.popped-bucket-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bucket-pill {
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--border);
+}
+
+.bucket-pill.bucket-main { color: var(--yellow); border-color: var(--yellow); background: rgba(245, 228, 0, 0.08); }
+.bucket-pill.bucket-reserve { color: var(--cyan); border-color: var(--cyan); background: rgba(29, 225, 225, 0.08); }
+.bucket-pill.bucket-extras { color: #b866ff; border-color: #b866ff; background: rgba(184, 102, 255, 0.08); }
+
+.highlight-other-sets {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.highlight-other-sets h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.other-printing-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Trade page (docs/trade.html) listing - set from the popup's "Sell" row. */
+.sell-badge {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  background: var(--green);
+  color: #0a0a0f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.popped-owned-controls .sell-counter {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* Sell counter sharing the Xtra row on grid tiles. */
+.tile-sell {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  padding-left: 6px;
+  border-left: 1px solid var(--border);
+}
+
+.tile-sell .mini-label { width: auto; }
+.tile-sell.active .mini-label,
+.tile-sell.active .counter-value { color: var(--green); }
+
+.sale-toggles {
+  display: inline-flex;
+  gap: 14px;
+  margin-left: 14px;
+}
+
+.sale-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.sale-toggle input {
+  accent-color: var(--green);
+  margin: 0;
+  cursor: pointer;
+}
+
+.sale-toggle input:focus-visible { outline: 1px solid var(--green); outline-offset: 2px; }

@@ -1,5 +1,7 @@
 let allCards = [];
 let collection = {};
+// { printingId: qty } for sale on the website's trade page (docs/trade.html).
+let tradeList = {};
 let faqData = {};
 let state = {
   search: '',
@@ -8,7 +10,8 @@ let state = {
   types: new Set(),
   rarities: new Set(),
   set: 'welcometonightcitybeta',
-  sort: 'default'
+  sort: 'default',
+  onSaleOnly: false
 };
 
 const el = (id) => document.getElementById(id);
@@ -60,6 +63,175 @@ function faqHtml(slug) {
   return `<div class="popped-faq"><h4>Rules FAQ</h4>${items}</div>`;
 }
 
+// --- Cardmarket prices (matching/fetching lives in src/prices.js). Kept in
+// sync with the same helpers in collection.js.
+let priceView = null;
+
+function formatEur(v) {
+  if (v == null) return '—';
+  return `€${v >= 100 ? Math.round(v).toLocaleString('en') : v.toFixed(2)}`;
+}
+
+function headlinePrice(p) {
+  return p ? p.trend ?? p.low ?? p.trendFoil ?? p.lowFoil ?? null : null;
+}
+
+function priceMatchFor(printingId) {
+  return priceView?.matches?.[printingId] || null;
+}
+
+function priceProductFor(printingId) {
+  const m = priceMatchFor(printingId);
+  return m && m.idProduct != null ? priceView.products[m.idProduct] || null : null;
+}
+
+const PRICE_SOURCE_LABELS = {
+  auto: 'Auto-matched',
+  guess: 'Best guess — check the match below',
+  manual: 'Matched by you',
+  none: 'No Cardmarket listing found',
+  'none-manual': 'Set to "no match" by you'
+};
+
+function cardmarketUrl(name) {
+  return `https://www.cardmarket.com/en/Cyberpunk/Products/Search?searchString=${encodeURIComponent(name)}`;
+}
+
+// Cardmarket lists several same-named products per expansion (one per art
+// version) with nothing but an id to tell them apart - number them V1, V2...
+// in id order, which is also Cardmarket's own version order.
+function candidateLabel(idProduct, candidates) {
+  const p = priceView.products[idProduct];
+  const sameExp = candidates.filter((id) => priceView.products[id]?.exp === p.exp);
+  const version = sameExp.length > 1 ? ` · V${sameExp.indexOf(idProduct) + 1}` : '';
+  return `${p.expName}${version} · ${formatEur(headlinePrice(p))}`;
+}
+
+function priceTagHtml(c) {
+  const p = priceProductFor(c.id);
+  const price = headlinePrice(p);
+  if (price == null) return '';
+  const guess = priceMatchFor(c.id).source === 'guess';
+  const title = `Cardmarket trend${guess ? ' (best-guess match)' : ''}`;
+  return `<span class="price-tag${guess ? ' price-guess' : ''}" title="${title}">${formatEur(price)}${guess ? '?' : ''}</span>`;
+}
+
+// "Sell all shown" is checked when every owned printing in the current
+// filter is listed at its full owned count; toggling it lists all of them at
+// full count, or unlists all of them. Only touches trade-list.json (the
+// trade page), never the collection itself.
+function saleTogglesHtml(cards) {
+  const eligible = cards.filter((c) => getTotalCount(c.id) > 0);
+  const allListed = eligible.length > 0 && eligible.every((c) => (tradeList[c.id] || 0) === getTotalCount(c.id));
+  const listedCount = cards.filter((c) => tradeList[c.id]).length;
+  return `
+    <span class="sale-toggles">
+      <label class="sale-toggle" title="List every owned copy of the ${eligible.length} owned printing(s) shown for sale - or unlist them all">
+        <input type="checkbox" id="sell-all-toggle" ${allListed ? 'checked' : ''} ${eligible.length ? '' : 'disabled'} />
+        Sell all shown
+      </label>
+      <label class="sale-toggle" title="Only show printings listed on the trade page">
+        <input type="checkbox" id="on-sale-toggle" ${state.onSaleOnly ? 'checked' : ''} />
+        On sale only${listedCount ? ` (${listedCount})` : ''}
+      </label>
+    </span>`;
+}
+
+async function onSellAllToggle(cards) {
+  const eligible = cards.filter((c) => getTotalCount(c.id) > 0);
+  const allListed = eligible.every((c) => (tradeList[c.id] || 0) === getTotalCount(c.id));
+  const updates = Object.fromEntries(eligible.map((c) => [c.id, allListed ? 0 : getTotalCount(c.id)]));
+  tradeList = await window.api.setTradeQtys(updates);
+  render();
+}
+
+// Value of what you own among the printings currently shown in the grid
+// (i.e. after all filters): headline Cardmarket price x every copy you hold
+// of that printing across Main + Reserve + Extras.
+function resultTotalHtml(cards) {
+  if (!priceView) return '';
+  let total = 0;
+  let copies = 0;
+  let unpriced = 0;
+  for (const c of cards) {
+    const owned = getTotalCount(c.id);
+    if (!owned) continue;
+    const price = headlinePrice(priceProductFor(c.id));
+    if (price == null) {
+      unpriced += owned;
+      continue;
+    }
+    total += price * owned;
+    copies += owned;
+  }
+  if (!total) return '';
+  const title = `${copies} owned cop${copies === 1 ? 'y' : 'ies'} (Main + Reserve + Extras) at Cardmarket trend${unpriced ? ` - ${unpriced} without a price not counted` : ''}`;
+  return ` · <span class="result-total" title="${title}">${formatEur(total)} owned</span>${unpriced ? ` <span class="result-unpriced">(${unpriced} unpriced)</span>` : ''}`;
+}
+
+function priceSectionHtml(c) {
+  if (!priceView) {
+    return `<div class="popped-price"><h4>Cardmarket</h4><div class="price-note">Prices unavailable right now (offline?).</div></div>`;
+  }
+  const m = priceMatchFor(c.id) || { idProduct: null, source: 'none', candidates: [] };
+  const p = priceProductFor(c.id);
+  const rows = p
+    ? [
+        ['Trend', p.trend],
+        ['From', p.low],
+        ['7-day avg', p.avg7],
+        ['30-day avg', p.avg30],
+        ...(p.trendFoil != null || p.lowFoil != null ? [['Foil trend', p.trendFoil ?? p.lowFoil]] : [])
+      ]
+        .map(([label, v]) => `<div class="price-cell"><span>${label}</span><strong>${formatEur(v)}</strong></div>`)
+        .join('')
+    : '';
+  const selected = m.source === 'manual' ? String(m.idProduct) : m.source === 'none-manual' ? 'none' : 'auto';
+  const options = [
+    `<option value="auto">Automatic</option>`,
+    ...(m.candidates || []).map((id) => `<option value="${id}">${escapeHtml(candidateLabel(id, m.candidates))}</option>`),
+    `<option value="none">No match</option>`
+  ].join('');
+  const asOf = priceView.priceDate ? new Date(priceView.priceDate).toLocaleDateString() : '';
+  return `
+    <div class="popped-price">
+      <div class="price-head">
+        <h4>Cardmarket</h4>
+        <span class="price-source price-source-${m.source}">${PRICE_SOURCE_LABELS[m.source] || ''}</span>
+      </div>
+      ${rows ? `<div class="price-grid">${rows}</div>` : ''}
+      <div class="price-match-row">
+        <label>Match
+          <select data-price-override data-selected="${selected}">${options}</select>
+        </label>
+        <button class="price-link-btn" data-price-link="${escapeHtml(cardmarketUrl(p ? p.name : c.displayName.replace(': ', ' - ')))}">Cardmarket ↗</button>
+      </div>
+      ${asOf ? `<div class="price-note">Cardmarket price guide as of ${asOf}</div>` : ''}
+    </div>`;
+}
+
+function wirePriceSection(container, c, onChange) {
+  const sel = container.querySelector('[data-price-override]');
+  if (sel) {
+    sel.value = sel.dataset.selected;
+    sel.addEventListener('change', async () => {
+      const v = sel.value;
+      priceView = await window.api.setPriceOverride(c.id, v === 'auto' ? 'auto' : v === 'none' ? null : Number(v));
+      onChange();
+    });
+  }
+  const link = container.querySelector('[data-price-link]');
+  if (link) link.addEventListener('click', () => window.api.openExternalLink(link.dataset.priceLink));
+}
+
+async function loadPrices(force = false) {
+  try {
+    priceView = await (force ? window.api.refreshPrices() : window.api.getPrices());
+  } catch (err) {
+    console.error('Price load failed:', err);
+  }
+}
+
 async function init() {
   try {
     const cached = await window.api.getCards();
@@ -70,6 +242,7 @@ async function init() {
       await doRefresh();
     }
     collection = await window.api.getCollection();
+    tradeList = await window.api.getTradeList();
     try {
       faqData = await fetch('faq-data.json').then((r) => r.json());
     } catch {
@@ -79,6 +252,9 @@ async function init() {
     render();
     await refreshBackupList();
     el('loading-state').hidden = true;
+    // Prices are a nice-to-have - load after the grid is up (a stale cache
+    // triggers a Cardmarket download) and just re-render when they arrive.
+    loadPrices().then(render);
   } catch (err) {
     console.error('INIT ERROR:', err);
     el('loading-state').textContent = 'Error loading cards: ' + err.message;
@@ -99,6 +275,7 @@ async function doRefresh() {
     const cache = await window.api.refreshCards();
     allCards = cache.cards;
     setLastUpdated(cache.fetchedAt);
+    await loadPrices(true);
     buildFilterOptions();
     render();
   } catch (err) {
@@ -159,6 +336,7 @@ function getFilteredCards() {
     const owned = getTotalCount(c.id);
     if (state.ownership === 'owned' && owned === 0) return false;
     if (state.ownership === 'missing' && owned > 0) return false;
+    if (state.onSaleOnly && !tradeList[c.id]) return false;
     return true;
   });
 
@@ -172,6 +350,8 @@ function getFilteredCards() {
         return (b.power ?? -1) - (a.power ?? -1);
       case 'rarity':
         return RARITY_ORDER.indexOf(a.rarity) - RARITY_ORDER.indexOf(b.rarity);
+      case 'price':
+        return (headlinePrice(priceProductFor(b.id)) ?? -1) - (headlinePrice(priceProductFor(a.id)) ?? -1);
       default:
         return (
           COLOR_ORDER.indexOf(a.color) - COLOR_ORDER.indexOf(b.color) ||
@@ -199,7 +379,12 @@ function render() {
   const cards = getFilteredCards();
   poppedRowCards = cards;
   const grid = el('card-grid');
-  el('result-count').textContent = `${cards.length} printing${cards.length === 1 ? '' : 's'}`;
+  el('result-count').innerHTML = `${cards.length} printing${cards.length === 1 ? '' : 's'}${resultTotalHtml(cards)}${saleTogglesHtml(cards)}`;
+  el('sell-all-toggle')?.addEventListener('change', () => onSellAllToggle(cards));
+  el('on-sale-toggle').addEventListener('change', (e) => {
+    state.onSaleOnly = e.target.checked;
+    render();
+  });
   el('empty-state').hidden = cards.length !== 0;
 
   grid.innerHTML = cards.map(cardTileHtml).join('');
@@ -248,7 +433,13 @@ function poppedOwnedControlsHtml(c) {
             <button data-action="inc" data-bucket="${key}" data-card-id="${c.id}">+</button>
             ${showMax ? `<button class="mini-max-btn" data-action="setmax" data-bucket="${key}" data-cap="${cap}" data-card-id="${c.id}" title="Set ${label} to ${cap}">MAX</button>` : ''}
           </div>`
-  ).join('');
+  ).join('') + `
+          <div class="mini-counter sell-counter" title="Copies listed on the website's trade page (capped at total owned)">
+            <span class="mini-label">Sell</span>
+            <button data-action="sell-dec" data-card-id="${c.id}">-</button>
+            <span class="counter-value">${tradeList[c.id] || 0}</span>
+            <button data-action="sell-inc" data-card-id="${c.id}">+</button>
+          </div>`;
 }
 
 function stepPopped(delta) {
@@ -288,6 +479,9 @@ function openPopped(cardId) {
     btn.addEventListener('click', onCounterClick);
   });
 
+  el('popped-price').innerHTML = priceSectionHtml(c);
+  wirePriceSection(el('popped-price'), c, render);
+
   el('popped-rules').innerHTML = renderRulesText(c.rulesText);
   el('popped-faq').innerHTML = faqHtml(c.slug);
 
@@ -302,6 +496,323 @@ function closePopped() {
   setTimeout(() => {
     if (!overlay.classList.contains('open')) overlay.hidden = true;
   }, 200);
+}
+
+// Highlights view - clicking the header logo opens a big rotating "cylinder"
+// of the rarest cards in the currently-selected set, spinning slowly and
+// continuously. It's read-only (no Main/Reserve/Extras edit buttons - this
+// view is for browsing, not for changing your collection by accident).
+// Clicking a card (or the periodic auto-spotlight) pops it up full-size with
+// the same info as the main popup minus the arrows and edit buttons, plus a
+// read-only owned count and a list of the card's other printings/sets.
+const HIGHLIGHT_MIN_RARITY_INDEX = RARITY_ORDER.indexOf('Epic');
+const HIGHLIGHT_SPEED_DEG_PER_SEC = 1; // slow continuous spin
+const HIGHLIGHT_SPOTLIGHT_INTERVAL_MS = 15000;
+const HIGHLIGHT_SPOTLIGHT_DURATION_MS = 6000;
+
+let highlightCards = [];
+let highlightAngle = 0;
+let highlightStep = 0;
+let highlightPaused = false;
+let highlightRAF = null;
+let highlightLastTs = null;
+let highlightSpotlightTimer = null;
+let highlightDetailToken = 0;
+// {img, baseAngle} per tile, used every frame to curve each tile's corners
+// more and darken it slightly as it swings toward the screen edge (see
+// updateHighlightCurvature) - kept separate from highlightCards so this
+// doesn't need to re-walk the DOM by id on every animation frame.
+let highlightTileMeta = [];
+
+// "Whatever set I have chosen" - same pool the main grid's stats use.
+function getHighlightPool() {
+  return state.set === 'all' ? allCards : allCards.filter((c) => c.set?.code === state.set);
+}
+
+function getHighlightCards() {
+  return getHighlightPool()
+    .filter((c) => RARITY_ORDER.indexOf(c.rarity) >= HIGHLIGHT_MIN_RARITY_INDEX)
+    .sort((a, b) => RARITY_ORDER.indexOf(b.rarity) - RARITY_ORDER.indexOf(a.rarity) || a.name.localeCompare(b.name));
+}
+
+function applyHighlightRotation() {
+  el('highlight-cylinder').style.transform = `rotateY(${highlightAngle}deg)`;
+  // Opposite direction (and, per buildHighlightBackgroundRing, different
+  // cards) so this reads as its own distant ring of cards rather than a
+  // shadow/echo of the foreground ring rotating in lockstep with it.
+  el('highlight-cylinder-bg').style.transform = `rotateY(${-highlightAngle}deg)`;
+}
+
+// A tile facing the camera head-on (0deg) stays square with corners as
+// drawn; one that has swung toward +/-90deg (the screen edge, since each
+// tile is itself rotated to match its position on the ring) balloons toward
+// a full pill shape, narrows, and dims - reads as a card wrapping around a
+// curved cylindrical surface instead of a flat plane swinging on a hinge.
+// sqrt() eases the curve in fast (most of the effect happens in the first
+// ~30deg) rather than linearly, since a linear ramp barely reads as curved
+// until a tile is almost edge-on.
+function updateHighlightCurvature() {
+  for (const { img, baseAngle } of highlightTileMeta) {
+    const raw = ((baseAngle + highlightAngle) % 360 + 540) % 360 - 180;
+    const factor = Math.min(Math.abs(raw) / 90, 1);
+    const eased = Math.sqrt(factor);
+    // A near-front card (eased ~0) is left with NO inline filter/transform
+    // at all, rather than a no-op brightness(1)/scaleX(1). Chromium promotes
+    // any filtered or extra-transformed element to its own rasterized
+    // layer, and that layer gets resampled (blurrily) when perspective
+    // enlarges the front card - skipping both for untouched cards is what
+    // keeps them crisp.
+    if (eased < 0.03) {
+      img.style.borderRadius = '10px';
+      img.style.transform = '';
+      img.style.filter = '';
+      continue;
+    }
+    const radius = Math.round(12 + eased * 150);
+    const squeeze = (1 - eased * 0.32).toFixed(3);
+    img.style.borderRadius = `${radius}px`;
+    img.style.transform = `scaleX(${squeeze})`;
+    img.style.filter = `brightness(${(1 - eased * 0.55).toFixed(2)})`;
+  }
+}
+
+function highlightTick(ts) {
+  if (highlightLastTs != null && !highlightPaused) {
+    const dt = (ts - highlightLastTs) / 1000;
+    highlightAngle -= HIGHLIGHT_SPEED_DEG_PER_SEC * dt;
+    applyHighlightRotation();
+    updateHighlightCurvature();
+  }
+  highlightLastTs = ts;
+  highlightRAF = requestAnimationFrame(highlightTick);
+}
+
+// Mouse-wheel ("middle button scroll") rotation - deliberately low
+// sensitivity so a normal scroll only nudges the ring a little; the
+// continuous auto-spin keeps going underneath it regardless.
+function onHighlightWheel(e) {
+  if (!highlightStep) return;
+  e.preventDefault();
+  highlightAngle -= e.deltaY * 0.03;
+  applyHighlightRotation();
+  updateHighlightCurvature();
+}
+
+function buildHighlightCylinder() {
+  highlightCards = getHighlightCards();
+  const cylinder = el('highlight-cylinder');
+  const n = highlightCards.length;
+
+  if (!n) {
+    highlightStep = 0;
+    highlightTileMeta = [];
+    cylinder.style.transform = 'none';
+    cylinder.innerHTML = '<div class="highlight-empty">No rare cards found in this set - try refreshing card data or picking a different Set filter.</div>';
+    el('highlight-cylinder-bg').innerHTML = '';
+    return;
+  }
+
+  highlightStep = 360 / n;
+  // Radius that keeps a full ring of ~320px-wide tiles from overlapping,
+  // with a little extra breathing room (180 vs. the 160 half-width) so
+  // neighboring tiles don't touch edge-to-edge - that gap is what makes the
+  // per-tile rotation (and the curvature it implies) actually visible
+  // instead of one tile's flat face hiding the next tile's turn.
+  const radius = Math.max(680, Math.round(180 / Math.tan(Math.PI / n)));
+  // The stage's `perspective` sets how strongly translateZ scales a tile's
+  // apparent size - it has to scale WITH the radius (not stay fixed), or the
+  // front tile (translated forward by the full radius) ends up zoomed huge
+  // (perspective too close to radius) or behind the camera (perspective
+  // smaller than radius). A 3D-transformed element gets rasterized then
+  // scaled by the compositor rather than re-rendered at its final size, so
+  // enlarging it much at all reads as soft/blurry text - 14x keeps the
+  // front tile's zoom mild (~7%) instead of the ~25% a smaller multiplier
+  // like 5x gives, which is what was making front-facing cards blurry.
+  el('highlight-stage').style.perspective = `${radius * 14}px`;
+
+  cylinder.innerHTML = highlightCards
+    .map(
+      (c, i) => `
+    <div class="highlight-tile" data-card-id="${c.id}" style="transform: rotateY(${i * highlightStep}deg) translateZ(${radius}px)">
+      <img src="${c.imageUrl}" alt="${c.displayName}" loading="lazy" />
+      <div class="highlight-tile-label">${c.name}</div>
+    </div>`
+    )
+    .join('');
+
+  highlightTileMeta = [];
+  cylinder.querySelectorAll('.highlight-tile').forEach((tile, i) => {
+    tile.addEventListener('click', () => openHighlightDetail(tile.dataset.cardId));
+    highlightTileMeta.push({ img: tile.querySelector('img'), baseAngle: i * highlightStep });
+  });
+
+  buildHighlightBackgroundRing(radius);
+
+  highlightAngle = 0;
+  applyHighlightRotation();
+  updateHighlightCurvature();
+}
+
+// A different set of cards than the foreground ring - otherwise, spinning
+// in sync at the same angles, it reads as the front ring's own shadow
+// rather than a second ring of cards. Pulls whatever's left of the current
+// Set's pool after the foreground ring's picks (falling back to the whole
+// pool if that runs short) in a different order, and cycles through them if
+// there are fewer than n.
+function getHighlightBackgroundCards(n) {
+  const usedIds = new Set(highlightCards.map((c) => c.id));
+  const rest = getHighlightPool().filter((c) => !usedIds.has(c.id));
+  const source = (rest.length ? rest : getHighlightPool()).slice().sort((a, b) => (a.id < b.id ? -1 : 1));
+  if (!source.length) return [];
+  return Array.from({ length: n }, (_, i) => source[i % source.length]);
+}
+
+// A second, wider ring of different cards (see .highlight-bg-wrap in
+// style.css) - pushed back a static distance and offset half a step so it
+// peeks out from the gaps/edges of the foreground ring, blurred and dimmed,
+// and spun every frame in the OPPOSITE direction from the foreground ring
+// via applyHighlightRotation, so it reads as its own distant ring of cards
+// turning rather than an echo/shadow of the front one. Purely decorative -
+// no click handling, no label.
+function buildHighlightBackgroundRing(fgRadius) {
+  const bgRadius = Math.round(fgRadius * 1.2);
+  // Pushed back much further than it's widened, so its net depth (bgRadius
+  // - bgPushBack) lands well behind the z=0 plane the foreground ring's
+  // front card sits in front of - that's what makes perspective actually
+  // shrink it (to roughly 3/4 scale) instead of it reading as just another,
+  // barely-smaller ring at the same distance. Scaled up from a flat *3 now
+  // that the stage's perspective itself is much larger (see the *14 in
+  // buildHighlightCylinder) - otherwise the bigger perspective value alone
+  // would flatten out the bg ring's apparent distance.
+  const bgPushBack = Math.round(fgRadius * 6);
+  el('highlight-bg-wrap').style.transform = `translateZ(-${bgPushBack}px)`;
+  const bgCards = getHighlightBackgroundCards(highlightCards.length);
+  el('highlight-cylinder-bg').innerHTML = bgCards
+    .map(
+      (c, i) => `
+    <div class="highlight-tile-bg" style="transform: rotateY(${(i + 0.5) * highlightStep}deg) translateZ(${bgRadius}px)">
+      <img src="${c.imageUrl}" alt="" loading="lazy" />
+    </div>`
+    )
+    .join('');
+}
+
+function frontHighlightCardId() {
+  if (!highlightCards.length || !highlightStep) return null;
+  const n = highlightCards.length;
+  const idx = Math.round((((-highlightAngle % 360) + 360) % 360) / highlightStep) % n;
+  return highlightCards[idx].id;
+}
+
+function scheduleHighlightSpotlight() {
+  clearTimeout(highlightSpotlightTimer);
+  highlightSpotlightTimer = setTimeout(() => {
+    if (!highlightPaused) {
+      const cardId = frontHighlightCardId();
+      if (cardId) openHighlightDetail(cardId, { auto: true });
+    }
+    scheduleHighlightSpotlight();
+  }, HIGHLIGHT_SPOTLIGHT_INTERVAL_MS);
+}
+
+function otherPrintingsHtml(c) {
+  const others = allCards
+    .filter((x) => x.cardId === c.cardId && x.id !== c.id)
+    .sort((a, b) => (a.set?.name || '').localeCompare(b.set?.name || ''));
+  if (!others.length) return '';
+  const rows = others
+    .map((o) => `<div class="other-printing-row"><span>${o.set?.name || o.set?.code || 'Unknown set'}</span><span class="${rarityClass(o.rarity)}">${o.rarity || ''}</span></div>`)
+    .join('');
+  return `<div class="highlight-other-sets"><h4>Also Printed In</h4>${rows}</div>`;
+}
+
+function openHighlightDetail(cardId, opts = {}) {
+  const c = highlightCards.find((x) => x.id === cardId) || allCards.find((x) => x.id === cardId);
+  if (!c) return;
+
+  highlightPaused = true;
+  highlightDetailToken++;
+  const myToken = highlightDetailToken;
+
+  el('hd-img').src = c.imageUrl;
+  el('hd-img').alt = c.displayName;
+  el('hd-name').textContent = c.name;
+  el('hd-subname').textContent = c.subname || '';
+  el('hd-subname').hidden = !c.subname;
+
+  const meta = [
+    c.cost != null ? `Cost ${c.cost}` : '',
+    c.power != null ? `Power ${c.power}` : '',
+    c.ram != null ? `RAM ${c.ram}` : '',
+    c.cardType,
+    c.set?.name
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  el('hd-meta').textContent = meta;
+
+  const rarityEl = el('hd-rarity');
+  rarityEl.textContent = c.rarity || '';
+  rarityEl.className = `popped-rarity ${rarityClass(c.rarity)}`;
+
+  el('hd-buckets').innerHTML = `
+    <span class="bucket-pill bucket-main">Main ${getBucketCount(c.id, 'main')}</span>
+    <span class="bucket-pill bucket-reserve">Reserve ${getBucketCount(c.id, 'reserve')}</span>
+    <span class="bucket-pill bucket-extras">Extras ${getBucketCount(c.id, 'extras')}</span>
+  `;
+
+  el('hd-rules').innerHTML = renderRulesText(c.rulesText);
+  el('hd-faq').innerHTML = faqHtml(c.slug);
+  el('hd-other-sets').innerHTML = otherPrintingsHtml(c);
+
+  const overlay = el('highlight-detail');
+  overlay.hidden = false;
+  requestAnimationFrame(() => overlay.classList.add('open'));
+
+  if (opts.auto) {
+    setTimeout(() => {
+      if (myToken === highlightDetailToken) closeHighlightDetail();
+    }, HIGHLIGHT_SPOTLIGHT_DURATION_MS);
+  }
+}
+
+function closeHighlightDetail() {
+  const overlay = el('highlight-detail');
+  overlay.classList.remove('open');
+  setTimeout(() => {
+    if (!overlay.classList.contains('open')) overlay.hidden = true;
+  }, 200);
+  highlightPaused = false;
+}
+
+function openHighlights() {
+  buildHighlightCylinder();
+  const overlay = el('highlight-overlay');
+  overlay.hidden = false;
+  requestAnimationFrame(() => overlay.classList.add('open'));
+  // The page's own scrollbar (for the main grid underneath) doesn't do
+  // anything useful while this full-screen overlay is up - hide it so it's
+  // not just sitting there inert on top of the cylinder view.
+  document.body.classList.add('highlights-open');
+  highlightLastTs = null;
+  highlightPaused = false;
+  cancelAnimationFrame(highlightRAF);
+  highlightRAF = requestAnimationFrame(highlightTick);
+  scheduleHighlightSpotlight();
+}
+
+function closeHighlights() {
+  cancelAnimationFrame(highlightRAF);
+  clearTimeout(highlightSpotlightTimer);
+  document.body.classList.remove('highlights-open');
+  const detail = el('highlight-detail');
+  detail.classList.remove('open');
+  detail.hidden = true;
+  const overlay = el('highlight-overlay');
+  overlay.classList.remove('open');
+  setTimeout(() => {
+    if (!overlay.classList.contains('open')) overlay.hidden = true;
+  }, 250);
 }
 
 // Deck legality: a unique Legend only needs 1 copy in your Main set; every
@@ -339,6 +850,17 @@ function ownershipVisual(cardId) {
   return { cls: 'own-multi', style: `--band-gradient: linear-gradient(to bottom, ${stops});` };
 }
 
+function sellCounterHtml(cardId) {
+  const qty = tradeList[cardId] || 0;
+  return `
+            <span class="tile-sell ${qty ? 'active' : ''}" title="Copies listed on the website's trade page (capped at total owned)">
+              <span class="mini-label">Sell</span>
+              <button data-action="sell-dec" data-card-id="${cardId}">-</button>
+              <span class="counter-value">${qty}</span>
+              <button data-action="sell-inc" data-card-id="${cardId}">+</button>
+            </span>`;
+}
+
 function cardTileHtml(c) {
   const visual = ownershipVisual(c.id);
   const total = getTotalCount(c.id);
@@ -349,6 +871,7 @@ function cardTileHtml(c) {
     c.ram != null ? `<span>RAM ${c.ram}</span>` : ''
   ].join('');
 
+  // Extras has no MAX button, so the trade page's Sell counter shares its row.
   const bucketRows = BUCKETS.map(
     ({ key, label, showMax }) => `
           <div class="mini-counter">
@@ -357,6 +880,7 @@ function cardTileHtml(c) {
             <span class="counter-value">${getBucketCount(c.id, key)}</span>
             <button data-action="inc" data-bucket="${key}" data-card-id="${c.id}">+</button>
             ${showMax ? `<button class="mini-max-btn" data-action="setmax" data-bucket="${key}" data-cap="${cap}" data-card-id="${c.id}" title="Set ${label} to ${cap}">MAX</button>` : ''}
+            ${key === 'extras' ? sellCounterHtml(c.id) : ''}
           </div>`
   ).join('');
 
@@ -366,13 +890,17 @@ function cardTileHtml(c) {
         <div class="card-shimmer"></div>
         <img src="${c.imageUrl}" alt="${c.displayName}" loading="lazy" decoding="async" />
         ${total > 0 ? `<div class="owned-badge">${total}</div>` : ''}
+        ${tradeList[c.id] ? `<div class="sell-badge" title="For sale on the trade page">SELL ${tradeList[c.id]}</div>` : ''}
       </div>
       <div class="color-bar ${c.color || ''}"></div>
       <div class="card-info">
         <div class="card-name">${c.name}</div>
         ${c.subname ? `<div class="card-subname">${c.subname}</div>` : ''}
         <div class="card-meta">${statLine}<span>${c.cardType}</span></div>
-        <div class="card-rarity ${rarityClass(c.rarity)}">${c.rarity}</div>
+        <div class="card-rarity-row">
+          <div class="card-rarity ${rarityClass(c.rarity)}">${c.rarity}</div>
+          ${priceTagHtml(c)}
+        </div>
         <div class="owned-controls">${bucketRows}
         </div>
       </div>
@@ -384,6 +912,15 @@ async function onCounterClick(e) {
   const cardId = e.currentTarget.dataset.cardId;
   const action = e.currentTarget.dataset.action;
   const bucket = e.currentTarget.dataset.bucket;
+
+  if (action === 'sell-inc' || action === 'sell-dec') {
+    const current = tradeList[cardId] || 0;
+    const next = action === 'sell-inc' ? Math.min(getTotalCount(cardId), current + 1) : Math.max(0, current - 1);
+    if (next === current) return;
+    tradeList = await window.api.setTradeQty(cardId, next);
+    render();
+    return;
+  }
 
   let next;
   if (action === 'setmax') {
@@ -599,6 +1136,8 @@ function attachControls() {
   el('win-close').addEventListener('click', () => window.api.windowClose());
   el('refresh-btn').addEventListener('click', doRefresh);
   el('collection-view-btn').addEventListener('click', () => window.api.openCollectionView());
+  el('deck-builder-btn').addEventListener('click', () => window.api.openDeckBuilder());
+  el('trading-btn').addEventListener('click', () => window.api.openTrading());
   el('save-backup-btn').addEventListener('click', onSaveBackup);
   el('publish-site-btn').addEventListener('click', onPublishSite);
   el('search-input').addEventListener('input', (e) => {
@@ -629,11 +1168,30 @@ function attachControls() {
     stepPopped(1);
   });
   document.addEventListener('keydown', (e) => {
-    if (!el('popped-overlay').classList.contains('open')) return;
-    if (e.key === 'Escape') closePopped();
-    if (e.key === 'ArrowLeft') stepPopped(-1);
-    if (e.key === 'ArrowRight') stepPopped(1);
+    if (el('popped-overlay').classList.contains('open')) {
+      if (e.key === 'Escape') closePopped();
+      if (e.key === 'ArrowLeft') stepPopped(-1);
+      if (e.key === 'ArrowRight') stepPopped(1);
+      return;
+    }
+    if (e.key !== 'Escape') return;
+    if (el('highlight-detail').classList.contains('open')) closeHighlightDetail();
+    else if (el('highlight-overlay').classList.contains('open')) closeHighlights();
   });
+
+  el('app-logo').addEventListener('click', () => {
+    if (el('highlight-overlay').hidden) openHighlights();
+    else closeHighlights();
+  });
+  el('highlight-close').addEventListener('click', closeHighlights);
+  el('highlight-overlay').addEventListener('click', (e) => {
+    if (e.target === el('highlight-overlay')) closeHighlights();
+  });
+  el('highlight-stage').addEventListener('wheel', onHighlightWheel, { passive: false });
+  el('highlight-detail').addEventListener('click', (e) => {
+    if (e.target === el('highlight-detail')) closeHighlightDetail();
+  });
+  el('highlight-detail-close').addEventListener('click', closeHighlightDetail);
 }
 
 attachControls();

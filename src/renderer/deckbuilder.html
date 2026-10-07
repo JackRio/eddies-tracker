@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Deck Builder — Eddies</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="deckbuilder.css" />
+</head>
+<body class="deckbuilder-body">
+  <div class="window-titlebar">
+    <div class="window-controls">
+      <button id="win-minimize" class="win-btn" title="Minimize">
+        <svg viewBox="0 0 12 12"><rect x="1" y="5.4" width="10" height="1.2" fill="currentColor"/></svg>
+      </button>
+      <button id="win-maximize" class="win-btn" title="Maximize / Restore">
+        <svg viewBox="0 0 12 12"><rect x="1.5" y="1.5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      </button>
+      <button id="win-close" class="win-btn win-btn-close" title="Close">
+        <svg viewBox="0 0 12 12"><path d="M1.5 1.5 L10.5 10.5 M10.5 1.5 L1.5 10.5" stroke="currentColor" stroke-width="1.4"/></svg>
+      </button>
+    </div>
+  </div>
+  <header class="deckbuilder-header">
+    <div class="title-block">
+      <img class="app-logo" src="../../build/eddies-glyph-yellow.png" alt="" />
+      <h1>DECK <span class="accent">BUILDER</span></h1>
+    </div>
+    <div class="db-header-actions" id="db-list-actions">
+      <span id="deck-publish-status" class="deck-publish-status"></span>
+      <button id="prep-list-btn" class="btn" disabled>Prep List</button>
+      <button id="publish-decks-btn" class="btn" disabled>Publish Selected</button>
+      <button id="import-deck-btn" class="btn">Import</button>
+      <button id="new-deck-btn" class="btn btn-primary">New Deck</button>
+    </div>
+    <div class="db-header-actions" id="db-builder-actions" hidden>
+      <button id="back-to-list-btn" class="btn">Back to My Decks</button>
+      <button id="builder-export-btn" class="btn">Export</button>
+      <button id="save-deck-btn" class="btn btn-primary">Save Deck</button>
+    </div>
+    <div class="db-header-actions" id="db-view-actions" hidden>
+      <button id="view-back-to-list-btn" class="btn">Back to My Decks</button>
+      <button id="view-edit-deck-btn" class="btn">Edit Deck</button>
+      <button id="view-export-btn" class="btn">Export</button>
+      <button id="view-test-hand-btn" class="btn btn-primary">Test Hand</button>
+    </div>
+    <div class="db-header-actions" id="db-prep-actions" hidden>
+      <button id="prep-back-to-list-btn" class="btn">Back to My Decks</button>
+    </div>
+    <button id="close-btn" class="btn">Close</button>
+  </header>
+
+  <div id="view-list" class="view-list">
+    <div id="deck-grid" class="deck-grid"></div>
+    <div id="deck-list-empty" class="empty-state" hidden>No decks saved yet. Click "New Deck" to build one from your Main set.</div>
+  </div>
+
+  <div id="view-prep" class="view-prep" hidden>
+    <div class="view-deck-toolbar">
+      <h2>Prep List</h2>
+      <p class="prep-subtitle">The most any single selected deck needs of each card - since you only ever build one of these at a time, this is everything to have sorted out.</p>
+    </div>
+    <div class="db-view-cardgrid">
+      <div class="view-deck-section">
+        <h3>Legends <span id="prep-legends-count" class="deck-count-badge"></span></h3>
+        <div id="prep-legends" class="view-deck-tile-grid"></div>
+      </div>
+      <div id="prep-card-sections"></div>
+    </div>
+  </div>
+
+  <div id="view-builder" class="view-builder" hidden>
+    <div class="builder-toolbar">
+      <input type="text" id="deck-name-input" placeholder="Untitled Deck" class="deck-name-input" />
+      <div id="deck-message" class="deck-message" hidden></div>
+    </div>
+
+    <div class="legend-and-description-row">
+      <div class="legend-row" id="legend-row"></div>
+      <textarea id="deck-description-input" class="deck-description-input" placeholder="Deck description - HTML tags are supported and rendered as-is in Deck View."></textarea>
+    </div>
+    <div class="ceiling-strip" id="ceiling-strip"></div>
+
+    <div class="builder-body">
+      <aside class="db-filters">
+        <div class="filter-group">
+          <input type="text" id="db-search-input" placeholder="Search cards..." />
+        </div>
+        <div class="filter-group">
+          <h3>Ownership</h3>
+          <select id="db-ownership-filter">
+            <option value="owned">Owned Only</option>
+            <option value="all">Show All</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-checkbox-row" title="Hides any card whose color/RAM doesn't fit your currently selected Legends - updates live as you change Legends.">
+            <input type="checkbox" id="db-legal-only-filter" checked />
+            Legal for current Legends
+          </label>
+        </div>
+        <div class="filter-group">
+          <h3>Color</h3>
+          <div id="db-color-filters" class="chip-list"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Type</h3>
+          <div id="db-type-filters" class="chip-list"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Rarity</h3>
+          <div id="db-rarity-filters" class="chip-list"></div>
+        </div>
+        <div class="filter-group">
+          <h3>Set</h3>
+          <select id="db-set-filter">
+            <option value="all">All Sets</option>
+          </select>
+        </div>
+      </aside>
+
+      <main class="db-card-pool">
+        <div id="db-result-count" class="result-count"></div>
+        <div id="db-card-grid" class="db-card-grid"></div>
+      </main>
+
+      <aside class="db-side-panel">
+        <div class="db-panel-block">
+          <h3>Deck List <span id="deck-count-badge" class="deck-count-badge"></span></h3>
+          <div id="deck-cards-list" class="deck-cards-list"></div>
+        </div>
+
+        <div class="db-panel-block">
+          <h3>Reference Links</h3>
+          <div id="deck-links-list" class="deck-links-list"></div>
+          <div class="deck-link-add">
+            <input type="text" id="link-label-input" placeholder="Label (e.g. YouTube guide)" />
+            <input type="text" id="link-url-input" placeholder="https://..." />
+            <button id="add-link-btn" class="btn btn-block">Add Link</button>
+          </div>
+        </div>
+
+        <div class="db-panel-block">
+          <h3>Stats</h3>
+          <div id="deck-stats" class="deck-stats"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="view-deck" class="view-deck" hidden>
+    <div class="view-deck-toolbar">
+      <h2 id="view-deck-title">Untitled Deck</h2>
+      <div id="view-deck-links" class="view-deck-toolbar-links"></div>
+    </div>
+    <div class="view-deck-body">
+      <main class="db-view-cardgrid">
+        <div class="view-deck-section">
+          <h3>Legends <span id="view-deck-legends-count" class="deck-count-badge"></span></h3>
+          <div class="view-deck-legends-row">
+            <div id="view-deck-legends" class="view-deck-tile-grid"></div>
+            <div id="view-deck-description" class="view-deck-description"></div>
+          </div>
+        </div>
+        <div id="view-deck-card-sections"></div>
+      </main>
+
+      <aside class="db-view-stats-col">
+        <div id="view-deck-status" class="view-deck-status">
+          <div>
+            <div class="view-deck-status-title">Deck Status</div>
+            <div id="view-deck-status-sub" class="view-deck-status-sub"></div>
+          </div>
+          <div id="view-deck-status-badge" class="view-deck-status-badge"></div>
+        </div>
+
+        <div class="db-panel-block cost-curve-block">
+          <h3>Eddie Cost Curve</h3>
+          <div id="view-deck-cost-curve"></div>
+        </div>
+
+        <div id="view-deck-donuts" class="view-deck-donut-col"></div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="card-detail-overlay" class="popped-overlay" hidden>
+    <button id="card-detail-prev" class="popped-nav popped-nav-left" title="Previous (Left arrow)">&#10094;</button>
+    <div class="popped-card" id="card-detail-card">
+      <img id="card-detail-img" src="" alt="" />
+      <div class="popped-info">
+        <div class="popped-name" id="card-detail-name"></div>
+        <div class="popped-subname" id="card-detail-subname"></div>
+        <div class="popped-meta" id="card-detail-meta"></div>
+        <div class="popped-rarity" id="card-detail-rarity"></div>
+        <div class="popped-rules" id="card-detail-rules"></div>
+        <div id="card-detail-faq"></div>
+      </div>
+    </div>
+    <button id="card-detail-next" class="popped-nav popped-nav-right" title="Next (Right arrow)">&#10095;</button>
+  </div>
+
+  <div id="test-hand-overlay" class="test-hand-overlay" hidden>
+    <div class="test-hand-modal">
+      <div class="test-hand-header">
+        <div>
+          <h2>Test Hand</h2>
+          <p class="test-hand-subtitle">Draw 6. If you mulligan, shuffle your full hand back and draw 6 new cards. You may mulligan once.</p>
+        </div>
+        <button id="test-hand-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div class="test-hand-toolbar">
+        <span class="test-hand-label">Test Hand</span>
+        <span id="test-hand-count-hand" class="test-hand-pill"></span>
+        <span id="test-hand-count-deck" class="test-hand-pill"></span>
+      </div>
+      <div id="test-hand-grid" class="test-hand-grid"></div>
+      <div class="test-hand-actions">
+        <button id="test-hand-mulligan-btn" class="btn">&#8646; Mulligan - redraw 6</button>
+        <button id="test-hand-draw-btn" class="btn">+ Draw</button>
+        <button id="test-hand-reset-btn" class="btn">&#8635; Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="export-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card export-card">
+      <div class="legend-picker-header">
+        <h3>Export Deck</h3>
+        <button id="export-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <p class="export-subtitle">Text List format, matching the official cyberpunktcg.com deck exporter - paste it into anything that reads that format.</p>
+      <textarea id="export-textarea" class="export-textarea" readonly></textarea>
+      <div class="export-actions">
+        <button id="export-copy-btn" class="btn">Copy</button>
+        <button id="export-download-btn" class="btn btn-primary">Download .txt</button>
+      </div>
+      <div id="export-message" class="export-message" hidden></div>
+    </div>
+  </div>
+
+  <div id="import-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card export-card">
+      <div class="legend-picker-header">
+        <h3>Import Deck</h3>
+        <button id="import-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <p class="export-subtitle">Paste a Text List deck (same format Export produces / cyberpunktcg.com uses): "# Name", then lines like "3 Card Name" or "1 Name: Subtitle". Copies beyond what you own in Main are left out.</p>
+      <textarea id="import-textarea" class="export-textarea" placeholder="# My Deck&#10;&#10;// Legends (3)&#10;1 V: Streetkid&#10;..."></textarea>
+      <div class="export-actions">
+        <button id="import-run-btn" class="btn btn-primary">Import as New Deck</button>
+      </div>
+      <div id="import-message" class="export-message" hidden></div>
+    </div>
+  </div>
+
+  <div id="printing-split-overlay"class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card">
+      <div class="legend-picker-header">
+        <h3 id="printing-split-title">Choose printings</h3>
+        <button id="printing-split-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div id="printing-split-total" class="printing-split-total"></div>
+      <div id="printing-split-rows" class="printing-split-rows"></div>
+    </div>
+  </div>
+
+  <div id="legend-picker-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card">
+      <div class="legend-picker-header">
+        <h3>Choose a Legend</h3>
+        <button id="legend-picker-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div id="legend-picker-filters" class="legend-picker-filters">
+        <input type="text" id="legend-picker-search" placeholder="Search legends..." />
+        <select id="legend-picker-ownership">
+          <option value="owned">Owned Only</option>
+          <option value="all">Show All</option>
+        </select>
+      </div>
+      <div id="legend-picker-variant-header" class="legend-picker-variant-header" hidden>
+        <button id="legend-picker-back" class="btn">&#8592; Back to Legends</button>
+        <span id="legend-picker-variant-title"></span>
+      </div>
+      <div id="legend-picker-grid" class="legend-picker-grid"></div>
+    </div>
+  </div>
+
+  <script src="deckbuilder.js"></script>
+</body>
+</html>
