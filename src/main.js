@@ -440,6 +440,7 @@ ipcMain.handle('decks:save', async (_event, deck) => {
     createdAt: existing?.createdAt || deck.createdAt || now,
     updatedAt: now
   };
+  enforceSingleFeatured(decks, id);
   await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
   return decks;
 });
@@ -463,6 +464,14 @@ ipcMain.handle('decks:delete', async (_event, deckId) => {
 // updatedAt or the rest of the deck.
 
 const TAG_CATEGORIES = ['archetype', 'creator', 'misc'];
+// Only one deck can be Featured: giving it to a deck takes it from the rest.
+function enforceSingleFeatured(decks, keepId) {
+  if (!decks[keepId]?.tags?.misc?.includes('misc-featured')) return;
+  for (const [id, d] of Object.entries(decks)) {
+    if (id !== keepId && d.tags?.misc?.includes('misc-featured')) d.tags.misc = d.tags.misc.filter((t) => t !== 'misc-featured');
+  }
+}
+
 const tagDbPath = () => path.join(app.getPath('userData'), 'tag-db.json');
 const groupsPath = () => path.join(app.getPath('userData'), 'deck-groups.json');
 
@@ -554,6 +563,7 @@ ipcMain.handle('decks:setMeta', async (_event, deckId, patch) => {
     if (patch.groupId) deck.groupId = patch.groupId;
     else delete deck.groupId;
   }
+  enforceSingleFeatured(decks, deckId);
   await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
   return decks;
 });
