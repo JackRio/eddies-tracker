@@ -195,7 +195,8 @@ function renderList() {
   const sort = document.getElementById('sort').value;
   let list = publishedDecks.map((d) => ({ d, s: extraStats(d) })).filter(({ d, s }) => matches(d, s, q));
 
-  const byUpdated = (a, b) => (b.d.updatedAt || 0) - (a.d.updatedAt || 0);
+  const ts = (d) => Date.parse(d.updatedAt) || 0;
+  const byUpdated = (a, b) => ts(b.d) - ts(a.d);
   if (sort === 'recent') list.sort(byUpdated);
   else if (sort === 'name') list.sort((a, b) => a.d.name.localeCompare(b.d.name));
   else if (sort === 'cost') list.sort((a, b) => a.s.avg - b.s.avg);
