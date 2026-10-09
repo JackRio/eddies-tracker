@@ -1,19 +1,219 @@
 {
-  "5ade304e-8e0e-4484-944a-18d8d08caf9f": {
-    "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
-    "cardId": "5a441989-2997-40a2-a72e-08ca1442a7f3",
-    "name": "Kerry Eurodyne",
-    "subname": "Axe, Attitude, Audience",
-    "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
-    "slug": "kerry-eurodyne-axe-attitude-audience",
+  "f4ff466c-22ad-4c50-9f4c-29933e51f739": {
+    "id": "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+    "cardId": "91df478a-91d5-4d42-a624-4c20ec61121c",
+    "name": "Dexter DeShawn",
+    "subname": "Off the Grid",
+    "displayName": "Dexter DeShawn: Off the Grid",
+    "slug": "dexter-deshawn-off-the-grid",
     "cardType": "Legend",
-    "color": "Yellow",
-    "rarity": "Iconic Legend",
+    "color": "Red",
+    "rarity": "Rare",
     "ram": 2,
     "cost": null,
     "power": null,
     "isEddiable": true,
-    "rulesText": "When you roll in a Gig from your fixer area, you may ignore the result and reroll it once.\nWhen you roll a min or max value on a Gig, draw 1. If it's a d20, draw 3 instead.",
+    "rulesText": "{Call} Choose one effect.\nGive a friendly Unit +2 power this turn. // Draw 1.\n{Spend}: Increase a Gig by up to 2.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "1b182145-b318-4b10-85e2-fdbf5afdf3c0": {
+    "id": "1b182145-b318-4b10-85e2-fdbf5afdf3c0",
+    "cardId": "3c4e7fcb-933d-4712-9ce7-6052a14f8e94",
+    "name": "Swordwise Huscle",
+    "subname": null,
+    "displayName": "Swordwise Huscle",
+    "slug": "swordwise-huscle",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 3,
+    "power": 3,
+    "isEddiable": false,
+    "rulesText": "{Attack} If this Unit has power 5+, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "14e20948-a74b-4a27-a156-d34d8cfb98cc": {
+    "id": "14e20948-a74b-4a27-a156-d34d8cfb98cc",
+    "cardId": "e48c9d39-ef27-4b8f-8690-d75c3a4807b0",
+    "name": "6th Street Recruits",
+    "subname": null,
+    "displayName": "6th Street Recruits",
+    "slug": "6th-street-recruits",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 4,
+    "power": 6,
+    "isEddiable": false,
+    "rulesText": "When a friendly Unit steals a d6, increase a Gig by up to 6.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": {
+    "id": "96e76b12-4e53-4e2c-aca3-3fedf6f21e18",
+    "cardId": "21f68be2-c664-4ae0-a7ef-965a3a5a14c8",
+    "name": "Meredith Stout",
+    "subname": "Stone Cold Corpo",
+    "displayName": "Meredith Stout: Stone Cold Corpo",
+    "slug": "meredith-stout-stone-cold-corpo",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Rare",
+    "ram": 1,
+    "cost": 4,
+    "power": 5,
+    "isEddiable": false,
+    "rulesText": "{Blocker}\nThis Unit has +2 power while fighting a Legend.\nWhen a Rival adjusts or swaps 1 or more friendly Gigs, you may add a card from your trash to your hand.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "975957a0-9c72-4a67-8260-f86c1c70bfb5": {
+    "id": "975957a0-9c72-4a67-8260-f86c1c70bfb5",
+    "cardId": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+    "name": "Johnny Silverhand",
+    "subname": "Never Stop Fighting",
+    "displayName": "Johnny Silverhand: Never Stop Fighting",
+    "slug": "johnny-silverhand-never-stop-fighting",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "The first time this Unit wins a fight each turn, ready it.\nThis Unit wins all fights against CORPO Units.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "84278f23-7323-47d2-b639-23edd76f87ae": {
+    "id": "84278f23-7323-47d2-b639-23edd76f87ae",
+    "cardId": "28198e04-60e2-4f81-9786-903a9a947d7a",
+    "name": "Mantis Blades",
+    "subname": null,
+    "displayName": "Mantis Blades",
+    "slug": "mantis-blades",
+    "cardType": "Gear",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 1,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n\"One cut, one kill.\"",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b12e1665-bf29-4b2c-b92d-865cff227a67": {
+    "id": "b12e1665-bf29-4b2c-b92d-865cff227a67",
+    "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+    "name": "Satori",
+    "subname": "Sword of Saburo",
+    "displayName": "Satori: Sword of Saburo",
+    "slug": "satori-sword-of-saburo",
+    "cardType": "Gear",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 1,
+    "cost": 2,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit wins a fight against a rival Unit, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "0ecf513b-64fd-4932-a004-b02b43b21e88": {
+    "id": "0ecf513b-64fd-4932-a004-b02b43b21e88",
+    "cardId": "2697ed9d-72fc-4658-9c94-977668911a67",
+    "name": "Detonate",
+    "subname": null,
+    "displayName": "Detonate",
+    "slug": "detonate",
+    "cardType": "Program",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 1,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} Defeat a rival Gear with power 2 or less.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "161bfaaf-ec85-4142-8538-f5faf9181267": {
+    "id": "161bfaaf-ec85-4142-8538-f5faf9181267",
+    "cardId": "a708461f-1f91-4789-bb0d-96e3de5fcf44",
+    "name": "Industrial Assembly",
+    "subname": null,
+    "displayName": "Industrial Assembly",
+    "slug": "industrial-assembly",
+    "cardType": "Program",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 1,
+    "cost": 1,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Increase a Gig by up to 4. If you control a Gig with 8+ value, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "6213bf57-92d7-4a64-8d80-948ba53b8d80": {
+    "id": "6213bf57-92d7-4a64-8d80-948ba53b8d80",
+    "cardId": "144c3559-3518-4c01-b9e6-af42b7166661",
+    "name": "Over the Edge",
+    "subname": null,
+    "displayName": "Over the Edge",
+    "slug": "over-the-edge",
+    "cardType": "Program",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 3,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Defeat a Unit with power equal to or less than the value of a friendly d20.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "3d1e6590-5cdc-4605-8b61-915f21f5514d": {
+    "id": "3d1e6590-5cdc-4605-8b61-915f21f5514d",
+    "cardId": "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+    "name": "Muamar Reyes",
+    "subname": "El Capitán",
+    "displayName": "Muamar Reyes: El Capitán",
+    "slug": "muamar-reyes-el-capita-n",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Call} Choose one effect.\nA friendly Unit can't be defeated in a fight this turn. // Draw 1.\n{Spend} Adjust a Gig by 1.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -39,41 +239,21 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "58cffb40-0914-4c6b-81cf-cdd8b2b83f17": {
-    "id": "58cffb40-0914-4c6b-81cf-cdd8b2b83f17",
-    "cardId": "7ea6eecc-e55e-4634-93eb-b2b46e79635d",
-    "name": "Rockn' Rockerboy",
+  "6a8e2aae-694a-43ea-8e3a-0482046a90c5": {
+    "id": "6a8e2aae-694a-43ea-8e3a-0482046a90c5",
+    "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+    "name": "Secondhand Bombus",
     "subname": null,
-    "displayName": "Rockn' Rockerboy",
-    "slug": "rockn-rockerboy",
+    "displayName": "Secondhand Bombus",
+    "slug": "secondhand-bombus",
     "cardType": "Unit",
     "color": "Yellow",
     "rarity": "Common",
-    "ram": 1,
-    "cost": 5,
-    "power": 8,
-    "isEddiable": false,
-    "rulesText": "[Flavor] Scream your throat raw for something. Anything.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "ade4a2d5-df74-44fe-ab5f-222dc6e2ce27": {
-    "id": "ade4a2d5-df74-44fe-ab5f-222dc6e2ce27",
-    "cardId": "92d23553-8b0d-49cd-8cbe-6f00b3377298",
-    "name": "Viktor Vektor",
-    "subname": "Drop Your Illusions",
-    "displayName": "Viktor Vektor: Drop Your Illusions",
-    "slug": "viktor-vektor-drop-your-illusions",
-    "cardType": "Unit",
-    "color": "Yellow",
-    "rarity": "Epic",
     "ram": 2,
-    "cost": 5,
-    "power": 5,
+    "cost": 2,
+    "power": 0,
     "isEddiable": false,
-    "rulesText": "Play your first CYBERWARE Gear each turn for -3 €$, to a minimum of 1 €$.",
+    "rulesText": "{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n(Units with power 0 don't steal Gigs.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -94,26 +274,6 @@
     "power": 8,
     "isEddiable": false,
     "rulesText": "{Attack} Give this Unit +2 power this turn for each friendly Gig with an even value.\n{Defeated} Draw 1 for each friendly Gig with an odd value.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "dc0a7e03-54b6-4334-965f-27a3d469fed6": {
-    "id": "dc0a7e03-54b6-4334-965f-27a3d469fed6",
-    "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
-    "name": "Mandibular Upgrade",
-    "subname": null,
-    "displayName": "Mandibular Upgrade",
-    "slug": "mandibular-upgrade",
-    "cardType": "Gear",
-    "color": "Yellow",
-    "rarity": "Common",
-    "ram": 2,
-    "cost": 1,
-    "power": 0,
-    "isEddiable": true,
-    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -159,6 +319,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "73b6b3d3-6a7f-44ed-a267-add6ae389b5a": {
+    "id": "73b6b3d3-6a7f-44ed-a267-add6ae389b5a",
+    "cardId": "6dd172b1-2341-473f-8837-a9efe6a75701",
+    "name": "Gorilla Arms",
+    "subname": null,
+    "displayName": "Gorilla Arms",
+    "slug": "gorilla-arms",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 3,
+    "cost": 4,
+    "power": 3,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nThe first time this Unit steals 1 or more Gigs each turn, steal a rival Gig with a value not shared by a friendly Gig.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "b2d6aeff-8fa3-4151-9e67-a83188a78197": {
     "id": "b2d6aeff-8fa3-4151-9e67-a83188a78197",
     "cardId": "793d9650-0a59-4c89-9d85-05a9d6873d2e",
@@ -199,6 +379,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "c1f9ae1a-841f-431f-919a-429de14be070": {
+    "id": "c1f9ae1a-841f-431f-919a-429de14be070",
+    "cardId": "04a82ebf-eba1-4888-a95d-f01b9bbd0167",
+    "name": "Jackie Welles",
+    "subname": "Mama's Favorite",
+    "displayName": "Jackie Welles: Mama's Favorite",
+    "slug": "jackie-welles-mama-s-favorite",
+    "cardType": "Legend",
+    "color": "Green",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": true,
+    "rulesText": "{Go Solo} (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\nIf a friendly Unit would be defeated, you may pay 1 €$ to defeat this Legend instead. (Remove it from the game.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "1435b785-967e-48a7-8ef7-f7fecbb27aaf": {
     "id": "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
     "cardId": "380b5e52-2651-4cde-8222-1db2ae6469e2",
@@ -214,6 +414,26 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "{Spend} Swap a friendly Gig with a rival Gig.\nAt the start of your turn, draw 1 for each friendly value-pair of Gigs.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "2cfe57a5-cafe-4611-90fd-c72f33250933": {
+    "id": "2cfe57a5-cafe-4611-90fd-c72f33250933",
+    "cardId": "950f045c-f5a4-4318-9907-b630d64de754",
+    "name": "Panam Palmer",
+    "subname": "Nomad Cavalry",
+    "displayName": "Panam Palmer: Nomad Cavalry",
+    "slug": "panam-palmer-nomad-cavalry",
+    "cardType": "Legend",
+    "color": "Green",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "2 €$, {Spend} Move a Gear from this Legend to an unequipped friendly Unit. If you do, ready that Unit.\nAt the end of your turn, if 5 or more friendly Units and/or Legends are equipped, ready them.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -259,21 +479,141 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "27c1bf13-5f6b-4421-aa76-5789a94c9c1b": {
-    "id": "27c1bf13-5f6b-4421-aa76-5789a94c9c1b",
-    "cardId": "d6f16c44-6d56-48ff-8130-154eea5540ca",
-    "name": "MaxTac AV",
-    "subname": null,
-    "displayName": "MaxTac AV",
-    "slug": "maxtac-av",
+  "8cb7b93c-e281-4d94-a4b0-bb0cb5d0fa16": {
+    "id": "8cb7b93c-e281-4d94-a4b0-bb0cb5d0fa16",
+    "cardId": "3c144d6a-0c1a-43e9-bd35-85d6fc46adef",
+    "name": "Nadia",
+    "subname": "Fighting Through Grief",
+    "displayName": "Nadia: Fighting Through Grief",
+    "slug": "nadia-fighting-through-grief",
     "cardType": "Unit",
     "color": "Green",
-    "rarity": "Common",
+    "rarity": "Uncommon",
     "ram": 2,
-    "cost": 5,
+    "cost": 6,
     "power": 8,
     "isEddiable": false,
-    "rulesText": "{Play} You may swap a friendly Gig with a rival Gig.",
+    "rulesText": "If a Rival controls more Gigs than you, this Unit can attack their Gig area the turn it's played.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "28cf40e2-f83a-47f4-9c4d-c0b5157e84e6": {
+    "id": "28cf40e2-f83a-47f4-9c4d-c0b5157e84e6",
+    "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+    "name": "Sandayu Oda",
+    "subname": "Hanako's Guardian",
+    "displayName": "Sandayu Oda: Hanako's Guardian",
+    "slug": "sandayu-oda-hanako-s-guardian",
+    "cardType": "Unit",
+    "color": "Green",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 7,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Play} Spend a rival Unit for each friendly value-pair of Gigs.\nThis Unit can attack rival Units the turn it's played.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b1db8654-6197-4e80-9555-8917dcba6dc7": {
+    "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
+    "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+    "name": "Sandayu Oda",
+    "subname": "Hanako's Guardian",
+    "displayName": "Sandayu Oda: Hanako's Guardian",
+    "slug": "sandayu-oda-hanako-s-guardian",
+    "cardType": "Unit",
+    "color": "Green",
+    "rarity": "Iconic Other",
+    "ram": 2,
+    "cost": 7,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Play} Spend a rival Unit for each friendly value-pair of Gigs.\nThis Unit can attack rival Units the turn it's played.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "fa711a0e-06bb-429b-a43a-89c50fb9d590": {
+    "id": "fa711a0e-06bb-429b-a43a-89c50fb9d590",
+    "cardId": "7da95cf0-f749-439f-b40a-9d3057d2c995",
+    "name": "Riot Shield",
+    "subname": null,
+    "displayName": "Riot Shield",
+    "slug": "riot-shield",
+    "cardType": "Gear",
+    "color": "Green",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 2,
+    "power": 1,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)\nRivals must pay +2 €$ to use {Go Solo}.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "f0de2baf-27a9-426e-89cf-68abaceec507": {
+    "id": "f0de2baf-27a9-426e-89cf-68abaceec507",
+    "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+    "name": "Sandevistan",
+    "subname": null,
+    "displayName": "Sandevistan",
+    "slug": "sandevistan",
+    "cardType": "Gear",
+    "color": "Green",
+    "rarity": "Uncommon",
+    "ram": 3,
+    "cost": 3,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nAt the end of your turn, ready this Unit or Legend.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "0f825d0d-be91-4f42-9e97-5d87488ee2fc": {
+    "id": "0f825d0d-be91-4f42-9e97-5d87488ee2fc",
+    "cardId": "78ea68b3-1260-416b-9f88-d6be4586232b",
+    "name": "Overwatch",
+    "subname": "Panam's Gift",
+    "displayName": "Overwatch: Panam's Gift",
+    "slug": "overwatch-panam-s-gift",
+    "cardType": "Gear",
+    "color": "Green",
+    "rarity": "Epic",
+    "ram": 4,
+    "cost": 4,
+    "power": 4,
+    "isEddiable": true,
+    "rulesText": "{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43": {
+    "id": "775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43",
+    "cardId": "78ea68b3-1260-416b-9f88-d6be4586232b",
+    "name": "Overwatch",
+    "subname": "Panam's Gift",
+    "displayName": "Overwatch: Panam's Gift",
+    "slug": "overwatch-panam-s-gift",
+    "cardType": "Gear",
+    "color": "Green",
+    "rarity": "Iconic Other",
+    "ram": 4,
+    "cost": 4,
+    "power": 4,
+    "isEddiable": true,
+    "rulesText": "{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -294,6 +634,26 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "You may set a Gig's value to the value of another Gig. Then, if you control a value-pair, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "535cec6e-269d-4c2d-860c-5c8eff999c21": {
+    "id": "535cec6e-269d-4c2d-860c-5c8eff999c21",
+    "cardId": "f3ba5ef7-5e91-4956-a887-b88a4b854867",
+    "name": "Synapse Burnout",
+    "subname": null,
+    "displayName": "Synapse Burnout",
+    "slug": "synapse-burnout",
+    "cardType": "Program",
+    "color": "Green",
+    "rarity": "Uncommon",
+    "ram": 1,
+    "cost": 1,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} A friendly Unit has +1 power for each friendly face-up Legend while fighting rival Units this turn.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -339,6 +699,46 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "bc78db9f-337e-437e-b247-f1aa798c48d0": {
+    "id": "bc78db9f-337e-437e-b247-f1aa798c48d0",
+    "cardId": "3126fa21-ea19-4096-8233-d63797bb9fe4",
+    "name": "Wild in the Streets",
+    "subname": null,
+    "displayName": "Wild in the Streets",
+    "slug": "wild-in-the-streets",
+    "cardType": "Program",
+    "color": "Green",
+    "rarity": "Common",
+    "ram": 4,
+    "cost": 5,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Defeat a spent Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "1f173d96-9ca1-4298-b479-71f06ee1f558": {
+    "id": "1f173d96-9ca1-4298-b479-71f06ee1f558",
+    "cardId": "17a80b46-c583-4867-97ac-7855494363a9",
+    "name": "(Don't Fear) The Reaper",
+    "subname": null,
+    "displayName": "(Don't Fear) The Reaper",
+    "slug": "don-t-fear-the-reaper",
+    "cardType": "Program",
+    "color": "Green",
+    "rarity": "Rare",
+    "ram": 3,
+    "cost": 7,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Spend all rival Units. Then, defeat a spent Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "873656f0-c32a-46fb-856f-8a5ee44b8d21": {
     "id": "873656f0-c32a-46fb-856f-8a5ee44b8d21",
     "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
@@ -353,14 +753,14 @@
     "cost": null,
     "power": null,
     "isEddiable": true,
-    "rulesText": "1 €$, {Spend} Play a Program from your trash. Bottom-deck it after you play it. (You still pay its cost.)",
+    "rulesText": "{Spend} Your next Program this turn plays for -1 €$ for each friendly min Gig, to a minimum of 1 €$.\n1 €$, {Spend} Play a Program from your trash. Bottom-deck it after you play it. (You still pay its cost.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
     }
   },
-  "328cd3e4-4177-4d6a-86c0-00d1a5a12b38": {
-    "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+  "a33d3324-fe48-4a9f-80a8-8545a0a4727f": {
+    "id": "a33d3324-fe48-4a9f-80a8-8545a0a4727f",
     "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
     "name": "Jackie Welles",
     "subname": "Pour One Out For Me",
@@ -368,35 +768,15 @@
     "slug": "jackie-welles-pour-one-out-for-me",
     "cardType": "Legend",
     "color": "Blue",
-    "rarity": "Nova Rare",
+    "rarity": "Epic",
     "ram": 2,
     "cost": null,
     "power": null,
     "isEddiable": true,
     "rulesText": "The first time you play a Blue Unit or Blue Gear each turn, you may decrease a friendly Gig by up to 2. If it becomes a min Gig, draw 1.",
     "set": {
-      "code": "boxtoppersbeta",
-      "name": "Box Toppers — Beta"
-    }
-  },
-  "d74468ab-6024-4ae6-b69a-ac41f6e9cfce": {
-    "id": "d74468ab-6024-4ae6-b69a-ac41f6e9cfce",
-    "cardId": "4560f3d0-5f63-466b-93b7-fc9d822a556e",
-    "name": "Judy Álvarez",
-    "subname": "Braindance Maestro",
-    "displayName": "Judy Álvarez: Braindance Maestro",
-    "slug": "judy-a-lvarez-braindance-maestro",
-    "cardType": "Legend",
-    "color": "Blue",
-    "rarity": "Epic",
-    "ram": 2,
-    "cost": null,
-    "power": null,
-    "isEddiable": true,
-    "rulesText": "When you play a BRAINDANCE Program, give a friendly Unit +1 power this turn.\n{Spend} Trash the top card of your deck. If it's a Program, you may add it to your hand.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
+      "code": "theheistretailstarterdeck",
+      "name": "The Heist — Retail Starter Deck"
     }
   },
   "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": {
@@ -419,61 +799,21 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "32f8d89a-1e4b-46b8-9323-77c297c5b5ae": {
-    "id": "32f8d89a-1e4b-46b8-9323-77c297c5b5ae",
-    "cardId": "3bb1f191-927e-45b3-86ca-cb30baabfe0d",
-    "name": "Delamain",
-    "subname": "Rideshare AI",
-    "displayName": "Delamain: Rideshare AI",
-    "slug": "delamain-rideshare-ai",
-    "cardType": "Unit",
-    "color": "Blue",
-    "rarity": "Uncommon",
-    "ram": 3,
-    "cost": 3,
-    "power": 0,
-    "isEddiable": false,
-    "rulesText": "{Play} Draw 2.\n(Units with power 0 don't steal Gigs.)",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "859345fa-c791-49dc-9258-505982b5adea": {
-    "id": "859345fa-c791-49dc-9258-505982b5adea",
-    "cardId": "ef77dd1f-3abd-4ce2-becc-97dd768a5022",
-    "name": "Mox Inciters",
+  "61118bbb-c1f6-4b1d-8d46-4f33f0a135b1": {
+    "id": "61118bbb-c1f6-4b1d-8d46-4f33f0a135b1",
+    "cardId": "14d87f2a-8bd7-424f-b65b-3659156cef81",
+    "name": "Psycho Squad",
     "subname": null,
-    "displayName": "Mox Inciters",
-    "slug": "mox-inciters",
+    "displayName": "Psycho Squad",
+    "slug": "psycho-squad",
     "cardType": "Unit",
     "color": "Blue",
     "rarity": "Common",
-    "ram": 2,
-    "cost": 3,
-    "power": 2,
-    "isEddiable": false,
-    "rulesText": "{Play} A rival Unit must attack next turn if it can.\n{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "6b5606c9-12a2-46d6-b13f-a672c6bd5f07": {
-    "id": "6b5606c9-12a2-46d6-b13f-a672c6bd5f07",
-    "cardId": "65a14367-da52-4578-8162-3c4bac11007d",
-    "name": "Rita Wheeler",
-    "subname": "No Stupid Questions",
-    "displayName": "Rita Wheeler: No Stupid Questions",
-    "slug": "rita-wheeler-no-stupid-questions",
-    "cardType": "Unit",
-    "color": "Blue",
-    "rarity": "Common",
-    "ram": 2,
+    "ram": 1,
     "cost": 4,
-    "power": 4,
+    "power": 6,
     "isEddiable": false,
-    "rulesText": "{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)\nThe first time this Unit is spent each turn, draw 1, then discard 1.",
+    "rulesText": "[Flavour] Their protocol stops at “shoot first.”",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -519,6 +859,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "ee22b73e-8b14-4225-9c86-428cfada892f": {
+    "id": "ee22b73e-8b14-4225-9c86-428cfada892f",
+    "cardId": "920cabc9-f350-4f61-96c6-69e649271456",
+    "name": "Modded Kusanagi",
+    "subname": null,
+    "displayName": "Modded Kusanagi",
+    "slug": "modded-kusanagi",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Adrenaline} (This Unit can attack the turn it's played.)\nAt the end of your turn, return this Unit to its owner's hand.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "0ff059f8-90c3-47ef-ba3b-cd380f30f14e": {
     "id": "0ff059f8-90c3-47ef-ba3b-cd380f30f14e",
     "cardId": "783a9082-b79c-4b45-bf66-48728ff9b92d",
@@ -534,26 +894,6 @@
     "power": 10,
     "isEddiable": false,
     "rulesText": "{Play} {Attack} You may discard 1 Program. If you do, bottom-deck a rival Unit.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "e2a34251-d2d9-46e0-9840-ca69a358a6ae": {
-    "id": "e2a34251-d2d9-46e0-9840-ca69a358a6ae",
-    "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
-    "name": "NetWatch Netdriver",
-    "subname": null,
-    "displayName": "NetWatch Netdriver",
-    "slug": "netwatch-netdriver",
-    "cardType": "Gear",
-    "color": "Blue",
-    "rarity": "Uncommon",
-    "ram": 2,
-    "cost": 3,
-    "power": 2,
-    "isEddiable": true,
-    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit or Legend is spent, draw 1.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -673,7 +1013,7 @@
     "cost": 3,
     "power": null,
     "isEddiable": true,
-    "rulesText": "Choose one effect. If a friendly d4 is a min Gig, choose both instead.\nGive a rival Unit -5 power this turn. // Bottom-deck a rival Unit with power 0.",
+    "rulesText": "Choose one effect. If a friendly d4 is a min Gig, choose both instead.\nGive a rival Unit -4 power this turn. // Bottom-deck a rival Unit with power 0.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -694,6 +1034,46 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "Bottom-deck a Rival's lowest-power Unit. (If there are multiple, choose 1.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "25508f49-7256-47be-bc95-c420c7105c62": {
+    "id": "25508f49-7256-47be-bc95-c420c7105c62",
+    "cardId": "9a0fd5a3-a00b-425c-a251-755eeab12bfe",
+    "name": "Towerfall",
+    "subname": null,
+    "displayName": "Towerfall",
+    "slug": "towerfall",
+    "cardType": "Program",
+    "color": "Blue",
+    "rarity": "Epic",
+    "ram": 4,
+    "cost": 6,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Choose one effect. If you have less ☆ (Street Cred) than a Rival, choose both instead.\nGive all rival Units -5 power this turn. // Bottom-deck all rival Units with power 0.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72": {
+    "id": "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72",
+    "cardId": "9a0fd5a3-a00b-425c-a251-755eeab12bfe",
+    "name": "Towerfall",
+    "subname": null,
+    "displayName": "Towerfall",
+    "slug": "towerfall",
+    "cardType": "Program",
+    "color": "Blue",
+    "rarity": "Iconic Other",
+    "ram": 4,
+    "cost": 6,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Choose one effect. If you have less ☆ (Street Cred) than a Rival, choose both instead.\nGive all rival Units -5 power this turn. // Bottom-deck all rival Units with power 0.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"

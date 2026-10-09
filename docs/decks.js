@@ -100,6 +100,7 @@ function showDetail(deckId) {
   const deck = publishedDecks.find((d) => d.id === deckId);
   if (!deck) return;
   currentDeck = deck;
+  viewPlanId = null;
   history.replaceState(null, '', `decks.html?id=${encodeURIComponent(deckId)}`);
   el('decks-list').hidden = true;
   el('deck-detail').hidden = false;
@@ -215,9 +216,117 @@ function donutBlockHtml(title, segments) {
   `;
 }
 
+// --- Description sections (ported from deckbuilder.js) --------------------
+
+const DESC_SECTIONS = [
+  { title: 'Overview', open: true, cls: '', fields: [{ key: 'overview' }] },
+  { title: 'Game Plan', cls: '', fields: [{ key: 'early', label: 'Early' }, { key: 'mid', label: 'Mid' }, { key: 'late', label: 'Late' }] },
+  { title: 'Key Cards', cls: 'dd-combo', fields: [{ key: 'combos' }] },
+  { title: 'Mulligan', cls: '', fields: [{ key: 'mulligan' }] },
+  { title: 'Sideboard', cls: 'dd-side', fields: [{ key: 'sideboard' }] },
+  { title: 'Notes', cls: '', fields: [{ key: 'notes' }] }
+];
+
+function renderDescTags(text) {
+  return escapeHtml(text).replace(/@\[([^\]|]+)(?:\|([^\]]+))?\]/g, (_, name, alias) => `<span class="card-tag" data-card-tag="${name}">${alias || name}</span>`);
+}
+
+function deckDescriptionHtml(deck) {
+  const s = deck.descSections || {};
+  const sections = DESC_SECTIONS.map((sec) => {
+    const body = sec.fields.length > 1
+      ? sec.fields.filter((f) => (s[f.key] || '').trim()).map((f) => `<b>${f.label}:</b> ${renderDescTags(s[f.key])}`).join('\n')
+      : renderDescTags(s[sec.fields[0].key] || '');
+    if (!body.trim()) return '';
+    return `<details class="${sec.cls}" ${sec.open ? 'open' : ''}><summary>${sec.title}</summary><div class="dd-body">${body}</div></details>`;
+  }).join('');
+  return (deck.description ? `<div class="dd-legacy">${deck.description}</div>` : '') + sections;
+}
+
+// Hover popup for @[Card] tags - the publish step makes sure every tagged
+// card has a printing (and image) in deck-card-details.json.
+document.addEventListener('mousemove', (e) => {
+  let pop = document.getElementById('card-tag-pop');
+  const tag = e.target.closest?.('[data-card-tag]');
+  const card = tag && Object.values(cardDetails).find((c) => c.displayName === tag.dataset.cardTag);
+  if (!card) {
+    if (pop) pop.hidden = true;
+    return;
+  }
+  if (!pop) {
+    pop = document.createElement('div');
+    pop.id = 'card-tag-pop';
+    pop.className = 'card-tag-pop';
+    pop.innerHTML = '<img alt="" />';
+    document.body.appendChild(pop);
+  }
+  const img = pop.querySelector('img');
+  if (img.getAttribute('src') !== imageUrl(card.id)) img.src = imageUrl(card.id);
+  pop.hidden = false;
+  pop.style.left = `${Math.min(e.clientX + 16, innerWidth - 250)}px`;
+  pop.style.top = `${Math.max(8, Math.min(e.clientY - 150, innerHeight - 330))}px`;
+});
+
 // --- Detail rendering -------------------------------------------------
 
-function renderDetail(deck) {
+let viewPlanId = null;
+
+function planById(deck, id) {
+  return (deck.swapPlans || []).find((p) => p.id === id) || null;
+}
+
+// Main deck after a swap plan: swapped-out copies trade places with the
+// swapped-in sideboard copies (ported from applyPlan in deckbuilder.js).
+function applyPlan(deck, plan) {
+  const cards = { ...deck.cards };
+  const side = { ...(deck.sideboard || {}) };
+  const inMap = {};
+  const outMap = {};
+  for (const s of plan?.swaps || []) {
+    cards[s.out] = (cards[s.out] || 0) - s.qty;
+    if (cards[s.out] <= 0) delete cards[s.out];
+    cards[s.in] = (cards[s.in] || 0) + s.qty;
+    side[s.in] = (side[s.in] || 0) - s.qty;
+    if (side[s.in] <= 0) delete side[s.in];
+    side[s.out] = (side[s.out] || 0) + s.qty;
+    outMap[s.out] = (outMap[s.out] || 0) + s.qty;
+    inMap[s.in] = (inMap[s.in] || 0) + s.qty;
+  }
+  return { deck: { ...deck, cards, sideboard: side }, inMap, outMap };
+}
+
+function swapBadgeHtml(inQty, outQty) {
+  const parts = [];
+  if (inQty) parts.push(`<span class="swap-badge-in">+${inQty} IN</span>`);
+  if (outQty) parts.push(`<span class="swap-badge-out">${outQty} OUT</span>`);
+  return parts.length ? `<div class="swap-badges">${parts.join('')}</div>` : '';
+}
+
+function renderPlanBar(base, plan) {
+  const bar = el('detail-plans');
+  const plans = base.swapPlans || [];
+  bar.hidden = !plans.length;
+  if (!plans.length) return;
+  const chips = [`<button class="plan-chip ${!viewPlanId ? 'active' : ''}" data-plan="">Game 1 &middot; Main</button>`]
+    .concat(plans.map((p) => `<button class="plan-chip ${viewPlanId === p.id ? 'active' : ''}" data-plan="${escapeHtml(p.id)}">&#8646; ${escapeHtml(p.name || 'Plan')} <span class="plan-chip-n">${p.swaps.reduce((s, x) => s + x.qty, 0)}</span></button>`))
+    .join('');
+  const summary = plan
+    ? `<div class="plan-summary">${plan.swaps.map((s) => `<span><span class="plan-out">${escapeHtml(cardByCardId(s.out)?.name || '?')}</span> &#8644; <span class="plan-in">${escapeHtml(cardByCardId(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`).join('')}</div>`
+    : '';
+  bar.innerHTML = `<div class="plan-chips">${chips}</div>${summary}`;
+  bar.querySelectorAll('[data-plan]').forEach((btn) =>
+    btn.addEventListener('click', () => {
+      viewPlanId = btn.dataset.plan || null;
+      renderDetail(currentDeck);
+    })
+  );
+}
+
+function renderDetail(baseDeck) {
+  const plan = viewPlanId ? planById(baseDeck, viewPlanId) : null;
+  const applied = plan ? applyPlan(baseDeck, plan) : { deck: baseDeck, inMap: {}, outMap: {} };
+  const deck = applied.deck;
+  renderPlanBar(baseDeck, plan);
   const stats = computeDeckStats(deck);
 
   el('detail-title').textContent = deck.name || 'Untitled Deck';
@@ -238,7 +347,7 @@ function renderDetail(deck) {
     .map((p) => (p ? tileHtml([p], `title="${escapeHtml(p.name)}"`) : '<div class="deck-tile-empty">No Legend</div>'))
     .join('');
 
-  el('detail-description').innerHTML = deck.description || '';
+  el('detail-description').innerHTML = deckDescriptionHtml(deck);
 
   el('detail-cost-curve').innerHTML = costCurveHtml(stats.costCounts);
 
@@ -258,14 +367,27 @@ function renderDetail(deck) {
 
   const grouped = TYPE_ORDER.map((t) => ({ type: t, entries: cardEntries.filter((e) => e.card.cardType === t) })).filter((g) => g.entries.length);
 
-  el('detail-card-sections').innerHTML = grouped
+  const withBadge = (html, badge) => (badge ? html.replace(/<\/div>\s*$/, `${badge}</div>`) : html);
+  const mainSections = grouped
     .map((g) => {
       const tiles = g.entries
-        .map((e) => tileHtml(printingsForCardEntry(deck, e.cardId, e.qty), `title="${escapeHtml(e.card.name)} x${e.qty}"`))
+        .map((e) => withBadge(tileHtml(printingsForCardEntry(deck, e.cardId, e.qty), `title="${escapeHtml(e.card.name)} x${e.qty}"`), swapBadgeHtml(applied.inMap[e.cardId], 0)))
         .join('');
       return `<div class="deck-section"><h3>${escapeHtml(g.type)}s <span class="count-badge">${g.entries.reduce((s, e) => s + e.qty, 0)}</span></h3><div class="tile-grid">${tiles}</div></div>`;
     })
     .join('');
+
+  const sideEntries = Object.entries(deck.sideboard || {})
+    .map(([cardId, qty]) => ({ cardId, card: cardByCardId(cardId), qty }))
+    .filter((e) => e.card)
+    .sort((a, b) => COLOR_ORDER.indexOf(a.card.color) - COLOR_ORDER.indexOf(b.card.color) || a.card.name.localeCompare(b.card.name));
+  const sideTotal = sideEntries.reduce((s, e) => s + e.qty, 0);
+  const sideSection = sideTotal
+    ? `<div class="deck-section"><h3>Sideboard <span class="count-badge">${sideTotal}/7</span></h3><div class="tile-grid">${sideEntries
+        .map((e) => withBadge(tileHtml(Array(e.qty).fill(e.card), `title="${escapeHtml(e.card.name)} x${e.qty}"`), swapBadgeHtml(0, applied.outMap[e.cardId])))
+        .join('')}</div></div>`
+    : '';
+  el('detail-card-sections').innerHTML = mainSections + sideSection;
 }
 
 init();

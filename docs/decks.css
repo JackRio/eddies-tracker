@@ -179,6 +179,22 @@
 
 .deck-description:empty { display: none; }
 
+.deck-description details { border: 1px solid var(--border); border-left: 3px solid var(--cyan); border-radius: 6px; margin: 0 0 8px; background: rgba(255, 255, 255, 0.02); }
+.deck-description details:last-child { margin-bottom: 0; }
+.deck-description details.dd-combo { border-left-color: var(--purple, #b866ff); }
+.deck-description details.dd-side { border-left-color: var(--yellow); }
+.deck-description summary { cursor: pointer; padding: 7px 12px; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--yellow); list-style: none; display: flex; gap: 8px; user-select: none; }
+.deck-description summary::-webkit-details-marker { display: none; }
+.deck-description summary::before { content: '\25B8'; color: var(--cyan); transition: transform 0.15s; }
+.deck-description details[open] > summary::before { transform: rotate(90deg); }
+.deck-description .dd-body { padding: 4px 14px 12px; max-height: 220px; overflow-y: auto; white-space: pre-wrap; }
+.deck-description .dd-body b { color: var(--cyan); }
+.deck-description .dd-legacy { margin-bottom: 8px; }
+.card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; white-space: nowrap; }
+.card-tag:hover { color: var(--yellow); border-color: var(--yellow); }
+.card-tag-pop { position: fixed; z-index: 80; pointer-events: none; }
+.card-tag-pop img { width: 230px; border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
+
 /* Eddie Cost Curve --------------------------------------------------- */
 
 .ram-curve {
@@ -300,3 +316,17 @@
 }
 
 .donut-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+/* Swap plans + sideboard */
+.deck-plans { margin-bottom: 16px; }
+.plan-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.plan-chip { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-size: 13px; font-weight: 700; }
+.plan-chip.active { border-color: var(--yellow); color: var(--yellow); }
+.plan-chip-n { color: var(--cyan); margin-left: 4px; }
+.plan-summary { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 13px; }
+.plan-out { color: var(--red); }
+.plan-in { color: var(--green); }
+.deck-tile .swap-badges { position: absolute; top: 4px; left: 4px; z-index: 30; display: flex; flex-direction: column; gap: 2px; pointer-events: none; }
+.swap-badge-in, .swap-badge-out { font-size: 10px; font-weight: 800; padding: 1px 6px; border-radius: 4px; color: #000; }
+.swap-badge-in { background: var(--green); }
+.swap-badge-out { background: var(--red); }
