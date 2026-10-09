@@ -627,8 +627,8 @@ printing split only covers owned copies (`getPrintingSplit()` compares against
 `min(qty, ownedMain)`). The My Decks list has a search box, a Show filter
 (All / Fully owned / Missing cards) and a Sort (recently edited / name /
 fewest missing); the header's "Select all" checkbox applies to the decks
-currently shown, so Fully owned + Select all + Publish Selected publishes
-exactly the buildable decks.
+currently shown (used for the Prep List only - publishing doesn't use the
+selection).
 
 **"Legal for current Legends" filter** (`builderState.legalOnly`, on by
 default): hides any card `cardFitsCeilings()` rejects — same check
@@ -664,21 +664,18 @@ extra badge HTML string, used here (only here) to show an explicit "×N".
 **Publishing decks to the website** (`docs/decks.html`) is a separate
 concern from the Prep List and from the collection "Publish Site" button -
 a deliberate, independent `git pull`/commit/push cycle
-(`decks:publish` in `main.js`), triggered from "Publish Selected" in the
+(`decks:publish` in `main.js`), triggered from "Publish" in the
 Deck Builder's My Decks toolbar. `decks.json` itself never leaves the
-machine; publishing copies only the *exact* selected decks' data plus a
+machine; publishing copies every saved deck's data plus a
 denormalized `docs/data/deck-card-details.json` lookup (printing id →
 name/color/ram/cost/power/isEddiable/rulesText - `catalog.json` is close
 but lacks the numeric stats the cost curve/donuts need) into
 `docs/data/published-decks.json`, and copies each referenced printing's
 image into `docs/images/` if not already there (generalizes the existing
-`copyNeededImages()` pattern). "Publish Selected" always **replaces** the
-whole published set with the current checkbox selection - unpublishing one
-deck is just the small "📡 Live" badge on its My Decks card, which
-re-publishes the current set minus that one deck. `userData/deck-publish-
+`copyNeededImages()` pattern). "Publish" always publishes **every** saved deck (no per-deck selection or
+unpublish; the whole published set is replaced each time). `userData/deck-publish-
 state.json` (app-local, never committed) tracks `{ deckIds, publishedAt }`
-so the toolbar can show "Last published: ..." and so `deckCardHtml()` knows
-which cards need the badge.
+so the toolbar can show "Last published: ...".
 
 A deck's `cardPrintings` split (see above) is only populated *lazily*, the
 first time the Builder's renderer actually looks at it - an older deck, or

@@ -536,13 +536,6 @@ function renderList() {
       updateListToolbar();
     });
   });
-  container.querySelectorAll('[data-unpublish-deck]').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      publishDecks(publishState.deckIds.filter((id) => id !== btn.dataset.unpublishDeck));
-    });
-  });
-
   updateListToolbar();
 }
 
@@ -550,7 +543,7 @@ function updateListToolbar() {
   const n = listUiState.selectedIds.size;
   el('prep-list-btn').disabled = n < 1;
   el('prep-list-btn').textContent = n ? `Prep List (${n})` : 'Prep List';
-  el('publish-decks-btn').disabled = n < 1;
+  el('publish-decks-btn').disabled = Object.keys(decks).length === 0;
   // "Select all" checkbox: checked = every deck, dash = some, empty = none.
   // Works on the decks currently shown, so "Fully owned" + Select all picks
   // exactly the decks you can build right now.
@@ -567,12 +560,13 @@ function updateListToolbar() {
     : 'Nothing published yet';
 }
 
-async function publishDecks(deckIds) {
+// Publishing always replaces the whole published set with every saved deck.
+async function publishDecks() {
   el('publish-decks-btn').disabled = true;
   const prevLabel = el('publish-decks-btn').textContent;
   el('publish-decks-btn').textContent = 'Publishing...';
   try {
-    publishState = await window.api.publishDecks(deckIds);
+    publishState = await window.api.publishDecks(Object.keys(decks));
     renderList();
   } catch (err) {
     alert(`Publishing decks failed: ${err.message}`);
@@ -622,15 +616,13 @@ function deckCardHtml(deck) {
       : '';
 
   const isConfirming = listUiState.confirmDeleteId === deck.id;
-  const isPublished = publishState.deckIds.includes(deck.id);
   const isSelected = listUiState.selectedIds.has(deck.id);
 
   return `
     <div class="deck-card${isSelected ? ' is-selected' : ''}" data-deck-id="${deck.id}" draggable="true">
       <div class="deck-card-top">
-        <input type="checkbox" class="deck-card-select" data-select-deck="${deck.id}" ${isSelected ? 'checked' : ''} title="Select for Prep List / publishing" />
+        <input type="checkbox" class="deck-card-select" data-select-deck="${deck.id}" ${isSelected ? 'checked' : ''} title="Select for Prep List" />
         <div class="deck-card-name" title="${escapeHtml(deck.name || 'Untitled Deck')}">${escapeHtml(deck.name || 'Untitled Deck')}</div>
-        ${isPublished ? `<button class="deck-card-published-badge" data-unpublish-deck="${deck.id}" title="Live on the website - click to unpublish">&#128225; Live</button>` : ''}
       </div>
       <div class="deck-card-legends">${legendThumbs}</div>
       <div class="deck-card-legend-names" title="${escapeHtml(legendNames)}">${escapeHtml(legendNames) || '&nbsp;'}</div>
@@ -2691,7 +2683,7 @@ function attachControls() {
   });
   el('prep-list-btn').addEventListener('click', openPrepView);
   el('prep-back-to-list-btn').addEventListener('click', backToList);
-  el('publish-decks-btn').addEventListener('click', () => publishDecks([...listUiState.selectedIds]));
+  el('publish-decks-btn').addEventListener('click', publishDecks);
 
   el('deck-name-input').addEventListener('input', (e) => {
     draft.name = e.target.value;
