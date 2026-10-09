@@ -99,6 +99,46 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "a4276d5e-cdf1-42cb-a6c3-8722d8c7c595": {
+    "id": "a4276d5e-cdf1-42cb-a6c3-8722d8c7c595",
+    "cardId": "9e465b11-9743-4275-a71d-d701b059eef0",
+    "name": "Royce",
+    "subname": "Don't Call Me Simon",
+    "displayName": "Royce: Don't Call Me Simon",
+    "slug": "royce-don-t-call-me-simon",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 5,
+    "power": 4,
+    "isEddiable": false,
+    "rulesText": "{Play} Defeat a rival Unit with power 2 or less. If you have more ☆ (Street Cred) than a Rival, defeat a rival Unit with power 3 or less instead.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b460b92c-c0fd-43ed-84db-8615032e47f4": {
+    "id": "b460b92c-c0fd-43ed-84db-8615032e47f4",
+    "cardId": "9ed58d18-df78-4689-b28f-77260243c522",
+    "name": "V",
+    "subname": "Roamer of the Badlands",
+    "displayName": "V: Roamer of the Badlands",
+    "slug": "v-roamer-of-the-badlands",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": 5,
+    "power": 6,
+    "isEddiable": false,
+    "rulesText": "When this Unit steals a Gig, increase it by up to 5.\nAt the end of your turn, if you control 2 or more Gigs with 8+ value, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "81364914-7121-43fc-9610-f2f9736866d1": {
     "id": "81364914-7121-43fc-9610-f2f9736866d1",
     "cardId": "e8aa7757-e5e3-4137-8970-4fa546b9bed9",
@@ -459,6 +499,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "2a6b5b50-b007-40f4-bbdc-90f6bdc3761a": {
+    "id": "2a6b5b50-b007-40f4-bbdc-90f6bdc3761a",
+    "cardId": "2a9deb43-bf9a-41db-9a05-bb0d357bb08e",
+    "name": "Heywood Ripperdoc",
+    "subname": null,
+    "displayName": "Heywood Ripperdoc",
+    "slug": "heywood-ripperdoc",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 1,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Play} You may defeat a Gear. If its cost equals the value of a friendly Gig, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "93f68b18-e15c-44be-883b-8db7990646f1": {
     "id": "93f68b18-e15c-44be-883b-8db7990646f1",
     "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
@@ -737,6 +797,26 @@
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
+    }
+  },
+  "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5": {
+    "id": "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5",
+    "cardId": "34774f04-4f16-40eb-8ee4-999144e572ab",
+    "name": "Panam Palmer",
+    "subname": "Strength Through Family",
+    "displayName": "Panam Palmer: Strength Through Family",
+    "slug": "panam-palmer-strength-through-family",
+    "cardType": "Unit",
+    "color": "Green",
+    "rarity": "Secret",
+    "ram": 4,
+    "cost": 6,
+    "power": 6,
+    "isEddiable": false,
+    "rulesText": "During your turn, you may Call a Legend for free.\n{Attack} Discard 1. If you do, draw 1 for each friendly face-up Legend.",
+    "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
     }
   },
   "28cf40e2-f83a-47f4-9c4d-c0b5157e84e6": {
