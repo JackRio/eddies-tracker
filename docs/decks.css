@@ -200,7 +200,7 @@
 .card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; white-space: nowrap; }
 .card-tag:hover { color: var(--yellow); border-color: var(--yellow); }
 .card-tag-pop { position: fixed; z-index: 80; pointer-events: none; }
-.card-tag-pop img { width: 230px; border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
+.card-tag-pop img { width: min(300px, 38vw, calc((100vh - 20px) * 63 / 88)); aspect-ratio: 63 / 88; object-fit: cover; background: var(--bg-card, #111); border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
 
 /* Eddie Cost Curve --------------------------------------------------- */
 

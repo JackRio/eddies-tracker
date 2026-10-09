@@ -58,7 +58,7 @@ function extraStats(deck) {
   return { ...s, avg: costN ? costSum / costN : 0, legends, legendColors };
 }
 
-const fanHtml = (s) => s.legends.map((p) => `<img src="${imageUrl(p)}" alt="${escapeHtml(cardDetails[p].displayName)}" loading="lazy">`).join('');
+const fanHtml = (s) => s.legends.map((p) => `<img src="${imageUrl(p)}" alt="${escapeHtml(cardDetails[p].displayName)}" data-zoom="${escapeHtml(p)}" loading="lazy">`).join('');
 const dotsHtml = (s) => `<span class="dots">${s.legendColors.map((c) => `<span class="dot" style="background:${COLORS[c]}" title="${c}"></span>`).join('')}</span>`;
 const accent = (s) => `--accent1:${COLORS[s.legendColors[0]] || 'var(--yellow)'}`;
 
@@ -281,7 +281,7 @@ function tileHtml(printings, titleAttr) {
   const n = printings.length;
   const extra = (n - 1) * TILE_RAISE_PX;
   const layers = printings
-    .map((p, i) => `<img class="deck-tile-layer" style="top: ${i * TILE_RAISE_PX}px; z-index: ${i + 1}" src="${imageUrl(p.id)}" alt="${escapeHtml(p.displayName)}" loading="lazy" />`)
+    .map((p, i) => `<img class="deck-tile-layer" style="top: ${i * TILE_RAISE_PX}px; z-index: ${i + 1}" src="${imageUrl(p.id)}" alt="${escapeHtml(p.displayName)}" data-zoom="${escapeHtml(p.id)}" loading="lazy" />`)
     .join('');
   return `<div class="deck-tile" ${titleAttr || ''} style="padding-bottom: calc(${TILE_ASPECT_PCT}% + ${extra}px)">${layers}</div>`;
 }
@@ -391,13 +391,23 @@ function deckDescriptionHtml(deck) {
   return (deck.description ? `<div class="dd-legacy">${deck.description}</div>` : '') + sections;
 }
 
-// Hover popup for @[Card] tags - the publish step makes sure every tagged
-// card has a printing (and image) in deck-card-details.json.
+// Hover zoom: shows an enlarged card next to the cursor for
+//  - @[Card] tags in the description (looked up by display name; the publish
+//    step makes sure every tagged card has a printing + image), and
+//  - any element carrying data-zoom="<printing id>" (Legends, every decklist
+//    tile layer, the Legend fans on the deck list).
+// Skipped on touch devices, which have no hover.
+const canHover = window.matchMedia?.('(hover: hover)').matches ?? true;
+
 document.addEventListener('mousemove', (e) => {
+  if (!canHover) return;
   let pop = document.getElementById('card-tag-pop');
-  const tag = e.target.closest?.('[data-card-tag]');
-  const card = tag && Object.values(cardDetails).find((c) => c.displayName === tag.dataset.cardTag);
-  if (!card) {
+  const zoomEl = e.target.closest?.('[data-zoom]');
+  const tag = !zoomEl && e.target.closest?.('[data-card-tag]');
+  const cardId = zoomEl
+    ? zoomEl.dataset.zoom
+    : tag && Object.values(cardDetails).find((c) => c.displayName === tag.dataset.cardTag)?.id;
+  if (!cardId) {
     if (pop) pop.hidden = true;
     return;
   }
@@ -409,11 +419,20 @@ document.addEventListener('mousemove', (e) => {
     document.body.appendChild(pop);
   }
   const img = pop.querySelector('img');
-  if (img.getAttribute('src') !== imageUrl(card.id)) img.src = imageUrl(card.id);
+  if (img.getAttribute('src') !== imageUrl(cardId)) img.src = imageUrl(cardId);
   pop.hidden = false;
-  pop.style.left = `${Math.min(e.clientX + 16, innerWidth - 250)}px`;
-  pop.style.top = `${Math.max(8, Math.min(e.clientY - 150, innerHeight - 330))}px`;
+  // Beside the cursor; flip to its left near the right edge, keep fully on screen.
+  // Size from the CSS width + card aspect ratio, not from the element: the image
+  // may not have loaded yet on the first hover, which would measure ~0 tall.
+  const w = Math.min(300, innerWidth * 0.38, ((innerHeight - 20) * 63) / 88);
+  const h = Math.round((w * 88) / 63) + 4;
+  const left = e.clientX + 18 + w > innerWidth - 8 ? e.clientX - 18 - w : e.clientX + 18;
+  pop.style.left = `${Math.max(8, left)}px`;
+  pop.style.top = `${Math.max(8, Math.min(e.clientY - h / 2, innerHeight - h - 8))}px`;
 });
+// Hide when the pointer leaves the page or the view scrolls out from under it.
+document.addEventListener('mouseleave', () => document.getElementById('card-tag-pop')?.setAttribute('hidden', ''));
+window.addEventListener('scroll', () => document.getElementById('card-tag-pop')?.setAttribute('hidden', ''), { passive: true });
 
 // --- Detail rendering -------------------------------------------------
 
