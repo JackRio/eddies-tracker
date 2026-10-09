@@ -1,5 +1,412 @@
 [
   {
+    "id": "d1791558886723pj6cfr",
+    "name": "Against BBG #2 ~ RareTotem",
+    "description": "",
+    "descSections": {
+      "overview": "Red-Yellow midrange value deck. It digs and trashes with cheap Programs, defends the Gig area with Blockers, then lands discounted heavy Units.\nIt wins by stealing Gigs with big Units, pumping them to 8+ for cards, and reaching 7 Gigs.",
+      "early": "Turns 1-2: cheap Programs such as @[All is Lost] and @[The Heist] to dig and start filling the trash; @[Industrial Assembly] if a Gig is within reach of the pump.\nPut out @[Mantis Blades] or a @[Mandibular Upgrade] only when a Unit is ready to carry it.\nTurn 3: @[La Llorona: Ghost of the Past] or @[Viktor Vektor: You Might Feel a Little Pinch] as an early body that protects the Gig area.",
+      "mid": "Play @[Meredith Stout: Stone Cold Corpo] and @[6th Street Recruits] and use @[Bonnie and Clyde] on small attackers.\nTrade Units on purpose to fill the trash, so @[Trauma Team Operatives] drops to a low cost.\nTake the first steals with @[V: Roamer of the Badlands] and pump the Gigs to 8+.",
+      "late": "Drop @[Yorinobu Arasaka: Steel Dragon] to bring back a cheap Unit from the trash or hand with attack rights.\n@[Johnny Silverhand: Never Stop Fighting] attacks spent Units repeatedly. Use @[V: Streetkid] Call or Go Solo to recover Programs or add pressure.\nConvert 8+ Gigs into draws and close on 7 Gigs.",
+      "combos": "@[Trauma Team Operatives] - 7-power body that is nearly free once Units are in the trash; the Programs and trades exist to enable it.\n@[Yorinobu Arasaka: Steel Dragon] - turns the trash and cheap Units into free tempo with attack rights; the top-end payoff.\n@[All is Lost] - cheap digging that finds Units and fills the trash for Trauma Team, Yorinobu and Viktor.\n@[V: Roamer of the Badlands] - the Gig steal-and-pump engine; it makes 8+ Gigs and draws cards.\n@[Industrial Assembly] - cheap Gig pump and draw that turns on 8+ Gig payoffs.",
+      "mulligan": "Keep hands with 1-2 cheap Programs (@[All is Lost], @[The Heist], @[Industrial Assembly]) plus a 3-4 cost Unit.\nGear and 6+ cost Units are dead draws without early plays or Units to carry them.\nMulligan hands of only heavy Units, or only Gear with no Units.\nCheap cards can be sold as Eddies, but Units cannot be sold.",
+      "mulliganFirst": "With little to spend on turn 1, keep cheap Programs that dig and fill the trash, plus a 3-cost Unit for turn 2-3.\nA hand with @[Trauma Team Operatives] is fine if the Programs can get Units into the trash.\nAvoid hands built on 6-7 costs with no digging.",
+      "mulliganSecond": "All Legends are available, so a Unit on turn 2-3 and a heavier 4-5 cost play are realistic.\nKeep @[Meredith Stout: Stone Cold Corpo], @[6th Street Recruits] or @[V: Roamer of the Badlands] with a dig Program.\nYou can see whether the rival is aggressive and keep Blockers and @[Bonnie and Clyde] accordingly.",
+      "notes": "Self-milling thins the deck, so watch the deck count in long games.\nWithout steals the Gig-pump and draw payoffs do nothing, and it loses the race to faster Gig-stealers.\nHeavy Units stranded in hand with a sparse trash are the main way to stumble."
+    },
+    "legendCardIds": [
+      "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "e64e2978-695b-4fc5-b17b-62c710a11c47",
+      "81a8dec7-9541-4020-93e1-7d798a57dcbc"
+    ],
+    "legendPrintingIds": [
+      "a8a7d286-0c66-4f01-aca7-45570474d9e4",
+      "b217ae88-52a6-44b3-b021-964db4534dbd",
+      "79119e83-b50b-4a79-8a6c-f496d9ed7ef6"
+    ],
+    "sideboard": {},
+    "swapPlans": [],
+    "cards": {
+      "1b516742-cdf3-4597-8ba1-be787240ab3b": 3,
+      "647bb074-197f-4059-bac5-251b47c98287": 1,
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": 3,
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+      "9ed58d18-df78-4689-b28f-77260243c522": 2,
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+      "2a4a1f1a-9888-403e-90a9-4021c3f52674": 3,
+      "6cf6456d-d020-4c6c-9041-66d503a01a0a": 2,
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 2,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 1,
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
+      "1f969c27-dddb-4971-9ab5-bd728c3e3e52": 3,
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+      "5ea00b3a-7e85-4c7d-91ad-90e0cf370c27": 3,
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 3
+    },
+    "cardPrintings": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": {
+        "14e20948-a74b-4a27-a156-d34d8cfb98cc": 3
+      },
+      "1f969c27-dddb-4971-9ab5-bd728c3e3e52": {
+        "27a2fceb-5c37-4cfa-8efb-1e4618d22401": 3
+      },
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": {
+        "2ca6ae1f-b10c-439d-a929-cd82c3b1158c": 3
+      },
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": {
+        "161bfaaf-ec85-4142-8538-f5faf9181267": 3
+      },
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": {
+        "975957a0-9c72-4a67-8260-f86c1c70bfb5": 1
+      },
+      "1b516742-cdf3-4597-8ba1-be787240ab3b": {
+        "91e553d4-ac26-4135-bcd9-9fc2661d3e90": 3
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+        "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 1
+      },
+      "9ed58d18-df78-4689-b28f-77260243c522": {
+        "b460b92c-c0fd-43ed-84db-8615032e47f4": 2
+      },
+      "6cf6456d-d020-4c6c-9041-66d503a01a0a": {
+        "19ef8a11-606b-44f3-b20e-08800c9d6cc2": 2
+      },
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": {
+        "dc0a7e03-54b6-4334-965f-27a3d469fed6": 2
+      },
+      "5ea00b3a-7e85-4c7d-91ad-90e0cf370c27": {
+        "709ec425-eda5-4621-b907-94a507a20351": 3
+      },
+      "2a4a1f1a-9888-403e-90a9-4021c3f52674": {
+        "df879b77-ca97-4e3d-8879-ecd73ceebf21": 3
+      },
+      "647bb074-197f-4059-bac5-251b47c98287": {
+        "e3005cf1-4dbc-4f4e-922b-af81d6086015": 1
+      },
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": {
+        "25077971-70cc-4524-b7cf-cd8258abc28c": 3
+      }
+    },
+    "links": [],
+    "createdAt": "2026-10-09T15:14:56.854Z",
+    "updatedAt": "2026-10-09T15:16:15.132Z"
+  },
+  {
+    "id": "d17915587506368hitys",
+    "name": "Against BBG ~ RareTotem",
+    "description": "",
+    "descSections": {
+      "overview": "Red midrange beatdown. It plays big vanilla Units behind cheap removal and Gear, and uses cards from drawing Gear to keep up.\nIt wins by attacking the Gig area with 8-10 power Units, with @[Animals Wrecker] stealing two Gigs at a time, until it holds 7 Gigs.",
+      "early": "Turns 1-2: play 1-2 cost cards such as @[Mantis Blades], @[Satori: Sword of Saburo], @[Zetatech Faceplate] or @[Industrial Assembly]. Sell spare Gear or Programs to ramp. @[Augmented Negotiators] is a cheap defensive play if the rival is aggressive. Use @[All is Lost] to find Units and fill the trash for @[Yorinobu Arasaka: Steel Dragon].",
+      "mid": "Turns 3-5: land @[6th Street Recruits] or @[Rockn' Rockerboy] and equip Gear to make them win fights.\nUse @[Bonnie and Clyde] or @[Over the Edge] on a spent rival Unit, then attack the Gig area.\nCall @[V: Streetkid] or @[Dum Dum: Maelstrom Triggerman] for card flow when mana allows.",
+      "late": "Turns 6+: @[Animals Wrecker] and @[Yorinobu Arasaka: Steel Dragon] (which brings back a cheap Unit from trash) deliver the multi-steal attacks.\n@[Adam Smasher: Ender of Legends] Go Solo removes a blocker and attacks the same turn.\n@[Carnage at the Colosseum] is cheap once Gigs reach 8+. Use @[Industrial Assembly] to get there.",
+      "combos": "@[Animals Wrecker] - the main finisher, steals 2 Gigs per attack, so the removal suite exists to clear its way.\n@[Yorinobu Arasaka: Steel Dragon] - turns a 7-cost play into two Units, with a free cheap Unit from hand or trash that can attack rival Units.\n@[Over the Edge] - flexible removal for any Unit, as long as a d20 Gig has a high value. @[Industrial Assembly] helps with that.\n@[Satori: Sword of Saburo] - the Gear that gives power and draws, so fights give card advantage. It also counts for @[Dum Dum: Maelstrom Triggerman].\n@[All is Lost] with @[Yorinobu Arasaka: Steel Dragon] - fills the trash with Units to bring back for free.",
+      "mulligan": "Keep hands with 2-3 cheap plays (Gear, @[Industrial Assembly], @[All is Lost]) and one Unit or removal to aim at. A hand of several 6-7 cost Units with no cheap plays is a mulligan. Removal Programs with no Unit to follow them are weak alone.",
+      "mulliganFirst": "Going first, only one Legend is ready on turn 1, so the early turns are for cheap setup: Gear, @[Industrial Assembly], @[All is Lost]. Keep a hand with 1-2 cost plays and a 4-5 cost Unit like @[6th Street Recruits] or @[Rockn' Rockerboy] for turn 3-4.",
+      "mulliganSecond": "Going second, all Legends are ready, so a 3-5 cost play on turn 1-2 is possible.\nLook at the rival's board: keep @[Bonnie and Clyde] or @[Over the Edge] if it has Units, or a big Unit if it plays defensively.\nA hand with a 5-cost Unit such as @[Rockn' Rockerboy] plus 2 cheap plays is a good keep.",
+      "notes": "The deck loses to fast stealing and to rivals that trade one for one with its expensive Units.\nIt can stall with clunky hands full of 6-7 cost cards. Self-trashing from @[All is Lost] and @[V: Streetkid] costs cards from a 41-card deck."
+    },
+    "legendCardIds": [
+      "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
+      "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+      "eff41c12-b872-4101-9779-00e691532893"
+    ],
+    "legendPrintingIds": [
+      "33cfbdb0-a169-458a-86dc-9123697654d7",
+      "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+      "4d75c13e-bde2-409b-8bcc-516e054f28f5"
+    ],
+    "sideboard": {},
+    "swapPlans": [],
+    "cards": {
+      "ce45cb9d-430a-4ccf-bb4b-acf0b76120e0": 3,
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": 3,
+      "7ea6eecc-e55e-4634-93eb-b2b46e79635d": 3,
+      "e8aa7757-e5e3-4137-8970-4fa546b9bed9": 3,
+      "6cf6456d-d020-4c6c-9041-66d503a01a0a": 3,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
+      "1f969c27-dddb-4971-9ab5-bd728c3e3e52": 3,
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+      "59ddecca-1501-492a-b8b1-d4b38d4486c9": 2,
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 3,
+      "144c3559-3518-4c01-b9e6-af42b7166661": 3,
+      "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": 3
+    },
+    "cardPrintings": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": {
+        "14e20948-a74b-4a27-a156-d34d8cfb98cc": 3
+      },
+      "1f969c27-dddb-4971-9ab5-bd728c3e3e52": {
+        "27a2fceb-5c37-4cfa-8efb-1e4618d22401": 3
+      },
+      "e8aa7757-e5e3-4137-8970-4fa546b9bed9": {
+        "81364914-7121-43fc-9610-f2f9736866d1": 3
+      },
+      "59ddecca-1501-492a-b8b1-d4b38d4486c9": {
+        "d2aed299-7c88-484a-aa8a-e2e2f09bf8a8": 2
+      },
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": {
+        "2ca6ae1f-b10c-439d-a929-cd82c3b1158c": 3
+      },
+      "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": {
+        "171b21b1-90d0-4d3b-a060-740c413b7bf2": 3
+      },
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": {
+        "161bfaaf-ec85-4142-8538-f5faf9181267": 3
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "144c3559-3518-4c01-b9e6-af42b7166661": {
+        "6213bf57-92d7-4a64-8d80-948ba53b8d80": 3
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+      },
+      "6cf6456d-d020-4c6c-9041-66d503a01a0a": {
+        "19ef8a11-606b-44f3-b20e-08800c9d6cc2": 3
+      },
+      "ce45cb9d-430a-4ccf-bb4b-acf0b76120e0": {
+        "28973c43-529c-487e-aa05-ac99280d66c3": 3
+      },
+      "7ea6eecc-e55e-4634-93eb-b2b46e79635d": {
+        "58cffb40-0914-4c6b-81cf-cdd8b2b83f17": 3
+      },
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": {
+        "25077971-70cc-4524-b7cf-cd8258abc28c": 3
+      }
+    },
+    "links": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=8W9f2BwK8MM&t=9s"
+      },
+      {
+        "label": "Cyberpunk",
+        "url": "https://cyberpunktcg.com/decks/1e3807e8-572c-4dcd-bc18-878c3237571b"
+      }
+    ],
+    "createdAt": "2026-10-09T15:14:12.760Z",
+    "updatedAt": "2026-10-09T15:15:43.112Z"
+  },
+  {
+    "id": "d1791557848243ortgzc",
+    "name": "RGB ",
+    "description": "",
+    "descSections": {
+      "overview": "Three-color midrange beatdown. It plays efficient 5-6 power Units, equips Gear, and wins fights.\nIt wins by clearing or spending the rival's Units, then stealing Gigs with big attackers until it holds 7.",
+      "early": "Use cheap turns to set up: play @[Mantis Blades] or @[Floor It], or sell spare cards to Eddies. Aim to land a 4-cost Unit as soon as Eddies and Legends allow, preferably a 6-power one such as @[Psycho Squad]. Hold @[Synapse Burnout] and @[Floor It] as Quick tricks to protect the first Unit in fights.\n",
+      "mid": "Add a second Unit and equip Gear: @[Satori: Sword of Saburo] and @[NetWatch Netdriver] turn every attack into card flow.\nUse @[Memory Relapse] or the Call of @[Padre: Man of the Cross] to spend a blocker and hit it for a clean win.\nKeep @[Meredith Stout: Stone Cold Corpo] or a @[Riot Shield] carrier back to guard your Gigs against steals.",
+      "late": "Bring in @[MaxTac AV] and @[Johnny Silverhand: Never Stop Fighting] to break through. @[Johnny Silverhand: Never Stop Fighting] can attack repeatedly after a won fight.\nCast @[Nocturne OP55 N1] cheaply once the fixer area is empty, to draw 2 or stop a key Unit from attacking.\nAim your steals at the Gig area, using Gear power to reach 10+ for a double steal.",
+      "combos": "@[Memory Relapse] - makes a rival Unit attackable and draws if your Street Cred is even; it is the deck's main way to start the fight loop.\n@[Satori: Sword of Saburo] - turns won fights into cards, so it rewards every attacker in the deck.\n@[Johnny Silverhand: Never Stop Fighting] - a repeat attacker that readies after a fight win and can win fights against spent CORPO Units.\n@[Psycho Squad] - the efficient 6-power body that the Gear and tricks go onto.\n@[Padre: Man of the Cross] - the Call spends a rival Unit for free, or draws; the cheapest way to open an attack.",
+      "mulligan": "Keep hands with one or two Units at 4 cost or less, plus Gear or a cheap Program and enough cheap plays to curve out.\nCheap plays: @[Floor It], @[Mantis Blades], @[Synapse Burnout].\nGear and tricks alone do nothing without a Unit. A hand with only 5-6 cost Units and nothing cheap is a mulligan.\n@[Memory Relapse] is a dead draw early without a Unit to attack with.",
+      "mulliganFirst": "Going first you have little to spend early, so keep cheap Gear or Programs for turns 1-2. A 4-cost Unit is a fine keep with a cheap play and sellable cards to build Eddies. Turn 1: sell or play a 1-cost card. Turn 2 builds toward the first Unit.",
+      "mulliganSecond": "All Legends are ready, so you can play a 4-cost Unit sooner. Keep a Unit plus Gear.\nYou see the rival's board first, so keep @[Memory Relapse] or @[Floor It] if they open with a Unit.\nMulligan hands with no Unit.",
+      "notes": "The deck is a pile of efficient cards without a tight engine, so it loses to faster stealing or bigger Units.\nThree colors with 4-cost Units can clog the hand early.\nIt does not exploit Gig-pair or Gig-value effects much; avoid relying on them."
+    },
+    "legendCardIds": [
+      "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "501a3796-9983-400f-86e4-97ffac5d5451",
+      "99f5e311-8dfd-42a9-abd0-2e50ac68679e"
+    ],
+    "legendPrintingIds": [
+      "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+      "e1f5dc01-9e96-4102-af3f-07ad31f5db15",
+      "33ee09a3-4591-4302-9052-6dd5130861c6"
+    ],
+    "sideboard": {
+      "5d6afeed-1532-4a01-bb40-a011030a7785": 1,
+      "4a8dfe3f-980d-4370-ac10-6bd989042cdf": 1,
+      "d6f16c44-6d56-48ff-8130-154eea5540ca": 1,
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 1,
+      "3c144d6a-0c1a-43e9-bd35-85d6fc46adef": 1,
+      "2697ed9d-72fc-4658-9c94-977668911a67": 2
+    },
+    "swapPlans": [],
+    "cards": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": 3,
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": 3,
+      "14d87f2a-8bd7-424f-b65b-3659156cef81": 3,
+      "d6f16c44-6d56-48ff-8130-154eea5540ca": 2,
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "7da95cf0-f749-439f-b40a-9d3057d2c995": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "40c98fdc-45d0-458d-be2c-2697dc337ca5": 3,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "f3ba5ef7-5e91-4956-a887-b88a4b854867": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 3
+    },
+    "cardPrintings": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": {
+        "14e20948-a74b-4a27-a156-d34d8cfb98cc": 3
+      },
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": {
+        "975957a0-9c72-4a67-8260-f86c1c70bfb5": 1
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+        "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+      },
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 3
+      },
+      "40c98fdc-45d0-458d-be2c-2697dc337ca5": {
+        "e2a34251-d2d9-46e0-9840-ca69a358a6ae": 3
+      },
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 3
+      },
+      "14d87f2a-8bd7-424f-b65b-3659156cef81": {
+        "61118bbb-c1f6-4b1d-8d46-4f33f0a135b1": 3
+      },
+      "d6f16c44-6d56-48ff-8130-154eea5540ca": {
+        "27c1bf13-5f6b-4421-aa76-5789a94c9c1b": 2
+      },
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
+        "7a8c2032-e753-43ab-9c3b-adefb4281241": 3
+      },
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": {
+        "786d5ce2-bfc0-4648-9c7d-323e939a1d34": 3
+      },
+      "7da95cf0-f749-439f-b40a-9d3057d2c995": {
+        "fa711a0e-06bb-429b-a43a-89c50fb9d590": 3
+      },
+      "f3ba5ef7-5e91-4956-a887-b88a4b854867": {
+        "535cec6e-269d-4c2d-860c-5c8eff999c21": 3
+      }
+    },
+    "links": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=FgYpjKjUwgM"
+      }
+    ],
+    "createdAt": "2026-10-09T14:59:48.051Z",
+    "updatedAt": "2026-10-09T15:07:56.382Z"
+  },
+  {
+    "id": "d179153676955210wc08",
+    "name": "BBG Vex",
+    "description": "",
+    "descSections": {
+      "overview": "Blue-Green Program control. It answers rival Units with bottom-deck and power-shrink Programs while cheap draw Programs keep the hand full.\nIt wins by stealing Gigs with a few Units and @[Placide: Voodoo Sentinel] once the rival board is empty.",
+      "early": "Turn 1-2: play cheap Programs like @[Trust No One], @[Floor It] or @[Peace Offering] to draw and shape the Gigs. Sell spare cards for Eddies. Add @[Jacked-In Voodoo Boy] only when a Program can enable its attack. Hold @[Take Control] for a steal attempt. Aim for a min Gig early so @[Three Mouths, One Desire] and @[Chrome Reverie] come online.",
+      "mid": "Turn 3-5: use @[Three Mouths, One Desire], @[Nocturne OP55 N1] and @[Chrome Reverie] to dig and get a free Legend Call. Answer attackers with @[Pyramid Song] and @[Les Élémens].\nLand @[Pepe Najarro: Working Doubles] or @[Lizzy Wizzy: Delicate Weapon] as board presence.\nUse @[Memory Relapse] to spend a rival Unit so your attackers can hit it.",
+      "late": "Keep the rival board empty with @[Towerfall] and bottom-deck removal, and replay key Programs with @[Alt Cunningham: Soulkiller Architect].\nCast @[Placide: Voodoo Sentinel] with a spare Program as discard fodder, and attack repeatedly to steal 2 Gigs at a time.\nFinish by making your attackers outlast the rival's answers.",
+      "combos": "@[Trust No One] - makes min Gigs and draws. It switches on @[Three Mouths, One Desire], @[Chrome Reverie], @[Pyramid Song] and @[Alt Cunningham: Soulkiller Architect].\n@[Three Mouths, One Desire] - the main digging Program. It gets better with each min Gig and thins the deck toward removal.\n@[Alt Cunningham: Soulkiller Architect] - makes the Program count worth it by replaying removal or draw from trash and discounting Programs per min Gig.\n@[Placide: Voodoo Sentinel] - the finisher. It turns spare Programs into repeated removal and steals 2 Gigs per hit.\n@[Towerfall] - the board reset that protects your Gig area. It is strongest when you trail in Street Cred.\nBest pair: @[Trust No One] into @[Chrome Reverie] gives a stopped attacker, a free Legend Call and a drawn card.",
+      "mulligan": "Keep hands with 2-3 cheap Programs (@[Trust No One], @[Floor It], @[Peace Offering], @[Three Mouths, One Desire]) plus one removal Program or a cheap Unit.\nCards like @[Towerfall], @[Les Élémens] and @[Placide: Voodoo Sentinel] do nothing early on their own and need cheap plays around them.\n@[Jacked-In Voodoo Boy] alone with no Programs is weak.\nMulligan hands full of 5+ cost cards or with no cheap plays.",
+      "sideboard": "For the mirror: @[Sandayu Oda: Hanako's Guardian|Sandayu Oda], extra @[Valentino Street Racer|Street Racers] and @[Psycho Squad].\nAgainst red/red/blue: extra @[Maman Brigitte: Spirit of Death|Maman Brigitte].\n@[Modded Kusanagi]: a sideboard card, not main deck.",
+      "notes": "The deck can run out of ways to win: it has few Units, and its removal Programs can end up as the only plays in hand.\nFast Gig-stealing decks can race you before your Programs line up.\nPushing Gigs to min makes the Gig area easy to steal from, so watch your Gig count.",
+      "mulliganFirst": "You have little spendable value on turns 1-2, so you want 1-cost Programs to play and draw with. @[Trust No One] and @[Floor It] are ideal, and spare cards can be sold for Eddies.\nKeep a hand with a cheap cantrip and @[Three Mouths, One Desire] for turn 3. Expensive removal is acceptable only if the hand has several cheap plays to bridge to it.",
+      "mulliganSecond": "You see the rival's board first and have all Legends ready. A hand with @[Pyramid Song], @[Chrome Reverie] or @[Floor It] to answer their first attacker is strong.\nYou can keep a heavier hand, such as @[Les Élémens] with cheap Programs, since you can pay for it sooner. Mulligan if the hand has no way to answer an early rival Unit."
+    },
+    "legendCardIds": [
+      "12475e77-0e16-420e-a935-65eb74290de8",
+      "380b5e52-2651-4cde-8222-1db2ae6469e2",
+      "40502c1f-78a2-426a-a706-c60ebd4b31e3"
+    ],
+    "legendPrintingIds": [
+      "873656f0-c32a-46fb-856f-8a5ee44b8d21",
+      "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
+      "a33d3324-fe48-4a9f-80a8-8545a0a4727f"
+    ],
+    "sideboard": {},
+    "swapPlans": [],
+    "cards": {
+      "b0453570-7ed8-4031-9562-cb73d7a979e5": 3,
+      "5d6afeed-1532-4a01-bb40-a011030a7785": 1,
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": 3,
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": 1,
+      "5380dea3-4d21-445b-af02-487b45d40395": 1,
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 1,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 2,
+      "20484778-9294-4148-bd8c-fa78572f4452": 3,
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": 2,
+      "2993d637-d44d-4add-8473-26d67c0d1bc0": 3,
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "7977a175-0516-478e-b166-3edb035849a4": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 2,
+      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": 3,
+      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": 3
+    },
+    "cardPrintings": {
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": {
+        "0be394e3-ce41-4f16-a95b-33ec951bf43c": 3
+      },
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 2
+      },
+      "b0453570-7ed8-4031-9562-cb73d7a979e5": {
+        "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": 3
+      },
+      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": {
+        "7e86c639-5225-4a91-be33-6ab86c9adfe2": 3
+      },
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": {
+        "929b5e98-ab82-4e36-bb72-a00a223ded77": 1
+      },
+      "5380dea3-4d21-445b-af02-487b45d40395": {
+        "220bef49-2e98-4bc6-b023-5bb8f492b29b": 1
+      },
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 3
+      },
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": {
+        "0ff059f8-90c3-47ef-ba3b-cd380f30f14e": 1
+      },
+      "7977a175-0516-478e-b166-3edb035849a4": {
+        "bab79ef1-57fb-4b24-b50a-e08899699862": 3
+      },
+      "2993d637-d44d-4add-8473-26d67c0d1bc0": {
+        "0449bc78-983b-4681-b062-0738de3c487b": 3
+      },
+      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": {
+        "25508f49-7256-47be-bc95-c420c7105c62": 1,
+        "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72": 1
+      },
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": {
+        "f9a81013-9c64-4e48-8d1d-cd1b41b72ee0": 3
+      },
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
+        "7a8c2032-e753-43ab-9c3b-adefb4281241": 2
+      },
+      "20484778-9294-4148-bd8c-fa78572f4452": {
+        "2cff513f-6a75-40f0-8e70-e1491d340472": 3
+      },
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": {
+        "786d5ce2-bfc0-4648-9c7d-323e939a1d34": 3
+      },
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": {
+        "a7a49ccf-4b85-4997-b08c-16e8e80d9aa8": 2
+      },
+      "5d6afeed-1532-4a01-bb40-a011030a7785": {
+        "c828bc68-23a3-41ef-878b-00b13ccf0cdc": 1
+      }
+    },
+    "links": [],
+    "createdAt": "2026-10-09T09:06:23.039Z",
+    "updatedAt": "2026-10-09T14:25:03.380Z"
+  },
+  {
     "id": "d17915412058685z8e2p",
     "name": "Panam Panam Panam",
     "description": "",
@@ -107,109 +514,6 @@
     ],
     "createdAt": "2026-10-09T10:20:48.721Z",
     "updatedAt": "2026-10-09T13:39:31.844Z"
-  },
-  {
-    "id": "d179153676955210wc08",
-    "name": "BBG Vex",
-    "description": "",
-    "descSections": {
-      "overview": "Win the Gig (dice) battle and out-draw your opponent. Push your Gigs down to min with @[Trust No One] and @[Peace Offering] to draw cards, steal Gigs, and remove key units. Value pairs of Gigs let @[Pepe Najarro: Working Doubles|Pepe] ready your Merc Legends and power Hanako’s draw. Your three Legends are Jackie, Alt and Hanako.",
-      "early": "Going first - Turn 1: @[Jacked-In Voodoo Boy|Voodoo Boy], or @[Trust No One] plus calling a Legend.\nGoing second - you start with 4 resources and all Legends ready. Turn-1 @[Pepe Najarro: Working Doubles|Pepe] is strong against most decks. Against blue/green, keep a hand that answers @[Jacked-In Voodoo Boy|Voodoo Boy].",
-      "mid": "Turn 2: @[Les Élémens], @[Pyramid Song], or @[Chrome Reverie]. Roll Gigs from the smallest die (D4) upward. Play @[Nocturne OP55 N1|Nocturne] early so Alt or Lizzy can reuse it.",
-      "late": "Aim for turns with a double @[Pepe Najarro: Working Doubles|Pepe], using value pairs of Gigs to ready your Merc Legends. @[Towerfall] is the sweeper (-5 to all rival units). Keep key Programs in your trash for Alt, especially @[Les Élémens].",
-      "combos": "@[Jacked-In Voodoo Boy] (2 cost, 2 power): can’t attack unless you played a Program that turn. It’s the best turn-1 play going first.\n@[Pepe Najarro: Working Doubles|Pepe Najarro] (4 cost, 6 power, 3 copies): attacking with a value pair of Gigs readies up to 2 Merc Legends. Aim for turns with a double @[Pepe Najarro: Working Doubles|Pepe].\n@[Valentino Street Racer] (1 copy): gives another unit with cost 5 or less Adrenaline. Use it on @[Pepe Najarro: Working Doubles|Pepe] for a first-turn attack that doubles as removal.\n@[Les Élémens] (5 cost): bottom-decks the opponent’s lowest-power unit. @[Jacked-In Voodoo Boy|Voodoo Boy] into @[Les Élémens] is the ideal curve.\n@[Trust No One] (1 cost): lowers a Gig by up to 3, and you draw a card if you control a min Gig. Pair it with @[Pyramid Song].\n@[Pyramid Song] (3 cost): -5 power to a rival unit (printed as -4) or bottom-deck a power-0 unit. You get both effects if your D4 is at min.\n@[Nocturne OP55 N1|Nocturne] (3 cost, or 1 if your fixer area is empty): draw 2, or stop a unit from attacking. Play it early so Alt or Lizzy can reuse it.\n@[Peace Offering]: never sell the first copy. It sets a Gig to match another Gig, and you draw if that makes a value pair.\n@[Take Control] and @[Floor It]: Quick tricks. @[Take Control] makes a rival unit steal 1 fewer Gig, and @[Floor It] gives -1 power and draws a card.\n@[Chrome Reverie]: stops a rival unit from attacking, and with a min Gig it Calls a Legend for free.\n@[Memory Relapse]: spends a rival unit so it can’t ready. @[Towerfall] is the sweeper (-5 to all rival units).\nAlt: replays a Program from your trash. Keep key Programs there, especially @[Les Élémens].\nOne-of utility cards:\n@[Lizzy Wizzy: Delicate Weapon|Lizzy Wizzy]: a blocker that replays a cheap Program.\n@[Placide: Voodoo Sentinel|Placide]: an 8-cost threat, but don’t slam it just because you hit 8 Eddies.\n@[Maman Brigitte: Spirit of Death|Maman Brigitte]: costs you two Programs, so keep it to one copy. It’s better against decks that don’t equip often.",
-      "mulligan": "Keep: @[Jacked-In Voodoo Boy] going first, a @[Trust No One] + @[Pyramid Song] combo, or a 4-cost @[Pepe Najarro: Working Doubles|Pepe] going second.\nMulligan: multiple @[Nocturne OP55 N1|Nocturnes] with no turn-1 play, or hands built around @[Valentino Street Racer|Street Racer] too early.\nYou only get one mulligan, so a playable hand beats a risky one.",
-      "sideboard": "For the mirror: @[Sandayu Oda: Hanako's Guardian|Sandayu Oda], extra @[Valentino Street Racer|Street Racers] and @[Psycho Squad].\nAgainst red/red/blue: extra @[Maman Brigitte: Spirit of Death|Maman Brigitte].\n@[Modded Kusanagi]: a sideboard card, not main deck.",
-      "notes": ""
-    },
-    "legendCardIds": [
-      "12475e77-0e16-420e-a935-65eb74290de8",
-      "380b5e52-2651-4cde-8222-1db2ae6469e2",
-      "40502c1f-78a2-426a-a706-c60ebd4b31e3"
-    ],
-    "legendPrintingIds": [
-      "873656f0-c32a-46fb-856f-8a5ee44b8d21",
-      "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
-      "a33d3324-fe48-4a9f-80a8-8545a0a4727f"
-    ],
-    "sideboard": {},
-    "swapPlans": [],
-    "cards": {
-      "b0453570-7ed8-4031-9562-cb73d7a979e5": 3,
-      "5d6afeed-1532-4a01-bb40-a011030a7785": 1,
-      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": 3,
-      "6b078eff-4cef-4beb-a299-ed388a72ce45": 1,
-      "5380dea3-4d21-445b-af02-487b45d40395": 1,
-      "783a9082-b79c-4b45-bf66-48728ff9b92d": 1,
-      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 2,
-      "20484778-9294-4148-bd8c-fa78572f4452": 3,
-      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
-      "1535c19d-54e5-4289-9cb7-15ab429c0092": 2,
-      "2993d637-d44d-4add-8473-26d67c0d1bc0": 3,
-      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
-      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
-      "7977a175-0516-478e-b166-3edb035849a4": 3,
-      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 2,
-      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": 3,
-      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": 3
-    },
-    "cardPrintings": {
-      "19f34c9b-a24a-43be-bd9f-62c37435e994": {
-        "0be394e3-ce41-4f16-a95b-33ec951bf43c": 3
-      },
-      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
-        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 2
-      },
-      "b0453570-7ed8-4031-9562-cb73d7a979e5": {
-        "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": 3
-      },
-      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": {
-        "7e86c639-5225-4a91-be33-6ab86c9adfe2": 3
-      },
-      "6b078eff-4cef-4beb-a299-ed388a72ce45": {
-        "929b5e98-ab82-4e36-bb72-a00a223ded77": 1
-      },
-      "5380dea3-4d21-445b-af02-487b45d40395": {
-        "220bef49-2e98-4bc6-b023-5bb8f492b29b": 1
-      },
-      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
-        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 3
-      },
-      "783a9082-b79c-4b45-bf66-48728ff9b92d": {
-        "0ff059f8-90c3-47ef-ba3b-cd380f30f14e": 1
-      },
-      "7977a175-0516-478e-b166-3edb035849a4": {
-        "bab79ef1-57fb-4b24-b50a-e08899699862": 3
-      },
-      "2993d637-d44d-4add-8473-26d67c0d1bc0": {
-        "0449bc78-983b-4681-b062-0738de3c487b": 3
-      },
-      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": {
-        "25508f49-7256-47be-bc95-c420c7105c62": 1,
-        "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72": 1
-      },
-      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": {
-        "f9a81013-9c64-4e48-8d1d-cd1b41b72ee0": 3
-      },
-      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
-        "7a8c2032-e753-43ab-9c3b-adefb4281241": 2
-      },
-      "20484778-9294-4148-bd8c-fa78572f4452": {
-        "2cff513f-6a75-40f0-8e70-e1491d340472": 3
-      },
-      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": {
-        "786d5ce2-bfc0-4648-9c7d-323e939a1d34": 3
-      },
-      "1535c19d-54e5-4289-9cb7-15ab429c0092": {
-        "a7a49ccf-4b85-4997-b08c-16e8e80d9aa8": 2
-      },
-      "5d6afeed-1532-4a01-bb40-a011030a7785": {
-        "c828bc68-23a3-41ef-878b-00b13ccf0cdc": 1
-      }
-    },
-    "links": [],
-    "createdAt": "2026-10-09T09:06:23.039Z",
-    "updatedAt": "2026-10-09T13:38:57.407Z"
   },
   {
     "id": "d1791492796136s4mp5n",
