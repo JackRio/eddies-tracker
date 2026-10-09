@@ -4,15 +4,15 @@
     "name": "BBR ~ Mass Removal",
     "description": "",
     "descSections": {
-      "overview": "Blue Program-control deck that cantrips through 26 Programs and removes rival Units by bottom-decking them with @[Les Élémens], @[Pyramid Song], Maman Brigitte and @[Placide: Voodoo Sentinel]. It wins by emptying the rival's board and then stealing Gigs with @[Placide: Voodoo Sentinel] (10 power steals 2) and the small Units.",
-      "early": "Turns 1-3 are about cheap Programs and card flow. Play @[Trust No One] on a Gig to make a min Gig (draws 1), plus @[Floor It] and @[Peace Offering] as cantrips. @[Jacked-In Voodoo Boy] is a cheap body that can attack once a Program has been played. On turn 3, @[Delamain: Rideshare AI] draws 2, or @[Three Mouths, One Desire] digs for removal and Units. Sell surplus Units (such as extra @[Placide: Voodoo Sentinel]) to build Eddies. Keep @[Floor It] up as a Quick answer to an attacker.",
-      "mid": "Turns 4-6: use Maman Brigitte (discarding 2 spare Programs, such as extra cantrips) and @[Lizzy Wizzy: Delicate Weapon] to bottom-deck rival Units. Lizzy's free Program, such as @[Pyramid Song] or @[Chrome Reverie], gives extra value, and she also blocks. @[Pyramid Song] answers a Unit with -4 power or bottom-decks a 0-power one, and both modes work if a friendly d4 is at min. @[Chrome Reverie] locks an attacker and, with a min Gig, Calls a Legend for free, enabling @[Jackie Welles: Pour One Out For Me] or @[Judy Álvarez: Braindance Maestro]. @[Memory Relapse] spends a rival Unit so your Units can attack it.",
-      "late": "With 8 cost reachable, land @[Placide: Voodoo Sentinel], discarding a Program to bottom-deck a rival Unit on play and again on every attack. Use @[Les Élémens] to clear the last Unit, then attack the empty board so the 10-power Placide steals 2 Gigs. Use @[Nocturne OP55 N1] for 1 €$ if the fixer area is empty, as a draw 2 or a stop-attack to finish. Back up Placide's attacks with Maman Brigitte and Voodoo Boys, which attack after a Program is played.",
-      "combos": "@[Placide: Voodoo Sentinel] - the finisher and repeatable removal with 2 copies.\nMaman Brigitte - 3 copies, 5-cost removal body that turns surplus Programs into a bottom-deck.\n@[Les Élémens] - 3 copies, unconditional-ish removal of the lowest-power Unit.\n@[Trust No One] - 3 copies, creates min Gigs and draws, enabling many other cards.\n@[Lizzy Wizzy: Delicate Weapon] - 3 copies, replays cheap Programs from hand or trash for free.\n@[Three Mouths, One Desire] - 3 copies, search that scales with min Gigs.\n@[Trust No One] + @[Three Mouths, One Desire]: min Gig first, then take 2+ cards from the top 3.\n@[Trust No One] + @[Chrome Reverie]: the min Gig makes the Legend Call free, and the attacker is locked.\n@[Jackie Welles: Pour One Out For Me] + @[Trust No One]: both decrease Gigs, to hit a min Gig for extra draws.\n@[Lizzy Wizzy: Delicate Weapon] + @[Pyramid Song]: free 3-cost removal, bottom-decked afterwards for reuse.\n@[Pyramid Song]: -4 power on a Unit of power 4 or less leaves it at 0, then the second mode bottom-decks it if a friendly d4 is min.\nMaman Brigitte / @[Placide: Voodoo Sentinel] + spare cantrips: discard fodder for removal.\n@[Judy Álvarez: Braindance Maestro] + Programs: gives +1 power and finds Programs by trashing from the top.",
-      "mulligan": "Keep hands with 2-3 cheap Programs (@[Trust No One], @[Floor It], @[Peace Offering]) plus a play like @[Delamain: Rideshare AI] or @[Three Mouths, One Desire]. Keep a hand with a removal Program or Maman Brigitte if it has cheap cantrips. Toss hands of only expensive cards (@[Placide: Voodoo Sentinel], @[Les Élémens], Brigitte) with no cheap plays. Also toss hands with only Green Programs or @[Memory Relapse], and hands of lone Voodoo Boys, which can't attack without a Program.",
-      "mulliganFirst": "Going first, you have only 1 Legend to spend and no pressure from the rival yet. Want cheap Programs, @[Trust No One] and @[Floor It], plus @[Delamain: Rideshare AI] or @[Three Mouths, One Desire] to keep card flow. Turns 1-2 are cantrips and a body. Do not keep a hand that relies on 5-cost cards. Save @[Floor It] for the first attacker.",
-      "mulliganSecond": "Going second, all 3 Legends are ready, so you can pay for 3-cost plays on turn 1-2: @[Pyramid Song], @[Chrome Reverie] or @[Delamain: Rideshare AI]. Check the opponent's board: against a fast start, keep @[Floor It], @[Chrome Reverie], @[Pyramid Song] and @[Nocturne OP55 N1]. Against a slow start, keep the draw engine (@[Trust No One], @[Three Mouths, One Desire], @[Delamain: Rideshare AI]) and look for Maman Brigitte or @[Les Élémens] on turn 3-4.",
-      "notes": ""
+      "overview": "Blue Green Program-control deck that draws through cheap Programs and bottom-decks every rival Unit.\nIt wins by stealing Gigs through the cleared board, with @[Placide: Voodoo Sentinel] as the main closer.",
+      "early": "Turns 1-2: cheap Programs like @[Trust No One], @[Floor It] and @[Peace Offering] to smooth draws; a @[Jacked-In Voodoo Boy] as the first body. Use @[Trust No One] to push a Gig down toward a min Gig, which switches on @[Three Mouths, One Desire] and @[Chrome Reverie]. Sell spare Programs if Eddies are short; keep removal for real threats.",
+      "mid": "Turn 3-4: @[Delamain: Rideshare AI] or @[Three Mouths, One Desire] to refill, then @[Pyramid Song] or @[Les Élémens] on the first real rival Unit.\n@[Lizzy Wizzy: Delicate Weapon] gives a Blocker and replays a cheap Program from the trash for free.\n@[Maman Brigitte: Spirit of Death] turns two surplus Programs into a bottom-decked rival Unit.",
+      "late": "Land @[Placide: Voodoo Sentinel] and discard a Program on play, then on each attack, to keep clearing blockers.\nUse @[Chrome Reverie] and @[Nocturne OP55 N1] to stop the last rival attackers while Voodoo Boys, Brigitte and @[Placide: Voodoo Sentinel|Placide] steal the Gigs.\nUse @[Judy Álvarez: Braindance Maestro] and @[Delamain: Rideshare AI|Delamain] to keep Programs coming.",
+      "combos": "@[Trust No One] - lowers Gigs to min and draws; feeds @[Three Mouths, One Desire], @[Chrome Reverie], @[Pyramid Song] and Jackie.\n@[Maman Brigitte: Spirit of Death] - converts excess Programs into removal; the deck depends on it as a repeatable cost sink.\n@[Placide: Voodoo Sentinel] - the finisher: removal each attack and a 2-Gig steal.\n@[Lizzy Wizzy: Delicate Weapon] - replays Programs from the trash, a free @[Pyramid Song] or @[Trust No One].\n@[Les Élémens] - clean unconditional removal when fights are unfavorable.",
+      "mulligan": "Keep hands with 2-3 cheap Programs plus a Unit or a draw piece like @[Delamain: Rideshare AI].\nKeep removal (@[Pyramid Song]) only with cheap plays to reach it.\n@[Placide: Voodoo Sentinel] and @[Les Élémens] are dead early, so a hand with several of them and little else should be redone.\n@[Jacked-In Voodoo Boy] is weak without Programs.",
+      "mulliganFirst": "Few Eddies on turns 1-2, so want 1-cost Programs (@[Trust No One], @[Floor It], @[Peace Offering]) and @[Jacked-In Voodoo Boy].\nUse the cheap turns to dig and set up a min Gig, ready for turn 3 @[Delamain: Rideshare AI] or @[Three Mouths, One Desire].\nHands with only 5-cost cards are too slow.",
+      "mulliganSecond": "All Legends available so turn 2-3 plays like @[Delamain: Rideshare AI] and @[Pyramid Song] are easier.\nLook at the rival's board: keep removal like @[Pyramid Song] against early Units, and @[Les Élémens] if a slow hand has plenty of draw.\nAim for a hand that casts a Program each turn.",
+      "notes": "Fast aggro steals Gigs before the engine works, and the deck's power is low in fights.\nDiscarding Programs to Brigitte/@[Placide: Voodoo Sentinel|Placide] with weak draws can run out of gas; watch the deck count with heavy draw.\nThe Green splash (@[Peace Offering], @[Memory Relapse]) is small and Hanako needs value-pairs, so it is a minor synergy."
     },
     "legendCardIds": [
       "40502c1f-78a2-426a-a706-c60ebd4b31e3",
@@ -93,7 +93,7 @@
       }
     ],
     "createdAt": "2026-09-17T23:10:18.737Z",
-    "updatedAt": "2026-10-09T12:43:06.492Z"
+    "updatedAt": "2026-10-09T13:10:15.691Z"
   },
   {
     "id": "d1789687022111t5crdh",
@@ -134,45 +134,6 @@
     ],
     "createdAt": "2026-09-17T23:19:52.515Z",
     "updatedAt": "2026-09-17T23:19:52.515Z"
-  },
-  {
-    "id": "d1789676922540r8ifeb",
-    "name": "Placid YYB",
-    "legendCardIds": [
-      "40502c1f-78a2-426a-a706-c60ebd4b31e3",
-      "5a441989-2997-40a2-a72e-08ca1442a7f3",
-      "e64e2978-695b-4fc5-b17b-62c710a11c47"
-    ],
-    "legendPrintingIds": [
-      "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
-      "5ade304e-8e0e-4484-944a-18d8d08caf9f",
-      "b217ae88-52a6-44b3-b021-964db4534dbd"
-    ],
-    "cards": {
-      "783a9082-b79c-4b45-bf66-48728ff9b92d": 2,
-      "ef77dd1f-3abd-4ce2-becc-97dd768a5022": 3,
-      "6b078eff-4cef-4beb-a299-ed388a72ce45": 2,
-      "65a14367-da52-4578-8162-3c4bac11007d": 3,
-      "7ea6eecc-e55e-4634-93eb-b2b46e79635d": 3,
-      "b665e103-456b-4c51-9551-95b0bc87212a": 2,
-      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 3,
-      "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39": 3,
-      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
-      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
-      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
-      "793d9650-0a59-4c89-9d85-05a9d6873d2e": 3,
-      "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3": 3,
-      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
-      "92d23553-8b0d-49cd-8cbe-6f00b3377298": 1
-    },
-    "links": [
-      {
-        "label": "KP Cyberpunk",
-        "url": "https://www.youtube.com/watch?v=LklmuEzUuZw&t=456s"
-      }
-    ],
-    "createdAt": "2026-09-17T20:32:11.399Z",
-    "updatedAt": "2026-09-17T20:38:38.995Z"
   },
   {
     "id": "d17915412058685z8e2p",
@@ -280,6 +241,45 @@
       "2697ed9d-72fc-4658-9c94-977668911a67": 2
     },
     "swapPlans": []
+  },
+  {
+    "id": "d1789676922540r8ifeb",
+    "name": "Placid YYB",
+    "legendCardIds": [
+      "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "5a441989-2997-40a2-a72e-08ca1442a7f3",
+      "e64e2978-695b-4fc5-b17b-62c710a11c47"
+    ],
+    "legendPrintingIds": [
+      "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+      "b217ae88-52a6-44b3-b021-964db4534dbd"
+    ],
+    "cards": {
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 2,
+      "ef77dd1f-3abd-4ce2-becc-97dd768a5022": 3,
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": 2,
+      "65a14367-da52-4578-8162-3c4bac11007d": 3,
+      "7ea6eecc-e55e-4634-93eb-b2b46e79635d": 3,
+      "b665e103-456b-4c51-9551-95b0bc87212a": 2,
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 3,
+      "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39": 3,
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
+      "793d9650-0a59-4c89-9d85-05a9d6873d2e": 3,
+      "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "92d23553-8b0d-49cd-8cbe-6f00b3377298": 1
+    },
+    "links": [
+      {
+        "label": "KP Cyberpunk",
+        "url": "https://www.youtube.com/watch?v=LklmuEzUuZw&t=456s"
+      }
+    ],
+    "createdAt": "2026-09-17T20:32:11.399Z",
+    "updatedAt": "2026-09-17T20:38:38.995Z"
   },
   {
     "id": "d179153676955210wc08",
