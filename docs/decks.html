@@ -22,43 +22,69 @@
 
   <div class="build-info" id="build-info"></div>
 
-  <main>
+  <main class="wide">
+    <!-- LIST -->
     <div id="decks-list">
-      <div class="result-count" id="deck-result-count"></div>
-      <div id="deck-list-grid" class="deck-list-grid"></div>
-      <div class="empty-state" id="decks-empty" hidden>Nothing published right now — open the Deck Builder and hit "Publish Selected" to bring a deck here.</div>
+      <div class="toolbar">
+        <div class="grow"><input id="q" class="search" type="search" placeholder="Search decks, Legends or cards…" aria-label="Search decks" /><span class="kbd">/</span></div>
+        <div id="color-chips" class="chips"></div>
+        <select id="sort" class="sort" aria-label="Sort decks">
+          <option value="default">Sort: Featured first</option>
+          <option value="recent">Recently updated</option>
+          <option value="name">Name A–Z</option>
+          <option value="cost">Lowest avg cost</option>
+          <option value="size">Most cards</option>
+        </select>
+        <div class="live"><b id="count">0</b> decks live</div>
+      </div>
+      <div id="featured"></div>
+      <div id="deck-list-grid" class="grid"><div class="skeleton clip"></div><div class="skeleton clip"></div><div class="skeleton clip"></div></div>
+      <div class="empty" id="decks-empty" hidden></div>
     </div>
 
+    <!-- DETAIL  -->
     <div id="deck-detail" hidden>
       <a href="#" id="back-to-decks-link" class="search-different-link">&larr; Back to all decks</a>
-      <h2 id="detail-title"></h2>
-      <div id="detail-links" class="detail-links"></div>
-
-      <div id="detail-status" class="deck-status">
-        <div>
-          <div class="deck-status-title">Deck Status</div>
-          <div id="detail-status-sub" class="deck-status-sub"></div>
+      <div class="detail-hero clip" id="detail-hero">
+        <div class="legend-fan hoverable" id="detail-fan" style="width:min(100%,330px)"></div>
+        <div class="grow">
+          <h2 id="detail-title"></h2>
+          <div class="stat-row" id="detail-pills" style="margin:10px 0 0"></div>
+          <div class="actions">
+            <button class="btn" id="btn-copy">Copy decklist</button>
+            <button class="btn" id="btn-share">Share link</button>
+            <button class="btn" id="btn-print">Print</button>
+          </div>
+          <div id="detail-links" class="detail-links"></div>
         </div>
-        <div id="detail-status-badge" class="deck-status-badge"></div>
       </div>
 
-      <div class="deck-section">
-        <h3>Legends <span id="detail-legends-count" class="count-badge"></span></h3>
-        <div id="detail-legends" class="tile-grid"></div>
+      <div class="detail-layout">
+        <aside class="detail-side">
+          <div id="detail-status" class="deck-status">
+            <div>
+              <div class="deck-status-title">Deck Status</div>
+              <div id="detail-status-sub" class="deck-status-sub"></div>
+            </div>
+            <div id="detail-status-badge" class="deck-status-badge"></div>
+          </div>
+          <div class="deck-section">
+            <h3>Legends <span id="detail-legends-count" class="count-badge"></span></h3>
+            <div id="detail-legends" class="tile-grid"></div>
+          </div>
+          <div class="deck-section">
+            <h3>Eddie Cost Curve</h3>
+            <div id="detail-cost-curve"></div>
+          </div>
+          <div id="detail-donuts" class="donut-row"></div>
+        </aside>
+
+        <div class="detail-main">
+          <div id="detail-plans" class="deck-plans" hidden></div>
+          <div id="detail-description" class="deck-description"></div>
+          <div id="detail-card-sections"></div>
+        </div>
       </div>
-
-      <div id="detail-plans" class="deck-plans" hidden></div>
-
-      <div id="detail-description" class="deck-description"></div>
-
-      <div class="deck-section">
-        <h3>Eddie Cost Curve</h3>
-        <div id="detail-cost-curve"></div>
-      </div>
-
-      <div id="detail-donuts" class="donut-row"></div>
-
-      <div id="detail-card-sections"></div>
     </div>
   </main>
 

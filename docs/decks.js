@@ -38,6 +38,165 @@ function cardByCardId(cardId) {
   return Object.values(cardDetails).find((c) => c.cardId === cardId);
 }
 
+// --- List page (hero / grid / search) -------------------------------------
+const COLORS = { Red: '#e8465a', Blue: '#3d8bfd', Green: '#3ecf6e', Yellow: '#e8c93a' };
+const PIN_KEY = 'eddies_pinned_deck';
+const activeColors = new Set();
+
+const safeGet = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+const safeSet = (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} };
+
+function extraStats(deck) {
+  const s = computeDeckStats(deck);
+  let costSum = 0, costN = 0;
+  for (const [cid, qty] of Object.entries(deck.cards || {})) {
+    const c = cardByCardId(cid);
+    if (c && c.cost != null) { costSum += c.cost * qty; costN += qty; }
+  }
+  const legends = (deck.legendPrintingIds || []).filter((p) => p && cardDetails[p]);
+  const legendColors = [...new Set(legends.map((p) => cardDetails[p].color).filter(Boolean))];
+  return { ...s, avg: costN ? costSum / costN : 0, legends, legendColors };
+}
+
+const fanHtml = (s) => s.legends.map((p) => `<img src="${imageUrl(p)}" alt="${escapeHtml(cardDetails[p].displayName)}" loading="lazy">`).join('');
+const dotsHtml = (s) => `<span class="dots">${s.legendColors.map((c) => `<span class="dot" style="background:${COLORS[c]}" title="${c}"></span>`).join('')}</span>`;
+const accent = (s) => `--accent1:${COLORS[s.legendColors[0]] || 'var(--yellow)'}`;
+
+function curveHtml(s) {
+  const ks = [0, 1, 2, 3, 4, 5, 6, 7];
+  const max = Math.max(1, ...ks.map((k) => s.costCounts[k] || 0));
+  return `<div class="curve-wrap"><div class="curve">${ks.map((k) => `<i style="height:${Math.max(4, (s.costCounts[k] || 0) / max * 100)}%" title="${k === 7 ? '7+' : k}: ${s.costCounts[k] || 0}"></i>`).join('')}</div>
+    <div class="curve-labels">${ks.map((k) => `<span>${k === 7 ? '7+' : k}</span>`).join('')}</div></div>`;
+}
+
+function pillsHtml(s, full) {
+  const t = (n) => s.typeCounts[n] || 0;
+  return `<span class="pill ${s.total >= MAIN_DECK_MIN && s.total <= MAIN_DECK_MAX ? 'ok' : 'warn'}"><b>${s.total}</b> cards</span>
+    <span class="pill"><b>${t('Unit')}</b> Unit · <b>${t('Gear')}</b> Gear · <b>${t('Program')}</b> Prog</span>
+    <span class="pill">avg cost <b>${s.avg.toFixed(1)}</b></span>
+    <span class="pill"><b>${s.sellablePct}%</b> sellable</span>${full ? dotsHtml(s) : ''}`;
+}
+
+function excerpt(d) {
+  const raw = d.descSections?.overview || d.description || '';
+  return raw.replace(/<[^>]+>/g, '').replace(/@\[+@?\[?([^\]|]+)(?:\|([^\]]+))?\]+/g, (_, n, a) => a || n).trim();
+}
+
+// Plain-text decklist (main + sideboard) for pasting into chat / other tools.
+function decklistText(deck) {
+  const line = (cid, qty) => `${qty} ${cardByCardId(cid)?.displayName || cardByCardId(cid)?.name || cid}`;
+  const body = (map) => Object.entries(map || {}).filter(([, q]) => q > 0).map(([cid, q]) => line(cid, q));
+  const out = [`# ${deck.name || 'Untitled Deck'}`, '', 'Legends'];
+  (deck.legendCardIds || []).filter(Boolean).forEach((cid) => out.push(line(cid, 1)));
+  out.push('', 'Main', ...body(deck.cards));
+  const side = body(deck.sideboard);
+  if (side.length) out.push('', 'Sideboard', ...side);
+  return out.join('\n');
+}
+
+async function flash(btn, text) {
+  const old = btn.dataset.label || btn.textContent;
+  btn.dataset.label = old;
+  btn.textContent = text;
+  setTimeout(() => (btn.textContent = old), 1300);
+}
+async function copyText(text, btn, msg) {
+  try { await navigator.clipboard.writeText(text); flash(btn, msg || 'Copied'); }
+  catch { flash(btn, 'Copy failed'); }
+}
+const shareUrl = (id) => new URL(`decks.html?id=${encodeURIComponent(id)}`, location.href).href;
+
+// ---- LIST ---------------------------------------------------------------
+function matches(deck, s, q) {
+  if (activeColors.size && ![...activeColors].some((c) => s.legendColors.includes(c))) return false;
+  if (!q) return true;
+  const names = Object.keys(deck.cards || {}).concat(Object.keys(deck.sideboard || {})).map((c) => cardByCardId(c)?.displayName || '').join(' ');
+  const lg = s.legends.map((p) => cardDetails[p].displayName).join(' ');
+  return `${deck.name} ${lg} ${names}`.toLowerCase().includes(q);
+}
+
+function renderList() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const sort = document.getElementById('sort').value;
+  const pinned = safeGet(PIN_KEY);
+  let list = publishedDecks.map((d) => ({ d, s: extraStats(d) })).filter(({ d, s }) => matches(d, s, q));
+
+  const byUpdated = (a, b) => (b.d.updatedAt || 0) - (a.d.updatedAt || 0);
+  if (sort === 'recent') list.sort(byUpdated);
+  else if (sort === 'name') list.sort((a, b) => a.d.name.localeCompare(b.d.name));
+  else if (sort === 'cost') list.sort((a, b) => a.s.avg - b.s.avg);
+  else if (sort === 'size') list.sort((a, b) => b.s.total - a.s.total);
+  else list.sort((a, b) => (b.d.id === pinned) - (a.d.id === pinned) || byUpdated(a, b));
+
+  document.getElementById('count').textContent = list.length;
+  const showFeatured = sort === 'default' && !q && !activeColors.size && list.length > 1;
+  const feat = showFeatured ? list.shift() : null;
+  const featEl = document.getElementById('featured');
+  featEl.innerHTML = feat ? `
+    <div class="featured clip hoverable" style="${accent(feat.s)}" data-open="${feat.d.id}">
+      <div class="tag">${feat.d.id === pinned ? 'PINNED' : 'FEATURED'}</div>
+      <div class="legend-fan">${fanHtml(feat.s)}</div>
+      <div>
+        <h2>${escapeHtml(feat.d.name)}</h2>
+        <p class="blurb">${escapeHtml(excerpt(feat.d)) || 'No description yet.'}</p>
+        <div class="stat-row">${pillsHtml(feat.s, true)}</div>
+        ${curveHtml(feat.s)}
+        ${actionsHtml(feat.d, pinned)}
+      </div>
+    </div>` : '';
+
+  const grid = document.getElementById('deck-list-grid');
+  grid.innerHTML = list.map(({ d, s }) => `
+    <div class="deck clip hoverable" style="${accent(s)}" data-open="${d.id}">
+      <h3>${escapeHtml(d.name || 'Untitled Deck')}</h3>
+      <div class="sub"><span>${dotsHtml(s)}</span><span>${s.total}/${MAIN_DECK_MAX} · ${s.sellablePct}% sellable</span></div>
+      <div class="legend-fan">${fanHtml(s)}</div>
+      <div class="row-between">${curveHtml(s)}<span class="pill">avg <b>${s.avg.toFixed(1)}</b></span></div>
+      <p class="excerpt">${escapeHtml(excerpt(d))}</p>
+      ${actionsHtml(d, pinned)}
+    </div>`).join('');
+
+  const empty = document.getElementById('decks-empty');
+  const none = !featEl.innerHTML && !list.length;
+  empty.hidden = !none;
+  if (none) empty.textContent = publishedDecks.length ? 'No decks match your search or filters.' : 'No decks are published right now. Check back soon.';
+}
+
+function actionsHtml(d, pinned) {
+  return `<div class="actions">
+    <button class="btn" data-copy="${d.id}">Copy list</button>
+    <button class="btn" data-share="${d.id}">Share</button>
+    <button class="btn ${d.id === pinned ? 'on' : ''}" data-pin="${d.id}">${d.id === pinned ? 'Unpin' : 'Pin'}</button>
+  </div>`;
+}
+
+// Delegated clicks for both list and featured areas.
+document.getElementById('decks-list').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (btn) {
+    e.stopPropagation();
+    const deck = (id) => publishedDecks.find((d) => d.id === id);
+    if (btn.dataset.copy) return copyText(decklistText(deck(btn.dataset.copy)), btn);
+    if (btn.dataset.share) return copyText(shareUrl(btn.dataset.share), btn, 'Link copied');
+    if (btn.dataset.pin) {
+      safeSet(PIN_KEY, safeGet(PIN_KEY) === btn.dataset.pin ? null : btn.dataset.pin);
+      return renderList();
+    }
+    return;
+  }
+  const card = e.target.closest('[data-open]');
+  if (card) showDetail(card.dataset.open);
+});
+
+function showList() {
+  currentDeck = null;
+  history.replaceState(null, '', 'decks.html');
+  document.getElementById('deck-detail').hidden = true;
+  document.getElementById('decks-list').hidden = false;
+  renderList();
+}
+
+// ---- Init -----------------------------------------------------------------
 async function init() {
   renderBuildInfo();
   try {
@@ -46,54 +205,26 @@ async function init() {
       fetchJson('data/deck-card-details.json').catch(() => ({}))
     ]);
   } catch (err) {
-    el('decks-empty').hidden = false;
-    el('decks-empty').textContent = `Couldn't load decks: ${err.message}`;
+    document.getElementById('deck-list-grid').innerHTML = '';
+    const e = document.getElementById('decks-empty'); e.hidden = false; e.textContent = `Couldn't load decks: ${err.message}`;
     return;
   }
-
-  el('back-to-decks-link').addEventListener('click', (e) => {
-    e.preventDefault();
-    showList();
+  document.getElementById('color-chips').innerHTML = Object.keys(COLORS).map((c) => `<button class="chip color-${c}" data-c="${c}">${c}</button>`).join('');
+  document.getElementById('color-chips').addEventListener('click', (e) => {
+    const c = e.target.dataset.c; if (!c) return;
+    activeColors.has(c) ? activeColors.delete(c) : activeColors.add(c);
+    e.target.classList.toggle('active'); renderList();
   });
-
-  const params = new URLSearchParams(location.search);
-  const requestedId = params.get('id');
-  if (requestedId && publishedDecks.some((d) => d.id === requestedId)) {
-    showDetail(requestedId);
-  } else {
-    showList();
-  }
-}
-
-function showList() {
-  currentDeck = null;
-  history.replaceState(null, '', 'decks.html');
-  el('deck-detail').hidden = true;
-  el('decks-list').hidden = false;
-
-  el('deck-result-count').textContent = `${publishedDecks.length} deck${publishedDecks.length === 1 ? '' : 's'} live`;
-  el('decks-empty').hidden = publishedDecks.length !== 0;
-  el('deck-list-grid').innerHTML = publishedDecks.map(deckListCardHtml).join('');
-  el('deck-list-grid').querySelectorAll('[data-open-deck]').forEach((card) => {
-    card.addEventListener('click', () => showDetail(card.dataset.openDeck));
+  document.getElementById('q').addEventListener('input', renderList);
+  document.getElementById('sort').addEventListener('change', renderList);
+  document.getElementById('back-to-decks-link').addEventListener('click', (e) => { e.preventDefault(); showList(); });
+  addEventListener('keydown', (e) => {
+    if (e.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName) && !document.getElementById('decks-list').hidden) {
+      e.preventDefault(); document.getElementById('q').focus();
+    }
   });
-}
-
-function deckListCardHtml(deck) {
-  const stats = computeDeckStats(deck);
-  const legendThumbs = Array.from({ length: LEGEND_SLOTS }, (_, i) => {
-    const pid = deck.legendPrintingIds?.[i];
-    const c = pid && cardDetails[pid];
-    return c ? `<img class="deck-list-legend-thumb" src="${imageUrl(pid)}" alt="${escapeHtml(c.displayName)}" />` : '<div class="deck-list-legend-empty"></div>';
-  }).join('');
-
-  return `
-    <div class="deck-list-card" data-open-deck="${deck.id}">
-      <div class="deck-list-card-name">${escapeHtml(deck.name || 'Untitled Deck')}</div>
-      <div class="deck-list-legends">${legendThumbs}</div>
-      <div class="deck-list-card-meta">${stats.total}/${MAIN_DECK_MAX} cards · ${stats.sellablePct}% sellable</div>
-    </div>
-  `;
+  const id = new URLSearchParams(location.search).get('id');
+  if (id && publishedDecks.some((d) => d.id === id)) showDetail(id); else showList();
 }
 
 function showDetail(deckId) {
@@ -105,6 +236,7 @@ function showDetail(deckId) {
   el('decks-list').hidden = true;
   el('deck-detail').hidden = false;
   renderDetail(deck);
+  window.scrollTo({ top: 0 });
 }
 
 // --- Stats (ported from computeDeckStats in deckbuilder.js) ---------------
@@ -388,6 +520,16 @@ function renderDetail(baseDeck) {
         .join('')}</div></div>`
     : '';
   el('detail-card-sections').innerHTML = mainSections + sideSection;
+
+  const s = extraStats(deck);
+  const detail = document.getElementById('deck-detail');
+  detail.style.cssText = accent(s);
+  document.getElementById('detail-fan').innerHTML = fanHtml(extraStats(baseDeck));
+  document.getElementById('detail-pills').innerHTML = pillsHtml(s, true);
+  document.getElementById('btn-copy').onclick = (e) => copyText(decklistText(deck), e.currentTarget);
+  document.getElementById('btn-share').onclick = (e) => copyText(shareUrl(baseDeck.id), e.currentTarget, 'Link copied');
+  document.getElementById('btn-print').onclick = () => window.print();
+  document.title = `${baseDeck.name || 'Deck'} — Eddies`;
 }
 
 init();
