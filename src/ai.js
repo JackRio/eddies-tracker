@@ -315,7 +315,7 @@ Writing rules for the sections:
 - mulliganFirst / mulliganSecond: for each seat, say what to want in the opening six and how the first turns go, judging EVERY card by its role in the plan under that seat's constraints - not by cost alone. Do not call a card bad just because it is expensive: if the deck can set up for it with its early plays, it is fine to keep a hand built around it, and say how the setup works. Seat facts to REASON with (never state them): the first player starts with two of their three Legends spent, so they have far less Eddies available in the opening turns and cannot cast expensive cards early, but the cheap turns can be used to set up the next turn; the first player decides their mulligan before the second player decides theirs; the second player sees the first player's board and has all their Legends available.
 - sideboard: only if a sideboard or swap plans are given: when to swap which cards and against what. Otherwise an empty string.
 - notes: the deck's real weaknesses and how it can lose, in 2-3 short lines. Empty if nothing useful.
-- Selling: only a card marked SELLABLE (it has a Sell Tag) can be sold for Eddies, only from hand, and only once per turn. Never suggest selling a card marked NOT SELLABLE - it can only be played, never turned into an Eddie.
+- Selling: only a card marked SELLABLE (it has a Sell Tag) can be sold for Eddies, only from hand, and only once per turn. Never suggest selling a card marked NOT SELLABLE - it can only be played, never turned into an Eddie. Legends are never sold: a face-up Legend with a Sell Tag can be spent for 1 Eddie instead, which is not selling and does not make an Eddie - do not write "sell Legends" or give Legend-spending advice. Do not write blanket advice by card type ("don't sell Units", "sell spare Programs"). Mention selling only when it matters for THIS list, and then name the specific SELLABLE cards.
 - Rely only on the rules, card text and profiles - if unsure, say less.
 
 Deliver the result by calling the write_deck_description tool. Do not reply with plain text.`;
@@ -440,11 +440,19 @@ function makeTagger(names) {
 }
 
 // Safety net: drop any sentence that says to sell a card that has no Sell Tag.
+// Also drops two kinds of sentence that are wrong or are rules recital rather
+// than deck advice: selling Legends (they are spent for 1 Eddie, never sold),
+// and blanket "don't sell Units" statements.
+const WRONG_SELL = [/\bsell\w*\b[^.!?]*\blegends?\b/i, /\blegends?\b[^.!?]*\bsell\w*\b/i, /\b(?:don'?t|do not|never|can'?t|cannot)\s+sell\s+(?:any\s+)?units?\b/i];
 function dropBadSellAdvice(text, unsellable) {
-  if (!unsellable.size || !/sell/i.test(text)) return text;
+  if (!/sell/i.test(text)) return text;
   return text
     .split(/(?<=[.!?])\s+/)
-    .filter((sentence) => !/\bsell/i.test(sentence) || ![...sentence.matchAll(/@\[([^\]|]+)/g)].some((m) => unsellable.has(m[1])))
+    .filter((sentence) => {
+      if (!/\bsell/i.test(sentence)) return true;
+      if (WRONG_SELL.some((re) => re.test(sentence.replace(/@\[[^\]]*\]/g, '')))) return false;
+      return ![...sentence.matchAll(/@\[([^\]|]+)/g)].some((m) => unsellable.has(m[1]));
+    })
     .join(' ');
 }
 
