@@ -1240,7 +1240,8 @@
         "crea-mv1gg19w"
       ],
       "misc": [
-        "misc-competitive"
+        "misc-competitive",
+        "misc-featured"
       ]
     },
     "groupId": "gmv1gdo86",
@@ -2011,6 +2012,19 @@
     "colorTag": "YYR"
   },
   {
+    "tags": {
+      "archetype": [
+        "arch-gear",
+        "arch-midrange"
+      ],
+      "creator": [
+        "crea-mv1gg19w"
+      ],
+      "misc": [
+        "misc-casual"
+      ]
+    },
+    "groupId": "gmv1gdo86",
     "id": "d17915831814198mj4iv",
     "name": "YYR ~ V TTO",
     "description": "",
@@ -2097,22 +2111,15 @@
         "ccb79cf1-fc2d-4b52-bea5-b427583bfe1b": 3
       }
     },
-    "links": [],
-    "tags": {
-      "archetype": [
-        "arch-gear",
-        "arch-midrange"
-      ],
-      "creator": [
-        "crea-mv1gg19w"
-      ],
-      "misc": [
-        "misc-casual"
-      ]
-    },
-    "groupId": "gmv1gdo86",
+    "links": [
+      {
+        "label": "Ranking",
+        "url": "https://www.youtube.com/watch?v=In1oTklGHNU&t=256s",
+        "creatorId": "crea-mv1gg19w"
+      }
+    ],
     "createdAt": "2026-10-09T22:03:32.110Z",
-    "updatedAt": "2026-10-09T22:03:32.110Z",
+    "updatedAt": "2026-10-09T22:04:58.137Z",
     "colorTag": "YYR"
   }
 ]

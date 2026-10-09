@@ -72,6 +72,12 @@
       "name": "Competitive",
       "description": "Tuned and tested for tournament play."
     },
+    "misc-featured": {
+      "id": "misc-featured",
+      "category": "misc",
+      "name": "Featured",
+      "description": "Shown in the big Featured spot at the top of the website's Decks page."
+    },
     "misc-casual": {
       "id": "misc-casual",
       "category": "misc",
