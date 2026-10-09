@@ -354,7 +354,7 @@ const DESC_SECTIONS = [
   { title: 'Overview', open: true, cls: '', fields: [{ key: 'overview' }] },
   { title: 'Game Plan', cls: '', fields: [{ key: 'early', label: 'Early' }, { key: 'mid', label: 'Mid' }, { key: 'late', label: 'Late' }] },
   { title: 'Key Cards', cls: 'dd-combo', fields: [{ key: 'combos' }] },
-  { title: 'Mulligan', cls: '', fields: [{ key: 'mulligan' }] },
+  { title: 'Mulligan', cls: '', fields: [{ key: 'mulligan', label: 'Keep / toss' }, { key: 'mulliganFirst', label: 'Going first' }, { key: 'mulliganSecond', label: 'Going second' }] },
   { title: 'Sideboard', cls: 'dd-side', fields: [{ key: 'sideboard' }] },
   { title: 'Notes', cls: '', fields: [{ key: 'notes' }] }
 ];
