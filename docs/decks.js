@@ -363,12 +363,28 @@ function renderDescTags(text) {
   return escapeHtml(text).replace(/@\[([^\]|]+)(?:\|([^\]]+))?\]/g, (_, name, alias) => `<span class="card-tag" data-card-tag="${name}">${alias || name}</span>`);
 }
 
+// One line per idea: a single line is a paragraph, several become a bullet
+// list. Sections with several fields (Game Plan, Mulligan) get a label column.
+// Duplicated from deckbuilder.js.
+function ddLinesHtml(text) {
+  const lines = String(text || '').split(/\n+/).map((l) => l.replace(/^\s*[-•*]\s*/, '').trim()).filter(Boolean);
+  if (!lines.length) return '';
+  if (lines.length === 1) return `<p>${renderDescTags(lines[0])}</p>`;
+  return `<ul>${lines.map((l) => `<li>${renderDescTags(l)}</li>`).join('')}</ul>`;
+}
+
+function ddBodyHtml(sec, s) {
+  if (sec.fields.length === 1) return ddLinesHtml(s[sec.fields[0].key]);
+  return sec.fields
+    .filter((f) => (s[f.key] || '').trim())
+    .map((f) => `<div class="dd-row"><span class="dd-label">${f.label}</span><div class="dd-text">${ddLinesHtml(s[f.key])}</div></div>`)
+    .join('');
+}
+
 function deckDescriptionHtml(deck) {
   const s = deck.descSections || {};
   const sections = DESC_SECTIONS.map((sec) => {
-    const body = sec.fields.length > 1
-      ? sec.fields.filter((f) => (s[f.key] || '').trim()).map((f) => `<b>${f.label}:</b> ${renderDescTags(s[f.key])}`).join('\n')
-      : renderDescTags(s[sec.fields[0].key] || '');
+    const body = ddBodyHtml(sec, s);
     if (!body.trim()) return '';
     return `<details class="${sec.cls}" ${sec.open ? 'open' : ''}><summary>${sec.title}</summary><div class="dd-body">${body}</div></details>`;
   }).join('');

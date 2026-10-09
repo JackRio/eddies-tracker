@@ -187,8 +187,15 @@
 .deck-description summary::-webkit-details-marker { display: none; }
 .deck-description summary::before { content: '\25B8'; color: var(--cyan); transition: transform 0.15s; }
 .deck-description details[open] > summary::before { transform: rotate(90deg); }
-.deck-description .dd-body { padding: 4px 14px 12px; max-height: 220px; overflow-y: auto; white-space: pre-wrap; }
-.deck-description .dd-body b { color: var(--cyan); }
+.deck-description .dd-body { padding: 6px 14px 12px; }
+.deck-description .dd-body p { margin: 0; }
+.deck-description .dd-body ul { margin: 0; padding-left: 18px; }
+.deck-description .dd-body li { margin: 0 0 5px; }
+.deck-description .dd-body li:last-child { margin-bottom: 0; }
+.deck-description .dd-row { display: grid; grid-template-columns: 88px 1fr; gap: 10px; padding: 7px 0; border-top: 1px solid var(--border); }
+.deck-description .dd-row:first-child { border-top: none; padding-top: 2px; }
+.deck-description .dd-label { color: var(--cyan); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
+@media (max-width: 560px) { .deck-description .dd-row { grid-template-columns: 1fr; gap: 2px; } }
 .deck-description .dd-legacy { margin-bottom: 8px; }
 .card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; white-space: nowrap; }
 .card-tag:hover { color: var(--yellow); border-color: var(--yellow); }

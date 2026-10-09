@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-07T17:01:38.354Z",
-  "pricesAsOf": "2026-10-07T02:50:07+0200",
+  "generatedAt": "2026-10-09T13:10:20.191Z",
+  "pricesAsOf": "2026-10-09T02:45:57+0200",
   "cards": [
     {
       "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
@@ -16,7 +16,7 @@
       },
       "collectorNumber": "093",
       "needed": 1,
-      "price": 0.99,
+      "price": 1.8,
       "priceGuess": false,
       "cmName": "Overwatch - Panam's Gift"
     },
@@ -34,7 +34,7 @@
       },
       "collectorNumber": "126",
       "needed": 2,
-      "price": 0.99,
+      "price": 0.98,
       "priceGuess": false,
       "cmName": "Rogue Amendiares - Queen of the Afterlife"
     },
@@ -52,7 +52,7 @@
       },
       "collectorNumber": "063",
       "needed": 1,
-      "price": 1.5,
+      "price": 1.99,
       "priceGuess": false,
       "cmName": "The Relic - Experimental Biochip"
     },
@@ -70,7 +70,7 @@
       },
       "collectorNumber": "057",
       "needed": 1,
-      "price": 1.8,
+      "price": 1.9,
       "priceGuess": false,
       "cmName": "Viktor Vektor - Drop Your Illusions"
     },
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "020",
       "needed": 1,
-      "price": 1.99,
+      "price": 2,
       "priceGuess": false,
       "cmName": "V - Roamer of the Badlands"
     },
@@ -106,7 +106,7 @@
       },
       "collectorNumber": "041",
       "needed": 2,
-      "price": 2.2,
+      "price": 1.25,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
     },
@@ -124,7 +124,7 @@
       },
       "collectorNumber": "048",
       "needed": 1,
-      "price": 4.8,
+      "price": 5,
       "priceGuess": false,
       "cmName": "Jackie Welles - Ride or Die Choom"
     },
@@ -160,7 +160,7 @@
       },
       "collectorNumber": "013",
       "needed": 1,
-      "price": 5,
+      "price": 7,
       "priceGuess": false,
       "cmName": "Goro Takemura - Losing His Way"
     },
@@ -196,7 +196,7 @@
       },
       "collectorNumber": "138",
       "needed": 1,
-      "price": 6.49,
+      "price": 9.99,
       "priceGuess": false,
       "cmName": "Towerfall"
     },
@@ -214,7 +214,7 @@
       },
       "collectorNumber": "011",
       "needed": 1,
-      "price": 7.03,
+      "price": 7.07,
       "priceGuess": false,
       "cmName": "MT0D12 Flathead"
     },
@@ -232,7 +232,7 @@
       },
       "collectorNumber": "002",
       "needed": 1,
-      "price": 8.65,
+      "price": 8.7,
       "priceGuess": false,
       "cmName": "Dexter DeShawn - One Last Chance"
     },
@@ -250,7 +250,7 @@
       },
       "collectorNumber": "085",
       "needed": 3,
-      "price": 10,
+      "price": 12,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family"
     },
@@ -268,7 +268,7 @@
       },
       "collectorNumber": "116",
       "needed": 2,
-      "price": 10.99,
+      "price": 10,
       "priceGuess": false,
       "cmName": "Judy Álvarez - Nothing to Doubt"
     },
@@ -286,7 +286,7 @@
       },
       "collectorNumber": "003",
       "needed": 1,
-      "price": 25.99,
+      "price": 24,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Rocking Renegade"
     }

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-07T17:01:38.351Z",
-  "pricesAsOf": "2026-10-07T02:50:07+0200",
+  "generatedAt": "2026-10-09T13:10:20.183Z",
+  "pricesAsOf": "2026-10-09T02:45:57+0200",
   "cards": [
     {
       "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
@@ -16,7 +16,7 @@
       },
       "collectorNumber": "β147",
       "qty": 1,
-      "price": 69,
+      "price": 65,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán"
     },
@@ -52,7 +52,7 @@
       },
       "collectorNumber": "β005",
       "qty": 1,
-      "price": 49.89,
+      "price": 48,
       "priceGuess": false,
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "β164",
       "qty": 1,
-      "price": 11,
+      "price": 10,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian"
     }
