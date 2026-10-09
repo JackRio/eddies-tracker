@@ -19,6 +19,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "e6dbfd52-85c5-4fd4-a77c-ca829e827d8a": {
+    "id": "e6dbfd52-85c5-4fd4-a77c-ca829e827d8a",
+    "cardId": "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+    "name": "V",
+    "subname": "Streetkid",
+    "displayName": "V: Streetkid",
+    "slug": "v-streetkid",
+    "cardType": "Legend",
+    "color": "Red",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 5,
+    "power": 6,
+    "isEddiable": true,
+    "rulesText": "{Call} Trash 3. Then, add 1 BRAINDANCE Program from your trash to your hand.\n{Go Solo} (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "4d75c13e-bde2-409b-8bcc-516e054f28f5": {
     "id": "4d75c13e-bde2-409b-8bcc-516e054f28f5",
     "cardId": "eff41c12-b872-4101-9779-00e691532893",
@@ -439,6 +459,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "dd2f97c2-5ea6-4564-8b39-4f21ad0a7885": {
+    "id": "dd2f97c2-5ea6-4564-8b39-4f21ad0a7885",
+    "cardId": "012b0300-6af1-417e-86a2-dc208a60ac15",
+    "name": "Rogue Amendiares",
+    "subname": "Preem Solo",
+    "displayName": "Rogue Amendiares: Preem Solo",
+    "slug": "rogue-amendiares-preem-solo",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 7,
+    "power": 7,
+    "isEddiable": true,
+    "rulesText": "{Go Solo} (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\nWhen a friendly Legend steals a Gig, if its value is even, draw 1. If its value is odd, a Rival discards 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "33cfbdb0-a169-458a-86dc-9123697654d7": {
     "id": "33cfbdb0-a169-458a-86dc-9123697654d7",
     "cardId": "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
@@ -489,6 +529,26 @@
     "cardType": "Legend",
     "color": "Yellow",
     "rarity": "Rare",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Call} Choose one effect.\nA friendly Unit can't be defeated in a fight this turn. // Draw 1.\n{Spend} Adjust a Gig by 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0": {
+    "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
+    "cardId": "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+    "name": "Muamar Reyes",
+    "subname": "El Capitán",
+    "displayName": "Muamar Reyes: El Capitán",
+    "slug": "muamar-reyes-el-capita-n",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Iconic Legend",
     "ram": 2,
     "cost": null,
     "power": null,
@@ -774,6 +834,26 @@
     "power": 3,
     "isEddiable": true,
     "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nThe first time this Unit steals 1 or more Gigs each turn, steal a rival Gig with a value not shared by a friendly Gig.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "a55809aa-170d-42b4-8768-f0b873fd0dc4": {
+    "id": "a55809aa-170d-42b4-8768-f0b873fd0dc4",
+    "cardId": "1263e2bf-bc15-4550-ad07-b028602d1354",
+    "name": "The Relic",
+    "subname": "Experimental Biochip",
+    "displayName": "The Relic: Experimental Biochip",
+    "slug": "the-relic-experimental-biochip",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Epic",
+    "ram": 4,
+    "cost": 5,
+    "power": 3,
+    "isEddiable": true,
+    "rulesText": "{Defeated} Play another Unit with cost 9 or less from your trash for free. Then, bottom-deck this Unit.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1279,6 +1359,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "4a5591f9-743e-4186-8deb-560971bb3f82": {
+    "id": "4a5591f9-743e-4186-8deb-560971bb3f82",
+    "cardId": "627186b3-cffb-4228-aed4-b3ee35235fb6",
+    "name": "V",
+    "subname": "Corporate Exile",
+    "displayName": "V: Corporate Exile",
+    "slug": "v-corporate-exile",
+    "cardType": "Legend",
+    "color": "Blue",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": 5,
+    "power": 8,
+    "isEddiable": true,
+    "rulesText": "{Go Solo} (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. When it leaves the field, remove it from the game.)",
+    "set": {
+      "code": "theheistretailstarterdeck",
+      "name": "The Heist — Retail Starter Deck"
+    }
+  },
   "873656f0-c32a-46fb-856f-8a5ee44b8d21": {
     "id": "873656f0-c32a-46fb-856f-8a5ee44b8d21",
     "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
@@ -1554,6 +1654,26 @@
     "power": 10,
     "isEddiable": false,
     "rulesText": "{Play} {Attack} You may discard 1 Program. If you do, bottom-deck a rival Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "74eb81ab-aa0a-4b09-8cfe-94dddd70f4b1": {
+    "id": "74eb81ab-aa0a-4b09-8cfe-94dddd70f4b1",
+    "cardId": "39665784-d2f1-43e8-a958-894bac716d71",
+    "name": "Tetratronic Rippler",
+    "subname": null,
+    "displayName": "Tetratronic Rippler",
+    "slug": "tetratronic-rippler",
+    "cardType": "Gear",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 1,
+    "power": 1,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit or Legend is spent, search the top card of your deck. You may trash it. (Otherwise, keep it on the top of your deck.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"

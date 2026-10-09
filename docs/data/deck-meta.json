@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "id": "gmv1gdo86",
+      "name": "XBD Puppy ~ Ranking",
+      "collapsed": false,
+      "deckIds": [
+        "d17915805726159jux8f",
+        "d1791580978982ot2wpp",
+        "d1791581120976gzewlo",
+        "d1791582316479kbqw7s",
+        "d1791582526537tfv1cb",
+        "d179158280194093jnl1",
+        "d1791583026620g5c1qb",
+        "d17915831814198mj4iv"
+      ]
+    },
+    {
+      "id": "gmv1gburc",
+      "name": "Unorganized",
+      "collapsed": true,
+      "deckIds": [
+        "d1789676922540r8ifeb",
+        "d1789686501261ddeftk",
+        "d1789687022111t5crdh",
+        "d17896872730282zfutx",
+        "d1791390794831bqkhoe",
+        "d1791492796136s4mp5n",
+        "d179153676955210wc08",
+        "d17915412058685z8e2p",
+        "d1791557848243ortgzc",
+        "d17915587506368hitys",
+        "d1791558886723pj6cfr"
+      ]
+    }
+  ],
+  "tags": {
+    "arch-control": {
+      "id": "arch-control",
+      "category": "archetype",
+      "name": "Control",
+      "description": "Answers the rival's Units one by one with removal and bottom-deck effects, denies Gigs, and draws cards to keep up. Gives up early ground, then stabilizes and wins late on a cleared board."
+    },
+    "arch-tempo": {
+      "id": "arch-tempo",
+      "category": "archetype",
+      "name": "Tempo",
+      "description": "Uses cheap interaction (spending rival Units, power shrink, bottom-deck, adjusting Gigs) to disrupt the rival's turn so they never develop, while a few efficient threats keep attacking."
+    },
+    "arch-midrange": {
+      "id": "arch-midrange",
+      "category": "archetype",
+      "name": "Midrange",
+      "description": "Efficient mid-cost Units backed by Gear and a little removal. Flexible: plays tempo against slow decks and defends against fast ones, and wins fights on the board before attacking for Gigs."
+    },
+    "arch-gear": {
+      "id": "arch-gear",
+      "category": "archetype",
+      "name": "Gear / Equip",
+      "description": "Loads cheap Gear onto sturdy Units or Legends to win fights and attack through the board, drawing extra cards off Gear triggers. Gear count is high relative to Units."
+    },
+    "crea-mv1gg19w": {
+      "id": "crea-mv1gg19w",
+      "category": "creator",
+      "name": "XBD Puppy",
+      "description": "",
+      "url": "https://www.youtube.com/@AshlynnNaelTCG"
+    },
+    "misc-competitive": {
+      "id": "misc-competitive",
+      "category": "misc",
+      "name": "Competitive",
+      "description": "Tuned and tested for tournament play."
+    },
+    "misc-casual": {
+      "id": "misc-casual",
+      "category": "misc",
+      "name": "Casual / Fun",
+      "description": "Built for fun and theme rather than raw power."
+    }
+  }
+}
