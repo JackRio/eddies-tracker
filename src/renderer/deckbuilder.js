@@ -13,7 +13,7 @@ let faqData = {};
 let testHandState = { hand: [], deckPool: [], mulliganUsed: false };
 let cardDetailPrintings = []; // whatever list is currently being paged through in the card detail popup
 let cardDetailIndex = -1;
-let listUiState = { confirmDeleteId: null, selectedIds: new Set() };
+let listUiState = { confirmDeleteId: null, selectedIds: new Set(), search: '', ownership: 'all', sort: 'updated', color: '', archetype: '' };
 let publishState = { deckIds: [], publishedAt: null }; // which decks are currently live on the website
 let builderState = {
   search: '',
@@ -22,7 +22,8 @@ let builderState = {
   rarities: new Set(),
   set: 'all',
   ownership: 'owned',
-  legalOnly: true
+  legalOnly: true,
+  decklistOnly: false // "Decklist" toggle: only cards in the main deck or sideboard
 };
 let deckMessage = null; // { text, error }
 let legendPicker = { open: false, slotIndex: null, search: '', ownership: 'owned', variantFor: null };
@@ -46,6 +47,8 @@ const RARITY_ORDER = [
 const MAIN_DECK_MIN = 40;
 const MAIN_DECK_MAX = 50;
 const LEGEND_SLOTS = 3;
+const SIDEBOARD_SIZE = 7; // official Tournament Rules: exactly 7, no Legends
+const MAX_COPIES = 3; // per card, main deck + sideboard combined
 
 function escapeHtml(str) {
   const div = document.createElement('div');
@@ -89,6 +92,8 @@ async function init() {
   collection = await window.api.getCollection();
   decks = await window.api.getDecks();
   publishState = await window.api.getDeckPublishState();
+  tagDb = await window.api.getTags();
+  ({ groups, siteBase } = await window.api.getGroups());
   try {
     faqData = await fetch('faq-data.json').then((r) => r.json());
   } catch {
@@ -101,6 +106,7 @@ async function init() {
   }
 
   attachControls();
+  attachTagControls();
   renderList();
 }
 
@@ -186,7 +192,10 @@ function getPrintingSplit(deck, cardId) {
   if (existing) {
     const sum = Object.values(existing).reduce((s, n) => s + n, 0);
     const stillValid = Object.entries(existing).every(([pid, n]) => n > 0 && n <= getMainCount(pid));
-    if (stillValid && sum === qty) return existing;
+    // Copies you don't own have no printing to assign, so the split only ever
+    // covers the owned ones.
+    const ownedTotal = cardById(cardId)?.ownedMain || 0;
+    if (stillValid && sum === Math.min(qty, ownedTotal)) return existing;
   }
   const fresh = defaultPrintingSplit(cardId, qty);
   if (!deck.cardPrintings) deck.cardPrintings = {};
@@ -288,12 +297,23 @@ function cardFitsCeilings(deck, card) {
   return ceiling > 0 && card.ram <= ceiling;
 }
 
-function canSetCardQty(deck, card, nextQty) {
-  if (nextQty <= 0) return { ok: true };
-  if (nextQty > card.ownedMain) {
-    return { ok: false, reason: `You only own ${card.ownedMain} cop${card.ownedMain === 1 ? 'y' : 'ies'} of "${card.name}" in Main.` };
-  }
-  if (nextQty > 3) return { ok: false, reason: 'A deck can only run up to 3 copies of the same card.' };
+function sideQtyOf(deck, cardId) {
+  return deck.sideboard?.[cardId] || 0;
+}
+
+function sideboardTotal(deck) {
+  return Object.values(deck.sideboard || {}).reduce((sum, q) => sum + q, 0);
+}
+
+// Rejection reasons shared by main-deck and sideboard adds. `mainQty`/
+// `sideQty` are the quantities the card WOULD have after the change, because
+// the copy limit and your ownership both apply to main + sideboard combined.
+function checkCardLegality(deck, card, mainQty, sideQty) {
+  const total = mainQty + sideQty;
+  if (total <= 0) return { ok: true };
+  // Owning fewer copies than the deck uses is allowed on purpose: the deck is
+  // just flagged with how many cards are missing (see deckMissing()).
+  if (total > MAX_COPIES) return { ok: false, reason: `Max ${MAX_COPIES} copies of "${card.name}" across main deck + sideboard combined.` };
   if (card.color && !cardFitsCeilings(deck, card)) {
     const ceiling = computeCeilings(deck)[card.color] || 0;
     if (ceiling === 0) return { ok: false, reason: `None of your Legends provide ${card.color} RAM, so "${card.name}" can't be included.` };
@@ -302,8 +322,101 @@ function canSetCardQty(deck, card, nextQty) {
   return { ok: true };
 }
 
+function canSetCardQty(deck, card, nextQty) {
+  if (nextQty <= 0) return { ok: true };
+  return checkCardLegality(deck, card, nextQty, sideQtyOf(deck, card.cardId));
+}
+
+function canSetSideQty(deck, card, nextQty) {
+  if (nextQty <= 0) return { ok: true };
+  if (card.cardType === 'Legend') return { ok: false, reason: 'Legends can\'t go in the sideboard.' };
+  const others = sideboardTotal(deck) - sideQtyOf(deck, card.cardId);
+  if (others + nextQty > SIDEBOARD_SIZE) return { ok: false, reason: `The sideboard is capped at ${SIDEBOARD_SIZE} cards.` };
+  return checkCardLegality(deck, card, deck.cards[card.cardId] || 0, nextQty);
+}
+
+// Cards a deck uses that your Main collection doesn't cover. Main deck +
+// sideboard share your owned copies; each Legend needs one. Returns
+// { total, items: [{ cardId, name, need, owned, missing }] }.
+function deckMissing(deck) {
+  const need = {};
+  for (const id of deck.legendCardIds || []) if (id) need[id] = (need[id] || 0) + 1;
+  for (const [id, q] of Object.entries(deck.cards || {})) need[id] = (need[id] || 0) + q;
+  for (const [id, q] of Object.entries(deck.sideboard || {})) need[id] = (need[id] || 0) + q;
+  const items = [];
+  for (const [cardId, n] of Object.entries(need)) {
+    const card = cardById(cardId);
+    if (!card) continue;
+    const missing = Math.max(0, n - card.ownedMain);
+    if (missing > 0) items.push({ cardId, name: card.name, need: n, owned: card.ownedMain, missing });
+  }
+  items.sort((a, b) => a.name.localeCompare(b.name));
+  return { total: items.reduce((sum, i) => sum + i.missing, 0), items };
+}
+
+const missingTitle = (m) => 'Not in your Main collection: ' + m.items.map((i) => `${i.missing}x ${i.name}`).join(', ');
+
 function deckMainCount(deck) {
   return Object.values(deck.cards).reduce((sum, q) => sum + q, 0);
+}
+
+// --- Sideboard swap plans ---------------------------------------------------
+// deck.swapPlans: [{ id, name, swaps: [{ out: cardId, in: cardId, qty }] }].
+// Every swap is 1-for-1 (N copies of a main-deck card out, N copies of a
+// sideboard card in), so a plan can never change the deck's size - which is
+// exactly how the real game works between games of a match.
+
+function planById(deck, planId) {
+  return (deck.swapPlans || []).find((p) => p.id === planId) || null;
+}
+
+// Copies of `cardId` already committed as "out" / "in" by a plan's swaps,
+// optionally ignoring one swap row (the one being edited).
+function planUsed(plan, kind, cardId, exceptIndex) {
+  return plan.swaps.reduce((sum, s, i) => (i !== exceptIndex && s[kind] === cardId ? sum + s.qty : sum), 0);
+}
+
+// Clamps/drops swaps that no longer fit after a main-deck or sideboard
+// quantity changed, so a plan can never reference copies you no longer have.
+function normalizePlans(deck) {
+  for (const plan of deck.swapPlans || []) {
+    const outLeft = { ...deck.cards };
+    const inLeft = { ...(deck.sideboard || {}) };
+    plan.swaps = plan.swaps
+      .map((s) => {
+        const qty = Math.min(s.qty, outLeft[s.out] || 0, inLeft[s.in] || 0);
+        if (qty > 0) {
+          outLeft[s.out] -= qty;
+          inLeft[s.in] -= qty;
+        }
+        return { ...s, qty };
+      })
+      .filter((s) => s.qty > 0);
+  }
+}
+
+// The deck as it stands after a plan's swaps: new `cards` map plus per-card
+// in/out counts for badges. `cardPrintings` is deep-copied because
+// getPrintingSplit() writes regenerated splits back onto the deck it's given.
+function applyPlan(deck, plan) {
+  const cards = { ...deck.cards };
+  const side = { ...(deck.sideboard || {}) };
+  const inMap = {};
+  const outMap = {};
+  for (const s of plan?.swaps || []) {
+    cards[s.out] = (cards[s.out] || 0) - s.qty;
+    if (cards[s.out] <= 0) delete cards[s.out];
+    cards[s.in] = (cards[s.in] || 0) + s.qty;
+    // The two cards physically trade places: the swapped-out copies go to
+    // the sideboard, the swapped-in copies leave it.
+    side[s.in] = (side[s.in] || 0) - s.qty;
+    if (side[s.in] <= 0) delete side[s.in];
+    side[s.out] = (side[s.out] || 0) + s.qty;
+    outMap[s.out] = (outMap[s.out] || 0) + s.qty;
+    inMap[s.in] = (inMap[s.in] || 0) + s.qty;
+  }
+  const cardPrintings = Object.fromEntries(Object.entries(deck.cardPrintings || {}).map(([k, v]) => [k, { ...v }]));
+  return { deck: { ...deck, cards, sideboard: side, cardPrintings }, inMap, outMap };
 }
 
 function computeDeckWarnings(deck) {
@@ -313,6 +426,8 @@ function computeDeckWarnings(deck) {
   const total = deckMainCount(deck);
   if (total < MAIN_DECK_MIN) warnings.push(`${MAIN_DECK_MIN - total} card${MAIN_DECK_MIN - total === 1 ? '' : 's'} short of the ${MAIN_DECK_MIN}-card minimum.`);
   if (total > MAIN_DECK_MAX) warnings.push(`${total - MAIN_DECK_MAX} card${total - MAIN_DECK_MAX === 1 ? '' : 's'} over the ${MAIN_DECK_MAX}-card maximum.`);
+  const side = sideboardTotal(deck);
+  if (side !== SIDEBOARD_SIZE) warnings.push(`Sideboard has ${side}/${SIDEBOARD_SIZE} cards - tournament rules require exactly ${SIDEBOARD_SIZE}.`);
   return warnings;
 }
 
@@ -352,11 +467,41 @@ function computeDeckStats(deck) {
 
 // --- "My Decks" list view --------------------------------------------------
 
+// The decks the My Decks list currently shows (search + ownership filter + sort).
+function visibleDecks() {
+  const q = listUiState.search.trim().toLowerCase();
+  const list = Object.values(decks).filter((d) => {
+    if (q) {
+      const legends = (d.legendCardIds || []).map((id) => (id && cardById(id)?.displayName) || '').join(' ');
+      if (!`${d.name || ''} ${legends} ${deckTagSearchText(d)}`.toLowerCase().includes(q)) return false;
+    }
+    if (!deckMatchesTagFilters(d)) return false;
+    if (listUiState.ownership !== 'all') {
+      const missing = deckMissing(d).total;
+      if (listUiState.ownership === 'owned' ? missing > 0 : missing === 0) return false;
+    }
+    return true;
+  });
+  const by = {
+    updated: (a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''),
+    name: (a, b) => (a.name || '').localeCompare(b.name || ''),
+    missing: (a, b) => deckMissing(a).total - deckMissing(b).total || (b.updatedAt || '').localeCompare(a.updatedAt || '')
+  };
+  return list.sort(by[listUiState.sort] || by.updated);
+}
+
 function renderList() {
   const container = el('deck-grid');
-  const list = Object.values(decks).sort((a, b) => (b.updatedAt || '').localeCompare(a.updatedAt || ''));
+  updateListFilters();
+  const list = visibleDecks();
+  const total = Object.keys(decks).length;
   el('deck-list-empty').hidden = list.length !== 0;
-  container.innerHTML = list.map(deckCardHtml).join('');
+  el('deck-list-empty').textContent = total
+    ? 'No decks match these filters.'
+    : 'No decks saved yet. Click "New Deck" to build one from your Main set.';
+  el('list-count').textContent = total ? (list.length === total ? `${total} deck${total === 1 ? '' : 's'}` : `${list.length} of ${total} decks`) : '';
+  container.innerHTML = groupedListHtml(list, deckCardHtml);
+  renderAiQueueBar();
 
   container.querySelectorAll('[data-view-deck]').forEach((btn) => {
     btn.addEventListener('click', () => openDeckView(btn.dataset.viewDeck));
@@ -406,6 +551,17 @@ function updateListToolbar() {
   el('prep-list-btn').disabled = n < 1;
   el('prep-list-btn').textContent = n ? `Prep List (${n})` : 'Prep List';
   el('publish-decks-btn').disabled = n < 1;
+  // "Select all" checkbox: checked = every deck, dash = some, empty = none.
+  // Works on the decks currently shown, so "Fully owned" + Select all picks
+  // exactly the decks you can build right now.
+  const shown = visibleDecks().map((d) => d.id);
+  const shownSelected = shown.filter((id) => listUiState.selectedIds.has(id)).length;
+  const filtered = shown.length !== Object.keys(decks).length;
+  const all = el('select-all-decks');
+  all.disabled = shown.length === 0;
+  all.checked = shown.length > 0 && shownSelected === shown.length;
+  all.indeterminate = shownSelected > 0 && shownSelected < shown.length;
+  el('select-all-label').textContent = shown.length ? `${filtered ? 'Select all shown' : 'Select all'} (${shownSelected}/${shown.length})` : 'Select all';
   el('deck-publish-status').textContent = publishState.publishedAt
     ? `Last published: ${new Date(publishState.publishedAt).toLocaleString()} · ${publishState.deckIds.length} deck${publishState.deckIds.length === 1 ? '' : 's'} live`
     : 'Nothing published yet';
@@ -428,40 +584,73 @@ async function publishDecks(deckIds) {
 
 function deckCardHtml(deck) {
   const stats = computeDeckStats(deck);
-  const legendThumbs = Array.from({ length: LEGEND_SLOTS }, (_, i) => {
+  const legendCards = Array.from({ length: LEGEND_SLOTS }, (_, i) => {
     const cardId = deck.legendCardIds[i];
-    const card = cardId && cardById(cardId);
+    return cardId ? cardById(cardId) : null;
+  });
+  const legendThumbs = legendCards.map((card, i) => {
     if (!card) return '<div class="deck-card-legend-empty"></div>';
     const printing = (deck.legendPrintingIds?.[i] && printingById(deck.legendPrintingIds[i])) || card;
     return `<img class="deck-card-legend-thumb" src="${printing.imageUrl}" alt="${escapeHtml(printing.displayName)}" title="${escapeHtml(card.name)}" />`;
   }).join('');
+  // "Johnny Silverhand · Judy Alvarez · ..." - first names are enough to scan by.
+  const legendNames = legendCards.filter(Boolean).map((c) => c.name.split(':')[0]).join(' · ');
 
   const colorTotal = Object.values(stats.colorCounts).reduce((s, v) => s + v, 0) || 1;
   const colorBar = COLOR_ORDER.filter((c) => stats.colorCounts[c])
     .map((c) => `<div class="color-bar ${c}" style="flex: ${stats.colorCounts[c] / colorTotal}"></div>`)
     .join('');
 
+  // The sideboard shows as a chip (orange when it isn't the required size)
+  // instead of a red warning line (the full warning still shows in the Builder).
+  const sideCount = sideboardTotal(deck);
+  const sideChip =
+    sideCount === 0
+      ? '<span class="deck-chip deck-chip-warn" title="This deck has no sideboard yet">No Sideboard</span>'
+      : sideCount !== SIDEBOARD_SIZE
+        ? `<span class="deck-chip deck-chip-warn" title="Tournament rules require exactly ${SIDEBOARD_SIZE}">Side ${sideCount}/${SIDEBOARD_SIZE}</span>`
+        : `<span class="deck-chip">Side ${sideCount}/${SIDEBOARD_SIZE}</span>`;
+  const listWarnings = stats.warnings.filter((w) => !w.startsWith('Sideboard'));
+
+  // Ownership tag: how many cards the deck uses that aren't in your Main set.
+  const missing = deckMissing(deck);
+  const hasCards = stats.total > 0 || stats.legendsFilled > 0;
+  const ownFlag = missing.total
+    ? `<span class="deck-flag deck-flag-missing" title="${escapeHtml(missingTitle(missing))}">&#9888; ${missing.total} not owned</span>`
+    : hasCards
+      ? '<span class="deck-flag deck-flag-owned" title="Every card is in your Main collection">&#10003; Fully owned</span>'
+      : '';
+
   const isConfirming = listUiState.confirmDeleteId === deck.id;
   const isPublished = publishState.deckIds.includes(deck.id);
   const isSelected = listUiState.selectedIds.has(deck.id);
 
   return `
-    <div class="deck-card">
-      <input type="checkbox" class="deck-card-select" data-select-deck="${deck.id}" ${isSelected ? 'checked' : ''} title="Select for Prep List / publishing" />
-      ${isPublished ? `<button class="deck-card-published-badge" data-unpublish-deck="${deck.id}" title="Live on the website - click to unpublish">&#128225; Live</button>` : ''}
-      <div class="deck-card-name">${escapeHtml(deck.name || 'Untitled Deck')}</div>
-      <div class="deck-card-legends">${legendThumbs}</div>
-      <div class="deck-card-color-bar">${colorBar}</div>
-      <div class="deck-card-meta">
-        <span>${stats.total}/${MAIN_DECK_MAX} cards</span>
-        <span>${stats.sellablePct}% sellable</span>
+    <div class="deck-card${isSelected ? ' is-selected' : ''}" data-deck-id="${deck.id}" draggable="true">
+      <div class="deck-card-top">
+        <input type="checkbox" class="deck-card-select" data-select-deck="${deck.id}" ${isSelected ? 'checked' : ''} title="Select for Prep List / publishing" />
+        <div class="deck-card-name" title="${escapeHtml(deck.name || 'Untitled Deck')}">${escapeHtml(deck.name || 'Untitled Deck')}</div>
+        ${isPublished ? `<button class="deck-card-published-badge" data-unpublish-deck="${deck.id}" title="Live on the website - click to unpublish">&#128225; Live</button>` : ''}
       </div>
-      ${stats.warnings.length ? `<div class="deck-card-warning">${escapeHtml(stats.warnings[0])}</div>` : ''}
+      <div class="deck-card-legends">${legendThumbs}</div>
+      <div class="deck-card-legend-names" title="${escapeHtml(legendNames)}">${escapeHtml(legendNames) || '&nbsp;'}</div>
+      <div class="deck-card-color-bar">${colorBar}</div>
+      <div class="tag-chips">${deckChipsHtml(deck)}</div>
+      <div class="deck-card-meta">
+        <span class="deck-chip">${stats.total}/${MAIN_DECK_MAX} cards</span>
+        <span class="deck-chip">${stats.sellablePct}% sellable</span>
+        ${sideChip}
+      </div>
+      <div class="deck-card-flags">
+        ${ownFlag}
+        ${aiFillButtonHtml(deck)}
+        ${listWarnings.length ? `<span class="deck-card-warning">${escapeHtml(listWarnings[0])}</span>` : ''}
+      </div>
       <div class="deck-card-actions">
         ${
           isConfirming
-            ? `<button data-confirm-delete="${deck.id}" class="deck-danger">Yes, delete</button><button data-cancel-delete="${deck.id}">Cancel</button>`
-            : `<button data-view-deck="${deck.id}">View</button><button data-open-deck="${deck.id}">Edit</button><button data-duplicate-deck="${deck.id}">Duplicate</button><button data-ask-delete="${deck.id}" class="deck-danger">Delete</button>`
+            ? `<button data-confirm-delete="${deck.id}" class="deck-danger deck-confirm">Yes, delete</button><button data-cancel-delete="${deck.id}">Cancel</button>`
+            : `<button data-view-deck="${deck.id}" class="deck-primary">View</button><button data-open-deck="${deck.id}">Edit</button><button data-tags-deck="${deck.id}" title="Tags and group">Tags</button><button data-duplicate-deck="${deck.id}">Duplicate</button><button data-ask-delete="${deck.id}" class="deck-danger" title="Delete this deck">Delete</button>`
         }
       </div>
     </div>
@@ -479,11 +668,16 @@ function blankDraft() {
     id: `d${Date.now()}${Math.random().toString(36).slice(2, 8)}`,
     name: '',
     description: '',
+    descSections: {},
     legendCardIds: [null, null, null],
     legendPrintingIds: [null, null, null],
+    sideboard: {},
+    swapPlans: [],
     cards: {},
     cardPrintings: {},
-    links: []
+    links: [],
+    tags: { archetype: [], creator: [], misc: [] },
+    groupId: null
   };
 }
 
@@ -499,11 +693,16 @@ function openDeckForEdit(deckId) {
     id: deck.id,
     name: deck.name || '',
     description: deck.description || '',
+    descSections: { ...(deck.descSections || {}) },
     legendCardIds: [0, 1, 2].map((i) => deck.legendCardIds?.[i] || null),
     legendPrintingIds: [0, 1, 2].map((i) => deck.legendPrintingIds?.[i] || null),
+    sideboard: { ...(deck.sideboard || {}) },
+    swapPlans: (deck.swapPlans || []).map((p) => ({ ...p, swaps: p.swaps.map((s) => ({ ...s })) })),
     cards: { ...(deck.cards || {}) },
     cardPrintings: Object.fromEntries(Object.entries(deck.cardPrintings || {}).map(([cardId, split]) => [cardId, { ...split }])),
-    links: (deck.links || []).map((l) => ({ ...l }))
+    links: (deck.links || []).map((l) => ({ ...l })),
+    tags: { archetype: [], creator: [], misc: [], ...JSON.parse(JSON.stringify(deck.tags || {})) },
+    groupId: deck.groupId || null
   };
   switchToBuilder();
 }
@@ -515,12 +714,19 @@ async function duplicateDeck(deckId) {
     ...blankDraft(),
     name: `${deck.name || 'Untitled Deck'} (Copy)`,
     description: deck.description || '',
+    descSections: { ...(deck.descSections || {}) },
     legendCardIds: [0, 1, 2].map((i) => deck.legendCardIds?.[i] || null),
     legendPrintingIds: [0, 1, 2].map((i) => deck.legendPrintingIds?.[i] || null),
+    sideboard: { ...(deck.sideboard || {}) },
+    swapPlans: (deck.swapPlans || []).map((p) => ({ ...p, id: `p${Date.now()}${Math.random().toString(36).slice(2, 6)}`, swaps: p.swaps.map((s) => ({ ...s })) })),
     cards: { ...(deck.cards || {}) },
     cardPrintings: Object.fromEntries(Object.entries(deck.cardPrintings || {}).map(([cardId, split]) => [cardId, { ...split }])),
-    links: (deck.links || []).map((l) => ({ ...l }))
+    links: (deck.links || []).map((l) => ({ ...l })),
+    // a copy is never the Featured deck
+    tags: JSON.parse(JSON.stringify({ archetype: [], creator: [], misc: [], ...(deck.tags || {}) })),
+    groupId: deck.groupId || null
   };
+  copy.tags.misc = copy.tags.misc.filter((id) => id !== FEATURED_ID);
   decks = await window.api.saveDeck(copy);
   renderList();
 }
@@ -546,7 +752,41 @@ function switchToBuilder() {
   showView('builder');
   buildBuilderFilterOptions();
   renderBuilder();
+  takeSnapshot(); // after the first render, which lazily fills in printing splits
 }
+
+// --- Unsaved-changes tracking ------------------------------------------------
+// The draft counts as dirty when it differs from how it looked when the
+// Builder opened / last saved, or when it's a brand-new deck that was never
+// saved but already has content (e.g. just imported).
+let savedSnapshot = null;
+
+function takeSnapshot() {
+  savedSnapshot = JSON.stringify(draft);
+}
+
+function isDirty() {
+  if (view !== 'builder' || !draft) return false;
+  if (!decks[draft.id]) {
+    const hasContent = draft.name.trim() || Object.keys(draft.cards).length || Object.keys(draft.sideboard).length || draft.legendCardIds.some(Boolean);
+    return !!hasContent;
+  }
+  return JSON.stringify(draft) !== savedSnapshot;
+}
+
+// Resolves true when it's fine to leave the Builder (clean, saved, or the
+// user chose to discard); false when they cancelled or the save failed.
+async function confirmLeave() {
+  if (!isDirty()) return true;
+  const choice = await window.api.confirmUnsaved(draft.name);
+  if (choice === 'cancel') return false;
+  if (choice === 'save') return saveDraft();
+  return true;
+}
+
+// Called by the main process before the whole window closes.
+window.__deckBuilderDirty = () => (isDirty() ? { name: draft.name } : null);
+window.__deckBuilderSave = () => saveDraft();
 
 function backToList() {
   draft = null;
@@ -558,10 +798,12 @@ function backToList() {
 async function saveDraft() {
   if (!draft.name.trim()) {
     setDeckMessage('Give the deck a name before saving.', true);
-    return;
+    return false;
   }
   decks = await window.api.saveDeck(draft);
+  takeSnapshot();
   setDeckMessage('Saved.', false);
+  return true;
 }
 
 // --- Prep List (combine several decks into one physical shopping list) ----
@@ -587,7 +829,10 @@ function computePrepList(deckIds) {
   const maxQty = {};
   const breakdown = {};
   for (const deck of selected) {
-    for (const [cardId, qty] of Object.entries(deck.cards || {})) {
+    // Physically you need main + sideboard copies on the table.
+    const needs = { ...(deck.cards || {}) };
+    for (const [cardId, qty] of Object.entries(deck.sideboard || {})) needs[cardId] = (needs[cardId] || 0) + qty;
+    for (const [cardId, qty] of Object.entries(needs)) {
       if (qty > (maxQty[cardId] || 0)) maxQty[cardId] = qty;
       (breakdown[cardId] = breakdown[cardId] || []).push({ name: deck.name || 'Untitled Deck', qty });
     }
@@ -663,6 +908,16 @@ function exportDeckText(deck) {
     const total = entries.reduce((s, e) => s + e.qty, 0);
     lines.push(`// ${EXPORT_SECTION_NAMES[type]} (${total})`);
     for (const e of entries) lines.push(exportCardLine(e.qty, e.card));
+    lines.push('');
+  }
+
+  const sideEntries = Object.entries(deck.sideboard || {})
+    .map(([cardId, qty]) => ({ card: cardById(cardId), qty }))
+    .filter((e) => e.card)
+    .sort((a, b) => a.card.name.localeCompare(b.card.name));
+  if (sideEntries.length) {
+    lines.push(`// Sideboard (${sideEntries.reduce((s, e) => s + e.qty, 0)})`);
+    for (const e of sideEntries) lines.push(exportCardLine(e.qty, e.card));
     lines.push('');
   }
 
@@ -769,6 +1024,7 @@ async function runImport() {
   const notes = [];
   const unknown = [];
   let legendIdx = 0;
+  let inSideboard = false;
 
   for (const raw of text.split(/\r?\n/)) {
     const line = raw.trim();
@@ -777,7 +1033,10 @@ async function runImport() {
       if (!next.name) next.name = line.replace(/^#+\s*/, '').trim();
       continue;
     }
-    if (line.startsWith('//')) continue;
+    if (line.startsWith('//')) {
+      inSideboard = /sideboard/i.test(line);
+      continue;
+    }
     const m = line.match(/^(\d+)\s*x?\s+(.+)$/i);
     if (!m) {
       unknown.push(line);
@@ -795,22 +1054,26 @@ async function runImport() {
         notes.push(`${card.name}: more than 3 Legends`);
       } else if (next.legendCardIds.some((id, i) => id && cardById(id)?.name === card.name)) {
         notes.push(`${card.name}: duplicate Legend`);
-      } else if (card.ownedMain < 1) {
-        notes.push(`${card.name}: not owned in Main`);
       } else {
         next.legendCardIds[legendIdx] = card.cardId;
         const owned = ownedPrintingsFor(card.cardId);
-        next.legendPrintingIds[legendIdx] = owned[0]?.id || null;
+        next.legendPrintingIds[legendIdx] = owned[0]?.id || card.id;
         legendIdx++;
       }
       continue;
     }
 
     const have = next.cards[card.cardId] || 0;
-    const allowed = Math.min(3, card.ownedMain) - have;
-    const take = Math.max(0, Math.min(qty, allowed));
-    if (take < qty) notes.push(`${card.name}: wanted ${qty}, added ${take}${card.ownedMain < Math.min(3, have + qty) ? ` (own ${card.ownedMain} in Main)` : ''}`);
-    if (take > 0) next.cards[card.cardId] = have + take;
+    const haveSide = next.sideboard[card.cardId] || 0;
+    // Main + sideboard share the 3-copy limit and your owned copies.
+    const allowed = MAX_COPIES - have - haveSide;
+    let take = Math.max(0, Math.min(qty, allowed));
+    if (inSideboard) take = Math.min(take, Math.max(0, SIDEBOARD_SIZE - sideboardTotal(next)));
+    if (take < qty) notes.push(`${card.name}: wanted ${qty}, added ${take} (3-copy limit)`);
+    if (take > 0) {
+      if (inSideboard) next.sideboard[card.cardId] = haveSide + take;
+      else next.cards[card.cardId] = have + take;
+    }
   }
 
   if (!next.name) next.name = 'Imported Deck';
@@ -833,12 +1096,59 @@ async function runImport() {
 
 // --- Deck View (read-only) -------------------------------------------------
 
+let viewPlanId = null; // which swap plan Deck View is previewing (null = the main deck, i.e. game 1)
+
 function openDeckView(deckId) {
   const deck = decks[deckId];
   if (!deck) return;
   viewingDeck = deck;
+  viewPlanId = null;
   showView('view');
   renderDeckView();
+}
+
+// The deck as currently shown in Deck View: the saved main deck, or that
+// deck after the selected swap plan has been applied.
+function shownViewState() {
+  const plan = viewPlanId ? planById(viewingDeck, viewPlanId) : null;
+  return plan ? { plan, ...applyPlan(viewingDeck, plan) } : { plan: null, deck: viewingDeck, inMap: {}, outMap: {} };
+}
+
+function swapBadgeHtml(inQty, outQty) {
+  const parts = [];
+  if (inQty) parts.push(`<span class="swap-badge-in">+${inQty} IN</span>`);
+  if (outQty) parts.push(`<span class="swap-badge-out">${outQty} OUT</span>`);
+  return parts.length ? `<div class="view-deck-tile-swap-badge">${parts.join('')}</div>` : '';
+}
+
+function renderPlanBar(base, shown) {
+  const bar = el('view-deck-plans');
+  const plans = base.swapPlans || [];
+  if (!plans.length) {
+    bar.hidden = true;
+    return;
+  }
+  bar.hidden = false;
+  const chips = [`<button class="plan-chip ${!viewPlanId ? 'active' : ''}" data-plan="">Game 1 &middot; Main</button>`]
+    .concat(
+      plans.map((p) => {
+        const n = p.swaps.reduce((s, x) => s + x.qty, 0);
+        return `<button class="plan-chip ${viewPlanId === p.id ? 'active' : ''}" data-plan="${p.id}">&#8646; ${escapeHtml(p.name || 'Plan')} <span class="plan-chip-n">${n}</span></button>`;
+      })
+    )
+    .join('');
+  const summary = shown.plan
+    ? `<div class="plan-summary">${shown.plan.swaps
+        .map((s) => `<span class="plan-pair"><span class="plan-out">${escapeHtml(cardById(s.out)?.name || '?')}</span> &#8644; <span class="plan-in">${escapeHtml(cardById(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`)
+        .join('')}</div>`
+    : '';
+  bar.innerHTML = `<div class="plan-chips">${chips}</div>${summary}`;
+  bar.querySelectorAll('[data-plan]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      viewPlanId = btn.dataset.plan || null;
+      renderDeckView();
+    });
+  });
 }
 
 // Which printing shows front-facing is purely cosmetic (doesn't touch
@@ -915,14 +1225,13 @@ function costCurveHtml(costCounts) {
 }
 
 function renderDeckView() {
-  const deck = viewingDeck;
+  const shown = shownViewState();
+  const deck = shown.deck; // main deck, or main deck after the selected swap plan
   const stats = computeDeckStats(deck);
+  renderPlanBar(viewingDeck, shown);
 
   el('view-deck-title').textContent = deck.name || 'Untitled Deck';
-  // Rendered as raw HTML on purpose - it's the deck's own author (you)
-  // writing markup into your own local decks.json, not untrusted input, so
-  // "HTML tags are supported" means literally that.
-  el('view-deck-description').innerHTML = deck.description || '';
+  el('view-deck-description').innerHTML = deckDescriptionHtml(deck);
   el('view-deck-links').innerHTML = (deck.links || [])
     .map((l) => `<button class="view-deck-link-chip" data-open-link="${escapeHtml(l.url)}">&#128279; ${escapeHtml(l.label || l.url)}</button>`)
     .join('');
@@ -952,14 +1261,35 @@ function renderDeckView() {
   const legendCount = legendPrintings.filter(Boolean).length;
   let runningIndex = legendCount;
 
-  el('view-deck-card-sections').innerHTML = grouped
+  const inPlan = !!shown.plan;
+  const mainSections = grouped
     .map((g) => {
       const tiles = g.entries
-        .map((e) => viewDeckTileHtml(e.printings, `data-detail-index="${runningIndex++}"`, e.cardId))
+        .map((e) =>
+          viewDeckTileHtml(e.printings, `data-detail-index="${runningIndex++}"`, inPlan ? null : e.cardId, inPlan ? swapBadgeHtml(shown.inMap[e.cardId], 0) : '')
+        )
         .join('');
       return `<div class="view-deck-section"><h3>${escapeHtml(g.type)}s <span class="deck-count-badge">${g.entries.reduce((s, e) => s + e.qty, 0)}</span></h3><div class="view-deck-tile-grid">${tiles}</div></div>`;
     })
     .join('');
+
+  // Sideboard: with a plan selected this is the sideboard AFTER the swap -
+  // i.e. the cards that just left the main deck show up here marked OUT.
+  const sideEntries = Object.entries(deck.sideboard || {})
+    .map(([cardId, qty]) => ({ cardId, card: cardById(cardId), qty }))
+    .filter((e) => e.card)
+    .sort((a, b) => COLOR_ORDER.indexOf(a.card.color) - COLOR_ORDER.indexOf(b.card.color) || a.card.name.localeCompare(b.card.name));
+  const sideTotal = sideEntries.reduce((s, e) => s + e.qty, 0);
+  cardDetailPrintings.push(...sideEntries.map((e) => e.card));
+  const sideTiles = sideEntries
+    .map((e) =>
+      viewDeckTileHtml(Array(e.qty).fill(e.card), `data-detail-index="${runningIndex++}"`, null, inPlan ? swapBadgeHtml(0, shown.outMap[e.cardId]) : '')
+    )
+    .join('');
+  const sideSection = sideTotal
+    ? `<div class="view-deck-section view-deck-side-section"><h3>Sideboard <span class="deck-count-badge ${sideTotal === SIDEBOARD_SIZE ? '' : 'deck-count-bad'}">${sideTotal}/${SIDEBOARD_SIZE}</span></h3><div class="view-deck-tile-grid">${sideTiles}</div></div>`
+    : '';
+  el('view-deck-card-sections').innerHTML = mainSections + sideSection;
 
   el('view-deck-legends').querySelectorAll('[data-detail-index]').forEach((tile) => {
     tile.addEventListener('click', () => openCardDetail(Number(tile.dataset.detailIndex)));
@@ -976,7 +1306,7 @@ function renderDeckView() {
 
   const statusEl = el('view-deck-status');
   statusEl.classList.toggle('invalid', !stats.isValid);
-  el('view-deck-status-sub').textContent = `${stats.legendsFilled}/${LEGEND_SLOTS} Legends · ${stats.total}/${MAIN_DECK_MIN}-${MAIN_DECK_MAX} Deck`;
+  el('view-deck-status-sub').textContent = `${stats.legendsFilled}/${LEGEND_SLOTS} Legends · ${stats.total}/${MAIN_DECK_MIN}-${MAIN_DECK_MAX} Deck · ${sideboardTotal(deck)}/${SIDEBOARD_SIZE} Side`;
   el('view-deck-status-badge').textContent = stats.isValid ? 'Valid' : 'Invalid';
 
   el('view-deck-cost-curve').innerHTML = costCurveHtml(stats.costCounts);
@@ -1120,7 +1450,9 @@ function shuffled(list) {
 }
 
 function openTestHand() {
-  const pool = shuffled(buildDeckDrawPool(viewingDeck));
+  // Draws from whatever Deck View is showing - so picking a swap plan first
+  // lets you goldfish the post-board deck.
+  const pool = shuffled(buildDeckDrawPool(shownViewState().deck));
   const handSize = Math.min(6, pool.length);
   testHandState = { hand: pool.slice(0, handSize), deckPool: pool.slice(handSize), mulliganUsed: false };
   renderTestHand();
@@ -1163,18 +1495,410 @@ function renderTestHand() {
   el('test-hand-draw-btn').disabled = testHandState.deckPool.length === 0;
 }
 
+// --- Deck description (structured, collapsible, @card tags) ---------------
+// deck.descSections = { key: text }, where text may contain @[Card Name]
+// tokens (a card's displayName). Duplicated read-only in docs/decks.js.
+// A legacy free-form deck.description (raw HTML) still renders above them.
+
+const DESC_SECTIONS = [
+  { title: 'Overview', open: true, cls: '', fields: [{ key: 'overview', ph: 'Pitch: how the deck wins' }] },
+  {
+    title: 'Game Plan',
+    cls: '',
+    fields: [
+      { key: 'early', label: 'Early', ph: 'Turns 1-3' },
+      { key: 'mid', label: 'Mid', ph: 'Build the board' },
+      { key: 'late', label: 'Late', ph: 'Close the game' }
+    ]
+  },
+  { title: 'Key Cards', cls: 'dd-combo', fields: [{ key: 'combos', ph: '@Card: why it matters, @Card + @Card combos' }] },
+  {
+    title: 'Mulligan',
+    cls: '',
+    fields: [
+      { key: 'mulligan', label: 'Keep / toss', ph: 'What makes an opening hand a keep' },
+      { key: 'mulliganFirst', label: 'Going first', ph: 'What to look for / how the opening goes on the play' },
+      { key: 'mulliganSecond', label: 'Going second', ph: 'What to look for / how the opening goes on the draw' }
+    ]
+  },
+  { title: 'Sideboard', cls: 'dd-side', fields: [{ key: 'sideboard', ph: 'Swap @Card for @Card when...' }] },
+  { title: 'Notes', cls: '', fields: [{ key: 'notes', ph: 'Anything else' }] }
+];
+
+function renderDescTags(text) {
+  return escapeHtml(text).replace(/@\[([^\]|]+)(?:\|([^\]]+))?\]/g, (_, name, alias) => `<span class="card-tag" data-card-tag="${name}">${alias || name}</span>`);
+}
+
+// One line per idea: a single line is a paragraph, several become a bullet
+// list. Sections with several fields (Game Plan, Mulligan) get a label column.
+// Duplicated in docs/decks.js.
+function ddLinesHtml(text) {
+  const lines = String(text || '').split(/\n+/).map((l) => l.replace(/^\s*[-•*]\s*/, '').trim()).filter(Boolean);
+  if (!lines.length) return '';
+  if (lines.length === 1) return `<p>${renderDescTags(lines[0])}</p>`;
+  return `<ul>${lines.map((l) => `<li>${renderDescTags(l)}</li>`).join('')}</ul>`;
+}
+
+function ddBodyHtml(sec, s) {
+  if (sec.fields.length === 1) return ddLinesHtml(s[sec.fields[0].key]);
+  return sec.fields
+    .filter((f) => (s[f.key] || '').trim())
+    .map((f) => `<div class="dd-row"><span class="dd-label">${f.label}</span><div class="dd-text">${ddLinesHtml(s[f.key])}</div></div>`)
+    .join('');
+}
+
+function deckDescriptionHtml(deck) {
+  const s = deck.descSections || {};
+  const sections = DESC_SECTIONS.map((sec, i) => {
+    const body = ddBodyHtml(sec, s);
+    if (!body.trim()) return '';
+    return `<details class="${sec.cls}" ${sec.open ? 'open' : ''}><summary>${sec.title}</summary><div class="dd-body">${body}</div></details>`;
+  }).join('');
+  // Legacy raw-HTML description: the deck author's own markup in their own
+  // local decks.json, so it's rendered as-is on purpose.
+  return (deck.description ? `<div class="dd-legacy">${deck.description}</div>` : '') + sections;
+}
+
+function updateDescSummary() {
+  const s = draft.descSections || {};
+  const filled = DESC_SECTIONS.filter((sec) => sec.fields.some((f) => (s[f.key] || '').trim())).length;
+  el('deck-description-summary').textContent = filled || draft.description ? `${filled}/${DESC_SECTIONS.length} sections filled` : 'Empty - click to add';
+}
+
+// Which description sections are expanded in the editor (indexes into
+// DESC_SECTIONS, or 'legacy'). Kept across re-renders so filling a field or an
+// AI draft doesn't snap panels shut.
+const descOpen = new Set([0, 1]);
+
+// Textareas grow with their content, so there's no resize handle to fight.
+function autoGrow(ta) {
+  ta.style.height = 'auto';
+  ta.style.height = `${ta.scrollHeight + 2}px`;
+}
+
+function descSectionFilled(sec) {
+  const s = draft.descSections || {};
+  return sec.fields.some((f) => (s[f.key] || '').trim());
+}
+
+// One-line preview shown on a collapsed panel header.
+function descPreview(sec) {
+  const s = draft.descSections || {};
+  const text = sec.fields.map((f) => (s[f.key] || '').trim()).find(Boolean) || '';
+  return text.replace(/@\[([^\]|]+)(?:\|([^\]]+))?\]/g, (_, n, a) => a || n).replace(/\s+/g, ' ').slice(0, 110);
+}
+
+function refreshDescHeads() {
+  el('desc-fields').querySelectorAll('[data-desc-sec]').forEach((group) => {
+    const sec = DESC_SECTIONS[Number(group.dataset.descSec)];
+    if (!sec) return;
+    group.querySelector('.desc-dot').classList.toggle('filled', descSectionFilled(sec));
+    group.querySelector('.desc-preview').textContent = descPreview(sec);
+  });
+}
+
+function setDescGroupOpen(group, open) {
+  const key = group.dataset.descSec === 'legacy' ? 'legacy' : Number(group.dataset.descSec);
+  if (open) descOpen.add(key);
+  else descOpen.delete(key);
+  group.classList.toggle('open', open);
+  group.querySelector('.desc-group-head').setAttribute('aria-expanded', String(open));
+  group.querySelector('.desc-group-body').hidden = !open;
+  if (open) group.querySelectorAll('textarea').forEach(autoGrow);
+}
+
+function openDescEditor() {
+  const s = draft.descSections;
+  const legacy = draft.description
+    ? `<div class="desc-group${descOpen.has('legacy') ? ' open' : ''}" data-desc-sec="legacy">
+        <button type="button" class="desc-group-head" aria-expanded="${descOpen.has('legacy')}"><span class="desc-caret"></span><span class="desc-group-title">Legacy HTML (old format)</span><span class="desc-dot filled"></span><span class="desc-preview"></span></button>
+        <div class="desc-group-body" ${descOpen.has('legacy') ? '' : 'hidden'}><div class="desc-field"><textarea data-desc-legacy class="desc-legacy-input" rows="4">${escapeHtml(draft.description)}</textarea></div></div>
+      </div>`
+    : '';
+  el('desc-fields').innerHTML =
+    legacy +
+    DESC_SECTIONS.map((sec, i) => {
+      const open = descOpen.has(i);
+      const fields = sec.fields
+        .map(
+          (f) => `<div class="desc-field">${f.label ? `<label>${f.label}</label>` : ''}<textarea data-desc-key="${f.key}" placeholder="${escapeHtml(f.ph)}" rows="2">${escapeHtml(s[f.key] || '')}</textarea></div>`
+        )
+        .join('');
+      return `<div class="desc-group${open ? ' open' : ''}" data-desc-sec="${i}">
+        <button type="button" class="desc-group-head" aria-expanded="${open}"><span class="desc-caret"></span><span class="desc-group-title">${sec.title}</span><span class="desc-dot${descSectionFilled(sec) ? ' filled' : ''}" title="Filled in"></span><span class="desc-preview">${escapeHtml(descPreview(sec))}</span></button>
+        <div class="desc-group-body" ${open ? '' : 'hidden'}>${fields}</div>
+      </div>`;
+    }).join('');
+
+  el('desc-fields').querySelectorAll('.desc-group').forEach((group) => {
+    group.querySelector('.desc-group-head').addEventListener('click', () => setDescGroupOpen(group, !group.classList.contains('open')));
+  });
+  el('desc-fields').querySelectorAll('textarea').forEach((ta) => {
+    ta.addEventListener('input', () => {
+      if ('descLegacy' in ta.dataset) draft.description = ta.value;
+      else draft.descSections[ta.dataset.descKey] = ta.value;
+      autoGrow(ta);
+      updateDescSummary();
+      refreshDescHeads();
+      descAutocomplete(ta);
+    });
+    ta.addEventListener('keydown', (e) => descAcKey(e));
+    ta.addEventListener('blur', () => setTimeout(() => (el('desc-ac').hidden = true), 150));
+  });
+  const overlay = el('desc-overlay');
+  overlay.hidden = false;
+  // Size the boxes once the overlay is laid out (scrollHeight is 0 while hidden).
+  requestAnimationFrame(() => {
+    overlay.classList.add('open');
+    el('desc-fields').querySelectorAll('.desc-group.open textarea').forEach(autoGrow);
+  });
+}
+
+function closeDescEditor() {
+  const overlay = el('desc-overlay');
+  el('desc-ac').hidden = true;
+  overlay.classList.remove('open');
+  setTimeout(() => {
+    if (!overlay.classList.contains('open')) overlay.hidden = true;
+  }, 150);
+}
+
+// --- AI draft ----------------------------------------------------------------
+// The main process (src/ai.js) holds the API key and makes the call; this
+// side only builds the payload from the draft and merges the result in.
+
+function aiPayload(deck = draft) {
+  const slim = (c, qty) => ({
+    qty,
+    cardId: c.cardId,
+    displayName: c.displayName,
+    cardType: c.cardType,
+    color: c.color,
+    cost: c.cost,
+    power: c.power,
+    ram: c.ram,
+    isEddiable: c.isEddiable,
+    classifications: c.classifications,
+    rulesText: c.rulesText
+  });
+  const listOf = (map) =>
+    Object.entries(map || {})
+      .map(([cardId, qty]) => ({ card: cardById(cardId), qty }))
+      .filter((e) => e.card && e.qty > 0)
+      .map((e) => slim(e.card, e.qty));
+  const nameOf = (cardId) => cardById(cardId)?.displayName || cardId;
+  const stats = computeDeckStats(deck);
+  return {
+    id: deck.id,
+    name: deck.name,
+    legends: deck.legendCardIds.filter(Boolean).map((id) => slim(cardById(id), 0)),
+    cards: listOf(deck.cards),
+    sideboard: listOf(deck.sideboard),
+    swapPlans: (deck.swapPlans || []).map((p) => ({ name: p.name, swaps: p.swaps.map((s) => ({ out: nameOf(s.out), in: nameOf(s.in), qty: s.qty })) })),
+    stats: { total: stats.total, colors: stats.colorCounts, types: stats.typeCounts, ram: stats.ramCounts, cost: stats.costCounts }
+  };
+}
+
+function setAiStatus(text, isError) {
+  const s = el('ai-status');
+  s.textContent = text;
+  s.classList.toggle('error', !!isError);
+}
+
+async function refreshAiKeyUi() {
+  const status = await window.api.aiKeyStatus();
+  const has = status === 'ok';
+  const badge = el('ai-key-badge');
+  badge.className = `ai-key-badge ${status}`;
+  badge.textContent = has ? 'API key saved' : status === 'unreadable' ? 'API key unreadable - re-enter' : 'No API key';
+  el('ai-key-btn').textContent = has ? 'Change key' : 'Set API key';
+  el('ai-key-clear').hidden = !has;
+  el('ai-draft-btn').disabled = !has;
+  el('ai-draft-btn').title = has ? '' : 'Set your Anthropic API key first';
+  el('ai-build-btn').disabled = !has;
+  const k = await window.api.aiKnowledgeStatus();
+  const cardsDone = k.total > 0 && k.studied >= k.total;
+  const done = cardsDone && k.playbook;
+  const mark = (ok) => (ok ? '✓' : '✗');
+  el('ai-knowledge').textContent = k.total
+    ? `Cards ${mark(cardsDone)} ${k.studied}/${k.total}   |   Rules playbook ${mark(k.playbook)}`
+    : 'No card data loaded yet';
+  el('ai-knowledge').classList.toggle('ok', !!done);
+  el('ai-build-btn').textContent = done ? 'Knowledge up to date' : !cardsDone && k.studied ? 'Continue studying cards' : cardsDone ? 'Build rules playbook' : 'Build knowledge';
+  el('ai-build-btn').disabled = !has || done;
+  return has;
+}
+
+async function runBuildKnowledge() {
+  el('ai-build-btn').disabled = true;
+  el('ai-draft-btn').disabled = true;
+  setAiStatus('Starting...');
+  const res = await window.api.buildAiKnowledge();
+  setAiStatus(res.ok ? 'Knowledge built.' : res.error, !res.ok);
+  await refreshAiKeyUi();
+}
+
+// Merges AI sections into a descSections map: empty sections only, unless
+// `overwrite`. Returns how many sections were written.
+function mergeAiSections(target, aiSections, overwrite) {
+  let filled = 0;
+  for (const [key, text] of Object.entries(aiSections)) {
+    if (!text) continue;
+    if (!overwrite && (target[key] || '').trim()) continue;
+    target[key] = text;
+    filled++;
+  }
+  return filled;
+}
+
+let aiBusy = false;
+
+async function runAiDraft() {
+  if (aiBusy) {
+    setAiStatus('A draft is already running for another deck - wait for it to finish.', true);
+    return;
+  }
+  if (draft.legendCardIds.filter(Boolean).length === 0 || Object.keys(draft.cards).length === 0) {
+    setAiStatus('Add a Legend and some cards first.', true);
+    return;
+  }
+  // The draft takes a while and you may leave this deck meanwhile, so remember
+  // which deck it is for and what the checkbox said when you clicked.
+  const target = draft;
+  const targetId = draft.id;
+  const overwrite = el('ai-overwrite').checked;
+  const btn = el('ai-draft-btn');
+  aiBusy = true;
+  btn.disabled = true;
+  setAiStatus('Starting...');
+  let res;
+  try {
+    res = await window.api.analyzeDeck(aiPayload());
+  } finally {
+    aiBusy = false;
+    btn.disabled = false;
+  }
+  if (!res.ok) {
+    setAiStatus(res.error, true);
+    return;
+  }
+  // Still on this deck (or reopened it): fill the editor you're looking at.
+  if (draft && (draft === target || (targetId && draft.id === targetId))) {
+    const filled = mergeAiSections(draft.descSections, res.sections, overwrite);
+    DESC_SECTIONS.forEach((sec, i) => {
+      if (sec.fields.some((f) => res.sections[f.key])) descOpen.add(i);
+    });
+    updateDescSummary();
+    openDescEditor();
+    setAiStatus(filled ? `Drafted ${filled} section${filled === 1 ? '' : 's'} - review and edit before saving.` : 'Nothing to fill (turn on "Overwrite filled sections" to replace).');
+    return;
+  }
+  // You moved on. Never touch whatever deck is open now. A saved deck gets the
+  // draft written onto its saved copy (so the work isn't lost); an unsaved new
+  // deck has nowhere to keep it.
+  const saved = targetId && decks[targetId];
+  if (!saved) {
+    setAiStatus('Draft finished, but that deck was never saved - open it again to redo.', true);
+    return;
+  }
+  const sections = { ...(saved.descSections || {}) };
+  if (!mergeAiSections(sections, res.sections, overwrite)) return;
+  decks = await window.api.saveDeck({ ...saved, descSections: sections });
+  if (view === 'list') renderList();
+  setAiStatus(`Draft for "${saved.name || 'Untitled'}" finished in the background and was saved.`);
+}
+
+let descAc = { ta: null, start: 0, items: [], sel: 0 };
+
+function descAutocomplete(ta) {
+  const m = /@([^@\[\]\n]*)$/.exec(ta.value.slice(0, ta.selectionStart));
+  const box = el('desc-ac');
+  if (!m) {
+    box.hidden = true;
+    return;
+  }
+  const q = m[1].toLowerCase();
+  const inDeck = (c) => (draft.cards[c.cardId] || 0) > 0 || draft.legendCardIds.includes(c.cardId);
+  const items = uniqueCards
+    .filter((c) => c.displayName.toLowerCase().includes(q))
+    .sort((a, b) => inDeck(b) - inDeck(a) || a.displayName.localeCompare(b.displayName))
+    .slice(0, 8);
+  if (!items.length) {
+    box.hidden = true;
+    return;
+  }
+  descAc = { ta, start: ta.selectionStart - m[0].length, items, sel: 0 };
+  const r = ta.getBoundingClientRect();
+  box.style.left = `${r.left}px`;
+  box.style.top = `${r.bottom + 2}px`;
+  box.innerHTML = items.map((c, i) => `<div data-i="${i}" class="${i === 0 ? 'on' : ''}">${escapeHtml(c.displayName)}${inDeck(c) ? ' <span class="desc-ac-tag">in deck</span>' : ''}</div>`).join('');
+  box.querySelectorAll('div').forEach((d) =>
+    d.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      pickDescCard(Number(d.dataset.i));
+    })
+  );
+  box.hidden = false;
+}
+
+function pickDescCard(i) {
+  const { ta, start, items } = descAc;
+  const pos = ta.selectionStart;
+  ta.value = `${ta.value.slice(0, start)}@[${items[i].displayName}] ${ta.value.slice(pos)}`;
+  const caret = start + items[i].displayName.length + 4;
+  ta.setSelectionRange(caret, caret);
+  draft.descSections[ta.dataset.descKey] = ta.value;
+  el('desc-ac').hidden = true;
+  updateDescSummary();
+}
+
+function descAcKey(e) {
+  const box = el('desc-ac');
+  if (box.hidden) return;
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    const n = descAc.items.length;
+    descAc.sel = (descAc.sel + (e.key === 'ArrowDown' ? 1 : n - 1)) % n;
+    box.querySelectorAll('div').forEach((d, i) => d.classList.toggle('on', i === descAc.sel));
+  } else if (e.key === 'Enter' || e.key === 'Tab') {
+    e.preventDefault();
+    pickDescCard(descAc.sel);
+  } else if (e.key === 'Escape') {
+    e.stopPropagation();
+    box.hidden = true;
+  }
+}
+
+function onCardTagHover(e) {
+  const pop = el('card-tag-pop');
+  const tag = e.target.closest?.('[data-card-tag]');
+  const card = tag && uniqueCards.find((c) => c.displayName === tag.dataset.cardTag);
+  if (!card) {
+    pop.hidden = true;
+    return;
+  }
+  const img = pop.querySelector('img');
+  if (img.getAttribute('src') !== card.imageUrl) img.src = card.imageUrl;
+  pop.hidden = false;
+  pop.style.left = `${Math.min(e.clientX + 16, innerWidth - 250)}px`;
+  pop.style.top = `${Math.max(8, Math.min(e.clientY - 150, innerHeight - 330))}px`;
+}
+
 // --- Builder view -----------------------------------------------------
 
 function renderBuilder() {
   el('deck-name-input').value = draft.name;
-  el('deck-description-input').value = draft.description || '';
+  updateDescSummary();
   renderDeckMessage();
   renderLegendRow();
   renderCeilingStrip();
   renderCardPool();
   renderDeckCardsList();
+  renderSideboardList();
+  renderPlansEditor();
   renderLinksList();
   renderDeckStats();
+  updateTagsSummary();
 }
 
 function renderLegendRow() {
@@ -1269,6 +1993,7 @@ function getFilteredPoolCards() {
       if (builderState.types.size && !builderState.types.has(c.cardType)) return false;
       if (builderState.rarities.size && !builderState.rarities.has(c.rarity)) return false;
       if (builderState.set !== 'all' && !c.sets.some((s) => s.code === builderState.set)) return false;
+      if (builderState.decklistOnly) return (draft.cards[c.cardId] || 0) + sideQtyOf(draft, c.cardId) > 0;
       if (builderState.ownership === 'owned' && c.ownedMain === 0) return false;
       if (builderState.legalOnly && !cardFitsCeilings(draft, c)) return false;
       return true;
@@ -1279,6 +2004,7 @@ function getFilteredPoolCards() {
 function renderCardPool() {
   const cards = getFilteredPoolCards();
   el('db-result-count').textContent = `${cards.length} card${cards.length === 1 ? '' : 's'}`;
+  el('decklist-toggle').classList.toggle('active', builderState.decklistOnly);
   el('db-card-grid').innerHTML = cards.map(cardPoolTileHtml).join('');
 
   el('db-card-grid').querySelectorAll('[data-qty-action]').forEach((btn) => {
@@ -1290,12 +2016,23 @@ function renderCardPool() {
       applyQty(card, next);
     });
   });
+  el('db-card-grid').querySelectorAll('[data-side-action]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = cardById(btn.dataset.cardId);
+      const current = sideQtyOf(draft, card.cardId);
+      applySideQty(card, btn.dataset.sideAction === 'inc' ? current + 1 : current - 1);
+    });
+  });
 }
 
 function cardPoolTileHtml(card) {
   const qty = draft.cards[card.cardId] || 0;
-  const maxQty = Math.min(3, card.ownedMain);
+  const side = sideQtyOf(draft, card.cardId);
+  const maxQty = Math.max(0, MAX_COPIES - side);
   const incCheck = canSetCardQty(draft, card, qty + 1);
+  const sideInc = canSetSideQty(draft, card, side + 1);
+  const sideMax = Math.max(0, MAX_COPIES - qty);
+  const missingNow = Math.max(0, qty + side - card.ownedMain);
   return `
     <div class="db-card-tile">
       <img src="${card.imageUrl}" alt="${escapeHtml(card.displayName)}" loading="lazy" />
@@ -1305,11 +2042,16 @@ function cardPoolTileHtml(card) {
           <span>${card.color || ''} · RAM ${card.ram ?? '-'}</span>
           <span class="rarity-pip ${rarityClass(card.rarity)}">${card.rarity || ''}</span>
         </div>
-        <div class="db-card-tile-owned">Owned: ${card.ownedMain}</div>
+        <div class="db-card-tile-owned">Owned: ${card.ownedMain}${missingNow ? ` <span class="db-missing-tag" title="Copies this deck uses that you don't own in Main">need ${missingNow} more</span>` : ''}</div>
         <div class="db-qty-row">
           <button data-qty-action="dec" data-card-id="${card.cardId}" ${qty <= 0 ? 'disabled' : ''}>-</button>
           <span class="db-qty-value">${qty} / ${maxQty || 0}</span>
-          <button data-qty-action="inc" data-card-id="${card.cardId}" ${qty >= maxQty || !incCheck.ok ? 'disabled' : ''} title="${qty >= maxQty || !incCheck.ok ? escapeHtml(incCheck.ok ? 'Owned copy limit reached' : incCheck.reason) : ''}">+</button>
+          <button data-qty-action="inc" data-card-id="${card.cardId}" ${qty >= maxQty || !incCheck.ok ? 'disabled' : ''} title="${qty >= maxQty || !incCheck.ok ? escapeHtml(incCheck.ok ? 'Copy limit reached' : incCheck.reason) : ''}">+</button>
+        </div>
+        <div class="db-qty-row db-side-row" title="Sideboard copies (main + side share the 3-copy limit)">
+          <button data-side-action="dec" data-card-id="${card.cardId}" ${side <= 0 ? 'disabled' : ''}>-</button>
+          <span class="db-qty-value">Side ${side} / ${sideMax}</span>
+          <button data-side-action="inc" data-card-id="${card.cardId}" ${!sideInc.ok || side >= sideMax ? 'disabled' : ''} title="${!sideInc.ok ? escapeHtml(sideInc.reason) : ''}">+</button>
         </div>
       </div>
     </div>
@@ -1329,6 +2071,50 @@ function applyQty(card, nextQty) {
   } else {
     draft.cards[card.cardId] = clamped;
   }
+  normalizePlans(draft);
+  setDeckMessage(null);
+  renderBuilder();
+}
+
+function applySideQty(card, nextQty) {
+  const clamped = Math.max(0, nextQty);
+  const check = canSetSideQty(draft, card, clamped);
+  if (!check.ok) {
+    setDeckMessage(check.reason, true);
+    return;
+  }
+  if (clamped === 0) delete draft.sideboard[card.cardId];
+  else draft.sideboard[card.cardId] = clamped;
+  normalizePlans(draft);
+  setDeckMessage(null);
+  renderBuilder();
+}
+
+// Moving a copy between main and sideboard never changes the combined count,
+// so ownership / copy-limit / RAM legality are unchanged - only the
+// sideboard's 7-card cap can block it.
+function moveCopy(cardId, toSide) {
+  const card = cardById(cardId);
+  if (!card) return;
+  if (toSide) {
+    if (!(draft.cards[cardId] > 0)) return;
+    if (sideboardTotal(draft) >= SIDEBOARD_SIZE) {
+      setDeckMessage(`The sideboard is capped at ${SIDEBOARD_SIZE} cards.`, true);
+      return;
+    }
+    draft.cards[cardId] -= 1;
+    if (draft.cards[cardId] <= 0) {
+      delete draft.cards[cardId];
+      delete draft.cardPrintings[cardId];
+    }
+    draft.sideboard[cardId] = (draft.sideboard[cardId] || 0) + 1;
+  } else {
+    if (!(draft.sideboard[cardId] > 0)) return;
+    draft.sideboard[cardId] -= 1;
+    if (draft.sideboard[cardId] <= 0) delete draft.sideboard[cardId];
+    draft.cards[cardId] = (draft.cards[cardId] || 0) + 1;
+  }
+  normalizePlans(draft);
   setDeckMessage(null);
   renderBuilder();
 }
@@ -1358,14 +2144,22 @@ function renderDeckCardsList() {
       <div class="deck-card-row-color color-bar ${e.card.color || ''}"></div>
       <div class="deck-card-row-name" title="${escapeHtml(e.card.name)}">${escapeHtml(e.card.name)}</div>
       ${rarities.length > 1 ? `<div class="deck-card-row-mixed" title="${escapeHtml(rarities.join(' + '))}">${escapeHtml(rarities.join('+'))}</div>` : ''}
+      ${(() => {
+        const miss = Math.max(0, e.qty + sideQtyOf(draft, e.card.cardId) - e.card.ownedMain);
+        return miss ? `<div class="deck-card-row-missing" title="You own ${e.card.ownedMain} in Main">need ${miss}</div>` : '';
+      })()}
       <div class="deck-card-row-qty">x${e.qty}</div>
       ${hasVariants ? `<button class="deck-card-row-art" data-split-card="${e.card.cardId}" title="Choose which printing(s) represent these copies">&#8635;</button>` : ''}
+      <button class="deck-card-row-move" data-to-side="${e.card.cardId}" title="Move one copy to the sideboard">&#8681; Side</button>
       <button data-dec-card="${e.card.cardId}" title="Remove one">-</button>
     </div>
   `;
     })
     .join('');
 
+  list.querySelectorAll('[data-to-side]').forEach((btn) => {
+    btn.addEventListener('click', () => moveCopy(btn.dataset.toSide, true));
+  });
   list.querySelectorAll('[data-dec-card]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const card = cardById(btn.dataset.decCard);
@@ -1375,6 +2169,154 @@ function renderDeckCardsList() {
   list.querySelectorAll('[data-split-card]').forEach((btn) => {
     btn.addEventListener('click', () => openPrintingSplit(btn.dataset.splitCard));
   });
+}
+
+function renderSideboardList() {
+  const entries = Object.entries(draft.sideboard)
+    .map(([cardId, qty]) => ({ card: cardById(cardId), qty }))
+    .filter((e) => e.card)
+    .sort((a, b) => COLOR_ORDER.indexOf(a.card.color) - COLOR_ORDER.indexOf(b.card.color) || a.card.name.localeCompare(b.card.name));
+  const total = sideboardTotal(draft);
+  const badge = el('side-count-badge');
+  badge.textContent = `${total}/${SIDEBOARD_SIZE}`;
+  badge.className = 'deck-count-badge ' + (total === SIDEBOARD_SIZE ? 'deck-count-ok' : 'deck-count-bad');
+
+  const list = el('sideboard-list');
+  if (!entries.length) {
+    list.innerHTML = `<div class="deck-cards-empty">No sideboard yet. Use the Side +/- on a card, or "&#8681; Side" in the Deck List. Tournament rules: exactly ${SIDEBOARD_SIZE} cards, no Legends.</div>`;
+    return;
+  }
+  list.innerHTML = entries
+    .map(
+      (e) => `
+    <div class="deck-card-row">
+      <div class="deck-card-row-color color-bar ${e.card.color || ''}"></div>
+      <div class="deck-card-row-name" title="${escapeHtml(e.card.name)}">${escapeHtml(e.card.name)}</div>
+      <div class="deck-card-row-qty">x${e.qty}</div>
+      <button class="deck-card-row-move" data-to-main="${e.card.cardId}" title="Move one copy to the main deck">&#8679; Main</button>
+      <button data-dec-side="${e.card.cardId}" title="Remove one">-</button>
+    </div>`
+    )
+    .join('');
+  list.querySelectorAll('[data-to-main]').forEach((btn) => btn.addEventListener('click', () => moveCopy(btn.dataset.toMain, false)));
+  list.querySelectorAll('[data-dec-side]').forEach((btn) =>
+    btn.addEventListener('click', () => applySideQty(cardById(btn.dataset.decSide), sideQtyOf(draft, btn.dataset.decSide) - 1))
+  );
+}
+
+// --- Swap plans editor ----------------------------------------------------
+// A plan is a named list of 1-for-1 swaps (e.g. "vs Blue": 2x Riot Shield in
+// for 2x Mantis Blades out). Because every swap pairs equal quantities, a
+// plan can't unbalance the deck - the editor only offers copies that are
+// still unassigned in that plan.
+
+function planOptionsHtml(cardIds, selected, leftFn) {
+  return cardIds
+    .map((id) => {
+      const card = cardById(id);
+      if (!card) return '';
+      const left = leftFn(id);
+      return `<option value="${id}" ${id === selected ? 'selected' : ''} ${left < 1 && id !== selected ? 'disabled' : ''}>${escapeHtml(card.name)} (${left} left)</option>`;
+    })
+    .join('');
+}
+
+function renderPlansEditor() {
+  const box = el('swap-plans');
+  const hasSide = sideboardTotal(draft) > 0;
+  el('add-plan-btn').disabled = !hasSide;
+  if (!draft.swapPlans.length) {
+    box.innerHTML = `<div class="deck-cards-empty">${hasSide ? 'No swap plans yet. A plan is what you swap between games, e.g. "vs Blue".' : 'Add sideboard cards first, then build swap plans.'}</div>`;
+    return;
+  }
+  const mainIds = Object.keys(draft.cards);
+  const sideIds = Object.keys(draft.sideboard);
+  box.innerHTML = draft.swapPlans
+    .map((plan) => {
+      const rows = plan.swaps
+        .map((s, i) => {
+          const outLeft = (id) => (draft.cards[id] || 0) - planUsed(plan, 'out', id, i);
+          const inLeft = (id) => (draft.sideboard[id] || 0) - planUsed(plan, 'in', id, i);
+          const maxQty = Math.max(1, Math.min(outLeft(s.out), inLeft(s.in)));
+          return `
+          <div class="swap-row" data-plan="${plan.id}" data-swap="${i}">
+            <select class="swap-out" title="Leaves the main deck">${planOptionsHtml(mainIds, s.out, outLeft)}</select>
+            <span class="swap-arrow">&#8644;</span>
+            <select class="swap-in" title="Comes in from the sideboard">${planOptionsHtml(sideIds, s.in, inLeft)}</select>
+            <input class="swap-qty" type="number" min="1" max="${maxQty}" value="${s.qty}" />
+            <button data-del-swap title="Remove swap">&#10005;</button>
+          </div>`;
+        })
+        .join('');
+      const count = plan.swaps.reduce((sum, s) => sum + s.qty, 0);
+      return `
+      <div class="swap-plan" data-plan-id="${plan.id}">
+        <div class="swap-plan-head">
+          <input class="swap-plan-name" value="${escapeHtml(plan.name)}" placeholder="Plan name (e.g. vs Blue)" />
+          <span class="swap-plan-count" title="Cards swapped (deck size stays the same)">&#8646; ${count}</span>
+          <button data-del-plan title="Delete plan">&#10005;</button>
+        </div>
+        ${rows}
+        <button class="btn btn-block swap-add-btn" data-add-swap>+ Add swap</button>
+      </div>`;
+    })
+    .join('');
+
+  box.querySelectorAll('.swap-plan').forEach((planEl) => {
+    const plan = planById(draft, planEl.dataset.planId);
+    planEl.querySelector('.swap-plan-name').addEventListener('input', (e) => {
+      plan.name = e.target.value;
+    });
+    planEl.querySelector('[data-del-plan]').addEventListener('click', () => {
+      draft.swapPlans = draft.swapPlans.filter((p) => p.id !== plan.id);
+      renderPlansEditor();
+    });
+    planEl.querySelector('[data-add-swap]').addEventListener('click', () => addSwap(plan));
+    planEl.querySelectorAll('.swap-row').forEach((rowEl) => {
+      const i = Number(rowEl.dataset.swap);
+      const s = plan.swaps[i];
+      const commit = (patch) => {
+        const next = { ...s, ...patch };
+        const outLeft = (draft.cards[next.out] || 0) - planUsed(plan, 'out', next.out, i);
+        const inLeft = (draft.sideboard[next.in] || 0) - planUsed(plan, 'in', next.in, i);
+        const maxQty = Math.min(outLeft, inLeft);
+        if (maxQty < 1) {
+          setDeckMessage('No copies left to swap with that card in this plan.', true);
+        } else {
+          next.qty = Math.max(1, Math.min(next.qty, maxQty));
+          plan.swaps[i] = next;
+          setDeckMessage(null);
+        }
+        renderPlansEditor();
+      };
+      rowEl.querySelector('.swap-out').addEventListener('change', (e) => commit({ out: e.target.value }));
+      rowEl.querySelector('.swap-in').addEventListener('change', (e) => commit({ in: e.target.value }));
+      rowEl.querySelector('.swap-qty').addEventListener('change', (e) => commit({ qty: Number(e.target.value) || 1 }));
+      rowEl.querySelector('[data-del-swap]').addEventListener('click', () => {
+        plan.swaps.splice(i, 1);
+        renderPlansEditor();
+      });
+    });
+  });
+}
+
+function addSwap(plan) {
+  const outId = Object.keys(draft.cards).find((id) => (draft.cards[id] || 0) - planUsed(plan, 'out', id) > 0);
+  const inId = Object.keys(draft.sideboard).find((id) => (draft.sideboard[id] || 0) - planUsed(plan, 'in', id) > 0);
+  if (!outId || !inId) {
+    setDeckMessage('Every sideboard copy (or main-deck copy) is already used in this plan.', true);
+    return;
+  }
+  plan.swaps.push({ out: outId, in: inId, qty: 1 });
+  setDeckMessage(null);
+  renderPlansEditor();
+}
+
+function addPlan() {
+  const plan = { id: `p${Date.now()}${Math.random().toString(36).slice(2, 6)}`, name: `Plan ${draft.swapPlans.length + 1}`, swaps: [] };
+  draft.swapPlans.push(plan);
+  addSwap(plan);
+  renderPlansEditor();
 }
 
 // Short label(s) for a card's current printing split, e.g. ["Epic"] for a
@@ -1387,6 +2329,10 @@ function splitRarities(deck, cardId) {
 }
 
 function renderLinksList() {
+  const sel = el('link-creator-select');
+  const keep = sel.value;
+  sel.innerHTML = '<option value="">Channel: none</option>' + tagsInCat('creator').map((t) => `<option value="${t.id}">${escapeHtml(t.name)}</option>`).join('');
+  sel.value = keep;
   const list = el('deck-links-list');
   if (!draft.links.length) {
     list.innerHTML = '<div class="deck-links-empty">No reference links yet.</div>';
@@ -1396,7 +2342,7 @@ function renderLinksList() {
     .map(
       (l, i) => `
     <div class="deck-link-row">
-      <a data-open-link="${escapeHtml(l.url)}" title="${escapeHtml(l.url)}">${escapeHtml(l.label || l.url)}</a>
+      <a data-open-link="${escapeHtml(l.url)}" title="${escapeHtml(l.url)}">${l.creatorId && tagOf(l.creatorId) ? `&#9654; ${escapeHtml(tagOf(l.creatorId).name)} - ` : ''}${escapeHtml(l.label || l.url)}</a>
       <button data-remove-link="${i}" title="Remove">&#10005;</button>
     </div>
   `
@@ -1410,6 +2356,7 @@ function renderLinksList() {
     btn.addEventListener('click', () => {
       draft.links.splice(Number(btn.dataset.removeLink), 1);
       renderLinksList();
+      updateTagsSummary();
     });
   });
 }
@@ -1421,7 +2368,8 @@ function addLink() {
     setDeckMessage('Reference links need a full http:// or https:// URL.', true);
     return;
   }
-  draft.links.push({ label: label || url, url });
+  draft.links.push({ label: label || url, url, ...(el('link-creator-select').value ? { creatorId: el('link-creator-select').value } : {}) });
+  updateTagsSummary();
   el('link-label-input').value = '';
   el('link-url-input').value = '';
   setDeckMessage(null);
@@ -1454,6 +2402,12 @@ function renderDeckStats() {
       <div class="deck-stat-row"><span>RAM curve</span><span></span></div>
       <div class="ram-curve">${ramCurve || ''}</div>
     </div>
+    ${(() => {
+      const m = deckMissing(draft);
+      return m.total
+        ? `<div class="deck-stat-missing" title="${escapeHtml(missingTitle(m))}">${m.total} card${m.total === 1 ? '' : 's'} not in your collection</div>`
+        : stats.total ? '<div class="deck-stat-owned">Every card is in your collection</div>' : '';
+    })()}
     ${stats.warnings.map((w) => `<div class="deck-stat-warning">${escapeHtml(w)}</div>`).join('')}
   `;
 }
@@ -1559,16 +2513,13 @@ function onLegendTileClick(cardId) {
     return;
   }
   const owned = ownedPrintingsFor(cardId);
-  if (!owned.length) {
-    setDeckMessage(`You don't own "${candidate.name}" in Main - Legends must be a card you own.`, true);
-    return;
-  }
   if (owned.length > 1) {
     legendPicker.variantFor = cardId;
     renderLegendPicker();
     return;
   }
-  finalizeLegendSelection(cardId, owned[0].id);
+  // Not owned: use the card's representative art; the deck is flagged as missing it.
+  finalizeLegendSelection(cardId, owned[0]?.id || candidate.id);
 }
 
 function finalizeLegendSelection(cardId, printingId) {
@@ -1695,7 +2646,9 @@ function attachControls() {
   el('win-minimize').addEventListener('click', () => window.api.windowMinimize());
   el('win-maximize').addEventListener('click', () => window.api.windowToggleMaximize());
   el('win-close').addEventListener('click', () => window.api.windowClose());
-  el('close-btn').addEventListener('click', () => window.api.windowClose());
+  el('close-btn').addEventListener('click', async () => {
+    if (await confirmLeave()) window.api.overlayClose();
+  });
 
   el('new-deck-btn').addEventListener('click', newDeck);
   el('import-deck-btn').addEventListener('click', openImportModal);
@@ -1704,8 +2657,10 @@ function attachControls() {
     if (e.target === el('import-overlay')) closeImportModal();
   });
   el('import-run-btn').addEventListener('click', runImport);
-  el('back-to-list-btn').addEventListener('click', backToList);
-  el('save-deck-btn').addEventListener('click', saveDraft);
+  el('back-to-list-btn').addEventListener('click', async () => {
+    if (await confirmLeave()) backToList();
+  });
+  el('save-deck-btn').addEventListener('click', () => saveDraft());
   el('builder-export-btn').addEventListener('click', () => openExportModal(draft));
 
   el('export-close').addEventListener('click', closeExportModal);
@@ -1715,6 +2670,25 @@ function attachControls() {
   el('export-copy-btn').addEventListener('click', copyExportText);
   el('export-download-btn').addEventListener('click', downloadExportText);
 
+  el('list-search').addEventListener('input', (e) => {
+    listUiState.search = e.target.value;
+    renderList();
+  });
+  el('list-ownership').addEventListener('change', (e) => {
+    listUiState.ownership = e.target.value;
+    renderList();
+  });
+  el('list-sort').addEventListener('change', (e) => {
+    listUiState.sort = e.target.value;
+    renderList();
+  });
+  el('select-all-decks').addEventListener('change', (e) => {
+    for (const d of visibleDecks()) {
+      if (e.target.checked) listUiState.selectedIds.add(d.id);
+      else listUiState.selectedIds.delete(d.id);
+    }
+    renderList();
+  });
   el('prep-list-btn').addEventListener('click', openPrepView);
   el('prep-back-to-list-btn').addEventListener('click', backToList);
   el('publish-decks-btn').addEventListener('click', () => publishDecks([...listUiState.selectedIds]));
@@ -1722,9 +2696,39 @@ function attachControls() {
   el('deck-name-input').addEventListener('input', (e) => {
     draft.name = e.target.value;
   });
-  el('deck-description-input').addEventListener('input', (e) => {
-    draft.description = e.target.value;
+  el('add-plan-btn').addEventListener('click', addPlan);
+  el('decklist-toggle').addEventListener('click', () => {
+    builderState.decklistOnly = !builderState.decklistOnly;
+    renderCardPool();
   });
+  el('deck-description-btn').addEventListener('click', () => {
+    setAiStatus('');
+    el('ai-key-row').hidden = true;
+    refreshAiKeyUi();
+    openDescEditor();
+  });
+  el('ai-draft-btn').addEventListener('click', runAiDraft);
+  el('ai-build-btn').addEventListener('click', runBuildKnowledge);
+  window.api.onAiProgress((msg) => setAiStatus(msg));
+  el('ai-key-btn').addEventListener('click', () => {
+    el('ai-key-row').hidden = !el('ai-key-row').hidden;
+    if (!el('ai-key-row').hidden) el('ai-key-input').focus();
+  });
+  el('ai-key-save').addEventListener('click', async () => {
+    await window.api.setAiKey(el('ai-key-input').value);
+    el('ai-key-input').value = '';
+    el('ai-key-row').hidden = true;
+    refreshAiKeyUi();
+  });
+  el('ai-key-clear').addEventListener('click', async () => {
+    await window.api.setAiKey('');
+    refreshAiKeyUi();
+  });
+  el('desc-close').addEventListener('click', closeDescEditor);
+  el('desc-overlay').addEventListener('click', (e) => {
+    if (e.target === el('desc-overlay')) closeDescEditor();
+  });
+  document.addEventListener('mousemove', onCardTagHover);
 
   el('db-search-input').addEventListener('input', (e) => {
     builderState.search = e.target.value;
@@ -1801,6 +2805,7 @@ function attachControls() {
     }
     if (e.key === 'Escape' && el('test-hand-overlay').classList.contains('open')) closeTestHand();
     if (e.key === 'Escape' && el('printing-split-overlay').classList.contains('open')) closePrintingSplit();
+    if (e.key === 'Escape' && el('desc-overlay').classList.contains('open') && el('desc-ac').hidden) closeDescEditor();
     if (e.key === 'Escape' && el('export-overlay').classList.contains('open')) closeExportModal();
     if (e.key === 'Escape' && el('import-overlay').classList.contains('open')) closeImportModal();
   });

@@ -227,7 +227,7 @@ async function init() {
       applyRarityHighlight();
     });
   });
-  el('close-btn').addEventListener('click', () => window.close());
+  el('close-btn').addEventListener('click', () => window.api.overlayClose());
   el('win-minimize').addEventListener('click', () => window.api.windowMinimize());
   el('win-maximize').addEventListener('click', () => window.api.windowToggleMaximize());
   el('win-close').addEventListener('click', () => window.api.windowClose());

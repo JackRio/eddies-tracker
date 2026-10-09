@@ -20,7 +20,7 @@ directly by Electron.
 
 ## Architecture at a glance
 
-Three Electron `BrowserWindow`s, all maximized-by-default and frameless
+One Electron `BrowserWindow` (the main window) plus three full-size `WebContentsView` overlays laid over it (Collection, Trading, Deck Builder - opened by `openOverlay()` in `main.js`, never separate OS windows; closing one just reveals what is underneath; the title-bar X (`window:close`) quits the whole app from any overlay, while an overlay's own Close button uses `overlay:close` to return to what is underneath). The main window is maximized-by-default and frameless
 (custom title bar, see below), all using the same `preload.js` (so all three
 get the same `window.api`):
 
@@ -551,10 +551,9 @@ specific art/printing — see "Printings, not cards" above. So:
   art-variant sub-view in the Legend picker instead of finalizing
   immediately; a filled slot's "↺ Art" button (shown only when
   `ownedPrintingsFor(cardId).length > 1`) reopens that sub-view directly to
-  change it later. Selecting a Legend you own zero copies of (reachable via
-  the picker's "Show All" ownership toggle) is blocked the same way an
-  over-cap card add is — Legends are subject to the same "hard-capped at
-  owned copies" rule as every other card.
+  change it later. A Legend you don't own can be picked too (via the
+  picker's "Show All" toggle); it uses the card's representative art and the
+  deck is flagged as missing it (see "Cards you don't own" below).
 - Regular (non-Legend) cards can run up to 3 copies, and unlike a Legend
   slot those copies don't all have to be the same printing — e.g. 2 Epic +
   1 Iconic Other copy of the same named card is a completely normal
@@ -601,8 +600,7 @@ always legal (none currently exist in the pool, but the check is written to
 allow for it).
 
 **Enforcement is hard-block, not warn-and-allow**, for anything that makes
-an action nonsensical: a 4th copy of a card, exceeding a card's own
-`ownedMain`, a 4th Legend, two Legends sharing a `name`, or a card whose
+an action nonsensical: a 4th copy of a card, a 4th Legend, two Legends sharing a `name`, or a card whose
 `ram` exceeds its color's current ceiling. Each rejection sets
 `deckMessage` (rendered in `#deck-message`, styled red) instead of mutating
 state — see `canSetCardQty()`/`legendNameConflict()`. Being under 40 cards,
@@ -612,10 +610,25 @@ via `computeDeckWarnings()` instead.
 
 **Ownership filtering**: the card browser defaults to "Owned Only"
 (`builderState.ownership`), hiding any card with `ownedMain === 0`.
-Switching to "Show All" only changes *visibility* — the add/quantity
-buttons are still hard-capped at `ownedMain` (0 owned means the `+` stays
-disabled with an explanatory `title`), so "Show All" is for seeing what a
-deck still needs, not for building with cards you don't have.
+Switching to "Show All" reveals cards you don't own, and they CAN be added
+(see below).
+
+**Cards you don't own** (changed on request - this used to be hard-blocked at
+`ownedMain`): a deck may use more copies of a card than your Main bucket holds
+(still max 3 per card, main + sideboard combined). `deckMissing(deck)` counts
+what isn't covered - main + sideboard share your owned copies, each Legend
+needs 1 - and drives: the orange "need N" tags on Deck List rows and pool
+tiles, a "N cards not in your collection" line in the builder stats, and on
+the My Decks list an orange "⚠ N not owned" tag (tooltip lists the cards) or a
+green "✓ Fully owned" tag. "Owned" here means the **Main** bucket, as before -
+copies sitting only in Reserve/Extras count as missing. Copies you don't own
+have no printing, so they render with the card's representative art and the
+printing split only covers owned copies (`getPrintingSplit()` compares against
+`min(qty, ownedMain)`). The My Decks list has a search box, a Show filter
+(All / Fully owned / Missing cards) and a Sort (recently edited / name /
+fewest missing); the header's "Select all" checkbox applies to the decks
+currently shown, so Fully owned + Select all + Publish Selected publishes
+exactly the buildable decks.
 
 **"Legal for current Legends" filter** (`builderState.legalOnly`, on by
 default): hides any card `cardFitsCeilings()` rejects — same check
@@ -687,6 +700,59 @@ card-detail popup or the front-facing art switch - those are editing/
 inspection conveniences, not needed for "which cards do I need for this
 deck," and porting them would mean duplicating `renderRulesText()`/
 `faqHtml()` too for comparatively little value here.
+
+### Sideboard + swap plans (Deck Builder)
+
+`deck.sideboard: { cardId: qty }` - exactly 7 cards per the official Tournament Rules (hard cap 7, warning when != 7), no Legends, and the 3-copy limit + ownership are **combined** with the main deck (`checkCardLegality()`). `deck.swapPlans: [{ id, name, swaps: [{ out, in, qty }] }]` are named 1-for-1 swaps (so deck size never changes); `applyPlan()` trades the cards between main and sideboard, and Deck View / Test Hand / docs/decks.js render the post-board deck from it. `normalizePlans()` re-clamps plans whenever quantities change. Prep List counts main + sideboard copies. `decks:publish` includes sideboard cards' printings/images.
+
+The description editor (`openDescEditor()`) shows each section as a
+collapsible panel (header: caret, title, filled dot, one-line preview while
+collapsed; open state kept in `descOpen`, and an AI draft opens the sections it
+filled). Textareas auto-grow with their content (`autoGrow()`, `resize: none`)
+- don't put a manual resize handle back.
+
+### AI Draft (Deck Description editor)
+
+"✨ AI Draft" in the description overlay fills `deck.descSections` from the
+decklist. All logic is `src/ai.js` (main process): the Anthropic API key is
+pasted in the overlay (`ai:setKey`), stored in `userData/ai-key.json`
+(encrypted via `safeStorage`, never committed, never sent to a renderer -
+`ai:hasKey` only returns a boolean). The renderer's `aiPayload()` sends
+legends + cards (with rules text) + stats + sideboard/swap plans; the system
+prompt is the instructions plus `src/data/rules.txt` (text of the official
+comprehensive rules PDF, prompt-cached). Output is forced through a tool call
+with one string per section key; any `@[Name]` tag not in the deck is stripped.
+By default only *empty* sections are filled (checkbox overwrites). Model id is
+`MODEL` in `ai.js`. Refresh `rules.txt` when the rules PDF updates. The AI never
+sees raw `rules.txt`: `src/rules-filter.js` strips page header/footer noise, the
+"Respect Your Rival" conduct block, and component rules (dice quality, sleeves,
+translations); `node src/rules-filter.js` prints exactly what it cuts. The
+playbook hash covers the filtered text, so edits here rebuild it automatically.
+
+Knowledge is built **up front**, not per request: the "Build knowledge"
+button (`ai:buildKnowledge`) studies every card in `cards-cache.json` (batches
+of 20, 3 in parallel, resumable) and distills `rules.txt` into a short
+`userData/rules-playbook.json`. Deck drafts then send only the playbook + that
+deck's profiles; they study only cards that are new/changed since.
+
+Output hygiene lives in `ai.js`: `makeTagger()` repairs `@[Card]` tags (resolves
+short names like "Maman Brigitte" to the full "Name: Subtitle" display name,
+keeping the short form as the `@[Full|Short]` label, and auto-tags untagged
+mentions), `dropBadSellAdvice()` removes advice to sell cards without a Sell
+Tag. The prompt forbids teaching rules / other-game jargon, asks for a card's
+*role* instead of a paraphrase of its text, 3-5 Key Cards, and short
+one-idea-per-line fields; `ddBodyHtml()` (duplicated in `docs/decks.js`)
+renders those lines as bullets, with a label column for Game Plan/Mulligan.
+
+It is a two-stage agent with persistent memory. **Study**: `studyCards()`
+profiles each card (summary, fixed-list `roles`, `mechanics`, `wants`,
+`enables`) in batches of 20 and stores them in `userData/card-knowledge.json`
+keyed by `cardId` + a hash of its text, so only new/changed cards are ever
+studied (the first draft of a deck studies its cards; later decks reuse them).
+**Analyze**: the decklist goes in with each card's profile plus a role tally
+computed in code; the tool schema makes the model fill an `analysis` (themes,
+plan, loop, weaknesses) before the sections, and the prompt forbids explaining
+game rules - the description must describe the deck.
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 
@@ -821,3 +887,12 @@ deck," and porting them would mean duplicating `renderRulesText()`/
   +/− — tried (a 4s debounce after the last click), explicitly rejected as
   unwanted background activity. Committing staged deltas to GitHub is a
   manual "Commit Trades" click only; see `docs/record.html`.
+
+## Deck tags, groups, AI queue (Deck Builder + `docs/decks.html`)
+
+- **Tag DB** `userData/tag-db.json` (seeded from `src/data/tag-seed.json`; IPC `tags:get/save`). Categories: `archetype`, `creator` (YouTube channels, with `url`), `misc` (includes the locked `misc-featured`). **Color tags (BBG, RBG, YYB…) are never stored** - derived from the Legends, most-represented color first then R,B,G,Y (`colorTagFor()` in `main.js`, `colorTagOf()` in `deckbuilder-tags.js`). Decks hold `deck.tags = {archetype, creator, misc}` (tag ids) and `deck.groupId`; a link's `creatorId` also counts as a creator tag. `decks:setMeta` edits those without bumping `updatedAt`; `decks:save` preserves them if the incoming deck lacks them. Deleting a tag/group prunes decks.
+- **Groups** `userData/deck-groups.json` `[{id,name,collapsed}]` (`groups:get/save`). My Decks list is grouped, drag a card onto a group header to move it. `collapsed` is also the site's default open state.
+- **Featured** = the `misc-featured` tag, set from the app. The site has no pin/edit controls (read-only); hero falls back to the latest deck if none is tagged.
+- **Publish** writes `docs/data/deck-meta.json` (`{groups, tags}` only for published decks/used tags) and stamps each published deck with resolved `tags` + `colorTag`. Site: `?group=<id>` opens that group and minimizes the rest; chips filter by color/archetype/channel/tag; "Tag guide" lists definitions.
+- **AI**: `ai.tagDeck` (IPC `ai:tagDeck`) picks archetype tags from the DB definitions (`AI_TAG_CATEGORIES` in `ai.js`; add `'misc'` to widen), using already-tagged decks as examples. Colors/creators are never AI. The queue in `deckbuilder-tags.js` runs "Fill description" (shown only when every description field is empty) and tag jobs one at a time; "Tag untagged" queues all decks lacking an archetype.
+- Archetype seed follows community usage (Aggro, Midrange, Control, Tempo, Combo, Ramp, Hand Control, Gear/Equip) - no formal meta exists yet.

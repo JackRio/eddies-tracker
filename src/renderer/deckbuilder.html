@@ -27,6 +27,7 @@
     </div>
     <div class="db-header-actions" id="db-list-actions">
       <span id="deck-publish-status" class="deck-publish-status"></span>
+      <label class="select-all-decks" title="Tick or untick every deck for Publish / Prep List"><input type="checkbox" id="select-all-decks" /> <span id="select-all-label">Select all</span></label>
       <button id="prep-list-btn" class="btn" disabled>Prep List</button>
       <button id="publish-decks-btn" class="btn" disabled>Publish Selected</button>
       <button id="import-deck-btn" class="btn">Import</button>
@@ -50,7 +51,35 @@
   </header>
 
   <div id="view-list" class="view-list">
-    <div id="deck-grid" class="deck-grid"></div>
+    <div class="list-toolbar">
+      <input type="search" id="list-search" placeholder="Search decks or Legends..." autocomplete="off" />
+      <label class="list-field">Show
+        <select id="list-ownership">
+          <option value="all">All decks</option>
+          <option value="owned">Fully owned</option>
+          <option value="missing">Missing cards</option>
+        </select>
+      </label>
+      <label class="list-field">Sort
+        <select id="list-sort">
+          <option value="updated">Recently edited</option>
+          <option value="name">Name</option>
+          <option value="missing">Fewest missing</option>
+        </select>
+      </label>
+      <label class="list-field">Colors
+        <select id="list-color"><option value="">All</option></select>
+      </label>
+      <label class="list-field">Archetype
+        <select id="list-archetype"><option value="">All</option></select>
+      </label>
+      <button id="new-group-btn" class="btn">+ Group</button>
+      <button id="tag-manager-btn" class="btn">&#127991; Tags</button>
+      <button id="ai-tag-all-btn" class="btn">&#10024; Tag untagged</button>
+      <span id="list-count" class="list-count"></span>
+    </div>
+    <div id="ai-queue-bar" class="ai-queue-bar" hidden></div>
+    <div id="deck-grid" class="deck-groups"></div>
     <div id="deck-list-empty" class="empty-state" hidden>No decks saved yet. Click "New Deck" to build one from your Main set.</div>
   </div>
 
@@ -76,7 +105,14 @@
 
     <div class="legend-and-description-row">
       <div class="legend-row" id="legend-row"></div>
-      <textarea id="deck-description-input" class="deck-description-input" placeholder="Deck description - HTML tags are supported and rendered as-is in Deck View."></textarea>
+      <button id="deck-tags-btn" class="deck-description-btn deck-tags-btn">
+        <span class="deck-description-btn-title">&#127991; Tags &amp; Group</span>
+        <span id="deck-tags-summary" class="deck-description-summary"></span>
+      </button>
+      <button id="deck-description-btn" class="deck-description-btn">
+        <span class="deck-description-btn-title">&#9998; Deck Description</span>
+        <span id="deck-description-summary" class="deck-description-summary"></span>
+      </button>
     </div>
     <div class="ceiling-strip" id="ceiling-strip"></div>
 
@@ -119,7 +155,10 @@
       </aside>
 
       <main class="db-card-pool">
-        <div id="db-result-count" class="result-count"></div>
+        <div class="db-pool-head">
+          <div id="db-result-count" class="result-count"></div>
+          <button id="decklist-toggle" class="decklist-toggle" title="Show only the cards currently in your main deck and sideboard">Decklist</button>
+        </div>
         <div id="db-card-grid" class="db-card-grid"></div>
       </main>
 
@@ -130,11 +169,22 @@
         </div>
 
         <div class="db-panel-block">
+          <h3>Sideboard <span id="side-count-badge" class="deck-count-badge"></span></h3>
+          <div id="sideboard-list" class="deck-cards-list"></div>
+        </div>
+
+        <div class="db-panel-block">
+          <h3>Swap Plans <button id="add-plan-btn" class="btn swap-new-btn" title="A named set of 1-for-1 swaps between main deck and sideboard">+ New</button></h3>
+          <div id="swap-plans" class="swap-plans"></div>
+        </div>
+
+        <div class="db-panel-block">
           <h3>Reference Links</h3>
           <div id="deck-links-list" class="deck-links-list"></div>
           <div class="deck-link-add">
             <input type="text" id="link-label-input" placeholder="Label (e.g. YouTube guide)" />
             <input type="text" id="link-url-input" placeholder="https://..." />
+            <select id="link-creator-select" class="link-creator-select" title="Which YouTube channel this video is from (adds its creator tag)"><option value="">Channel: none</option></select>
             <button id="add-link-btn" class="btn btn-block">Add Link</button>
           </div>
         </div>
@@ -152,6 +202,7 @@
       <h2 id="view-deck-title">Untitled Deck</h2>
       <div id="view-deck-links" class="view-deck-toolbar-links"></div>
     </div>
+    <div id="view-deck-plans" class="view-deck-plans" hidden></div>
     <div class="view-deck-body">
       <main class="db-view-cardgrid">
         <div class="view-deck-section">
@@ -253,6 +304,53 @@
     </div>
   </div>
 
+  <div id="desc-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card desc-editor-card">
+      <div class="legend-picker-header">
+        <h3>Deck Description <span class="desc-editor-hint">Type @ to tag a card</span></h3>
+        <button id="desc-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div class="ai-bar">
+        <button id="ai-draft-btn" class="ai-btn">&#10024; AI Draft</button>
+        <label class="ai-overwrite" title="Off: only empty sections are filled. On: replaces sections you've already written."><input type="checkbox" id="ai-overwrite" /> Overwrite filled sections</label>
+        <span id="ai-key-badge" class="ai-key-badge"></span>
+        <button id="ai-key-btn" class="ai-link-btn"></button>
+        <span id="ai-status" class="ai-status"></span>
+      </div>
+      <div class="ai-bar ai-knowledge-row">
+        <span id="ai-knowledge" class="ai-status"></span>
+        <button id="ai-build-btn" class="ai-btn" title="Studies every card in the pool once so drafts don't have to">Build knowledge</button>
+      </div>
+      <div id="ai-key-row" class="ai-key-row" hidden>
+        <input type="password" id="ai-key-input" placeholder="Anthropic API key (sk-ant-...)" autocomplete="off" spellcheck="false" />
+        <button id="ai-key-save" class="ai-btn">Save</button>
+        <button id="ai-key-clear" class="ai-link-btn">Remove key</button>
+      </div>
+      <div id="desc-fields" class="desc-fields"></div>
+    </div>
+  </div>
+  <div id="tags-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card tags-card">
+      <div class="legend-picker-header">
+        <h3 id="tags-title">Tags &amp; Group</h3>
+        <button id="tags-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div id="tags-body" class="tags-body"></div>
+    </div>
+  </div>
+
+  <div id="tagdb-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card tags-card tagdb-card">
+      <div class="legend-picker-header">
+        <h3>Tag Database</h3>
+        <button id="tagdb-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div id="tagdb-body" class="tags-body"></div>
+    </div>
+  </div>
+  <div id="desc-ac" class="desc-ac" hidden></div>
+  <div id="card-tag-pop" class="card-tag-pop" hidden><img alt="" /></div>
+
   <div id="printing-split-overlay"class="legend-picker-overlay" hidden>
     <div class="legend-picker-card">
       <div class="legend-picker-header">
@@ -285,6 +383,7 @@
     </div>
   </div>
 
+  <script src="deckbuilder-tags.js"></script>
   <script src="deckbuilder.js"></script>
 </body>
 </html>

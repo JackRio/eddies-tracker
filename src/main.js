@@ -1,9 +1,10 @@
-const { app, BrowserWindow, ipcMain, protocol, net, shell } = require('electron');
+const { app, BrowserWindow, WebContentsView, ipcMain, protocol, net, shell, dialog } = require('electron');
 const path = require('path');
 const fs = require('fs/promises');
 const pathToFileURL = require('url').pathToFileURL;
 const execFileAsync = require('util').promisify(require('child_process').execFile);
 const prices = require('./prices');
+const ai = require('./ai');
 
 // Electron derives the default userData path (%APPDATA%/<name>) from this
 // app name, which otherwise silently follows package.json's "name" field.
@@ -430,6 +431,10 @@ ipcMain.handle('decks:save', async (_event, deck) => {
   const id = deck.id || `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
   const existing = decks[id];
   decks[id] = {
+    // Tags/group are also edited outside the Builder (setMeta), so a save
+    // that doesn't carry them must not wipe them.
+    ...(existing?.tags ? { tags: existing.tags } : {}),
+    ...(existing?.groupId ? { groupId: existing.groupId } : {}),
     ...deck,
     id,
     createdAt: existing?.createdAt || deck.createdAt || now,
@@ -444,6 +449,163 @@ ipcMain.handle('decks:delete', async (_event, deckId) => {
   delete decks[deckId];
   await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
   return decks;
+});
+
+// --- Deck tags + groups ------------------------------------------------------
+//
+// Tag database: userData/tag-db.json, seeded from src/data/tag-seed.json.
+// Categories: archetype / creator (YouTube channels) / misc are stored tags;
+// "color" tags (BBG, RRY...) are never stored - they're derived from a deck's
+// Legends (colorTagFor). A deck references stored tags by id in
+// deck.tags = { archetype: [ids], creator: [ids], misc: [ids] }; deck.groupId
+// points into deck-groups.json. Neither is part of the Builder's draft logic
+// beyond being carried along, so setMeta can edit them without touching
+// updatedAt or the rest of the deck.
+
+const TAG_CATEGORIES = ['archetype', 'creator', 'misc'];
+const tagDbPath = () => path.join(app.getPath('userData'), 'tag-db.json');
+const groupsPath = () => path.join(app.getPath('userData'), 'deck-groups.json');
+
+async function loadTagDb() {
+  const saved = await readJsonSafe(tagDbPath(), null);
+  if (saved?.tags) return saved.tags;
+  const seed = await readJsonSafe(path.join(__dirname, 'data', 'tag-seed.json'), { tags: [] });
+  await fs.writeFile(tagDbPath(), JSON.stringify({ tags: seed.tags }, null, 2), 'utf-8');
+  return seed.tags;
+}
+
+// Letters in the fixed R,B,G,Y order; most-represented color first, so
+// Blue+Blue+Green and Green+Blue+Blue are both "BBG" and one of each is "RBG".
+function colorTagFor(colors) {
+  const order = ['Red', 'Blue', 'Green', 'Yellow'];
+  const counts = {};
+  for (const c of colors) if (order.includes(c)) counts[c] = (counts[c] || 0) + 1;
+  return order
+    .filter((c) => counts[c])
+    .sort((a, b) => counts[b] - counts[a])
+    .map((c) => c[0].repeat(counts[c]))
+    .join('');
+}
+
+ipcMain.handle('tags:get', async () => loadTagDb());
+
+// Saving the whole list; any tag that disappeared is also removed from decks.
+ipcMain.handle('tags:save', async (_event, tags) => {
+  const clean = tags
+    .filter((t) => t && TAG_CATEGORIES.includes(t.category) && String(t.name || '').trim())
+    .map((t) => ({ id: t.id, category: t.category, name: String(t.name).trim(), description: String(t.description || '').trim(), ...(t.url ? { url: String(t.url).trim() } : {}), ...(t.locked ? { locked: true } : {}) }));
+  await fs.writeFile(tagDbPath(), JSON.stringify({ tags: clean }, null, 2), 'utf-8');
+  const live = new Set(clean.map((t) => t.id));
+  const decks = await readJsonSafe(decksPath(), {});
+  let changed = false;
+  for (const deck of Object.values(decks)) {
+    for (const cat of TAG_CATEGORIES) {
+      const ids = deck.tags?.[cat];
+      if (ids && ids.some((id) => !live.has(id))) {
+        deck.tags[cat] = ids.filter((id) => live.has(id));
+        changed = true;
+      }
+    }
+    for (const l of deck.links || []) {
+      if (l.creatorId && !live.has(l.creatorId)) {
+        delete l.creatorId;
+        changed = true;
+      }
+    }
+  }
+  if (changed) await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
+  return { tags: clean, decks };
+});
+
+ipcMain.handle('groups:get', async () => {
+  let siteBase = '';
+  try {
+    siteBase = `https://${(await fs.readFile(path.join(__dirname, '..', 'docs', 'CNAME'), 'utf-8')).trim()}/`;
+  } catch {}
+  return { groups: await readJsonSafe(groupsPath(), []), siteBase };
+});
+
+// [{ id, name, collapsed }] in display order. Decks pointing at a removed
+// group fall back to ungrouped.
+ipcMain.handle('groups:save', async (_event, groups) => {
+  const clean = groups.map((g) => ({ id: g.id, name: String(g.name || '').trim() || 'Untitled group', collapsed: !!g.collapsed }));
+  await fs.writeFile(groupsPath(), JSON.stringify(clean, null, 2), 'utf-8');
+  const live = new Set(clean.map((g) => g.id));
+  const decks = await readJsonSafe(decksPath(), {});
+  let changed = false;
+  for (const deck of Object.values(decks)) {
+    if (deck.groupId && !live.has(deck.groupId)) {
+      delete deck.groupId;
+      changed = true;
+    }
+  }
+  if (changed) await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
+  return { groups: clean, decks };
+});
+
+// Edits tags / group on a saved deck without touching anything else (and
+// without bumping updatedAt - this isn't a content edit).
+ipcMain.handle('decks:setMeta', async (_event, deckId, patch) => {
+  const decks = await readJsonSafe(decksPath(), {});
+  const deck = decks[deckId];
+  if (!deck) return decks;
+  if (patch.tags) deck.tags = patch.tags;
+  if ('groupId' in patch) {
+    if (patch.groupId) deck.groupId = patch.groupId;
+    else delete deck.groupId;
+  }
+  await fs.writeFile(decksPath(), JSON.stringify(decks, null, 2), 'utf-8');
+  return decks;
+});
+
+// AI archetype suggestion. Categories the model may assign are listed in
+// ai.js (AI_TAG_CATEGORIES); every tag in the DB for those categories - with
+// its description - is what it "knows", so adding a tag teaches it. Decks you
+// already tagged serve as worked examples.
+ipcMain.handle('ai:tagDeck', async (event, deck) => {
+  try {
+    const tags = await loadTagDb();
+    const decks = await readJsonSafe(decksPath(), {});
+    const cache = await readJsonSafe(cardsCachePath(), { cards: [] });
+    const nameOf = new Map(cache.cards.map((c) => [c.cardId, c.displayName]));
+    const examples = Object.values(decks)
+      .filter((d) => d.id !== deck.id && d.tags?.archetype?.length)
+      .slice(0, 8)
+      .map((d) => ({
+        name: d.name,
+        legends: (d.legendCardIds || []).filter(Boolean).map((id) => nameOf.get(id) || id),
+        tags: d.tags.archetype.map((id) => tags.find((t) => t.id === id)?.name).filter(Boolean)
+      }));
+    const result = await ai.tagDeck(deck, tags, examples, (msg) => event.sender.send('ai:progress', msg));
+    return { ok: true, ...result };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+});
+
+// AI deck summary (see src/ai.js). The renderer only ever learns whether a
+// key exists, never its value.
+ipcMain.handle('ai:keyStatus', async () => ai.keyStatus());
+ipcMain.handle('ai:setKey', async (_event, key) => ai.setKey(key));
+async function aiPool() {
+  const cache = await readJsonSafe(cardsCachePath(), { cards: [] });
+  return cache.cards || [];
+}
+ipcMain.handle('ai:knowledgeStatus', async () => ai.knowledgeStatus(await aiPool()));
+ipcMain.handle('ai:buildKnowledge', async (event) => {
+  try {
+    return { ok: true, status: await ai.buildKnowledge(await aiPool(), (msg) => event.sender.send('ai:progress', msg)) };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+});
+ipcMain.handle('ai:analyzeDeck', async (event, deck) => {
+  try {
+    const { sections, analysis } = await ai.analyzeDeck(deck, (msg) => event.sender.send('ai:progress', msg));
+    return { ok: true, sections, analysis };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
 });
 
 // { [printingId]: qty } - how many copies of a printing are up for sale on
@@ -841,13 +1003,30 @@ ipcMain.handle('decks:publish', async (_event, deckIds) => {
     // all. Fall back to any owned printing (any printing at all, failing
     // that) so every card in the deck still resolves to *something* to
     // render, same preference order as defaultPrintingSplit() client-side.
-    for (const cardId of Object.keys(deck.cards || {})) {
+    // Sideboard cards (and swap-plan cards) need a renderable printing too.
+    for (const cardId of [...Object.keys(deck.cards || {}), ...Object.keys(deck.sideboard || {})]) {
       const printings = printingsByCardId.get(cardId) || [];
       const alreadyCovered = printings.some((p) => referencedIds.has(p.id));
       if (alreadyCovered) continue;
       const owned = printings.find((p) => (collection[p.id]?.main || 0) > 0) || printings[0];
       if (owned) referencedIds.add(owned.id);
     }
+  }
+
+  // Cards tagged as @[Display Name] in a deck's description sections (e.g. a
+  // sideboard card not in the deck) also need a printing + image so the
+  // site's hover popup can show them.
+  const taggedNames = new Set();
+  for (const deck of published) {
+    for (const text of Object.values(deck.descSections || {})) {
+      for (const m of String(text).matchAll(/@\[([^\]|]+)(?:\|[^\]]+)?\]/g)) taggedNames.add(m[1]);
+    }
+  }
+  for (const name of taggedNames) {
+    const printings = cache.cards.filter((c) => c.displayName === name);
+    if (printings.some((p) => referencedIds.has(p.id))) continue;
+    const pick = printings.find((p) => (collection[p.id]?.main || 0) > 0) || printings[0];
+    if (pick) referencedIds.add(pick.id);
   }
 
   const cardDetails = {};
@@ -890,7 +1069,33 @@ ipcMain.handle('decks:publish', async (_event, deckIds) => {
 
   const { decks: publishedDecksPath, cardDetails: cardDetailsPath } = docsDeckDataPaths();
   await fs.mkdir(docsDataDir(), { recursive: true });
-  await fs.writeFile(publishedDecksPath, JSON.stringify(published, null, 2), 'utf-8');
+  // Tags/groups: the site is read-only, so everything it needs is resolved
+  // here. Color tags come from the Legends, creator tags also from any
+  // reference link tied to a channel.
+  const tagDb = await loadTagDb();
+  const tagById = new Map(tagDb.map((t) => [t.id, t]));
+  const colorByCardId = new Map(cache.cards.map((c) => [c.cardId, c.color]));
+  const usedTagIds = new Set();
+  const publishedWithTags = published.map((deck) => {
+    const tags = {};
+    for (const cat of TAG_CATEGORIES) {
+      const ids = new Set(deck.tags?.[cat] || []);
+      if (cat === 'creator') for (const l of deck.links || []) if (l.creatorId) ids.add(l.creatorId);
+      tags[cat] = [...ids].filter((id) => tagById.has(id));
+      tags[cat].forEach((id) => usedTagIds.add(id));
+    }
+    const colorTag = colorTagFor((deck.legendCardIds || []).filter(Boolean).map((id) => colorByCardId.get(id)));
+    return { ...deck, tags, colorTag };
+  });
+  const groups = (await readJsonSafe(groupsPath(), []))
+    .map((g) => ({ id: g.id, name: g.name, collapsed: !!g.collapsed, deckIds: published.filter((d) => d.groupId === g.id).map((d) => d.id) }))
+    .filter((g) => g.deckIds.length);
+  const meta = {
+    groups,
+    tags: Object.fromEntries([...usedTagIds].map((id) => [id, { id, category: tagById.get(id).category, name: tagById.get(id).name, description: tagById.get(id).description || '', ...(tagById.get(id).url ? { url: tagById.get(id).url } : {}) }]))
+  };
+  await fs.writeFile(path.join(docsDataDir(), 'deck-meta.json'), JSON.stringify(meta, null, 2), 'utf-8');
+  await fs.writeFile(publishedDecksPath, JSON.stringify(publishedWithTags, null, 2), 'utf-8');
   await fs.writeFile(cardDetailsPath, JSON.stringify(cardDetails, null, 2), 'utf-8');
 
   const state = { deckIds, publishedAt: new Date().toISOString() };
@@ -938,6 +1143,12 @@ function createWindow() {
     }
   });
   win.setMenuBarVisibility(false);
+  win.on('close', (e) => {
+    if (win.__closeConfirmed) return;
+    if (!overlays.some((o) => o.name === 'deckbuilder' && o.host === win)) return;
+    e.preventDefault();
+    guardDeckBuilderClose(win);
+  });
   win.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
     console.log(`[renderer] ${message} (${sourceId}:${line})`);
   });
@@ -948,143 +1159,116 @@ function createWindow() {
   win.loadFile(path.join(__dirname, 'renderer', 'index.html'));
 }
 
-let collectionWin = null;
+// Collection, Trading and the Deck Builder all live inside the main window
+// as full-size WebContentsViews laid over its content (not separate OS
+// windows), so they share the main window's frame/taskbar entry and closing
+// one just returns to whatever is underneath with its filters/scroll intact.
+// Overlays can stack (e.g. Trading opened from Collection): each is added on
+// top, and closing returns to the one below.
+const overlays = []; // [{ name, view, host }] bottom -> top
 
-function createCollectionWindow() {
-  if (collectionWin && !collectionWin.isDestroyed()) {
-    collectionWin.focus();
+function fitOverlay(entry) {
+  if (!entry.host || entry.host.isDestroyed()) return;
+  const [w, h] = entry.host.getContentSize();
+  entry.view.setBounds({ x: 0, y: 0, width: w, height: h });
+}
+
+function overlayForSender(sender) {
+  return overlays.find((o) => !o.view.webContents.isDestroyed() && o.view.webContents === sender) || null;
+}
+
+// The real OS window behind any renderer: an overlay's host, or the window
+// itself for the main renderer.
+function windowForSender(sender) {
+  const overlay = overlayForSender(sender);
+  if (overlay) return overlay.host;
+  return BrowserWindow.fromWebContents(sender);
+}
+
+function closeOverlay(entry) {
+  const i = overlays.indexOf(entry);
+  if (i === -1) return;
+  overlays.splice(i, 1);
+  const { view, host, listeners } = entry;
+  if (host && !host.isDestroyed()) {
+    for (const [evt, fn] of listeners) host.removeListener(evt, fn);
+    host.contentView.removeChildView(view);
+  }
+  if (!view.webContents.isDestroyed()) view.webContents.close();
+  // Hand focus back to whatever is now on top.
+  const top = overlays[overlays.length - 1];
+  if (top && !top.view.webContents.isDestroyed()) top.view.webContents.focus();
+  else if (host && !host.isDestroyed() && !host.webContents.isDestroyed()) host.webContents.focus();
+}
+
+function openOverlay(name, file, host) {
+  if (!host || host.isDestroyed()) return;
+  const existing = overlays.find((o) => o.name === name && o.host === host);
+  if (existing) {
+    // Already open: bring it to the front instead of opening a second copy.
+    host.contentView.removeChildView(existing.view);
+    host.contentView.addChildView(existing.view);
+    overlays.splice(overlays.indexOf(existing), 1);
+    overlays.push(existing);
+    existing.view.webContents.focus();
     return;
   }
-  collectionWin = new BrowserWindow({
-    width: 1400,
-    height: 900,
-    // Maximized, not fullscreen: Windows won't let you drag a true-
-    // fullscreen window at all, and a minimize/restore used to silently
-    // drop it out of fullscreen while Electron still reported it as
-    // fullscreen - so dragging "sometimes worked" and the maximize button
-    // cycled unpredictably. See showMaximized().
-    show: false,
-    frame: false,
-    icon: path.join(__dirname, '..', 'build', 'icon.png'),
-    backgroundColor: '#0a0a0f',
+  const view = new WebContentsView({
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
       nodeIntegration: false
     }
   });
-  collectionWin.setMenuBarVisibility(false);
-  collectionWin.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
-    console.log(`[collection-renderer] ${message} (${sourceId}:${line})`);
+  view.setBackgroundColor('#0a0a0f');
+  view.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
+    console.log(`[${name}-renderer] ${message} (${sourceId}:${line})`);
   });
-  collectionWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
-    console.log(`[collection did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
+  view.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
+    console.log(`[${name} did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
   });
-  showMaximized(collectionWin);
-  collectionWin.loadFile(path.join(__dirname, 'renderer', 'collection.html'));
-  collectionWin.on('closed', () => {
-    collectionWin = null;
-  });
-}
-
-ipcMain.handle('collection-view:open', () => {
-  createCollectionWindow();
-});
-
-let deckBuilderWin = null;
-
-function createDeckBuilderWindow() {
-  if (deckBuilderWin && !deckBuilderWin.isDestroyed()) {
-    deckBuilderWin.focus();
-    return;
+  const entry = { name, view, host, listeners: [] };
+  host.contentView.addChildView(view);
+  fitOverlay(entry);
+  for (const evt of ['resize', 'maximize', 'unmaximize', 'enter-full-screen', 'leave-full-screen']) {
+    const fn = () => fitOverlay(entry);
+    entry.listeners.push([evt, fn]);
+    host.on(evt, fn);
   }
-  deckBuilderWin = new BrowserWindow({
-    width: 1400,
-    height: 900,
-    // Maximized, not fullscreen: Windows won't let you drag a true-
-    // fullscreen window at all, and a minimize/restore used to silently
-    // drop it out of fullscreen while Electron still reported it as
-    // fullscreen - so dragging "sometimes worked" and the maximize button
-    // cycled unpredictably. See showMaximized().
-    show: false,
-    frame: false,
-    icon: path.join(__dirname, '..', 'build', 'icon.png'),
-    backgroundColor: '#0a0a0f',
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
-      nodeIntegration: false
-    }
+  host.once('closed', () => {
+    const i = overlays.indexOf(entry);
+    if (i !== -1) overlays.splice(i, 1);
   });
-  deckBuilderWin.setMenuBarVisibility(false);
-  deckBuilderWin.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
-    console.log(`[deckbuilder-renderer] ${message} (${sourceId}:${line})`);
-  });
-  deckBuilderWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
-    console.log(`[deckbuilder did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
-  });
-  showMaximized(deckBuilderWin);
-  deckBuilderWin.loadFile(path.join(__dirname, 'renderer', 'deckbuilder.html'));
-  deckBuilderWin.on('closed', () => {
-    deckBuilderWin = null;
-  });
+  overlays.push(entry);
+  view.webContents.loadFile(path.join(__dirname, 'renderer', file));
+  view.webContents.focus();
 }
 
-ipcMain.handle('deck-builder:open', () => {
-  createDeckBuilderWindow();
+ipcMain.handle('collection-view:open', (event) => {
+  openOverlay('collection', 'collection.html', windowForSender(event.sender));
 });
 
-let tradingWin = null;
-
-function createTradingWindow() {
-  if (tradingWin && !tradingWin.isDestroyed()) {
-    tradingWin.focus();
-    return;
-  }
-  tradingWin = new BrowserWindow({
-    width: 1400,
-    height: 900,
-    show: false,
-    frame: false,
-    icon: path.join(__dirname, '..', 'build', 'icon.png'),
-    backgroundColor: '#0a0a0f',
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      contextIsolation: true,
-      nodeIntegration: false
-    }
-  });
-  tradingWin.setMenuBarVisibility(false);
-  tradingWin.webContents.on('console-message', (_e, _level, message, line, sourceId) => {
-    console.log(`[trading-renderer] ${message} (${sourceId}:${line})`);
-  });
-  tradingWin.webContents.on('did-fail-load', (_e, errorCode, errorDescription, validatedURL) => {
-    console.log(`[trading did-fail-load] ${errorCode} ${errorDescription} ${validatedURL}`);
-  });
-  showMaximized(tradingWin);
-  tradingWin.loadFile(path.join(__dirname, 'renderer', 'trading.html'));
-  tradingWin.on('closed', () => {
-    tradingWin = null;
-  });
-}
-
-ipcMain.handle('trading:open', () => {
-  createTradingWindow();
+ipcMain.handle('deck-builder:open', (event) => {
+  openOverlay('deckbuilder', 'deckbuilder.html', windowForSender(event.sender));
 });
 
-// Both windows are frameless (frame: false) for a consistent look, so
-// there's no native title bar - these back the custom minimize/maximize/
-// close buttons each renderer draws for itself. Always act on whichever
-// window actually sent the request, not a hardcoded reference.
+ipcMain.handle('trading:open', (event) => {
+  openOverlay('trading', 'trading.html', windowForSender(event.sender));
+});
+
+// The window controls act on the real OS window (minimize/maximize), except
+// "close", which on an overlay just closes that overlay.
+
+
 ipcMain.handle('window:minimize', (event) => {
-  const win = BrowserWindow.fromWebContents(event.sender);
+  const win = windowForSender(event.sender);
   if (!win) return;
   if (win.isFullScreen()) win.setFullScreen(false);
   win.minimize();
 });
 
 ipcMain.handle('window:toggle-maximize', (event) => {
-  const win = BrowserWindow.fromWebContents(event.sender);
+  const win = windowForSender(event.sender);
   if (!win) return;
   if (win.isFullScreen()) {
     // Not reachable from our own UI anymore (windows open maximized), but
@@ -1098,9 +1282,60 @@ ipcMain.handle('window:toggle-maximize', (event) => {
   }
 });
 
+// The title-bar X always closes the real window, which quits the app - from
+// the main window or from any overlay (Collection / Trading / Deck Builder).
 ipcMain.handle('window:close', (event) => {
-  const win = BrowserWindow.fromWebContents(event.sender);
+  const win = windowForSender(event.sender);
   if (win) win.close();
+});
+
+// Native Save / Discard / Cancel prompt (window.confirm is unreliable in
+// Electron) - returns 'save' | 'discard' | 'cancel'.
+async function askUnsaved(win, name) {
+  const { response } = await dialog.showMessageBox(win && !win.isDestroyed() ? win : undefined, {
+    type: 'question',
+    buttons: ['Save', 'Discard', 'Cancel'],
+    defaultId: 0,
+    cancelId: 2,
+    title: 'Unsaved changes',
+    message: `Save changes to "${name || 'Untitled Deck'}"?`,
+    detail: "Your changes will be lost if you don't save."
+  });
+  return ['save', 'discard', 'cancel'][response];
+}
+
+ipcMain.handle('dialog:unsaved', (event, name) => askUnsaved(windowForSender(event.sender), name));
+
+// Closing the whole window (title-bar X, Alt+F4, anything that quits the app)
+// while the Deck Builder holds unsaved edits asks first.
+async function guardDeckBuilderClose(win) {
+  const entry = overlays.find((o) => o.name === 'deckbuilder' && o.host === win);
+  const wc = entry && entry.view.webContents;
+  if (wc && !wc.isDestroyed()) {
+    let dirty = null;
+    try {
+      dirty = await wc.executeJavaScript('window.__deckBuilderDirty ? window.__deckBuilderDirty() : null');
+    } catch {}
+    if (dirty) {
+      const choice = await askUnsaved(win, dirty.name);
+      if (choice === 'cancel') return;
+      if (choice === 'save') {
+        let saved = false;
+        try {
+          saved = await wc.executeJavaScript('window.__deckBuilderSave()');
+        } catch {}
+        if (!saved) return; // e.g. the deck has no name yet - stay so the user can fix it
+      }
+    }
+  }
+  win.__closeConfirmed = true;
+  win.close();
+}
+
+// An overlay's own "Close" button just returns to what's underneath it.
+ipcMain.handle('overlay:close', (event) => {
+  const overlay = overlayForSender(event.sender);
+  if (overlay) closeOverlay(overlay);
 });
 
 app.whenReady().then(() => {

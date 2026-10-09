@@ -9,6 +9,7 @@
 
 let publishedDecks = [];
 let cardDetails = {}; // printingId -> denormalized card fields
+let deckMeta = { groups: [], tags: {} }; // published by the desktop app: groups + tag definitions
 let currentDeck = null;
 
 const el = (id) => document.getElementById(id);
@@ -40,11 +41,12 @@ function cardByCardId(cardId) {
 
 // --- List page (hero / grid / search) -------------------------------------
 const COLORS = { Red: '#e8465a', Blue: '#3d8bfd', Green: '#3ecf6e', Yellow: '#e8c93a' };
-const PIN_KEY = 'eddies_pinned_deck';
 const activeColors = new Set();
+const activeTags = new Set(); // 'category:value' - OR within a category, AND across
+const openGroups = new Set();
+let focusGroup = null; // ?group=<id> share link
+const FEATURED_ID = 'misc-featured';
 
-const safeGet = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
-const safeSet = (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} };
 
 function extraStats(deck) {
   const s = computeDeckStats(deck);
@@ -106,19 +108,91 @@ async function copyText(text, btn, msg) {
 }
 const shareUrl = (id) => new URL(`decks.html?id=${encodeURIComponent(id)}`, location.href).href;
 
+// ---- Tags ---------------------------------------------------------------
+const COLOR_LETTER = { R: 'Red', B: 'Blue', G: 'Green', Y: 'Yellow' };
+const TAG_CATS = [['archetype', 'Archetype'], ['creator', 'Channel'], ['misc', 'Tags']];
+const metaTag = (id) => deckMeta.tags[id];
+const deckTagIds = (d, cat) => (d.tags?.[cat] || []).filter(metaTag);
+const isFeatured = (d) => deckTagIds(d, 'misc').includes(FEATURED_ID);
+
+function colorChipHtml(tag) {
+  if (!tag) return '';
+  return `<span class="tag-chip cat-color" title="Color identity (from the Legends)">${[...tag].map((l) => `<span style="color:${COLORS[COLOR_LETTER[l]]}">${l}</span>`).join('')}</span>`;
+}
+function tagChipHtml(t, link) {
+  const cls = `tag-chip cat-${t.category}`;
+  const title = escapeHtml(t.description || t.name);
+  return link && t.url ? `<a class="${cls}" href="${escapeHtml(t.url)}" target="_blank" rel="noopener" title="${title}">${escapeHtml(t.name)}</a>` : `<span class="${cls}" title="${title}">${escapeHtml(t.name)}</span>`;
+}
+function deckChipsInner(d, link) {
+  const chips = [colorChipHtml(d.colorTag)];
+  for (const [cat] of TAG_CATS) for (const id of deckTagIds(d, cat)) if (id !== FEATURED_ID) chips.push(tagChipHtml(metaTag(id), link));
+  return chips.join('');
+}
+const deckChipsHtml = (d, link) => `<div class="tag-chips">${deckChipsInner(d, link)}</div>`;
+function deckGroupId(d) {
+  return (deckMeta.groups.find((g) => g.deckIds.includes(d.id)) || {}).id || null;
+}
+
+function renderTagFilters() {
+  const rows = [];
+  const colors = [...new Set(publishedDecks.map((d) => d.colorTag).filter(Boolean))].sort();
+  const row = (label, cat, items) => items.length > 1 ? `<div class="tag-filter-row"><b>${label}</b>${items.map(([v, name, cls]) => `<button class="tag-chip ${cls} ${activeTags.has(`${cat}:${v}`) ? 'active' : ''}" data-tagf="${cat}:${escapeHtml(v)}">${escapeHtml(name)}</button>`).join('')}</div>` : '';
+  rows.push(row('Colors', 'color', colors.map((c) => [c, c, 'cat-color'])));
+  for (const [cat, label] of TAG_CATS) {
+    const ids = [...new Set(publishedDecks.flatMap((d) => deckTagIds(d, cat)))].filter((id) => id !== FEATURED_ID);
+    rows.push(row(label, cat, ids.map((id) => [id, metaTag(id).name, `cat-${cat}`])));
+  }
+  el('tag-filters').innerHTML = rows.join('');
+}
+
+function tagsMatch(d) {
+  const byCat = {};
+  for (const k of activeTags) {
+    const i = k.indexOf(':');
+    (byCat[k.slice(0, i)] ||= []).push(k.slice(i + 1));
+  }
+  return Object.entries(byCat).every(([cat, vals]) => (cat === 'color' ? vals.includes(d.colorTag) : vals.some((v) => deckTagIds(d, cat).includes(v))));
+}
+
+function renderTagGuide() {
+  const used = Object.values(deckMeta.tags).filter((t) => t.description && t.id !== FEATURED_ID && t.category !== 'creator');
+  el('tag-guide').hidden = !used.length;
+  const section = (title, cat) => {
+    const items = used.filter((t) => t.category === cat);
+    return items.length ? `<h4>${title}</h4>${items.map((t) => `<dt>${tagChipHtml(t)}</dt><dd>${escapeHtml(t.description)}</dd>`).join('')}` : '';
+  };
+  el('tag-guide-body').innerHTML = section('Archetypes', 'archetype') + section('Other tags', 'misc') +
+    '<h4>Colors</h4><dt>BBG, RBG...</dt><dd>R Red, B Blue, G Green, Y Yellow - the colors of the three Legends, most-represented first.</dd>';
+}
+
 // ---- LIST ---------------------------------------------------------------
 function matches(deck, s, q) {
   if (activeColors.size && ![...activeColors].some((c) => s.legendColors.includes(c))) return false;
+  if (!tagsMatch(deck)) return false;
   if (!q) return true;
   const names = Object.keys(deck.cards || {}).concat(Object.keys(deck.sideboard || {})).map((c) => cardByCardId(c)?.displayName || '').join(' ');
   const lg = s.legends.map((p) => cardDetails[p].displayName).join(' ');
-  return `${deck.name} ${lg} ${names}`.toLowerCase().includes(q);
+  const tg = TAG_CATS.flatMap(([cat]) => deckTagIds(deck, cat).map((id) => metaTag(id).name)).join(' ');
+  return `${deck.name} ${lg} ${names} ${tg} ${deck.colorTag || ''}`.toLowerCase().includes(q);
+}
+
+function deckTileHtml({ d, s }) {
+  return `
+    <div class="deck clip hoverable" style="${accent(s)}" data-open="${d.id}">
+      <h3>${escapeHtml(d.name || 'Untitled Deck')}</h3>
+      <div class="sub"><span>${dotsHtml(s)}</span><span>${s.total}/${MAIN_DECK_MAX} · ${s.sellablePct}% sellable</span></div>
+      ${deckChipsHtml(d)}
+      <div class="legend-fan">${fanHtml(s)}</div>
+      <div class="row-between">${curveHtml(s)}<span class="pill">avg <b>${s.avg.toFixed(1)}</b></span></div>
+      <p class="excerpt">${escapeHtml(excerpt(d))}</p>
+      ${actionsHtml(d)}
+    </div>`;
 }
 
 function renderList() {
   const q = document.getElementById('q').value.trim().toLowerCase();
   const sort = document.getElementById('sort').value;
-  const pinned = safeGet(PIN_KEY);
   let list = publishedDecks.map((d) => ({ d, s: extraStats(d) })).filter(({ d, s }) => matches(d, s, q));
 
   const byUpdated = (a, b) => (b.d.updatedAt || 0) - (a.d.updatedAt || 0);
@@ -126,71 +200,101 @@ function renderList() {
   else if (sort === 'name') list.sort((a, b) => a.d.name.localeCompare(b.d.name));
   else if (sort === 'cost') list.sort((a, b) => a.s.avg - b.s.avg);
   else if (sort === 'size') list.sort((a, b) => b.s.total - a.s.total);
-  else list.sort((a, b) => (b.d.id === pinned) - (a.d.id === pinned) || byUpdated(a, b));
+  else list.sort((a, b) => isFeatured(b.d) - isFeatured(a.d) || byUpdated(a, b));
 
   document.getElementById('count').textContent = list.length;
-  const showFeatured = sort === 'default' && !q && !activeColors.size && list.length > 1;
-  const feat = showFeatured ? list.shift() : null;
+  const filtering = !!(q || activeColors.size || activeTags.size);
+  // Hero = the deck tagged Featured in the desktop app; with none tagged it
+  // falls back to the most recently updated deck. Hidden while filtering or on
+  // a group share link.
+  const showFeatured = sort === 'default' && !filtering && !focusGroup && list.length > 1;
+  const feat = showFeatured ? list[0] : null;
   const featEl = document.getElementById('featured');
   featEl.innerHTML = feat ? `
     <div class="featured clip hoverable" style="${accent(feat.s)}" data-open="${feat.d.id}">
-      <div class="tag">${feat.d.id === pinned ? 'PINNED' : 'FEATURED'}</div>
+      <div class="tag">${isFeatured(feat.d) ? 'FEATURED' : 'LATEST'}</div>
       <div class="legend-fan">${fanHtml(feat.s)}</div>
       <div>
         <h2>${escapeHtml(feat.d.name)}</h2>
+        ${deckChipsHtml(feat.d)}
         <p class="blurb">${escapeHtml(excerpt(feat.d)) || 'No description yet.'}</p>
         <div class="stat-row">${pillsHtml(feat.s, true)}</div>
         ${curveHtml(feat.s)}
-        ${actionsHtml(feat.d, pinned)}
+        ${actionsHtml(feat.d)}
       </div>
     </div>` : '';
+  // The hero stays out of the grid unless it also sits in a group.
+  if (feat && !deckGroupId(feat.d)) list.shift();
 
   const grid = document.getElementById('deck-list-grid');
-  grid.innerHTML = list.map(({ d, s }) => `
-    <div class="deck clip hoverable" style="${accent(s)}" data-open="${d.id}">
-      <h3>${escapeHtml(d.name || 'Untitled Deck')}</h3>
-      <div class="sub"><span>${dotsHtml(s)}</span><span>${s.total}/${MAIN_DECK_MAX} · ${s.sellablePct}% sellable</span></div>
-      <div class="legend-fan">${fanHtml(s)}</div>
-      <div class="row-between">${curveHtml(s)}<span class="pill">avg <b>${s.avg.toFixed(1)}</b></span></div>
-      <p class="excerpt">${escapeHtml(excerpt(d))}</p>
-      ${actionsHtml(d, pinned)}
-    </div>`).join('');
+  const groups = deckMeta.groups;
+  if (!groups.length) {
+    grid.className = 'grid';
+    grid.innerHTML = list.map(deckTileHtml).join('');
+  } else {
+    grid.className = '';
+    const section = (id, name, items, extra) => {
+      const open = filtering || openGroups.has(id);
+      return `<section class="grp ${open ? '' : 'collapsed'} ${focusGroup === id ? 'focus' : ''}" id="grp-${escapeHtml(id)}">
+        <div class="grp-head"><button class="grp-toggle" data-grp-toggle="${escapeHtml(id)}" aria-expanded="${open}">${open ? '&#9662;' : '&#9656;'} ${escapeHtml(name)}<span class="count">${items.length} deck${items.length === 1 ? '' : 's'}</span></button>${extra || ''}</div>
+        ${open ? `<div class="grid">${items.map(deckTileHtml).join('')}</div>` : ''}</section>`;
+    };
+    const parts = groups.map((g) => {
+      const items = list.filter(({ d }) => g.deckIds.includes(d.id));
+      return !items.length && filtering ? '' : section(g.id, g.name, items, `<button class="btn" data-grp-link="${escapeHtml(g.id)}">Copy link</button>`);
+    });
+    const loose = list.filter(({ d }) => !deckGroupId(d));
+    if (loose.length) parts.push(section('_other', 'Other decks', loose));
+    grid.innerHTML = parts.join('');
+  }
+  renderTagFilters();
 
   const empty = document.getElementById('decks-empty');
-  const none = !featEl.innerHTML && !list.length;
+  const none = !list.length && !feat;
   empty.hidden = !none;
   if (none) empty.textContent = publishedDecks.length ? 'No decks match your search or filters.' : 'No decks are published right now. Check back soon.';
 }
 
-function actionsHtml(d, pinned) {
+function actionsHtml(d) {
   return `<div class="actions">
     <button class="btn" data-copy="${d.id}">Copy list</button>
     <button class="btn" data-share="${d.id}">Share</button>
-    <button class="btn ${d.id === pinned ? 'on' : ''}" data-pin="${d.id}">${d.id === pinned ? 'Unpin' : 'Pin'}</button>
   </div>`;
 }
 
-// Delegated clicks for both list and featured areas.
+const groupShareUrl = (id) => new URL(`decks.html?group=${encodeURIComponent(id)}`, location.href).href;
+
+// Delegated clicks for the list, featured and tag-filter areas. Read-only: the
+// only things clicks do are navigate, filter, expand/collapse and copy.
 document.getElementById('decks-list').addEventListener('click', (e) => {
+  const chip = e.target.closest('[data-tagf]');
+  if (chip) {
+    const k = chip.dataset.tagf;
+    activeTags.has(k) ? activeTags.delete(k) : activeTags.add(k);
+    return renderList();
+  }
   const btn = e.target.closest('button');
   if (btn) {
     e.stopPropagation();
     const deck = (id) => publishedDecks.find((d) => d.id === id);
     if (btn.dataset.copy) return copyText(decklistText(deck(btn.dataset.copy)), btn);
     if (btn.dataset.share) return copyText(shareUrl(btn.dataset.share), btn, 'Link copied');
-    if (btn.dataset.pin) {
-      safeSet(PIN_KEY, safeGet(PIN_KEY) === btn.dataset.pin ? null : btn.dataset.pin);
+    if (btn.dataset.grpLink) return copyText(groupShareUrl(btn.dataset.grpLink), btn, 'Link copied');
+    if (btn.dataset.grpToggle) {
+      const id = btn.dataset.grpToggle;
+      openGroups.has(id) ? openGroups.delete(id) : openGroups.add(id);
       return renderList();
     }
     return;
   }
+  if (e.target.closest('a')) return;
   const card = e.target.closest('[data-open]');
   if (card) showDetail(card.dataset.open);
 });
 
 function showList() {
   currentDeck = null;
-  history.replaceState(null, '', 'decks.html');
+  history.replaceState(null, '', focusGroup ? `decks.html?group=${encodeURIComponent(focusGroup)}` : 'decks.html');
   document.getElementById('deck-detail').hidden = true;
   document.getElementById('decks-list').hidden = false;
   renderList();
@@ -200,10 +304,13 @@ function showList() {
 async function init() {
   renderBuildInfo();
   try {
-    [publishedDecks, cardDetails] = await Promise.all([
+    [publishedDecks, cardDetails, deckMeta] = await Promise.all([
       fetchJson('data/published-decks.json').catch(() => []),
-      fetchJson('data/deck-card-details.json').catch(() => ({}))
+      fetchJson('data/deck-card-details.json').catch(() => ({})),
+      fetchJson('data/deck-meta.json').catch(() => ({ groups: [], tags: {} }))
     ]);
+    deckMeta.groups ||= [];
+    deckMeta.tags ||= {};
   } catch (err) {
     document.getElementById('deck-list-grid').innerHTML = '';
     const e = document.getElementById('decks-empty'); e.hidden = false; e.textContent = `Couldn't load decks: ${err.message}`;
@@ -223,8 +330,20 @@ async function init() {
       e.preventDefault(); document.getElementById('q').focus();
     }
   });
-  const id = new URLSearchParams(location.search).get('id');
-  if (id && publishedDecks.some((d) => d.id === id)) showDetail(id); else showList();
+  const params = new URLSearchParams(location.search);
+  const wanted = params.get('group');
+  if (wanted && deckMeta.groups.some((g) => g.id === wanted)) focusGroup = wanted;
+  // A group link opens just that group; otherwise use the owner's open/minimized defaults.
+  if (focusGroup) openGroups.add(focusGroup);
+  else deckMeta.groups.forEach((g) => !g.collapsed && openGroups.add(g.id));
+  openGroups.add('_other');
+  renderTagGuide();
+  const id = params.get('id');
+  if (id && publishedDecks.some((d) => d.id === id)) showDetail(id);
+  else {
+    showList();
+    if (focusGroup) document.getElementById(`grp-${focusGroup}`)?.scrollIntoView({ block: 'start' });
+  }
 }
 
 function showDetail(deckId) {
@@ -497,8 +616,9 @@ function renderDetail(baseDeck) {
   const stats = computeDeckStats(deck);
 
   el('detail-title').textContent = deck.name || 'Untitled Deck';
+  el('detail-tags').innerHTML = deckChipsInner(baseDeck, true);
   el('detail-links').innerHTML = (deck.links || [])
-    .map((l) => `<a class="detail-link-chip" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">&#128279; ${escapeHtml(l.label || l.url)}</a>`)
+    .map((l) => `<a class="detail-link-chip" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${metaTag(l.creatorId) ? `&#9654; ${escapeHtml(metaTag(l.creatorId).name)} - ` : '&#128279; '}${escapeHtml(l.label || l.url)}</a>`)
     .join('');
 
   el('detail-status').classList.toggle('invalid', !stats.isValid);

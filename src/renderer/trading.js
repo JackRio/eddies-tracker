@@ -392,7 +392,7 @@ async function init() {
   el('win-minimize').addEventListener('click', () => window.api.windowMinimize());
   el('win-maximize').addEventListener('click', () => window.api.windowToggleMaximize());
   el('win-close').addEventListener('click', () => window.api.windowClose());
-  el('close-btn').addEventListener('click', () => window.api.windowClose());
+  el('close-btn').addEventListener('click', () => window.api.overlayClose());
 
   allCards = (await window.api.getCards())?.cards || [];
   collection = await window.api.getCollection();

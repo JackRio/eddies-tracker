@@ -1,0 +1,89 @@
+{
+  "tags": [
+    {
+      "id": "arch-aggro",
+      "category": "archetype",
+      "name": "Aggro",
+      "description": "Low-cost Units (often a swarm of them) that pressure from turn one and steal Gigs before the rival can stabilize. Cheap cards over late-game power; loses if the rival stabilizes the board."
+    },
+    {
+      "id": "arch-midrange",
+      "category": "archetype",
+      "name": "Midrange",
+      "description": "Efficient mid-cost Units backed by Gear and a little removal. Flexible: plays tempo against slow decks and defends against fast ones, and wins fights on the board before attacking for Gigs."
+    },
+    {
+      "id": "arch-control",
+      "category": "archetype",
+      "name": "Control",
+      "description": "Answers the rival's Units one by one with removal and bottom-deck effects, denies Gigs, and draws cards to keep up. Gives up early ground, then stabilizes and wins late on a cleared board."
+    },
+    {
+      "id": "arch-tempo",
+      "category": "archetype",
+      "name": "Tempo",
+      "description": "Uses cheap interaction (spending rival Units, power shrink, bottom-deck, adjusting Gigs) to disrupt the rival's turn so they never develop, while a few efficient threats keep attacking."
+    },
+    {
+      "id": "arch-combo",
+      "category": "archetype",
+      "name": "Combo / Engine",
+      "description": "Assembles a repeatable loop between specific cards and Legends (for example a Program or Braindance engine) and wins through it. Powerful when it runs, weak if the pieces are disrupted."
+    },
+    {
+      "id": "arch-ramp",
+      "category": "archetype",
+      "name": "Ramp / Resource Acceleration",
+      "description": "Speeds up the Eddie curve with extra Eddies and cost discounts so expensive Units arrive far ahead of schedule, then overwhelms the rival with them."
+    },
+    {
+      "id": "arch-hand-control",
+      "category": "archetype",
+      "name": "Hand Control",
+      "description": "Strips the rival's hand (discard when you steal a Gig and similar effects) and grinds with card advantage so the rival runs out of options. A slow, late-game plan."
+    },
+    {
+      "id": "arch-gear",
+      "category": "archetype",
+      "name": "Gear / Equip",
+      "description": "Loads cheap Gear onto sturdy Units or Legends to win fights and attack through the board, drawing extra cards off Gear triggers. Gear count is high relative to Units."
+    },
+    {
+      "id": "misc-featured",
+      "category": "misc",
+      "name": "Featured",
+      "description": "Shown in the big Featured spot at the top of the website's Decks page.",
+      "locked": true
+    },
+    {
+      "id": "misc-competitive",
+      "category": "misc",
+      "name": "Competitive",
+      "description": "Tuned and tested for tournament play."
+    },
+    {
+      "id": "misc-casual",
+      "category": "misc",
+      "name": "Casual / Fun",
+      "description": "Built for fun and theme rather than raw power."
+    },
+    {
+      "id": "misc-budget",
+      "category": "misc",
+      "name": "Budget",
+      "description": "Cheap to build; few expensive or rare cards."
+    },
+    {
+      "id": "misc-beginner",
+      "category": "misc",
+      "name": "Beginner Friendly",
+      "description": "Simple game plan that is easy to pilot."
+    },
+    {
+      "id": "misc-wip",
+      "category": "misc",
+      "name": "Work in Progress",
+      "description": "Still being tuned; cards likely to change."
+    }
+  ]
+}
