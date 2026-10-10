@@ -3,7 +3,7 @@
     {
       "id": "gmv1gdo86",
       "name": "XBD Puppy ~ Ranking",
-      "collapsed": false,
+      "collapsed": true,
       "deckIds": [
         "d17915805726159jux8f",
         "d1791580978982ot2wpp",
@@ -31,6 +31,14 @@
         "d1791557848243ortgzc",
         "d17915587506368hitys",
         "d1791558886723pj6cfr"
+      ]
+    },
+    {
+      "id": "gmv1nfk2e",
+      "name": "Claude Decks",
+      "collapsed": false,
+      "deckIds": [
+        "d1791591891616qlxfqh"
       ]
     }
   ],
@@ -72,17 +80,17 @@
       "name": "Competitive",
       "description": "Tuned and tested for tournament play."
     },
-    "misc-featured": {
-      "id": "misc-featured",
-      "category": "misc",
-      "name": "Featured",
-      "description": "Shown in the big Featured spot at the top of the website's Decks page."
-    },
     "misc-casual": {
       "id": "misc-casual",
       "category": "misc",
       "name": "Casual / Fun",
       "description": "Built for fun and theme rather than raw power."
+    },
+    "misc-featured": {
+      "id": "misc-featured",
+      "category": "misc",
+      "name": "Featured",
+      "description": "Shown in the big Featured spot at the top of the website's Decks page."
     }
   }
 }

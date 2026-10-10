@@ -159,6 +159,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "1a986e5a-fe97-408c-81e9-b675c64bdcf9": {
+    "id": "1a986e5a-fe97-408c-81e9-b675c64bdcf9",
+    "cardId": "5c4d4058-9185-4305-9e8f-7eca41cf6674",
+    "name": "Kerry Eurodyne",
+    "subname": "The Last Rockerboy",
+    "displayName": "Kerry Eurodyne: The Last Rockerboy",
+    "slug": "kerry-eurodyne-the-last-rockerboy",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 1,
+    "cost": 4,
+    "power": 5,
+    "isEddiable": false,
+    "rulesText": "{Spend} If you control a Gig with 8+ value, draw 2.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": {
     "id": "96e76b12-4e53-4e2c-aca3-3fedf6f21e18",
     "cardId": "21f68be2-c664-4ae0-a7ef-965a3a5a14c8",
@@ -174,6 +194,26 @@
     "power": 5,
     "isEddiable": false,
     "rulesText": "{Blocker}\nThis Unit has +2 power while fighting a Legend.\nWhen a Rival adjusts or swaps 1 or more friendly Gigs, you may add a card from your trash to your hand.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "d6dd0114-fdd5-452a-b752-3e58a2e137f5": {
+    "id": "d6dd0114-fdd5-452a-b752-3e58a2e137f5",
+    "cardId": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+    "name": "Chrome Fang",
+    "subname": null,
+    "displayName": "Chrome Fang",
+    "slug": "chrome-fang",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 5,
+    "power": 6,
+    "isEddiable": false,
+    "rulesText": "{Play} Until your next turn, rival Units can't steal friendly Gigs with value higher than their power.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -257,6 +297,26 @@
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
+    }
+  },
+  "19587d4f-6d47-44fe-b4da-99743e2742f7": {
+    "id": "19587d4f-6d47-44fe-b4da-99743e2742f7",
+    "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+    "name": "Minotaur",
+    "subname": null,
+    "displayName": "Minotaur",
+    "slug": "minotaur",
+    "cardType": "Unit",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 7,
+    "power": 9,
+    "isEddiable": false,
+    "rulesText": "{Play} If you have more ☆ (Street Cred) than a Rival, defeat a rival Unit with power 5 or less.",
+    "set": {
+      "code": "embracingpowerretailstarterdeck",
+      "name": "Embracing Power — Retail Starter Deck"
     }
   },
   "19ef8a11-606b-44f3-b20e-08800c9d6cc2": {
@@ -1399,6 +1459,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "080b22ac-9c3d-48ee-ad4f-4e9579f22adc": {
+    "id": "080b22ac-9c3d-48ee-ad4f-4e9579f22adc",
+    "cardId": "55807eb7-8a8e-44a9-97a2-c8ac993e7b43",
+    "name": "Evelyn Parker",
+    "subname": "Beautiful Enigma",
+    "displayName": "Evelyn Parker: Beautiful Enigma",
+    "slug": "evelyn-parker-beautiful-enigma",
+    "cardType": "Legend",
+    "color": "Blue",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "When a friendly CORPO or GANGER Unit steals 1 or more Gigs, ready 1 Eddie.\n1 €$, {Spend} A rival Unit must attack next turn if it can.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "a33d3324-fe48-4a9f-80a8-8545a0a4727f": {
     "id": "a33d3324-fe48-4a9f-80a8-8545a0a4727f",
     "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
@@ -1614,6 +1694,26 @@
     "power": 3,
     "isEddiable": false,
     "rulesText": "{Play} You may discard 2 Programs. If you do, bottom-deck a rival unequipped Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "ee22b73e-8b14-4225-9c86-428cfada892f": {
+    "id": "ee22b73e-8b14-4225-9c86-428cfada892f",
+    "cardId": "920cabc9-f350-4f61-96c6-69e649271456",
+    "name": "Modded Kusanagi",
+    "subname": null,
+    "displayName": "Modded Kusanagi",
+    "slug": "modded-kusanagi",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 6,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "{Adrenaline} (This Unit can attack the turn it's played.)\nAt the end of your turn, return this Unit to its owner's hand.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"

@@ -1251,8 +1251,7 @@
         "crea-mv1gg19w"
       ],
       "misc": [
-        "misc-competitive",
-        "misc-featured"
+        "misc-competitive"
       ]
     },
     "groupId": "gmv1gdo86",
@@ -2140,5 +2139,106 @@
     "createdAt": "2026-10-09T22:03:32.110Z",
     "updatedAt": "2026-10-09T22:04:58.137Z",
     "colorTag": "YYR"
+  },
+  {
+    "tags": {
+      "archetype": [
+        "arch-midrange",
+        "arch-control"
+      ],
+      "creator": [],
+      "misc": [
+        "misc-competitive",
+        "misc-featured"
+      ]
+    },
+    "groupId": "gmv1nfk2e",
+    "id": "d1791591891616qlxfqh",
+    "name": "RRB ~ Anti-Alt",
+    "description": "",
+    "descSections": {
+      "overview": "A Midrange deck built to beat BBG ~ Alt. Bodies at 9 and 10 power with Gear survive their Towerfall and Pyramid Song, @[Modded Kusanagi] attacks every turn without ever sitting on the field for their locks, and Gigs at 8 and above feed @[Kerry Eurodyne: The Last Rockerboy|Kerry], @[Carnage at the Colosseum|Carnage] and @[Over the Edge]. @[Evelyn Parker: Beautiful Enigma|Evelyn] forces their Units to attack into a @[Chrome Fang] turn, so they steal nothing and die spent. 23 cards carry a Sell Tag, so there is a sale every turn for the 6 and 7 cost Units.",
+      "early": "Aim is one body with Gear and a Gig at 8: @[Meredith Stout: Stone Cold Corpo|Meredith Stout] with @[Mantis Blades], @[Industrial Assembly] on the d8, @[Dexter DeShawn: Off the Grid|Dexter]'s Spend on top.\n@[NetWatch Netdriver] on the first face-up Legend is a card every turn for the Eddie you spend anyway; @[Kerry Eurodyne: The Last Rockerboy|Kerry] draws 2 a turn once an 8+ Gig exists.\nSell first: the extra @[Floor It], @[Nocturne OP55 N1|Nocturne] until the fixer area empties, and @[Industrial Assembly] once the Gigs are high.\nCall @[V: Streetkid|V] when the hand lacks removal; @[Industrial Assembly], @[Bonnie and Clyde] and @[Carnage at the Colosseum|Carnage] come back from the trash.",
+      "mid": "@[Chrome Fang] is a one-turn shield, not a standing lock: it covers the rival turn right after it is played. Time it for the turn @[Evelyn Parker: Beautiful Enigma|Evelyn] forces Pepe or Maman to attack, or the turn after a big steal, with every Gig above 6.\nKeep @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Kerry Eurodyne: The Last Rockerboy|Kerry] on the field as the lowest-power target, so their Les Élémens never takes @[Animals Wrecker] or @[Minotaur].\nGear goes on the big Units first; an equipped Unit is out of reach of their Maman Brigitte, and @[Mantis Blades] lifts a 5-power Unit over their Towerfall.\nA forced Pepe attack into @[Meredith Stout: Stone Cold Corpo|Meredith Stout] is a win only with @[Mantis Blades] on Meredith or @[Dexter DeShawn: Off the Grid|Dexter]'s Call for +2 as the reaction; @[Floor It] alone leaves it a tie. Otherwise let it steal nothing and kill it spent next turn with @[Satori: Sword of Saburo|Satori] drawing.\n@[Minotaur] removes Maman, Voodoo Boy or Valentino on play; @[Carnage at the Colosseum|Carnage] with Wrecker or Minotaur out is the answer to Pepe.",
+      "late": "Aim is two Gigs per attack from @[Animals Wrecker] and an 8-power hit from @[Modded Kusanagi] every turn.\nRebuild after their Towerfall, not before it; Wrecker, Minotaur and an equipped Chrome Fang are the ones that stay.\n@[Modded Kusanagi] and @[V: Streetkid|V] through Go Solo are the attackers when their Chrome Reverie or Nocturne has locked Wrecker; @[Nocturne OP55 N1|Nocturne] takes 2 off the Go Solo price or draws 2 for 1 once the fixer area is empty.\n@[Over the Edge] with the d20 high removes Pepe; their Street Cred is always below yours, so every 'more Street Cred' effect is on.",
+      "combos": "@[Evelyn Parker: Beautiful Enigma|Evelyn] + @[Chrome Fang] - force the attack on a turn their Units cannot steal your high Gigs, then kill the spent Unit with @[Satori: Sword of Saburo|Satori] drawing.\n@[Modded Kusanagi] - 8 power every turn and never on the field for Towerfall, Les Élémens, Chrome Reverie or Nocturne.\n@[Animals Wrecker] + @[Carnage at the Colosseum|Carnage] - a 10-power Unit makes Carnage hit Pepe, and 8+ Gigs make it cheap. Wrecker still takes a Gig through their Take Control.\n@[Industrial Assembly] + @[Dexter DeShawn: Off the Grid|Dexter] - Gigs at 8 that draw, feed @[Kerry Eurodyne: The Last Rockerboy|Kerry] and discount Carnage.",
+      "mulligan": "Keep @[Mantis Blades] or @[Industrial Assembly] with @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Kerry Eurodyne: The Last Rockerboy|Kerry] and a Program to sell; @[Chrome Fang] and @[Modded Kusanagi] are keeps.\nTwo @[Minotaur] or @[Animals Wrecker] with nothing under 4 should go back.",
+      "mulliganFirst": "Look for @[Mantis Blades], @[Industrial Assembly] or @[Floor It] with a Call, then @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Kerry Eurodyne: The Last Rockerboy|Kerry].\nHigh-cost Units in the opening hand are not ideal; their deck does little early, so a cheap body and a Gig pump beat a slow hand.",
+      "mulliganSecond": "Look for @[Meredith Stout: Stone Cold Corpo|Meredith Stout] as the first Blocker with @[Mantis Blades] or @[Floor It] for their first attack, plus @[Industrial Assembly].\n@[Bonnie and Clyde] is worth keeping for their first Voodoo Boy or Maman.",
+      "sideboard": "Gear and fight decks: out 2 @[Chrome Fang] and 2 @[Bonnie and Clyde], in 2 @[Detonate] and 2 @[Johnny Silverhand: Never Stop Fighting|Johnny]. Their attackers are 8+ with Gear, so Chrome Fang protects little and Bonnie finds no target; Detonate takes Satori, Mantis Blades or Zetatech Faceplate (not Gorilla Arms, which is power 3), Johnny wins every fight against CORPO Units.\nFast decks: out 2 @[Carnage at the Colosseum|Carnage] and 1 @[Over the Edge], in 2 @[Rita Wheeler: No Stupid Questions|Rita Wheeler] and 1 @[Mox Inciters]. Rita blocks and draws; Mox Inciters forces their best Unit into Meredith or Rita.",
+      "notes": "Their Take Control blanks any single-steal attack, @[Modded Kusanagi] included, and only trims @[Animals Wrecker] from two Gigs to one. Against three copies, Wrecker is the attacker that matters.\nTheir Trust No One, Peace Offering and Hanako's swap can hit your Gigs, even a d20 down to 1. @[Meredith Stout: Stone Cold Corpo|Meredith Stout] gives a card back for each of those plays and @[Dexter DeShawn: Off the Grid|Dexter]'s Spend regrows 2 a turn.\n@[Kerry Eurodyne: The Last Rockerboy|Kerry] plus @[NetWatch Netdriver] is up to 4 cards a turn in a 40-card deck. In a long game, skip Kerry's Spend when the hand is already full.\n@[Minotaur] never hits Pepe at 6 power; Pepe dies to @[Carnage at the Colosseum|Carnage], @[Over the Edge] or a fight after @[Evelyn Parker: Beautiful Enigma|Evelyn] forces it out.\nReasoned from card text, not from games played; adjust after testing."
+    },
+    "legendCardIds": [
+      "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+      "55807eb7-8a8e-44a9-97a2-c8ac993e7b43"
+    ],
+    "legendPrintingIds": [
+      "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+      "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+      "080b22ac-9c3d-48ee-ad4f-4e9579f22adc"
+    ],
+    "sideboard": {
+      "2697ed9d-72fc-4658-9c94-977668911a67": 2,
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+      "65a14367-da52-4578-8162-3c4bac11007d": 2,
+      "ef77dd1f-3abd-4ce2-becc-97dd768a5022": 1
+    },
+    "swapPlans": [
+      {
+        "id": "p1791591891616ikgz",
+        "name": "Gear and fight decks",
+        "swaps": [
+          {
+            "out": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+            "in": "2697ed9d-72fc-4658-9c94-977668911a67",
+            "qty": 2
+          },
+          {
+            "out": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+            "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+            "qty": 2
+          }
+        ]
+      },
+      {
+        "id": "p1791591891617kj5k",
+        "name": "Fast decks",
+        "swaps": [
+          {
+            "out": "81fb66ee-b054-4f78-b0c9-7d2c9ff53435",
+            "in": "65a14367-da52-4578-8162-3c4bac11007d",
+            "qty": 2
+          },
+          {
+            "out": "144c3559-3518-4c01-b9e6-af42b7166661",
+            "in": "ef77dd1f-3abd-4ce2-becc-97dd768a5022",
+            "qty": 1
+          }
+        ]
+      }
+    ],
+    "cards": {
+      "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 3,
+      "920cabc9-f350-4f61-96c6-69e649271456": 3,
+      "e8aa7757-e5e3-4137-8970-4fa546b9bed9": 3,
+      "066641c5-acc2-45f4-ba67-16a8d20cce73": 2,
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+      "5c4d4058-9185-4305-9e8f-7eca41cf6674": 3,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "40c98fdc-45d0-458d-be2c-2697dc337ca5": 2,
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 3,
+      "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": 2,
+      "144c3559-3518-4c01-b9e6-af42b7166661": 2,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 2
+    },
+    "cardPrintings": {},
+    "links": [],
+    "createdAt": "2026-10-10T00:24:51.616Z",
+    "updatedAt": "2026-10-10T10:34:37.183Z",
+    "colorTag": "RRB"
   }
 ]
