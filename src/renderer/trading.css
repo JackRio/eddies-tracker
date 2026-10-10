@@ -43,7 +43,7 @@ body.trading-body { display: flex; flex-direction: column; overflow: hidden; }
 .rarity-icon-epic { -webkit-mask-image: url('assets/rarity/epic.png'); mask-image: url('assets/rarity/epic.png'); background-color: #b866ff; }
 .rarity-icon-secret-rare { -webkit-mask-image: url('assets/rarity/secret-rare.png'); mask-image: url('assets/rarity/secret-rare.png'); background-color: #ff4d4d; }
 .rarity-icon-iconic-rare { -webkit-mask-image: url('assets/rarity/iconic-rare.png'); mask-image: url('assets/rarity/iconic-rare.png'); background-color: #ffb833; }
-.rarity-icon-nova-rare { -webkit-mask-image: url('assets/rarity/nova-rare.png'); mask-image: url('assets/rarity/nova-rare.png'); background-color: #ff5fa8; -webkit-mask-size: 160%; mask-size: 160%; }
+.rarity-icon-nova-rare { -webkit-mask-image: url('assets/rarity/nova-rare.png'); mask-image: url('assets/rarity/nova-rare.png'); background-color: #ff5fa8; }
 
 .sec-h { display: flex; align-items: baseline; justify-content: space-between; margin: 20px 0 8px; }
 .sec-h h2 { margin: 0; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); font-weight: 800; }

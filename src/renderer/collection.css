@@ -191,8 +191,6 @@ html, body.collection-body {
   -webkit-mask-image: url('assets/rarity/nova-rare.png');
   mask-image: url('assets/rarity/nova-rare.png');
   background-color: #ff5fa8;
-  -webkit-mask-size: 160%;
-  mask-size: 160%;
 }
 
 .rarity-filter-btn:hover {

@@ -394,18 +394,16 @@ main.narrow { max-width: 860px; }
   mask-size: contain;
 }
 
-.rarity-icon-common { -webkit-mask-image: url('assets/rarity/common.png'); mask-image: url('assets/rarity/common.png'); background-color: #9a9aa5; }
-.rarity-icon-uncommon { -webkit-mask-image: url('assets/rarity/uncommon.png'); mask-image: url('assets/rarity/uncommon.png'); background-color: #5fdc84; }
-.rarity-icon-rare { -webkit-mask-image: url('assets/rarity/rare.png'); mask-image: url('assets/rarity/rare.png'); background-color: #4da6ff; }
-.rarity-icon-epic { -webkit-mask-image: url('assets/rarity/epic.png'); mask-image: url('assets/rarity/epic.png'); background-color: #b866ff; }
-.rarity-icon-secret-rare { -webkit-mask-image: url('assets/rarity/secret-rare.png'); mask-image: url('assets/rarity/secret-rare.png'); background-color: #ff4d4d; }
-.rarity-icon-iconic-rare { -webkit-mask-image: url('assets/rarity/iconic-rare.png'); mask-image: url('assets/rarity/iconic-rare.png'); background-color: #ffb833; }
+.rarity-icon-common { -webkit-mask-image: url('assets/rarity/common.png?v=official'); mask-image: url('assets/rarity/common.png?v=official'); background-color: #9a9aa5; }
+.rarity-icon-uncommon { -webkit-mask-image: url('assets/rarity/uncommon.png?v=official'); mask-image: url('assets/rarity/uncommon.png?v=official'); background-color: #5fdc84; }
+.rarity-icon-rare { -webkit-mask-image: url('assets/rarity/rare.png?v=official'); mask-image: url('assets/rarity/rare.png?v=official'); background-color: #4da6ff; }
+.rarity-icon-epic { -webkit-mask-image: url('assets/rarity/epic.png?v=official'); mask-image: url('assets/rarity/epic.png?v=official'); background-color: #b866ff; }
+.rarity-icon-secret-rare { -webkit-mask-image: url('assets/rarity/secret-rare.png?v=official'); mask-image: url('assets/rarity/secret-rare.png?v=official'); background-color: #ff4d4d; }
+.rarity-icon-iconic-rare { -webkit-mask-image: url('assets/rarity/iconic-rare.png?v=official'); mask-image: url('assets/rarity/iconic-rare.png?v=official'); background-color: #ffb833; }
 .rarity-icon-nova-rare {
-  -webkit-mask-image: url('assets/rarity/nova-rare.png');
-  mask-image: url('assets/rarity/nova-rare.png');
+  -webkit-mask-image: url('assets/rarity/nova-rare.png?v=official');
+  mask-image: url('assets/rarity/nova-rare.png?v=official');
   background-color: #ff5fa8;
-  -webkit-mask-size: 160%;
-  mask-size: 160%;
 }
 
 .rarity-filter-btn:hover { border-color: var(--text); }
