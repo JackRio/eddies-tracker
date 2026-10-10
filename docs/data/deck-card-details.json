@@ -1619,26 +1619,6 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "ee22b73e-8b14-4225-9c86-428cfada892f": {
-    "id": "ee22b73e-8b14-4225-9c86-428cfada892f",
-    "cardId": "920cabc9-f350-4f61-96c6-69e649271456",
-    "name": "Modded Kusanagi",
-    "subname": null,
-    "displayName": "Modded Kusanagi",
-    "slug": "modded-kusanagi",
-    "cardType": "Unit",
-    "color": "Blue",
-    "rarity": "Common",
-    "ram": 2,
-    "cost": 6,
-    "power": 8,
-    "isEddiable": false,
-    "rulesText": "{Adrenaline} (This Unit can attack the turn it's played.)\nAt the end of your turn, return this Unit to its owner's hand.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
   "0ff059f8-90c3-47ef-ba3b-cd380f30f14e": {
     "id": "0ff059f8-90c3-47ef-ba3b-cd380f30f14e",
     "cardId": "783a9082-b79c-4b45-bf66-48728ff9b92d",
