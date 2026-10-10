@@ -56,7 +56,7 @@
       <div class="detail-hero clip" id="detail-hero">
         <div class="legend-fan hoverable" id="detail-fan" style="width:min(100%,330px)"></div>
         <div class="grow">
-          <h2 id="detail-title"></h2>
+          <div class="detail-title-row"><h2 id="detail-title"></h2><select id="detail-versions" class="version-select" aria-label="Deck version" hidden></select></div>
           <div class="stat-row" id="detail-pills" style="margin:10px 0 0"></div>
           <div class="actions">
             <button class="btn" id="btn-copy">Copy decklist</button>
@@ -89,6 +89,7 @@
         </aside>
 
         <div class="detail-main">
+          <div id="detail-version-summary" hidden></div>
           <div id="detail-plans" class="deck-plans" hidden></div>
           <div id="detail-description" class="deck-description"></div>
           <div id="detail-card-sections"></div>

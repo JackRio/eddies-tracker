@@ -515,7 +515,8 @@ body.deckbuilder-body {
 .card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; white-space: nowrap; }
 .card-tag:hover { color: var(--yellow); border-color: var(--yellow); }
 .card-tag-pop { position: fixed; z-index: 80; pointer-events: none; }
-.card-tag-pop img { width: 230px; border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
+/* Same size as the website's hover card (docs/decks.css) - keep them in sync. */
+.card-tag-pop img { width: min(320px, 40vw, calc((100vh - 20px) * 63 / 88)); aspect-ratio: 63 / 88; object-fit: cover; background: var(--bg-card); border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
 
 .legend-slot {
   width: 90px;
@@ -1779,3 +1780,30 @@ button.tag-chip:hover { filter: brightness(1.25); }
 .prep-item:hover .prep-check { border-color: var(--green); }
 .prep-item.collected .prep-check { background: var(--green); border-color: var(--green); color: #000; }
 .prep-progress { margin-left: 12px; font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: 0; }
+
+/* Deck versions */
+.version-bar { display: flex; align-items: center; gap: 6px; }
+.version-bar:empty { display: none; }
+.version-select, .version-name-input {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--yellow);
+  font-weight: 700; font-size: 13px; padding: 6px 8px; min-width: 90px;
+}
+.version-name-input { border-color: var(--cyan); color: var(--text); width: 150px; }
+.version-select:focus, .version-name-input:focus { outline: none; border-color: var(--cyan); }
+.version-btn {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--text-dim);
+  font-size: 12px; font-weight: 700; padding: 6px 10px; cursor: pointer; white-space: nowrap;
+}
+.version-btn:hover, .version-btn:focus-visible { border-color: var(--cyan); color: var(--cyan); outline: none; }
+.version-btn.danger:hover { border-color: var(--red); color: var(--red); }
+.version-summary-wrap { padding: 8px 24px 10px; border-bottom: 1px solid var(--border); }
+.version-summary { border: 1px solid var(--border); border-left: 3px solid var(--yellow); border-radius: 6px; background: var(--bg-card); padding: 8px 12px; font-size: 12px; }
+.vs-head { display: flex; align-items: center; justify-content: space-between; color: var(--text-dim); margin-bottom: 4px; }
+.vs-head b { color: var(--yellow); }
+.vs-close { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 12px; }
+.vs-close:hover { color: var(--text); }
+.vs-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 3px 0; }
+.vs-label { color: var(--text-dim); font-weight: 700; min-width: 86px; }
+.vs-card { cursor: default; }
+.vs-none { color: var(--text-dim); }
+[data-hover-card], [data-hover-printing] { cursor: default; }

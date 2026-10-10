@@ -107,6 +107,7 @@ async function init() {
 
   attachControls();
   attachTagControls();
+  attachVersionControls();
   renderList();
 }
 
@@ -674,6 +675,7 @@ function blankDraft() {
 }
 
 function newDeck() {
+  resetVersionUi();
   draft = blankDraft();
   switchToBuilder();
 }
@@ -681,6 +683,8 @@ function newDeck() {
 function openDeckForEdit(deckId) {
   const deck = decks[deckId];
   if (!deck) return;
+  if (lastVersionSwitch?.deckId !== deckId) resetVersionUi();
+  else versionUi = { renaming: false, confirmDelete: false };
   draft = {
     id: deck.id,
     name: deck.name || '',
@@ -694,7 +698,8 @@ function openDeckForEdit(deckId) {
     cardPrintings: Object.fromEntries(Object.entries(deck.cardPrintings || {}).map(([cardId, split]) => [cardId, { ...split }])),
     links: (deck.links || []).map((l) => ({ ...l })),
     tags: { archetype: [], creator: [], misc: [], ...JSON.parse(JSON.stringify(deck.tags || {})) },
-    groupId: deck.groupId || null
+    groupId: deck.groupId || null,
+    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {})
   };
   switchToBuilder();
 }
@@ -716,7 +721,8 @@ async function duplicateDeck(deckId) {
     links: (deck.links || []).map((l) => ({ ...l })),
     // a copy is never the Featured deck
     tags: JSON.parse(JSON.stringify({ archetype: [], creator: [], misc: [], ...(deck.tags || {}) })),
-    groupId: deck.groupId || null
+    groupId: deck.groupId || null,
+    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {})
   };
   copy.tags.misc = copy.tags.misc.filter((id) => id !== FEATURED_ID);
   decks = await window.api.saveDeck(copy);
@@ -792,6 +798,7 @@ async function saveDraft() {
     setDeckMessage('Give the deck a name before saving.', true);
     return false;
   }
+  syncActiveVersion(draft);
   decks = await window.api.saveDeck(draft);
   takeSnapshot();
   setDeckMessage('Saved.', false);
@@ -1125,6 +1132,7 @@ function openDeckView(deckId) {
   if (!deck) return;
   viewingDeck = deck;
   viewPlanId = null;
+  resetVersionUi();
   showView('view');
   renderDeckView();
 }
@@ -1161,7 +1169,7 @@ function renderPlanBar(base, shown) {
     .join('');
   const summary = shown.plan
     ? `<div class="plan-summary">${shown.plan.swaps
-        .map((s) => `<span class="plan-pair"><span class="plan-out">${escapeHtml(cardById(s.out)?.name || '?')}</span> &#8644; <span class="plan-in">${escapeHtml(cardById(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`)
+        .map((s) => `<span class="plan-pair"><span class="plan-out" data-hover-card="${s.out}">${escapeHtml(cardById(s.out)?.name || '?')}</span> &#8644; <span class="plan-in" data-hover-card="${s.in}">${escapeHtml(cardById(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`)
         .join('')}</div>`
     : '';
   bar.innerHTML = `<div class="plan-chips">${chips}</div>${summary}`;
@@ -1250,6 +1258,7 @@ function renderDeckView() {
   const shown = shownViewState();
   const deck = shown.deck; // main deck, or main deck after the selected swap plan
   const stats = computeDeckStats(deck);
+  renderViewVersions();
   renderPlanBar(viewingDeck, shown);
 
   el('view-deck-title').textContent = deck.name || 'Untitled Deck';
@@ -1891,19 +1900,33 @@ function descAcKey(e) {
   }
 }
 
+// Cursor-following enlarged card, shared by every card reference in this
+// window: @[Card] description tags (data-card-tag = display name), card rows,
+// pool art and swap/version summaries (data-hover-card = cardId) and Legend
+// art (data-hover-printing). Same size as the website's (HOVER_CARD_W).
+const HOVER_CARD_W = 320;
 function onCardTagHover(e) {
   const pop = el('card-tag-pop');
-  const tag = e.target.closest?.('[data-card-tag]');
-  const card = tag && uniqueCards.find((c) => c.displayName === tag.dataset.cardTag);
-  if (!card) {
+  const t = e.target.closest?.('[data-card-tag],[data-hover-card],[data-hover-printing]');
+  let src = null;
+  if (t?.dataset.hoverPrinting) src = printingById(t.dataset.hoverPrinting)?.imageUrl;
+  else if (t?.dataset.hoverCard) src = cardById(t.dataset.hoverCard)?.imageUrl;
+  else if (t?.dataset.cardTag) src = uniqueCards.find((c) => c.displayName === t.dataset.cardTag)?.imageUrl;
+  if (!src) {
     pop.hidden = true;
     return;
   }
   const img = pop.querySelector('img');
-  if (img.getAttribute('src') !== card.imageUrl) img.src = card.imageUrl;
+  if (img.getAttribute('src') !== src) img.src = src;
   pop.hidden = false;
-  pop.style.left = `${Math.min(e.clientX + 16, innerWidth - 250)}px`;
-  pop.style.top = `${Math.max(8, Math.min(e.clientY - 150, innerHeight - 330))}px`;
+  // Beside the cursor, flipped to its left near the right edge, always fully
+  // on screen. Sized from the CSS width + card ratio (the image may not have
+  // loaded yet on the first hover).
+  const w = Math.min(HOVER_CARD_W, innerWidth * 0.4, ((innerHeight - 20) * 63) / 88);
+  const h = Math.round((w * 88) / 63) + 4;
+  const left = e.clientX + 18 + w > innerWidth - 8 ? e.clientX - 18 - w : e.clientX + 18;
+  pop.style.left = `${Math.max(8, left)}px`;
+  pop.style.top = `${Math.max(8, Math.min(e.clientY - h / 2, innerHeight - h - 8))}px`;
 }
 
 // --- Builder view -----------------------------------------------------
@@ -1921,6 +1944,7 @@ function renderBuilder() {
   renderLinksList();
   renderDeckStats();
   updateTagsSummary();
+  renderBuilderVersions();
 }
 
 function renderLegendRow() {
@@ -1934,7 +1958,7 @@ function renderLegendRow() {
       const hasVariants = ownedPrintingsFor(cardId).length > 1;
       return `
         <div class="legend-slot filled">
-          <img src="${printing.imageUrl}" alt="${escapeHtml(printing.displayName)}" />
+          <img src="${printing.imageUrl}" alt="${escapeHtml(printing.displayName)}" data-hover-printing="${printing.id}" />
           <button class="legend-slot-remove" data-remove-legend="${i}" title="Remove">&#10005;</button>
           ${hasVariants ? `<button class="legend-slot-change" data-change-legend="${i}" title="Choose a different art/printing you own">&#8635; Art</button>` : ''}
           <div class="legend-slot-name">${escapeHtml(card.name)}</div>
@@ -2057,7 +2081,7 @@ function cardPoolTileHtml(card) {
   const missingNow = Math.max(0, qty + side - card.ownedMain);
   return `
     <div class="db-card-tile">
-      <img src="${card.imageUrl}" alt="${escapeHtml(card.displayName)}" loading="lazy" />
+      <img src="${card.imageUrl}" alt="${escapeHtml(card.displayName)}" loading="lazy" data-hover-card="${card.cardId}" />
       <div class="db-card-tile-info">
         <div class="db-card-tile-name" title="${escapeHtml(card.name)}">${escapeHtml(card.name)}</div>
         <div class="db-card-tile-meta">
@@ -2164,7 +2188,7 @@ function renderDeckCardsList() {
       return `
     <div class="deck-card-row">
       <div class="deck-card-row-color color-bar ${e.card.color || ''}"></div>
-      <div class="deck-card-row-name" title="${escapeHtml(e.card.name)}">${escapeHtml(e.card.name)}</div>
+      <div class="deck-card-row-name" data-hover-card="${e.card.cardId}">${escapeHtml(e.card.name)}</div>
       ${rarities.length > 1 ? `<div class="deck-card-row-mixed" title="${escapeHtml(rarities.join(' + '))}">${escapeHtml(rarities.join('+'))}</div>` : ''}
       ${(() => {
         const miss = Math.max(0, e.qty + sideQtyOf(draft, e.card.cardId) - e.card.ownedMain);
@@ -2213,7 +2237,7 @@ function renderSideboardList() {
       (e) => `
     <div class="deck-card-row">
       <div class="deck-card-row-color color-bar ${e.card.color || ''}"></div>
-      <div class="deck-card-row-name" title="${escapeHtml(e.card.name)}">${escapeHtml(e.card.name)}</div>
+      <div class="deck-card-row-name" data-hover-card="${e.card.cardId}">${escapeHtml(e.card.name)}</div>
       <div class="deck-card-row-qty">x${e.qty}</div>
       <button class="deck-card-row-move" data-to-main="${e.card.cardId}" title="Move one copy to the main deck">&#8679; Main</button>
       <button data-dec-side="${e.card.cardId}" title="Remove one">-</button>
@@ -2789,6 +2813,8 @@ function attachControls() {
     if (e.target === el('desc-overlay')) closeDescEditor();
   });
   document.addEventListener('mousemove', onCardTagHover);
+  // scrolling moves the content out from under the cursor
+  document.addEventListener('scroll', () => (el('card-tag-pop').hidden = true), true);
 
   el('db-search-input').addEventListener('input', (e) => {
     builderState.search = e.target.value;

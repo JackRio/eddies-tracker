@@ -201,7 +201,7 @@
 @media (min-width: 561px) { .card-tag { white-space: nowrap; } }
 .card-tag:hover { color: var(--yellow); border-color: var(--yellow); }
 .card-tag-pop { position: fixed; z-index: 80; pointer-events: none; }
-.card-tag-pop img { width: min(300px, 38vw, calc((100vh - 20px) * 63 / 88)); aspect-ratio: 63 / 88; object-fit: cover; background: var(--bg-card, #111); border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
+.card-tag-pop img { width: min(320px, 40vw, calc((100vh - 20px) * 63 / 88)); aspect-ratio: 63 / 88; object-fit: cover; background: var(--bg-card, #111); border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
 
 /* Eddie Cost Curve --------------------------------------------------- */
 
@@ -483,3 +483,16 @@ button.tag-chip.active { background: rgba(255,255,255,.14); box-shadow: 0 0 0 1p
 .tag-guide dt { margin: 0; }
 .tag-guide dd { margin: 0; color: var(--text-dim); }
 .tag-guide h4 { grid-column: 1 / -1; margin: 10px 0 0; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--yellow); }
+
+/* Deck versions */
+.detail-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.version-select { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; color: var(--yellow); font-weight: 700; font-size: 14px; padding: 6px 10px; }
+.version-select:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+#detail-version-summary { margin-bottom: 14px; }
+.version-summary { border: 1px solid var(--border); border-left: 3px solid var(--yellow); border-radius: 6px; background: var(--bg-card); padding: 8px 12px; font-size: 13px; }
+.vs-head { display: flex; align-items: center; justify-content: space-between; color: var(--text-dim); margin-bottom: 4px; }
+.vs-head b { color: var(--yellow); }
+.vs-close { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 13px; }
+.vs-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 3px 0; }
+.vs-label { color: var(--text-dim); font-weight: 700; min-width: 92px; }
+.vs-none { color: var(--text-dim); }

@@ -1063,7 +1063,10 @@ ipcMain.handle('decks:publish', async (_event, deckIds) => {
   // needs (catalog.json is close but lacks ram/cost/power/isEddiable, which
   // the cost curve / RAM display / sellable stat all need).
   const referencedIds = new Set();
-  for (const deck of published) {
+  // Every version of a deck (deckbuilder-versions.js) is published, so the
+  // site can switch between them - each needs its printings too.
+  const deckVariants = published.flatMap((d) => [d, ...(d.versions || [])]);
+  for (const deck of deckVariants) {
     for (const pid of deck.legendPrintingIds || []) {
       if (pid) referencedIds.add(pid);
     }

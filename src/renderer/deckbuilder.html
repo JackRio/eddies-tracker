@@ -100,8 +100,10 @@
   <div id="view-builder" class="view-builder" hidden>
     <div class="builder-toolbar">
       <input type="text" id="deck-name-input" placeholder="Untitled Deck" class="deck-name-input" />
+      <div id="builder-version-bar" class="version-bar"></div>
       <div id="deck-message" class="deck-message" hidden></div>
     </div>
+    <div id="builder-version-summary" class="version-summary-wrap" hidden></div>
 
     <div class="legend-and-description-row">
       <div class="legend-row" id="legend-row"></div>
@@ -200,8 +202,10 @@
   <div id="view-deck" class="view-deck" hidden>
     <div class="view-deck-toolbar">
       <h2 id="view-deck-title">Untitled Deck</h2>
+      <div id="view-version-bar" class="version-bar"></div>
       <div id="view-deck-links" class="view-deck-toolbar-links"></div>
     </div>
+    <div id="view-version-summary" class="version-summary-wrap" hidden></div>
     <div id="view-deck-plans" class="view-deck-plans" hidden></div>
     <div class="view-deck-body">
       <main class="db-view-cardgrid">
@@ -385,6 +389,7 @@
   </div>
 
   <script src="deckbuilder-tags.js"></script>
+  <script src="deckbuilder-versions.js"></script>
   <script src="vendor/qrcode.js"></script>
   <script src="deckbuilder-export.js"></script>
   <script src="deckbuilder.js"></script>

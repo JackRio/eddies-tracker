@@ -355,11 +355,87 @@ async function init() {
   }
 }
 
+// --- Versions (ported from deckbuilder-versions.js) -----------------------
+// A published deck's top level is its current version; deck.versions holds
+// every version's card lists, so visitors can switch between them here.
+const VERSION_FIELDS = ['legendCardIds', 'legendPrintingIds', 'cards', 'sideboard', 'cardPrintings', 'swapPlans'];
+let viewVersionId = null;
+let versionSwitch = null; // { from, to, diff } for the summary
+
+function withVersion(deck, versionId) {
+  const v = (deck.versions || []).find((x) => x.id === versionId);
+  if (!v || v.id === deck.activeVersionId) return deck;
+  return { ...deck, ...Object.fromEntries(VERSION_FIELDS.map((f) => [f, v[f]])) };
+}
+
+function versionDiff(a, b) {
+  const zone = (x = {}, y = {}) => {
+    const out = [];
+    const inn = [];
+    for (const id of new Set([...Object.keys(x), ...Object.keys(y)])) {
+      const d = (y[id] || 0) - (x[id] || 0);
+      if (d < 0) out.push({ cardId: id, qty: -d });
+      else if (d > 0) inn.push({ cardId: id, qty: d });
+    }
+    return { out, in: inn };
+  };
+  const la = (a.legendCardIds || []).filter(Boolean);
+  const lb = (b.legendCardIds || []).filter(Boolean);
+  return {
+    legends: { out: la.filter((id) => !lb.includes(id)).map((id) => ({ cardId: id, qty: 1 })), in: lb.filter((id) => !la.includes(id)).map((id) => ({ cardId: id, qty: 1 })) },
+    main: zone(a.cards, b.cards),
+    side: zone(a.sideboard, b.sideboard)
+  };
+}
+
+function versionSummaryHtml(sw) {
+  const chips = (list, cls, sign) =>
+    list
+      .map((e) => ({ ...e, card: cardByCardId(e.cardId) }))
+      .filter((e) => e.card)
+      .sort((a, b) => a.card.name.localeCompare(b.card.name))
+      .map((e) => `<span class="${cls}" data-zoom="${escapeHtml(e.card.id)}">${sign}${e.qty} ${escapeHtml(e.card.name)}</span>`);
+  const row = (label, z) => {
+    const items = [...chips(z.out, 'plan-out', '\u2212'), ...chips(z.in, 'plan-in', '+')];
+    return items.length ? `<div class="vs-row"><span class="vs-label">${label}</span>${items.join('')}</div>` : '';
+  };
+  const rows = row('Legends:', sw.diff.legends) + row('Main Deck:', sw.diff.main) + row('Sideboard:', sw.diff.side);
+  return `<div class="version-summary"><div class="vs-head"><span><b>${escapeHtml(sw.from)}</b> &rarr; <b>${escapeHtml(sw.to)}</b></span><button class="vs-close" data-vs-close aria-label="Hide">&#10005;</button></div>${rows || '<div class="vs-row vs-none">No card changes.</div>'}</div>`;
+}
+
+function renderVersions(deck) {
+  const sel = el('detail-versions');
+  const list = deck.versions || [];
+  sel.hidden = list.length < 2;
+  if (list.length >= 2) sel.innerHTML = list.map((v) => `<option value="${escapeHtml(v.id)}" ${v.id === viewVersionId ? 'selected' : ''}>${escapeHtml(v.name)}</option>`).join('');
+  const box = el('detail-version-summary');
+  box.hidden = !versionSwitch;
+  box.innerHTML = versionSwitch ? versionSummaryHtml(versionSwitch) : '';
+}
+
+el('detail-versions').addEventListener('change', (e) => {
+  const deck = currentDeck;
+  const from = withVersion(deck, viewVersionId);
+  const fromName = (deck.versions.find((v) => v.id === viewVersionId) || {}).name || '';
+  viewVersionId = e.target.value;
+  const to = withVersion(deck, viewVersionId);
+  versionSwitch = { from: fromName, to: (deck.versions.find((v) => v.id === viewVersionId) || {}).name || '', diff: versionDiff(from, to) };
+  viewPlanId = null;
+  renderDetail(deck);
+});
+el('detail-version-summary').addEventListener('click', (e) => {
+  if (!e.target.closest('[data-vs-close]')) return;
+  versionSwitch = null;
+  renderDetail(currentDeck);
+});
+
 function showDetail(deckId) {
   const deck = publishedDecks.find((d) => d.id === deckId);
   if (!deck) return;
   currentDeck = deck;
   viewPlanId = null;
+  viewVersionId = deck.activeVersionId || null;
+  versionSwitch = null;
   history.replaceState(null, '', `decks.html?id=${encodeURIComponent(deckId)}`);
   el('decks-list').hidden = true;
   el('deck-detail').hidden = false;
@@ -552,7 +628,8 @@ document.addEventListener('mousemove', (e) => {
   // Beside the cursor; flip to its left near the right edge, keep fully on screen.
   // Size from the CSS width + card aspect ratio, not from the element: the image
   // may not have loaded yet on the first hover, which would measure ~0 tall.
-  const w = Math.min(300, innerWidth * 0.38, ((innerHeight - 20) * 63) / 88);
+  // same size as the desktop app's hover card (HOVER_CARD_W in deckbuilder.js)
+  const w = Math.min(320, innerWidth * 0.4, ((innerHeight - 20) * 63) / 88);
   const h = Math.round((w * 88) / 63) + 4;
   const left = e.clientX + 18 + w > innerWidth - 8 ? e.clientX - 18 - w : e.clientX + 18;
   pop.style.left = `${Math.max(8, left)}px`;
@@ -606,7 +683,7 @@ function renderPlanBar(base, plan) {
     .concat(plans.map((p) => `<button class="plan-chip ${viewPlanId === p.id ? 'active' : ''}" data-plan="${escapeHtml(p.id)}">&#8646; ${escapeHtml(p.name || 'Plan')} <span class="plan-chip-n">${p.swaps.reduce((s, x) => s + x.qty, 0)}</span></button>`))
     .join('');
   const summary = plan
-    ? `<div class="plan-summary">${plan.swaps.map((s) => `<span><span class="plan-out">${escapeHtml(cardByCardId(s.out)?.name || '?')}</span> &#8644; <span class="plan-in">${escapeHtml(cardByCardId(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`).join('')}</div>`
+    ? `<div class="plan-summary">${plan.swaps.map((s) => `<span><span class="plan-out" data-zoom="${escapeHtml(cardByCardId(s.out)?.id || '')}">${escapeHtml(cardByCardId(s.out)?.name || '?')}</span> &#8644; <span class="plan-in" data-zoom="${escapeHtml(cardByCardId(s.in)?.id || '')}">${escapeHtml(cardByCardId(s.in)?.name || '?')}</span>${s.qty > 1 ? ` &times;${s.qty}` : ''}</span>`).join('')}</div>`
     : '';
   bar.innerHTML = `<div class="plan-chips">${chips}</div>${summary}`;
   bar.querySelectorAll('[data-plan]').forEach((btn) =>
@@ -617,7 +694,9 @@ function renderPlanBar(base, plan) {
   );
 }
 
-function renderDetail(baseDeck) {
+function renderDetail(publishedDeck) {
+  const baseDeck = withVersion(publishedDeck, viewVersionId);
+  renderVersions(publishedDeck);
   const plan = viewPlanId ? planById(baseDeck, viewPlanId) : null;
   const applied = plan ? applyPlan(baseDeck, plan) : { deck: baseDeck, inMap: {}, outMap: {} };
   const deck = applied.deck;
