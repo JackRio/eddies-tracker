@@ -222,6 +222,51 @@ function pxFooter(ops, y) {
   return y + 15 + 36;
 }
 
+// The deck's own page on the website (all decks are published on Publish).
+function pxSiteBase() {
+  return siteBase || 'https://jackrio.lol/';
+}
+function pxDeckUrl(deck) {
+  return `${pxSiteBase()}decks.html?id=${encodeURIComponent(deck.id)}`;
+}
+
+// QR code (vendor/qrcode.js) on a white tile with the standard 4-module quiet
+// zone, so phones scan it reliably off a dark image.
+function pxQr(ctx, text, x, y, size) {
+  const qr = qrcode(0, 'M');
+  qr.addData(text);
+  qr.make();
+  const n = qr.getModuleCount();
+  const cell = Math.floor(size / (n + 8));
+  const side = cell * (n + 8);
+  const ox = x + (size - side) / 2;
+  const oy = y + (size - side) / 2;
+  pxRoundRect(ctx, ox, oy, side, side, 8);
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+  ctx.fillStyle = '#000';
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c < n; c++) if (qr.isDark(r, c)) ctx.fillRect(ox + (c + 4) * cell, oy + (r + 4) * cell, cell, cell);
+  }
+}
+
+// Deck image footer: QR to the deck's web page with the site name under it on
+// the right, app name + date on the left.
+function pxDeckFooter(ops, y, deck) {
+  const QR = 190;
+  const site = pxSiteBase().replace(/^https?:\/\//, '').replace(/\/$/, '');
+  ops.push((ctx) => {
+    ctx.fillStyle = PX.border;
+    ctx.fillRect(PX_PAD, y, PX_INNER, 1);
+    const qx = PX_W - PX_PAD - QR;
+    pxQr(ctx, pxDeckUrl(deck), qx, y + 20, QR);
+    pxText(ctx, site, qx + QR / 2, y + 20 + QR + 12, pxFont(24, 700), PX.yellow, '1px', 'center');
+    pxText(ctx, 'EDDIES', PX_PAD, y + 20 + QR + 18, pxFont(15, 600), PX.faint, '2px');
+    pxText(ctx, new Date().toLocaleDateString(), PX_PAD + 110, y + 20 + QR + 18, pxFont(15, 600), PX.faint, '1px');
+  });
+  return y + 20 + QR + 12 + 24 + 32;
+}
+
 function pxPanel(ctx, x, y, w, h, accent) {
   pxRoundRect(ctx, x, y, w, h, 10);
   ctx.fillStyle = PX.panel;
@@ -377,7 +422,7 @@ function pxDeckPage(deck, imgs) {
   const side = pxEntries(deck.sideboard);
   grid('Sideboard', `${side.reduce((s, e) => s + e.qty, 0)}/${SIDEBOARD_SIZE}`, side.map((e) => ({ printing: e.card, qty: e.qty })));
 
-  y = pxFooter(ops, y);
+  y = pxDeckFooter(ops, y, deck);
   return { ops, height: y };
 }
 
