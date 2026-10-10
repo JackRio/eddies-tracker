@@ -484,18 +484,24 @@ New uploads from followed YouTube creators are embedded on the Home page. A
 static site can't poll, and browsers can't read YouTube's RSS (no CORS), so:
 - `scripts/fetch-videos.js` (Node 18+, no deps; `npm run videos`) reads each
   channel's public RSS feed (`youtube.com/feeds/videos.xml?channel_id=…`),
-  drops Shorts (HEAD on `/shorts/<id>`), and writes `docs/data/videos.json`
-  (`{ channels, videos, checked, updatedAt }`). It only rewrites the file when
-  the videos actually change.
-- Channels followed = creator tags with a youtube.com URL in the published
-  `deck-meta.json` (tag a deck with a new creator in the app → they're
-  followed after the next deck publish) **plus** any in
-  `docs/data/channels.json` (`{ "channels": [{ "name", "url" }] }`). `@handle`
-  URLs are resolved to channel ids from the channel page and remembered.
-- `.github/workflows/videos.yml` runs it every 3 hours (and on demand from
-  the Actions tab) and commits `videos.json` if it changed, so the Home page
-  stays current with the desktop app closed. A new video therefore also
+  drops Shorts (HEAD on `/shorts/<id>`), keeps the newest 8 per channel, and
+  writes `docs/data/videos.json` (`{ channels, videos, checked, updatedAt }`).
+  It only rewrites the file when the videos actually change.
+- Channels followed = **every** creator tag with a youtube.com URL in the
+  app's tag DB. Both Publish buttons write them to `docs/data/creators.json`
+  (`writeCreatorsFile()` in `main.js`; the published `deck-meta.json` only has
+  creators used by published decks, which is why that alone wasn't enough),
+  **plus** any in `docs/data/channels.json` (`{ "channels": [{ "name", "url"
+  }] }`) for channels with no tag. `@handle` URLs are resolved to channel ids
+  from the channel page and remembered.
+- `.github/workflows/videos.yml` runs it once a day (06:17 UTC; also on
+  demand from the Actions tab) and commits `videos.json` if it changed, so
+  the Home page stays current with the desktop app closed. A new video also
   triggers the "newer version is live" banner on open tabs.
+- Home shows **"New in the last 24 hours"** (computed in the browser from
+  each video's publish time) when any followed creator uploaded something;
+  otherwise it falls back to "Latest videos" so the section is never empty.
+  "Past 24 hours | Latest" and per-channel chips switch views.
 - Playback is a click-to-load facade (thumbnail → `youtube-nocookie.com`
   iframe), so YouTube loads nothing until someone presses play.
 - `docs/data/stats.json` (`neededMain`, `neededMainCopies`, …) is written by

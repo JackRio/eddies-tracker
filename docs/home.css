@@ -82,6 +82,7 @@
   margin-top: 12px;
 }
 
+.video-wrap.solo { grid-template-columns: minmax(0, 880px); }
 .video-skeleton { grid-column: 1 / -1; aspect-ratio: 21 / 7; min-height: 160px; }
 
 .player {

@@ -483,6 +483,18 @@ async function loadTagDb() {
   return seed.tags;
 }
 
+// Every creator tag that has a YouTube channel URL, for the website's video
+// tracker (scripts/fetch-videos.js reads docs/data/creators.json). This is the
+// whole tag DB, not just creators used by published decks, so a channel is
+// followed as soon as it's in the DB.
+async function writeCreatorsFile() {
+  const creators = (await loadTagDb())
+    .filter((t) => t.category === 'creator' && /^https?:\/\/(www\.|m\.)?(youtube\.com|youtu\.be)\//i.test(t.url || ''))
+    .map((t) => ({ name: t.name, url: t.url }));
+  await fs.mkdir(docsDataDir(), { recursive: true });
+  await fs.writeFile(path.join(docsDataDir(), 'creators.json'), JSON.stringify({ creators }, null, 2), 'utf-8');
+}
+
 // Letters in the fixed R,B,G,Y order; most-represented color first, so
 // Blue+Blue+Green and Green+Blue+Blue are both "BBG" and one of each is "RBG".
 function colorTagFor(colors) {
@@ -851,6 +863,7 @@ ipcMain.handle('publish:run', async () => {
     }, null, 2),
     'utf-8'
   );
+  await writeCreatorsFile();
   await copyNeededImages(needed);
 
   // A lightweight full catalog (no images) so the Record page can log a
@@ -1119,6 +1132,7 @@ ipcMain.handle('decks:publish', async (_event, deckIds) => {
     tags: Object.fromEntries([...usedTagIds].map((id) => [id, { id, category: tagById.get(id).category, name: tagById.get(id).name, description: tagById.get(id).description || '', ...(tagById.get(id).url ? { url: tagById.get(id).url } : {}) }]))
   };
   await fs.writeFile(path.join(docsDataDir(), 'deck-meta.json'), JSON.stringify(meta, null, 2), 'utf-8');
+  await writeCreatorsFile();
   await fs.writeFile(publishedDecksPath, JSON.stringify(publishedWithTags, null, 2), 'utf-8');
   await fs.writeFile(cardDetailsPath, JSON.stringify(cardDetails, null, 2), 'utf-8');
 

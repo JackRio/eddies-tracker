@@ -17,6 +17,9 @@ let meta = { groups: [], tags: {} };
 let videoData = { channels: [], videos: [] };
 let activeChannel = 'all';
 let activeVideoId = null;
+// 'recent' = uploaded in the past 24 hours; 'latest' = newest regardless of age.
+// Starts on 'recent' when there is anything new, so a fresh upload leads.
+let videoScope = null;
 
 function escapeHtml(str) {
   return String(str ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
@@ -122,8 +125,12 @@ function renderStats(stats, looking, selling) {
 // ---- Videos ---------------------------------------------------------------
 const PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
 const channelById = (id) => videoData.channels.find((c) => c.id === id);
-const isNew = (v) => Date.now() - Date.parse(v.published) < 7 * 864e5;
-const visibleVideos = () => videoData.videos.filter((v) => activeChannel === 'all' || v.channelId === activeChannel);
+const DAY_MS = 864e5;
+const isNew = (v) => Date.now() - Date.parse(v.published) < DAY_MS;
+const recentVideos = () => videoData.videos.filter(isNew);
+const visibleVideos = () =>
+  (videoScope === 'recent' ? recentVideos() : videoData.videos)
+    .filter((v) => activeChannel === 'all' || v.channelId === activeChannel);
 
 function playerHtml(v) {
   return `<div class="player" data-play="${escapeHtml(v.id)}" role="button" tabindex="0" aria-label="Play: ${escapeHtml(v.title)}">
@@ -135,23 +142,37 @@ function playerHtml(v) {
 function renderVideos() {
   const wrap = el('video-wrap');
   const channels = videoData.channels;
-  el('videos-follow').textContent = channels.length ? `Following ${channels.map((c) => c.name).join(', ')}` : '';
+  el('videos-follow').textContent = channels.length ? `Following ${channels.length} creator${channels.length === 1 ? '' : 's'}` : '';
+  el('videos-follow').title = channels.map((c) => c.name).join(', ');
 
+  if (videoScope === null) videoScope = recentVideos().length ? 'recent' : 'latest';
+  const recentCount = recentVideos().length;
+  el('videos-title').textContent = videoScope === 'recent' ? 'New in the last 24 hours' : 'Latest videos';
+
+  // Scope chips (only worth showing when something is new) + one chip per channel.
   const chipRow = el('video-channels');
-  chipRow.hidden = channels.length < 2;
-  chipRow.innerHTML = channels.length < 2 ? '' : [{ id: 'all', name: 'All channels' }, ...channels]
-    .map((c) => `<div class="chip ${activeChannel === c.id ? 'active' : ''}" data-ch="${escapeHtml(c.id)}" role="button" tabindex="0">${escapeHtml(c.name)}</div>`)
+  const scopeChips = recentCount
+    ? [['scope', 'recent', `Past 24 hours (${recentCount})`], ['scope', 'latest', 'Latest']]
+    : [];
+  const channelChips = channels.length < 2 ? [] : [['ch', 'all', 'All channels'], ...channels.map((c) => ['ch', c.id, c.name])];
+  const chipOn = (kind, value) => (kind === 'scope' ? videoScope === value : activeChannel === value);
+  chipRow.hidden = !scopeChips.length && !channelChips.length;
+  chipRow.innerHTML = [...scopeChips, ...channelChips]
+    .map(([kind, value, label]) => `<div class="chip ${chipOn(kind, value) ? 'active' : ''}" data-${kind}="${escapeHtml(value)}" role="button" tabindex="0">${escapeHtml(label)}</div>`)
     .join('');
 
   const list = visibleVideos();
   if (!list.length) {
-    wrap.innerHTML = '<div class="video-empty">No videos yet. New uploads from the creators I follow will show up here automatically.</div>';
+    wrap.innerHTML = `<div class="video-empty">${videoScope === 'recent'
+      ? 'No new uploads from this channel in the last 24 hours.'
+      : 'No videos yet. New uploads from the creators I follow will show up here automatically.'}</div>`;
     return;
   }
   if (!list.some((v) => v.id === activeVideoId)) activeVideoId = list[0].id;
   const main = list.find((v) => v.id === activeVideoId);
   const ch = channelById(main.channelId);
   const others = list.filter((v) => v.id !== main.id).slice(0, 5);
+  wrap.classList.toggle('solo', !others.length);
 
   wrap.innerHTML = `
     <div class="video-main">
@@ -199,6 +220,13 @@ function setupVideoEvents() {
       el('video-wrap').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
       return;
     }
+    const scope = e.target.closest('[data-scope]');
+    if (scope) {
+      videoScope = scope.dataset.scope;
+      activeVideoId = null;
+      renderVideos();
+      return;
+    }
     const ch = e.target.closest('[data-ch]');
     if (ch) {
       activeChannel = ch.dataset.ch;
@@ -208,7 +236,7 @@ function setupVideoEvents() {
   });
   el('videos-section').addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
-    const t = e.target.closest('[data-play],[data-ch]');
+    const t = e.target.closest('[data-play],[data-ch],[data-scope]');
     if (!t) return;
     e.preventDefault();
     t.click();

@@ -1,12 +1,12 @@
-# Keeps the Home page's "Latest videos" fresh without the desktop app being
-# open: every few hours it reads each followed creator's public YouTube RSS
+# Keeps the Home page's videos fresh without the desktop app being open:
+# once a day it reads each followed creator's public YouTube RSS
 # feed and commits docs/data/videos.json if anything new was uploaded.
 # See scripts/fetch-videos.js. Run it on demand from the repo's Actions tab.
 name: Update videos
 
 on:
   schedule:
-    - cron: '17 */3 * * *'
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 permissions:

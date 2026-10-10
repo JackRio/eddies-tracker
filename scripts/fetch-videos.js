@@ -3,16 +3,18 @@
 // docs/data/videos.json, which the Home page reads to embed the latest videos.
 //
 // Where the channel list comes from (merged, de-duplicated):
-//   1. Creator tags published from the app (docs/data/deck-meta.json) that
-//      have a youtube.com URL - tag a deck with a new creator in the app and
-//      their channel is followed automatically after the next publish.
+//   1. Every creator tag in the app's tag database that has a youtube.com URL
+//      (docs/data/creators.json, written by both Publish buttons), plus
+//      creator tags on published decks (docs/data/deck-meta.json). Add a
+//      creator tag with their channel URL in the app and they're followed
+//      after the next publish.
 //   2. docs/data/channels.json -> { "channels": [{ "name", "url" }] } for any
 //      extra channels you want on the Home page without tagging a deck.
 //
 // How it works: YouTube serves a public RSS feed per channel
 // (youtube.com/feeds/videos.xml?channel_id=...). Browsers can't read it (no
 // CORS), so this runs in Node - from the scheduled GitHub Action
-// (.github/workflows/videos.yml, every few hours) or by hand: `npm run videos`.
+// (.github/workflows/videos.yml, once a day) or by hand: `npm run videos`.
 // No API key, no dependencies, Node 18+.
 //
 // The file is only rewritten when the set of videos actually changes, so the
@@ -24,7 +26,6 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '..', 'docs', 'data');
 const OUT = path.join(DATA_DIR, 'videos.json');
 const PER_CHANNEL = 8;
-const TOTAL = 30;
 const UA = { 'user-agent': 'Mozilla/5.0 (compatible; eddies-video-tracker)', 'accept-language': 'en', cookie: 'CONSENT=YES+1' };
 
 const readJson = (file, fallback) => {
@@ -42,6 +43,9 @@ const tag = (xml, name) => decodeXml((xml.match(new RegExp(`<${name}[^>]*>([\\s\
 
 function collectChannels(prevChannels) {
   const found = [];
+  for (const c of readJson(path.join(DATA_DIR, 'creators.json'), { creators: [] }).creators || []) {
+    if (c && c.url) found.push({ name: c.name, url: c.url });
+  }
   const meta = readJson(path.join(DATA_DIR, 'deck-meta.json'), { tags: {} });
   for (const t of Object.values(meta.tags || {})) {
     if (t.category === 'creator' && /youtube\.com|youtu\.be/i.test(t.url || '')) found.push({ name: t.name, url: t.url });
@@ -136,7 +140,7 @@ async function main() {
   videos.sort((a, b) => Date.parse(b.published) - Date.parse(a.published));
   const next = {
     channels: channels.filter((c) => c.id).map(({ id, name, url }) => ({ id, name: name || url, url })),
-    videos: videos.slice(0, TOTAL)
+    videos
   };
   const kept = new Set(next.videos.map((v) => v.id));
   next.checked = [...shortCache].filter(([id]) => kept.has(id)).map(([id, short]) => ({ id, short }));
