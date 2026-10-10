@@ -1766,3 +1766,16 @@ button.tag-chip:hover { filter: brightness(1.25); }
 .tagdb-locked { color: var(--text-dim); font-size: 11px; align-self: center; }
 .color-tag-legend { display: flex; flex-wrap: wrap; gap: 5px; }
 .link-creator-select { background: var(--bg-card); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 5px 6px; font-size: 12px; }
+
+/* Prep list: tick off cards as you collect them */
+.prep-item { position: relative; cursor: pointer; }
+.prep-item .view-deck-tile-layer { transition: opacity 0.12s, filter 0.12s; }
+.prep-item.collected .view-deck-tile-layer { opacity: 0.3; filter: grayscale(0.8); }
+.prep-check {
+  position: absolute; top: 6px; left: 6px; z-index: 50; width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; line-height: 1;
+  border: 2px solid var(--text-dim); background: rgba(0, 0, 0, 0.55); color: transparent;
+}
+.prep-item:hover .prep-check { border-color: var(--green); }
+.prep-item.collected .prep-check { background: var(--green); border-color: var(--green); color: #000; }
+.prep-progress { margin-left: 12px; font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: 0; }

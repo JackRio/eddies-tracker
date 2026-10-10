@@ -840,6 +840,35 @@ function computePrepList(deckIds) {
   return { legendRows, grouped };
 }
 
+// Cards ticked off while physically gathering a prep list. Remembered between
+// sessions (by cardId), since gathering usually takes more than one sitting.
+const PREP_KEY = 'eddies_prep_collected';
+function loadPrepCollected() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(PREP_KEY) || '[]'));
+  } catch {
+    return new Set();
+  }
+}
+let prepCollected = loadPrepCollected();
+function savePrepCollected() {
+  try {
+    localStorage.setItem(PREP_KEY, JSON.stringify([...prepCollected]));
+  } catch {}
+}
+
+function prepItemHtml(cardId, tileHtml) {
+  const on = prepCollected.has(cardId);
+  return `<div class="prep-item${on ? ' collected' : ''}" data-prep-card="${cardId}" title="Click to mark as collected"><span class="prep-check">&#10003;</span>${tileHtml}</div>`;
+}
+
+function updatePrepProgress() {
+  const items = [...el('view-prep').querySelectorAll('[data-prep-card]')];
+  const done = items.filter((i) => i.classList.contains('collected')).length;
+  el('prep-progress').textContent = `${done} / ${items.length} collected`;
+  el('prep-clear-btn').hidden = !done;
+}
+
 function openPrepView() {
   showView('prep');
   renderPrepView();
@@ -850,7 +879,7 @@ function renderPrepView() {
 
   el('prep-legends-count').textContent = `${legendRows.length}`;
   el('prep-legends').innerHTML =
-    legendRows.map((p) => viewDeckTileHtml([p], `title="${escapeHtml(p.name)}"`)).join('') || '<div class="view-deck-tile-empty">No Legends</div>';
+    legendRows.map((p) => prepItemHtml(p.cardId, viewDeckTileHtml([p], `title="${escapeHtml(p.name)}"`))).join('') || '<div class="view-deck-tile-empty">No Legends</div>';
 
   el('prep-card-sections').innerHTML = grouped
     .map((g) => {
@@ -862,12 +891,13 @@ function renderPrepView() {
           // barely reads as "more than one" - an explicit count badge is
           // the only thing that actually communicates the prep quantity.
           const badge = e.qty > 1 ? `<div class="view-deck-tile-qty-badge">x${e.qty}</div>` : '';
-          return viewDeckTileHtml(Array(e.qty).fill(e.card), `title="${title}"`, null, badge);
+          return prepItemHtml(e.cardId, viewDeckTileHtml(Array(e.qty).fill(e.card), `title="${title}"`, null, badge));
         })
         .join('');
       return `<div class="view-deck-section"><h3>${escapeHtml(g.type)}s <span class="deck-count-badge">${g.entries.length}</span></h3><div class="view-deck-tile-grid">${tiles}</div></div>`;
     })
     .join('');
+  updatePrepProgress();
 }
 
 // --- Export (Text List format, matching cyberpunktcg.com's own deck
@@ -2683,6 +2713,24 @@ function attachControls() {
   });
   el('prep-list-btn').addEventListener('click', openPrepView);
   el('prep-back-to-list-btn').addEventListener('click', backToList);
+  el('view-prep').addEventListener('click', (e) => {
+    const item = e.target.closest('[data-prep-card]');
+    if (!item) return;
+    const id = item.dataset.prepCard;
+    const on = !prepCollected.has(id);
+    if (on) prepCollected.add(id);
+    else prepCollected.delete(id);
+    // the same card can appear in more than one place (e.g. Legend + deck)
+    el('view-prep').querySelectorAll(`[data-prep-card="${id}"]`).forEach((i) => i.classList.toggle('collected', on));
+    savePrepCollected();
+    updatePrepProgress();
+  });
+  el('prep-clear-btn').addEventListener('click', () => {
+    prepCollected = new Set();
+    savePrepCollected();
+    el('view-prep').querySelectorAll('.collected').forEach((i) => i.classList.remove('collected'));
+    updatePrepProgress();
+  });
   el('publish-decks-btn').addEventListener('click', publishDecks);
 
   el('deck-name-input').addEventListener('input', (e) => {
