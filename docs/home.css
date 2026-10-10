@@ -46,11 +46,14 @@
   justify-content: center;
 }
 
+.hero-art { --glow: 245, 228, 0; padding-bottom: 54px; }
+
+/* Glow behind the cards takes the rarity color of the card in the middle. */
 .hero-art::before {
   content: "";
   position: absolute;
-  inset: 4% 8%;
-  background: radial-gradient(closest-side, rgba(245, 228, 0, .2), rgba(29, 225, 225, .06) 60%, transparent);
+  inset: 0 8% 54px;
+  background: radial-gradient(closest-side, rgba(var(--glow), .24), rgba(29, 225, 225, .05) 62%, transparent);
   filter: blur(14px);
 }
 
@@ -63,8 +66,44 @@
   border: 1px solid rgba(255, 255, 255, .22);
   background: var(--bg-card);
   box-shadow: var(--shadow), 0 0 44px rgba(245, 228, 0, .1);
+  margin-bottom: 54px;
   animation: bob 6s ease-in-out infinite;
+  transition: opacity .33s, filter .33s;
 }
+
+.hero-art .hc.swap { opacity: 0; filter: blur(6px); }
+
+.hero-meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-cap { display: flex; align-items: center; gap: 8px; min-height: 22px; font-size: 13px; }
+.hero-cap b { letter-spacing: .04em; }
+.hero-cap span:last-child { color: var(--text-dim); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; }
+.hero-cap .rarity-icon { width: 18px; height: 18px; }
+
+.hero-dots { display: flex; gap: 6px; align-items: center; }
+.hero-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: var(--border-hi);
+  cursor: pointer;
+  transition: width .25s var(--ease), background .25s;
+}
+.hero-dots button:hover { background: var(--text-dim); }
+.hero-dots button.on { width: 22px; background: var(--yellow); }
+@media (pointer: coarse) { .hero-dots button { width: 10px; height: 10px; } .hero-dots button.on { width: 24px; } }
 
 .hero-art .hc:nth-child(1) { transform: translateX(-64%) rotate(-9deg); animation-delay: -2s; }
 .hero-art .hc:nth-child(2) { z-index: 2; transform: translateY(-4%) scale(1.06); }
@@ -138,6 +177,10 @@
 }
 
 .video-list { display: flex; flex-direction: column; gap: 10px; }
+@media (min-width: 901px) {
+  /* Many creators means many rows: scroll inside the column instead of stretching the page. */
+  .video-list { max-height: clamp(420px, 46vw, 640px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; scrollbar-color: var(--border-hi) transparent; }
+}
 
 .vrow {
   display: grid;
@@ -168,7 +211,8 @@
   color: var(--text-dim);
 }
 
-#video-channels { margin-top: 2px; }
+#video-channels { margin-top: 2px; align-items: center; }
+.video-select { width: auto; min-width: 190px; padding: 6px 32px 6px 12px; font-size: 12px; font-weight: 600; border-radius: 12px; }
 
 /* Deck cards on Home */
 .deck-link { color: var(--text); }
@@ -230,7 +274,7 @@
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; text-align: left; }
-  .hero-art { min-height: 250px; order: -1; }
+  .hero-art { min-height: 250px; order: -1; padding-top: 14px; }
   .hero-art .hc { width: min(38%, 160px); }
   .hero-cta .cta { flex: 1 1 140px; padding-inline: 12px; white-space: nowrap; }
 

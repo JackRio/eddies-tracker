@@ -24,14 +24,76 @@
       "id": "UCgdCrVrpiH9XZUfamvuSOHA",
       "name": "Maindeck",
       "url": "https://www.youtube.com/@MaindeckGames/"
+    },
+    {
+      "id": "UCLck5Q8W5awRJp_qmoa2msg",
+      "name": "Cyberpunk TCG (Official)",
+      "url": "https://www.youtube.com/@CyberpunkTCG"
+    },
+    {
+      "id": "UCGRtpjtxkby158dbitlcUkg",
+      "name": "X0 Cyberpunk",
+      "url": "https://www.youtube.com/@X0TCG-Cyberpunk"
+    },
+    {
+      "id": "UCm_S8OR3ZJtJuVYdN83JHdQ",
+      "name": "StevieBeatz",
+      "url": "https://www.youtube.com/@steviebeatz17"
+    },
+    {
+      "id": "UCnWc9kCmS-YwJE58KLpSXkg",
+      "name": "Chrome Cardboard",
+      "url": "https://www.youtube.com/@chromecardboard"
+    },
+    {
+      "id": "UCJavloH4k2Wyyf4eElRac2A",
+      "name": "CyberChoom TCG",
+      "url": "https://www.youtube.com/@CyberChoomTCG"
+    },
+    {
+      "id": "UCDS55f82q_js397_UKs6Izg",
+      "name": "Zen'd Out",
+      "url": "https://www.youtube.com/@ZendOutTCG"
+    },
+    {
+      "id": "UCFd-oebu93o0blOK7dUbcoA",
+      "name": "Avincry",
+      "url": "https://www.youtube.com/@Avincry"
+    },
+    {
+      "id": "UCCwFBYm8CZGUjEGvq2_zz6Q",
+      "name": "Braindance Podcast",
+      "url": "https://www.youtube.com/@BraindancePod"
+    },
+    {
+      "id": "UCizLTV6gmqor_EmQCkP8kfQ",
+      "name": "InSight TCG",
+      "url": "https://www.youtube.com/@InSight_TCG"
+    },
+    {
+      "id": "UCUQFMd34uqxuS3OgAzcyEuA",
+      "name": "Saint TCG",
+      "url": "https://www.youtube.com/@ssaint_tcg"
     }
   ],
   "videos": [
+    {
+      "id": "NjJNH5lLICo",
+      "title": "Cyberpunk News and Ichorus's Decklist— Episode 3 | Cyberpunk TCG Podcast",
+      "published": "2026-10-09T19:29:10+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
     {
       "id": "Xblt1cq1vzc",
       "title": "What's the difference between beta and retail booster boxes for the Cyberpunk TCG? #cyberpunktcg",
       "published": "2026-10-09T18:00:11+00:00",
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "iXmiU5z0xXE",
+      "title": "Cyberpunk TCG Holophone - CD PROJEKT RED x WeirdCo Deep Dive | Cyberpunk Trading Card Game",
+      "published": "2026-10-09T16:00:36+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
     },
     {
       "id": "9j2ondicjPU",
@@ -52,16 +114,34 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
+      "id": "w1wnuh81a_A",
+      "title": "Cyberpunk TCG Holophone Announcement Trailer | Cyberpunk Trading Card Game",
+      "published": "2026-10-07T16:00:27+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
       "id": "AMVPIVJWH_g",
       "title": "This Indie Japanese TCG is WEIRDLY Amazing! - VARZ TCG: The Maindeck Review!",
       "published": "2026-10-07T15:12:32+00:00",
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
+      "id": "QX3E3RMjLhY",
+      "title": "2 NEW Meta Decks You NEED to Know | 🔴🔴🔵 & 🔴🟢🔵",
+      "published": "2026-10-07T10:00:13+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
       "id": "gzjMxMv7EH8",
       "title": "Cyberpunk TCG Green Units Tier List for Set 1 \"Welcome To Night City.\"",
       "published": "2026-10-07T02:01:45+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "pyWeAoF31jk",
+      "title": "Why Cyberpunk TCG has one of the best competitive structures for a TCG",
+      "published": "2026-10-06T21:18:02+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
       "id": "G7M_sUY32PA",
@@ -74,6 +154,18 @@
       "title": "Six NEW Decks that Show Grand Archive's Meta is PEAK",
       "published": "2026-10-05T19:48:35+00:00",
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "5teZE3aYr3c",
+      "title": "BETA Booster Box Opening - 5 | Cyberpunk TCG",
+      "published": "2026-10-05T19:00:20+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "p6IQiINI3D8",
+      "title": "What Gear Wins Games? Our Cyberpunk TCG Final Gear Tier List",
+      "published": "2026-10-05T11:00:22+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "0seGZwHjEzY",
@@ -112,6 +204,24 @@
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
+      "id": "6_WQqGaNQw0",
+      "title": "Tournaments — Episode 2 | Cyberpunk TCG Podcast",
+      "published": "2026-10-02T19:00:32+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "NB5DPEhdsIs",
+      "title": "Behind The Scenes with our Co-Founder 👀 | Cyberdeck Podcast Episode 27 | Cyberpunk Trading Card Game",
+      "published": "2026-10-02T16:00:39+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "eVR1RPT-obs",
+      "title": "Beta Booster Box Opening FINALE - Can we pull an ISR?",
+      "published": "2026-10-02T15:00:02+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
       "id": "ce32W1xEbBs",
       "title": "The PERFECT 🔥 TCG Deck Holder... a SWITCH Case?!?!",
       "published": "2026-10-02T01:52:57+00:00",
@@ -136,10 +246,34 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
+      "id": "gtZhqVGpvvg",
+      "title": "The Metagame Cycle: Who Beats Who?",
+      "published": "2026-09-30T01:26:19+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "DaN0e76Dvd8",
+      "title": "We Open More Beta Event Kits at our LGS",
+      "published": "2026-09-29T18:00:11+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "wx3wzDUHACY",
+      "title": "BETA Booster Box Opening - 4 | Cyberpunk TCG",
+      "published": "2026-09-28T21:30:36+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
       "id": "zqrlCvo8uQ4",
       "title": "You CAN'T MISS this VOLLEYBALL TCG - Haikyu!! Vobaca Break-down!",
       "published": "2026-09-28T17:04:10+00:00",
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "vduxEAfU5FY",
+      "title": "Who is the Best Legend in Cyberpunk TCG? Our Final Ranking of all Welcome to Night City Legends",
+      "published": "2026-09-28T10:00:10+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "zGlAoTmL3jk",
@@ -202,6 +336,12 @@
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
     },
     {
+      "id": "tYtJQzwXpuw",
+      "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
+      "published": "2026-09-25T16:00:39+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
       "id": "26SDDbClrSg",
       "title": "CyberpunkTCG Red Units Tier List for Set 1 \"Welcome To Night City.\"",
       "published": "2026-09-25T03:58:48+00:00",
@@ -214,10 +354,52 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
+      "id": "kiC8EqvZ6HI",
+      "title": "Beta Booster Box Battle Ep2 - Can we get ALL BLUE ICONICS in 1 Box?",
+      "published": "2026-09-24T14:00:03+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "SdN5TlkrCkg",
+      "title": "Is Hanako too strong? Cyberpunk TCG",
+      "published": "2026-09-23T12:00:24+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
       "id": "kku4kwGny1A",
       "title": "Unit Tier List Rough Draft Live Stream",
       "published": "2026-09-23T03:25:10+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "mWQKByVu4X0",
+      "title": "Cyberpunk 101: Deck Building Tips",
+      "published": "2026-09-22T13:04:21+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "SqlD1ITaNwk",
+      "title": "BETA Booster Box Opening - 3 | Cyberpunk TCG",
+      "published": "2026-09-21T19:00:40+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "v8RkYR0j580",
+      "title": "Cyberpunk TCG Meta - Is BBG TIER 0?",
+      "published": "2026-09-21T10:13:44+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "2elesi4EuSA",
+      "title": "Will Placide Keep Top Spot? Cyberpunk TCG Red Units Tier List",
+      "published": "2026-09-21T10:00:17+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "9Fos0WCAlPA",
+      "title": "Managed to collect all the beta stamped cards for cyberpunk TCG and they look awesome!",
+      "published": "2026-09-19T18:48:59+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "8W9f2BwK8MM",
@@ -232,10 +414,88 @@
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
     },
     {
+      "id": "-6-B4CI-qco",
+      "title": "Edgerunner Open Regional Full Prizing 👀 | Cyberdeck Podcast Episode 25 | Cyberpunk Trading Card Game",
+      "published": "2026-09-18T16:00:25+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "NXGitGm3VJI",
+      "title": "Our Thoughts on the Beta Pre-Release Events",
+      "published": "2026-09-18T14:00:25+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "YY7g4ivKb6M",
+      "title": "Beta Booster Box Battle Ep1 - HOW MANY Adam Smashers can we get?",
+      "published": "2026-09-17T12:00:23+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "lzwLvy0Ft4s",
+      "title": "BETA Booster Box Opening - 2 | Cyberpunk TCG",
+      "published": "2026-09-14T19:00:10+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
       "id": "FErgliHjTag",
       "title": "Cyberpunk TCG Starter Deck Duel - Afterlife Card Club Episode 6. (Embracing Power Vs. The Heist)",
       "published": "2026-09-14T17:27:49+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "7tBDI1Xrwrs",
+      "title": "3 decks YOU should try in Cyberpunk TCG",
+      "published": "2026-09-14T10:23:19+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "ca1z1KkQmEo",
+      "title": "How Do Green Units Stack Up? Our Cyberpunk TCG Green Units Tier List",
+      "published": "2026-09-14T10:00:02+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "b_6EQ7UbEGY",
+      "title": "CTCG Beta Pre-Release Event RECAP - My Thoughts & Pulls",
+      "published": "2026-09-13T15:00:16+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "IObKejLH6vE",
+      "title": "Beta pre release experience, 7 wins between us and Ste took the crown! Decklist and pulls shown!",
+      "published": "2026-09-12T20:24:59+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "opXdaRLM9IU",
+      "title": "Starter Decks — Episode 1 | Cyberpunk TCG Podcast",
+      "published": "2026-09-11T19:00:12+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "8wtXTtWFgio",
+      "title": "Night City Brawl 👊 & Beta Event Kit 👀 | Cyberdeck Podcast Episode 24 | Cyberpunk Trading Card Game",
+      "published": "2026-09-11T16:00:13+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "ULdj5vJnccg",
+      "title": "Opening 2 BETA BOOSTER BOXES of Cyberpunk TCG - Can we hit big?",
+      "published": "2026-09-11T10:15:54+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "rT7CzaUVsEs",
+      "title": "BETA Booster Box Opening - 1 | Cyberpunk TCG",
+      "published": "2026-09-11T04:30:19+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "dyNRpIsRmyU",
+      "title": "10 MOST IMPACTFUL Cards In The Cyberpunk TCG!",
+      "published": "2026-09-11T00:05:15+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
     },
     {
       "id": "xPt9ndBaKtc",
@@ -244,10 +504,178 @@
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
     },
     {
+      "id": "zE_WQl5m2mg",
+      "title": "Every Feature of Deckrunners, our Cyberpunk TCG Companion App #cyberpunk2077 #cyberpunktcg",
+      "published": "2026-09-09T22:17:56+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "SJ6tzCfhDUU",
+      "title": "Wakako vs Evelyn Parker | Fixers YBG 🟡🔵🟢 vs Evelyn BRG 🔵🔴🟢 | Cyberpunk Trading Card Game",
+      "published": "2026-09-09T16:00:24+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "QmoGmBY5A6I",
+      "title": "How To Win Your Cyberpunk TCG Beta Event",
+      "published": "2026-09-09T15:16:21+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "etQKOsxytlg",
+      "title": "Update 10, our Full Release (Cyberpunk TCG App Dev Update Supercut)",
+      "published": "2026-09-08T11:00:07+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "nFqK24shZM4",
+      "title": "Cyberpunk TCG's First Regionals Announced! Plus Other Recent News + Updates",
+      "published": "2026-09-08T07:29:05+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "0ucRY1FusM0",
+      "title": "Royce vs Panam Palmer | Maelstrom YRR 🟡🔴🔴 vs Pepe Panam GGR 🟢🟢🔴 | Cyberpunk Trading Card Game",
+      "published": "2026-09-07T16:00:03+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "mysQP7z3OHU",
+      "title": "New Modes Galore (We just decided to have Fun with it: Cyberpunk TCG App Dev Update)",
+      "published": "2026-09-07T14:00:32+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "iHDhq4kDXms",
+      "title": "A TCG is only Fun if you Play with Friends, right? (Cyberpunk TCG App Dev Update)",
+      "published": "2026-09-07T13:00:34+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "RQ29MnDE3cE",
+      "title": "What Use are Cosmetics, without a Shop to Buy them At (Cyberpunk TCG App Dev Update)",
+      "published": "2026-09-07T12:00:10+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "0btxuK1mLak",
+      "title": "Our Account System to Level up and Save your Progress (Cyberpunk TCG App Update)",
+      "published": "2026-09-07T11:00:10+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "AX8H4SDzM9c",
+      "title": "Eddie System with Daily Login, Quests and More (Cyberpunk TCG App Dev Update)",
+      "published": "2026-09-06T14:00:36+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "RE4MKSs4kXE",
+      "title": "Our new Homepage with the News Segment (Cyberpunk TCG App Update)",
+      "published": "2026-09-06T13:00:08+00:00",
+      "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
+    },
+    {
+      "id": "fRj-xbt6EVU",
+      "title": "How to Get Into Cyberpunk TCG",
+      "published": "2026-09-06T13:00:01+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "Xy_yLQi51nI",
+      "title": "5 reasons YOU should try Cyberpunk TCG!",
+      "published": "2026-09-04T22:27:25+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "yoNwupNJhGY",
+      "title": "Opening 2 Cyberpunk TCG Beta Booster Boxes With My Friend!",
+      "published": "2026-09-04T12:04:16+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "14YvMymS8E4",
+      "title": "Welcome to Night City Beta Booster Box - Cyberpunk TCG Unboxing",
+      "published": "2026-09-04T07:40:56+00:00",
+      "channelId": "UCUQFMd34uqxuS3OgAzcyEuA"
+    },
+    {
+      "id": "MnTSGNShLJ0",
+      "title": "Can We Get A GOD PACK?! - Cyberpunk TCG Beta Booster Box Opening",
+      "published": "2026-09-03T23:11:04+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "Wjs8Ze-0STM",
+      "title": "Cyberpunk TCG LEGEND TIER LIST - Who will lead the meta in Welcome to Night City?",
+      "published": "2026-09-03T09:00:36+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "W13Xm4RLs40",
+      "title": "Has Cyberpunk TCG's Meta Already Been Solved? Plus Recent News And Reveals",
+      "published": "2026-09-03T08:04:10+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "OZs7DHw9iAY",
+      "title": "Embracing Power Beta Starter Deck - Cyberpunk TCG Unboxing",
+      "published": "2026-09-03T05:26:31+00:00",
+      "channelId": "UCUQFMd34uqxuS3OgAzcyEuA"
+    },
+    {
+      "id": "11YJj0Lvg4g",
+      "title": "The Heist Beta Starter Deck - Cyberpunk TCG Unboxing",
+      "published": "2026-09-03T04:29:25+00:00",
+      "channelId": "UCUQFMd34uqxuS3OgAzcyEuA"
+    },
+    {
+      "id": "tk_iC9fQO6k",
+      "title": "Let the show begin! - Channel Update #2",
+      "published": "2026-09-01T15:00:18+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "sX8BTGHXOyE",
+      "title": "Guide to Cyberpunk TCG Beta Events",
+      "published": "2026-09-01T13:35:59+00:00",
+      "channelId": "UCUQFMd34uqxuS3OgAzcyEuA"
+    },
+    {
+      "id": "85ciTKf37L4",
+      "title": "Rating the Newest Cyberpunk TCG Cards! (Blue & Yellow)",
+      "published": "2026-08-31T13:36:41+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "Ulg3TdyfrcE",
+      "title": "Making YOUR Decks BETTER - Community Decklist Review",
+      "published": "2026-08-30T17:30:17+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "L9c4Ctg-btw",
+      "title": "Cyberpunk TCG's Official Rules Just Got Released",
+      "published": "2026-08-29T13:06:19+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
       "id": "UOm4_KqiCdM",
       "title": "CyberpunkTCG Masterclass #3 - What you NEED to know to Elevate your Gameplay! (\"Get Good\" FAST!)",
       "published": "2026-08-29T07:54:42+00:00",
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "tVmMf2QtqBk",
+      "title": "These NEW Cyberpunk TCG Cards are Spicy!",
+      "published": "2026-08-28T16:00:34+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "gwiPAL-przo",
+      "title": "Cyber Circuit 001 | Cyberpunk TCG Gameplay",
+      "published": "2026-08-28T15:34:48+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
     },
     {
       "id": "ESdyoHoKut8",
@@ -260,6 +688,84 @@
       "title": "CyberpunkTCG Masterclass #1 - Deckbuilding and Deck Optimization!",
       "published": "2026-08-26T08:51:36+00:00",
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "033Bsw2zbXk",
+      "title": "TOP 10 Cards You NEED for the Cyberpunk TCG Beta Events!",
+      "published": "2026-08-25T22:52:18+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "k7tIeS-ffvU",
+      "title": "Padre confirms that fixers are STRONG in Cyberpunk TCG #cyberpunk #cyberpunktcg",
+      "published": "2026-08-24T19:10:29+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
+      "id": "QN4IYZ0-tRM",
+      "title": "Cyberpunk TCG Starter Decks Fully Revealed! Plus Other Recent News",
+      "published": "2026-08-23T16:24:46+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "clolRv6aLHA",
+      "title": "Cyberpunk TCG - Block-Chain VS Multi-Attack - Gameplay with Commentary Ep.3",
+      "published": "2026-08-19T15:00:39+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "ctFKPyH4xh0",
+      "title": "Cyberpunk TCG Secret Rares: PLAYABLE or COLLECTABLE?",
+      "published": "2026-08-18T17:06:02+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "6_siTp_vHH0",
+      "title": "Rating All NEW Cyberpunk TCG Cards (Blue & Green)",
+      "published": "2026-08-16T13:20:53+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "hgo8A5cdhJE",
+      "title": "How To Get The Rebecca Promo FREE! Plus Other Cyberpunk TCG News",
+      "published": "2026-08-16T12:37:50+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "-6Vk902-EwY",
+      "title": "Rating All NEW Cyberpunk TCG Cards (Red & Yellow)",
+      "published": "2026-08-12T11:27:21+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "636FQBPFmR0",
+      "title": "The Math Behind Cyberpunk TCG's God Pack Odds",
+      "published": "2026-08-07T07:18:36+00:00",
+      "channelId": "UCFd-oebu93o0blOK7dUbcoA"
+    },
+    {
+      "id": "taYMc8fjvpE",
+      "title": "Does the Cyberpunk TCG Have TOO Much Removal??",
+      "published": "2026-08-02T21:34:55+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "916TdrJHzaU",
+      "title": "Rating Every GREEN & BLUE Card in Cyberpunk TCG",
+      "published": "2026-07-15T13:22:05+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "Ly8qsdUhAHM",
+      "title": "Chrome Clash Ep. 1 - A Cyberpunk TCG Gameplay Series",
+      "published": "2026-07-12T18:56:12+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "_KyL383QIY8",
+      "title": "We Rated Every RED & YELLOW Card in Cyberpunk TCG",
+      "published": "2026-07-12T13:23:11+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
     }
   ],
   "checked": [
@@ -418,7 +924,311 @@
     {
       "id": "FErgliHjTag",
       "short": false
+    },
+    {
+      "id": "iXmiU5z0xXE",
+      "short": false
+    },
+    {
+      "id": "w1wnuh81a_A",
+      "short": false
+    },
+    {
+      "id": "NB5DPEhdsIs",
+      "short": false
+    },
+    {
+      "id": "tYtJQzwXpuw",
+      "short": false
+    },
+    {
+      "id": "-6-B4CI-qco",
+      "short": false
+    },
+    {
+      "id": "8wtXTtWFgio",
+      "short": false
+    },
+    {
+      "id": "SJ6tzCfhDUU",
+      "short": false
+    },
+    {
+      "id": "0ucRY1FusM0",
+      "short": false
+    },
+    {
+      "id": "pyWeAoF31jk",
+      "short": false
+    },
+    {
+      "id": "SdN5TlkrCkg",
+      "short": false
+    },
+    {
+      "id": "v8RkYR0j580",
+      "short": false
+    },
+    {
+      "id": "7tBDI1Xrwrs",
+      "short": false
+    },
+    {
+      "id": "ULdj5vJnccg",
+      "short": false
+    },
+    {
+      "id": "Xy_yLQi51nI",
+      "short": false
+    },
+    {
+      "id": "Wjs8Ze-0STM",
+      "short": false
+    },
+    {
+      "id": "k7tIeS-ffvU",
+      "short": false
+    },
+    {
+      "id": "QX3E3RMjLhY",
+      "short": false
+    },
+    {
+      "id": "gtZhqVGpvvg",
+      "short": false
+    },
+    {
+      "id": "dyNRpIsRmyU",
+      "short": false
+    },
+    {
+      "id": "MnTSGNShLJ0",
+      "short": false
+    },
+    {
+      "id": "033Bsw2zbXk",
+      "short": false
+    },
+    {
+      "id": "ctFKPyH4xh0",
+      "short": false
+    },
+    {
+      "id": "taYMc8fjvpE",
+      "short": false
+    },
+    {
+      "id": "Ly8qsdUhAHM",
+      "short": false
+    },
+    {
+      "id": "p6IQiINI3D8",
+      "short": false
+    },
+    {
+      "id": "vduxEAfU5FY",
+      "short": false
+    },
+    {
+      "id": "mWQKByVu4X0",
+      "short": false
+    },
+    {
+      "id": "2elesi4EuSA",
+      "short": false
+    },
+    {
+      "id": "9Fos0WCAlPA",
+      "short": false
+    },
+    {
+      "id": "NXGitGm3VJI",
+      "short": false
+    },
+    {
+      "id": "ca1z1KkQmEo",
+      "short": false
+    },
+    {
+      "id": "IObKejLH6vE",
+      "short": false
+    },
+    {
+      "id": "eVR1RPT-obs",
+      "short": false
+    },
+    {
+      "id": "DaN0e76Dvd8",
+      "short": false
+    },
+    {
+      "id": "kiC8EqvZ6HI",
+      "short": false
+    },
+    {
+      "id": "YY7g4ivKb6M",
+      "short": false
+    },
+    {
+      "id": "b_6EQ7UbEGY",
+      "short": false
+    },
+    {
+      "id": "tk_iC9fQO6k",
+      "short": false
+    },
+    {
+      "id": "Ulg3TdyfrcE",
+      "short": false
+    },
+    {
+      "id": "clolRv6aLHA",
+      "short": false
+    },
+    {
+      "id": "NjJNH5lLICo",
+      "short": false
+    },
+    {
+      "id": "5teZE3aYr3c",
+      "short": false
+    },
+    {
+      "id": "6_WQqGaNQw0",
+      "short": false
+    },
+    {
+      "id": "wx3wzDUHACY",
+      "short": false
+    },
+    {
+      "id": "SqlD1ITaNwk",
+      "short": false
+    },
+    {
+      "id": "lzwLvy0Ft4s",
+      "short": false
+    },
+    {
+      "id": "opXdaRLM9IU",
+      "short": false
+    },
+    {
+      "id": "rT7CzaUVsEs",
+      "short": false
+    },
+    {
+      "id": "nFqK24shZM4",
+      "short": false
+    },
+    {
+      "id": "yoNwupNJhGY",
+      "short": false
+    },
+    {
+      "id": "W13Xm4RLs40",
+      "short": false
+    },
+    {
+      "id": "L9c4Ctg-btw",
+      "short": false
+    },
+    {
+      "id": "gwiPAL-przo",
+      "short": false
+    },
+    {
+      "id": "QN4IYZ0-tRM",
+      "short": false
+    },
+    {
+      "id": "hgo8A5cdhJE",
+      "short": false
+    },
+    {
+      "id": "636FQBPFmR0",
+      "short": false
+    },
+    {
+      "id": "QmoGmBY5A6I",
+      "short": false
+    },
+    {
+      "id": "fRj-xbt6EVU",
+      "short": false
+    },
+    {
+      "id": "85ciTKf37L4",
+      "short": false
+    },
+    {
+      "id": "tVmMf2QtqBk",
+      "short": false
+    },
+    {
+      "id": "6_siTp_vHH0",
+      "short": false
+    },
+    {
+      "id": "-6Vk902-EwY",
+      "short": false
+    },
+    {
+      "id": "916TdrJHzaU",
+      "short": false
+    },
+    {
+      "id": "_KyL383QIY8",
+      "short": false
+    },
+    {
+      "id": "zE_WQl5m2mg",
+      "short": false
+    },
+    {
+      "id": "etQKOsxytlg",
+      "short": false
+    },
+    {
+      "id": "mysQP7z3OHU",
+      "short": false
+    },
+    {
+      "id": "iHDhq4kDXms",
+      "short": false
+    },
+    {
+      "id": "RQ29MnDE3cE",
+      "short": false
+    },
+    {
+      "id": "0btxuK1mLak",
+      "short": false
+    },
+    {
+      "id": "AX8H4SDzM9c",
+      "short": false
+    },
+    {
+      "id": "RE4MKSs4kXE",
+      "short": false
+    },
+    {
+      "id": "14YvMymS8E4",
+      "short": false
+    },
+    {
+      "id": "OZs7DHw9iAY",
+      "short": false
+    },
+    {
+      "id": "11YJj0Lvg4g",
+      "short": false
+    },
+    {
+      "id": "sX8BTGHXOyE",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-10T10:38:01.224Z"
+  "updatedAt": "2026-10-10T10:49:27.600Z"
 }

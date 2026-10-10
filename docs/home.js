@@ -17,9 +17,10 @@ let meta = { groups: [], tags: {} };
 let videoData = { channels: [], videos: [] };
 let activeChannel = 'all';
 let activeVideoId = null;
-// 'recent' = uploaded in the past 24 hours; 'latest' = newest regardless of age.
-// Starts on 'recent' when there is anything new, so a fresh upload leads.
-let videoScope = null;
+// 'fresh' (default) = per creator: everything uploaded in the past 24 hours, or
+// - when they have nothing new - their single most recent video, so every
+// followed creator is represented. 'all' = every stored video.
+let videoScope = 'fresh';
 
 function escapeHtml(str) {
   return String(str ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
@@ -30,6 +31,73 @@ const metaTag = (id) => meta.tags[id];
 const deckTagIds = (d, cat) => (d.tags?.[cat] || []).filter(metaTag);
 const isFeatured = (d) => deckTagIds(d, 'misc').includes(FEATURED_ID);
 const updatedTs = (d) => Date.parse(d.updatedAt) || 0;
+
+// ---- Hero: the rarest cards in the collection, cycling -------------------------
+// data/showcase.json is written by the desktop app's Publish (src/showcase.js):
+// owned cards, rarest first. Three are shown at once (the rarest of the trio in
+// the middle) and the trio advances every few seconds; hover, a hidden tab, or
+// reduced-motion settings pause it. Dots jump straight to a card.
+let showcase = [];
+let heroIdx = 1; // centre card; starting at 1 puts the three rarest on screen first
+let heroTimer = null;
+const HERO_MS = 4500;
+const RARITY_GLOW = { 'Nova Rare': '255,95,168', 'Iconic Legend': '255,184,51', 'Iconic Other': '255,184,51', 'Iconic Secret': '255,184,51', Secret: '255,77,77', Epic: '184,102,255', Rare: '77,166,255' };
+const RARITY_ICON = { 'Nova Rare': 'nova-rare', 'Iconic Legend': 'iconic-rare', 'Iconic Other': 'iconic-rare', 'Iconic Secret': 'iconic-rare', Secret: 'secret-rare', Epic: 'epic', Rare: 'rare', Uncommon: 'uncommon', Common: 'common' };
+const heroAt = (i) => showcase[((i % showcase.length) + showcase.length) % showcase.length];
+
+function heroCaption(card) {
+  const icon = RARITY_ICON[card.rarity];
+  return `${icon ? `<span class="rarity-icon rarity-icon-${icon}"></span>` : ''}<b>${escapeHtml(card.displayName || card.name)}</b><span>${escapeHtml(card.rarity)}</span>`;
+}
+
+function paintHeroMeta() {
+  const art = el('hero-art');
+  const card = heroAt(heroIdx);
+  art.style.setProperty('--glow', RARITY_GLOW[card.rarity] || '245,228,0');
+  el('hero-cap').innerHTML = heroCaption(card);
+  const active = ((heroIdx % showcase.length) + showcase.length) % showcase.length;
+  art.querySelectorAll('.hero-dots button').forEach((b, i) => b.classList.toggle('on', i === active));
+}
+
+function setupHero() {
+  if (showcase.length < 3) { showcase = []; return; }
+  const art = el('hero-art');
+  const cards = [-1, 0, 1].map((o) => {
+    const c = heroAt(heroIdx + o);
+    return `<img class="hc" data-off="${o}" src="${imageUrl(c.id)}" alt="${escapeHtml(c.displayName || c.name)}" />`;
+  }).join('');
+  const dots = showcase.map((c, i) => `<button type="button" data-hero="${i}" aria-label="Show ${escapeHtml(c.displayName || c.name)}"></button>`).join('');
+  art.innerHTML = `${cards}<div class="hero-meta"><div class="hero-cap" id="hero-cap"></div><div class="hero-dots">${dots}</div></div>`;
+  paintHeroMeta();
+  showcase.forEach((c) => { const im = new Image(); im.src = imageUrl(c.id); }); // preload so swaps never flash
+
+  const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  const goTo = (idx) => {
+    heroIdx = idx;
+    art.querySelectorAll('.hc').forEach((img, k) => {
+      setTimeout(() => {
+        img.classList.add('swap');
+        setTimeout(() => {
+          const c = heroAt(heroIdx + Number(img.dataset.off));
+          img.src = imageUrl(c.id);
+          img.alt = c.displayName || c.name;
+          img.classList.remove('swap');
+        }, 330);
+      }, k * 140);
+    });
+    paintHeroMeta();
+  };
+  const stop = () => { clearInterval(heroTimer); heroTimer = null; };
+  const start = () => { stop(); if (!reduce && !document.hidden) heroTimer = setInterval(() => goTo(heroIdx + 1), HERO_MS); };
+  art.addEventListener('mouseenter', stop);
+  art.addEventListener('mouseleave', start);
+  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+  art.addEventListener('click', (e) => {
+    const dot = e.target.closest('[data-hero]');
+    if (dot) { goTo(Number(dot.dataset.hero)); start(); }
+  });
+  start();
+}
 
 // ---- Decks ----------------------------------------------------------------
 function legendsOf(deck) {
@@ -76,10 +144,12 @@ function renderDecks() {
   const byRecent = [...decks].sort((a, b) => updatedTs(b) - updatedTs(a));
   const featured = decks.find(isFeatured) || byRecent[0];
 
-  // Hero art: the featured deck's three Legends.
-  const heroLegends = legendsOf(featured).slice(0, 3);
-  el('hero-art').innerHTML = heroLegends.map((p) => `<img class="hc" src="${imageUrl(p)}" alt="" />`).join('');
-  if (!heroLegends.length) el('hero-art').hidden = true;
+  // No showcase published yet: fall back to the featured deck's Legends.
+  if (!showcase.length) {
+    const heroLegends = legendsOf(featured).slice(0, 3);
+    el('hero-art').innerHTML = heroLegends.map((p) => `<img class="hc" src="${imageUrl(p)}" alt="" />`).join('');
+    if (!heroLegends.length) el('hero-art').hidden = true;
+  }
 
   el('featured-section').hidden = false;
   el('home-featured').innerHTML = `
@@ -127,10 +197,25 @@ const PLAY_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l1
 const channelById = (id) => videoData.channels.find((c) => c.id === id);
 const DAY_MS = 864e5;
 const isNew = (v) => Date.now() - Date.parse(v.published) < DAY_MS;
-const recentVideos = () => videoData.videos.filter(isNew);
+const byNewest = (a, b) => Date.parse(b.published) - Date.parse(a.published);
+function freshVideos() {
+  const perChannel = new Map();
+  for (const v of videoData.videos) {
+    if (!perChannel.has(v.channelId)) perChannel.set(v.channelId, []);
+    perChannel.get(v.channelId).push(v);
+  }
+  const out = [];
+  for (const list of perChannel.values()) {
+    list.sort(byNewest);
+    const recent = list.filter(isNew);
+    out.push(...(recent.length ? recent : [list[0]]));
+  }
+  return out.sort(byNewest);
+}
 const visibleVideos = () =>
-  (videoScope === 'recent' ? recentVideos() : videoData.videos)
+  (videoScope === 'fresh' ? freshVideos() : [...videoData.videos].sort(byNewest))
     .filter((v) => activeChannel === 'all' || v.channelId === activeChannel);
+const CHANNEL_CHIP_LIMIT = 6; // more creators than this and the filter becomes a dropdown
 
 function playerHtml(v) {
   return `<div class="player" data-play="${escapeHtml(v.id)}" role="button" tabindex="0" aria-label="Play: ${escapeHtml(v.title)}">
@@ -145,33 +230,30 @@ function renderVideos() {
   el('videos-follow').textContent = channels.length ? `Following ${channels.length} creator${channels.length === 1 ? '' : 's'}` : '';
   el('videos-follow').title = channels.map((c) => c.name).join(', ');
 
-  if (videoScope === null) videoScope = recentVideos().length ? 'recent' : 'latest';
-  const recentCount = recentVideos().length;
-  el('videos-title').textContent = videoScope === 'recent' ? 'New in the last 24 hours' : 'Latest videos';
+  const freshCount = freshVideos().length;
+  el('videos-title').textContent = videoScope === 'fresh' ? 'Fresh from the creators' : 'All recent videos';
 
-  // Scope chips (only worth showing when something is new) + one chip per channel.
+  // Scope chips, then the creator filter: chips for a handful, a dropdown for many.
   const chipRow = el('video-channels');
-  const scopeChips = recentCount
-    ? [['scope', 'recent', `Past 24 hours (${recentCount})`], ['scope', 'latest', 'Latest']]
-    : [];
-  const channelChips = channels.length < 2 ? [] : [['ch', 'all', 'All channels'], ...channels.map((c) => ['ch', c.id, c.name])];
-  const chipOn = (kind, value) => (kind === 'scope' ? videoScope === value : activeChannel === value);
-  chipRow.hidden = !scopeChips.length && !channelChips.length;
-  chipRow.innerHTML = [...scopeChips, ...channelChips]
-    .map(([kind, value, label]) => `<div class="chip ${chipOn(kind, value) ? 'active' : ''}" data-${kind}="${escapeHtml(value)}" role="button" tabindex="0">${escapeHtml(label)}</div>`)
-    .join('');
+  const chip = (kind, value, label, on) => `<div class="chip ${on ? 'active' : ''}" data-${kind}="${escapeHtml(value)}" role="button" tabindex="0">${escapeHtml(label)}</div>`;
+  let html = chip('scope', 'fresh', `Fresh (${freshCount})`, videoScope === 'fresh') + chip('scope', 'all', `All videos (${videoData.videos.length})`, videoScope === 'all');
+  if (channels.length > 1 && channels.length <= CHANNEL_CHIP_LIMIT) {
+    html += chip('ch', 'all', 'All creators', activeChannel === 'all') + channels.map((c) => chip('ch', c.id, c.name, activeChannel === c.id)).join('');
+  } else if (channels.length > CHANNEL_CHIP_LIMIT) {
+    html += `<select id="video-channel-select" class="video-select" aria-label="Filter by creator"><option value="all">All creators (${channels.length})</option>${channels.map((c) => `<option value="${escapeHtml(c.id)}" ${activeChannel === c.id ? 'selected' : ''}>${escapeHtml(c.name)}</option>`).join('')}</select>`;
+  }
+  chipRow.hidden = !videoData.videos.length;
+  chipRow.innerHTML = html;
 
   const list = visibleVideos();
   if (!list.length) {
-    wrap.innerHTML = `<div class="video-empty">${videoScope === 'recent'
-      ? 'No new uploads from this channel in the last 24 hours.'
-      : 'No videos yet. New uploads from the creators I follow will show up here automatically.'}</div>`;
+    wrap.innerHTML = '<div class="video-empty">No videos yet. New uploads from the creators I follow will show up here automatically.</div>';
     return;
   }
   if (!list.some((v) => v.id === activeVideoId)) activeVideoId = list[0].id;
   const main = list.find((v) => v.id === activeVideoId);
   const ch = channelById(main.channelId);
-  const others = list.filter((v) => v.id !== main.id).slice(0, 5);
+  const others = list.filter((v) => v.id !== main.id).slice(0, 14);
   wrap.classList.toggle('solo', !others.length);
 
   wrap.innerHTML = `
@@ -197,7 +279,7 @@ function renderVideos() {
           </span>
         </button>`).join('')}
     </div>`;
-  stagger(wrap.querySelector('.video-list'), 5);
+  stagger(wrap.querySelector('.video-list'), 6);
 }
 
 // Clicking the thumbnail swaps in YouTube's privacy-friendly embed (the
@@ -234,6 +316,12 @@ function setupVideoEvents() {
       renderVideos();
     }
   });
+  el('videos-section').addEventListener('change', (e) => {
+    if (e.target.id !== 'video-channel-select') return;
+    activeChannel = e.target.value;
+    activeVideoId = null;
+    renderVideos();
+  });
   el('videos-section').addEventListener('keydown', (e) => {
     if (e.key !== 'Enter' && e.key !== ' ') return;
     const t = e.target.closest('[data-play],[data-ch],[data-scope]');
@@ -247,20 +335,23 @@ function setupVideoEvents() {
 async function init() {
   renderBuildInfo();
   const get = (path, fallback) => fetchJson(path).catch(() => fallback);
-  const [videosJson, decksJson, detailsJson, metaJson, stats, looking, selling] = await Promise.all([
+  const [videosJson, decksJson, detailsJson, metaJson, stats, looking, selling, showcaseJson] = await Promise.all([
     get('data/videos.json', { channels: [], videos: [] }),
     get('data/published-decks.json', []),
     get('data/deck-card-details.json', {}),
     get('data/deck-meta.json', { groups: [], tags: {} }),
     get('data/stats.json', null),
     get('data/looking.json', null),
-    get('data/trade.json', null)
+    get('data/trade.json', null),
+    get('data/showcase.json', null)
   ]);
   videoData = { channels: videosJson.channels || [], videos: videosJson.videos || [] };
   decks = decksJson;
   details = detailsJson;
   meta = { groups: metaJson.groups || [], tags: metaJson.tags || {} };
 
+  showcase = showcaseJson?.cards || [];
+  setupHero();
   renderStats(stats, looking, selling);
   renderVideos();
   setupVideoEvents();

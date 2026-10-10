@@ -1,0 +1,113 @@
+{
+  "generatedAt": "2026-10-10T10:45:46.033Z",
+  "cards": [
+    {
+      "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Blue"
+    },
+    {
+      "id": "0cb4ae83-a7ca-4ca6-9c83-6c0581baae57",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Green"
+    },
+    {
+      "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+      "name": "Kerry Eurodyne",
+      "subname": "Axe, Attitude, Audience",
+      "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
+      "rarity": "Iconic Legend",
+      "cardType": "Legend",
+      "color": "Yellow"
+    },
+    {
+      "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
+      "name": "Muamar Reyes",
+      "subname": "El Capitán",
+      "displayName": "Muamar Reyes: El Capitán",
+      "rarity": "Iconic Legend",
+      "cardType": "Legend",
+      "color": "Yellow"
+    },
+    {
+      "id": "775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43",
+      "name": "Overwatch",
+      "subname": "Panam's Gift",
+      "displayName": "Overwatch: Panam's Gift",
+      "rarity": "Iconic Other",
+      "cardType": "Gear",
+      "color": "Green"
+    },
+    {
+      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "rarity": "Iconic Other",
+      "cardType": "Unit",
+      "color": "Green"
+    },
+    {
+      "id": "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72",
+      "name": "Towerfall",
+      "subname": null,
+      "displayName": "Towerfall",
+      "rarity": "Iconic Other",
+      "cardType": "Program",
+      "color": "Blue"
+    },
+    {
+      "id": "fa80313c-9aeb-4ae8-ad81-35b3f45fcbfe",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "rarity": "Secret",
+      "cardType": "Legend",
+      "color": "Blue"
+    },
+    {
+      "id": "98b18e2d-a955-43c7-880c-6233166c673a",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "rarity": "Secret",
+      "cardType": "Unit",
+      "color": "Blue"
+    },
+    {
+      "id": "4d75c13e-bde2-409b-8bcc-516e054f28f5",
+      "name": "Adam Smasher",
+      "subname": "Ender of Legends",
+      "displayName": "Adam Smasher: Ender of Legends",
+      "rarity": "Epic",
+      "cardType": "Legend",
+      "color": "Red"
+    },
+    {
+      "id": "fd889659-8291-41fd-9197-9cdf7cbf6810",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "rarity": "Epic",
+      "cardType": "Legend",
+      "color": "Green"
+    },
+    {
+      "id": "d74468ab-6024-4ae6-b69a-ac41f6e9cfce",
+      "name": "Judy Álvarez",
+      "subname": "Braindance Maestro",
+      "displayName": "Judy Álvarez: Braindance Maestro",
+      "rarity": "Epic",
+      "cardType": "Legend",
+      "color": "Blue"
+    }
+  ]
+}

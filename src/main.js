@@ -5,6 +5,7 @@ const pathToFileURL = require('url').pathToFileURL;
 const execFileAsync = require('util').promisify(require('child_process').execFile);
 const prices = require('./prices');
 const ai = require('./ai');
+const { pickShowcase } = require('./showcase');
 
 // Electron derives the default userData path (%APPDATA%/<name>) from this
 // app name, which otherwise silently follows package.json's "name" field.
@@ -964,6 +965,16 @@ ipcMain.handle('publish:run', async () => {
     'utf-8'
   );
   await copyImagesToDocs(looking.map((c) => c.id));
+
+  // Rarest cards in the collection, cycled through in the Home page hero.
+  const imageIds = new Set((await fs.readdir(imagesDir()).catch(() => [])).map((f) => f.replace(/\.webp$/, '')));
+  const showcase = pickShowcase(cache.cards, collection, { limit: 12, hasImage: (id) => imageIds.has(id) });
+  await fs.writeFile(
+    path.join(docsDataDir(), 'showcase.json'),
+    JSON.stringify({ generatedAt: new Date().toISOString(), cards: showcase }, null, 2),
+    'utf-8'
+  );
+  await copyImagesToDocs(showcase.map((c) => c.id));
   await fs.writeFile(pendingChangesPath(), JSON.stringify([], null, 2), 'utf-8');
   steps.push(`Published ${needed.main.length} Main / ${needed.reserve.length} Reserve needed, ${trade.length} for sale, ${looking.length} looking.`);
 

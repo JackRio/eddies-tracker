@@ -352,6 +352,15 @@ immediately, even though the underlying files haven't actually changed yet.
   decks, and tiles explaining each page. Read-only, loads `decks.css` too to
   reuse the `.featured`/`.deck` styles; deck helpers in `home.js` are small
   duplicates of `decks.js`'s (the repo's no-shared-code convention).
+- **Hero card cycle** (`setupHero()` in `home.js`): the three floating cards
+  are the collection's rarest owned cards, advancing every 4.5s (hover, a
+  hidden tab or reduced-motion pause it; dots jump to a card; the glow takes
+  the middle card's rarity color). The list is `docs/data/showcase.json`,
+  written by `publish:run` via `pickShowcase()` in `src/showcase.js` (owned
+  printings, rarest first - Nova Rare, Iconic Secret/Legend/Other, Secret,
+  Epic... - Legends first within a rarity, one per card, 12 max) and its images
+  are copied to `docs/images/`. Without a showcase file the hero falls back to
+  the featured deck's Legends.
 - `docs/needed.html` + `needed.js` — **Needed** page (it lived at
   `index.html` until Home was added; nav and old links updated). Filters sit
   in a sticky sidebar on desktop and a collapsed "Filters" panel on phones
@@ -498,10 +507,13 @@ static site can't poll, and browsers can't read YouTube's RSS (no CORS), so:
   demand from the Actions tab) and commits `videos.json` if it changed, so
   the Home page stays current with the desktop app closed. A new video also
   triggers the "newer version is live" banner on open tabs.
-- Home shows **"New in the last 24 hours"** (computed in the browser from
-  each video's publish time) when any followed creator uploaded something;
-  otherwise it falls back to "Latest videos" so the section is never empty.
-  "Past 24 hours | Latest" and per-channel chips switch views.
+- Home's default **"Fresh from the creators"** view is built in the browser
+  (`freshVideos()` in `home.js`) per creator: every upload from the past 24
+  hours (shown with a NEW badge), or - if that creator has nothing new - their
+  single most recent video, so every followed creator is always represented.
+  "Fresh | All videos" chips switch scope; the creator filter is chips for up
+  to 6 creators and a dropdown beyond that. The 24-hour test uses the
+  visitor's clock against each video's publish time.
 - Playback is a click-to-load facade (thumbnail → `youtube-nocookie.com`
   iframe), so YouTube loads nothing until someone presses play.
 - `docs/data/stats.json` (`neededMain`, `neededMainCopies`, …) is written by
