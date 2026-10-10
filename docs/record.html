@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
 <title>Record — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=20261010" />
 </head>
 <body>
   <header class="app-header">
-    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
-    <h1><span class="accent">EDDIES</span></h1>
-    <nav class="nav-tabs">
-      <a href="/">Needed</a>
-      <a href="trading.html">Trading</a>
-      <a href="record.html" class="active">Record</a>
-      <a href="decks.html">Decks</a>
-    </nav>
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./">Home</a>
+        <a href="decks.html">Decks</a>
+        <a href="trading.html">Trading</a>
+        <a href="needed.html">Needed</a>
+        <a href="record.html" class="active">Record</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="build-info" id="build-info"></div>
 
-  <main>
+  <main class="narrow">
+    <div class="page-head">
+      <h1>Record a <span class="accent">trade</span></h1>
+      <p>Log cards you picked up or traded away. Changes are queued safely and only applied to the real collection the next time the desktop app syncs.</p>
+    </div>
     <div class="token-gate" id="token-gate" hidden>
       <p>
         Recording a trade writes directly to this GitHub repo, which needs a
@@ -110,8 +116,13 @@
     </div>
   </main>
 
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+  </footer>
+
   <script src="config.js"></script>
-  <script src="shared.js"></script>
-  <script src="record.js"></script>
+  <script src="shared.js?v=20261010"></script>
+  <script src="record.js?v=20261010"></script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
+<title>Needed — Eddies</title>
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css?v=20261010" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./">Home</a>
+        <a href="decks.html">Decks</a>
+        <a href="trading.html">Trading</a>
+        <a href="needed.html" class="active">Needed</a>
+        <a href="record.html">Record</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1>Cards I <span class="accent">still need</span></h1>
+      <p>Every card still missing from a full playset: 3 copies of each Unit, Gear and Program and 1 of each Legend. Filter by color, type or rarity, then tap a card to see the details.</p>
+    </div>
+
+    <div class="stat-tiles" id="stat-tiles">
+      <div class="stat"><b id="stat-cards">–</b><span>cards needed</span></div>
+      <div class="stat"><b id="stat-copies">–</b><span>copies missing</span></div>
+      <div class="stat"><b id="stat-cost">–</b><span id="stat-cost-label">est. on Cardmarket</span></div>
+    </div>
+
+    <div class="needed-layout">
+      <details class="filters panel-box" id="filters" open>
+        <summary>Filters <span class="badge" id="filter-count" hidden></span></summary>
+        <div class="filters-body">
+          <div>
+            <div class="filter-label">Which set of cards?</div>
+            <div class="bucket-toggle" id="bucket-toggle">
+              <button class="active" data-bucket="main">Main Set</button>
+              <button data-bucket="reserve">Reserve Set</button>
+            </div>
+            <p class="filter-hint">Main is the playset I build decks from. Reserve is a second set of spares to trade from.</p>
+          </div>
+
+          <div><div class="filter-label">Color</div><div class="chip-row" id="color-filters"></div></div>
+          <div><div class="filter-label">Type</div><div class="chip-row" id="type-filters"></div></div>
+          <div><div class="filter-label">Rarity</div><div class="chip-row" id="rarity-filters"></div></div>
+
+          <div>
+            <div class="filter-label">Set</div>
+            <select id="set-filter" aria-label="Filter by set">
+              <option value="all">All Sets</option>
+            </select>
+          </div>
+
+          <div>
+            <div class="chip-row">
+              <div class="chip" id="unique-filter" role="button" tabindex="0" title="Group copies of the same card across all printings, count what you own in total, and show only the lowest-rarity printing of what's still needed">Unique cards only</div>
+            </div>
+            <p class="filter-hint">Treats every art version of a card as the same card and shows the cheapest one to look for.</p>
+          </div>
+
+          <button class="filter-clear" id="filter-clear" hidden>&times; Clear all filters</button>
+        </div>
+      </details>
+
+      <section class="results" aria-live="polite">
+        <div class="results-bar">
+          <div class="grow"><input type="search" class="search-input" id="search" placeholder="Search by card name…" aria-label="Search cards" /></div>
+          <select id="sort" aria-label="Sort cards">
+            <option value="default">Sort: Color, then type</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="needed">Most copies needed</option>
+            <option value="rarity">Rarity: rarest first</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+
+        <div class="result-count" id="result-count"></div>
+        <div class="card-grid" id="card-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>Nothing needed here. You're all set.</div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js?v=20261010"></script>
+  <script src="needed.js?v=20261010"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+  "_help": "Extra YouTube channels to show on the Home page. Creators tagged on decks in the app are followed automatically; add others here as { \"name\": \"...\", \"url\": \"https://www.youtube.com/@handle\" }.",
+  "channels": []
+}

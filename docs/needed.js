@@ -8,7 +8,9 @@ let state = {
   types: new Set(),
   rarities: new Set(),
   set: 'welcometonightcitybeta',
-  unique: false
+  unique: false,
+  search: '',
+  sort: 'default'
 };
 
 const COLOR_ORDER = ['Red', 'Blue', 'Green', 'Yellow'];
@@ -128,15 +130,44 @@ function attachControls() {
       render();
     });
   });
-  el('unique-filter').addEventListener('click', (e) => {
+  const toggleUnique = () => {
     state.unique = !state.unique;
-    e.currentTarget.classList.toggle('active', state.unique);
+    el('unique-filter').classList.toggle('active', state.unique);
     render();
+  };
+  el('unique-filter').addEventListener('click', toggleUnique);
+  el('unique-filter').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleUnique(); }
   });
   el('set-filter').addEventListener('change', (e) => {
     state.set = e.target.value;
     render();
   });
+  el('search').addEventListener('input', (e) => {
+    state.search = e.target.value.trim().toLowerCase();
+    render();
+  });
+  el('sort').addEventListener('change', (e) => {
+    state.sort = e.target.value;
+    render();
+  });
+  el('filter-clear').addEventListener('click', () => {
+    state.colors.clear();
+    state.types.clear();
+    state.rarities.clear();
+    state.unique = false;
+    state.set = 'all';
+    el('unique-filter').classList.remove('active');
+    buildFilterOptions();
+    render();
+  });
+
+  // Desktop shows the filter panel as a sidebar (always open); on a phone it
+  // starts collapsed so the cards come first.
+  const wide = window.matchMedia('(min-width: 960px)');
+  const syncFilters = () => { el('filters').open = wide.matches; };
+  syncFilters();
+  wide.addEventListener('change', syncFilters);
 }
 
 // Pending changes recorded on the Record page (not yet pulled into the
@@ -198,6 +229,18 @@ function collapseUnique(cards, keep) {
     .filter((c) => c.needed > 0);
 }
 
+const SORTERS = {
+  'default': (a, b) =>
+    COLOR_ORDER.indexOf(a.color) - COLOR_ORDER.indexOf(b.color) ||
+    TYPE_ORDER.indexOf(a.cardType) - TYPE_ORDER.indexOf(b.cardType) ||
+    a.name.localeCompare(b.name),
+  'price-desc': (a, b) => (b.price ?? -1) - (a.price ?? -1) || a.name.localeCompare(b.name),
+  'price-asc': (a, b) => (a.price ?? Infinity) - (b.price ?? Infinity) || a.name.localeCompare(b.name),
+  'needed': (a, b) => b.needed - a.needed || a.name.localeCompare(b.name),
+  'rarity': (a, b) => rarityRank(b.rarity) - rarityRank(a.rarity) || a.name.localeCompare(b.name),
+  'name': (a, b) => a.name.localeCompare(b.name)
+};
+
 function render() {
   const source = state.bucket === 'main' ? neededData.main : neededData.reserve;
 
@@ -206,32 +249,43 @@ function render() {
   const passesRarity = (c) => !state.rarities.size || activeGroups.some((g) => g.match.includes(c.rarity));
   const passesOther = (c) =>
     (!state.colors.size || state.colors.has(c.color)) && (!state.types.size || state.types.has(c.cardType));
+  const passesSearch = (c) =>
+    !state.search || `${c.displayName || ''} ${c.name} ${c.subname || ''}`.toLowerCase().includes(state.search);
 
   let cards;
   if (state.unique && catalog.length) {
     // Rarity filter applies to the chosen (lowest) printing, set filter
     // narrows which printings are candidates; ownership counts all printings.
-    cards = collapseUnique(source, (c) => passesSet(c) && passesOther(c)).filter(passesRarity);
+    cards = collapseUnique(source, (c) => passesSet(c) && passesOther(c)).filter((c) => passesRarity(c) && passesSearch(c));
   } else {
     cards = source
       .map((c) => ({ ...c, needed: Math.max(0, c.needed - pendingDeltaFor(c.id, state.bucket)) }))
-      .filter((c) => c.needed > 0 && passesSet(c) && passesOther(c) && passesRarity(c));
+      .filter((c) => c.needed > 0 && passesSet(c) && passesOther(c) && passesRarity(c) && passesSearch(c));
   }
 
-  cards.sort((a, b) =>
-    COLOR_ORDER.indexOf(a.color) - COLOR_ORDER.indexOf(b.color) ||
-    TYPE_ORDER.indexOf(a.cardType) - TYPE_ORDER.indexOf(b.cardType) ||
-    a.name.localeCompare(b.name)
-  );
+  cards.sort(SORTERS[state.sort] || SORTERS.default);
 
   // Rough "what would buying the rest cost" - Cardmarket trend x copies
   // still needed, only over cards that have a price at all.
   const total = cards.reduce((sum, c) => sum + (c.price != null ? c.price * c.needed : 0), 0);
+  const copies = cards.reduce((sum, c) => sum + c.needed, 0);
   const unpriced = cards.filter((c) => c.price == null).length;
-  el('result-count').textContent = `${cards.length} card${cards.length === 1 ? '' : 's'} needed` +
-    (total ? ` · ~${formatEur(total)} on Cardmarket${unpriced ? ` (${unpriced} unpriced)` : ''}` : '');
+  el('stat-cards').textContent = cards.length.toLocaleString();
+  el('stat-copies').textContent = copies.toLocaleString();
+  el('stat-cost').textContent = total ? `~${formatEur(total)}` : '–';
+  el('stat-cost-label').textContent = unpriced && total ? `est. on Cardmarket (${unpriced} unpriced)` : 'est. on Cardmarket';
+  el('result-count').textContent = `Showing ${cards.length.toLocaleString()} card${cards.length === 1 ? '' : 's'}`;
+
+  const filterCount = state.colors.size + state.types.size + state.rarities.size +
+    (state.set !== 'all' ? 1 : 0) + (state.unique ? 1 : 0);
+  el('filter-count').hidden = !filterCount;
+  el('filter-count').textContent = filterCount;
+  el('filter-clear').hidden = !filterCount;
+
   el('empty-state').hidden = cards.length !== 0;
-  el('card-grid').innerHTML = cards.map(cardHtml).join('');
+  const grid = el('card-grid');
+  grid.innerHTML = cards.map(cardHtml).join('');
+  stagger(grid);
 }
 
 // Cardmarket trend price snapshot, written into needed.json/catalog.json by

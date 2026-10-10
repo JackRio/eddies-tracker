@@ -1,4 +1,4 @@
-// Shared across index.html (Needed) and record.html (Record). Needed-page
+// Shared across every docs/ page (Home, Needed, Decks, Trading, Record). Needed-page
 // reads are plain same-origin fetches (GitHub Pages just serves docs/ as
 // static files - no auth needed). Only Record's *writes* to
 // data/pending-changes.json go through GitHub's authenticated Contents API,
@@ -213,4 +213,46 @@ function showUpdateBanner() {
     // copy of this exact URL sitting in the browser's HTTP cache.
     location.href = location.pathname + location.search + (location.search ? '&' : '?') + 'v=' + Date.now();
   });
+}
+
+// ---- Small UI helpers (used by several pages) -----------------------------
+
+// Tags the first few children of a freshly rendered container so they cascade
+// in (CSS: .rise uses --i for its delay). Capped: animating hundreds of
+// tiles at once would just be jank.
+function stagger(container, max = 18) {
+  if (!container) return;
+  Array.from(container.children).slice(0, max).forEach((child, i) => {
+    child.style.setProperty('--i', i);
+    child.classList.add('rise');
+  });
+}
+
+// Animates a number up from 0 (skipped for reduced-motion users).
+function countUp(node, target, { duration = 800, format = (n) => n.toLocaleString() } = {}) {
+  if (!node) return;
+  const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !Number.isFinite(target) || target < 1) { node.textContent = format(target); return; }
+  const start = performance.now();
+  const tick = (now) => {
+    const t = Math.min(1, (now - start) / duration);
+    node.textContent = format(Math.round(target * (1 - Math.pow(1 - t, 3))));
+    if (t < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+
+// "3 hours ago", "yesterday", "12 Sep" - for video upload dates.
+function timeAgo(iso) {
+  const then = Date.parse(iso);
+  if (!then) return '';
+  const mins = Math.max(0, (Date.now() - then) / 60000);
+  if (mins < 60) return `${Math.max(1, Math.round(mins))} min ago`;
+  const hours = mins / 60;
+  if (hours < 24) return `${Math.round(hours)} hour${Math.round(hours) === 1 ? '' : 's'} ago`;
+  const days = hours / 24;
+  if (days < 2) return 'yesterday';
+  if (days < 14) return `${Math.floor(days)} days ago`;
+  if (days < 60) return `${Math.floor(days / 7)} weeks ago`;
+  return new Date(then).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
 }

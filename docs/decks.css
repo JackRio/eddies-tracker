@@ -197,7 +197,8 @@
 .deck-description .dd-label { color: var(--cyan); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
 @media (max-width: 560px) { .deck-description .dd-row { grid-template-columns: 1fr; gap: 2px; } }
 .deck-description .dd-legacy { margin-bottom: 8px; }
-.card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; white-space: nowrap; }
+.card-tag { color: var(--cyan); border-bottom: 1px dashed var(--cyan); cursor: help; }
+@media (min-width: 561px) { .card-tag { white-space: nowrap; } }
 .card-tag:hover { color: var(--yellow); border-color: var(--yellow); }
 .card-tag-pop { position: fixed; z-index: 80; pointer-events: none; }
 .card-tag-pop img { width: min(300px, 38vw, calc((100vh - 20px) * 63 / 88)); aspect-ratio: 63 / 88; object-fit: cover; background: var(--bg-card, #111); border-radius: 10px; border: 2px solid var(--yellow); box-shadow: 0 8px 30px #000c; display: block; }
@@ -339,20 +340,20 @@
 .swap-badge-out { background: var(--red); }
 
 /* Redesign (list hero/grid, wide two-column detail) ------------------- */
-  /* ---- Layout: full width instead of style.css's 720px column ---------- */
-  main.wide { max-width: 1600px; width: 100%; margin: 0 auto; padding: 20px clamp(14px, 3vw, 40px) 60px; }
+  /* ---- Layout: the page container comes from style.css (fluid, wide) ---- */
   .clip { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px)); }
 
   /* ---- Toolbar ---------------------------------------------------------- */
   .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 18px; }
-  .toolbar .grow { flex: 1; min-width: 200px; position: relative; }
+  .toolbar .grow { flex: 1; min-width: min(100%, 200px); position: relative; }
   .search { width: 100%; background: var(--bg-panel); border: 1px solid var(--border); color: var(--text);
     padding: 9px 38px 9px 12px; border-radius: 6px; font-size: 14px; }
   .search:focus { outline: 2px solid var(--cyan); outline-offset: 1px; }
   .kbd { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px; color: var(--text-dim);
     border: 1px solid var(--border); border-radius: 4px; padding: 0 6px; pointer-events: none; }
   .chips { display: flex; gap: 6px; flex-wrap: wrap; }
-  .sort { background: var(--bg-panel); border: 1px solid var(--border); color: var(--text); padding: 9px 10px; border-radius: 6px; }
+  .sort { width: auto; min-width: 190px; background-color: var(--bg-panel); border: 1px solid var(--border); color: var(--text); padding: 9px 34px 9px 12px; border-radius: 6px; }
+  @media (max-width: 520px) { .sort { width: 100%; } }
   .live { color: var(--text-dim); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; margin-left: auto; white-space: nowrap; }
   .live b { color: var(--yellow); }
 
@@ -400,12 +401,13 @@
     display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 
   /* ---- Grid of deck cards ---------------------------------------------- */
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: clamp(12px, 1.6vw, 20px); }
   .deck { position: relative; background: var(--bg-card); border: 1px solid var(--border); border-top: 3px solid var(--accent1);
     padding: 16px 16px 14px; cursor: pointer; transition: border-color .15s, transform .15s; overflow: hidden; }
   .deck::before { content: ""; position: absolute; inset: 0; pointer-events: none;
     background: radial-gradient(120% 60% at 50% 0%, color-mix(in srgb, var(--accent1) 20%, transparent), transparent 70%); }
-  .deck:hover { border-color: var(--yellow); transform: translateY(-3px); }
+  .deck { transition: border-color .2s, transform .2s var(--ease), box-shadow .2s; }
+  .deck:hover { border-color: var(--yellow); transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0, 0, 0, .55), 0 0 0 1px rgba(245, 228, 0, .2); }
   .deck > * { position: relative; }
   .deck h3 { margin: 0 0 4px; font-size: 16px; text-transform: uppercase; letter-spacing: .03em; }
   .deck .sub { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; display: flex; justify-content: space-between; gap: 8px; }
@@ -426,7 +428,7 @@
     border: 1px solid var(--border); border-left: 4px solid var(--accent1);
     background: linear-gradient(120deg, color-mix(in srgb, var(--accent1) 20%, var(--bg-card)) 0%, var(--bg-card) 60%); }
   .detail-hero h2 { margin: 0; font-size: clamp(22px, 3vw, 32px); text-transform: uppercase; letter-spacing: .02em; }
-  .detail-hero .grow { flex: 1; min-width: 240px; }
+  .detail-hero .grow { flex: 1; min-width: min(100%, 240px); }
   .detail-hero .actions { margin-top: 10px; }
   .detail-hero .detail-links { margin: 12px 0 0; }
   .detail-layout { display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
@@ -476,7 +478,8 @@ button.tag-chip.active { background: rgba(255,255,255,.14); box-shadow: 0 0 0 1p
 .grp-toggle .count { color: var(--text-dim); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 12px; margin-left: 8px; }
 .tag-guide { margin-bottom: 18px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); }
 .tag-guide summary { cursor: pointer; padding: 10px 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; }
-.tag-guide dl { margin: 0; padding: 0 14px 12px; display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 13px; }
+.tag-guide dl { margin: 0; padding: 0 14px 12px; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; font-size: 13px; }
+@media (max-width: 560px) { .tag-guide dl { grid-template-columns: minmax(0, 1fr); gap: 2px; } .tag-guide dd { margin-bottom: 8px; } }
 .tag-guide dt { margin: 0; }
 .tag-guide dd { margin: 0; color: var(--text-dim); }
 .tag-guide h4 { grid-column: 1 / -1; margin: 10px 0 0; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--yellow); }

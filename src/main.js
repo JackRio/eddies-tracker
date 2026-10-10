@@ -837,6 +837,20 @@ ipcMain.handle('publish:run', async () => {
   const needed = computeNeeded(cache.cards, collection, priceView);
   await fs.mkdir(docsDataDir(), { recursive: true });
   await fs.writeFile(path.join(docsDataDir(), 'needed.json'), JSON.stringify(needed, null, 2), 'utf-8');
+  // Tiny summary for the website's Home page (so it needn't download the
+  // full needed list just to show a couple of counts).
+  const sumNeeded = (list) => list.reduce((n, c) => n + c.needed, 0);
+  await fs.writeFile(
+    path.join(docsDataDir(), 'stats.json'),
+    JSON.stringify({
+      generatedAt: needed.generatedAt,
+      neededMain: needed.main.length,
+      neededMainCopies: sumNeeded(needed.main),
+      neededReserve: needed.reserve.length,
+      neededReserveCopies: sumNeeded(needed.reserve)
+    }, null, 2),
+    'utf-8'
+  );
   await copyNeededImages(needed);
 
   // A lightweight full catalog (no images) so the Record page can log a

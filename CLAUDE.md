@@ -345,12 +345,23 @@ immediately, even though the underlying files haven't actually changed yet.
 
 ### Site structure
 
-- `docs/index.html` + `needed.js` — **Needed** page. Filters, in this
-  fixed order top-to-bottom: Main/Reserve toggle → Color chips → Type chips
-  → Rarity chips → Set dropdown (defaults to `welcometonightcitybeta`,
-  i.e. "Welcome to Night City — Beta", same default as the desktop app).
-  Read-only, no GitHub token needed — everything it reads is a plain
-  same-origin `fetch()` of a file Pages serves statically.
+- `docs/index.html` + `home.js` + `home.css` — **Home** page (the site
+  root). Hero (the featured deck's three Legends), headline numbers
+  (`data/stats.json`, `looking.json`, `trade.json`, deck count), **Latest
+  videos** (see "Home page videos" below), the featured deck, the freshest
+  decks, and tiles explaining each page. Read-only, loads `decks.css` too to
+  reuse the `.featured`/`.deck` styles; deck helpers in `home.js` are small
+  duplicates of `decks.js`'s (the repo's no-shared-code convention).
+- `docs/needed.html` + `needed.js` — **Needed** page (it lived at
+  `index.html` until Home was added; nav and old links updated). Filters sit
+  in a sticky sidebar on desktop and a collapsed "Filters" panel on phones
+  (`#filters`, a `<details>`): Main/Reserve toggle → Color → Type → Rarity
+  → Set dropdown (defaults to `welcometonightcitybeta`, i.e. "Welcome to
+  Night City — Beta", same default as the desktop app) → "Unique cards
+  only". Plus a name search, a sort dropdown (`SORTERS` in `needed.js`),
+  live stat tiles (cards / copies missing / est. cost) and a "Clear all
+  filters" button. Read-only, no GitHub token needed — everything it reads
+  is a plain same-origin `fetch()` of a file Pages serves statically.
 - `docs/record.html` + `record.js` — **Record** page. Token-gated (shows
   `#token-gate` until a token is saved and passes `verifyToken()`). Search
   box over `catalog.json`, then +/−1 buttons per bucket for the selected
@@ -437,6 +448,58 @@ immediately, even though the underlying files haven't actually changed yet.
   response. This only helps once a version *with this check* has loaded at
   least once — it can't retroactively un-stale an already-cached page that
   predates it.
+
+### Site layout and design rules (every `docs/` page)
+
+- **Fluid, not fixed.** `style.css` owns the container: `main` is
+  `max-width: var(--page-max)` (1560px) with side gutters from
+  `--gutter: clamp(14px, 3.2vw, 44px)`; `main.narrow` (860px) is only for
+  form-like pages (Record). Grids use `repeat(auto-fill, minmax(min(100%,
+  Npx), 1fr))` — the `min(100%, …)` is what stops a grid forcing a page
+  wider than a phone. Don't add fixed widths or `min-width`s above ~240px
+  without a `min(100%, …)` guard.
+- **The old "deck page too wide on phones" bug** was the header: four nav
+  links in one non-wrapping row made the page ~40px wider than a 375px
+  screen, so mobile browsers zoomed the whole page out. The header is now
+  logo row + full-width nav row under 720px. Also removed
+  `maximum-scale=1` from every viewport meta (blocks pinch zoom). After any
+  layout change, check `document.documentElement.scrollWidth ===
+  clientWidth` at 320, 375 and 768px on every page.
+- Shared header/nav/footer markup is duplicated in each HTML file (no build
+  step). Nav order: Home, Decks, Trading, Needed, Record. The footer holds
+  `#build-info` (`renderBuildInfo()` fills it) and the unofficial-fan-site
+  disclaimer.
+- Motion: `stagger()`/`countUp()`/`timeAgo()` in `shared.js`; CSS `.rise`,
+  `.page-enter`, `.skeleton-block`. `prefers-reduced-motion` switches it
+  all off in `style.css`. The sticky header uses `backdrop-filter`; the faint
+  background grid is `body::before` (so `html`, not `body`, carries the
+  solid background color).
+- Local assets are linked with `?v=<date>` (GitHub Pages caches 10 minutes
+  and can't send other cache headers). Bump the date in every HTML file's
+  `<link>`/`<script>` tags when a CSS/JS file changes.
+
+### Home page videos (`docs/data/videos.json`)
+
+New uploads from followed YouTube creators are embedded on the Home page. A
+static site can't poll, and browsers can't read YouTube's RSS (no CORS), so:
+- `scripts/fetch-videos.js` (Node 18+, no deps; `npm run videos`) reads each
+  channel's public RSS feed (`youtube.com/feeds/videos.xml?channel_id=…`),
+  drops Shorts (HEAD on `/shorts/<id>`), and writes `docs/data/videos.json`
+  (`{ channels, videos, checked, updatedAt }`). It only rewrites the file when
+  the videos actually change.
+- Channels followed = creator tags with a youtube.com URL in the published
+  `deck-meta.json` (tag a deck with a new creator in the app → they're
+  followed after the next deck publish) **plus** any in
+  `docs/data/channels.json` (`{ "channels": [{ "name", "url" }] }`). `@handle`
+  URLs are resolved to channel ids from the channel page and remembered.
+- `.github/workflows/videos.yml` runs it every 3 hours (and on demand from
+  the Actions tab) and commits `videos.json` if it changed, so the Home page
+  stays current with the desktop app closed. A new video therefore also
+  triggers the "newer version is live" banner on open tabs.
+- Playback is a click-to-load facade (thumbnail → `youtube-nocookie.com`
+  iframe), so YouTube loads nothing until someone presses play.
+- `docs/data/stats.json` (`neededMain`, `neededMainCopies`, …) is written by
+  `publish:run` for the Home page's headline numbers.
 
 ### Trade page (`docs/trade.html` + `trade.js` — unlisted)
 

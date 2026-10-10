@@ -1,0 +1,84 @@
+{
+  "channels": [
+    {
+      "id": "UCYEkVvvgmDsjNqdR6T7m_Hw",
+      "name": "XBD Puppy",
+      "url": "https://www.youtube.com/@AshlynnNaelTCG"
+    }
+  ],
+  "videos": [
+    {
+      "id": "3-8N-4ABAfU",
+      "title": "CyberpunkTCG Masterclass #4 - Side Decking! (Learn to Side-Deck Like a Pro!)",
+      "published": "2026-09-27T23:59:22+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "In1oTklGHNU",
+      "title": "The Best Decks on Release! - Month 1 Metagame Tier List (October 2026 Format)",
+      "published": "2026-09-27T21:43:32+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "wTbbphbbXb8",
+      "title": "Introduction to RRx - CyberpunkTCG's Best Midrange Deck!",
+      "published": "2026-09-19T05:53:42+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "xPt9ndBaKtc",
+      "title": "Introduction to BBG - CyberpunkTCG's STRONGEST Day 1 Deck!",
+      "published": "2026-09-10T00:03:35+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "UOm4_KqiCdM",
+      "title": "CyberpunkTCG Masterclass #3 - What you NEED to know to Elevate your Gameplay! (\"Get Good\" FAST!)",
+      "published": "2026-08-29T07:54:42+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "ESdyoHoKut8",
+      "title": "CyberpunkTCG Masterclass #2 - Archetypes, and Deckbuilding for your Playstyle!",
+      "published": "2026-08-27T05:58:48+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "_LGUt9TdL6g",
+      "title": "CyberpunkTCG Masterclass #1 - Deckbuilding and Deck Optimization!",
+      "published": "2026-08-26T08:51:36+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    }
+  ],
+  "checked": [
+    {
+      "id": "3-8N-4ABAfU",
+      "short": false
+    },
+    {
+      "id": "In1oTklGHNU",
+      "short": false
+    },
+    {
+      "id": "wTbbphbbXb8",
+      "short": false
+    },
+    {
+      "id": "xPt9ndBaKtc",
+      "short": false
+    },
+    {
+      "id": "UOm4_KqiCdM",
+      "short": false
+    },
+    {
+      "id": "ESdyoHoKut8",
+      "short": false
+    },
+    {
+      "id": "_LGUt9TdL6g",
+      "short": false
+    }
+  ],
+  "updatedAt": "2026-10-10T10:15:16.118Z"
+}

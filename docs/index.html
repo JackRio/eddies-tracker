@@ -2,52 +2,109 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Needed — Eddies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
+<meta name="description" content="Cyberpunk TCG decks, trades and the latest community videos in one place." />
+<title>Eddies — Cyberpunk TCG decks, trades and videos</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=20261010" />
+<link rel="stylesheet" href="decks.css?v=20261010" />
+<link rel="stylesheet" href="home.css?v=20261010" />
 </head>
 <body>
   <header class="app-header">
-    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
-    <h1><span class="accent">EDDIES</span></h1>
-    <nav class="nav-tabs">
-      <a href="/" class="active">Needed</a>
-      <a href="trading.html">Trading</a>
-      <a href="record.html">Record</a>
-      <a href="decks.html">Decks</a>
-    </nav>
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./" class="active">Home</a>
+        <a href="decks.html">Decks</a>
+        <a href="trading.html">Trading</a>
+        <a href="needed.html">Needed</a>
+        <a href="record.html">Record</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="build-info" id="build-info"></div>
-
   <main>
-    <div class="filter-bar">
-      <div class="bucket-toggle" id="bucket-toggle">
-        <button class="active" data-bucket="main">Main Set</button>
-        <button data-bucket="reserve">Reserve Set</button>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy page-enter">
+        <div class="eyebrow">Cyberpunk TCG &middot; collection hub</div>
+        <h1>Build. Trade. <span class="accent">Collect.</span></h1>
+        <p class="lead">Browse tested decks, see which cards I'm looking for and selling, and catch the newest videos from the community. Everything in one place, updated as it changes.</p>
+        <div class="hero-cta">
+          <a class="cta primary" href="decks.html">Browse decks</a>
+          <a class="cta" href="trading.html">Trading board</a>
+        </div>
       </div>
+      <div class="hero-art" id="hero-art" aria-hidden="true"></div>
+    </section>
 
-      <div class="chip-row" id="color-filters"></div>
-      <div class="chip-row" id="type-filters"></div>
-      <div class="chip-row" id="rarity-filters"></div>
+    <div class="stat-tiles" id="home-stats"></div>
 
-      <div class="chip-row">
-        <div class="chip" id="unique-filter" title="Group copies of the same card across all printings, count what you own in total, and show only the lowest-rarity printing of what's still needed">Unique cards only</div>
+    <!-- VIDEOS -->
+    <section id="videos-section" aria-labelledby="videos-title">
+      <div class="section-head">
+        <h2 id="videos-title">Latest videos</h2>
+        <span class="more" id="videos-follow"></span>
       </div>
+      <div class="chip-row" id="video-channels" hidden></div>
+      <div class="video-wrap" id="video-wrap">
+        <div class="skeleton-block video-skeleton"></div>
+      </div>
+    </section>
 
-      <select id="set-filter">
-        <option value="all">All Sets</option>
-      </select>
-    </div>
+    <!-- FEATURED DECK -->
+    <section id="featured-section" hidden>
+      <div class="section-head"><h2>Deck spotlight</h2><a class="more" href="decks.html">All decks &rarr;</a></div>
+      <div id="home-featured"></div>
+    </section>
 
-    <div class="result-count" id="result-count"></div>
-    <div class="card-grid" id="card-grid"></div>
-    <div class="empty-state" id="empty-state" hidden>Nothing needed here — you're all set.</div>
+    <!-- FRESH DECKS -->
+    <section id="fresh-section" hidden>
+      <div class="section-head"><h2>Fresh off the workbench</h2><a class="more" href="decks.html">All decks &rarr;</a></div>
+      <div class="hscroll" id="home-fresh"></div>
+    </section>
+
+    <!-- WHERE TO NEXT -->
+    <section>
+      <div class="section-head"><h2>What are you here for?</h2></div>
+      <div class="tiles">
+        <a class="tile t-yellow" href="decks.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="11" height="15" rx="2"/><path d="M8 3h10a2 2 0 0 1 2 2v13"/></svg>
+          <h3>Decks</h3>
+          <p>Complete decklists with Legends, cost curves, sideboard plans and a short guide to how each one plays.</p>
+          <span class="go">Browse decks &rarr;</span>
+        </a>
+        <a class="tile t-cyan" href="trading.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-4-4M20 16H6l4 4"/></svg>
+          <h3>Trading</h3>
+          <p>The cards I'm looking for and the spares I'd trade away, with Cardmarket prices so a swap is easy to size up.</p>
+          <span class="go">See the board &rarr;</span>
+        </a>
+        <a class="tile t-purple" href="needed.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3.5 6 1.2 1.2L7 4.8M3.5 12l1.2 1.2L7 10.8M3.5 18l1.2 1.2L7 16.8"/></svg>
+          <h3>Needed</h3>
+          <p>Every card still missing from a full playset. Filter by color, type or rarity and sort by price.</p>
+          <span class="go">Check the list &rarr;</span>
+        </a>
+        <a class="tile t-green" href="record.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></svg>
+          <h3>Record</h3>
+          <p>Log a trade or a pickup from your phone. It is queued safely until the next sync.</p>
+          <span class="go">Record a trade &rarr;</span>
+        </a>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices. Videos belong to their creators and play from YouTube.</div>
+  </footer>
+
   <script src="config.js"></script>
-  <script src="shared.js"></script>
-  <script src="needed.js"></script>
+  <script src="shared.js?v=20261010"></script>
+  <script src="home.js?v=20261010"></script>
 </body>
 </html>

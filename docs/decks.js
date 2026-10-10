@@ -45,6 +45,7 @@ const activeColors = new Set();
 const activeTags = new Set(); // 'category:value' - OR within a category, AND across
 const openGroups = new Set();
 let focusGroup = null; // ?group=<id> share link
+let listAnimated = false;
 const FEATURED_ID = 'misc-featured';
 
 
@@ -249,6 +250,13 @@ function renderList() {
     grid.innerHTML = parts.join('');
   }
   renderTagFilters();
+
+  // Cascade the deck cards in once on first paint (not on every keystroke).
+  if (!listAnimated && list.length) {
+    listAnimated = true;
+    grid.querySelectorAll('.grid').forEach((g) => stagger(g, 12));
+    if (grid.classList.contains('grid')) stagger(grid, 12);
+  }
 
   const empty = document.getElementById('decks-empty');
   const none = !list.length && !feat;

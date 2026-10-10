@@ -1,9 +1,9 @@
-.trading-main { max-width: none; margin: 0 auto; padding: 0 24px 40px; }
+/* Page container comes from style.css. */
 .trading-search { display: flex; justify-content: center; margin: 12px 0 14px; }
 .trading-search input { width: 100%; max-width: 360px; background: var(--bg-card); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 9px 12px; font-size: 14px; }
 
-.seg { display: flex; width: max-content; margin: 16px auto 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg-panel); }
-.seg span { padding: 9px 26px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); cursor: pointer; }
+.seg { display: flex; width: max-content; max-width: 100%; margin: 0 auto;  border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg-panel); }
+.seg span { flex: 1 1 auto; text-align: center; padding: 9px clamp(10px, 4vw, 26px); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); cursor: pointer; }
 .seg span.on { background: var(--yellow); color: #0a0a0f; }
 .seg span.cy.on { background: var(--cyan); }
 

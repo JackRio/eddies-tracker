@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
 <!-- Unlisted share-by-URL page: deliberately not linked from (and doesn't
      link to) any other page, and asks search engines not to index it. -->
 <meta name="robots" content="noindex, nofollow" />
 <title>For Trade — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css?v=20261010" />
 </head>
 <body>
   <header class="app-header">
-    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
-    <h1><span class="accent">EDDIES</span> · For Trade</h1>
+    <div class="bar">
+      <span class="brand"><img src="images/eddies-glyph-yellow.png" alt="" /><span><span class="accent">EDDIES</span> <small>&middot; FOR TRADE</small></span></span>
+    </div>
   </header>
 
-  <div class="build-info" id="build-info"></div>
 
   <main>
     <div class="filter-bar">
@@ -35,6 +36,11 @@
     <div class="empty-state" id="empty-state" hidden>Nothing listed right now.</div>
   </main>
 
-  <script src="trade.js"></script>
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Prices are Cardmarket trend prices.</div>
+  </footer>
+
+  <script src="trade.js?v=20261010"></script>
 </body>
 </html>

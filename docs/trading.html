@@ -2,27 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
 <title>Trading — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="trading.css?v=5" />
+<link rel="stylesheet" href="style.css?v=20261010" />
+<link rel="stylesheet" href="trading.css?v=20261010" />
 </head>
 <body>
   <header class="app-header">
-    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
-    <h1><span class="accent">EDDIES</span></h1>
-    <nav class="nav-tabs">
-      <a href="/">Needed</a>
-      <a href="trading.html" class="active">Trading</a>
-      <a href="record.html">Record</a>
-      <a href="decks.html">Decks</a>
-    </nav>
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./">Home</a>
+        <a href="decks.html">Decks</a>
+        <a href="trading.html" class="active">Trading</a>
+        <a href="needed.html">Needed</a>
+        <a href="record.html">Record</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="build-info" id="build-info"></div>
 
   <main class="trading-main">
+    <div class="page-head">
+      <h1>Trading <span class="accent">board</span></h1>
+      <p>Cards I'm looking for and cards I can trade away, with Cardmarket prices. Hover a card to see it full size.</p>
+    </div>
     <div class="seg" id="seg">
       <span data-v="L">Looking</span><span data-v="B" class="on">Both</span><span data-v="S" class="cy">Selling</span>
     </div>
@@ -42,8 +48,13 @@
     </div>
   </main>
 
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+  </footer>
+
   <script src="config.js"></script>
-  <script src="shared.js"></script>
-  <script src="trading.js?v=5"></script>
+  <script src="shared.js?v=20261010"></script>
+  <script src="trading.js?v=20261010"></script>
 </body>
 </html>

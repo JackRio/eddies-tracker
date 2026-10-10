@@ -2,29 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
 <title>Decks — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="decks.css" />
+<link rel="stylesheet" href="style.css?v=20261010" />
+<link rel="stylesheet" href="decks.css?v=20261010" />
 </head>
 <body>
   <header class="app-header">
-    <img class="app-logo" src="images/eddies-glyph-yellow.png" alt="" />
-    <h1><span class="accent">EDDIES</span></h1>
-    <nav class="nav-tabs">
-      <a href="/">Needed</a>
-      <a href="trading.html">Trading</a>
-      <a href="record.html">Record</a>
-      <a href="decks.html" class="active">Decks</a>
-    </nav>
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./">Home</a>
+        <a href="decks.html" class="active">Decks</a>
+        <a href="trading.html">Trading</a>
+        <a href="needed.html">Needed</a>
+        <a href="record.html">Record</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="build-info" id="build-info"></div>
 
   <main class="wide">
     <!-- LIST -->
     <div id="decks-list">
+      <div class="page-head" id="decks-head">
+        <h1><span class="accent">Decks</span></h1>
+        <p>Every deck I'm playing, with its Legends, full list, cost curve and a short guide. Tap a deck to open it, or copy the list to build it yourself.</p>
+      </div>
       <details class="tag-guide" id="tag-guide" hidden><summary>Tag guide - what the tags mean</summary><dl id="tag-guide-body"></dl></details>
       <div class="toolbar">
         <div class="grow"><input id="q" class="search" type="search" placeholder="Search decks, Legends or cards…" aria-label="Search decks" /><span class="kbd">/</span></div>
@@ -91,8 +97,13 @@
     </div>
   </main>
 
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+  </footer>
+
   <script src="config.js"></script>
-  <script src="shared.js"></script>
-  <script src="decks.js"></script>
+  <script src="shared.js?v=20261010"></script>
+  <script src="decks.js?v=20261010"></script>
 </body>
 </html>
