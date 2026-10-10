@@ -606,6 +606,53 @@ ipcMain.handle('ai:tagDeck', async (event, deck) => {
   }
 });
 
+// --- Deck picture export ----------------------------------------------------
+// The renderer sends self-contained HTML pages (deckbuilder-export.js); each is
+// rendered in a hidden window and saved as a full-height PNG in a folder the
+// user picks.
+async function renderHtmlToPng(html, width, tmpFile) {
+  await fs.writeFile(tmpFile, html, 'utf-8');
+  const win = new BrowserWindow({ show: false, width, height: 1000, useContentSize: true, webPreferences: { backgroundThrottling: false, sandbox: true } });
+  try {
+    await win.loadFile(tmpFile);
+    const height = await win.webContents.executeJavaScript(
+      `Promise.all([...document.images].map((i) => (i.complete ? 1 : new Promise((r) => { i.onload = i.onerror = r; })))).then(() => Math.ceil(document.documentElement.scrollHeight))`
+    );
+    win.setContentSize(width, Math.min(height, 16000));
+    const dbg = win.webContents.debugger;
+    dbg.attach('1.3');
+    const shot = await dbg.sendCommand('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true, clip: { x: 0, y: 0, width, height, scale: 1 } });
+    return Buffer.from(shot.data, 'base64');
+  } finally {
+    if (!win.isDestroyed()) win.destroy();
+    await fs.rm(tmpFile, { force: true });
+  }
+}
+
+ipcMain.handle('deck:exportImages', async (event, { width, pages }) => {
+  try {
+    const parent = windowForSender(event.sender);
+    const pick = await dialog.showOpenDialog(parent && !parent.isDestroyed() ? parent : undefined, {
+      title: 'Choose a folder for the deck images',
+      defaultPath: app.getPath('pictures'),
+      properties: ['openDirectory', 'createDirectory']
+    });
+    if (pick.canceled || !pick.filePaths[0]) return { ok: false, canceled: true };
+    const dir = pick.filePaths[0];
+    const files = [];
+    for (const [i, page] of pages.entries()) {
+      const png = await renderHtmlToPng(page.html, width, path.join(app.getPath('userData'), `export-page-${i}.html`));
+      const file = path.join(dir, page.filename);
+      await fs.writeFile(file, png);
+      files.push(file);
+    }
+    shell.showItemInFolder(files[0]);
+    return { ok: true, dir, files };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+});
+
 // AI deck summary (see src/ai.js). The renderer only ever learns whether a
 // key exists, never its value.
 ipcMain.handle('ai:keyStatus', async () => ai.keyStatus());

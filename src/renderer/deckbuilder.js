@@ -2691,6 +2691,19 @@ function attachControls() {
   });
   el('export-copy-btn').addEventListener('click', copyExportText);
   el('export-download-btn').addEventListener('click', downloadExportText);
+  el('export-images-btn').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    btn.disabled = true;
+    showExportMessage('Rendering images...');
+    try {
+      const res = await exportDeckImages(exportingDeck);
+      if (res.canceled) showExportMessage('Cancelled.');
+      else if (!res.ok) showExportMessage(`Export failed: ${res.error}`);
+      else showExportMessage(`Saved ${res.files.length} image${res.files.length === 1 ? '' : 's'} to ${res.dir}${res.skippedPlan ? ' (no game plan written, so only the deck image)' : ''}.`);
+    } finally {
+      btn.disabled = false;
+    }
+  });
 
   el('list-search').addEventListener('input', (e) => {
     listUiState.search = e.target.value;

@@ -30,6 +30,7 @@ contextBridge.exposeInMainWorld('api', {
   aiKnowledgeStatus: () => ipcRenderer.invoke('ai:knowledgeStatus'),
   buildAiKnowledge: () => ipcRenderer.invoke('ai:buildKnowledge'),
   analyzeDeck: (deck) => ipcRenderer.invoke('ai:analyzeDeck', deck),
+  exportDeckImages: (payload) => ipcRenderer.invoke('deck:exportImages', payload),
   getTags: () => ipcRenderer.invoke('tags:get'),
   saveTags: (tags) => ipcRenderer.invoke('tags:save', tags),
   getGroups: () => ipcRenderer.invoke('groups:get'),
