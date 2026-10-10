@@ -1,42 +1,57 @@
-// Picks the rarest cards in the collection for the website's Home hero, which
-// cycles through them. Pure logic (no Electron), so main.js's publish step and
-// one-off scripts can share it.
+// Picks the cards for the website Home hero, which cycles through them.
+// Pure logic (no Electron), so main.js's publish step and one-off scripts can
+// share it.
 //
-// Rarest first: Nova Rare, Iconic Secret, Iconic Legend, Iconic Other, Secret,
-// Epic ... Within a rarity, Legends come first (their art is the showpiece),
-// then alphabetical so the order is stable between publishes. One entry per
-// card (cardId): a second printing of the same card adds nothing visually.
+// The pool is EVERY English printing in the game's rarest tiers - not just the
+// ones in the collection - so Iconic Secrets, Promo Nova Rares, Box Toppers and
+// tournament-prize Nova Rares can all appear:
+//   1. Tier 1: Nova Rare + Iconic Secret, ranked by Cardmarket price (highest
+//      first).
+//   2. If that leaves fewer than `limit` cards, the gap is filled from tier 2
+//      (Iconic Legend), again by price.
+// Cards under MIN_PRICE are skipped: tournament-prize cards have no real
+// market and get heuristically matched to unrelated EUR 0.10 listings.
+// Retail/Beta printings of the same card share art, so only the pricier one is
+// kept (a Box Topper and a prize printing of the same card both stay - they
+// are different art).
 
+const TIERS = [['Nova Rare', 'Iconic Secret'], ['Iconic Legend']];
+const MIN_PRICE = 1;
 const RARITY_RANK = ['Common', 'Uncommon', 'Rare', 'Epic', 'Secret', 'Iconic Other', 'Iconic Legend', 'Iconic Secret', 'Nova Rare'];
 
-const rankOf = (rarity) => RARITY_RANK.indexOf(rarity);
+// "Box Toppers - Retail" and "... - Beta" are one family; so are "Pre-Release Retail/Beta".
+const setFamily = (name) => String(name || '').replace(/\s*(?:[—-]\s*)?(?:Retail|Beta)(?:\s*[—-]\s*FR)?$/i, '').trim();
 
-function pickShowcase(cards, collection, { limit = 12, hasImage = () => true } = {}) {
-  const owned = cards.filter((c) => {
-    const e = collection[c.id];
-    return e && (e.main || 0) + (e.reserve || 0) + (e.extras || 0) > 0 && hasImage(c.id);
-  });
-  owned.sort(
-    (a, b) =>
-      rankOf(b.rarity) - rankOf(a.rarity) ||
-      (b.cardType === 'Legend') - (a.cardType === 'Legend') ||
-      String(a.displayName || a.name).localeCompare(String(b.displayName || b.name))
-  );
-  const seen = new Set();
+function pickShowcase(cards, { priceFor = () => ({}), hasImage = () => true, limit = 21 } = {}) {
+  const english = cards.filter((c) => !/-fr$/i.test(c.set?.code || '') && hasImage(c.id));
   const picked = [];
-  for (const c of owned) {
-    if (seen.has(c.cardId)) continue;
-    seen.add(c.cardId);
-    picked.push({
-      id: c.id,
-      name: c.name,
-      subname: c.subname,
-      displayName: c.displayName,
-      rarity: c.rarity,
-      cardType: c.cardType,
-      color: c.color
-    });
+  const seen = new Set();
+
+  for (const tier of TIERS) {
     if (picked.length >= limit) break;
+    const rows = english
+      .filter((c) => tier.includes(c.rarity))
+      .map((c) => ({ c, ...priceFor(c.id) }))
+      .filter((r) => r.price != null && r.price >= MIN_PRICE)
+      .sort((a, b) => b.price - a.price || RARITY_RANK.indexOf(b.c.rarity) - RARITY_RANK.indexOf(a.c.rarity) || String(a.c.displayName).localeCompare(String(b.c.displayName)));
+    for (const r of rows) {
+      const key = `${r.c.cardId}|${r.c.rarity}|${setFamily(r.c.set?.name)}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      picked.push({
+        id: r.c.id,
+        name: r.c.name,
+        subname: r.c.subname,
+        displayName: r.c.displayName,
+        rarity: r.c.rarity,
+        cardType: r.c.cardType,
+        color: r.c.color,
+        set: setFamily(r.c.set?.name),
+        price: r.price,
+        priceGuess: !!r.priceGuess
+      });
+      if (picked.length >= limit) break;
+    }
   }
   return picked;
 }

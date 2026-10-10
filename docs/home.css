@@ -46,13 +46,13 @@
   justify-content: center;
 }
 
-.hero-art { --glow: 245, 228, 0; padding-bottom: 54px; }
+.hero-art { --glow: 245, 228, 0; padding-bottom: 76px; }
 
 /* Glow behind the cards takes the rarity color of the card in the middle. */
 .hero-art::before {
   content: "";
   position: absolute;
-  inset: 0 8% 54px;
+  inset: 0 8% 76px;
   background: radial-gradient(closest-side, rgba(var(--glow), .24), rgba(29, 225, 225, .05) 62%, transparent);
   filter: blur(14px);
 }
@@ -66,7 +66,7 @@
   border: 1px solid rgba(255, 255, 255, .22);
   background: var(--bg-card);
   box-shadow: var(--shadow), 0 0 44px rgba(245, 228, 0, .1);
-  margin-bottom: 54px;
+  margin-bottom: 76px;
   animation: bob 6s ease-in-out infinite;
   transition: opacity .33s, filter .33s;
 }
@@ -85,9 +85,11 @@
   gap: 10px;
 }
 
-.hero-cap { display: flex; align-items: center; gap: 8px; min-height: 22px; font-size: 13px; }
+.hero-cap { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 40px; max-width: 100%; text-align: center; }
+.hero-cap-name { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px 8px; font-size: 13px; }
 .hero-cap b { letter-spacing: .04em; }
-.hero-cap span:last-child { color: var(--text-dim); text-transform: uppercase; letter-spacing: .12em; font-size: 11px; }
+.hero-cap .hero-price { font-style: normal; font-weight: 800; color: var(--green); }
+.hero-cap-sub { color: var(--text-dim); text-transform: uppercase; letter-spacing: .1em; font-size: 11px; }
 .hero-cap .rarity-icon { width: 18px; height: 18px; }
 
 .hero-dots { display: flex; gap: 6px; align-items: center; }
@@ -103,7 +105,8 @@
 }
 .hero-dots button:hover { background: var(--text-dim); }
 .hero-dots button.on { width: 22px; background: var(--yellow); }
-@media (pointer: coarse) { .hero-dots button { width: 10px; height: 10px; } .hero-dots button.on { width: 24px; } }
+@media (pointer: coarse) { .hero-dots button { width: 9px; height: 9px; } .hero-dots button.on { width: 20px; } }
+.hero-dots { flex-wrap: wrap; justify-content: center; max-width: 100%; }
 
 .hero-art .hc:nth-child(1) { transform: translateX(-64%) rotate(-9deg); animation-delay: -2s; }
 .hero-art .hc:nth-child(2) { z-index: 2; transform: translateY(-4%) scale(1.06); }
@@ -274,7 +277,7 @@
 
 @media (max-width: 760px) {
   .hero { grid-template-columns: 1fr; text-align: left; }
-  .hero-art { min-height: 250px; order: -1; padding-top: 14px; }
+  .hero-art { min-height: 330px; order: -1; padding-top: 22px; }
   .hero-art .hc { width: min(38%, 160px); }
   .hero-cta .cta { flex: 1 1 140px; padding-inline: 12px; white-space: nowrap; }
 

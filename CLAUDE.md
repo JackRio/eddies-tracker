@@ -353,14 +353,18 @@ immediately, even though the underlying files haven't actually changed yet.
   reuse the `.featured`/`.deck` styles; deck helpers in `home.js` are small
   duplicates of `decks.js`'s (the repo's no-shared-code convention).
 - **Hero card cycle** (`setupHero()` in `home.js`): the three floating cards
-  are the collection's rarest owned cards, advancing every 4.5s (hover, a
-  hidden tab or reduced-motion pause it; dots jump to a card; the glow takes
-  the middle card's rarity color). The list is `docs/data/showcase.json`,
-  written by `publish:run` via `pickShowcase()` in `src/showcase.js` (owned
-  printings, rarest first - Nova Rare, Iconic Secret/Legend/Other, Secret,
-  Epic... - Legends first within a rarity, one per card, 12 max) and its images
-  are copied to `docs/images/`. Without a showcase file the hero falls back to
-  the featured deck's Legends.
+  are the game's rarest cards ranked by Cardmarket price, advancing every
+  4.5s (hover, a hidden tab or reduced-motion pause it; dots jump to a card;
+  the glow takes the middle card's rarity color; the caption shows name,
+  rarity, set and price, `~` = best-guess price match). The list is
+  `docs/data/showcase.json`, written by `publish:run` via `pickShowcase()` in
+  `src/showcase.js` and its images are copied to `docs/images/`. It draws from
+  **every English printing, owned or not** (so Iconic Secrets, Promo / Box
+  Topper / prize Nova Rares all appear): tier 1 = Nova Rare + Iconic Secret by
+  price, topped up to 21 from Iconic Legends. Prices under EUR 1 are skipped
+  (tournament-prize cards get heuristically matched to bogus EUR 0.10
+  listings) and Retail/Beta twins collapse to the pricier one. Without a
+  showcase file the hero falls back to the featured deck's Legends.
 - `docs/needed.html` + `needed.js` — **Needed** page (it lived at
   `index.html` until Home was added; nav and old links updated). Filters sit
   in a sticky sidebar on desktop and a collapsed "Filters" panel on phones

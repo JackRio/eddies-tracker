@@ -34,20 +34,24 @@ const updatedTs = (d) => Date.parse(d.updatedAt) || 0;
 
 // ---- Hero: the rarest cards in the collection, cycling -------------------------
 // data/showcase.json is written by the desktop app's Publish (src/showcase.js):
-// owned cards, rarest first. Three are shown at once (the rarest of the trio in
-// the middle) and the trio advances every few seconds; hover, a hidden tab, or
+// the rarest cards in the game ranked by price (see src/showcase.js). Three are
+// shown at once (the priciest of the trio in the middle) and the trio advances every few seconds; hover, a hidden tab, or
 // reduced-motion settings pause it. Dots jump straight to a card.
 let showcase = [];
-let heroIdx = 1; // centre card; starting at 1 puts the three rarest on screen first
+let heroIdx = 1; // centre card; starting at 1 puts the three priciest on screen first
 let heroTimer = null;
 const HERO_MS = 4500;
 const RARITY_GLOW = { 'Nova Rare': '255,95,168', 'Iconic Legend': '255,184,51', 'Iconic Other': '255,184,51', 'Iconic Secret': '255,184,51', Secret: '255,77,77', Epic: '184,102,255', Rare: '77,166,255' };
 const RARITY_ICON = { 'Nova Rare': 'nova-rare', 'Iconic Legend': 'iconic-rare', 'Iconic Other': 'iconic-rare', 'Iconic Secret': 'iconic-rare', Secret: 'secret-rare', Epic: 'epic', Rare: 'rare', Uncommon: 'uncommon', Common: 'common' };
 const heroAt = (i) => showcase[((i % showcase.length) + showcase.length) % showcase.length];
 
+const formatEur = (v) => `\u20AC${v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2)}`;
+
 function heroCaption(card) {
   const icon = RARITY_ICON[card.rarity];
-  return `${icon ? `<span class="rarity-icon rarity-icon-${icon}"></span>` : ''}<b>${escapeHtml(card.displayName || card.name)}</b><span>${escapeHtml(card.rarity)}</span>`;
+  const price = card.price != null ? `<em class="hero-price" title="Cardmarket trend price${card.priceGuess ? ' (best-guess match)' : ''}">${card.priceGuess ? '~' : ''}${formatEur(card.price)}</em>` : '';
+  return `<div class="hero-cap-name">${icon ? `<span class="rarity-icon rarity-icon-${icon}"></span>` : ''}<b>${escapeHtml(card.displayName || card.name)}</b>${price}</div>
+    <div class="hero-cap-sub">${escapeHtml(card.rarity)}${card.set ? ` &middot; ${escapeHtml(card.set)}` : ''}</div>`;
 }
 
 function paintHeroMeta() {

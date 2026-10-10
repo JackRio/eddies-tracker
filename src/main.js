@@ -966,9 +966,10 @@ ipcMain.handle('publish:run', async () => {
   );
   await copyImagesToDocs(looking.map((c) => c.id));
 
-  // Rarest cards in the collection, cycled through in the Home page hero.
+  // Hero cards on the Home page: the game's rarest cards (owned or not), top 21 by
+  // Cardmarket price - see src/showcase.js.
   const imageIds = new Set((await fs.readdir(imagesDir()).catch(() => [])).map((f) => f.replace(/\.webp$/, '')));
-  const showcase = pickShowcase(cache.cards, collection, { limit: 12, hasImage: (id) => imageIds.has(id) });
+  const showcase = pickShowcase(cache.cards, { limit: 21, hasImage: (id) => imageIds.has(id), priceFor: (id) => priceFieldsFor(priceView, id) });
   await fs.writeFile(
     path.join(docsDataDir(), 'showcase.json'),
     JSON.stringify({ generatedAt: new Date().toISOString(), cards: showcase }, null, 2),
