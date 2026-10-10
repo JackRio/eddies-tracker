@@ -636,6 +636,7 @@ function deckCardHtml(deck) {
       </div>
       <div class="deck-card-flags">
         ${ownFlag}
+        ${versionWarningFlagHtml(deck)}
         ${aiFillButtonHtml(deck)}
         ${listWarnings.length ? `<span class="deck-card-warning">${escapeHtml(listWarnings[0])}</span>` : ''}
       </div>
@@ -699,7 +700,9 @@ function openDeckForEdit(deckId) {
     links: (deck.links || []).map((l) => ({ ...l })),
     tags: { archetype: [], creator: [], misc: [], ...JSON.parse(JSON.stringify(deck.tags || {})) },
     groupId: deck.groupId || null,
-    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {})
+    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {}),
+    ...(deck.descVersionIds ? { descVersionIds: [...deck.descVersionIds] } : {}),
+    ...(deck.tagsVersionIds ? { tagsVersionIds: [...deck.tagsVersionIds] } : {})
   };
   switchToBuilder();
 }
@@ -722,7 +725,9 @@ async function duplicateDeck(deckId) {
     // a copy is never the Featured deck
     tags: JSON.parse(JSON.stringify({ archetype: [], creator: [], misc: [], ...(deck.tags || {}) })),
     groupId: deck.groupId || null,
-    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {})
+    ...(deck.versions?.length ? { versions: JSON.parse(JSON.stringify(deck.versions)), activeVersionId: deck.activeVersionId } : {}),
+    ...(deck.descVersionIds ? { descVersionIds: [...deck.descVersionIds] } : {}),
+    ...(deck.tagsVersionIds ? { tagsVersionIds: [...deck.tagsVersionIds] } : {})
   };
   copy.tags.misc = copy.tags.misc.filter((id) => id !== FEATURED_ID);
   decks = await window.api.saveDeck(copy);
@@ -1668,6 +1673,8 @@ function openDescEditor() {
     ta.addEventListener('input', () => {
       if ('descLegacy' in ta.dataset) draft.description = ta.value;
       else draft.descSections[ta.dataset.descKey] = ta.value;
+      stampDesc(draft); // now written for the version you're on
+      renderVersionWarnings();
       autoGrow(ta);
       updateDescSummary();
       refreshDescHeads();
@@ -1676,6 +1683,7 @@ function openDescEditor() {
     ta.addEventListener('keydown', (e) => descAcKey(e));
     ta.addEventListener('blur', () => setTimeout(() => (el('desc-ac').hidden = true), 150));
   });
+  renderVersionWarnings();
   const overlay = el('desc-overlay');
   overlay.hidden = false;
   // Size the boxes once the overlay is laid out (scrollHeight is 0 while hidden).
@@ -1816,6 +1824,7 @@ async function runAiDraft() {
   // Still on this deck (or reopened it): fill the editor you're looking at.
   if (draft && (draft === target || (targetId && draft.id === targetId))) {
     const filled = mergeAiSections(draft.descSections, res.sections, overwrite);
+    if (filled) stampDesc(draft);
     DESC_SECTIONS.forEach((sec, i) => {
       if (sec.fields.some((f) => res.sections[f.key])) descOpen.add(i);
     });
@@ -1834,7 +1843,7 @@ async function runAiDraft() {
   }
   const sections = { ...(saved.descSections || {}) };
   if (!mergeAiSections(sections, res.sections, overwrite)) return;
-  decks = await window.api.saveDeck({ ...saved, descSections: sections });
+  decks = await window.api.saveDeck({ ...saved, descSections: sections, descVersionIds: [activeVersionIdOf(saved)] });
   if (view === 'list') renderList();
   setAiStatus(`Draft for "${saved.name || 'Untitled'}" finished in the background and was saved.`);
 }

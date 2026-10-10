@@ -572,6 +572,7 @@ ipcMain.handle('decks:setMeta', async (_event, deckId, patch) => {
   const deck = decks[deckId];
   if (!deck) return decks;
   if (patch.tags) deck.tags = patch.tags;
+  if (patch.tagsVersionIds) deck.tagsVersionIds = patch.tagsVersionIds;
   if ('groupId' in patch) {
     if (patch.groupId) deck.groupId = patch.groupId;
     else delete deck.groupId;

@@ -90,6 +90,7 @@ function nextVersionName(deck) {
 // New version = a copy of the current one, which becomes active.
 function addVersion(deck) {
   ensureVersions(deck);
+  stampExistingFor(deck, deck.activeVersionId);
   syncActiveVersion(deck);
   const v = { id: `v${Date.now().toString(36)}`, name: nextVersionName(deck), ...versionSnapshot(deck) };
   deck.versions.push(v);
@@ -158,6 +159,7 @@ function renderBuilderVersions() {
   const sw = lastVersionSwitch?.deckId === draft.id ? lastVersionSwitch : null;
   el('builder-version-summary').innerHTML = versionSummaryHtml(sw);
   el('builder-version-summary').hidden = !sw;
+  renderVersionWarnings();
 }
 
 function renderViewVersions() {
@@ -165,6 +167,7 @@ function renderViewVersions() {
   const sw = lastVersionSwitch?.deckId === viewingDeck.id ? lastVersionSwitch : null;
   el('view-version-summary').innerHTML = versionSummaryHtml(sw);
   el('view-version-summary').hidden = !sw;
+  renderVersionWarnings();
 }
 
 function attachVersionControls() {
@@ -229,6 +232,7 @@ function attachVersionControls() {
     renderDeckView();
   });
 
+  attachVersionWarningControls();
   for (const id of ['builder-version-summary', 'view-version-summary']) {
     el(id).addEventListener('click', (e) => {
       if (!e.target.closest('[data-vs-close]')) return;
@@ -237,4 +241,117 @@ function attachVersionControls() {
       else renderViewVersions();
     });
   }
+}
+
+// --- Shared description / tags vs. versions -----------------------------------
+// The description and archetype tags are shared by every version, so they only
+// ever describe some of them. deck.descVersionIds / deck.tagsVersionIds list
+// the versions they were written (or confirmed) for: editing resets the list
+// to the version you're on, "Still fits" adds the current one. A warning shows
+// when the current version isn't in the list, or when the description names
+// cards that only exist in another version.
+
+function stampDesc(deck) {
+  deck.descVersionIds = [activeVersionIdOf(deck)];
+}
+function stampTags(deck) {
+  deck.tagsVersionIds = [activeVersionIdOf(deck)];
+}
+function confirmForVersion(deck, what) {
+  const key = what === 'tags' ? 'tagsVersionIds' : 'descVersionIds';
+  const id = activeVersionIdOf(deck);
+  deck[key] = [...new Set([...(deck[key] || []), id])];
+}
+
+// When a deck first gets a second version, whatever description/tags it has
+// were written for the version it started from.
+function stampExistingFor(deck, versionId) {
+  deck.descVersionIds ??= [versionId];
+  deck.tagsVersionIds ??= [versionId];
+}
+
+const contentCardIds = (c) => [...(c.legendCardIds || []).filter(Boolean), ...Object.keys(c.cards || {}), ...Object.keys(c.sideboard || {})];
+
+function descHasText(deck) {
+  return !!(deck.description || '').trim() || Object.values(deck.descSections || {}).some((t) => String(t || '').trim());
+}
+
+function versionWarnings(deck) {
+  if ((deck.versions?.length || 0) < 2) return null;
+  const active = activeVersionIdOf(deck);
+  const nameOf = (id) => deck.versions.find((v) => v.id === id)?.name;
+  const namesFor = (ids) => (ids || []).map(nameOf).filter(Boolean).join(', ');
+
+  let desc = null;
+  if (descHasText(deck) && !(deck.descVersionIds || []).includes(active)) {
+    // cards the description names that this version doesn't run but another does
+    const here = new Set(contentCardIds(deck)); // top level = this version, possibly unsaved edits
+    const elsewhere = new Set(deck.versions.filter((v) => v.id !== active).flatMap(contentCardIds));
+    const text = [deck.description || '', ...Object.values(deck.descSections || {})].join('\n');
+    const names = [...new Set([...text.matchAll(/@\[([^\]|]+)/g)].map((m) => m[1]))];
+    const stale = names
+      .map((n) => uniqueCards.find((c) => c.displayName === n))
+      .filter((c) => c && !here.has(c.cardId) && elsewhere.has(c.cardId));
+    desc = { writtenFor: namesFor(deck.descVersionIds), stale };
+  }
+  const tags = (deck.tags?.archetype?.length || 0) > 0 && !(deck.tagsVersionIds || []).includes(active) ? { setFor: namesFor(deck.tagsVersionIds) } : null;
+  if (!desc && !tags) return null;
+  return { versionName: nameOf(active), desc, tags };
+}
+
+function versionWarningHtml(deck) {
+  const w = versionWarnings(deck);
+  if (!w) return '';
+  const lines = [];
+  if (w.desc) {
+    const stale = w.desc.stale.length
+      ? ` It mentions ${w.desc.stale.map((c) => `<span class="vw-card" data-hover-card="${escapeHtml(c.cardId)}">${escapeHtml(c.name)}</span>`).join(', ')}, which ${w.desc.stale.length === 1 ? "isn't" : "aren't"} in ${escapeHtml(w.versionName)}.`
+      : '';
+    lines.push(`<div class="vw-line"><span>&#9888; The <b>description</b> was written for ${escapeHtml(w.desc.writtenFor || 'another version')}.${stale}</span><button class="version-btn" data-vw-confirm="desc">Still fits ${escapeHtml(w.versionName)}</button></div>`);
+  }
+  if (w.tags) {
+    lines.push(`<div class="vw-line"><span>&#9888; The <b>archetype tags</b> were set for ${escapeHtml(w.tags.setFor || 'another version')}.</span><button class="version-btn" data-vw-confirm="tags">Still fit ${escapeHtml(w.versionName)}</button></div>`);
+  }
+  return `<div class="version-warning">${lines.join('')}</div>`;
+}
+
+// Compact flag for the My Decks list.
+function versionWarningFlagHtml(deck) {
+  const w = versionWarnings(deck);
+  if (!w) return '';
+  const what = [w.desc && 'description', w.tags && 'tags'].filter(Boolean).join(' & ');
+  return `<span class="deck-flag deck-flag-missing" title="Written for ${escapeHtml(w.desc?.writtenFor || w.tags?.setFor || 'another version')} - open the deck to check">&#9888; ${what} from another version</span>`;
+}
+
+function renderVersionWarnings() {
+  if (view === 'builder' && draft) {
+    const html = versionWarningHtml(draft);
+    el('builder-version-warning').innerHTML = html;
+    el('builder-version-warning').hidden = !html;
+    el('desc-version-warning').innerHTML = html;
+    el('desc-version-warning').hidden = !html;
+  } else if (view === 'view' && viewingDeck) {
+    const html = versionWarningHtml(viewingDeck);
+    el('view-version-warning').innerHTML = html;
+    el('view-version-warning').hidden = !html;
+  }
+}
+
+function attachVersionWarningControls() {
+  for (const id of ['builder-version-warning', 'desc-version-warning']) {
+    el(id).addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-vw-confirm]');
+      if (!btn) return;
+      confirmForVersion(draft, btn.dataset.vwConfirm);
+      renderVersionWarnings();
+    });
+  }
+  el('view-version-warning').addEventListener('click', async (e) => {
+    const btn = e.target.closest('[data-vw-confirm]');
+    if (!btn) return;
+    confirmForVersion(viewingDeck, btn.dataset.vwConfirm);
+    decks = await window.api.saveDeck(viewingDeck);
+    viewingDeck = decks[viewingDeck.id];
+    renderVersionWarnings();
+  });
 }

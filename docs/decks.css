@@ -496,3 +496,5 @@ button.tag-chip.active { background: rgba(255,255,255,.14); box-shadow: 0 0 0 1p
 .vs-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 3px 0; }
 .vs-label { color: var(--text-dim); font-weight: 700; min-width: 92px; }
 .vs-none { color: var(--text-dim); }
+
+.dd-version-note { font-size: 13px; color: #ff9f1a; border: 1px solid rgba(255,159,26,.45); background: rgba(255,159,26,.08); border-radius: 6px; padding: 6px 10px; margin-bottom: 10px; }

@@ -1807,3 +1807,10 @@ button.tag-chip:hover { filter: brightness(1.25); }
 .vs-card { cursor: default; }
 .vs-none { color: var(--text-dim); }
 [data-hover-card], [data-hover-printing] { cursor: default; }
+
+/* Description / tags written for another version */
+.version-warning { border: 1px solid rgba(255, 159, 26, 0.5); border-left: 3px solid #ff9f1a; border-radius: 6px; background: rgba(255, 159, 26, 0.08); padding: 6px 12px; font-size: 12px; }
+.vw-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 3px 0; color: var(--text); }
+.vw-line b { color: #ff9f1a; }
+.vw-card { color: var(--cyan); font-weight: 600; }
+.desc-version-warning { padding: 10px 18px 0; }

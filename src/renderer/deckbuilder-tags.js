@@ -372,10 +372,14 @@ async function commitDeckMeta(mutate) {
     groupId: d.groupId || null
   };
   mutate(meta);
+  // archetype tags changed -> they now describe the version you're on
+  if (JSON.stringify(meta.tags.archetype) !== JSON.stringify(d.tags?.archetype || [])) meta.tagsVersionIds = [activeVersionIdOf(d)];
   if (tagsEditing.draft) {
     draft.tags = meta.tags;
     draft.groupId = meta.groupId;
+    if (meta.tagsVersionIds) draft.tagsVersionIds = meta.tagsVersionIds;
     updateTagsSummary();
+    renderVersionWarnings();
   } else {
     decks = await window.api.setDeckMeta(tagsEditing.id, meta);
   }
@@ -597,14 +601,14 @@ async function runAiJob(job) {
     const res = await window.api.analyzeDeck(payload);
     if (!res.ok) throw new Error(res.error);
     if (draft && draft.id === job.deckId) {
-      mergeAiSections(draft.descSections, res.sections, false);
+      if (mergeAiSections(draft.descSections, res.sections, false)) stampDesc(draft);
       updateDescSummary();
     } else {
       const saved = decks[job.deckId];
       if (!saved) throw new Error('That deck was deleted while drafting.');
       const sections = { ...(saved.descSections || {}) };
       mergeAiSections(sections, res.sections, false);
-      decks = await window.api.saveDeck({ ...saved, descSections: sections });
+      decks = await window.api.saveDeck({ ...saved, descSections: sections, descVersionIds: [activeVersionIdOf(saved)] });
     }
   } else {
     const res = await window.api.tagDeck(payload);
@@ -614,9 +618,10 @@ async function runAiJob(job) {
     const tags = { archetype: [...new Set([...(base.tags?.archetype || []), ...ids])], creator: [...(base.tags?.creator || [])], misc: [...(base.tags?.misc || [])] };
     if (draft && draft.id === job.deckId) {
       draft.tags = tags;
+      stampTags(draft);
       updateTagsSummary();
     } else {
-      decks = await window.api.setDeckMeta(job.deckId, { tags });
+      decks = await window.api.setDeckMeta(job.deckId, { tags, tagsVersionIds: [activeVersionIdOf(decks[job.deckId])] });
     }
   }
 }

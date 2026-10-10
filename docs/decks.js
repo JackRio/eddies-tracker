@@ -722,7 +722,13 @@ function renderDetail(publishedDeck) {
     .map((p) => (p ? tileHtml([p], `title="${escapeHtml(p.name)}"`) : '<div class="deck-tile-empty">No Legend</div>'))
     .join('');
 
-  el('detail-description').innerHTML = deckDescriptionHtml(deck);
+  // The description is shared by every version; say which one(s) it was
+  // written for when looking at another.
+  const descFor = publishedDeck.descVersionIds || [];
+  const descNote = (publishedDeck.versions?.length || 0) > 1 && descFor.length && !descFor.includes(viewVersionId)
+    ? `<div class="dd-version-note">Written for ${escapeHtml(descFor.map((id) => publishedDeck.versions.find((v) => v.id === id)?.name).filter(Boolean).join(', ') || 'another version')} - some details may not match this version.</div>`
+    : '';
+  el('detail-description').innerHTML = descNote + deckDescriptionHtml(deck);
 
   el('detail-cost-curve').innerHTML = costCurveHtml(stats.costCounts);
 
