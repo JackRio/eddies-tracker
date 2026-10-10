@@ -2699,7 +2699,14 @@ function attachControls() {
       const res = await exportDeckImages(exportingDeck);
       if (res.canceled) showExportMessage('Cancelled.');
       else if (!res.ok) showExportMessage(`Export failed: ${res.error}`);
-      else showExportMessage(`Saved ${res.files.length} image${res.files.length === 1 ? '' : 's'} to ${res.dir}${res.skippedPlan ? ' (no game plan written, so only the deck image)' : ''}.`);
+      else
+        showExportMessage(
+          `Saved ${res.files.length} image${res.files.length === 1 ? '' : 's'} to ${res.dir}` +
+            `${res.skippedPlan ? ' (no game plan written, so only the deck image)' : ''}` +
+            `${res.missingArt ? ` - ${res.missingArt} card image${res.missingArt === 1 ? '' : 's'} couldn't be loaded` : ''}.`
+        );
+    } catch (err) {
+      showExportMessage(`Export failed: ${err.message}`);
     } finally {
       btn.disabled = false;
     }

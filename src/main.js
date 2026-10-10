@@ -607,29 +607,9 @@ ipcMain.handle('ai:tagDeck', async (event, deck) => {
 });
 
 // --- Deck picture export ----------------------------------------------------
-// The renderer sends self-contained HTML pages (deckbuilder-export.js); each is
-// rendered in a hidden window and saved as a full-height PNG in a folder the
-// user picks.
-async function renderHtmlToPng(html, width, tmpFile) {
-  await fs.writeFile(tmpFile, html, 'utf-8');
-  const win = new BrowserWindow({ show: false, width, height: 1000, useContentSize: true, webPreferences: { backgroundThrottling: false, sandbox: true } });
-  try {
-    await win.loadFile(tmpFile);
-    const height = await win.webContents.executeJavaScript(
-      `Promise.all([...document.images].map((i) => (i.complete ? 1 : new Promise((r) => { i.onload = i.onerror = r; })))).then(() => Math.ceil(document.documentElement.scrollHeight))`
-    );
-    win.setContentSize(width, Math.min(height, 16000));
-    const dbg = win.webContents.debugger;
-    dbg.attach('1.3');
-    const shot = await dbg.sendCommand('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true, clip: { x: 0, y: 0, width, height, scale: 1 } });
-    return Buffer.from(shot.data, 'base64');
-  } finally {
-    if (!win.isDestroyed()) win.destroy();
-    await fs.rm(tmpFile, { force: true });
-  }
-}
-
-ipcMain.handle('deck:exportImages', async (event, { width, pages }) => {
+// The Deck Builder draws the PNGs itself on a canvas (deckbuilder-export.js);
+// this only asks where to put them and writes the bytes.
+ipcMain.handle('deck:saveImages', async (event, files) => {
   try {
     const parent = windowForSender(event.sender);
     const pick = await dialog.showOpenDialog(parent && !parent.isDestroyed() ? parent : undefined, {
@@ -639,15 +619,14 @@ ipcMain.handle('deck:exportImages', async (event, { width, pages }) => {
     });
     if (pick.canceled || !pick.filePaths[0]) return { ok: false, canceled: true };
     const dir = pick.filePaths[0];
-    const files = [];
-    for (const [i, page] of pages.entries()) {
-      const png = await renderHtmlToPng(page.html, width, path.join(app.getPath('userData'), `export-page-${i}.html`));
-      const file = path.join(dir, page.filename);
-      await fs.writeFile(file, png);
-      files.push(file);
+    const written = [];
+    for (const f of files) {
+      const file = path.join(dir, path.basename(f.filename));
+      await fs.writeFile(file, Buffer.from(f.bytes));
+      written.push(file);
     }
-    shell.showItemInFolder(files[0]);
-    return { ok: true, dir, files };
+    shell.showItemInFolder(written[0]);
+    return { ok: true, dir, files: written };
   } catch (err) {
     return { ok: false, error: err.message };
   }
@@ -1440,7 +1419,11 @@ app.whenReady().then(() => {
     const url = new URL(request.url);
     const filename = decodeURIComponent(url.hostname + (url.pathname === '/' ? '' : url.pathname));
     const filePath = path.join(imagesDir(), filename);
-    return net.fetch(pathToFileURL(filePath).toString());
+    // CORS header so the Deck Builder can draw card art onto a canvas and
+    // still export it (picture export) - without it the canvas is tainted.
+    return net.fetch(pathToFileURL(filePath).toString()).then(
+      (res) => new Response(res.body, { status: res.status, headers: { 'content-type': res.headers.get('content-type') || 'image/webp', 'access-control-allow-origin': '*' } })
+    );
   });
   createWindow();
   app.on('activate', () => {
