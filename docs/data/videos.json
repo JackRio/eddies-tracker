@@ -78,6 +78,24 @@
   ],
   "videos": [
     {
+      "id": "Um8O8FX7E-o",
+      "title": "Fixing your decks (and testing one of them)!",
+      "published": "2026-10-11T07:08:41+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "38Cfxe-bjzU",
+      "title": "🟡🟡🔵 vs 🔴🔴🟢 Pretending Like I Know What I'm Doing in Cyberpunk TCG! 🫨",
+      "published": "2026-10-10T23:28:29+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "8J4gdFDty7A",
+      "title": "CTCGs BEST BEARDS - Top 10 Moustaches in Set 1",
+      "published": "2026-10-10T15:00:08+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
       "id": "NjJNH5lLICo",
       "title": "Cyberpunk News and Ichorus's Decklist— Episode 3 | Cyberpunk TCG Podcast",
       "published": "2026-10-09T19:29:10+00:00",
@@ -330,12 +348,6 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
-      "id": "4g6EusLYjKg",
-      "title": "Let's see 🚨ALL 28 Pages🚨 of NEW Cyberpunk TCG Tournament Rules",
-      "published": "2026-09-25T23:21:49+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "tYtJQzwXpuw",
       "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
       "published": "2026-09-25T16:00:39+00:00",
@@ -346,12 +358,6 @@
       "title": "CyberpunkTCG Red Units Tier List for Set 1 \"Welcome To Night City.\"",
       "published": "2026-09-25T03:58:48+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
-      "id": "Utri1-EHins",
-      "title": "What's happening at Cyberpunk TCG's first major tournament? | NCC 011",
-      "published": "2026-09-25T02:49:52+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
       "id": "kiC8EqvZ6HI",
@@ -708,12 +714,6 @@
       "channelId": "UCFd-oebu93o0blOK7dUbcoA"
     },
     {
-      "id": "clolRv6aLHA",
-      "title": "Cyberpunk TCG - Block-Chain VS Multi-Attack - Gameplay with Commentary Ep.3",
-      "published": "2026-08-19T15:00:39+00:00",
-      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
-    },
-    {
       "id": "ctFKPyH4xh0",
       "title": "Cyberpunk TCG Secret Rares: PLAYABLE or COLLECTABLE?",
       "published": "2026-08-18T17:06:02+00:00",
@@ -834,10 +834,6 @@
       "short": false
     },
     {
-      "id": "4g6EusLYjKg",
-      "short": false
-    },
-    {
       "id": "9j2ondicjPU",
       "short": false
     },
@@ -907,10 +903,6 @@
     },
     {
       "id": "_LGUt9TdL6g",
-      "short": false
-    },
-    {
-      "id": "Utri1-EHins",
       "short": false
     },
     {
@@ -1082,10 +1074,6 @@
       "short": false
     },
     {
-      "id": "clolRv6aLHA",
-      "short": false
-    },
-    {
       "id": "NjJNH5lLICo",
       "short": false
     },
@@ -1228,7 +1216,19 @@
     {
       "id": "sX8BTGHXOyE",
       "short": false
+    },
+    {
+      "id": "Um8O8FX7E-o",
+      "short": false
+    },
+    {
+      "id": "38Cfxe-bjzU",
+      "short": false
+    },
+    {
+      "id": "8J4gdFDty7A",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-10T10:49:27.600Z"
+  "updatedAt": "2026-10-11T13:00:23.549Z"
 }
