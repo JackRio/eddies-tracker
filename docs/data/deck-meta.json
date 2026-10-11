@@ -1,6 +1,25 @@
 {
   "groups": [
     {
+      "id": "gmv2ji68d",
+      "name": "LGS Events",
+      "collapsed": false,
+      "deckIds": [
+        "d1791645634734wh7hak",
+        "d1791645693566saxdoi",
+        "d1791645735068j40etf",
+        "d17916504414302z824p"
+      ]
+    },
+    {
+      "id": "gmv1nfk2e",
+      "name": "Claude Decks",
+      "collapsed": true,
+      "deckIds": [
+        "d1791591891616qlxfqh"
+      ]
+    },
+    {
       "id": "gmv1gdo86",
       "name": "XBD Puppy ~ Ranking",
       "collapsed": true,
@@ -31,14 +50,6 @@
         "d1791557848243ortgzc",
         "d17915587506368hitys",
         "d1791558886723pj6cfr"
-      ]
-    },
-    {
-      "id": "gmv1nfk2e",
-      "name": "Claude Decks",
-      "collapsed": false,
-      "deckIds": [
-        "d1791591891616qlxfqh"
       ]
     }
   ],

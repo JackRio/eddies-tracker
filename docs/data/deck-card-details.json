@@ -379,6 +379,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1": {
+    "id": "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1",
+    "cardId": "1d8f611c-dd08-48d1-82eb-451d56dcf651",
+    "name": "Deadman Transmitter",
+    "subname": null,
+    "displayName": "Deadman Transmitter",
+    "slug": "deadman-transmitter",
+    "cardType": "Gear",
+    "color": "Red",
+    "rarity": "Uncommon",
+    "ram": 3,
+    "cost": 3,
+    "power": 1,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nIf this Unit would be defeated, defeat its \"DEADMAN TRANSMITTER\" instead.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "27a2fceb-5c37-4cfa-8efb-1e4618d22401": {
     "id": "27a2fceb-5c37-4cfa-8efb-1e4618d22401",
     "cardId": "1f969c27-dddb-4971-9ab5-bd728c3e3e52",

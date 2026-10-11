@@ -1280,8 +1280,22 @@
       "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
       "328cd3e4-4177-4d6a-86c0-00d1a5a12b38"
     ],
-    "sideboard": {},
-    "swapPlans": [],
+    "sideboard": {
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": 1
+    },
+    "swapPlans": [
+      {
+        "id": "p179167916761570cy",
+        "name": "Plan 1",
+        "swaps": [
+          {
+            "out": "9a0fd5a3-a00b-425c-a251-755eeab12bfe",
+            "in": "1535c19d-54e5-4289-9cb7-15ab429c0092",
+            "qty": 1
+          }
+        ]
+      }
+    ],
     "cards": {
       "b0453570-7ed8-4031-9562-cb73d7a979e5": 3,
       "5380dea3-4d21-445b-af02-487b45d40395": 3,
@@ -1295,8 +1309,9 @@
       "2993d637-d44d-4add-8473-26d67c0d1bc0": 3,
       "9a0fd5a3-a00b-425c-a251-755eeab12bfe": 3,
       "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
-      "1535c19d-54e5-4289-9cb7-15ab429c0092": 3,
-      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": 2,
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 1
     },
     "cardPrintings": {
       "b0453570-7ed8-4031-9562-cb73d7a979e5": {
@@ -1337,10 +1352,13 @@
         "f9a81013-9c64-4e48-8d1d-cd1b41b72ee0": 3
       },
       "1535c19d-54e5-4289-9cb7-15ab429c0092": {
-        "a7a49ccf-4b85-4997-b08c-16e8e80d9aa8": 3
+        "a7a49ccf-4b85-4997-b08c-16e8e80d9aa8": 2
       },
       "19f34c9b-a24a-43be-bd9f-62c37435e994": {
         "0be394e3-ce41-4f16-a95b-33ec951bf43c": 3
+      },
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
+        "7a8c2032-e753-43ab-9c3b-adefb4281241": 1
       }
     },
     "links": [
@@ -1351,7 +1369,7 @@
       }
     ],
     "createdAt": "2026-10-09T21:16:12.617Z",
-    "updatedAt": "2026-10-09T21:29:37.346Z",
+    "updatedAt": "2026-10-11T00:39:45.953Z",
     "colorTag": "BBG"
   },
   {
@@ -2240,5 +2258,769 @@
     "createdAt": "2026-10-10T00:24:51.616Z",
     "updatedAt": "2026-10-10T10:34:37.183Z",
     "colorTag": "RRB"
+  },
+  {
+    "tags": {
+      "archetype": [
+        "arch-midrange",
+        "arch-gear"
+      ],
+      "creator": [
+        "crea-mv1gg19w"
+      ],
+      "misc": [
+        "misc-competitive"
+      ]
+    },
+    "groupId": "gmv2ji68d",
+    "id": "d1791645634734wh7hak",
+    "name": "RGB ~ Fixers",
+    "description": "",
+    "descSections": {
+      "overview": "A Midrange deck with three Fixer Legends and @[Valentino Street Racer] giving Adrenaline to the mid-cost bodies. Gear-equipped @[Psycho Squad] and @[Pepe Najarro: Working Doubles|Pepe Najarro] win fights with @[Synapse Burnout]; @[Placide: Voodoo Sentinel|Placide] and @[Nadia: Fighting Through Grief|Nadia] close, and @[Chrome Reverie], @[Nocturne OP55 N1|Nocturne] and @[Memory Relapse] hold the rival in place.",
+      "early": "Aim is a body with @[Mantis Blades] or @[Satori: Sword of Saburo|Satori] by the second turn: @[Psycho Squad] or @[Pepe Najarro: Working Doubles|Pepe Najarro].\nCall every turn; the Call modes are the early draw.\nSell the extra @[Floor It] and @[Nocturne OP55 N1|Nocturne] first.\n@[Chrome Reverie] locks their first attacker and Calls for free when a Gig is at 1; @[Wakako Okada: Peace and Harmony|Wakako]'s Spend gets a Gig there.",
+      "mid": "Aim is attacks the turn a Unit lands: @[Valentino Street Racer] gives @[Pepe Najarro: Working Doubles|Pepe Najarro], @[Psycho Squad] or @[Lizzy Wizzy: Delicate Weapon|Lizzy Wizzy] Adrenaline.\n@[Memory Relapse] or @[Padre: Man of the Cross|Padre]'s Call spends their best Unit so your attackers can hit it; @[Synapse Burnout] wins the fight and @[Satori: Sword of Saburo|Satori] draws.\n@[Lizzy Wizzy: Delicate Weapon|Lizzy Wizzy] replays @[Chrome Reverie], @[Over the Edge] or @[Nocturne OP55 N1|Nocturne] from the trash.\n@[Nadia: Fighting Through Grief|Nadia] attacks the Gig area the turn it lands when they are ahead on Gigs.",
+      "late": "Aim is @[Placide: Voodoo Sentinel|Placide] with a Program in hand: a Unit bottom-decked on play, another per attack, two Gigs per steal.\n@[Over the Edge] with a high d20 removes their last Blocker.\n@[Nocturne OP55 N1|Nocturne] at 1 €$ is draw 2 or a lock.\n@[Dexter DeShawn: Off the Grid|Dexter]'s Spend grows your Gigs; @[Padre: Man of the Cross|Padre]'s Spend sets their biggest Gig to your smallest value.",
+      "combos": "@[Valentino Street Racer] + @[Pepe Najarro: Working Doubles|Pepe Najarro] - a 6-power attack the turn it lands.\n@[Memory Relapse] + @[Synapse Burnout] - spend their Unit, attack it, win with up to 3 extra power.\n@[Lizzy Wizzy: Delicate Weapon|Lizzy Wizzy] - a Blocker that replays the lock or removal Program you need.\n@[Placide: Voodoo Sentinel|Placide] - the finisher once Programs are spare.",
+      "mulligan": "Keep a 3 or 4-cost body, a cheap Gear and one of @[Chrome Reverie], @[Floor It] or @[Memory Relapse].\nA hand of @[Placide: Voodoo Sentinel|Placide], @[Nadia: Fighting Through Grief|Nadia] and @[Over the Edge] with no cheap body should go back.",
+      "mulliganFirst": "Look for @[Mantis Blades] or @[Synapse Burnout] with a Call, then @[Valentino Street Racer] or @[Psycho Squad].\nHigh-cost Units in the opening hand are not ideal.",
+      "mulliganSecond": "Look for @[Psycho Squad] or @[Lizzy Wizzy: Delicate Weapon|Lizzy Wizzy] as the first Blocker and @[Floor It] or @[Chrome Reverie] for their first attack.",
+      "sideboard": "",
+      "notes": "@[Pepe Najarro: Working Doubles|Pepe Najarro] has no MERC Legend to ready here; it is a 6-power body for 4.\n@[Valentino Street Racer] only reaches Units with cost 5 or less, so not @[Placide: Voodoo Sentinel|Placide] or @[Nadia: Fighting Through Grief|Nadia].\n@[Wakako Okada: Peace and Harmony|Wakako]'s Call takes 2 power off an attacker during the React Step."
+    },
+    "legendCardIds": [
+      "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "501a3796-9983-400f-86e4-97ffac5d5451",
+      "99f5e311-8dfd-42a9-abd0-2e50ac68679e"
+    ],
+    "legendPrintingIds": [
+      "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+      "e1f5dc01-9e96-4102-af3f-07ad31f5db15",
+      "33ee09a3-4591-4302-9052-6dd5130861c6"
+    ],
+    "sideboard": {},
+    "swapPlans": [],
+    "cards": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": 3,
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": 2,
+      "14d87f2a-8bd7-424f-b65b-3659156cef81": 3,
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": 3,
+      "5d6afeed-1532-4a01-bb40-a011030a7785": 3,
+      "3c144d6a-0c1a-43e9-bd35-85d6fc46adef": 2,
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": 2,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 2,
+      "f3ba5ef7-5e91-4956-a887-b88a4b854867": 3,
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 2,
+      "144c3559-3518-4c01-b9e6-af42b7166661": 3
+    },
+    "cardPrintings": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": {
+        "14e20948-a74b-4a27-a156-d34d8cfb98cc": 3
+      },
+      "6b078eff-4cef-4beb-a299-ed388a72ce45": {
+        "929b5e98-ab82-4e36-bb72-a00a223ded77": 2
+      },
+      "14d87f2a-8bd7-424f-b65b-3659156cef81": {
+        "61118bbb-c1f6-4b1d-8d46-4f33f0a135b1": 3
+      },
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": {
+        "786d5ce2-bfc0-4648-9c7d-323e939a1d34": 3
+      },
+      "5d6afeed-1532-4a01-bb40-a011030a7785": {
+        "c828bc68-23a3-41ef-878b-00b13ccf0cdc": 3
+      },
+      "3c144d6a-0c1a-43e9-bd35-85d6fc46adef": {
+        "8cb7b93c-e281-4d94-a4b0-bb0cb5d0fa16": 2
+      },
+      "783a9082-b79c-4b45-bf66-48728ff9b92d": {
+        "0ff059f8-90c3-47ef-ba3b-cd380f30f14e": 2
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+      },
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 2
+      },
+      "f3ba5ef7-5e91-4956-a887-b88a4b854867": {
+        "535cec6e-269d-4c2d-860c-5c8eff999c21": 3
+      },
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": {
+        "0be394e3-ce41-4f16-a95b-33ec951bf43c": 3
+      },
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 3
+      },
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
+        "7a8c2032-e753-43ab-9c3b-adefb4281241": 2
+      },
+      "144c3559-3518-4c01-b9e6-af42b7166661": {
+        "6213bf57-92d7-4a64-8d80-948ba53b8d80": 3
+      }
+    },
+    "links": [
+      {
+        "label": "Ranking",
+        "url": "https://www.youtube.com/watch?v=In1oTklGHNU&t=256s",
+        "creatorId": "crea-mv1gg19w"
+      }
+    ],
+    "createdAt": "2026-10-10T15:20:34.738Z",
+    "updatedAt": "2026-10-10T15:20:51.136Z",
+    "colorTag": "RBG"
+  },
+  {
+    "tags": {
+      "archetype": [
+        "arch-control",
+        "arch-tempo"
+      ],
+      "creator": [
+        "crea-mv1gg19w"
+      ],
+      "misc": [
+        "misc-competitive"
+      ]
+    },
+    "groupId": "gmv2ji68d",
+    "id": "d1791645693566saxdoi",
+    "name": "BBG ~ Alt",
+    "description": "",
+    "descSections": {
+      "overview": "A Control deck that empties the rival's field with Programs, then steals with a small number of Units. The aim is to get your Gigs to 1. Min Gigs make Programs cheaper through @[Alt Cunningham: Soulkiller Architect|Alt], give @[Hanako Arasaka: Daughter of the Emperor|Hanako] and @[Pepe Najarro: Working Doubles|Pepe] their value-pairs, and keep your Street Cred low for @[Towerfall]. Alt replays the best Program from the trash, so the removal never runs out.",
+      "early": "The aim is a d4 at 1 as soon as possible. @[Trust No One] gets it there and draws a card on the way.\nNext aim is a value-pair of min Gigs. @[Peace Offering] sets the second Gig to match the first and draws when it does.\nCall a Legend each turn. @[Chrome Reverie] is a free Call once a min Gig is in place, so it is the best Call when a rival attacker also needs stopping.\nPrograms to sell first: extra @[Floor It], extra @[Take Control], and a @[Les Élémens] when @[Towerfall] is already in hand.\n@[Jacked-In Voodoo Boy|Voodoo Boy] is the early body. It attacks on any turn a Program was played, which is nearly every turn.",
+      "mid": "The aim is to clear the field in one turn. Spend @[Alt Cunningham: Soulkiller Architect|Alt] for the discount, then @[Towerfall] with lower Street Cred than the rival so everything at 5 power or less goes to the bottom of their deck.\nAgainst one large Unit, look for @[Floor It] and @[Pyramid Song] in the same turn as @[Towerfall]. Together they bring anything to 0.\nSingle targets go to @[Les Élémens] or @[Maman Brigitte: Spirit of Death|Maman Brigitte]. Look for @[Valentino Street Racer] with Maman so Maman bottom-decks a Unit and attacks in the same turn.\nLook for @[Pepe Najarro: Working Doubles|Pepe Najarro] with a value-pair. The attack readies Alt and @[Jackie Welles: Pour One Out For Me|Jackie], so Alt can replay @[Towerfall] or @[Les Élémens] from the trash that same turn.\nKeep new Gigs at 1 as they arrive. @[Trust No One] handles the small dice, @[Peace Offering] handles the d20.",
+      "late": "@[Nocturne OP55 N1|Nocturne] is the draw engine once the fixer area is empty, or a lock on their only attacker.\nAttack the Gig area every turn with @[Pepe Najarro: Working Doubles|Pepe], @[Maman Brigitte: Spirit of Death|Maman] and the @[Jacked-In Voodoo Boy|Voodoo Boys]. Steal their low Gigs, not the d20. A low Street Cred keeps @[Towerfall] at full strength, and only the count matters.\n@[Hanako Arasaka: Daughter of the Emperor|Hanako]'s swap gives back a high Gig you took in exchange for a low one, or builds another value-pair for extra draws.\n@[Alt Cunningham: Soulkiller Architect|Alt]'s replays go to the bottom of your deck. That is the answer when the deck gets thin from all the drawing.",
+      "combos": "@[Alt Cunningham: Soulkiller Architect|Alt Cunningham] - the engine. Cheaper Programs from min Gigs and a Program back from the trash every turn.\n@[Trust No One] and @[Peace Offering] - the fuel. Every min Gig is a discount, a draw, and a value-pair.\n@[Towerfall] - the board clear. With lower Street Cred it removes the whole rival field.\n@[Pepe Najarro: Working Doubles|Pepe Najarro] - the attacker that readies Alt and @[Jackie Welles: Pour One Out For Me|Jackie] for a second Alt use.",
+      "mulligan": "Keep @[Trust No One] or @[Three Mouths, One Desire] with one cheap defensive Program and a Program to sell.\nHigh-cost Programs and Units in the opening hand are not ideal.",
+      "mulliganFirst": "Look for @[Trust No One], one of @[Three Mouths, One Desire] or @[Peace Offering], and one cheap defensive Program such as @[Chrome Reverie] or @[Take Control].\nA hand built around @[Towerfall], @[Les Élémens] and @[Maman Brigitte: Spirit of Death|Maman Brigitte] is a mulligan.",
+      "mulliganSecond": "Look for @[Trust No One] or @[Three Mouths, One Desire], plus @[Take Control], @[Floor It] or @[Chrome Reverie] for the rival's first attack, plus a Program to sell.\nThe rival attacks first, so a hand with Gig pieces but no Quick Program or @[Chrome Reverie] is a mulligan. Two or more copies of @[Towerfall] or @[Les Élémens] is also a mulligan.",
+      "sideboard": "",
+      "notes": "Keep the d4 at 1 and never swap it away. @[Pyramid Song] checks the d4 specifically.\n@[Jackie Welles: Pour One Out For Me|Jackie Welles] triggers on @[Jacked-In Voodoo Boy|Voodoo Boy] and @[Maman Brigitte: Spirit of Death|Maman Brigitte] only. It is mainly an Eddie and a Pepe ready target.\n@[Maman Brigitte: Spirit of Death|Maman Brigitte] only bottom-decks unequipped Units. @[Les Élémens] and @[Towerfall] handle Gear-heavy targets."
+    },
+    "legendCardIds": [
+      "12475e77-0e16-420e-a935-65eb74290de8",
+      "380b5e52-2651-4cde-8222-1db2ae6469e2",
+      "40502c1f-78a2-426a-a706-c60ebd4b31e3"
+    ],
+    "legendPrintingIds": [
+      "873656f0-c32a-46fb-856f-8a5ee44b8d21",
+      "1435b785-967e-48a7-8ef7-f7fecbb27aaf",
+      "328cd3e4-4177-4d6a-86c0-00d1a5a12b38"
+    ],
+    "sideboard": {},
+    "swapPlans": [],
+    "cards": {
+      "b0453570-7ed8-4031-9562-cb73d7a979e5": 3,
+      "5380dea3-4d21-445b-af02-487b45d40395": 3,
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": 2,
+      "5d6afeed-1532-4a01-bb40-a011030a7785": 2,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "20484778-9294-4148-bd8c-fa78572f4452": 3,
+      "7977a175-0516-478e-b166-3edb035849a4": 3,
+      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 3,
+      "2993d637-d44d-4add-8473-26d67c0d1bc0": 3,
+      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": 2,
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": 3,
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": 3,
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": 3,
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": 1
+    },
+    "cardPrintings": {
+      "b0453570-7ed8-4031-9562-cb73d7a979e5": {
+        "f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1": 3
+      },
+      "5380dea3-4d21-445b-af02-487b45d40395": {
+        "220bef49-2e98-4bc6-b023-5bb8f492b29b": 3
+      },
+      "0974a7af-dcd7-44d9-b57a-b6a4719afcd6": {
+        "786d5ce2-bfc0-4648-9c7d-323e939a1d34": 2
+      },
+      "5d6afeed-1532-4a01-bb40-a011030a7785": {
+        "c828bc68-23a3-41ef-878b-00b13ccf0cdc": 2
+      },
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 3
+      },
+      "20484778-9294-4148-bd8c-fa78572f4452": {
+        "2cff513f-6a75-40f0-8e70-e1491d340472": 3
+      },
+      "7977a175-0516-478e-b166-3edb035849a4": {
+        "bab79ef1-57fb-4b24-b50a-e08899699862": 3
+      },
+      "c29aefc5-c8dd-4188-95d9-e46c5ee289eb": {
+        "7e86c639-5225-4a91-be33-6ab86c9adfe2": 3
+      },
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 3
+      },
+      "2993d637-d44d-4add-8473-26d67c0d1bc0": {
+        "0449bc78-983b-4681-b062-0738de3c487b": 3
+      },
+      "9a0fd5a3-a00b-425c-a251-755eeab12bfe": {
+        "25508f49-7256-47be-bc95-c420c7105c62": 1,
+        "4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72": 1
+      },
+      "ec857ab0-995e-4c32-84b6-7ba57b2f6137": {
+        "f9a81013-9c64-4e48-8d1d-cd1b41b72ee0": 3
+      },
+      "1535c19d-54e5-4289-9cb7-15ab429c0092": {
+        "a7a49ccf-4b85-4997-b08c-16e8e80d9aa8": 3
+      },
+      "19f34c9b-a24a-43be-bd9f-62c37435e994": {
+        "0be394e3-ce41-4f16-a95b-33ec951bf43c": 3
+      },
+      "0f7c1c54-0e2e-44a5-ac7f-5263fbab21d3": {
+        "7a8c2032-e753-43ab-9c3b-adefb4281241": 1
+      }
+    },
+    "links": [
+      {
+        "label": "Ranking",
+        "url": "https://www.youtube.com/watch?v=In1oTklGHNU&t=256s",
+        "creatorId": "crea-mv1gg19w"
+      }
+    ],
+    "createdAt": "2026-10-10T15:21:33.569Z",
+    "updatedAt": "2026-10-10T15:21:51.056Z",
+    "colorTag": "BBG"
+  },
+  {
+    "tags": {
+      "archetype": [
+        "arch-midrange",
+        "arch-control"
+      ],
+      "creator": [],
+      "misc": [
+        "misc-competitive"
+      ]
+    },
+    "groupId": "gmv2ji68d",
+    "id": "d1791645735068j40etf",
+    "name": "RRB ~ Anti-Alt",
+    "description": "",
+    "descSections": {
+      "overview": "A Red/Blue Midrange deck built for the Gear and Go Solo decks at the LGS: Adam Smasher, Minotaur, Meredith, Rockn' Rockerboy and Over the Edge. It keeps Street Cred ahead so their Minotaur and Royce are blank, blocks with @[Meredith Stout: Stone Cold Corpo|Meredith Stout] and @[Rita Wheeler: No Stupid Questions|Rita Wheeler], protects @[Animals Wrecker] with @[Deadman Transmitter], and steals with @[Modded Kusanagi] and Wrecker. 23 cards carry a Sell Tag.",
+      "early": "Roll the d12 first. @[Industrial Assembly] on it is a Gig at 8 or more on the first turn, a card, and the Street Cred lead that turns on @[Minotaur] and turns off theirs.\nAim is one Blocker with Gear and @[NetWatch Netdriver] on the first face-up Legend: @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Rita Wheeler: No Stupid Questions|Rita Wheeler] with @[Mantis Blades].\nSell first: @[Bonnie and Clyde], the second @[Industrial Assembly] once a Gig is at 8, and @[Nocturne OP55 N1|Nocturne] until the fixer area empties. Never sell the last @[Floor It] or the Gear meant for Wrecker.\nCall @[V: Streetkid|V] when the hand lacks removal; @[Industrial Assembly] and @[Carnage at the Colosseum|Carnage] come back from the trash.",
+      "mid": "Aim is @[Animals Wrecker] with @[Deadman Transmitter] on it. It then survives Over the Edge, Minotaur's play effect and a 10-for-10 trade, and it is out of reach of Maman Brigitte.\nKeep your Street Cred above theirs: @[Dexter DeShawn: Off the Grid|Dexter]'s Spend adds 2 to yours and @[Wakako Okada: Peace and Harmony|Wakako]'s Spend takes 2 off theirs. Their Minotaur and Royce do nothing while you lead, and your @[Minotaur] and @[Carnage at the Colosseum|Carnage] stay live.\nA big Unit that attacks is spent and dies to their 9 power next turn. Attack with Wrecker or @[Chrome Fang] only when the fight removes an attacker or when a Blocker stays ready behind it; @[Modded Kusanagi] is the attacker that never pays that price.\nAgainst a 9-power Unit under Saburo, @[Floor It] at Quick speed or @[Wakako Okada: Peace and Harmony|Wakako]'s Call for -2 drops it back to one Gig per attack. Hold one of them through their turn.\n@[Chrome Fang] is a one-turn shield for the turn after you roll the d12 or the d20 high; @[Nocturne OP55 N1|Nocturne] locks their one big attacker for a turn.",
+      "late": "Aim is two Gigs per attack from @[Animals Wrecker] and an 8-power hit from @[Modded Kusanagi] every turn, with @[Kerry Eurodyne: The Last Rockerboy|Kerry] drawing 2 behind them.\nThe d20 arrives on your sixth turn and is their favourite target. Play @[Chrome Fang] that turn, or keep a Blocker ready, before stealing with it on the table.\n@[Over the Edge] with the d20 high removes their Smasher or Minotaur; @[Carnage at the Colosseum|Carnage] does it earlier while Wrecker stands.\n@[V: Streetkid|V] through Go Solo with @[Mantis Blades] and @[Dexter DeShawn: Off the Grid|Dexter]'s Call is a 10-power attacker when their locks sit on Wrecker; @[Nocturne OP55 N1|Nocturne] takes 2 off the price.",
+      "combos": "@[Animals Wrecker] + @[Deadman Transmitter] - the 10-power attacker their removal cannot clear.\n@[Dexter DeShawn: Off the Grid|Dexter] + @[Wakako Okada: Peace and Harmony|Wakako] - Street Cred control: their Minotaur blank, yours live.\n@[Modded Kusanagi] - 8 power every turn, never on the field for Over the Edge, Minotaur or Chrome Reverie.\n@[Floor It] - one Eddie that turns a two-Gig attack into one and wins a tied fight.",
+      "mulligan": "Keep @[Industrial Assembly] or @[Mantis Blades] with a 4-cost Blocker and a Program to sell; @[Animals Wrecker] and @[Modded Kusanagi] are keeps.\nTwo of @[Animals Wrecker], @[Minotaur] and @[Carnage at the Colosseum|Carnage] with nothing under 4 should go back.",
+      "mulliganFirst": "Look for @[Industrial Assembly] or @[Floor It] with a Call, then @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Rita Wheeler: No Stupid Questions|Rita Wheeler].\nHigh-cost Units in the opening hand are not ideal; one @[Animals Wrecker] is fine, two is not.",
+      "mulliganSecond": "Look for a Blocker ready before their first attack, @[Mantis Blades] for it, and @[Floor It] for their first fight.\n@[NetWatch Netdriver] is worth keeping; it goes on the first face-up Legend.",
+      "sideboard": "Blue Program decks: out 2 @[Deadman Transmitter] and 1 @[Over the Edge], in 2 @[Bonnie and Clyde] and the third @[Chrome Fang]. Their removal bottom-decks, so Deadman does nothing; Bonnie kills Maman, Voodoo Boy and Valentino, and Chrome Fang blanks their small stealers for a turn each.\nGear and fight decks: out 2 @[Chrome Fang], 1 @[Bonnie and Clyde] and 1 @[Nocturne OP55 N1|Nocturne], in 2 @[Detonate] and 2 @[Johnny Silverhand: Never Stop Fighting|Johnny]. Detonate takes Satori, Mantis Blades or Zetatech Faceplate (not Gorilla Arms); Johnny wins every fight against Meredith, Field Operator and Augmented Negotiators.",
+      "notes": "Changes from v1 after three sim games: Evelyn out for @[Wakako Okada: Peace and Harmony|Wakako] (Street Cred control and a -2 at Quick speed), 3 @[Bonnie and Clyde] and 1 @[Kerry Eurodyne: The Last Rockerboy|Kerry] out, 2 @[Deadman Transmitter] and 2 @[Rita Wheeler: No Stupid Questions|Rita Wheeler] in, @[Chrome Fang] down to 2.\nMaxTac Suppression Team turns @[Modded Kusanagi] off for the turn it lands; do not play Kusanagi into it, answer it with @[Carnage at the Colosseum|Carnage] or @[Over the Edge] first.\n@[Kerry Eurodyne: The Last Rockerboy|Kerry] needs a turn to live; play it behind a Blocker or when their Minotaur is blank.\nShort in the collection: one sideboard @[Johnny Silverhand: Never Stop Fighting|Johnny]."
+    },
+    "legendCardIds": [
+      "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+      "99f5e311-8dfd-42a9-abd0-2e50ac68679e"
+    ],
+    "legendPrintingIds": [
+      "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+      "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+      "33ee09a3-4591-4302-9052-6dd5130861c6"
+    ],
+    "sideboard": {
+      "2697ed9d-72fc-4658-9c94-977668911a67": 2,
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 2,
+      "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 1
+    },
+    "swapPlans": [
+      {
+        "id": "p1791673897074x0ih",
+        "name": "Blue Program decks",
+        "swaps": [
+          {
+            "out": "1d8f611c-dd08-48d1-82eb-451d56dcf651",
+            "in": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+            "qty": 2
+          },
+          {
+            "out": "144c3559-3518-4c01-b9e6-af42b7166661",
+            "in": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "id": "p17916738970757dqm",
+        "name": "Gear and fight decks",
+        "swaps": [
+          {
+            "out": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+            "in": "2697ed9d-72fc-4658-9c94-977668911a67",
+            "qty": 2
+          },
+          {
+            "out": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+            "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+            "qty": 1
+          },
+          {
+            "out": "e4af26f0-e25d-4e30-8bac-6701f54f3e97",
+            "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+            "qty": 1
+          }
+        ]
+      }
+    ],
+    "cards": {
+      "e8aa7757-e5e3-4137-8970-4fa546b9bed9": 3,
+      "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 2,
+      "5c4d4058-9185-4305-9e8f-7eca41cf6674": 2,
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+      "066641c5-acc2-45f4-ba67-16a8d20cce73": 2,
+      "920cabc9-f350-4f61-96c6-69e649271456": 2,
+      "65a14367-da52-4578-8162-3c4bac11007d": 2,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "40c98fdc-45d0-458d-be2c-2697dc337ca5": 3,
+      "1d8f611c-dd08-48d1-82eb-451d56dcf651": 2,
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+      "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": 2,
+      "144c3559-3518-4c01-b9e6-af42b7166661": 2,
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 2,
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 1
+    },
+    "cardPrintings": {
+      "e8aa7757-e5e3-4137-8970-4fa546b9bed9": {
+        "81364914-7121-43fc-9610-f2f9736866d1": 3
+      },
+      "3c4cf61f-c469-4ad6-a209-67e715f9d45b": {
+        "d6dd0114-fdd5-452a-b752-3e58a2e137f5": 2
+      },
+      "5c4d4058-9185-4305-9e8f-7eca41cf6674": {
+        "1a986e5a-fe97-408c-81e9-b675c64bdcf9": 2
+      },
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+        "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+      },
+      "066641c5-acc2-45f4-ba67-16a8d20cce73": {
+        "19587d4f-6d47-44fe-b4da-99743e2742f7": 2
+      },
+      "920cabc9-f350-4f61-96c6-69e649271456": {
+        "ee22b73e-8b14-4225-9c86-428cfada892f": 2
+      },
+      "65a14367-da52-4578-8162-3c4bac11007d": {
+        "6b5606c9-12a2-46d6-b13f-a672c6bd5f07": 2
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+      },
+      "40c98fdc-45d0-458d-be2c-2697dc337ca5": {
+        "e2a34251-d2d9-46e0-9840-ca69a358a6ae": 3
+      },
+      "1d8f611c-dd08-48d1-82eb-451d56dcf651": {
+        "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1": 2
+      },
+      "a708461f-1f91-4789-bb0d-96e3de5fcf44": {
+        "161bfaaf-ec85-4142-8538-f5faf9181267": 3
+      },
+      "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": {
+        "171b21b1-90d0-4d3b-a060-740c413b7bf2": 2
+      },
+      "144c3559-3518-4c01-b9e6-af42b7166661": {
+        "6213bf57-92d7-4a64-8d80-948ba53b8d80": 2
+      },
+      "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+        "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 3
+      },
+      "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+        "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 2
+      },
+      "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": {
+        "2ca6ae1f-b10c-439d-a929-cd82c3b1158c": 1
+      }
+    },
+    "links": [],
+    "versions": [
+      {
+        "id": "v1",
+        "name": "v1",
+        "legendCardIds": [
+          "91df478a-91d5-4d42-a624-4c20ec61121c",
+          "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+          "55807eb7-8a8e-44a9-97a2-c8ac993e7b43"
+        ],
+        "legendPrintingIds": [
+          "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+          "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+          "080b22ac-9c3d-48ee-ad4f-4e9579f22adc"
+        ],
+        "cards": {
+          "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 3,
+          "920cabc9-f350-4f61-96c6-69e649271456": 3,
+          "e8aa7757-e5e3-4137-8970-4fa546b9bed9": 3,
+          "066641c5-acc2-45f4-ba67-16a8d20cce73": 2,
+          "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+          "5c4d4058-9185-4305-9e8f-7eca41cf6674": 3,
+          "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+          "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+          "40c98fdc-45d0-458d-be2c-2697dc337ca5": 2,
+          "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+          "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 3,
+          "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": 2,
+          "144c3559-3518-4c01-b9e6-af42b7166661": 2,
+          "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+          "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 2
+        },
+        "sideboard": {
+          "2697ed9d-72fc-4658-9c94-977668911a67": 2,
+          "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+          "65a14367-da52-4578-8162-3c4bac11007d": 2,
+          "ef77dd1f-3abd-4ce2-becc-97dd768a5022": 1
+        },
+        "cardPrintings": {
+          "e8aa7757-e5e3-4137-8970-4fa546b9bed9": {
+            "81364914-7121-43fc-9610-f2f9736866d1": 3
+          },
+          "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": {
+            "2ca6ae1f-b10c-439d-a929-cd82c3b1158c": 3
+          },
+          "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": {
+            "171b21b1-90d0-4d3b-a060-740c413b7bf2": 2
+          },
+          "3c4cf61f-c469-4ad6-a209-67e715f9d45b": {
+            "d6dd0114-fdd5-452a-b752-3e58a2e137f5": 3
+          },
+          "a708461f-1f91-4789-bb0d-96e3de5fcf44": {
+            "161bfaaf-ec85-4142-8538-f5faf9181267": 3
+          },
+          "5c4d4058-9185-4305-9e8f-7eca41cf6674": {
+            "1a986e5a-fe97-408c-81e9-b675c64bdcf9": 3
+          },
+          "28198e04-60e2-4f81-9786-903a9a947d7a": {
+            "84278f23-7323-47d2-b639-23edd76f87ae": 3
+          },
+          "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+            "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+          },
+          "066641c5-acc2-45f4-ba67-16a8d20cce73": {
+            "19587d4f-6d47-44fe-b4da-99743e2742f7": 2
+          },
+          "144c3559-3518-4c01-b9e6-af42b7166661": {
+            "6213bf57-92d7-4a64-8d80-948ba53b8d80": 2
+          },
+          "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+            "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+          },
+          "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+            "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 3
+          },
+          "920cabc9-f350-4f61-96c6-69e649271456": {
+            "ee22b73e-8b14-4225-9c86-428cfada892f": 3
+          },
+          "40c98fdc-45d0-458d-be2c-2697dc337ca5": {
+            "e2a34251-d2d9-46e0-9840-ca69a358a6ae": 2
+          },
+          "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+            "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 2
+          }
+        },
+        "swapPlans": [
+          {
+            "id": "p17916457350684n90",
+            "name": "Gear and fight decks",
+            "swaps": [
+              {
+                "out": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+                "in": "2697ed9d-72fc-4658-9c94-977668911a67",
+                "qty": 2
+              },
+              {
+                "out": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+                "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+                "qty": 2
+              }
+            ]
+          },
+          {
+            "id": "p1791645735068shkr",
+            "name": "Fast decks",
+            "swaps": [
+              {
+                "out": "81fb66ee-b054-4f78-b0c9-7d2c9ff53435",
+                "in": "65a14367-da52-4578-8162-3c4bac11007d",
+                "qty": 2
+              },
+              {
+                "out": "144c3559-3518-4c01-b9e6-af42b7166661",
+                "in": "ef77dd1f-3abd-4ce2-becc-97dd768a5022",
+                "qty": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "vmv30dmr6",
+        "name": "v2 ~ LGS field",
+        "legendCardIds": [
+          "91df478a-91d5-4d42-a624-4c20ec61121c",
+          "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+          "99f5e311-8dfd-42a9-abd0-2e50ac68679e"
+        ],
+        "legendPrintingIds": [
+          "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+          "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
+          "33ee09a3-4591-4302-9052-6dd5130861c6"
+        ],
+        "cards": {
+          "e8aa7757-e5e3-4137-8970-4fa546b9bed9": 3,
+          "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 2,
+          "5c4d4058-9185-4305-9e8f-7eca41cf6674": 2,
+          "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+          "066641c5-acc2-45f4-ba67-16a8d20cce73": 2,
+          "920cabc9-f350-4f61-96c6-69e649271456": 2,
+          "65a14367-da52-4578-8162-3c4bac11007d": 2,
+          "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+          "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+          "40c98fdc-45d0-458d-be2c-2697dc337ca5": 3,
+          "1d8f611c-dd08-48d1-82eb-451d56dcf651": 2,
+          "a708461f-1f91-4789-bb0d-96e3de5fcf44": 3,
+          "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": 2,
+          "144c3559-3518-4c01-b9e6-af42b7166661": 2,
+          "0cd37c43-e722-48eb-91ef-4c1bd1645215": 3,
+          "e4af26f0-e25d-4e30-8bac-6701f54f3e97": 2,
+          "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 1
+        },
+        "sideboard": {
+          "2697ed9d-72fc-4658-9c94-977668911a67": 2,
+          "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+          "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": 2,
+          "3c4cf61f-c469-4ad6-a209-67e715f9d45b": 1
+        },
+        "cardPrintings": {
+          "e8aa7757-e5e3-4137-8970-4fa546b9bed9": {
+            "81364914-7121-43fc-9610-f2f9736866d1": 3
+          },
+          "3c4cf61f-c469-4ad6-a209-67e715f9d45b": {
+            "d6dd0114-fdd5-452a-b752-3e58a2e137f5": 2
+          },
+          "5c4d4058-9185-4305-9e8f-7eca41cf6674": {
+            "1a986e5a-fe97-408c-81e9-b675c64bdcf9": 2
+          },
+          "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+            "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+          },
+          "066641c5-acc2-45f4-ba67-16a8d20cce73": {
+            "19587d4f-6d47-44fe-b4da-99743e2742f7": 2
+          },
+          "920cabc9-f350-4f61-96c6-69e649271456": {
+            "ee22b73e-8b14-4225-9c86-428cfada892f": 2
+          },
+          "65a14367-da52-4578-8162-3c4bac11007d": {
+            "6b5606c9-12a2-46d6-b13f-a672c6bd5f07": 2
+          },
+          "28198e04-60e2-4f81-9786-903a9a947d7a": {
+            "84278f23-7323-47d2-b639-23edd76f87ae": 3
+          },
+          "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+            "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+          },
+          "40c98fdc-45d0-458d-be2c-2697dc337ca5": {
+            "e2a34251-d2d9-46e0-9840-ca69a358a6ae": 3
+          },
+          "1d8f611c-dd08-48d1-82eb-451d56dcf651": {
+            "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1": 2
+          },
+          "a708461f-1f91-4789-bb0d-96e3de5fcf44": {
+            "161bfaaf-ec85-4142-8538-f5faf9181267": 3
+          },
+          "81fb66ee-b054-4f78-b0c9-7d2c9ff53435": {
+            "171b21b1-90d0-4d3b-a060-740c413b7bf2": 2
+          },
+          "144c3559-3518-4c01-b9e6-af42b7166661": {
+            "6213bf57-92d7-4a64-8d80-948ba53b8d80": 2
+          },
+          "0cd37c43-e722-48eb-91ef-4c1bd1645215": {
+            "859c8d1d-b715-4a9a-b7cc-96ecfe135a00": 3
+          },
+          "e4af26f0-e25d-4e30-8bac-6701f54f3e97": {
+            "dfd5d1df-2b47-4ddd-9d6a-35430a892cfc": 2
+          },
+          "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c": {
+            "2ca6ae1f-b10c-439d-a929-cd82c3b1158c": 1
+          }
+        },
+        "swapPlans": [
+          {
+            "id": "p1791673897074x0ih",
+            "name": "Blue Program decks",
+            "swaps": [
+              {
+                "out": "1d8f611c-dd08-48d1-82eb-451d56dcf651",
+                "in": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+                "qty": 2
+              },
+              {
+                "out": "144c3559-3518-4c01-b9e6-af42b7166661",
+                "in": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+                "qty": 1
+              }
+            ]
+          },
+          {
+            "id": "p17916738970757dqm",
+            "name": "Gear and fight decks",
+            "swaps": [
+              {
+                "out": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+                "in": "2697ed9d-72fc-4658-9c94-977668911a67",
+                "qty": 2
+              },
+              {
+                "out": "3eb0f8bf-afb9-42a7-a4fa-710e2eb5c89c",
+                "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+                "qty": 1
+              },
+              {
+                "out": "e4af26f0-e25d-4e30-8bac-6701f54f3e97",
+                "in": "9a4002b0-0f0b-4c9a-a198-691d058b6dcc",
+                "qty": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "activeVersionId": "vmv30dmr6",
+    "descVersionIds": [
+      "vmv30dmr6"
+    ],
+    "tagsVersionIds": [
+      "v1",
+      "vmv30dmr6"
+    ],
+    "createdAt": "2026-10-10T15:22:15.071Z",
+    "updatedAt": "2026-10-10T23:14:14.157Z",
+    "colorTag": "RRB"
+  },
+  {
+    "tags": {
+      "archetype": [
+        "arch-gear",
+        "arch-midrange"
+      ],
+      "creator": [],
+      "misc": []
+    },
+    "groupId": "gmv2ji68d",
+    "id": "d17916504414302z824p",
+    "name": "River's Closet",
+    "description": "",
+    "descSections": {
+      "overview": "A Gear deck: cheap Cyberware on cheap Units, played at Quick speed through @[River Ward: Detective on the Hunt|River Ward] so fights are won in the React Step. @[Johnny Silverhand: Never Stop Fighting|Johnny] with @[Gorilla Arms] is the finisher: win a fight, ready, then take two Gigs.",
+      "early": "Aim is a Unit with Gear by the second turn: @[Swordwise Huscle] or @[Secondhand Bombus] with @[Mantis Blades] or @[Satori: Sword of Saburo|Satori].\n@[Swordwise Huscle] with @[Mantis Blades] draws on every attack.\nSell @[Bootleg Black Sapphire Show|Bootleg] early and @[Live with the Aftermath] when your field is the bigger one.\nHold one cheap Gear for @[River Ward: Detective on the Hunt|River Ward] during their attack.",
+      "mid": "Aim is to win fights, not just steal: @[Satori: Sword of Saburo|Satori] draws on every win, @[Dexter DeShawn: Off the Grid|Dexter]'s Call adds 2 power, @[Muamar Reyes: El Capitán|Muamar Reyes]'s Call makes a Unit survive its fight.\nLook for @[River Ward: Detective on the Hunt|River Ward] plus @[Mantis Blades] on a Blocker in the React Step so their attacker dies.\n@[Meredith Stout: Stone Cold Corpo|Meredith Stout] is the Blocker that beats Legends; @[Secondhand Bombus] is the one you do not mind losing.\n@[Live with the Aftermath] trades a @[Secondhand Bombus] for a Unit of theirs; strongest when they have only one.",
+      "late": "Aim is @[Johnny Silverhand: Never Stop Fighting|Johnny] with @[Gorilla Arms]: win a fight against a spent Unit, ready, then take two Gigs from the Gig area.\n@[Jackie Welles: Ride or Die Choom|Jackie Welles] with even Gigs is another two-Gig attacker; @[Zetatech Faceplate] sets the values up.\n@[Adrenaline Converter] lets a fresh Unit attack when they are 2 Gigs ahead.\n@[Over the Edge] with a high d20 removes the last Blocker.",
+      "combos": "@[Johnny Silverhand: Never Stop Fighting|Johnny] + @[Gorilla Arms] - win, ready, steal two.\n@[River Ward: Detective on the Hunt|River Ward] + @[Mantis Blades] - a free Gear in the React Step that flips a fight.\n@[Swordwise Huscle] + any 2-power Gear - a 3-cost Unit that draws every time it attacks.\n@[Satori: Sword of Saburo|Satori] - the deck's card draw; put it on the Unit that fights the most.",
+      "mulligan": "Keep two cheap Units and two cheap Gear.\nA hand with no Unit under 4, or Gear with nothing to equip, should go back.",
+      "mulliganFirst": "Look for @[Mantis Blades] or @[Secondhand Bombus] with a Call on the first turn and @[Swordwise Huscle] after.\n@[Jackie Welles: Ride or Die Choom|Jackie Welles] and @[Johnny Silverhand: Never Stop Fighting|Johnny] in the opening hand are not ideal.",
+      "mulliganSecond": "Look for @[Meredith Stout: Stone Cold Corpo|Meredith Stout] or @[Secondhand Bombus] plus a Gear to answer their first attacker in the React Step.",
+      "sideboard": "",
+      "notes": "@[Gorilla Arms] takes a Gig whose value you do not already hold, so vary your own Gig values with @[Zetatech Faceplate].\n@[6th Street Recruits] grows a Gig by 6 whenever a stolen Gig is a d6; take their d6 first when it is there.\n@[Muamar Reyes: El Capitán|Muamar Reyes]'s Spend adjusts a Gig by 1 for the @[Jackie Welles: Ride or Die Choom|Jackie Welles] even count."
+    },
+    "legendCardIds": [
+      "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+      "e64e2978-695b-4fc5-b17b-62c710a11c47"
+    ],
+    "legendPrintingIds": [
+      "f4ff466c-22ad-4c50-9f4c-29933e51f739",
+      "3d1e6590-5cdc-4605-8b61-915f21f5514d",
+      "b217ae88-52a6-44b3-b021-964db4534dbd"
+    ],
+    "sideboard": {
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 2
+    },
+    "swapPlans": [],
+    "cards": {
+      "b05cb065-309e-45a3-bbe0-20f4b6ea71aa": 3,
+      "3c4e7fcb-933d-4712-9ce7-6052a14f8e94": 3,
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": 3,
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": 3,
+      "b665e103-456b-4c51-9551-95b0bc87212a": 2,
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": 2,
+      "28198e04-60e2-4f81-9786-903a9a947d7a": 3,
+      "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39": 3,
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": 3,
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": 3,
+      "6dd172b1-2341-473f-8837-a9efe6a75701": 3,
+      "793d9650-0a59-4c89-9d85-05a9d6873d2e": 3,
+      "144c3559-3518-4c01-b9e6-af42b7166661": 2,
+      "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3": 3,
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": 1
+    },
+    "cardPrintings": {
+      "e48c9d39-ef27-4b8f-8690-d75c3a4807b0": {
+        "14e20948-a74b-4a27-a156-d34d8cfb98cc": 3
+      },
+      "9a4002b0-0f0b-4c9a-a198-691d058b6dcc": {
+        "975957a0-9c72-4a67-8260-f86c1c70bfb5": 1
+      },
+      "28198e04-60e2-4f81-9786-903a9a947d7a": {
+        "84278f23-7323-47d2-b639-23edd76f87ae": 3
+      },
+      "21f68be2-c664-4ae0-a7ef-965a3a5a14c8": {
+        "96e76b12-4e53-4e2c-aca3-3fedf6f21e18": 3
+      },
+      "144c3559-3518-4c01-b9e6-af42b7166661": {
+        "6213bf57-92d7-4a64-8d80-948ba53b8d80": 2
+      },
+      "4670d02b-b97a-4771-bb7e-65bdc012530e": {
+        "b12e1665-bf29-4b2c-b92d-865cff227a67": 3
+      },
+      "3c4e7fcb-933d-4712-9ce7-6052a14f8e94": {
+        "1b182145-b318-4b10-85e2-fdbf5afdf3c0": 3
+      },
+      "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39": {
+        "ccb79cf1-fc2d-4b52-bea5-b427583bfe1b": 3
+      },
+      "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3": {
+        "20c23b0f-187d-41d8-9670-b8e603049b3d": 3
+      },
+      "6dd172b1-2341-473f-8837-a9efe6a75701": {
+        "73b6b3d3-6a7f-44ed-a267-add6ae389b5a": 3
+      },
+      "b665e103-456b-4c51-9551-95b0bc87212a": {
+        "93f68b18-e15c-44be-883b-8db7990646f1": 2
+      },
+      "793d9650-0a59-4c89-9d85-05a9d6873d2e": {
+        "b2d6aeff-8fa3-4151-9e67-a83188a78197": 3
+      },
+      "b05cb065-309e-45a3-bbe0-20f4b6ea71aa": {
+        "6a8e2aae-694a-43ea-8e3a-0482046a90c5": 3
+      },
+      "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df": {
+        "25077971-70cc-4524-b7cf-cd8258abc28c": 3
+      },
+      "6720e7fd-d1e8-4c8a-9ff2-f51f62241902": {
+        "dc0a7e03-54b6-4334-965f-27a3d469fed6": 1
+      }
+    },
+    "links": [
+      {
+        "label": "Cyberpunk",
+        "url": "https://cyberpunktcg.com/decks/35740fda-5c53-4c5b-b6cb-f4e15efad4d2"
+      }
+    ],
+    "createdAt": "2026-10-10T16:40:41.432Z",
+    "updatedAt": "2026-10-10T16:42:08.735Z",
+    "colorTag": "YYR"
   }
 ]
