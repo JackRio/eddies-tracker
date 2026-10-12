@@ -18,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <title>From pile to playset — Eddies Blog</title>
 <link rel="icon" href="../images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="../style.css?v=20261015" />
+<link rel="stylesheet" href="../style.css?v=20261018" />
 <link rel="stylesheet" href="../blog.css?v=20261012d" />
 <style>
 /* Card-sorting article components (scoped to .sorting). The article was
@@ -27,11 +27,7 @@
   --mono:ui-monospace,Consolas,monospace;--display:inherit;--body:inherit;--tc:var(--yellow)}
 .sorting .tier .who{grid-column:1/-1;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim)}
 .sorting h2 .jump,.sorting .jump{text-decoration:none}
-/* placeholder */
-.sorting .placeholder{aspect-ratio:16/9;max-width:100%;border:2px dashed var(--yellow);display:grid;place-items:center;text-align:center;padding:20px;
   background:repeating-linear-gradient(-45deg,transparent 0 14px,rgba(252,238,10,.05) 14px 28px)}
-.sorting .placeholder div{font:600 .85rem/1.5 var(--mono);color:var(--yellow);letter-spacing:.06em;text-transform:uppercase}
-.sorting .placeholder small{display:block;color:var(--muted);text-transform:none;letter-spacing:0;font-weight:400;margin-top:6px}
 /* sorting article additions */
 .sorting .chip{display:inline-block;font:600 .68rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);border:1px solid var(--cyan);padding:4px 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
 .sorting .chip.ok{color:var(--yellow);border-color:var(--yellow)}
@@ -151,7 +147,6 @@
 @media (prefers-reduced-motion:reduce){.sorting .setbar{transition:none}}
 @media (max-width:480px){.sorting .sb .lg{display:none}.sorting .sb{font-size:.68rem;letter-spacing:.03em;padding:9px 4px}.sorting .setbar-in{gap:5px}}
 
-.sorting .placeholder.tool{aspect-ratio:auto;padding:36px 20px}
 .sorting .boxfig{display:block;width:100%;max-width:680px;height:auto;margin:0 auto}
 .sorting .flow{display:flex;align-items:stretch;gap:0}
 .sorting .step{flex:1;min-width:0;background:var(--panel);border:1px solid var(--yellow);padding:16px 14px;display:flex;flex-direction:column;gap:6px;}
@@ -203,11 +198,9 @@
       <a class="brand" href="../" aria-label="Eddies home"><img src="../images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
       <nav class="nav-tabs" aria-label="Main">
         <a href="../">Home</a>
-        <a href="../decks.html">Decks</a>
-        <a href="./" class="active">Blogs</a>
-        <a href="../trading.html">Trading</a>
-        <a href="../needed.html">Needed</a>
-        <a href="../record.html">Record</a>
+        <details class="nav-drop"><summary>Decks</summary><div class="nav-menu"><a href="../decks.html">Deck Library</a><a href="../loadout.html">Loadout</a></div></details>
+        <a href="./" class="active" aria-current="page">Blogs</a>
+        <details class="nav-drop"><summary>Collection</summary><div class="nav-menu"><a href="../needed.html">Needed</a><a href="../trading.html">Trading</a><a href="../record.html">Record</a></div></details>
       </nav>
     </div>
   </header>
@@ -302,7 +295,16 @@
 
     <section id="decks">
       <h2><span class="num">A.4</span>Prepare for the table</h2>
-      <div class="placeholder tool"><div>[ Deck prep tool ]<small>Coming soon.</small></div></div>
+      <p>Taking more than one deck to an event? <a href="../loadout.html">Loadout</a> turns your decks into one list of cards to pull from these boxes.</p>
+      <div class="callout tips"><b>What Loadout does</b>
+        <ul>
+          <li>Add decks by pasting a list or a deck link, or pick one from this site. Each deck is checked for legality.</li>
+          <li>Get one card list grouped by colour, with how many copies your decks need.</li>
+          <li>Tick cards off as you pack them.</li>
+          <li>See what to swap between any two decks, and save the list as an image.</li>
+        </ul>
+      </div>
+      <p><a class="cta primary" href="../loadout.html">Open Loadout &rarr;</a></p>
     </section>
 
     <section id="options">
@@ -513,7 +515,7 @@
   </footer>
 
   <script src="../config.js"></script>
-  <script src="../shared.js?v=20261017"></script>
+  <script src="../shared.js?v=20261018"></script>
   <script src="../blog-post.js?v=20261012"></script>
 <script>
 (function(){

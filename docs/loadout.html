@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
+<title>Loadout — Eddies</title>
+<meta name="description" content="Turn several Cyberpunk TCG decks into one list of cards to pack." />
+<link rel="icon" href="images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="style.css?v=20261018" />
+<link rel="stylesheet" href="decks.css?v=20261011" />
+<link rel="stylesheet" href="loadout.css?v=20261025" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="bar">
+      <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="./">Home</a>
+        <details class="nav-drop"><summary class="active">Decks</summary><div class="nav-menu"><a href="decks.html">Deck Library</a><a href="loadout.html" class="active" aria-current="page">Loadout</a></div></details>
+        <a href="blog/">Blogs</a>
+        <details class="nav-drop"><summary>Collection</summary><div class="nav-menu"><a href="needed.html">Needed</a><a href="trading.html">Trading</a><a href="record.html">Record</a></div></details>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-head">
+      <h1><span class="accent">Loadout</span></h1>
+      <p>Combine your decks into one card list.</p>
+    </div>
+
+    <ol class="prep-steps" id="prep-steps">
+      <li data-step="1"><span>1</span> Decks</li>
+      <li data-step="2"><span>2</span> Card list</li>
+      <li data-step="3"><span>3</span> Download</li>
+    </ol>
+
+    <!-- STEP 1: decks -->
+    <section id="step-1" class="prep-step">
+      <div class="prep-import panel-box" id="import-box">
+        <h2>Add a deck</h2>
+        <textarea aria-label="Decklist" id="import-text" class="prep-textarea" rows="8" spellcheck="false" placeholder="Paste a decklist or deck link"></textarea>
+        <div class="prep-import-row">
+          <select id="import-pick" class="prep-select" aria-label="Or pick a deck">
+            <option value="">Or pick a deck</option>
+          </select>
+          <button class="btn btn-primary" id="import-check">Check</button>
+        </div>
+        <div class="status-line error" id="import-error" hidden></div>
+      </div>
+
+      <div id="preview" class="prep-preview panel-box" hidden></div>
+
+      <div id="added" class="prep-added" hidden>
+        <div class="prep-added-head"><h2>Your decks</h2><button class="chip" id="clear-all">Clear all</button></div>
+        <div id="added-list" class="prep-added-list"></div>
+        <p class="prep-hint" id="rec-note" hidden><span class="prep-rec">Recommended</span> needs the fewest swaps to switch to your other decks.</p>
+        <div class="prep-actions">
+          <span class="status-line error" id="next-error" hidden>Remove illegal decks first.</span>
+          <button class="btn btn-primary" id="to-step-2">Next &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 2: combined list -->
+    <section id="step-2" class="prep-step" hidden>
+      <div class="prep-toolbar">
+        <div class="stat-row" id="list-stats"></div>
+        <input id="card-search" class="prep-search" type="search" placeholder="Search cards" aria-label="Search cards" maxlength="60" />
+        <div class="chip-row prep-sort" role="group" aria-label="Sort">
+          <span class="prep-label">Sort</span>
+          <button class="chip active" data-sort="name">A&ndash;Z</button>
+          <button class="chip" data-sort="qty">Copies</button>
+          <button class="chip" data-sort="ram">RAM</button>
+          <button class="chip" data-sort="cost">Cost</button>
+          <button class="chip" data-sort="power">Power</button>
+        </div>
+      </div>
+      <div class="prep-legend-key" id="deck-key"></div>
+      <p class="prep-hint prep-tap-hint">Tap a card to mark it packed.</p>
+      <div id="prep-groups"></div>
+      <div class="prep-actions">
+        <button class="btn" id="back-to-1">&larr; Back</button>
+        <button class="btn btn-primary" id="to-step-3">Next &rarr;</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: download -->
+    <section id="step-3" class="prep-step" hidden>
+      <div class="prep-switch panel-box" id="switch-panel" hidden>
+        <h2>Switch</h2>
+        <div class="prep-switch-pick">
+          <label><span class="prep-label">From</span><select id="switch-from" class="prep-select"></select></label>
+          <button type="button" class="btn" id="switch-flip" aria-label="Swap From and To" title="Swap">&#8644;</button>
+          <label><span class="prep-label">To</span><select id="switch-to" class="prep-select"></select></label>
+        </div>
+        <div id="switch-body"></div>
+      </div>
+      <div class="prep-downloads">
+        <div class="prep-dl panel-box">
+          <h2>Card list</h2>
+          <div class="prep-dl-preview" id="dl-prep-preview"><div class="skeleton-block"></div></div>
+          <button class="btn btn-primary" id="dl-prep">Download PNG</button>
+        </div>
+        <div class="prep-dl panel-box">
+          <h2>Switch guide</h2>
+          <p class="prep-hint" id="dl-switch-hint" hidden></p>
+          <div class="prep-dl-preview" id="dl-switch-preview"><div class="skeleton-block"></div></div>
+          <button class="btn btn-primary" id="dl-switch">Download PNG</button>
+        </div>
+      </div>
+      <div class="prep-actions">
+        <button class="btn" id="back-to-2">&larr; Back</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="prep-toast" id="undo-toast" role="status" hidden></div>
+
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="shared.js?v=20261018"></script>
+  <script src="loadout.js?v=20261025"></script>
+</body>
+</html>

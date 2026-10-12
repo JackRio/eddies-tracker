@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#07070b" />
 <title>Record — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css?v=20261015" />
+<link rel="stylesheet" href="style.css?v=20261018" />
 </head>
 <body>
   <header class="app-header">
@@ -14,11 +14,9 @@
       <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
       <nav class="nav-tabs" aria-label="Main">
         <a href="./">Home</a>
-        <a href="decks.html">Decks</a>
+        <details class="nav-drop"><summary>Decks</summary><div class="nav-menu"><a href="decks.html">Deck Library</a><a href="loadout.html">Loadout</a></div></details>
         <a href="blog/">Blogs</a>
-        <a href="trading.html">Trading</a>
-        <a href="needed.html">Needed</a>
-        <a href="record.html" class="active">Record</a>
+        <details class="nav-drop"><summary class="active">Collection</summary><div class="nav-menu"><a href="needed.html">Needed</a><a href="trading.html">Trading</a><a href="record.html" class="active" aria-current="page">Record</a></div></details>
       </nav>
     </div>
   </header>
@@ -123,7 +121,7 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="shared.js?v=20261011"></script>
+  <script src="shared.js?v=20261018"></script>
   <script src="record.js?v=20261011"></script>
 </body>
 </html>

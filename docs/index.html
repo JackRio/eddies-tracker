@@ -7,7 +7,7 @@
 <meta name="description" content="Cyberpunk TCG decks, trades and the latest community videos in one place." />
 <title>Eddies — Cyberpunk TCG decks, trades and videos</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
-<link rel="stylesheet" href="style.css?v=20261015" />
+<link rel="stylesheet" href="style.css?v=20261018" />
 <link rel="stylesheet" href="decks.css?v=20261017" />
 <link rel="stylesheet" href="home.css?v=20261017" />
 <link rel="stylesheet" href="blog.css?v=20261012d" />
@@ -17,12 +17,10 @@
     <div class="bar">
       <a class="brand" href="./" aria-label="Eddies home"><img src="images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
       <nav class="nav-tabs" aria-label="Main">
-        <a href="./" class="active">Home</a>
-        <a href="decks.html">Decks</a>
+        <a href="./" class="active" aria-current="page">Home</a>
+        <details class="nav-drop"><summary>Decks</summary><div class="nav-menu"><a href="decks.html">Deck Library</a><a href="loadout.html">Loadout</a></div></details>
         <a href="blog/">Blogs</a>
-        <a href="trading.html">Trading</a>
-        <a href="needed.html">Needed</a>
-        <a href="record.html">Record</a>
+        <details class="nav-drop"><summary>Collection</summary><div class="nav-menu"><a href="needed.html">Needed</a><a href="trading.html">Trading</a><a href="record.html">Record</a></div></details>
       </nav>
     </div>
   </header>
@@ -99,11 +97,11 @@
           <p>Every card still missing from a full playset. Filter by color, type or rarity and sort by price.</p>
           <span class="go">Check the list &rarr;</span>
         </a>
-        <a class="tile t-green" href="record.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16v4z"/><path d="m13.5 6.5 4 4"/></svg>
-          <h3>Record</h3>
-          <p>Log a trade or a pickup from your phone. It is queued safely until the next sync.</p>
-          <span class="go">Record a trade &rarr;</span>
+        <a class="tile t-green" href="loadout.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="m9 13.5 2 2 4-4"/></svg>
+          <h3>Loadout</h3>
+          <p>Bringing more than one deck? Get one list of cards to pack and what to swap between decks.</p>
+          <span class="go">Build a loadout &rarr;</span>
         </a>
       </div>
     </section>
@@ -115,7 +113,7 @@
   </footer>
 
   <script src="config.js"></script>
-  <script src="shared.js?v=20261017"></script>
+  <script src="shared.js?v=20261018"></script>
   <script src="home.js?v=20261012b"></script>
 </body>
 </html>

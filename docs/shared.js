@@ -256,3 +256,23 @@ function timeAgo(iso) {
   if (days < 60) return `${Math.floor(days / 7)} weeks ago`;
   return new Date(then).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
 }
+
+// Header dropdowns (.nav-drop <details>): only one open at a time, closed by
+// an outside click or Escape, and opened on hover for mouse users.
+(function setupNavDrops() {
+  const drops = [...document.querySelectorAll('.nav-drop')];
+  if (!drops.length) return;
+  const closeAll = (except) => drops.forEach((d) => { if (d !== except) d.open = false; });
+  drops.forEach((d) => {
+    d.addEventListener('toggle', () => { if (d.open) closeAll(d); });
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      let t;
+      d.addEventListener('mouseenter', () => { clearTimeout(t); d.open = true; });
+      d.addEventListener('mouseleave', () => { t = setTimeout(() => { d.open = false; }, 180); });
+      // Hover already opened it, so a click on the label shouldn't close it again.
+      d.querySelector('summary').addEventListener('click', (e) => { e.preventDefault(); d.open = true; });
+    }
+  });
+  document.addEventListener('click', (e) => { if (!e.target.closest('.nav-drop')) closeAll(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+})();

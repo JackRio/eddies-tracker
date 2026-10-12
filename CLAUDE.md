@@ -346,7 +346,8 @@ immediately, even though the underlying files haven't actually changed yet.
 ### Site structure
 
 - `docs/index.html` + `home.js` + `home.css` — **Home** page (the site
-  root). Hero (the featured deck's three Legends), headline numbers
+  root). Its "What are you here for?" tiles are Decks, Trading, Needed and
+  Loadout (Record was swapped out for Loadout; it's still in the nav). Hero (the featured deck's three Legends), headline numbers
   (`data/stats.json`, `looking.json`, `trade.json`, deck count), **Latest
   videos** (see "Home page videos" below), the featured deck, the freshest
   decks, and tiles explaining each page. Read-only, loads `decks.css` too to
@@ -492,8 +493,13 @@ immediately, even though the underlying files haven't actually changed yet.
   layout change, check `document.documentElement.scrollWidth ===
   clientWidth` at 320, 375 and 768px on every page.
 - Shared header/nav/footer markup is duplicated in each HTML file (no build
-  step). Nav order: Home, Decks, Blogs, Trading, Needed, Record (pages under
-  `docs/blog/` use `../` paths for everything). The footer holds
+  step). Nav: Home, **Decks ▾** (Deck Library = `decks.html`, Loadout =
+  `loadout.html`), Blogs, **Collection ▾** (Needed, Trading, Record). The two
+  dropdowns are `<details class="nav-drop">` (tap works with no JS);
+  `setupNavDrops()` in `shared.js` adds outside-click/Escape close and
+  hover-open for mouse users. The active page's link and its group's
+  `<summary>` both get `class="active"`. Pages under `docs/blog/` use `../`
+  paths for everything. The footer holds
   `#build-info` (`renderBuildInfo()` fills it) and the unofficial-fan-site
   disclaimer.
 - Motion: `stagger()`/`countUp()`/`timeAgo()` in `shared.js`; CSS `.rise`,
@@ -560,6 +566,62 @@ static site can't poll, and browsers can't read YouTube's RSS (no CORS), so:
   iframe), so YouTube loads nothing until someone presses play.
 - `docs/data/stats.json` (`neededMain`, `neededMainCopies`, …) is written by
   `publish:run` for the Home page's headline numbers.
+
+### Loadout page (`docs/loadout.html` + `loadout.js` + `loadout.css`)
+
+Public web version of the Deck Builder's Prep List. Keep its text minimal
+(the user rejected helper paragraphs). Three steps:
+1. **Decks** - add up to 10 (`MAX_DECKS`; the limit is only mentioned when
+   someone tries an 11th), one at a time: paste a Text List or pick one of
+   `published-decks.json`. Each shows a deck view (reuses `decks.css`) with
+   Legal / Not legal and short reasons (`checkDeck()`: 3 Legends, unique
+   Legend names, 40-50 cards, max 3 copies across main + sideboard, RAM
+   ceilings, unknown lines; sideboard != 7 is only a warning). Only legal
+   decks can be added (Add is disabled), and Next / the stepper stay blocked
+   while an older saved deck is illegal (`allLegal()`). The same deck can't be added
+   twice - compared by contents, not name (`deckSignature()`), so a renamed
+   paste is caught too; duplicates in saved state are dropped on load. A different deck
+   with a name already in use becomes "Name (2)" (`uniqueName()`, on add and
+   on rename).
+   Decks can also come from a **deck link** (`cyberpunktcg.com/decks/<id>` or a
+   bare id): `fetchLinkedDeck()` reads netdeck's public
+   `api.netdeck.gg/api/cyberpunk/decks/<id>` (CORS allows the site; private
+   decks 401/404). Its `card_entity_id`s are our `cardId`s. Drag a deck by its
+   letter to reorder (pointer events, `setupReorder()`; native dragstart is
+   blocked or it cancels the drag), or focus the letter and use Arrow Up/Down. "Clear all" asks to confirm. Remove shows a 7s "Removed X · Undo" toast
+   (`showUndo()`) that puts the deck back at its old position, main-deck flag included. One deck is
+   always the **main deck** (first added by default). With 3+ decks the one
+   with the fewest total swaps to all others gets a "Recommended" tag
+   (`swapCost()`/`recommendedMainId()`, unique minimum only). Saved in
+   `localStorage` (`eddies_loadout`) only.
+2. **Card list** - per card, the MAX copies any deck uses (main + sideboard),
+   grouped Legends then by color; sort A-Z / Copies / RAM / Cost / Power. ×N badge bottom-center on
+   the art (keeps the cost/power corners visible), a glowing yellow bar under cards in the main deck (no borders/tags),
+   and per-deck chips (A, B, C...; the main deck's chip is yellow). A short "Tap a card to mark it packed." hint sits above the
+   groups; tap a group heading to collapse it (`eddies_loadout_collapsed`),
+   which also shows "N/M packed" per group. Tap a card to tick it
+   off while packing ("N/M packed", Reset; `eddies_loadout_packed`). Search box
+   filters by name. **Missing N** (red) shows only when the Record page's
+   token (`eddies_gh_token`) is in this browser - i.e. the site owner's device -
+   comparing against `catalog.json`'s main+reserve+extras as of last publish.
+3. **Download** - on top, an on-page **Switch** panel (`renderSwitch()`): From / To
+   dropdowns pick any two decks (From starts on the main deck; ⇄ swaps them;
+   the same deck on both sides just says "Same deck selected."), see Out / In (and sideboard),
+   tap cards to tick them off (ticks reset when either deck changes). Below it, two canvas PNGs (1600px): the card list, and a switch guide
+   (main deck → each other deck: Out / In for main deck + Legends, with
+   sideboard changes in their own block so the counts match).
+
+Safeguards (silent unless hit): pasted text capped at 20k chars / 300
+lines ("Decklist too long."), quantities over 99 count as unknown lines,
+stacked tile layers capped at 4, stored decks rebuilt by `sanitizeDeck()` on
+load, image loads time out after 8s, PNGs scale down past canvas limits
+(30k px tall / ~16M px area for iOS), stale step-3 renders are dropped
+(`renderToken`), and a double-click on Add can't add twice.
+
+Card data comes from `catalog.json`, which `publish:run` now also fills with
+`ram`/`cost`/`power`/`isEddiable` and an `img` flag (printing has an image in
+`docs/images/`); publish also copies one image for any card that had none, so
+every card a pasted list names can be drawn.
 
 ### Trade page (`docs/trade.html` + `trade.js` — unlisted)
 

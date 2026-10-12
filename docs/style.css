@@ -184,15 +184,69 @@ section[id], [id^="grp-"] { scroll-margin-top: 110px; }
 .nav-tabs a:hover { color: var(--text); background: rgba(255, 255, 255, .07); }
 .nav-tabs a.active { background: var(--yellow); color: #0a0a0f; }
 
+/* Dropdown groups (Decks, Collection): a <details> so it opens on tap
+   without JS; shared.js closes it on an outside click / Escape and opens it
+   on hover for mouse users. */
+.nav-drop { position: relative; }
+.nav-drop > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  cursor: pointer;
+  user-select: none;
+  transition: color .15s, background .15s;
+}
+.nav-drop > summary::-webkit-details-marker { display: none; }
+.nav-drop > summary::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform .15s;
+}
+.nav-drop[open] > summary::after { transform: translateY(1px) rotate(-135deg); }
+.nav-drop > summary:hover, .nav-drop[open] > summary { color: var(--text); background: rgba(255, 255, 255, .07); }
+.nav-drop > summary.active { background: var(--yellow); color: #0a0a0f; }
+.nav-drop > summary:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 50;
+  min-width: 180px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-hi);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.nav-drop:last-child .nav-menu { left: auto; right: 0; }
+.nav-menu a { display: block; text-align: left !important; white-space: nowrap; }
+
 /* Phones: logo on the first row, the tabs on their own full-width row, so the
    header never grows wider than the screen. */
 @media (max-width: 720px) {
   .app-header .bar { flex-wrap: wrap; gap: 6px 12px; padding: 8px 12px 8px; }
   .brand { font-size: 15px; }
   .brand img { width: 26px; height: 26px; }
-  .nav-tabs { order: 3; flex: 1 1 100%; margin: 0; gap: 4px; overflow-x: auto; scrollbar-width: none; }
-  .nav-tabs::-webkit-scrollbar { display: none; }
-  .nav-tabs a { flex: 1 0 auto; text-align: center; padding: 8px 6px; font-size: 11px; letter-spacing: .06em; }
+  .nav-tabs { order: 3; flex: 1 1 100%; margin: 0; gap: 4px; }
+  .nav-tabs > a, .nav-drop { flex: 1 1 auto; min-width: 0; }
+  .nav-drop > summary { gap: 5px; }
+  .nav-tabs a, .nav-drop > summary { justify-content: center; text-align: center; padding: 8px 6px; font-size: 11px; letter-spacing: .06em; }
+  .nav-menu { min-width: 160px; }
 }
 
 /* ---- Page container ------------------------------------------------------ */

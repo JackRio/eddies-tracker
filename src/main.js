@@ -899,6 +899,20 @@ ipcMain.handle('publish:run', async () => {
   // are a snapshot as of this publish - the Record page adds any since-
   // queued delta on top itself (pendingDeltaFor) to show what you're about
   // to actually own, not just this stale snapshot.
+  // The Loadout page (docs/loadout.html) draws any card a pasted decklist
+  // names, so make sure every card has at least one published image, then
+  // flag which printings have one (`img`).
+  const docsImgs = new Set(await fs.readdir(docsImagesDir()).catch(() => []));
+  const cardHasImg = new Set(cache.cards.filter((c) => docsImgs.has(`${c.id}.webp`)).map((c) => c.cardId));
+  const missingArt = [];
+  for (const c of cache.cards) {
+    if (cardHasImg.has(c.cardId)) continue;
+    cardHasImg.add(c.cardId);
+    missingArt.push(c.id);
+  }
+  await copyImagesToDocs(missingArt);
+  for (const id of missingArt) docsImgs.add(`${id}.webp`);
+
   const catalog = cache.cards.map((c) => {
     const entry = collection[c.id] || { main: 0, reserve: 0, extras: 0 };
     return {
@@ -914,6 +928,11 @@ ipcMain.handle('publish:run', async () => {
       rulesText: c.rulesText,
       set: c.set,
       collectorNumber: c.collectorNumber,
+      ram: c.ram,
+      cost: c.cost,
+      power: c.power,
+      isEddiable: c.isEddiable,
+      img: docsImgs.has(`${c.id}.webp`),
       cap: mainSetCap(c.cardType),
       main: entry.main || 0,
       reserve: entry.reserve || 0,
