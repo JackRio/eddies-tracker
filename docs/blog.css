@@ -67,15 +67,15 @@ main.post { max-width: var(--page-max); }
 .post-back:hover { color: var(--yellow); }
 
 .post-hero { padding-bottom: 26px; border-bottom: 1px solid var(--border); }
-.post-hero h1 { margin: 12px 0 16px; max-width: 22ch; font-size: clamp(28px, 5.2vw, 64px); line-height: 1.04; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+.post-hero h1 { margin: 12px 0 16px; font-size: clamp(28px, 4.4vw, 58px); line-height: 1.04; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
 .post-hero h1 .accent { color: var(--yellow); }
 .post-hero h1 .alt { color: var(--cyan); }
-.post-hero .dek { margin: 0; max-width: 60ch; color: var(--text-dim); font-size: clamp(15px, 1.6vw, 18px); }
+.post-hero .dek { margin: 0; color: var(--text-dim); font-size: clamp(15px, 1.6vw, 18px); }
 .post-hero .post-meta { margin-top: 18px; }
 
 .prose { display: flex; flex-direction: column; gap: 48px; padding-top: 34px; font-size: clamp(16px, 1.15vw, 18px); line-height: 1.7; }
 .prose section { display: flex; flex-direction: column; gap: 14px; }
-.prose p { margin: 0; }
+.prose p, .prose li { margin: 0; text-wrap: pretty; }
 .prose strong { font-weight: 700; }
 .prose h2 { margin: 0; display: flex; gap: 12px; align-items: baseline; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.2; text-transform: uppercase; letter-spacing: .03em; text-wrap: balance; }
 .prose h2 .num { flex: none; padding: 4px 7px 3px; background: var(--yellow); color: #0a0a0f; font-size: 12px; letter-spacing: .06em; transform: translateY(-3px); }
@@ -85,13 +85,13 @@ main.post { max-width: var(--page-max); }
 .prose .yel { color: var(--yellow); font-weight: 700; }
 
 .post-fig { margin: 6px 0 0; padding: 20px; background: var(--bg-panel); border: 1px solid var(--border); clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px)); }
-.fig-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); }
+.fig-label { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; font-size: 14px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); }
 .fig-label span:last-child { color: var(--yellow); }
-.post-fig figcaption { margin-top: 14px; font-size: 13px; line-height: 1.5; color: var(--text-dim); }
+.post-fig figcaption { margin-top: 16px; font-size: 15px; line-height: 1.5; color: var(--text-dim); text-align: center; text-wrap: balance; }
 .post-fig > img { display: block; width: 100%; height: auto; border: 1px solid var(--border); }
 
 .stacks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 22px; }
-.stacks h4 { margin: 0 0 10px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.stacks h4 { margin: 0 0 10px; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; }
 .stacks h4.cy { color: var(--cyan); }
 .stacks svg { display: block; width: 100%; height: auto; }
 
@@ -109,23 +109,28 @@ main.post { max-width: var(--page-max); }
    yellow with a glow (chase cards). --tc drives the border, number, bullets
    and buttons of each tier. */
 .tier { --tc: var(--text-dim); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 20px; padding: 22px 24px; background: var(--bg-panel); border: 1px solid color-mix(in srgb, var(--tc) 55%, var(--border)); border-left: 3px solid var(--tc); }
-.tier .lvl { grid-row: span 3; min-width: 48px; font-size: 38px; font-weight: 900; line-height: 1; color: var(--tc); }
+/* Number and title share the first row; the list and buttons run the full width under them. */
+.tier .lvl { min-width: 48px; font-size: 38px; font-weight: 900; line-height: 1; color: var(--tc); }
+.tier h3 { align-self: center; }
+.tier ul, .tier .shop { grid-column: 1 / -1; }
 .tier.t1 { --tc: #b9b9c6; }
 .tier.t2 { --tc: var(--cyan); }
 .tier.t3 { --tc: var(--yellow); box-shadow: 0 0 32px -14px var(--yellow); }
-.tier ul { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.tier ul { margin: 12px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .tier li { position: relative; padding-left: 20px; font-size: .95em; }
 .tier li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; background: var(--tc); clip-path: polygon(0 0, 100% 50%, 0 100%); }
 .shop { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.prose .shop a { padding: 9px 12px; background: var(--tc); color: #0a0a0f; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%); }
-.prose .shop a.ghost { background: transparent; color: var(--tc); box-shadow: inset 0 0 0 1px var(--tc); }
+/* A real 1px border on both buttons: a clipped corner used to cut the outlined
+   button's border off at the corner. */
+.prose .shop a { padding: 9px 12px; border: 1px solid var(--tc); background: var(--tc); color: #0a0a0f; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+.prose .shop a.ghost { background: transparent; color: var(--tc); }
 .prose .shop a:hover { filter: brightness(1.12); }
 
 .take { padding: 26px 24px; background: var(--yellow); color: #0a0a0f; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%); }
 .take h2 { color: #0a0a0f; }
 .take p { margin-top: 4px; font-weight: 600; }
+.prose .take { gap: 8px; }
 
-.prose .post-note { font-size: 13px; color: var(--text-dim); }
 .post-end { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
 
 /* Phones: edge-to-edge blocks with less padding, so the text gets the width. */
@@ -134,9 +139,11 @@ main.post { max-width: var(--page-max); }
   .post-hero { padding-bottom: 20px; }
   .prose { gap: 36px; padding-top: 26px; }
   .post-fig { margin-inline: calc(var(--gutter) * -1); padding: 14px var(--gutter); clip-path: none; border-inline: 0; }
+  .fig-label { font-size: 12px; }
+  .post-fig figcaption { font-size: 13px; }
   .stacks { gap: 18px; }
-  .tier { grid-template-columns: 1fr; padding: 16px; }
-  .tier .lvl { grid-row: auto; font-size: 30px; }
+  .tier { padding: 16px; gap: 4px 14px; }
+  .tier .lvl { font-size: 30px; }
   .readout { font-size: 14px; }
   .readout th, .readout td { padding: 10px 8px; }
   .readout td:first-child { white-space: normal; min-width: 76px; }

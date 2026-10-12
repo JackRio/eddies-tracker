@@ -521,6 +521,12 @@ blog" section (`renderBlog()` in `home.js`, above the videos) shows the
 newest post with "Read now" and "All posts". Styles for all three are in
 `docs/blog.css`. Adding a post = new HTML page + an entry in `blog.json`; no
 publish step from the desktop app is involved.
+Each post carries `tags` (in `blog.json`, plus `article:tag` metas and
+`data-tags` on `.prose`) for a future article filter - not built yet. The hero
+sits inside the article column (`.post-main`), and "The short version" box
+goes first in the article. Body text fills the column (no `ch` cap) with
+`text-wrap: pretty`; the post was also hand-edited so no paragraph ends on a
+1-2 word line at 1366-1920px - re-check that after editing a post's text.
 
 ### Home page videos (`docs/data/videos.json`)
 
