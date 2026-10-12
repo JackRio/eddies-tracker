@@ -78,6 +78,18 @@
   ],
   "videos": [
     {
+      "id": "-HrvdH85yG0",
+      "title": "Programs, PrOgRAMs, PROGRAMS!! Our Cyberpunk TCG Final Programs Tier List",
+      "published": "2026-10-12T11:30:25+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "fN0eE7vDgdg",
+      "title": "The Cyberpunk TCG used to be so different back in Alpha",
+      "published": "2026-10-11T23:55:00+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
       "id": "Um8O8FX7E-o",
       "title": "Fixing your decks (and testing one of them)!",
       "published": "2026-10-11T07:08:41+00:00",
@@ -342,12 +354,6 @@
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
-      "id": "TXZX1D0IxLM",
-      "title": "Sideboards are here for the Cyberpunk TCG (and some other stuff)",
-      "published": "2026-09-26T01:04:25+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "tYtJQzwXpuw",
       "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
       "published": "2026-09-25T16:00:39+00:00",
@@ -466,12 +472,6 @@
       "title": "CTCG Beta Pre-Release Event RECAP - My Thoughts & Pulls",
       "published": "2026-09-13T15:00:16+00:00",
       "channelId": "UCJavloH4k2Wyyf4eElRac2A"
-    },
-    {
-      "id": "IObKejLH6vE",
-      "title": "Beta pre release experience, 7 wins between us and Ste took the crown! Decklist and pulls shown!",
-      "published": "2026-09-12T20:24:59+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "opXdaRLM9IU",
@@ -802,10 +802,6 @@
       "short": false
     },
     {
-      "id": "TXZX1D0IxLM",
-      "short": false
-    },
-    {
       "id": "0seGZwHjEzY",
       "short": false
     },
@@ -1042,10 +1038,6 @@
       "short": false
     },
     {
-      "id": "IObKejLH6vE",
-      "short": false
-    },
-    {
       "id": "eVR1RPT-obs",
       "short": false
     },
@@ -1228,7 +1220,15 @@
     {
       "id": "8J4gdFDty7A",
       "short": false
+    },
+    {
+      "id": "fN0eE7vDgdg",
+      "short": false
+    },
+    {
+      "id": "-HrvdH85yG0",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-11T13:00:23.549Z"
+  "updatedAt": "2026-10-12T15:38:13.532Z"
 }
