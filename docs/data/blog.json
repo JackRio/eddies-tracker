@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "slug": "card-curving",
+      "title": "Are your cards curving? Why it happens and what to do",
+      "dek": "What's inside a card, why foils and non-foils bend differently, and how to keep your bulk, your deck and your chase cards flat.",
+      "category": "Card care",
+      "date": "2026-10-12",
+      "readMin": 4,
+      "cover": "images/blog/curl-dome-vs-taco.jpg",
+      "coverAlt": "Side view of a non-foil card bowed like a dome next to a foil card curled like a taco."
+    }
+  ]
+}

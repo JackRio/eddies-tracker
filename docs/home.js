@@ -335,11 +335,32 @@ function setupVideoEvents() {
   });
 }
 
+// ---- Latest blog post ----------------------------------------------------------
+// data/blog.json lists the posts (blog/<slug>.html); Home shows the newest one
+// as a wide card, linking to the post itself, with "All posts" in the header.
+function renderBlog(blog) {
+  const latest = (blog?.posts || []).slice().sort((a, b) => b.date.localeCompare(a.date))[0];
+  if (!latest) return;
+  const date = new Date(`${latest.date}T12:00:00`).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+  el('home-blog').innerHTML = `
+    <a class="post-card lead" href="blog/${encodeURIComponent(latest.slug)}.html">
+      <div class="post-cover"><img src="${escapeHtml(latest.cover)}" alt="${escapeHtml(latest.coverAlt || '')}" loading="lazy" /></div>
+      <div class="post-body">
+        <div class="post-kicker">${escapeHtml(latest.category || 'Guide')}<span class="badge-latest">Latest</span></div>
+        <h2>${escapeHtml(latest.title)}</h2>
+        <p>${escapeHtml(latest.dek)}</p>
+        <div class="post-meta"><span>${date}</span><span>${latest.readMin} min read</span></div>
+        <span class="post-go">Read now &rarr;</span>
+      </div>
+    </a>`;
+  el('blog-section').hidden = false;
+}
+
 // ---- Init -------------------------------------------------------------------
 async function init() {
   renderBuildInfo();
   const get = (path, fallback) => fetchJson(path).catch(() => fallback);
-  const [videosJson, decksJson, detailsJson, metaJson, stats, looking, selling, showcaseJson] = await Promise.all([
+  const [videosJson, decksJson, detailsJson, metaJson, stats, looking, selling, showcaseJson, blogJson] = await Promise.all([
     get('data/videos.json', { channels: [], videos: [] }),
     get('data/published-decks.json', []),
     get('data/deck-card-details.json', {}),
@@ -347,7 +368,8 @@ async function init() {
     get('data/stats.json', null),
     get('data/looking.json', null),
     get('data/trade.json', null),
-    get('data/showcase.json', null)
+    get('data/showcase.json', null),
+    get('data/blog.json', null)
   ]);
   videoData = { channels: videosJson.channels || [], videos: videosJson.videos || [] };
   decks = decksJson;
@@ -357,6 +379,7 @@ async function init() {
   showcase = showcaseJson?.cards || [];
   setupHero();
   renderStats(stats, looking, selling);
+  renderBlog(blogJson);
   renderVideos();
   setupVideoEvents();
   renderDecks();

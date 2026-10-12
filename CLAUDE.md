@@ -492,7 +492,8 @@ immediately, even though the underlying files haven't actually changed yet.
   layout change, check `document.documentElement.scrollWidth ===
   clientWidth` at 320, 375 and 768px on every page.
 - Shared header/nav/footer markup is duplicated in each HTML file (no build
-  step). Nav order: Home, Decks, Trading, Needed, Record. The footer holds
+  step). Nav order: Home, Decks, Blog, Trading, Needed, Record (pages under
+  `docs/blog/` use `../` paths for everything). The footer holds
   `#build-info` (`renderBuildInfo()` fills it) and the unofficial-fan-site
   disclaimer.
 - Motion: `stagger()`/`countUp()`/`timeAgo()` in `shared.js`; CSS `.rise`,
@@ -503,6 +504,20 @@ immediately, even though the underlying files haven't actually changed yet.
 - Local assets are linked with `?v=<date>` (GitHub Pages caches 10 minutes
   and can't send other cache headers). Bump the date in every HTML file's
   `<link>`/`<script>` tags when a CSS/JS file changes.
+
+### Blog (`docs/blog/`, `docs/data/blog.json`)
+
+Hand-written articles. `docs/data/blog.json` (`{ posts: [{ slug, title, dek,
+category, date, readMin, cover, coverAlt }] }`, paths relative to the site
+root) is the index; each post is a static page at `docs/blog/<slug>.html`
+(copy `card-curving.html` as the template: shared header/footer, `.prose`
+article, `.post-fig`/`.readout`/`.callout`/`.tier`/`.take` blocks). Post
+images go in `docs/images/blog/`. `docs/blog/index.html` + `docs/blog.js`
+list every post (newest first, newest as a wide card); Home's "From the
+blog" section (`renderBlog()` in `home.js`, above the videos) shows the
+newest post with "Read now" and "All posts". Styles for all three are in
+`docs/blog.css`. Adding a post = new HTML page + an entry in `blog.json`; no
+publish step from the desktop app is involved.
 
 ### Home page videos (`docs/data/videos.json`)
 

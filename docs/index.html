@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css?v=20261015" />
 <link rel="stylesheet" href="decks.css?v=20261017" />
 <link rel="stylesheet" href="home.css?v=20261017" />
+<link rel="stylesheet" href="blog.css?v=20261012" />
 </head>
 <body>
   <header class="app-header">
@@ -18,6 +19,7 @@
       <nav class="nav-tabs" aria-label="Main">
         <a href="./" class="active">Home</a>
         <a href="decks.html">Decks</a>
+        <a href="blog/">Blog</a>
         <a href="trading.html">Trading</a>
         <a href="needed.html">Needed</a>
         <a href="record.html">Record</a>
@@ -41,6 +43,15 @@
     </section>
 
     <div class="stat-tiles" id="home-stats"></div>
+
+    <!-- LATEST BLOG POST -->
+    <section id="blog-section" aria-labelledby="blog-title" hidden>
+      <div class="section-head">
+        <h2 id="blog-title">From the blog</h2>
+        <a class="more" href="blog/">All posts &rarr;</a>
+      </div>
+      <div class="post-grid" id="home-blog"></div>
+    </section>
 
     <!-- VIDEOS -->
     <section id="videos-section" aria-labelledby="videos-title">
@@ -105,6 +116,6 @@
 
   <script src="config.js"></script>
   <script src="shared.js?v=20261017"></script>
-  <script src="home.js?v=20261017"></script>
+  <script src="home.js?v=20261012b"></script>
 </body>
 </html>
