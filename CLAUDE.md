@@ -573,7 +573,9 @@ Public web version of the Deck Builder's Prep List. Keep its text minimal
 (the user rejected helper paragraphs). Three steps:
 1. **Decks** - add up to 10 (`MAX_DECKS`; the limit is only mentioned when
    someone tries an 11th), one at a time: paste a Text List or pick one of
-   `published-decks.json`. Each shows a deck view (reuses `decks.css`) with
+   `published-decks.json`. Each shows a compact deck check (Add at the top, status, Legends, key
+   numbers; the full card list + charts behind "Show cards & stats", open by
+   default only when the deck is illegal; reuses `decks.css`) with
    Legal / Not legal and short reasons (`checkDeck()`: 3 Legends, unique
    Legend names, 40-50 cards, max 3 copies across main + sideboard, RAM
    ceilings, unknown lines; sideboard != 7 is only a warning). Only legal

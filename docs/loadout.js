@@ -500,25 +500,39 @@ function deckViewHtml(deck, check) {
 
   const issues = [...check.errors.map((t) => `<li class="err">${escapeHtml(t)}</li>`), ...check.warnings.map((t) => `<li class="warn">${escapeHtml(t)}</li>`)].join('');
 
+  const t = (k) => s.typeCounts[k] || 0;
+  // Compact first: status, Legends and the key numbers, so Add stays in view.
+  // The full card list and charts sit behind a toggle (open when the deck
+  // has problems, so the red-marked cards are visible).
   return `
     <div class="deck-status ${check.legal ? '' : 'invalid'}">
       <div class="deck-status-sub">${deck.legends.length} Legends · ${s.total} cards${sumOf(deck.sideboard) ? ` · ${sumOf(deck.sideboard)} sideboard` : ''}</div>
       <div class="deck-status-badge">${check.legal ? 'Legal' : 'Not legal'}</div>
     </div>
     ${issues ? `<ul class="prep-issues">${issues}</ul>` : ''}
-    <div class="detail-layout">
-      <aside class="detail-side">
-        <div class="deck-section"><h3>Legends <span class="count-badge">${deck.legends.length}</span></h3><div class="tile-grid">${legends}${emptyLegends}</div></div>
-        <div class="stat-row">${ram}<span class="pill">avg cost <b>${s.avg.toFixed(1)}</b></span></div>
-        <div class="deck-section"><h3>Eddie Cost Curve</h3>${costCurveHtml(s.costCounts)}</div>
-        <div class="donut-row">
-          ${donutHtml('Sellable vs Unsellable', [{ label: 'Sellable', count: s.sellable, color: 'var(--green)' }, { label: 'Unsellable', count: s.total - s.sellable, color: 'var(--red)' }])}
-          ${donutHtml('Card Types', TYPE_ORDER.map((t) => ({ label: t + 's', count: s.typeCounts[t] || 0, color: TYPE_COLORS[t] })))}
-          ${donutHtml('Colors', COLOR_ORDER.map((c) => ({ label: c, count: s.colorCounts[c] || 0, color: DECK_COLOR_VARS[c] })))}
-        </div>
-      </aside>
-      <div class="detail-main">${sections}${sideHtml}</div>
-    </div>`;
+    <div class="prep-summary">
+      <div class="tile-grid prep-summary-legends">${legends}${emptyLegends}</div>
+      <div class="stat-row prep-summary-stats">
+        ${ram}
+        <span class="pill"><b>${t('Unit')}</b> Units · <b>${t('Gear')}</b> Gear · <b>${t('Program')}</b> Programs</span>
+        <span class="pill">avg cost <b>${s.avg.toFixed(1)}</b></span>
+        <span class="pill"><b>${s.total ? Math.round((s.sellable / s.total) * 100) : 0}%</b> sellable</span>
+      </div>
+    </div>
+    <details class="prep-more" ${check.legal ? '' : 'open'}>
+      <summary>Show cards &amp; stats</summary>
+      <div class="detail-layout">
+        <aside class="detail-side">
+          <div class="deck-section"><h3>Eddie Cost Curve</h3>${costCurveHtml(s.costCounts)}</div>
+          <div class="donut-row">
+            ${donutHtml('Sellable vs Unsellable', [{ label: 'Sellable', count: s.sellable, color: 'var(--green)' }, { label: 'Unsellable', count: s.total - s.sellable, color: 'var(--red)' }])}
+            ${donutHtml('Card Types', TYPE_ORDER.map((k) => ({ label: k + 's', count: s.typeCounts[k] || 0, color: TYPE_COLORS[k] })))}
+            ${donutHtml('Colors', COLOR_ORDER.map((c) => ({ label: c, count: s.colorCounts[c] || 0, color: DECK_COLOR_VARS[c] })))}
+          </div>
+        </aside>
+        <div class="detail-main">${sections}${sideHtml}</div>
+      </div>
+    </details>`;
 }
 
 function renderPreview() {
