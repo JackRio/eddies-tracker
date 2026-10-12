@@ -511,7 +511,10 @@ Hand-written articles. `docs/data/blog.json` (`{ posts: [{ slug, title, dek,
 category, date, readMin, cover, coverAlt }] }`, paths relative to the site
 root) is the index; each post is a static page at `docs/blog/<slug>.html`
 (copy `card-curving.html` as the template: shared header/footer, `.prose`
-article, `.post-fig`/`.readout`/`.callout`/`.tier`/`.take` blocks). Post
+article inside `.post-layout`, `.post-fig`/`.readout`/`.callout`/`.tier`/
+`.take` blocks, `blog-post.js` for the sticky "On this page" sidebar built
+from `section[id] > h2`, desktop >= 1100px only). Posts use the full
+`--page-max` width like every other page; on phones figures go edge to edge. Post
 images go in `docs/images/blog/`. `docs/blog/index.html` + `docs/blog.js`
 list every post (newest first, newest as a wide card); Home's "From the
 blog" section (`renderBlog()` in `home.js`, above the videos) shows the

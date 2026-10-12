@@ -43,21 +43,39 @@
 }
 
 /* ---- Article -------------------------------------------------------------- */
-main.post { max-width: 820px; }
+/* Wide page (same --page-max as the rest of the site): the article column grows with the screen, with a
+   sticky "On this page" sidebar beside it on desktop. Paragraphs keep a
+   readable line length; figures, tables and tiers use the full column. */
+main.post { max-width: var(--page-max); }
+
+.post-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 56px; }
+@media (min-width: 1100px) {
+  .post-layout { grid-template-columns: minmax(0, 1fr) 260px; }
+}
+
+.post-toc { display: none; }
+@media (min-width: 1100px) {
+  .post-toc { display: block; position: sticky; top: 96px; align-self: start; padding: 34px 0 0; }
+}
+.toc-title { margin-bottom: 12px; font-size: 11px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); }
+.post-toc ol { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--border); }
+.post-toc a { display: block; margin-left: -1px; padding: 7px 0 7px 14px; border-left: 2px solid transparent; font-size: 13px; font-weight: 600; line-height: 1.35; color: var(--text-dim); transition: color .15s, border-color .15s; }
+.post-toc a:hover { color: var(--text); }
+.post-toc a.on { color: var(--yellow); border-left-color: var(--yellow); }
 
 .post-back { display: inline-block; margin-bottom: 18px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .post-back:hover { color: var(--yellow); }
 
 .post-hero { padding-bottom: 26px; border-bottom: 1px solid var(--border); }
-.post-hero h1 { margin: 12px 0 16px; font-size: clamp(30px, 5.6vw, 54px); line-height: 1.04; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+.post-hero h1 { margin: 12px 0 16px; max-width: 22ch; font-size: clamp(28px, 5.2vw, 64px); line-height: 1.04; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
 .post-hero h1 .accent { color: var(--yellow); }
 .post-hero h1 .alt { color: var(--cyan); }
 .post-hero .dek { margin: 0; max-width: 60ch; color: var(--text-dim); font-size: clamp(15px, 1.6vw, 18px); }
 .post-hero .post-meta { margin-top: 18px; }
 
-.prose { display: flex; flex-direction: column; gap: 44px; padding-top: 34px; font-size: 16.5px; line-height: 1.7; }
+.prose { display: flex; flex-direction: column; gap: 48px; padding-top: 34px; font-size: clamp(16px, 1.15vw, 18px); line-height: 1.7; }
 .prose section { display: flex; flex-direction: column; gap: 14px; }
-.prose p { margin: 0; max-width: 68ch; }
+.prose p { margin: 0; max-width: 80ch; }
 .prose strong { font-weight: 700; }
 .prose h2 { margin: 0; display: flex; gap: 12px; align-items: baseline; font-size: clamp(20px, 2.6vw, 26px); line-height: 1.2; text-transform: uppercase; letter-spacing: .03em; text-wrap: balance; }
 .prose h2 .num { flex: none; padding: 4px 7px 3px; background: var(--yellow); color: #0a0a0f; font-size: 12px; letter-spacing: .06em; transform: translateY(-3px); }
@@ -107,10 +125,23 @@ main.post { max-width: 820px; }
 .post-note { font-size: 12px; color: var(--text-dim); }
 .post-end { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px; }
 
-@media (max-width: 520px) {
-  .tier { grid-template-columns: 1fr; }
-  .tier .lvl { grid-row: auto; }
+/* Phones: edge-to-edge blocks with less padding, so the text gets the width. */
+@media (max-width: 600px) {
+  .post-back { margin-bottom: 12px; }
+  .post-hero { padding-bottom: 20px; }
+  .prose { gap: 36px; padding-top: 26px; }
+  .post-fig { margin-inline: calc(var(--gutter) * -1); padding: 14px var(--gutter); clip-path: none; border-inline: 0; }
+  .stacks { gap: 18px; }
+  .tier { grid-template-columns: 1fr; padding: 16px; }
+  .tier .lvl { grid-row: auto; font-size: 30px; }
+  .tier li { font-size: 14.5px; }
+  .readout { font-size: 14px; }
+  .readout th, .readout td { padding: 10px 8px; }
+  .readout td:first-child { white-space: normal; min-width: 76px; }
+  .callout { padding: 12px 14px; }
+  .take { padding: 20px 18px; }
   .prose h2 { flex-direction: column; gap: 8px; }
+  .post-end .cta { flex: 1 1 140px; }
 }
 
 /* ---- Home teaser ---------------------------------------------------------- */
