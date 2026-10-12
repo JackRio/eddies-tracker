@@ -858,31 +858,37 @@ function renderStep2() {
   el('deck-key').innerHTML =
     decks.map((d, i) => `<span class="prep-key-item"><span class="prep-use ${d.id === mainDeckId ? 'is-main' : ''}" style="--mark:${markOf(i)}">${letterOf(i)}</span> ${escapeHtml(d.name)}${d.id === mainDeckId ? ' <em>(main)</em>' : ''}</span>`).join('<span class="sep"></span>') +
     '';
+  const tile = (r) => `
+    <button type="button" class="prep-card ${r.main ? 'in-main' : ''} ${packed.has(r.card.cardId) ? 'is-packed' : ''}" data-pack="${r.card.cardId}" aria-pressed="${packed.has(r.card.cardId)}" aria-label="${escapeHtml(r.card.displayName)} ×${r.need}">
+      <div class="prep-card-art">
+        <img src="${imageUrl(r.card.imgId)}" alt="" loading="lazy" />
+        <span class="prep-qty">×${r.need}</span>
+        ${missingOf(r) ? `<span class="prep-missing" title="You own ${owned.get(r.card.cardId) || 0}">Missing ${missingOf(r)}</span>` : ''}
+        <span class="prep-check" aria-hidden="true">✓</span>
+      </div>
+      <div class="prep-card-name" title="${escapeHtml(r.card.displayName)}">${escapeHtml(r.card.displayName)}</div>
+      <div class="prep-card-use">${usageHtml(r)}</div>
+    </button>`;
   el('prep-groups').innerHTML = (shown.length ? '' : '<p class="prep-hint">No cards match.</p>') + shown
     .map(
       (g) => `
       <section class="prep-group ${collapsed.has(g.key) ? 'is-collapsed' : ''}" style="--group:${g.color}">
         <h3><button type="button" class="prep-group-toggle" data-group="${g.key}" aria-expanded="${!collapsed.has(g.key)}">${escapeHtml(g.title)} <span class="count-badge">${g.list.reduce((n, r) => n + r.need, 0)}</span>${packedIn(g.list)}</button></h3>
-        <div class="prep-grid">
-          ${g.list
-            .map(
-              (r) => `
-            <button type="button" class="prep-card ${r.main ? 'in-main' : ''} ${packed.has(r.card.cardId) ? 'is-packed' : ''}" data-pack="${r.card.cardId}" aria-pressed="${packed.has(r.card.cardId)}" aria-label="${escapeHtml(r.card.displayName)} ×${r.need}">
-              <div class="prep-card-art">
-                <img src="${imageUrl(r.card.imgId)}" alt="" loading="lazy" />
-                <span class="prep-qty">×${r.need}</span>
-                ${missingOf(r) ? `<span class="prep-missing" title="You own ${owned.get(r.card.cardId) || 0}">Missing ${missingOf(r)}</span>` : ''}
-                <span class="prep-check" aria-hidden="true">✓</span>
-              </div>
-              <div class="prep-card-name" title="${escapeHtml(r.card.displayName)}">${escapeHtml(r.card.displayName)}</div>
-              <div class="prep-card-use">${usageHtml(r)}</div>
-            </button>`
-            )
+        <div class="prep-group-body">
+          ${typeSubgroups(g)
+            .map((sg) => `${sg.title ? `<h4 class="prep-sub">${sg.title} <span>${sg.list.reduce((n, r) => n + r.need, 0)}</span></h4>` : ''}<div class="prep-grid">${sg.list.map(tile).join('')}</div>`)
             .join('')}
         </div>
       </section>`
     )
     .join('');
+}
+
+// Colour groups split into Units / Gear / Programs (keeping the chosen sort
+// inside each); Legends stay one block.
+function typeSubgroups(g) {
+  if (g.key === 'Legend') return [{ title: null, list: g.list }];
+  return TYPE_ORDER.map((t) => ({ title: t === 'Gear' ? 'Gear' : `${t}s`, list: g.list.filter((r) => r.card.cardType === t) })).filter((sg) => sg.list.length);
 }
 
 // "3/12 packed" next to a group's count once anything in it is ticked.
@@ -1141,12 +1147,21 @@ function drawPrepPng(ctx, imgs) {
   const ch = Math.round((cw * 88) / 63) + 58;
   for (const g of groups) {
     y = groupHeading(ctx, y + 8, g.title, g.color, g.list.reduce((n, r) => n + r.need, 0));
-    g.list.forEach((r, i) => {
-      const cx = PAD + (i % cols) * (cw + gap);
-      const cy = y + Math.floor(i / cols) * (ch + gap);
-      drawCard(ctx, imgs, cx, cy, cw, r.card, { qty: r.need, main: r.main, per: decks.length > 1 ? r.per : null });
-    });
-    y += Math.ceil(g.list.length / cols) * (ch + gap) + 10;
+    for (const sg of typeSubgroups(g)) {
+      if (sg.title) {
+        ctx.font = `800 18px ${FONT}`;
+        ctx.fillStyle = '#9494a3';
+        ctx.fillText(`${sg.title.toUpperCase()}  ${sg.list.reduce((n, r) => n + r.need, 0)}`, PAD, y + 16);
+        y += 30;
+      }
+      sg.list.forEach((r, i) => {
+        const cx = PAD + (i % cols) * (cw + gap);
+        const cy = y + Math.floor(i / cols) * (ch + gap);
+        drawCard(ctx, imgs, cx, cy, cw, r.card, { qty: r.need, main: r.main, per: decks.length > 1 ? r.per : null });
+      });
+      y += Math.ceil(sg.list.length / cols) * (ch + gap) + 6;
+    }
+    y += 4;
   }
   return y + PAD;
 }

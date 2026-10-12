@@ -597,7 +597,8 @@ Public web version of the Deck Builder's Prep List. Keep its text minimal
    (`swapCost()`/`recommendedMainId()`, unique minimum only). Saved in
    `localStorage` (`eddies_loadout`) only.
 2. **Card list** - per card, the MAX copies any deck uses (main + sideboard),
-   grouped Legends then by color; sort A-Z / Copies / RAM / Cost / Power. ×N badge bottom-center on
+   grouped Legends then by color, each color split into Units / Gear /
+   Programs subgroups (`typeSubgroups()`, also in the PNG); sort A-Z / Copies / RAM / Cost / Power. ×N badge bottom-center on
    the art (keeps the cost/power corners visible), a glowing yellow bar under cards in the main deck (no borders/tags),
    and per-deck chips (A, B, C...; the main deck's chip is yellow). A short "Tap a card to mark it packed." hint sits above the
    groups; tap a group heading to collapse it (`eddies_loadout_collapsed`),
