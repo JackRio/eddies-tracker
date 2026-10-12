@@ -521,6 +521,7 @@ blog" section (`renderBlog()` in `home.js`, above the videos) shows the
 newest post with "Read now" and "All posts". Styles for all three are in
 `docs/blog.css`. Adding a post = new HTML page + an entry in `blog.json`; no
 publish step from the desktop app is involved.
+`card-sorting.html` is the exception: its four set tabs (Main/Reserve/Bulk/Chase) swap the article body, so it has no TOC sidebar, and its own components are scoped under `.sorting` in an inline `<style>`.
 Each post carries `tags` (in `blog.json`, plus `article:tag` metas and
 `data-tags` on `.prose`) for a future article filter - not built yet. The hero
 sits inside the article column (`.post-main`), and "The short version" box
