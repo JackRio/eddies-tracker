@@ -1,11 +1,34 @@
 {
   "posts": [
     {
+      "slug": "card-sorting",
+      "title": "From pile to playset: sorting your Cyberpunk cards",
+      "dek": "Learn how to sort and store your Cyberpunk TCG cards, for both your playset and your bulk.",
+      "category": "Collection",
+      "tags": [
+        "sorting",
+        "storage",
+        "binders",
+        "sleeves",
+        "collection"
+      ],
+      "date": "2026-10-12",
+      "readMin": 5,
+      "cover": "images/blog/card-sorting-binder.jpg",
+      "coverAlt": "An open 9-pocket binder of Cyberpunk TCG cards sorted by colour, with two empty pockets."
+    },
+    {
       "slug": "card-curving",
       "title": "Are your cards curving? Why it happens and what to do",
       "dek": "What's inside a card, why foils and non-foils bend differently, and how to keep bulk, decks and chase cards flat.",
       "category": "Card care",
-      "tags": ["card care", "storage", "foils", "humidity", "sleeves"],
+      "tags": [
+        "card care",
+        "storage",
+        "foils",
+        "humidity",
+        "sleeves"
+      ],
       "date": "2026-10-12",
       "readMin": 4,
       "cover": "images/blog/curl-dome-vs-taco.jpg",

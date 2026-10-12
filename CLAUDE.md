@@ -492,7 +492,7 @@ immediately, even though the underlying files haven't actually changed yet.
   layout change, check `document.documentElement.scrollWidth ===
   clientWidth` at 320, 375 and 768px on every page.
 - Shared header/nav/footer markup is duplicated in each HTML file (no build
-  step). Nav order: Home, Decks, Blog, Trading, Needed, Record (pages under
+  step). Nav order: Home, Decks, Blogs, Trading, Needed, Record (pages under
   `docs/blog/` use `../` paths for everything). The footer holds
   `#build-info` (`renderBuildInfo()` fills it) and the unofficial-fan-site
   disclaimer.
