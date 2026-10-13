@@ -224,7 +224,7 @@ function pxFooter(ops, y) {
 
 // The deck's own page on the website (all decks are published on Publish).
 function pxSiteBase() {
-  return siteBase || 'https://jackrio.lol/';
+  return siteBase || 'https://eddies.help/';
 }
 function pxDeckUrl(deck) {
   return `${pxSiteBase()}decks.html?id=${encodeURIComponent(deck.id)}`;

@@ -1104,7 +1104,7 @@ function drawDeckKey(ctx, y) {
 }
 
 function siteHost() {
-  return location.host && !/^(localhost|127\.)/.test(location.host) ? location.host : 'cyberpunktcg.help';
+  return location.host && !/^(localhost|127\.)/.test(location.host) ? location.host : 'eddies.help';
 }
 
 function groupHeading(ctx, y, title, color, count) {

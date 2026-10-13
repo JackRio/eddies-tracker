@@ -428,7 +428,7 @@ immediately, even though the underlying files haven't actually changed yet.
   bullet above) and `renderBuildInfo()`/the update-banner check below.
 - `docs/config.js` — `window.EDDIES_CONFIG = { owner: 'JackRio', repo:
   'eddies-tracker' }`. Real repo, connected and live at
-  **https://cyberpunktcg.help** (custom domain via `docs/CNAME`, DNS pointed at
+  **https://eddies.help** (custom domain via `docs/CNAME`, DNS pointed at
   GitHub Pages' 4 standard A-record IPs; GitHub Pages redirects the
   `jackrio.github.io/eddies-tracker` URL to it automatically once a
   `CNAME` file is present).
@@ -628,7 +628,7 @@ every card a pasted list names can be drawn.
 
 ### Trade page (`docs/trade.html` + `trade.js` — unlisted)
 
-A "cards I'm selling" page shared by URL only (`cyberpunktcg.help/trade.html`).
+A "cards I'm selling" page shared by URL only (`eddies.help/trade.html`).
 Access control is **just being unlinked** — no nav in or out, `noindex`
 meta, standalone JS (no `shared.js`/`config.js`). The user explicitly chose
 this over password encryption / Cloudflare Access, knowing anyone with the
@@ -668,7 +668,7 @@ folder; use the local server instead.
 - "Needed" means **missing + partial** (anything under the type's cap),
   not just fully-missing-at-zero.
 - Publishing is a **manual button click**, not automatic on every save.
-- Custom domain (`cyberpunktcg.help`, moved from `jackrio.lol`) is live, DNS'd straight at GitHub Pages —
+- Custom domain (`eddies.help`, moved from `cyberpunktcg.help`, before that `jackrio.lol`) is live, DNS'd straight at GitHub Pages —
   no other host/CDN in front of it.
 
 ## Trading window (`trading.html`/`.js`/`.css`) and `docs/trading.html`
