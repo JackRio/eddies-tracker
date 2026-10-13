@@ -78,6 +78,36 @@
   ],
   "videos": [
     {
+      "id": "9zfuI4egW2A",
+      "title": "BETA Booster Box Opening - 6 | Cyberpunk TCG",
+      "published": "2026-10-13T02:00:05+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "FbPSbFZ6WHE",
+      "title": "ONE CASE - 16 BOXES - of Haikyu!! Vobaca Break TCG!! - Box Opening Livestream",
+      "published": "2026-10-12T23:09:04+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "UzJIUfijxI8",
+      "title": "VARZ TCG ONLINE Community Play Night LIVE!",
+      "published": "2026-10-12T22:40:40+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "XAyGQM2XJ34",
+      "title": "Chasing SHOWCASES! Star Wars Unlimited HOMEWORLDS Carbonite Case Opening Livestream",
+      "published": "2026-10-12T22:30:01+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "5oSHdEO2I1w",
+      "title": "Hitting a SIGNATURE...! Haikyu!! Vobaca Break Opening & Discussion!",
+      "published": "2026-10-12T20:16:07+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
       "id": "-HrvdH85yG0",
       "title": "Programs, PrOgRAMs, PROGRAMS!! Our Cyberpunk TCG Final Programs Tier List",
       "published": "2026-10-12T11:30:25+00:00",
@@ -228,12 +258,6 @@
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
-      "id": "tB1P3WEfWpc",
-      "title": "The BEST Alter Set Yet...and MERLIN SUPPORT!?  || Grand Archive TCG Recollection Step 65",
-      "published": "2026-10-02T20:57:07+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "6_WQqGaNQw0",
       "title": "Tournaments — Episode 2 | Cyberpunk TCG Podcast",
       "published": "2026-10-02T19:00:32+00:00",
@@ -264,12 +288,6 @@
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
     },
     {
-      "id": "12jzNKrBeN8",
-      "title": "FIGHT through ANYTHING!? Panam Palmer GGR Deck Profile!! [Cyberpunk TCG]",
-      "published": "2026-09-30T17:29:57+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "4plaIUwKe8s",
       "title": "Trying our best to play COMPETITIVE decks in Cyberpunk TCG! | 🟡🟡🔴 Gear vs 🔵🔵🟢 Control",
       "published": "2026-09-30T13:00:23+00:00",
@@ -292,12 +310,6 @@
       "title": "BETA Booster Box Opening - 4 | Cyberpunk TCG",
       "published": "2026-09-28T21:30:36+00:00",
       "channelId": "UCDS55f82q_js397_UKs6Izg"
-    },
-    {
-      "id": "zqrlCvo8uQ4",
-      "title": "You CAN'T MISS this VOLLEYBALL TCG - Haikyu!! Vobaca Break-down!",
-      "published": "2026-09-28T17:04:10+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
       "id": "vduxEAfU5FY",
@@ -346,12 +358,6 @@
       "title": "Fixing a BIG (little) Mistake🤦‍♂️ in the RULES for Cyberpunk TCG Tournament Play",
       "published": "2026-09-26T21:29:57+00:00",
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
-      "id": "pZgQfIL7CpI",
-      "title": "Grand Archive Distorted Reflections Alter Reveal Livestream ft. Creator's Guild!",
-      "published": "2026-09-26T04:17:25+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
       "id": "tYtJQzwXpuw",
@@ -490,12 +496,6 @@
       "title": "Opening 2 BETA BOOSTER BOXES of Cyberpunk TCG - Can we hit big?",
       "published": "2026-09-11T10:15:54+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "rT7CzaUVsEs",
-      "title": "BETA Booster Box Opening - 1 | Cyberpunk TCG",
-      "published": "2026-09-11T04:30:19+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
       "id": "dyNRpIsRmyU",
@@ -866,22 +866,6 @@
       "short": false
     },
     {
-      "id": "tB1P3WEfWpc",
-      "short": false
-    },
-    {
-      "id": "12jzNKrBeN8",
-      "short": false
-    },
-    {
-      "id": "zqrlCvo8uQ4",
-      "short": false
-    },
-    {
-      "id": "pZgQfIL7CpI",
-      "short": false
-    },
-    {
       "id": "wTbbphbbXb8",
       "short": false
     },
@@ -1094,10 +1078,6 @@
       "short": false
     },
     {
-      "id": "rT7CzaUVsEs",
-      "short": false
-    },
-    {
       "id": "nFqK24shZM4",
       "short": false
     },
@@ -1228,7 +1208,27 @@
     {
       "id": "-HrvdH85yG0",
       "short": false
+    },
+    {
+      "id": "FbPSbFZ6WHE",
+      "short": false
+    },
+    {
+      "id": "UzJIUfijxI8",
+      "short": false
+    },
+    {
+      "id": "XAyGQM2XJ34",
+      "short": false
+    },
+    {
+      "id": "5oSHdEO2I1w",
+      "short": false
+    },
+    {
+      "id": "9zfuI4egW2A",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-12T15:38:13.532Z"
+  "updatedAt": "2026-10-13T14:20:01.568Z"
 }
