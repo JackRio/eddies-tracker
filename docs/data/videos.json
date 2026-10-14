@@ -78,6 +78,12 @@
   ],
   "videos": [
     {
+      "id": "8m5k-oLkn7o",
+      "title": "NO OTHER TCG Today is Doing THIS! - Cardrunners: A Cyberpunk TCG Podcast Episode 25",
+      "published": "2026-10-13T20:14:41+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
       "id": "9zfuI4egW2A",
       "title": "BETA Booster Box Opening - 6 | Cyberpunk TCG",
       "published": "2026-10-13T02:00:05+00:00",
@@ -207,12 +213,6 @@
       "id": "G7M_sUY32PA",
       "title": "The Tournament Rules Are ALMOST Great! - Cardrunners: A Cyberpunk TCG Podcast Episode 24",
       "published": "2026-10-06T20:41:59+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
-      "id": "9Dr-3ko7yPQ",
-      "title": "Six NEW Decks that Show Grand Archive's Meta is PEAK",
-      "published": "2026-10-05T19:48:35+00:00",
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
@@ -862,10 +862,6 @@
       "short": false
     },
     {
-      "id": "9Dr-3ko7yPQ",
-      "short": false
-    },
-    {
       "id": "wTbbphbbXb8",
       "short": false
     },
@@ -1228,7 +1224,11 @@
     {
       "id": "9zfuI4egW2A",
       "short": false
+    },
+    {
+      "id": "8m5k-oLkn7o",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-13T14:20:01.568Z"
+  "updatedAt": "2026-10-14T12:01:49.125Z"
 }
