@@ -8,13 +8,14 @@
         "d1791645634734wh7hak",
         "d1791645693566saxdoi",
         "d1791645735068j40etf",
-        "d17916504414302z824p"
+        "d17916504414302z824p",
+        "d1791964325507q3ntxq"
       ]
     },
     {
       "id": "gmv1nfk2e",
       "name": "Claude Decks",
-      "collapsed": true,
+      "collapsed": false,
       "deckIds": [
         "d1791591891616qlxfqh"
       ]
@@ -50,6 +51,16 @@
         "d1791557848243ortgzc",
         "d17915587506368hitys",
         "d1791558886723pj6cfr"
+      ]
+    },
+    {
+      "id": "gmv6qaj67",
+      "name": "Most Popular",
+      "collapsed": true,
+      "deckIds": [
+        "d1791898897825z3svi4",
+        "d1791899076509mztf0i",
+        "d1791899225418xiil5n"
       ]
     }
   ],
@@ -102,6 +113,13 @@
       "category": "misc",
       "name": "Featured",
       "description": "Shown in the big Featured spot at the top of the website's Decks page."
+    },
+    "crea-mv1gkbke": {
+      "id": "crea-mv1gkbke",
+      "category": "creator",
+      "name": "Maindeck",
+      "description": "",
+      "url": "https://www.youtube.com/@MaindeckGames/"
     }
   }
 }

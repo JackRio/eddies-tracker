@@ -519,6 +519,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "80735f9a-6c20-4d24-9138-b3c0d2e6bf46": {
+    "id": "80735f9a-6c20-4d24-9138-b3c0d2e6bf46",
+    "cardId": "050d0502-94b0-4bee-a7e6-a9b00f31b4ae",
+    "name": "Shattered Memories",
+    "subname": null,
+    "displayName": "Shattered Memories",
+    "slug": "shattered-memories",
+    "cardType": "Program",
+    "color": "Red",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 4,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Each player discards their hand and may draw 5.\nIf the total number of discarded cards equals the value of a friendly Gig, draw 2.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "171b21b1-90d0-4d3b-a060-740c413b7bf2": {
     "id": "171b21b1-90d0-4d3b-a060-740c413b7bf2",
     "cardId": "81fb66ee-b054-4f78-b0c9-7d2c9ff53435",
@@ -699,6 +719,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "f9c512f2-a41f-4114-9500-cee3f8d8cc35": {
+    "id": "f9c512f2-a41f-4114-9500-cee3f8d8cc35",
+    "cardId": "f61b944a-32e3-4085-894b-7bd498325156",
+    "name": "Dexter DeShawn",
+    "subname": "One Last Chance",
+    "displayName": "Dexter DeShawn: One Last Chance",
+    "slug": "dexter-deshawn-one-last-chance",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 3,
+    "power": 4,
+    "isEddiable": false,
+    "rulesText": "{Play} {Attack} Adjust a Gig by up to 1.\n{Defeated} If your ☆ (Street Cred) differs from a Rival's by 10+, draw 2.",
+    "set": {
+      "code": "theheistbetastarterdeck",
+      "name": "The Heist — Beta Starter Deck"
+    }
+  },
   "e3005cf1-4dbc-4f4e-922b-af81d6086015": {
     "id": "e3005cf1-4dbc-4f4e-922b-af81d6086015",
     "cardId": "647bb074-197f-4059-bac5-251b47c98287",
@@ -734,6 +774,46 @@
     "power": 5,
     "isEddiable": false,
     "rulesText": "{Play} Spend this Unit and a rival Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "20cd09ad-b0c6-4ffe-9036-04ff24d8fe59": {
+    "id": "20cd09ad-b0c6-4ffe-9036-04ff24d8fe59",
+    "cardId": "0273f402-94fb-4b59-90ec-a1057c2d1284",
+    "name": "Caliber",
+    "subname": "Totentanz's Top Dog",
+    "displayName": "Caliber: Totentanz's Top Dog",
+    "slug": "caliber-totentanz-s-top-dog",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 5,
+    "power": 5,
+    "isEddiable": false,
+    "rulesText": "{Play} Defeat a rival Unit with cost 2 or less.\n{Defeated} A Rival discards 1. If the card's cost equals the value of a friendly Gig, that Rival discards 1 more.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "03849cd8-c3d8-4741-ae9e-d85cd9bb488d": {
+    "id": "03849cd8-c3d8-4741-ae9e-d85cd9bb488d",
+    "cardId": "95840ebd-d00a-49ff-b4e5-e2064cfc13a9",
+    "name": "MaxTac Suppression Team",
+    "subname": null,
+    "displayName": "MaxTac Suppression Team",
+    "slug": "maxtac-suppression-team",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 5,
+    "power": 7,
+    "isEddiable": false,
+    "rulesText": "Rival Units can't attack the turn they're played.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -839,6 +919,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "fdb7a7c3-350e-49ea-8a9e-8477ce6c657a": {
+    "id": "fdb7a7c3-350e-49ea-8a9e-8477ce6c657a",
+    "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+    "name": "Adam Smasher",
+    "subname": "Metal Over Meat",
+    "displayName": "Adam Smasher: Metal Over Meat",
+    "slug": "adam-smasher-metal-over-meat",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Epic",
+    "ram": 6,
+    "cost": 9,
+    "power": 15,
+    "isEddiable": false,
+    "rulesText": "{Play} Defeat all other Units.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "dc0a7e03-54b6-4334-965f-27a3d469fed6": {
     "id": "dc0a7e03-54b6-4334-965f-27a3d469fed6",
     "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
@@ -939,6 +1039,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "af696a54-97bf-475b-b721-9a8bb86227a0": {
+    "id": "af696a54-97bf-475b-b721-9a8bb86227a0",
+    "cardId": "b4cba235-816d-4888-a308-1c397b9288e7",
+    "name": "Safety Override",
+    "subname": null,
+    "displayName": "Safety Override",
+    "slug": "safety-override",
+    "cardType": "Program",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 3,
+    "cost": 2,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} The next time a friendly Unit loses a fight this turn, defeat the opposing rival Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "709ec425-eda5-4621-b907-94a507a20351": {
     "id": "709ec425-eda5-4621-b907-94a507a20351",
     "cardId": "5ea00b3a-7e85-4c7d-91ad-90e0cf370c27",
@@ -954,6 +1074,26 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "Trash 4. Add a Gear from among them to your hand. If that Gear's cost equals the value of a friendly Gig, you may play it for free instead.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "b3329aae-77de-4c61-b400-114f51bbae5a": {
+    "id": "b3329aae-77de-4c61-b400-114f51bbae5a",
+    "cardId": "87e001dd-8604-4523-af6e-d768118ccf98",
+    "name": "Cyberpsychosis",
+    "subname": null,
+    "displayName": "Cyberpsychosis",
+    "slug": "cyberpsychosis",
+    "cardType": "Program",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 3,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} Give an equipped Unit +3 power this turn for each of its equipped Gears. If that Unit steals or fights, defeat it at the end of this turn.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1779,6 +1919,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "3ceebded-0941-477f-b486-f2cb22ca653d": {
+    "id": "3ceebded-0941-477f-b486-f2cb22ca653d",
+    "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+    "name": "Dying Night",
+    "subname": "V's Pistol",
+    "displayName": "Dying Night: V's Pistol",
+    "slug": "dying-night-v-s-pistol",
+    "cardType": "Gear",
+    "color": "Blue",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 2,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Attack} Decrease a Gig by up to 2. At the end of your turn, if this Unit is named \"V\", ready 2 Eddies.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "e2a34251-d2d9-46e0-9840-ca69a358a6ae": {
     "id": "e2a34251-d2d9-46e0-9840-ca69a358a6ae",
     "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
@@ -1834,6 +1994,26 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "Decrease a Gig by up to 3. Then, if you control a min Gig, draw 1.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "06570cd2-25fc-4c5e-86e1-cba8000edc97": {
+    "id": "06570cd2-25fc-4c5e-86e1-cba8000edc97",
+    "cardId": "ad13a7bc-c49d-4166-8a9c-965e7bfa9b8f",
+    "name": "Reboot Optics",
+    "subname": null,
+    "displayName": "Reboot Optics",
+    "slug": "reboot-optics",
+    "cardType": "Program",
+    "color": "Blue",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 2,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Quick} The next time a rival Unit fights this turn, it doesn't defeat the opposing friendly Unit.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
