@@ -89,3 +89,41 @@
   .rar-head { padding: 12px; }
   .rar-count { font-size: 10px; }
 }
+
+/* Card view popup */
+body.modal-open { overflow: hidden; }
+#card-modal {
+  position: fixed; inset: 0; z-index: 80; background: rgba(4, 4, 8, .82);
+  display: flex; align-items: center; justify-content: center; padding: 16px; overflow-y: auto;
+}
+#card-modal[hidden] { display: none; }
+.cm-box {
+  position: relative; display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 24px;
+  width: min(100%, 820px); max-height: calc(100dvh - 32px); overflow-y: auto; margin: auto;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 22px;
+}
+.cm-art { width: 100%; border-radius: 12px; border: 1px solid var(--yellow); background: #000; align-self: start; }
+.cm-close {
+  position: absolute; top: 8px; right: 10px; width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(7, 7, 11, .75); border: 1px solid var(--border); color: var(--text); font-size: 24px; line-height: 1; cursor: pointer; z-index: 1;
+}
+.cm-close:hover { background: rgba(255, 255, 255, .14); }
+.cm-close:focus-visible { outline: 2px solid var(--cyan); outline-offset: 1px; }
+.cm-info { min-width: 0; padding-right: 30px; }
+.cm-info h2 { margin: 0; font-size: 22px; line-height: 1.2; }
+.cm-sub { color: var(--text-dim); font-style: italic; margin-top: 2px; }
+.cm-meta { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+.cm-stats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.cm-stat { display: flex; gap: 6px; align-items: baseline; padding: 4px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; font-weight: 700; }
+.cm-stat small { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); font-weight: 600; }
+.cm-owned { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+.cm-owned > div { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 13px; color: var(--text-dim); }
+.cm-owned > div.on { border-color: var(--yellow); }
+.cm-owned small { display: block; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.cm-owned b { font-size: 20px; color: var(--yellow); }
+.cm-rules { margin-top: 14px; font-size: 14px; line-height: 1.5; white-space: pre-line; }
+@media (max-width: 720px) {
+  .cm-box { grid-template-columns: minmax(0, 1fr); padding: 16px; gap: 14px; }
+  .cm-art { width: min(100%, 300px); justify-self: center; }
+  .cm-info { padding-right: 0; }
+}

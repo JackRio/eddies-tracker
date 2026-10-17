@@ -292,12 +292,12 @@ function render() {
   }
 }
 
-const hrefFor = (c) => `record.html?id=${encodeURIComponent(c.id)}&bucket=${state.bucket}`;
+const hrefFor = (c) => `#card-${c.id}`;
 
 function tileHtml(c) {
   const img = `<img src="images/${c.id}.webp" alt="${esc(c.displayName)}" loading="lazy" onerror="this.closest('.need-card-img-wrap').classList.add('no-image'); this.remove();" />`;
   return `
-    <a class="need-card own-${statusOf(c)}" href="${hrefFor(c)}" title="${esc(c.displayName)} · ${c.qty}/${c.cap}">
+    <a class="need-card own-${statusOf(c)}" href="${hrefFor(c)}" data-card="${c.id}" title="${esc(c.displayName)} · ${c.qty}/${c.cap}">
       <div class="need-card-img-wrap">
         ${img}
         <span class="own-qty">${c.qty}<small>/${c.cap}</small></span>
@@ -326,7 +326,7 @@ function rowHtml(c) {
     <div class="own-row own-${statusOf(c)}">
       <span class="own-name">
         <button type="button" class="own-pic" data-id="${c.id}" aria-label="Show ${esc(c.displayName)}">${PIC_ICON}</button>
-        <a href="${hrefFor(c)}">${num}<b>${esc(c.name)}</b>${c.subname ? `<i>${esc(c.subname)}</i>` : ''}
+        <a href="${hrefFor(c)}" data-card="${c.id}">${num}<b>${esc(c.name)}</b>${c.subname ? `<i>${esc(c.subname)}</i>` : ''}
           <span class="own-set-m">${esc(c.set?.name || '')}</span></a>
       </span>
       <span class="own-col-set">${esc(c.set?.name || '')}</span>
@@ -419,5 +419,91 @@ document.addEventListener('click', (e) => {
 });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePop(); });
 window.addEventListener('scroll', () => { if (canHover) hidePop(); }, { passive: true });
+
+// ---- Card view popup ---------------------------------------------------
+let faqData = {};
+let faqLoaded = false;
+
+function renderRulesText(text) {
+  if (!text) return '';
+  return String(text)
+    .split(/(\{[^}]+\})/g)
+    .map((part) => {
+      const m = part.match(/^\{([^}]+)\}$/);
+      if (!m) return esc(part);
+      const slug = m[1].toLowerCase().replace(/\s+/g, '-');
+      return `<img class="keyword-icon" src="assets/keywords/${slug}.svg" alt="${esc(m[1])}" title="${esc(m[1])}">`;
+    })
+    .join('');
+}
+
+function faqHtml(slug) {
+  const entry = faqData[slug];
+  if (!entry || !entry.faqs?.length) return '';
+  return `<div class="popped-faq"><h4>Rules FAQ</h4>${entry.faqs
+    .map((f) => `<div class="faq-item"><div class="faq-q">${renderRulesText(f.q)}</div><div class="faq-a">${renderRulesText(f.a)}</div></div>`)
+    .join('')}</div>`;
+}
+
+const modal = document.createElement('div');
+modal.id = 'card-modal';
+modal.hidden = true;
+modal.setAttribute('role', 'dialog');
+modal.setAttribute('aria-modal', 'true');
+document.body.appendChild(modal);
+let lastFocus = null;
+
+async function openCard(id) {
+  const c = catalog.find((x) => x.id === id);
+  if (!c) return;
+  hidePop();
+  if (!faqLoaded) {
+    faqLoaded = true;
+    try { faqData = await fetchJson('data/faq.json'); } catch { faqData = {}; }
+  }
+  const n = (b) => qtyOf(c, b);
+  const stat = (label, v) => (v == null || v === '' ? '' : `<span class="cm-stat"><small>${label}</small>${esc(v)}</span>`);
+  modal.innerHTML = `
+    <div class="cm-box">
+      <button type="button" class="cm-close" aria-label="Close">&times;</button>
+      <img class="cm-art" src="images/${c.id}.webp" alt="${esc(c.displayName)}" />
+      <div class="cm-info">
+        <h2>${esc(c.name)}</h2>
+        ${c.subname ? `<div class="cm-sub">${esc(c.subname)}</div>` : ''}
+        <div class="cm-meta ${rarityClass(c.rarity)}">${c.collectorNumber ? `(${esc(c.collectorNumber)}) · ` : ''}${esc(c.rarity)} · ${esc(c.set?.name || '')}</div>
+        <div class="cm-stats">${stat('Type', c.cardType)}${stat('Color', c.color)}${stat('Cost', c.cost)}${stat('Power', c.power)}${stat('RAM', c.ram)}</div>
+        <div class="cm-owned">
+          <div class="${state.bucket === 'main' ? 'on' : ''}"><small>Main</small><b>${n('main')}</b>/${c.cap}</div>
+          <div class="${state.bucket === 'reserve' ? 'on' : ''}"><small>Reserve</small><b>${n('reserve')}</b>/${c.cap}</div>
+          <div><small>Extras</small><b>${qtyOf(c, 'extras')}</b></div>
+        </div>
+        ${c.rulesText ? `<div class="cm-rules">${renderRulesText(c.rulesText)}</div>` : ''}
+        ${faqHtml(c.slug)}
+      </div>
+    </div>`;
+  lastFocus = document.activeElement;
+  modal.hidden = false;
+  document.body.classList.add('modal-open');
+  modal.querySelector('.cm-close').focus();
+  modal.querySelector('.cm-art').onerror = (e) => e.target.remove();
+}
+
+function closeCard() {
+  if (modal.hidden) return;
+  modal.hidden = true;
+  document.body.classList.remove('modal-open');
+  lastFocus?.focus?.();
+}
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal || e.target.closest('.cm-close')) closeCard();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeCard(); });
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('[data-card]');
+  if (!link) return;
+  e.preventDefault();
+  openCard(link.dataset.card);
+});
 
 init();
