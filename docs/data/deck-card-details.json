@@ -39,6 +39,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "0e4966a2-e5cf-4acd-905a-750e9c4cefff": {
+    "id": "0e4966a2-e5cf-4acd-905a-750e9c4cefff",
+    "cardId": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
+    "name": "Royce",
+    "subname": "Psycho on the Edge",
+    "displayName": "Royce: Psycho on the Edge",
+    "slug": "royce-psycho-on-the-edge",
+    "cardType": "Legend",
+    "color": "Red",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 6,
+    "power": 6,
+    "isEddiable": true,
+    "rulesText": "{Go Solo} (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\nDuring your turn, this Legend has +2 power for each of its equipped Gear.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "4d75c13e-bde2-409b-8bcc-516e054f28f5": {
     "id": "4d75c13e-bde2-409b-8bcc-516e054f28f5",
     "cardId": "eff41c12-b872-4101-9779-00e691532893",
@@ -359,6 +379,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "7ff6a088-1720-45b6-a3cf-30709415df5e": {
+    "id": "7ff6a088-1720-45b6-a3cf-30709415df5e",
+    "cardId": "5233bacc-f39f-4383-8e25-57ef634735ca",
+    "name": "Arasaka Emergency Radioport",
+    "subname": null,
+    "displayName": "Arasaka Emergency Radioport",
+    "slug": "arasaka-emergency-radioport",
+    "cardType": "Gear",
+    "color": "Red",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 2,
+    "power": 2,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit or Legend is spent, you may look at a friendly face-down Legend. If that Legend is ARASAKA or has {Go Solo}, you may Call it for free. (You may only Call a Legend once per turn.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "b12e1665-bf29-4b2c-b92d-865cff227a67": {
     "id": "b12e1665-bf29-4b2c-b92d-865cff227a67",
     "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
@@ -374,26 +414,6 @@
     "power": 2,
     "isEddiable": true,
     "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nWhen this Unit wins a fight against a rival Unit, draw 1.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1": {
-    "id": "e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1",
-    "cardId": "1d8f611c-dd08-48d1-82eb-451d56dcf651",
-    "name": "Deadman Transmitter",
-    "subname": null,
-    "displayName": "Deadman Transmitter",
-    "slug": "deadman-transmitter",
-    "cardType": "Gear",
-    "color": "Red",
-    "rarity": "Uncommon",
-    "ram": 3,
-    "cost": 3,
-    "power": 1,
-    "isEddiable": true,
-    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\nIf this Unit would be defeated, defeat its \"DEADMAN TRANSMITTER\" instead.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -599,6 +619,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "0557c333-1700-439d-bb85-dfec8d578ded": {
+    "id": "0557c333-1700-439d-bb85-dfec8d578ded",
+    "cardId": "5a441989-2997-40a2-a72e-08ca1442a7f3",
+    "name": "Kerry Eurodyne",
+    "subname": "Axe, Attitude, Audience",
+    "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
+    "slug": "kerry-eurodyne-axe-attitude-audience",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "When you roll in a Gig from your fixer area, you may ignore the result and reroll it once.\nWhen you roll a min or max value on a Gig, draw 1. If it's a d20, draw 3 instead.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "5ade304e-8e0e-4484-944a-18d8d08caf9f": {
     "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
     "cardId": "5a441989-2997-40a2-a72e-08ca1442a7f3",
@@ -679,6 +719,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "56a13bb3-7e1d-4846-ac79-9163f33c0143": {
+    "id": "56a13bb3-7e1d-4846-ac79-9163f33c0143",
+    "cardId": "f090dc44-d7f0-4aec-a19e-9213155a6611",
+    "name": "Viktor Vektor",
+    "subname": "Sit Down and Relax",
+    "displayName": "Viktor Vektor: Sit Down and Relax",
+    "slug": "viktor-vektor-sit-down-and-relax",
+    "cardType": "Legend",
+    "color": "Yellow",
+    "rarity": "Epic",
+    "ram": 2,
+    "cost": null,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "{Call} Search the top 5 cards of your deck. Reveal up to 2 Gears with cost 2 or less and add them to your hand. Bottom-deck the rest in a random order.",
+    "set": {
+      "code": "theheistbetastarterdeck",
+      "name": "The Heist — Beta Starter Deck"
+    }
+  },
   "6a8e2aae-694a-43ea-8e3a-0482046a90c5": {
     "id": "6a8e2aae-694a-43ea-8e3a-0482046a90c5",
     "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
@@ -694,6 +754,26 @@
     "power": 0,
     "isEddiable": false,
     "rulesText": "{Blocker} (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n(Units with power 0 don't steal Gigs.)",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "78b601e2-3dd5-4802-b0e2-5258a4a63363": {
+    "id": "78b601e2-3dd5-4802-b0e2-5258a4a63363",
+    "cardId": "b3b40c68-705b-41ff-ae10-4132497c4a39",
+    "name": "Sketchy Ripper",
+    "subname": null,
+    "displayName": "Sketchy Ripper",
+    "slug": "sketchy-ripper",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 2,
+    "cost": 2,
+    "power": 0,
+    "isEddiable": false,
+    "rulesText": "{Attack} Search the top 3 cards of your deck. Reveal a Gear and add it to your hand. Bottom-deck the rest.\n(Units with power 0 don't steal Gigs.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -759,6 +839,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "ab6fab2a-8101-4bc7-8f5d-b55adf09bc4c": {
+    "id": "ab6fab2a-8101-4bc7-8f5d-b55adf09bc4c",
+    "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
+    "name": "Hanako Arasaka",
+    "subname": "In a Gilded Cage",
+    "displayName": "Hanako Arasaka: In a Gilded Cage",
+    "slug": "hanako-arasaka-in-a-gilded-cage",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 2,
+    "cost": 4,
+    "power": 1,
+    "isEddiable": false,
+    "rulesText": "{Play} Search the top 4 cards of your deck. Reveal any number of cards with cost equal to any friendly Gig values and add them to your hand. Bottom-deck the rest.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
   "37066158-f899-42c6-abd7-4dcd882a75cd": {
     "id": "37066158-f899-42c6-abd7-4dcd882a75cd",
     "cardId": "3ce6b982-7bba-46f1-8832-8867ec3588d4",
@@ -774,26 +874,6 @@
     "power": 5,
     "isEddiable": false,
     "rulesText": "{Play} Spend this Unit and a rival Unit.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "20cd09ad-b0c6-4ffe-9036-04ff24d8fe59": {
-    "id": "20cd09ad-b0c6-4ffe-9036-04ff24d8fe59",
-    "cardId": "0273f402-94fb-4b59-90ec-a1057c2d1284",
-    "name": "Caliber",
-    "subname": "Totentanz's Top Dog",
-    "displayName": "Caliber: Totentanz's Top Dog",
-    "slug": "caliber-totentanz-s-top-dog",
-    "cardType": "Unit",
-    "color": "Yellow",
-    "rarity": "Rare",
-    "ram": 2,
-    "cost": 5,
-    "power": 5,
-    "isEddiable": false,
-    "rulesText": "{Play} Defeat a rival Unit with cost 2 or less.\n{Defeated} A Rival discards 1. If the card's cost equals the value of a friendly Gig, that Rival discards 1 more.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1034,6 +1114,26 @@
     "power": 3,
     "isEddiable": true,
     "rulesText": "{Defeated} Play another Unit with cost 9 or less from your trash for free. Then, bottom-deck this Unit.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "5adb7a6a-de7b-4f00-9d5a-2cccfaf4f19d": {
+    "id": "5adb7a6a-de7b-4f00-9d5a-2cccfaf4f19d",
+    "cardId": "d039e4b3-9b83-40da-8d8f-b1dfb1f172f1",
+    "name": "Afterparty at Lizzie's",
+    "subname": null,
+    "displayName": "Afterparty at Lizzie's",
+    "slug": "afterparty-at-lizzie-s",
+    "cardType": "Program",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 1,
+    "power": null,
+    "isEddiable": true,
+    "rulesText": "Adjust a Gig by up to 1. If you control 2 or more Gigs with different values, draw 1.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1919,26 +2019,6 @@
       "name": "Welcome to Night City — Beta"
     }
   },
-  "3ceebded-0941-477f-b486-f2cb22ca653d": {
-    "id": "3ceebded-0941-477f-b486-f2cb22ca653d",
-    "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
-    "name": "Dying Night",
-    "subname": "V's Pistol",
-    "displayName": "Dying Night: V's Pistol",
-    "slug": "dying-night-v-s-pistol",
-    "cardType": "Gear",
-    "color": "Blue",
-    "rarity": "Rare",
-    "ram": 2,
-    "cost": 2,
-    "power": 2,
-    "isEddiable": true,
-    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Attack} Decrease a Gig by up to 2. At the end of your turn, if this Unit is named \"V\", ready 2 Eddies.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
   "e2a34251-d2d9-46e0-9840-ca69a358a6ae": {
     "id": "e2a34251-d2d9-46e0-9840-ca69a358a6ae",
     "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
@@ -1994,26 +2074,6 @@
     "power": null,
     "isEddiable": true,
     "rulesText": "Decrease a Gig by up to 3. Then, if you control a min Gig, draw 1.",
-    "set": {
-      "code": "welcometonightcitybeta",
-      "name": "Welcome to Night City — Beta"
-    }
-  },
-  "06570cd2-25fc-4c5e-86e1-cba8000edc97": {
-    "id": "06570cd2-25fc-4c5e-86e1-cba8000edc97",
-    "cardId": "ad13a7bc-c49d-4166-8a9c-965e7bfa9b8f",
-    "name": "Reboot Optics",
-    "subname": null,
-    "displayName": "Reboot Optics",
-    "slug": "reboot-optics",
-    "cardType": "Program",
-    "color": "Blue",
-    "rarity": "Common",
-    "ram": 2,
-    "cost": 2,
-    "power": null,
-    "isEddiable": true,
-    "rulesText": "{Quick} The next time a rival Unit fights this turn, it doesn't defeat the opposing friendly Unit.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
