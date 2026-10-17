@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T23:09:39.024Z",
+  "generatedAt": "2026-10-17T23:15:24.090Z",
   "pricesAsOf": "2026-10-17T02:44:54+0200",
   "main": [
     {
@@ -10678,27 +10678,6 @@
       "cmName": "MT0D12 Flathead",
       "have": 0,
       "needed": 3
-    },
-    {
-      "id": "d4a627d7-2ea9-4080-9f54-435a7d77fb27",
-      "cardId": "619429c9-132f-496e-8aa0-414e850c87ec",
-      "name": "MT0D12 Flathead",
-      "subname": null,
-      "displayName": "MT0D12 Flathead",
-      "color": "Blue",
-      "cardType": "Unit",
-      "rarity": "Uncommon",
-      "set": {
-        "code": "theheistbetastarterdeck",
-        "name": "The Heist — Beta Starter Deck"
-      },
-      "collectorNumber": "β015",
-      "cap": 3,
-      "price": 8.74,
-      "priceGuess": false,
-      "cmName": "MT0D12 Flathead",
-      "have": 2,
-      "needed": 1
     },
     {
       "id": "f7742fc7-0abe-45ee-a6ce-22caf159e06d",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T23:09:39.228Z",
+  "generatedAt": "2026-10-17T23:15:24.272Z",
   "pricesAsOf": "2026-10-17T02:44:54+0200",
   "cards": [
     {
@@ -199,24 +199,6 @@
       "price": 9.99,
       "priceGuess": false,
       "cmName": "Towerfall"
-    },
-    {
-      "id": "f7742fc7-0abe-45ee-a6ce-22caf159e06d",
-      "name": "MT0D12 Flathead",
-      "subname": null,
-      "displayName": "MT0D12 Flathead",
-      "color": "Blue",
-      "cardType": "Unit",
-      "rarity": "Uncommon",
-      "set": {
-        "code": "mercdemodeck",
-        "name": "Merc Demo Deck"
-      },
-      "collectorNumber": "011",
-      "needed": 1,
-      "price": 7.07,
-      "priceGuess": false,
-      "cmName": "MT0D12 Flathead"
     },
     {
       "id": "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5",
