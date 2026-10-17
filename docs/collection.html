@@ -4,9 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#07070b" />
-<title>Needed — Eddies</title>
+<title>Collection — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
 <link rel="stylesheet" href="style.css?v=20261018" />
+<link rel="stylesheet" href="collection.css?v=20261018" />
 </head>
 <body>
   <header class="app-header">
@@ -16,20 +17,19 @@
         <a href="./">Home</a>
         <details class="nav-drop"><summary>Decks</summary><div class="nav-menu"><a href="decks.html">Deck Library</a><a href="loadout.html">Loadout</a></div></details>
         <a href="blog/">Blogs</a>
-        <details class="nav-drop"><summary class="active">Collection</summary><div class="nav-menu"><a href="needed.html" class="active" aria-current="page">Needed</a><a href="trading.html">Trading</a><a href="record.html">Record</a></div></details>
+        <details class="nav-drop"><summary class="active">Collection</summary><div class="nav-menu"><a href="collection.html" class="active" aria-current="page">My Collection</a><a href="trading.html">Trading</a><a href="record.html">Record</a></div></details>
       </nav>
     </div>
   </header>
 
   <main>
     <div class="page-head">
-      <h1>Cards I <span class="accent">still need</span></h1>
-      <p>Every card still missing from a full playset: 3 copies of each Unit, Gear and Program and 1 of each Legend. Filter by color, type or rarity, then tap a card to see the details.</p>
+      <h1>My <span class="accent">collection</span></h1>
     </div>
 
     <div class="stat-tiles" id="stat-tiles">
-      <div class="stat"><b id="stat-cards">–</b><span>cards needed</span></div>
-      <div class="stat"><b id="stat-copies">–</b><span>copies missing</span></div>
+      <div class="stat"><b id="stat-cards">–</b><span>cards shown</span></div>
+      <div class="stat"><b id="stat-copies">–</b><span>copies owned</span></div>
       <div class="stat"><b id="stat-cost">–</b><span id="stat-cost-label">est. on Cardmarket</span></div>
     </div>
 
@@ -43,9 +43,10 @@
               <button class="active" data-bucket="main">Main Set</button>
               <button data-bucket="reserve">Reserve Set</button>
             </div>
-            <p class="filter-hint">Main is the playset I build decks from. Reserve is a second set of spares to trade from.</p>
+            
           </div>
 
+          <div><div class="filter-label">Status</div><div class="chip-row" id="status-filters"></div></div>
           <div><div class="filter-label">Color</div><div class="chip-row" id="color-filters"></div></div>
           <div><div class="filter-label">Type</div><div class="chip-row" id="type-filters"></div></div>
           <div><div class="filter-label">Rarity</div><div class="chip-row" id="rarity-filters"></div></div>
@@ -61,7 +62,7 @@
             <div class="chip-row">
               <div class="chip" id="unique-filter" role="button" tabindex="0" title="Group copies of the same card across all printings, count what you own in total, and show only the lowest-rarity printing of what's still needed">Unique cards only</div>
             </div>
-            <p class="filter-hint">Treats every art version of a card as the same card and shows the cheapest one to look for.</p>
+            
           </div>
 
           <button class="filter-clear" id="filter-clear" hidden>&times; Clear all filters</button>
@@ -75,15 +76,16 @@
             <option value="default">Sort: Color, then type</option>
             <option value="price-desc">Price: high to low</option>
             <option value="price-asc">Price: low to high</option>
-            <option value="needed">Most copies needed</option>
+            <option value="qty">Most copies owned</option>
             <option value="rarity">Rarity: rarest first</option>
             <option value="name">Name A–Z</option>
           </select>
         </div>
 
-        <div class="result-count" id="result-count"></div>
+        <div class="view-bar"><div class="result-count" id="result-count"></div><div class="view-toggle" id="view-toggle" role="group" aria-label="View"><button data-view="lg" title="Large cards">Large</button><button data-view="md" title="Medium cards">Medium</button><button data-view="sm" title="Small cards">Small</button><button data-view="list" title="List">List</button></div></div>
         <div class="card-grid" id="card-grid"></div>
-        <div class="empty-state" id="empty-state" hidden>Nothing needed here. You're all set.</div>
+        <div class="own-list" id="own-list" hidden></div>
+        <div class="empty-state" id="empty-state" hidden>No cards match.</div>
       </section>
     </div>
   </main>
@@ -95,6 +97,6 @@
 
   <script src="config.js"></script>
   <script src="shared.js?v=20261018"></script>
-  <script src="needed.js?v=20261011"></script>
+  <script src="collection.js?v=20261018"></script>
 </body>
 </html>

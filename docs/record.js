@@ -185,7 +185,7 @@ function renderSearchResults(query) {
   });
 }
 
-// Cardmarket trend price snapshot from catalog.json (see needed.js).
+// Cardmarket trend price snapshot from catalog.json (see collection.js).
 function formatEur(v) {
   return `€${v >= 100 ? Math.round(v) : v.toFixed(2)}`;
 }
