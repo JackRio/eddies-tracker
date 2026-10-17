@@ -19,7 +19,7 @@ let state = {
   unique: false,
   search: '',
   sort: 'default',
-  view: 'md'
+  view: 'list'
 };
 
 const COLOR_ORDER = ['Red', 'Blue', 'Green', 'Yellow'];
@@ -48,7 +48,7 @@ const mechKey = (c) => `${c.displayName || c.name}|${c.rulesText || c.cardId}`;
 
 function loadView() {
   try {
-    const v = localStorage.getItem('eddies_collection_view');
+    const v = localStorage.getItem('eddies_collection_view2');
     if (VIEWS.includes(v)) state.view = v;
   } catch { /* storage unavailable */ }
 }
@@ -167,7 +167,7 @@ function attachControls() {
   document.querySelectorAll('#view-toggle button').forEach((btn) => {
     btn.addEventListener('click', () => {
       state.view = btn.dataset.view;
-      try { localStorage.setItem('eddies_collection_view', state.view); } catch { /* ignore */ }
+      try { localStorage.setItem('eddies_collection_view2', state.view); } catch { /* ignore */ }
       syncView();
       render();
     });
@@ -311,18 +311,113 @@ function tileHtml(c) {
   `;
 }
 
+// Which rarity groups are minimized (kept per device).
+let collapsed = new Set();
+try { collapsed = new Set(JSON.parse(localStorage.getItem('eddies_collection_collapsed') || '[]')); } catch { /* ignore */ }
+function saveCollapsed() {
+  try { localStorage.setItem('eddies_collection_collapsed', JSON.stringify([...collapsed])); } catch { /* ignore */ }
+}
+
+const PIC_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 9"/></svg>';
+
+function rowHtml(c) {
+  const num = c.collectorNumber ? `<span class="own-num">(${esc(c.collectorNumber)})</span>` : '';
+  return `
+    <div class="own-row own-${statusOf(c)}">
+      <span class="own-name">
+        <button type="button" class="own-pic" data-id="${c.id}" aria-label="Show ${esc(c.displayName)}">${PIC_ICON}</button>
+        <a href="${hrefFor(c)}">${num}<b>${esc(c.name)}</b>${c.subname ? `<i>${esc(c.subname)}</i>` : ''}
+          <span class="own-set-m">${esc(c.set?.name || '')}</span></a>
+      </span>
+      <span class="own-col-set">${esc(c.set?.name || '')}</span>
+      <span class="own-col-qty">${c.qty}<small>/${c.cap}</small></span>
+    </div>`;
+}
+
+// List view: one collapsible section per rarity tier, common first.
 function listHtml(cards) {
   const label = state.bucket === 'main' ? 'Main' : 'Reserve';
-  return `
-    <div class="own-row own-head"><span>Card</span><span class="own-col-set">Set</span><span class="own-col-qty">${label}</span></div>
-    ${cards.map((c) => `
-      <a class="own-row own-${statusOf(c)}" href="${hrefFor(c)}">
-        <span class="own-name"><b>${esc(c.name)}</b>${c.subname ? `<i>${esc(c.subname)}</i>` : ''}
-          <em class="${rarityClass(c.rarity)}">${esc(c.rarity)}</em></span>
-        <span class="own-col-set">${esc(c.set?.name || '')}</span>
-        <span class="own-col-qty">${c.qty}<small>/${c.cap}</small></span>
-      </a>`).join('')}
-  `;
+  const sections = RARITY_GROUPS.map((g) => ({ g, rows: cards.filter((c) => g.match.includes(c.rarity)) }))
+    .filter((s) => s.rows.length);
+  return sections.map(({ g, rows }) => {
+    const shut = collapsed.has(g.key);
+    const copies = rows.reduce((n, c) => n + c.qty, 0);
+    return `
+      <section class="rar-group${shut ? ' shut' : ''}" data-key="${g.key}">
+        <button type="button" class="rar-head" aria-expanded="${!shut}">
+          <span class="rarity-icon rarity-icon-${g.icon}"></span>
+          <span class="rar-title">${g.title}</span>
+          <span class="rar-count">${rows.length} cards · ${copies} ${label}</span>
+          <span class="rar-caret" aria-hidden="true"></span>
+        </button>
+        <div class="rar-body"${shut ? ' hidden' : ''}>${rows.map(rowHtml).join('')}</div>
+      </section>`;
+  }).join('');
 }
+
+// Collapse/expand rarity sections.
+el('own-list').addEventListener('click', (e) => {
+  const head = e.target.closest('.rar-head');
+  if (!head) return;
+  const group = head.closest('.rar-group');
+  const shut = !group.classList.contains('shut');
+  group.classList.toggle('shut', shut);
+  head.setAttribute('aria-expanded', String(!shut));
+  group.querySelector('.rar-body').hidden = shut;
+  if (shut) collapsed.add(group.dataset.key); else collapsed.delete(group.dataset.key);
+  saveCollapsed();
+});
+
+// Card preview: follows the pointer on desktop hover/focus; on touch a tap
+// opens it centered and any tap closes it.
+const pop = document.createElement('div');
+pop.id = 'card-pop';
+pop.hidden = true;
+pop.innerHTML = '<img alt="" />';
+document.body.appendChild(pop);
+const canHover = window.matchMedia('(hover: hover)').matches;
+
+function showPop(id) {
+  const img = pop.firstChild;
+  img.src = `images/${id}.webp`;
+  pop.hidden = false;
+}
+function hidePop() { pop.hidden = true; pop.classList.remove('centered'); }
+function placePop(x, y) {
+  const w = pop.offsetWidth, h = pop.offsetHeight;
+  let left = x + 22;
+  if (left + w > window.innerWidth - 8) left = x - w - 22;
+  const top = Math.max(8, Math.min(y - h / 2, window.innerHeight - h - 8));
+  pop.style.left = `${Math.max(8, left)}px`;
+  pop.style.top = `${top}px`;
+}
+
+const picOf = (e) => e.target.closest?.('.own-pic');
+document.addEventListener('mouseover', (e) => {
+  const pic = picOf(e);
+  if (!pic || !canHover) return;
+  showPop(pic.dataset.id);
+  placePop(e.clientX, e.clientY);
+});
+document.addEventListener('mousemove', (e) => {
+  if (!pop.hidden && !pop.classList.contains('centered')) placePop(e.clientX, e.clientY);
+});
+document.addEventListener('mouseout', (e) => {
+  if (picOf(e) && canHover) hidePop();
+});
+document.addEventListener('click', (e) => {
+  const pic = picOf(e);
+  if (pic && !canHover) {
+    e.preventDefault();
+    showPop(pic.dataset.id);
+    pop.classList.add('centered');
+    pop.style.left = '';
+    pop.style.top = '';
+    return;
+  }
+  if (!pop.hidden) hidePop();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePop(); });
+window.addEventListener('scroll', () => { if (canHover) hidePop(); }, { passive: true });
 
 init();
