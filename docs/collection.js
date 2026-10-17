@@ -311,12 +311,9 @@ function tileHtml(c) {
   `;
 }
 
-// Which rarity groups are minimized (kept per device).
-let collapsed = new Set();
-try { collapsed = new Set(JSON.parse(localStorage.getItem('eddies_collection_collapsed') || '[]')); } catch { /* ignore */ }
-function saveCollapsed() {
-  try { localStorage.setItem('eddies_collection_collapsed', JSON.stringify([...collapsed])); } catch { /* ignore */ }
-}
+// Rarity groups the visitor has opened. Everything starts minimized; a name
+// search opens every group so matches are visible.
+const opened = new Set();
 
 const PIC_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 9"/></svg>';
 
@@ -340,14 +337,15 @@ function listHtml(cards) {
   const sections = RARITY_GROUPS.map((g) => ({ g, rows: cards.filter((c) => g.match.includes(c.rarity)) }))
     .filter((s) => s.rows.length);
   return sections.map(({ g, rows }) => {
-    const shut = collapsed.has(g.key);
+    const shut = !state.search && !opened.has(g.key);
     const copies = rows.reduce((n, c) => n + c.qty, 0);
+    const missing = rows.reduce((n, c) => n + Math.max(0, c.cap - c.qty), 0);
     return `
       <section class="rar-group${shut ? ' shut' : ''}" data-key="${g.key}">
         <button type="button" class="rar-head" aria-expanded="${!shut}">
           <span class="rarity-icon rarity-icon-${g.icon}"></span>
           <span class="rar-title">${g.title}</span>
-          <span class="rar-count">${rows.length} cards · ${copies} ${label}</span>
+          <span class="rar-count">${rows.length} cards · ${copies} ${label} · ${missing} missing</span>
           <span class="rar-caret" aria-hidden="true"></span>
         </button>
         <div class="rar-body"${shut ? ' hidden' : ''}>${rows.map(rowHtml).join('')}</div>
@@ -364,8 +362,7 @@ el('own-list').addEventListener('click', (e) => {
   group.classList.toggle('shut', shut);
   head.setAttribute('aria-expanded', String(!shut));
   group.querySelector('.rar-body').hidden = shut;
-  if (shut) collapsed.add(group.dataset.key); else collapsed.delete(group.dataset.key);
-  saveCollapsed();
+  if (shut) opened.delete(group.dataset.key); else opened.add(group.dataset.key);
 });
 
 // Card preview: follows the pointer on desktop hover/focus; on touch a tap
