@@ -902,6 +902,8 @@ ipcMain.handle('publish:run', async () => {
   // The Loadout page (docs/loadout.html) draws any card a pasted decklist
   // names, so make sure every card has at least one published image, then
   // flag which printings have one (`img`).
+  // The Collection page shows every printing, so publish all art.
+  await copyImagesToDocs(cache.cards.map((c) => c.id));
   const docsImgs = new Set(await fs.readdir(docsImagesDir()).catch(() => []));
   const cardHasImg = new Set(cache.cards.filter((c) => docsImgs.has(`${c.id}.webp`)).map((c) => c.cardId));
   const missingArt = [];

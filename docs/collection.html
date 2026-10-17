@@ -7,7 +7,7 @@
 <title>Collection — Eddies</title>
 <link rel="icon" href="images/eddies-glyph-yellow.png" />
 <link rel="stylesheet" href="style.css?v=20261018" />
-<link rel="stylesheet" href="collection.css?v=20261018" />
+<link rel="stylesheet" href="collection.css?v=20261019" />
 </head>
 <body>
   <header class="app-header">
@@ -30,7 +30,6 @@
     <div class="stat-tiles" id="stat-tiles">
       <div class="stat"><b id="stat-cards">–</b><span>cards shown</span></div>
       <div class="stat"><b id="stat-copies">–</b><span>copies owned</span></div>
-      <div class="stat"><b id="stat-cost">–</b><span id="stat-cost-label">est. on Cardmarket</span></div>
     </div>
 
     <div class="needed-layout">
@@ -74,8 +73,6 @@
           <div class="grow"><input type="search" class="search-input" id="search" placeholder="Search by card name…" aria-label="Search cards" /></div>
           <select id="sort" aria-label="Sort cards">
             <option value="default">Sort: Color, then type</option>
-            <option value="price-desc">Price: high to low</option>
-            <option value="price-asc">Price: low to high</option>
             <option value="qty">Most copies owned</option>
             <option value="rarity">Rarity: rarest first</option>
             <option value="name">Name A–Z</option>
@@ -92,11 +89,11 @@
 
   <footer class="site-footer">
     <div class="build-info" id="build-info"></div>
-    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners. Prices are Cardmarket trend prices.</div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners.</div>
   </footer>
 
   <script src="config.js"></script>
   <script src="shared.js?v=20261018"></script>
-  <script src="collection.js?v=20261018"></script>
+  <script src="collection.js?v=20261019"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ let state = {
   colors: new Set(),
   types: new Set(),
   rarities: new Set(),
-  set: 'all',
+  set: 'welcometonightcitybeta',
   unique: false,
   search: '',
   sort: 'default',
@@ -45,10 +45,6 @@ const el = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const rarityClass = (rarity) => 'rarity-' + String(rarity || '').toLowerCase().replace(/\s+/g, '-');
 const mechKey = (c) => `${c.displayName || c.name}|${c.rulesText || c.cardId}`;
-
-function formatEur(v) {
-  return `€${v >= 100 ? Math.round(v) : v.toFixed(2)}`;
-}
 
 function loadView() {
   try {
@@ -196,7 +192,7 @@ function attachControls() {
     state.types.clear();
     state.rarities.clear();
     state.unique = false;
-    state.set = 'all';
+    state.set = 'welcometonightcitybeta';
     el('unique-filter').classList.remove('active');
     buildFilterOptions();
     render();
@@ -245,8 +241,6 @@ const SORTERS = {
   'default': (a, b) =>
     COLOR_ORDER.indexOf(a.color) - COLOR_ORDER.indexOf(b.color) ||
     TYPE_ORDER.indexOf(a.cardType) - TYPE_ORDER.indexOf(b.cardType) || byName(a, b),
-  'price-desc': (a, b) => (b.price ?? -1) - (a.price ?? -1) || byName(a, b),
-  'price-asc': (a, b) => (a.price ?? Infinity) - (b.price ?? Infinity) || byName(a, b),
   'qty': (a, b) => b.qty - a.qty || byName(a, b),
   'rarity': (a, b) => rarityRank(b.rarity) - rarityRank(a.rarity) || byName(a, b),
   'name': byName
@@ -273,10 +267,8 @@ function render() {
   cards.sort(SORTERS[state.sort] || SORTERS.default);
 
   const copies = cards.reduce((sum, c) => sum + c.qty, 0);
-  const total = cards.reduce((sum, c) => sum + (c.price != null ? c.price * c.qty : 0), 0);
   el('stat-cards').textContent = cards.length.toLocaleString();
   el('stat-copies').textContent = copies.toLocaleString();
-  el('stat-cost').textContent = total ? `~${formatEur(total)}` : '–';
   el('result-count').textContent = `Showing ${cards.length.toLocaleString()} card${cards.length === 1 ? '' : 's'}`;
 
   const filterCount = (state.status !== 'all' ? 1 : 0) + state.colors.size + state.types.size +
@@ -314,7 +306,6 @@ function tileHtml(c) {
         <div class="need-card-name">${esc(c.name)}</div>
         ${c.subname ? `<div class="need-card-subname">${esc(c.subname)}</div>` : ''}
         <div class="need-card-meta ${rarityClass(c.rarity)}">${esc(c.rarity)} · ${esc(c.set?.name || '')}</div>
-        ${c.price != null ? `<div class="need-card-price${c.priceGuess ? ' price-guess' : ''}">${formatEur(c.price)}${c.priceGuess ? '?' : ''}</div>` : ''}
       </div>
     </a>
   `;
@@ -323,13 +314,12 @@ function tileHtml(c) {
 function listHtml(cards) {
   const label = state.bucket === 'main' ? 'Main' : 'Reserve';
   return `
-    <div class="own-row own-head"><span>Card</span><span class="own-col-set">Set</span><span class="own-col-price">Price</span><span class="own-col-qty">${label}</span></div>
+    <div class="own-row own-head"><span>Card</span><span class="own-col-set">Set</span><span class="own-col-qty">${label}</span></div>
     ${cards.map((c) => `
       <a class="own-row own-${statusOf(c)}" href="${hrefFor(c)}">
         <span class="own-name"><b>${esc(c.name)}</b>${c.subname ? `<i>${esc(c.subname)}</i>` : ''}
           <em class="${rarityClass(c.rarity)}">${esc(c.rarity)}</em></span>
         <span class="own-col-set">${esc(c.set?.name || '')}</span>
-        <span class="own-col-price">${c.price != null ? formatEur(c.price) + (c.priceGuess ? '?' : '') : ''}</span>
         <span class="own-col-qty">${c.qty}<small>/${c.cap}</small></span>
       </a>`).join('')}
   `;
