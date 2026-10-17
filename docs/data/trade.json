@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T23:15:24.270Z",
+  "generatedAt": "2026-10-17T23:24:29.320Z",
   "pricesAsOf": "2026-10-17T02:44:54+0200",
   "cards": [
     {
@@ -73,6 +73,42 @@
       "price": 11.99,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian"
+    },
+    {
+      "id": "a33d3324-fe48-4a9f-80a8-8545a0a4727f",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck",
+        "name": "The Heist — Retail Starter Deck"
+      },
+      "collectorNumber": "011",
+      "qty": 1,
+      "price": 6.5,
+      "priceGuess": false,
+      "cmName": "Jackie Welles - Pour One Out For Me"
+    },
+    {
+      "id": "4a5591f9-743e-4186-8deb-560971bb3f82",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck",
+        "name": "The Heist — Retail Starter Deck"
+      },
+      "collectorNumber": "012",
+      "qty": 1,
+      "price": 2.49,
+      "priceGuess": false,
+      "cmName": "V - Corporate Exile"
     }
   ]
 }
