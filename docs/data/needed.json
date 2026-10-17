@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T11:10:28.390Z",
+  "generatedAt": "2026-10-17T20:05:16.198Z",
   "pricesAsOf": "2026-10-09T02:45:57+0200",
   "main": [
     {
@@ -3247,6 +3247,27 @@
         "name": "Welcome to Night City — Retail"
       },
       "collectorNumber": "146",
+      "cap": 1,
+      "price": 65.99,
+      "priceGuess": false,
+      "cmName": "Kerry Eurodyne - Axe, Attitude, Audience",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
+      "cardId": "5a441989-2997-40a2-a72e-08ca1442a7f3",
+      "name": "Kerry Eurodyne",
+      "subname": "Axe, Attitude, Audience",
+      "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β146",
       "cap": 1,
       "price": 65.99,
       "priceGuess": false,

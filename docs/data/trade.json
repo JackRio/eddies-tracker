@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T11:10:28.525Z",
+  "generatedAt": "2026-10-17T20:05:21.301Z",
   "pricesAsOf": "2026-10-09T02:45:57+0200",
   "cards": [
     {
@@ -19,24 +19,6 @@
       "price": 65,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán"
-    },
-    {
-      "id": "5ade304e-8e0e-4484-944a-18d8d08caf9f",
-      "name": "Kerry Eurodyne",
-      "subname": "Axe, Attitude, Audience",
-      "displayName": "Kerry Eurodyne: Axe, Attitude, Audience",
-      "color": "Yellow",
-      "cardType": "Legend",
-      "rarity": "Iconic Legend",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β146",
-      "qty": 1,
-      "price": 65.99,
-      "priceGuess": false,
-      "cmName": "Kerry Eurodyne - Axe, Attitude, Audience"
     },
     {
       "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
