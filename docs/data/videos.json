@@ -78,6 +78,30 @@
   ],
   "videos": [
     {
+      "id": "WK5Tm7lOnNk",
+      "title": "YYR is the REAL best Cyberpunk TCG deck",
+      "published": "2026-10-17T02:26:49+00:00",
+      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "gT__3G0aaY8",
+      "title": "Ranking GA Decks by JUND-INESS??  || Grand Archive TCG Recollection Step 66",
+      "published": "2026-10-16T21:34:57+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "CcN-clnXkvA",
+      "title": "Judge Program & EOR Side Events ✨👀 | Cyberdeck Podcast Episode 28 | Cyberpunk Trading Card Game",
+      "published": "2026-10-16T16:00:01+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "iTkN9vYAZnc",
+      "title": "OK This is REALLY Fun! 🟡🟡🔴 SMASHER! A Sweet Cyberpunk TCG Deck!",
+      "published": "2026-10-16T12:00:05+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
       "id": "akippCS_qM8",
       "title": "Booster Pack 01 - Sleep",
       "published": "2026-10-16T11:00:13+00:00",
@@ -234,12 +258,6 @@
       "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
     },
     {
-      "id": "AMVPIVJWH_g",
-      "title": "This Indie Japanese TCG is WEIRDLY Amazing! - VARZ TCG: The Maindeck Review!",
-      "published": "2026-10-07T15:12:32+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "QX3E3RMjLhY",
       "title": "2 NEW Meta Decks You NEED to Know | 🔴🔴🔵 & 🔴🟢🔵",
       "published": "2026-10-07T10:00:13+00:00",
@@ -390,12 +408,6 @@
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
     },
     {
-      "id": "fVFCxGBEhbQ",
-      "title": "Fixing a BIG (little) Mistake🤦‍♂️ in the RULES for Cyberpunk TCG Tournament Play",
-      "published": "2026-09-26T21:29:57+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "tYtJQzwXpuw",
       "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
       "published": "2026-09-25T16:00:39+00:00",
@@ -492,12 +504,6 @@
       "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
-      "id": "FErgliHjTag",
-      "title": "Cyberpunk TCG Starter Deck Duel - Afterlife Card Club Episode 6. (Embracing Power Vs. The Heist)",
-      "published": "2026-09-14T17:27:49+00:00",
-      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
       "id": "7tBDI1Xrwrs",
       "title": "3 decks YOU should try in Cyberpunk TCG",
       "published": "2026-09-14T10:23:19+00:00",
@@ -544,12 +550,6 @@
       "title": "Every Feature of Deckrunners, our Cyberpunk TCG Companion App #cyberpunk2077 #cyberpunktcg",
       "published": "2026-09-09T22:17:56+00:00",
       "channelId": "UCizLTV6gmqor_EmQCkP8kfQ"
-    },
-    {
-      "id": "SJ6tzCfhDUU",
-      "title": "Wakako vs Evelyn Parker | Fixers YBG 🟡🔵🟢 vs Evelyn BRG 🔵🔴🟢 | Cyberpunk Trading Card Game",
-      "published": "2026-09-09T16:00:24+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
     },
     {
       "id": "QmoGmBY5A6I",
@@ -822,10 +822,6 @@
       "short": false
     },
     {
-      "id": "fVFCxGBEhbQ",
-      "short": false
-    },
-    {
       "id": "9j2ondicjPU",
       "short": false
     },
@@ -847,10 +843,6 @@
     },
     {
       "id": "J1xpMDJILM8",
-      "short": false
-    },
-    {
-      "id": "AMVPIVJWH_g",
       "short": false
     },
     {
@@ -882,10 +874,6 @@
       "short": false
     },
     {
-      "id": "FErgliHjTag",
-      "short": false
-    },
-    {
       "id": "iXmiU5z0xXE",
       "short": false
     },
@@ -907,10 +895,6 @@
     },
     {
       "id": "8wtXTtWFgio",
-      "short": false
-    },
-    {
-      "id": "SJ6tzCfhDUU",
       "short": false
     },
     {
@@ -1228,7 +1212,23 @@
     {
       "id": "akippCS_qM8",
       "short": false
+    },
+    {
+      "id": "iTkN9vYAZnc",
+      "short": false
+    },
+    {
+      "id": "WK5Tm7lOnNk",
+      "short": false
+    },
+    {
+      "id": "gT__3G0aaY8",
+      "short": false
+    },
+    {
+      "id": "CcN-clnXkvA",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-16T11:32:47.364Z"
+  "updatedAt": "2026-10-17T10:52:45.706Z"
 }
