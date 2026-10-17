@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T20:05:21.301Z",
-  "pricesAsOf": "2026-10-09T02:45:57+0200",
+  "generatedAt": "2026-10-17T23:09:39.217Z",
+  "pricesAsOf": "2026-10-17T02:44:54+0200",
   "cards": [
     {
       "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
@@ -34,7 +34,7 @@
       },
       "collectorNumber": "β005",
       "qty": 1,
-      "price": 48,
+      "price": 40,
       "priceGuess": false,
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
@@ -52,7 +52,7 @@
       },
       "collectorNumber": "β004",
       "qty": 1,
-      "price": 20,
+      "price": 29,
       "priceGuess": false,
       "cmName": "Saburo Arasaka - Stubborn Patriarch"
     },
@@ -70,7 +70,7 @@
       },
       "collectorNumber": "β164",
       "qty": 1,
-      "price": 10,
+      "price": 11.99,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian"
     }

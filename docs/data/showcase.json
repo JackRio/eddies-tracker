@@ -1,18 +1,6 @@
 {
-  "generatedAt": "2026-10-10T11:10:28.559Z",
+  "generatedAt": "2026-10-17T23:09:39.233Z",
   "cards": [
-    {
-      "id": "ba15a39b-fc76-474b-a2f0-76e5069a69e4",
-      "name": "Yorinobu Arasaka",
-      "subname": "Embracing Destruction",
-      "displayName": "Yorinobu Arasaka: Embracing Destruction",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Red",
-      "set": "Edgerunner Open S 1",
-      "price": 1300,
-      "priceGuess": true
-    },
     {
       "id": "4f8fbab4-7aad-4271-8dd6-8cdf68654c5e",
       "name": "Johnny Silverhand",
@@ -22,7 +10,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Welcome to Night City",
-      "price": 919.99,
+      "price": 1399,
       "priceGuess": false
     },
     {
@@ -34,7 +22,31 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Welcome to Night City",
-      "price": 889.17,
+      "price": 1250,
+      "priceGuess": false
+    },
+    {
+      "id": "ba15a39b-fc76-474b-a2f0-76e5069a69e4",
+      "name": "Yorinobu Arasaka",
+      "subname": "Embracing Destruction",
+      "displayName": "Yorinobu Arasaka: Embracing Destruction",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Red",
+      "set": "Edgerunner Open S 1",
+      "price": 999,
+      "priceGuess": true
+    },
+    {
+      "id": "2c0d6f48-0804-4d5f-83c2-f28367ce26d5",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "rarity": "Iconic Secret",
+      "cardType": "Unit",
+      "color": "Blue",
+      "set": "Welcome to Night City",
+      "price": 950,
       "priceGuess": false
     },
     {
@@ -46,32 +58,8 @@
       "cardType": "Unit",
       "color": "Green",
       "set": "Welcome to Night City",
-      "price": 820,
+      "price": 900,
       "priceGuess": false
-    },
-    {
-      "id": "2c0d6f48-0804-4d5f-83c2-f28367ce26d5",
-      "name": "Judy Álvarez",
-      "subname": "Nothing to Doubt",
-      "displayName": "Judy Álvarez: Nothing to Doubt",
-      "rarity": "Iconic Secret",
-      "cardType": "Unit",
-      "color": "Blue",
-      "set": "Welcome to Night City",
-      "price": 800,
-      "priceGuess": false
-    },
-    {
-      "id": "8bdba66b-a20e-49f3-8e85-2e3d7e0c6a37",
-      "name": "Goro Takemura",
-      "subname": "Hands Unclean",
-      "displayName": "Goro Takemura: Hands Unclean",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Green",
-      "set": "Edgerunner Open S 1",
-      "price": 779.4,
-      "priceGuess": true
     },
     {
       "id": "46387af0-342b-40c7-82fa-858d08ea473f",
@@ -83,6 +71,78 @@
       "color": "Green",
       "set": "Edgerunner Open S 1",
       "price": 643.97,
+      "priceGuess": true
+    },
+    {
+      "id": "8bdba66b-a20e-49f3-8e85-2e3d7e0c6a37",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Green",
+      "set": "Edgerunner Open S 1",
+      "price": 300,
+      "priceGuess": true
+    },
+    {
+      "id": "36728e75-5520-4ba8-a82d-e5d884b18170",
+      "name": "Industrial Assembly",
+      "subname": null,
+      "displayName": "Industrial Assembly",
+      "rarity": "Nova Rare",
+      "cardType": "Program",
+      "color": "Red",
+      "set": "Edgerunner Open S 1",
+      "price": 300,
+      "priceGuess": true
+    },
+    {
+      "id": "a4271ab1-4688-4f98-b000-a186aadd7fee",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Red",
+      "set": "Night City Brawl S 1",
+      "price": 300,
+      "priceGuess": true
+    },
+    {
+      "id": "a9eb38f2-fe64-47c5-9938-9b6ecb01c913",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "rarity": "Nova Rare",
+      "cardType": "Gear",
+      "color": "Green",
+      "set": "Night City Showdown S1",
+      "price": 300,
+      "priceGuess": true
+    },
+    {
+      "id": "c0a913fe-d3fc-4558-a35f-cfa34d4023c3",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "rarity": "Nova Rare",
+      "cardType": "Gear",
+      "color": "Red",
+      "set": "Night City Brawl S 1",
+      "price": 300,
+      "priceGuess": true
+    },
+    {
+      "id": "23b81de3-abe3-4231-8dc3-7656de9d99db",
+      "name": "Viktor Vektor",
+      "subname": "Sit Down and Relax",
+      "displayName": "Viktor Vektor: Sit Down and Relax",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Yellow",
+      "set": "Edgerunner Open S 1",
+      "price": 299,
       "priceGuess": true
     },
     {
@@ -118,19 +178,7 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Box Toppers",
-      "price": 48,
-      "priceGuess": false
-    },
-    {
-      "id": "f509ebd8-c8b7-4a22-8922-2d71c6df0b6f",
-      "name": "V",
-      "subname": "Corporate Exile",
-      "displayName": "V: Corporate Exile",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Box Toppers",
-      "price": 34.99,
+      "price": 40,
       "priceGuess": false
     },
     {
@@ -146,15 +194,15 @@
       "priceGuess": true
     },
     {
-      "id": "1b6e44dd-d6e7-46eb-a5e5-24c38eed888b",
-      "name": "Goro Takemura",
-      "subname": "Hands Unclean",
-      "displayName": "Goro Takemura: Hands Unclean",
+      "id": "f509ebd8-c8b7-4a22-8922-2d71c6df0b6f",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
       "rarity": "Nova Rare",
       "cardType": "Legend",
-      "color": "Green",
+      "color": "Blue",
       "set": "Box Toppers",
-      "price": 24.94,
+      "price": 29.99,
       "priceGuess": false
     },
     {
@@ -166,7 +214,19 @@
       "cardType": "Legend",
       "color": "Green",
       "set": "Box Toppers",
-      "price": 20,
+      "price": 29,
+      "priceGuess": false
+    },
+    {
+      "id": "1b6e44dd-d6e7-46eb-a5e5-24c38eed888b",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Green",
+      "set": "Box Toppers",
+      "price": 23,
       "priceGuess": false
     },
     {
@@ -191,66 +251,6 @@
       "color": "Red",
       "set": "Box Toppers",
       "price": 15.68,
-      "priceGuess": false
-    },
-    {
-      "id": "2ec85468-7593-4af5-b0d9-aecc1bc82366",
-      "name": "Mantis Blades",
-      "subname": null,
-      "displayName": "Mantis Blades",
-      "rarity": "Nova Rare",
-      "cardType": "Gear",
-      "color": "Red",
-      "set": "Pre-Release",
-      "price": 10,
-      "priceGuess": false
-    },
-    {
-      "id": "9c8b2cab-c07e-44e7-bcfd-277100688d17",
-      "name": "Judy Álvarez",
-      "subname": "Braindance Maestro",
-      "displayName": "Judy Álvarez: Braindance Maestro",
-      "rarity": "Iconic Legend",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Welcome to Night City",
-      "price": 255.99,
-      "priceGuess": false
-    },
-    {
-      "id": "1d4ce13a-20de-4f4f-8145-0c8e9892f52c",
-      "name": "Alt Cunningham",
-      "subname": "Soulkiller Architect",
-      "displayName": "Alt Cunningham: Soulkiller Architect",
-      "rarity": "Iconic Legend",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Welcome to Night City",
-      "price": 190,
-      "priceGuess": false
-    },
-    {
-      "id": "cc3ed2c4-6e6d-47aa-b358-152c56b24bad",
-      "name": "Hanako Arasaka",
-      "subname": "Daughter of the Emperor",
-      "displayName": "Hanako Arasaka: Daughter of the Emperor",
-      "rarity": "Iconic Legend",
-      "cardType": "Legend",
-      "color": "Green",
-      "set": "Welcome to Night City",
-      "price": 170,
-      "priceGuess": false
-    },
-    {
-      "id": "837d354a-a1c8-4df0-b4ac-4db43730187a",
-      "name": "V",
-      "subname": "Streetkid",
-      "displayName": "V: Streetkid",
-      "rarity": "Iconic Legend",
-      "cardType": "Legend",
-      "color": "Red",
-      "set": "Welcome to Night City",
-      "price": 105,
       "priceGuess": false
     }
   ]

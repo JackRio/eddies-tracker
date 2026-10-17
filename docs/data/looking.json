@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-10T11:10:28.550Z",
-  "pricesAsOf": "2026-10-09T02:45:57+0200",
+  "generatedAt": "2026-10-17T23:09:39.228Z",
+  "pricesAsOf": "2026-10-17T02:44:54+0200",
   "cards": [
     {
       "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
@@ -16,7 +16,7 @@
       },
       "collectorNumber": "093",
       "needed": 1,
-      "price": 1.8,
+      "price": 1,
       "priceGuess": false,
       "cmName": "Overwatch - Panam's Gift"
     },
@@ -34,7 +34,7 @@
       },
       "collectorNumber": "126",
       "needed": 2,
-      "price": 0.98,
+      "price": 1,
       "priceGuess": false,
       "cmName": "Rogue Amendiares - Queen of the Afterlife"
     },
@@ -52,7 +52,7 @@
       },
       "collectorNumber": "063",
       "needed": 1,
-      "price": 1.99,
+      "price": 2,
       "priceGuess": false,
       "cmName": "The Relic - Experimental Biochip"
     },
@@ -70,7 +70,7 @@
       },
       "collectorNumber": "057",
       "needed": 1,
-      "price": 1.9,
+      "price": 1.8,
       "priceGuess": false,
       "cmName": "Viktor Vektor - Drop Your Illusions"
     },
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "020",
       "needed": 1,
-      "price": 2,
+      "price": 1.95,
       "priceGuess": false,
       "cmName": "V - Roamer of the Badlands"
     },
@@ -106,7 +106,7 @@
       },
       "collectorNumber": "041",
       "needed": 2,
-      "price": 1.25,
+      "price": 1.65,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
     },
@@ -124,7 +124,7 @@
       },
       "collectorNumber": "048",
       "needed": 1,
-      "price": 5,
+      "price": 4,
       "priceGuess": false,
       "cmName": "Jackie Welles - Ride or Die Choom"
     },
@@ -142,7 +142,7 @@
       },
       "collectorNumber": "011",
       "needed": 2,
-      "price": 4.99,
+      "price": 5.99,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Never Stop Fighting"
     },
@@ -160,7 +160,7 @@
       },
       "collectorNumber": "013",
       "needed": 1,
-      "price": 7,
+      "price": 7.75,
       "priceGuess": false,
       "cmName": "Goro Takemura - Losing His Way"
     },
@@ -178,7 +178,7 @@
       },
       "collectorNumber": "002",
       "needed": 1,
-      "price": 6,
+      "price": 5.5,
       "priceGuess": false,
       "cmName": "Minotaur"
     },
@@ -219,24 +219,6 @@
       "cmName": "MT0D12 Flathead"
     },
     {
-      "id": "e2f38541-ecc9-41dc-ae15-164171391bff",
-      "name": "Dexter DeShawn",
-      "subname": "One Last Chance",
-      "displayName": "Dexter DeShawn: One Last Chance",
-      "color": "Yellow",
-      "cardType": "Unit",
-      "rarity": "Uncommon",
-      "set": {
-        "code": "theheistretailstarterdeck",
-        "name": "The Heist — Retail Starter Deck"
-      },
-      "collectorNumber": "002",
-      "needed": 1,
-      "price": 8.7,
-      "priceGuess": false,
-      "cmName": "Dexter DeShawn - One Last Chance"
-    },
-    {
       "id": "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5",
       "name": "Panam Palmer",
       "subname": "Strength Through Family",
@@ -250,7 +232,7 @@
       },
       "collectorNumber": "085",
       "needed": 3,
-      "price": 12,
+      "price": 10,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family"
     },
@@ -268,7 +250,7 @@
       },
       "collectorNumber": "116",
       "needed": 2,
-      "price": 10,
+      "price": 9,
       "priceGuess": false,
       "cmName": "Judy Álvarez - Nothing to Doubt"
     },
@@ -286,7 +268,7 @@
       },
       "collectorNumber": "003",
       "needed": 1,
-      "price": 24,
+      "price": 25.99,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Rocking Renegade"
     }
