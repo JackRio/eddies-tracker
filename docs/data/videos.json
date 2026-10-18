@@ -78,6 +78,24 @@
   ],
   "videos": [
     {
+      "id": "T16nIRJSDfA",
+      "title": "Commentating Weekly Webcam Locals! | Cyberpunk TCG LIVE",
+      "published": "2026-10-18T06:05:29+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "ukXnUbZVBPA",
+      "title": "Playing some live Cyberpunk!",
+      "published": "2026-10-18T05:34:09+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "UzJIUfijxI8",
+      "title": "VARZ TCG ONLINE Community Play Night LIVE!",
+      "published": "2026-10-17T19:16:13+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
       "id": "WK5Tm7lOnNk",
       "title": "YYR is the REAL best Cyberpunk TCG deck",
       "published": "2026-10-17T02:26:49+00:00",
@@ -171,12 +189,6 @@
       "id": "FbPSbFZ6WHE",
       "title": "ONE CASE - 16 BOXES - of Haikyu!! Vobaca Break TCG!! - Box Opening Livestream",
       "published": "2026-10-12T23:09:04+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
-      "id": "UzJIUfijxI8",
-      "title": "VARZ TCG ONLINE Community Play Night LIVE!",
-      "published": "2026-10-12T22:40:40+00:00",
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
@@ -300,12 +312,6 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
-      "id": "zoyRdYjlrEw",
-      "title": "Ranking Cyberpunk TCG's Blue and Green Cards (2077 After!)",
-      "published": "2026-10-04T04:42:50+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "woimCh5dTlc",
       "title": "Now With SIDEBOARD! Let's Chat About My Favorite Deck 🔵🔵🔴 BBRaindance for Cyberpunk TCG",
       "published": "2026-10-03T23:24:46+00:00",
@@ -346,12 +352,6 @@
       "title": "Thousand💲Dollar Cards and Tournament Rule🔥Drama... Night City Cardcast Episode 12",
       "published": "2026-10-01T12:00:01+00:00",
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
-      "id": "4plaIUwKe8s",
-      "title": "Trying our best to play COMPETITIVE decks in Cyberpunk TCG! | 🟡🟡🔴 Gear vs 🔵🔵🟢 Control",
-      "published": "2026-09-30T13:00:23+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
       "id": "gtZhqVGpvvg",
@@ -790,14 +790,6 @@
       "short": false
     },
     {
-      "id": "zoyRdYjlrEw",
-      "short": false
-    },
-    {
-      "id": "4plaIUwKe8s",
-      "short": false
-    },
-    {
       "id": "0seGZwHjEzY",
       "short": false
     },
@@ -1228,7 +1220,15 @@
     {
       "id": "CcN-clnXkvA",
       "short": false
+    },
+    {
+      "id": "T16nIRJSDfA",
+      "short": false
+    },
+    {
+      "id": "ukXnUbZVBPA",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-17T10:52:45.706Z"
+  "updatedAt": "2026-10-18T11:17:18.098Z"
 }
