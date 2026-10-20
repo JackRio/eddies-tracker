@@ -78,6 +78,30 @@
   ],
   "videos": [
     {
+      "id": "ohwZJ3rCMs0",
+      "title": "A package from WeirdCo?! - Opening a RETAIL Booster Box",
+      "published": "2026-10-20T09:00:15+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "m2WrQ2K0GBI",
+      "title": "WORLD FIRST?! I pulled an UNREVEALED ISR! | Cyberpunk TCG",
+      "published": "2026-10-20T09:00:07+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
+    },
+    {
+      "id": "eAiqusfRCL0",
+      "title": "FULL RETAIL is HERE! Opening the FIRST BOX of Cyberpunk TCG: Welcome to Night City!",
+      "published": "2026-10-20T09:00:03+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "kk_63rAoAXc",
+      "title": "BETA Booster Box Opening - 7 | Cyberpunk TCG",
+      "published": "2026-10-19T19:00:28+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
       "id": "4UGvCdLgZDY",
       "title": "What's Next?? Chrome Cardboard Channel Update",
       "published": "2026-10-19T10:00:09+00:00",
@@ -414,12 +438,6 @@
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
     },
     {
-      "id": "pButRluA714",
-      "title": "I Got To Talk With The 🫨 Lead Designer for Cyberpunk TCG (Re-Up)",
-      "published": "2026-09-27T12:00:39+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "tYtJQzwXpuw",
       "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
       "published": "2026-09-25T16:00:39+00:00",
@@ -508,12 +526,6 @@
       "title": "Beta Booster Box Battle Ep1 - HOW MANY Adam Smashers can we get?",
       "published": "2026-09-17T12:00:23+00:00",
       "channelId": "UCJavloH4k2Wyyf4eElRac2A"
-    },
-    {
-      "id": "lzwLvy0Ft4s",
-      "title": "BETA Booster Box Opening - 2 | Cyberpunk TCG",
-      "published": "2026-09-14T19:00:10+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
       "id": "7tBDI1Xrwrs",
@@ -654,12 +666,6 @@
       "channelId": "UCUQFMd34uqxuS3OgAzcyEuA"
     },
     {
-      "id": "tk_iC9fQO6k",
-      "title": "Let the show begin! - Channel Update #2",
-      "published": "2026-09-01T15:00:18+00:00",
-      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
-    },
-    {
       "id": "sX8BTGHXOyE",
       "title": "Guide to Cyberpunk TCG Beta Events",
       "published": "2026-09-01T13:35:59+00:00",
@@ -750,12 +756,6 @@
       "channelId": "UCFd-oebu93o0blOK7dUbcoA"
     },
     {
-      "id": "taYMc8fjvpE",
-      "title": "Does the Cyberpunk TCG Have TOO Much Removal??",
-      "published": "2026-08-02T21:34:55+00:00",
-      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
-    },
-    {
       "id": "916TdrJHzaU",
       "title": "Rating Every GREEN & BLUE Card in Cyberpunk TCG",
       "published": "2026-07-15T13:22:05+00:00",
@@ -807,10 +807,6 @@
     },
     {
       "id": "zGlAoTmL3jk",
-      "short": false
-    },
-    {
-      "id": "pButRluA714",
       "short": false
     },
     {
@@ -938,10 +934,6 @@
       "short": false
     },
     {
-      "id": "taYMc8fjvpE",
-      "short": false
-    },
-    {
       "id": "p6IQiINI3D8",
       "short": false
     },
@@ -986,10 +978,6 @@
       "short": false
     },
     {
-      "id": "tk_iC9fQO6k",
-      "short": false
-    },
-    {
       "id": "NjJNH5lLICo",
       "short": false
     },
@@ -1007,10 +995,6 @@
     },
     {
       "id": "SqlD1ITaNwk",
-      "short": false
-    },
-    {
-      "id": "lzwLvy0Ft4s",
       "short": false
     },
     {
@@ -1228,7 +1212,23 @@
     {
       "id": "4UGvCdLgZDY",
       "short": false
+    },
+    {
+      "id": "eAiqusfRCL0",
+      "short": false
+    },
+    {
+      "id": "m2WrQ2K0GBI",
+      "short": false
+    },
+    {
+      "id": "ohwZJ3rCMs0",
+      "short": false
+    },
+    {
+      "id": "kk_63rAoAXc",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-19T13:29:56.805Z"
+  "updatedAt": "2026-10-20T11:47:15.449Z"
 }
