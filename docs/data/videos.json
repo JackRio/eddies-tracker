@@ -78,6 +78,30 @@
   ],
   "videos": [
     {
+      "id": "N2yQXhsm3lk",
+      "title": "SET 2 👀 ANNOUNCED! And a 🔥SPECIAL GUEST🔥 Evaluates Cyberpunk Cards! NCC Episode 14",
+      "published": "2026-10-22T12:00:34+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "mukt59zvFK0",
+      "title": "Better Life - 2 | Cyberpunk TCG Decklist",
+      "published": "2026-10-22T03:30:20+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "WpdhGCx-js4",
+      "title": "ALL About Legend Calling, Sideboarding, and MORE! - Cardrunners: A Cyberpunk TCG Podcast Episode 26",
+      "published": "2026-10-21T22:47:43+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "hl3wKyDgZcY",
+      "title": "Cyberpunk TCG Retail Box Rip and Giveaway! Thank you Weirdoco!",
+      "published": "2026-10-21T18:43:52+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
       "id": "6hWbjUyecXw",
       "title": "Join Maelstrom!",
       "published": "2026-10-21T11:11:57+00:00",
@@ -252,12 +276,6 @@
       "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
-      "id": "5oSHdEO2I1w",
-      "title": "Hitting a SIGNATURE...! Haikyu!! Vobaca Break Opening & Discussion!",
-      "published": "2026-10-12T20:16:07+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "-HrvdH85yG0",
       "title": "programs, PrOgRAMs, PROGRAMS!! Our Cyberpunk TCG Final Programs Tier List",
       "published": "2026-10-12T11:30:25+00:00",
@@ -426,12 +444,6 @@
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
-      "id": "zGlAoTmL3jk",
-      "title": "Is 🔵🔵✖️ REALLY the 🔥BEST🔥 thing in Cyberpunk TCG?",
-      "published": "2026-09-28T02:09:40+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "hBa42MSmWnY",
       "title": "Cyberpunk TCG Yellow Units Tier List for Set 1 \"Welcome To Night City.\"",
       "published": "2026-09-28T01:14:51+00:00",
@@ -486,12 +498,6 @@
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
-      "id": "SqlD1ITaNwk",
-      "title": "BETA Booster Box Opening - 3 | Cyberpunk TCG",
-      "published": "2026-09-21T19:00:40+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
-    },
-    {
       "id": "v8RkYR0j580",
       "title": "Cyberpunk TCG Meta - Is BBG TIER 0?",
       "published": "2026-09-21T10:13:44+00:00",
@@ -520,12 +526,6 @@
       "title": "Edgerunner Open Regional Full Prizing 👀 | Cyberdeck Podcast Episode 25 | Cyberpunk Trading Card Game",
       "published": "2026-09-18T16:00:25+00:00",
       "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
-    },
-    {
-      "id": "NXGitGm3VJI",
-      "title": "Our Thoughts on the Beta Pre-Release Events",
-      "published": "2026-09-18T14:00:25+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "YY7g4ivKb6M",
@@ -802,10 +802,6 @@
       "short": false
     },
     {
-      "id": "zGlAoTmL3jk",
-      "short": false
-    },
-    {
       "id": "9j2ondicjPU",
       "short": false
     },
@@ -938,10 +934,6 @@
       "short": false
     },
     {
-      "id": "NXGitGm3VJI",
-      "short": false
-    },
-    {
       "id": "eVR1RPT-obs",
       "short": false
     },
@@ -971,10 +963,6 @@
     },
     {
       "id": "wx3wzDUHACY",
-      "short": false
-    },
-    {
-      "id": "SqlD1ITaNwk",
       "short": false
     },
     {
@@ -1118,10 +1106,6 @@
       "short": false
     },
     {
-      "id": "5oSHdEO2I1w",
-      "short": false
-    },
-    {
       "id": "9zfuI4egW2A",
       "short": false
     },
@@ -1228,7 +1212,23 @@
     {
       "id": "sCjVHm44-4w",
       "short": false
+    },
+    {
+      "id": "N2yQXhsm3lk",
+      "short": false
+    },
+    {
+      "id": "WpdhGCx-js4",
+      "short": false
+    },
+    {
+      "id": "hl3wKyDgZcY",
+      "short": false
+    },
+    {
+      "id": "mukt59zvFK0",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-21T11:59:19.526Z"
+  "updatedAt": "2026-10-22T12:01:48.256Z"
 }
