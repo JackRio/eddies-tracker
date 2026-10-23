@@ -78,6 +78,18 @@
   ],
   "videos": [
     {
+      "id": "WZn0RSocSqI",
+      "title": "Become a night city legend and join the Aldercaldos, it’s holophone time!",
+      "published": "2026-10-22T19:15:12+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "C5LBpyeaYEY",
+      "title": "Cyberpunk TCG Pre-release guide by Creator Invitational WINNER X0TCG",
+      "published": "2026-10-22T15:07:33+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
       "id": "N2yQXhsm3lk",
       "title": "SET 2 👀 ANNOUNCED! And a 🔥SPECIAL GUEST🔥 Evaluates Cyberpunk Cards! NCC Episode 14",
       "published": "2026-10-22T12:00:34+00:00",
@@ -510,12 +522,6 @@
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
-      "id": "9Fos0WCAlPA",
-      "title": "Managed to collect all the beta stamped cards for cyberpunk TCG and they look awesome!",
-      "published": "2026-09-19T18:48:59+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
-    },
-    {
       "id": "wTbbphbbXb8",
       "title": "Introduction to RRx - CyberpunkTCG's Best Midrange Deck!",
       "published": "2026-09-19T05:53:42+00:00",
@@ -544,12 +550,6 @@
       "title": "Night City Brawl 👊 & Beta Event Kit 👀 | Cyberdeck Podcast Episode 24 | Cyberpunk Trading Card Game",
       "published": "2026-09-11T16:00:13+00:00",
       "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
-    },
-    {
-      "id": "ULdj5vJnccg",
-      "title": "Opening 2 BETA BOOSTER BOXES of Cyberpunk TCG - Can we hit big?",
-      "published": "2026-09-11T10:15:54+00:00",
-      "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
       "id": "dyNRpIsRmyU",
@@ -886,10 +886,6 @@
       "short": false
     },
     {
-      "id": "ULdj5vJnccg",
-      "short": false
-    },
-    {
       "id": "QX3E3RMjLhY",
       "short": false
     },
@@ -927,10 +923,6 @@
     },
     {
       "id": "2elesi4EuSA",
-      "short": false
-    },
-    {
-      "id": "9Fos0WCAlPA",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "mukt59zvFK0",
       "short": false
+    },
+    {
+      "id": "C5LBpyeaYEY",
+      "short": false
+    },
+    {
+      "id": "WZn0RSocSqI",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-22T12:01:48.256Z"
+  "updatedAt": "2026-10-23T11:47:22.372Z"
 }
