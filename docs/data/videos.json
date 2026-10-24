@@ -78,6 +78,24 @@
   ],
   "videos": [
     {
+      "id": "zdqlmZeIZ8M",
+      "title": "New Status Quo — Episode 4 | Cyberpunk TCG Podcast",
+      "published": "2026-10-23T19:00:38+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "Rf5La9ip5ys",
+      "title": "Four UNBELIEVABLE Ally Decks in Grand Archive's BEST Metagame!",
+      "published": "2026-10-23T15:00:22+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "KxZG-sRi-Wg",
+      "title": "Testing the Turbo Placide Deck vs Champ! | Cyberpunk TCG 🟡🟡🔵 vs 🟢🟢🔵",
+      "published": "2026-10-23T13:00:27+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
       "id": "WZn0RSocSqI",
       "title": "Become a night city legend and join the Aldercaldos, it’s holophone time!",
       "published": "2026-10-22T19:15:12+00:00",
@@ -270,12 +288,6 @@
       "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
     },
     {
-      "id": "8m5k-oLkn7o",
-      "title": "NO OTHER TCG Today is Doing THIS! - Cardrunners: A Cyberpunk TCG Podcast Episode 25",
-      "published": "2026-10-13T20:14:41+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "VrpdMqqeTaw",
       "title": "The BEST RED Cards in Cyberpunk TCG",
       "published": "2026-10-13T15:18:54+00:00",
@@ -340,12 +352,6 @@
       "title": "Cyberpunk TCG Blue Units Tier List for Set 1 \"Welcome to Night City\"",
       "published": "2026-10-09T02:26:26+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
-      "id": "MtS09F48eSs",
-      "title": "My favorite card from alpha is BACK! | 🟢🟢🔴 Panam Deck Tech",
-      "published": "2026-10-08T02:52:52+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
       "id": "w1wnuh81a_A",
@@ -442,12 +448,6 @@
       "title": "We Open More Beta Event Kits at our LGS",
       "published": "2026-09-29T18:00:11+00:00",
       "channelId": "UCJavloH4k2Wyyf4eElRac2A"
-    },
-    {
-      "id": "wx3wzDUHACY",
-      "title": "BETA Booster Box Opening - 4 | Cyberpunk TCG",
-      "published": "2026-09-28T21:30:36+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
       "id": "vduxEAfU5FY",
@@ -782,10 +782,6 @@
       "short": false
     },
     {
-      "id": "MtS09F48eSs",
-      "short": false
-    },
-    {
       "id": "0seGZwHjEzY",
       "short": false
     },
@@ -954,10 +950,6 @@
       "short": false
     },
     {
-      "id": "wx3wzDUHACY",
-      "short": false
-    },
-    {
       "id": "nFqK24shZM4",
       "short": false
     },
@@ -1102,10 +1094,6 @@
       "short": false
     },
     {
-      "id": "8m5k-oLkn7o",
-      "short": false
-    },
-    {
       "id": "nWAbHeI10pA",
       "short": false
     },
@@ -1228,7 +1216,19 @@
     {
       "id": "WZn0RSocSqI",
       "short": false
+    },
+    {
+      "id": "KxZG-sRi-Wg",
+      "short": false
+    },
+    {
+      "id": "Rf5La9ip5ys",
+      "short": false
+    },
+    {
+      "id": "zdqlmZeIZ8M",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-23T11:47:22.372Z"
+  "updatedAt": "2026-10-24T11:11:58.775Z"
 }
