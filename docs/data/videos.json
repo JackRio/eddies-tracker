@@ -78,6 +78,18 @@
   ],
   "videos": [
     {
+      "id": "bA9CzUD1DvQ",
+      "title": "Gorilla Arms BAYBEE!! Cyberpunk Tcg Retail Pre-Release Discussion",
+      "published": "2026-10-26T12:00:35+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "Q_WJA6Fsd_Q",
+      "title": "The Ultimate Pre-Release Guide for the Cyberpunk Trading Card Game!",
+      "published": "2026-10-25T14:59:33+00:00",
+      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
       "id": "zdqlmZeIZ8M",
       "title": "New Status Quo — Episode 4 | Cyberpunk TCG Podcast",
       "published": "2026-10-23T19:00:38+00:00",
@@ -498,12 +510,6 @@
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
-      "id": "kku4kwGny1A",
-      "title": "Unit Tier List Rough Draft Live Stream",
-      "published": "2026-09-23T03:25:10+00:00",
-      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
       "id": "mWQKByVu4X0",
       "title": "Cyberpunk 101: Deck Building Tips",
       "published": "2026-09-22T13:04:21+00:00",
@@ -514,12 +520,6 @@
       "title": "Cyberpunk TCG Meta - Is BBG TIER 0?",
       "published": "2026-09-21T10:13:44+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "2elesi4EuSA",
-      "title": "Will Placide Keep Top Spot? Cyberpunk TCG Red Units Tier List",
-      "published": "2026-09-21T10:00:17+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "wTbbphbbXb8",
@@ -838,10 +838,6 @@
       "short": false
     },
     {
-      "id": "kku4kwGny1A",
-      "short": false
-    },
-    {
       "id": "iXmiU5z0xXE",
       "short": false
     },
@@ -915,10 +911,6 @@
     },
     {
       "id": "mWQKByVu4X0",
-      "short": false
-    },
-    {
-      "id": "2elesi4EuSA",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "zdqlmZeIZ8M",
       "short": false
+    },
+    {
+      "id": "Q_WJA6Fsd_Q",
+      "short": false
+    },
+    {
+      "id": "bA9CzUD1DvQ",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-24T11:11:58.775Z"
+  "updatedAt": "2026-10-26T13:13:59.682Z"
 }
