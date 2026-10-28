@@ -78,16 +78,40 @@
   ],
   "videos": [
     {
-      "id": "x8VltUn-1PI",
-      "title": "Playing the new 2077 Update!",
-      "published": "2026-10-27T04:44:39+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+      "id": "hACUhhHK6vw",
+      "title": "Offduty Malfini is Wild!  | @Ashlizzlle vs @Snnuy | Round 2 Creator Invitational | Cyberpunk TCG",
+      "published": "2026-10-27T22:00:09+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "2fa1-VfcSuU",
+      "title": "DON'T Go to Your First Cyberpunk TCG Regional Unprepared!",
+      "published": "2026-10-27T19:12:49+00:00",
+      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
     },
     {
       "id": "Mx4maPkLn1c",
       "title": "Early Retail Box Opening for the Cyberpunk Trading Card Game!",
-      "published": "2026-10-27T02:55:01+00:00",
+      "published": "2026-10-27T17:12:53+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "cfGtND0TMIY",
+      "title": "Safety Override is Nuts! 🤯 | Silv4n vs @AiboAcademy | Round 1 Creator Invitational | Cyberpunk TCG",
+      "published": "2026-10-27T17:00:28+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "hikJslcs1l4",
+      "title": "Is RETAIL Cyberpunk WORTH IT? - Cardrunners: A Cyberpunk TCG Podcast Episode 27",
+      "published": "2026-10-27T15:00:35+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
+      "id": "x8VltUn-1PI",
+      "title": "Playing the new 2077 Update!",
+      "published": "2026-10-27T04:44:39+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
       "id": "zfCwPPrwBsk",
@@ -312,12 +336,6 @@
       "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
-      "id": "nWAbHeI10pA",
-      "title": "Starter Deck Overview & TIPS! - Haikyu!! Vobaca Break TCG English Release!",
-      "published": "2026-10-14T18:30:28+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "VrpdMqqeTaw",
       "title": "The BEST RED Cards in Cyberpunk TCG",
       "published": "2026-10-13T15:18:54+00:00",
@@ -534,22 +552,10 @@
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
     },
     {
-      "id": "-6-B4CI-qco",
-      "title": "Edgerunner Open Regional Full Prizing 👀 | Cyberdeck Podcast Episode 25 | Cyberpunk Trading Card Game",
-      "published": "2026-09-18T16:00:25+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
-    },
-    {
       "id": "7tBDI1Xrwrs",
       "title": "3 decks YOU should try in Cyberpunk TCG",
       "published": "2026-09-14T10:23:19+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "8wtXTtWFgio",
-      "title": "Night City Brawl 👊 & Beta Event Kit 👀 | Cyberdeck Podcast Episode 24 | Cyberpunk Trading Card Game",
-      "published": "2026-09-11T16:00:13+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
     },
     {
       "id": "dyNRpIsRmyU",
@@ -726,12 +732,6 @@
       "channelId": "UCFd-oebu93o0blOK7dUbcoA"
     },
     {
-      "id": "ctFKPyH4xh0",
-      "title": "Cyberpunk TCG Secret Rares: PLAYABLE or COLLECTABLE?",
-      "published": "2026-08-18T17:06:02+00:00",
-      "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
-    },
-    {
       "id": "6_siTp_vHH0",
       "title": "Rating All NEW Cyberpunk TCG Cards (Blue & Green)",
       "published": "2026-08-16T13:20:53+00:00",
@@ -846,14 +846,6 @@
       "short": false
     },
     {
-      "id": "-6-B4CI-qco",
-      "short": false
-    },
-    {
-      "id": "8wtXTtWFgio",
-      "short": false
-    },
-    {
       "id": "pyWeAoF31jk",
       "short": false
     },
@@ -887,10 +879,6 @@
     },
     {
       "id": "033Bsw2zbXk",
-      "short": false
-    },
-    {
-      "id": "ctFKPyH4xh0",
       "short": false
     },
     {
@@ -1074,10 +1062,6 @@
       "short": false
     },
     {
-      "id": "nWAbHeI10pA",
-      "short": false
-    },
-    {
       "id": "mNEgMZFNCrI",
       "short": false
     },
@@ -1228,7 +1212,23 @@
     {
       "id": "zfCwPPrwBsk",
       "short": false
+    },
+    {
+      "id": "hikJslcs1l4",
+      "short": false
+    },
+    {
+      "id": "hACUhhHK6vw",
+      "short": false
+    },
+    {
+      "id": "cfGtND0TMIY",
+      "short": false
+    },
+    {
+      "id": "2fa1-VfcSuU",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-27T12:21:50.701Z"
+  "updatedAt": "2026-10-28T13:07:15.575Z"
 }
