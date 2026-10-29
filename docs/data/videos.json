@@ -78,6 +78,36 @@
   ],
   "videos": [
     {
+      "id": "S2Xt82wXorM",
+      "title": "//BBG Alt Cunningham  - 3 | Cyberpunk TCG Decklist",
+      "published": "2026-10-29T01:00:39+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "JQxyEj2TRPY",
+      "title": "A guide to sideboarding in Cyberpunk TCG",
+      "published": "2026-10-28T23:05:06+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "AVPvwvzFYYI",
+      "title": "MaxTac AV + Sandy 🟢 | @LionHartCards vs @Maxildan | Round 4 Creator Invitational | Cyberpunk TCG",
+      "published": "2026-10-28T22:00:10+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "5qJy7fV1_8M",
+      "title": "Cyberpunk's PREEM iconic legend artworks, chromed out or not?? The devils in the details!",
+      "published": "2026-10-28T19:00:19+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "p7JLEZ19Gps",
+      "title": "Iconic Hanako ✨ | @JoeCurleyCards vs Scott Mines | Round 3 Creator Invitational | Cyberpunk TCG",
+      "published": "2026-10-28T17:00:34+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
       "id": "hACUhhHK6vw",
       "title": "Offduty Malfini is Wild!  | @Ashlizzlle vs @Snnuy | Round 2 Creator Invitational | Cyberpunk TCG",
       "published": "2026-10-27T22:00:09+00:00",
@@ -360,12 +390,6 @@
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
-      "id": "Um8O8FX7E-o",
-      "title": "Fixing your decks (and testing one of them)!",
-      "published": "2026-10-11T07:08:41+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "38Cfxe-bjzU",
       "title": "GAMEPLAY: 🟡🟡🔵 vs 🔴🔴🟢 Someone Getting their BUTT KICKED in Cyberpunk TCG!",
       "published": "2026-10-10T23:28:29+00:00",
@@ -450,18 +474,6 @@
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
-      "id": "6_WQqGaNQw0",
-      "title": "Tournaments — Episode 2 | Cyberpunk TCG Podcast",
-      "published": "2026-10-02T19:00:32+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
-    },
-    {
-      "id": "NB5DPEhdsIs",
-      "title": "Behind The Scenes with our Co-Founder 👀 | Cyberdeck Podcast Episode 27 | Cyberpunk Trading Card Game",
-      "published": "2026-10-02T16:00:39+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
-    },
-    {
       "id": "eVR1RPT-obs",
       "title": "Beta Booster Box Opening FINALE - Can we pull an ISR?",
       "published": "2026-10-02T15:00:02+00:00",
@@ -516,12 +528,6 @@
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
     },
     {
-      "id": "tYtJQzwXpuw",
-      "title": "Sideboards, Promos & Community Decks ✨ | Cyberdeck Podcast Episode 26 | Cyberpunk Trading Card Game",
-      "published": "2026-09-25T16:00:39+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
-    },
-    {
       "id": "kiC8EqvZ6HI",
       "title": "Beta Booster Box Battle Ep2 - Can we get ALL BLUE ICONICS in 1 Box?",
       "published": "2026-09-24T14:00:03+00:00",
@@ -532,12 +538,6 @@
       "title": "Is Hanako too strong? Cyberpunk TCG",
       "published": "2026-09-23T12:00:24+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "mWQKByVu4X0",
-      "title": "Cyberpunk 101: Deck Building Tips",
-      "published": "2026-09-22T13:04:21+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "v8RkYR0j580",
@@ -838,14 +838,6 @@
       "short": false
     },
     {
-      "id": "NB5DPEhdsIs",
-      "short": false
-    },
-    {
-      "id": "tYtJQzwXpuw",
-      "short": false
-    },
-    {
       "id": "pyWeAoF31jk",
       "short": false
     },
@@ -890,10 +882,6 @@
       "short": false
     },
     {
-      "id": "mWQKByVu4X0",
-      "short": false
-    },
-    {
       "id": "eVR1RPT-obs",
       "short": false
     },
@@ -911,10 +899,6 @@
     },
     {
       "id": "5teZE3aYr3c",
-      "short": false
-    },
-    {
-      "id": "6_WQqGaNQw0",
       "short": false
     },
     {
@@ -1023,10 +1007,6 @@
     },
     {
       "id": "sX8BTGHXOyE",
-      "short": false
-    },
-    {
-      "id": "Um8O8FX7E-o",
       "short": false
     },
     {
@@ -1228,7 +1208,27 @@
     {
       "id": "2fa1-VfcSuU",
       "short": false
+    },
+    {
+      "id": "JQxyEj2TRPY",
+      "short": false
+    },
+    {
+      "id": "AVPvwvzFYYI",
+      "short": false
+    },
+    {
+      "id": "p7JLEZ19Gps",
+      "short": false
+    },
+    {
+      "id": "5qJy7fV1_8M",
+      "short": false
+    },
+    {
+      "id": "S2Xt82wXorM",
+      "short": false
     }
   ],
-  "updatedAt": "2026-10-28T13:07:15.575Z"
+  "updatedAt": "2026-10-29T13:13:28.233Z"
 }
