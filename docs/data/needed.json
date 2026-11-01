@@ -1,7 +1,28 @@
 {
-  "generatedAt": "2026-11-01T14:31:56.237Z",
+  "generatedAt": "2026-11-01T14:36:10.963Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "main": [
+    {
+      "id": "3fc63c58-5954-4744-a5af-047bfc5cb159",
+      "cardId": "81a8dec7-9541-4020-93e1-7d798a57dcbc",
+      "name": "V",
+      "subname": "Streetkid",
+      "displayName": "V: Streetkid",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "005a",
+      "cap": 1,
+      "price": 0.1,
+      "priceGuess": false,
+      "cmName": "V - Streetkid",
+      "have": 0,
+      "needed": 1
+    },
     {
       "id": "c2d0e2a7-470f-4498-b6d5-5df1e3ecc3ef",
       "cardId": "81a8dec7-9541-4020-93e1-7d798a57dcbc",
@@ -39,27 +60,6 @@
       "collectorNumber": "144",
       "cap": 1,
       "price": 110,
-      "priceGuess": false,
-      "cmName": "V - Streetkid",
-      "have": 0,
-      "needed": 1
-    },
-    {
-      "id": "79119e83-b50b-4a79-8a6c-f496d9ed7ef6",
-      "cardId": "81a8dec7-9541-4020-93e1-7d798a57dcbc",
-      "name": "V",
-      "subname": "Streetkid",
-      "displayName": "V: Streetkid",
-      "color": "Red",
-      "cardType": "Legend",
-      "rarity": "Rare",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β005a",
-      "cap": 1,
-      "price": 0.1,
       "priceGuess": false,
       "cmName": "V - Streetkid",
       "have": 0,
@@ -408,6 +408,24 @@
       "needed": 1
     },
     {
+      "id": "5f758458-2eb7-4286-8649-15195a3b92a3",
+      "cardId": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
+      "name": "Royce",
+      "subname": "Psycho on the Edge",
+      "displayName": "Royce: Psycho on the Edge",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "003",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "a9c1137e-2e33-4293-9dcc-9351c9a0bbee",
       "cardId": "eff41c12-b872-4101-9779-00e691532893",
       "name": "Adam Smasher",
@@ -577,6 +595,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "141",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "595437cd-5180-4aef-b110-61950f738d8e",
+      "cardId": "eff41c12-b872-4101-9779-00e691532893",
+      "name": "Adam Smasher",
+      "subname": "Ender of Legends",
+      "displayName": "Adam Smasher: Ender of Legends",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "001",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -789,6 +825,24 @@
       "needed": 1
     },
     {
+      "id": "00280859-865f-43ec-a87f-5a2c0f447d4e",
+      "cardId": "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "name": "Dexter DeShawn",
+      "subname": "Off the Grid",
+      "displayName": "Dexter DeShawn: Off the Grid",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "002",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "a8a7d286-0c66-4f01-aca7-45570474d9e4",
       "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
       "name": "Johnny Silverhand",
@@ -804,6 +858,27 @@
       "collectorNumber": "003",
       "cap": 1,
       "price": 26.5,
+      "priceGuess": false,
+      "cmName": "Johnny Silverhand - Rocking Renegade",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "cb12d8c4-64b1-4e53-898e-8fd46aeac6bf",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "168",
+      "cap": 1,
+      "price": 1100,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Rocking Renegade",
       "have": 0,
@@ -852,6 +927,24 @@
       "needed": 1
     },
     {
+      "id": "b6f81fe8-d0ed-4dcb-b025-058559d0cf98",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "031",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "7f03795b-029a-4347-a685-d67dcd879a93",
       "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
       "name": "Johnny Silverhand",
@@ -865,6 +958,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "003",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "7d1960a6-2d90-4278-937c-1e6905a3a396",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "168",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -1017,6 +1128,42 @@
       "needed": 1
     },
     {
+      "id": "926a067d-4148-4f04-8468-13f5d435040e",
+      "cardId": "31fa5825-946a-4ca2-afa8-8f07b9898d6a",
+      "name": "Yorinobu Arasaka",
+      "subname": "Embracing Destruction",
+      "displayName": "Yorinobu Arasaka: Embracing Destruction",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "be95c7f4-4a0f-4a96-80d8-03db7c809f74",
+      "cardId": "31fa5825-946a-4ca2-afa8-8f07b9898d6a",
+      "name": "Yorinobu Arasaka",
+      "subname": "Embracing Destruction",
+      "displayName": "Yorinobu Arasaka: Embracing Destruction",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "30619097-d9d7-42fe-bf4c-cd4ae822792d",
       "cardId": "e8b0432c-4d2d-4464-9a00-f3626917a7f0",
       "name": "Japantown Jonin",
@@ -1132,6 +1279,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "dadab555-f412-425e-b700-e33fdfaf74e4",
+      "cardId": "fee335a7-2546-48a5-9bb8-b0886014ce66",
+      "name": "Ruthless Lowlife",
+      "subname": null,
+      "displayName": "Ruthless Lowlife",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "004",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -1273,6 +1438,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "6a6cf4b7-ebca-4ffd-8d9f-14983ab94fe4",
+      "cardId": "3c4e7fcb-933d-4712-9ce7-6052a14f8e94",
+      "name": "Swordwise Huscle",
+      "subname": null,
+      "displayName": "Swordwise Huscle",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "005",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -1431,6 +1614,42 @@
       "needed": 3
     },
     {
+      "id": "e1be086c-78ca-472a-927f-1c145e87646b",
+      "cardId": "5c4d4058-9185-4305-9e8f-7eca41cf6674",
+      "name": "Kerry Eurodyne",
+      "subname": "The Last Rockerboy",
+      "displayName": "Kerry Eurodyne: The Last Rockerboy",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "77189cf1-2e1e-44a6-8190-9175789c8c8d",
+      "cardId": "5c4d4058-9185-4305-9e8f-7eca41cf6674",
+      "name": "Kerry Eurodyne",
+      "subname": "The Last Rockerboy",
+      "displayName": "Kerry Eurodyne: The Last Rockerboy",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "5939771d-bdcc-4b42-aea4-376311189e93",
       "cardId": "21f68be2-c664-4ae0-a7ef-965a3a5a14c8",
       "name": "Meredith Stout",
@@ -1546,6 +1765,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "8af3ebb8-0007-4d24-acd2-0edc9b0e9a34",
+      "cardId": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+      "name": "Chrome Fang",
+      "subname": null,
+      "displayName": "Chrome Fang",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "002",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -2010,6 +2247,60 @@
       "needed": 3
     },
     {
+      "id": "35c71811-34bb-4bdf-ad1e-eeff6a8030a6",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "71cad350-657b-4a55-bd07-aada806def8e",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e5207a33-75fe-460c-8476-872cd746c6a6",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "020",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "089df0e6-0000-4e6c-b6d3-d9119466b624",
       "cardId": "4c098450-e3ae-47e5-98d4-d51a2ab132ce",
       "name": "Octant",
@@ -2211,6 +2502,24 @@
       "needed": 3
     },
     {
+      "id": "eb57cfca-7635-451c-8d4e-30d0067acbfe",
+      "cardId": "28198e04-60e2-4f81-9786-903a9a947d7a",
+      "name": "Mantis Blades",
+      "subname": null,
+      "displayName": "Mantis Blades",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "007",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "d2da65d5-fdaf-44f4-a692-a5672d2c1cca",
       "cardId": "5233bacc-f39f-4383-8e25-57ef634735ca",
       "name": "Arasaka Emergency Radioport",
@@ -2287,6 +2596,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "023",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d54b768a-bee0-4dd0-be7d-01aa1588183f",
+      "cardId": "5233bacc-f39f-4383-8e25-57ef634735ca",
+      "name": "Arasaka Emergency Radioport",
+      "subname": null,
+      "displayName": "Arasaka Emergency Radioport",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "006",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -2431,6 +2758,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "026",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "7329d165-bd9e-41fd-aaac-38f81a629ec3",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "86665027-3400-4183-a246-a4df93b83c83",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "b142d928-a4fe-4f0a-84f7-860baf5a787f",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "021",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -2697,6 +3078,24 @@
       "needed": 3
     },
     {
+      "id": "5eacc91e-1b36-473a-a8d9-b1dfbd3eec59",
+      "cardId": "a708461f-1f91-4789-bb0d-96e3de5fcf44",
+      "name": "Industrial Assembly",
+      "subname": null,
+      "displayName": "Industrial Assembly",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "f274789d-69f2-4acf-a511-f728c67d1a13",
       "cardId": "59ddecca-1501-492a-b8b1-d4b38d4486c9",
       "name": "Appetite for Destruction",
@@ -2877,6 +3276,24 @@
       "needed": 3
     },
     {
+      "id": "2c41626a-3fd6-4510-b75b-c42c6edd8f42",
+      "cardId": "144c3559-3518-4c01-b9e6-af42b7166661",
+      "name": "Over the Edge",
+      "subname": null,
+      "displayName": "Over the Edge",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "efc5dfdd-f393-4bbe-a7bc-ac959ba1e6bc",
       "cardId": "27c01b18-2a9c-4d66-ad21-b75869fba666",
       "name": "Gunpoint Diplomacy",
@@ -2992,6 +3409,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "035",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "a393570d-e0a3-4c87-88bb-e3d93d1c041f",
+      "cardId": "050d0502-94b0-4bee-a7e6-a9b00f31b4ae",
+      "name": "Shattered Memories",
+      "subname": null,
+      "displayName": "Shattered Memories",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Rare",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "011",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -3192,6 +3627,24 @@
       "needed": 1
     },
     {
+      "id": "4054ccb4-9fc8-4588-8277-fb7c3dccc279",
+      "cardId": "012b0300-6af1-417e-86a2-dc208a60ac15",
+      "name": "Rogue Amendiares",
+      "subname": "Preem Solo",
+      "displayName": "Rogue Amendiares: Preem Solo",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "006",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "aaac486c-dbfd-4137-b373-24a2df29522c",
       "cardId": "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
       "name": "Dum Dum",
@@ -3343,6 +3796,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "145",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "de9ec3eb-8d07-4379-a481-f6a1aaa51347",
+      "cardId": "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
+      "name": "Dum Dum",
+      "subname": "Maelstrom Triggerman",
+      "displayName": "Dum Dum: Maelstrom Triggerman",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "004",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -3672,6 +4143,24 @@
       "needed": 1
     },
     {
+      "id": "76c9d33b-bb78-40f6-803b-007f45e5de9b",
+      "cardId": "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+      "name": "Muamar Reyes",
+      "subname": "El Capitán",
+      "displayName": "Muamar Reyes: El Capitán",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "005",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "b3895f75-e147-49b0-a6d8-6fb35b356b2e",
       "cardId": "e64e2978-695b-4fc5-b17b-62c710a11c47",
       "name": "River Ward",
@@ -3915,6 +4404,42 @@
       "needed": 1
     },
     {
+      "id": "b243251d-b8a9-4af3-8d42-ce800c2b27b4",
+      "cardId": "f090dc44-d7f0-4aec-a19e-9213155a6611",
+      "name": "Viktor Vektor",
+      "subname": "Sit Down and Relax",
+      "displayName": "Viktor Vektor: Sit Down and Relax",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "14eb3f3d-c53c-47ca-a222-40e3680edeea",
+      "cardId": "f090dc44-d7f0-4aec-a19e-9213155a6611",
+      "name": "Viktor Vektor",
+      "subname": "Sit Down and Relax",
+      "displayName": "Viktor Vektor: Sit Down and Relax",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "fcbb6d58-6666-4bd3-8ff0-64930fb0f422",
       "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
       "name": "Secondhand Bombus",
@@ -4077,6 +4602,60 @@
       "needed": 3
     },
     {
+      "id": "cb03d048-2691-421d-9654-e20ffed0592b",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "648a99cd-d25d-4e9e-a45d-14b47ed7f854",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "eb96776d-e7ab-4312-85a8-fe2957f22094",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "023",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "12f0398c-bcc3-4944-af72-ac2ae9f36761",
       "cardId": "b3b40c68-705b-41ff-ae10-4132497c4a39",
       "name": "Sketchy Ripper",
@@ -4193,6 +4772,24 @@
       "price": 9.86,
       "priceGuess": false,
       "cmName": "Dexter DeShawn - One Last Chance",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e3b8a9e8-5bed-4449-9738-c824db504be7",
+      "cardId": "f61b944a-32e3-4085-894b-7bd498325156",
+      "name": "Dexter DeShawn",
+      "subname": "One Last Chance",
+      "displayName": "Dexter DeShawn: One Last Chance",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
       "have": 0,
       "needed": 3
     },
@@ -4335,6 +4932,27 @@
       "needed": 3
     },
     {
+      "id": "1a13a5a8-c1d4-4d36-88be-7a6e3cb78c90",
+      "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
+      "name": "Hanako Arasaka",
+      "subname": "In a Gilded Cage",
+      "displayName": "Hanako Arasaka: In a Gilded Cage",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "162",
+      "cap": 3,
+      "price": 22.5,
+      "priceGuess": false,
+      "cmName": "Hanako Arasaka - In a Gilded Cage",
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "005dfb9e-7bdd-4cc1-ade2-08dd28ed5998",
       "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
       "name": "Hanako Arasaka",
@@ -4369,6 +4987,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "046",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fb1bc28c-21ac-4f41-855d-a0a4c63d5957",
+      "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
+      "name": "Hanako Arasaka",
+      "subname": "In a Gilded Cage",
+      "displayName": "Hanako Arasaka: In a Gilded Cage",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "162",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -4455,6 +5091,24 @@
       "needed": 3
     },
     {
+      "id": "064e6916-f284-4886-a4d5-380c8c4c81c3",
+      "cardId": "3ce6b982-7bba-46f1-8832-8867ec3588d4",
+      "name": "Offduty Malfini",
+      "subname": null,
+      "displayName": "Offduty Malfini",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "e2e3d98d-0159-4a79-b543-e37264f23118",
       "cardId": "5a5a177c-6ed8-4bd9-8b11-13c2b64414e2",
       "name": "T-Bug",
@@ -4531,6 +5185,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "055",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "46d374ee-5bf1-4244-b93a-411869e26dd9",
+      "cardId": "5a5a177c-6ed8-4bd9-8b11-13c2b64414e2",
+      "name": "T-Bug",
+      "subname": "Amateur Philosopher",
+      "displayName": "T-Bug: Amateur Philosopher",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "006",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -4794,6 +5466,24 @@
       "needed": 3
     },
     {
+      "id": "6af18183-f8ab-40c4-8724-8287619c6c5c",
+      "cardId": "2a9deb43-bf9a-41db-9a05-bb0d357bb08e",
+      "name": "Heywood Ripperdoc",
+      "subname": null,
+      "displayName": "Heywood Ripperdoc",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "12d44604-ad7b-4e82-b517-9edb0be44427",
       "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
       "name": "Jackie Welles",
@@ -4891,6 +5581,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "048",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9fd08b9f-ba4c-44b4-9005-f8007ff7b107",
+      "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ca3dbf6e-ead5-4948-b704-e325a6297fd7",
+      "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "022",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -5190,6 +5916,42 @@
       "needed": 3
     },
     {
+      "id": "926893b9-9214-4db7-bf21-f6bfd7b59bdb",
+      "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "b0d19195-416d-456e-9d6e-e9816aaad0b1",
+      "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "ec3368a9-79f1-4dfc-9cf7-1cb464ec1c88",
       "cardId": "654f2289-5d75-4f8b-bd35-702031fbb214",
       "name": "Kiroshi Optics",
@@ -5287,6 +6049,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "061",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ef40fd67-27e4-45b1-b492-7c40aa29aa23",
+      "cardId": "654f2289-5d75-4f8b-bd35-702031fbb214",
+      "name": "Kiroshi Optics",
+      "subname": null,
+      "displayName": "Kiroshi Optics",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "007",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -5436,6 +6216,60 @@
       "needed": 3
     },
     {
+      "id": "2f9b1516-302b-4a3f-b23a-aea7d5196066",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "aa8dd968-405c-4e82-a6f5-722e1f00c490",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "006",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4706864a-1946-4f13-a433-65add75ad6ca",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "024",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "535df2a9-d2af-463c-85dd-dafe67cab8fb",
       "cardId": "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39",
       "name": "Adrenaline Converter",
@@ -5556,6 +6390,24 @@
       "needed": 3
     },
     {
+      "id": "fb1687ac-3b22-4a0e-9f0d-44ef1e001c30",
+      "cardId": "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df",
+      "name": "Zetatech Faceplate",
+      "subname": null,
+      "displayName": "Zetatech Faceplate",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "e1959b9e-d32d-43be-94c3-a595809e0c28",
       "cardId": "6dd172b1-2341-473f-8837-a9efe6a75701",
       "name": "Gorilla Arms",
@@ -5608,6 +6460,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "060",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "68e56b4e-9c21-4d09-a270-9b3cc355fa30",
+      "cardId": "6dd172b1-2341-473f-8837-a9efe6a75701",
+      "name": "Gorilla Arms",
+      "subname": null,
+      "displayName": "Gorilla Arms",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "011",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -5850,6 +6720,24 @@
       "needed": 3
     },
     {
+      "id": "c61f50b6-fc6d-4a85-9d06-4d8825593469",
+      "cardId": "d039e4b3-9b83-40da-8d8f-b1dfb1f172f1",
+      "name": "Afterparty at Lizzie's",
+      "subname": null,
+      "displayName": "Afterparty at Lizzie's",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "5d987aa8-baed-45b2-986c-a21e04a53331",
       "cardId": "b4cba235-816d-4888-a308-1c397b9288e7",
       "name": "Safety Override",
@@ -6003,6 +6891,42 @@
       "needed": 3
     },
     {
+      "id": "3f8a1c0a-ebb1-46a7-a6d6-4331f0cee098",
+      "cardId": "87e001dd-8604-4523-af6e-d768118ccf98",
+      "name": "Cyberpsychosis",
+      "subname": null,
+      "displayName": "Cyberpsychosis",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c9fbad01-853c-4f3f-a550-45951847a04c",
+      "cardId": "87e001dd-8604-4523-af6e-d768118ccf98",
+      "name": "Cyberpsychosis",
+      "subname": null,
+      "displayName": "Cyberpsychosis",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "026",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "f931c82e-a382-4f60-808c-5910ac9850be",
       "cardId": "793d9650-0a59-4c89-9d85-05a9d6873d2e",
       "name": "Live with the Aftermath",
@@ -6117,6 +7041,42 @@
       "needed": 3
     },
     {
+      "id": "bf92e29e-162b-47b5-a416-f2ba389fc912",
+      "cardId": "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "007",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e8882cc2-86a2-49d1-aaf9-a7c315842510",
+      "cardId": "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "025",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "2ba68619-7050-44c5-b0ce-b32d48b8f40f",
       "cardId": "72358c7d-9f29-4ef6-a682-f5bfc72c7714",
       "name": "Goro Takemura",
@@ -6218,6 +7178,42 @@
       "price": 300,
       "priceGuess": true,
       "cmName": "Goro Takemura - Hands Unclean",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "6f154367-d0cb-4650-9d31-d87193f32bfc",
+      "cardId": "72358c7d-9f29-4ef6-a682-f5bfc72c7714",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "e97ed28b-c4c7-4d21-a11e-057ae5cb43c1",
+      "cardId": "72358c7d-9f29-4ef6-a682-f5bfc72c7714",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -6516,6 +7512,24 @@
       "needed": 1
     },
     {
+      "id": "7f38f6ab-10b1-4aaf-b295-53e703921874",
+      "cardId": "424c9c0f-cc01-40ec-8404-75957985c7f8",
+      "name": "Goro Takemura",
+      "subname": "Vengeful Bodyguard",
+      "displayName": "Goro Takemura: Vengeful Bodyguard",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "007",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "2c4a77e8-0fda-4ec1-9519-1d15e0f172b3",
       "cardId": "380b5e52-2651-4cde-8222-1db2ae6469e2",
       "name": "Hanako Arasaka",
@@ -6768,6 +7782,24 @@
       "needed": 1
     },
     {
+      "id": "71a05ddb-312c-4976-bdfd-06d9f6feffed",
+      "cardId": "501a3796-9983-400f-86e4-97ffac5d5451",
+      "name": "Padre",
+      "subname": "Man of the Cross",
+      "displayName": "Padre: Man of the Cross",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "008",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "6e4ee31b-82d1-421c-b658-ba3f79520365",
       "cardId": "950f045c-f5a4-4318-9907-b630d64de754",
       "name": "Panam Palmer",
@@ -7011,6 +8043,42 @@
       "needed": 1
     },
     {
+      "id": "c5376289-9470-4a11-9f67-def96fb5f6f5",
+      "cardId": "cf50fa24-bf94-4c35-bcc1-c6d56a6f68d8",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "497dca45-581d-4507-a780-4d3f97531df1",
+      "cardId": "cf50fa24-bf94-4c35-bcc1-c6d56a6f68d8",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "80dcc139-d31d-4b89-86ff-cdbdd2664953",
       "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
       "name": "Corpo Security",
@@ -7150,6 +8218,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "076",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "67c0d4ad-a044-4240-8941-4a90c8d5eeef",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "014",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5f456afc-0bf1-4675-bee5-1d4bfb72034b",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "2ba670a8-030e-494c-aeaf-0503926e6eac",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "027",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -7296,6 +8418,24 @@
       "needed": 3
     },
     {
+      "id": "72903660-69b5-4198-9bfb-cb58e0964a27",
+      "cardId": "917e6515-ed23-4a1d-baaa-474d879bdabc",
+      "name": "Emergency Atlus",
+      "subname": null,
+      "displayName": "Emergency Atlus",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "876dfa5c-6df4-4930-b284-f2c466e6b90c",
       "cardId": "4a8dfe3f-980d-4370-ac10-6bd989042cdf",
       "name": "Field Operator",
@@ -7416,6 +8556,24 @@
       "needed": 3
     },
     {
+      "id": "e1064ff5-fa7b-4f06-977a-c288a5480c4b",
+      "cardId": "4a8dfe3f-980d-4370-ac10-6bd989042cdf",
+      "name": "Field Operator",
+      "subname": null,
+      "displayName": "Field Operator",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "016",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "22b276f4-7cf6-4b14-a220-8368a0839287",
       "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
       "name": "MaxTac Squadron",
@@ -7504,6 +8662,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "082",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c740f0b7-858c-4792-862d-7dd54372cfff",
+      "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
+      "name": "MaxTac Squadron",
+      "subname": null,
+      "displayName": "MaxTac Squadron",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "627659e9-5298-466f-8cc2-97caaed5ab48",
+      "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
+      "name": "MaxTac Squadron",
+      "subname": null,
+      "displayName": "MaxTac Squadron",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "028",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -7609,6 +8803,24 @@
       "cmName": "Goro Takemura - Losing His Way",
       "have": 2,
       "needed": 1
+    },
+    {
+      "id": "7f136179-5ad1-4990-872c-be989b77d61b",
+      "cardId": "08e6a687-56b7-4ac1-982f-8a8d6d0c0bc5",
+      "name": "Goro Takemura",
+      "subname": "Losing His Way",
+      "displayName": "Goro Takemura: Losing His Way",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
     },
     {
       "id": "43e5568f-a609-4eff-8502-e81ba9134d2c",
@@ -7809,6 +9021,24 @@
       "needed": 3
     },
     {
+      "id": "1684accd-b2bc-4a30-92cb-cc2d6d53429f",
+      "cardId": "d6f16c44-6d56-48ff-8130-154eea5540ca",
+      "name": "MaxTac AV",
+      "subname": null,
+      "displayName": "MaxTac AV",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "1ee3ba07-86b0-4309-be55-4b4698f700b8",
       "cardId": "92edc648-10d6-43d3-b4ab-4ad65a5c7425",
       "name": "Riding Nomad",
@@ -7941,6 +9171,42 @@
       "needed": 3
     },
     {
+      "id": "221a8a1f-77bc-42f4-b044-a3fb09965805",
+      "cardId": "67b47cff-2237-4765-86fb-9b2b3abecbb1",
+      "name": "Wraith Marauders",
+      "subname": null,
+      "displayName": "Wraith Marauders",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "011",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "20d5d227-d18b-4039-9834-6ad5bc324557",
+      "cardId": "67b47cff-2237-4765-86fb-9b2b3abecbb1",
+      "name": "Wraith Marauders",
+      "subname": null,
+      "displayName": "Wraith Marauders",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "029",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "4bab255b-763a-4762-b5e2-430316526b8a",
       "cardId": "3c144d6a-0c1a-43e9-bd35-85d6fc46adef",
       "name": "Nadia",
@@ -7995,6 +9261,27 @@
       "collectorNumber": "085",
       "cap": 3,
       "price": 8.95,
+      "priceGuess": false,
+      "cmName": "Panam Palmer - Strength Through Family",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5632d773-b6c8-402d-a162-364767d3d21e",
+      "cardId": "34774f04-4f16-40eb-8ee4-999144e572ab",
+      "name": "Panam Palmer",
+      "subname": "Strength Through Family",
+      "displayName": "Panam Palmer: Strength Through Family",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "170",
+      "cap": 3,
+      "price": 850,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family",
       "have": 0,
@@ -8061,6 +9348,24 @@
       "needed": 3
     },
     {
+      "id": "b073652b-8428-4aeb-9877-22b50a0110bc",
+      "cardId": "34774f04-4f16-40eb-8ee4-999144e572ab",
+      "name": "Panam Palmer",
+      "subname": "Strength Through Family",
+      "displayName": "Panam Palmer: Strength Through Family",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "170",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "060f0c56-cbb7-45fd-a0cd-9c7b9d0f8103",
       "cardId": "78fee308-5d4e-491c-9596-423dc20da5e3",
       "name": "MaxTac Heavy",
@@ -8121,6 +9426,27 @@
       "needed": 3
     },
     {
+      "id": "6ceb8ace-8b73-4b12-ba75-ee867b936e5c",
+      "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "164",
+      "cap": 3,
+      "price": 11.5,
+      "priceGuess": false,
+      "cmName": "Sandayu Oda - Hanako's Guardian",
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
       "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
       "name": "Sandayu Oda",
@@ -8155,6 +9481,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "088",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ec17ec9d-88dd-416d-92a5-7eb8c5076603",
+      "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "164",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -8377,6 +9721,78 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "095",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "70d8df05-c5fc-4eaf-8e5b-c81ca96d02e3",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4917aef2-61e8-4208-9ff3-f51903c09494",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "57e0fbcf-59b2-405a-b35f-30b101e8e9a0",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4e8061a5-646b-46e5-be0d-f74af37259f1",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "005",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -8757,6 +10173,24 @@
       "needed": 3
     },
     {
+      "id": "cc86f2ba-b196-4316-9476-7dd6ef2194d6",
+      "cardId": "71fb410b-b56e-42b2-a793-4c49e935b9f1",
+      "name": "Corporate Surveillance",
+      "subname": null,
+      "displayName": "Corporate Surveillance",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "020",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "7751b719-978b-44b1-a82f-b2881d3a416e",
       "cardId": "c5d2fed1-1470-4ac5-9f84-bf66705901ce",
       "name": "Fool on the Hill",
@@ -8949,6 +10383,42 @@
       "needed": 3
     },
     {
+      "id": "1b15e610-8f48-46f0-8708-5104134e966b",
+      "cardId": "404748b4-f30e-4bf1-8991-5ad449da755a",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c95ba50a-07d9-4c10-a3e5-4dc5f25a30ef",
+      "cardId": "404748b4-f30e-4bf1-8991-5ad449da755a",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "031",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "54f0308f-8fb2-4861-a414-c15ca24426c3",
       "cardId": "3126fa21-ea19-4096-8233-d63797bb9fe4",
       "name": "Wild in the Streets",
@@ -9063,6 +10533,42 @@
       "needed": 3
     },
     {
+      "id": "bb84e7b0-0a5d-41c5-b60c-56d670777fc6",
+      "cardId": "17a80b46-c583-4867-97ac-7855494363a9",
+      "name": "(Don't Fear) The Reaper",
+      "subname": null,
+      "displayName": "(Don't Fear) The Reaper",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "2c63f11a-7ff6-4460-ad2f-a002405dc555",
+      "cardId": "17a80b46-c583-4867-97ac-7855494363a9",
+      "name": "(Don't Fear) The Reaper",
+      "subname": null,
+      "displayName": "(Don't Fear) The Reaper",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "030",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "2647f881-5a7e-4ffb-b231-6574dc531f43",
       "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
       "name": "Sasha Yakovleva",
@@ -9078,6 +10584,27 @@
       "collectorNumber": "109",
       "cap": 1,
       "price": 15,
+      "priceGuess": false,
+      "cmName": "Sasha Yakovleva - Won't Let You Down",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "307de3c6-6bbd-4e44-8dde-07f4fac45db0",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "169",
+      "cap": 1,
+      "price": 1100,
       "priceGuess": false,
       "cmName": "Sasha Yakovleva - Won't Let You Down",
       "have": 0,
@@ -9105,6 +10632,24 @@
       "needed": 1
     },
     {
+      "id": "e6de94ff-ecf1-4a9f-9992-96ed71100b95",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "052",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "f1e5930a-987d-4b9b-b2f6-7e428df3c302",
       "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
       "name": "Sasha Yakovleva",
@@ -9118,6 +10663,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "109",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "e13a5895-c065-40ad-9f33-901e457e3766",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "169",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -9224,6 +10787,42 @@
       "price": 0.5,
       "priceGuess": true,
       "cmName": "V - Corporate Exile",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "98a296a5-1dac-4475-b401-ae3e0e18234a",
+      "cardId": "627186b3-cffb-4228-aed4-b3ee35235fb6",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "fb1b4f07-a39f-461b-a7e3-92fe886f87be",
+      "cardId": "627186b3-cffb-4228-aed4-b3ee35235fb6",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "006",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -9379,6 +10978,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "155",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "99db9a1f-e9ec-4998-9125-b7bcb79c5054",
+      "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
+      "name": "Alt Cunningham",
+      "subname": "Soulkiller Architect",
+      "displayName": "Alt Cunningham: Soulkiller Architect",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "009",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -9602,6 +11219,42 @@
       "price": 50,
       "priceGuess": true,
       "cmName": "Jackie Welles - Pour One Out For Me",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "1d5a2d7d-a372-409c-9e29-22124525f29a",
+      "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "011",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "483be286-3715-4e5b-a9cb-6299a39ef2b5",
+      "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -9837,6 +11490,27 @@
       "needed": 1
     },
     {
+      "id": "94a8e8c1-f953-4ca8-b124-99c7350663b4",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "158",
+      "cap": 1,
+      "price": 65,
+      "priceGuess": false,
+      "cmName": "Wakako Okada - Peace and Harmony",
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "16e04a94-086a-4c20-b788-88ac016ec59b",
       "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
       "name": "Wakako Okada",
@@ -9876,6 +11550,24 @@
       "needed": 1
     },
     {
+      "id": "ad5146fa-964c-436a-84ab-75bf288dd28a",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "054",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "69380cd8-83e0-4802-bfe1-54e7d214d30d",
       "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
       "name": "Wakako Okada",
@@ -9889,6 +11581,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "110",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "d14557b2-488f-4da1-9462-4db24b9f8db1",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "158",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "bbbd9bd0-71d3-4a39-8e2d-3d3f10aee23a",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "010",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -9991,6 +11719,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "113",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "431eaa98-5000-485a-8ac5-3e0c78213588",
+      "cardId": "a3cc3d15-8e6a-4684-b2ca-c843b4a854e2",
+      "name": "Evelyn Parker",
+      "subname": "Scheming Siren",
+      "displayName": "Evelyn Parker: Scheming Siren",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "014",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -10335,6 +12081,60 @@
       "needed": 3
     },
     {
+      "id": "66eb5361-11f4-4880-b347-ca849aa28cb8",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "6728f922-a514-4f15-991b-27ba0e17951f",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "014",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "65e81385-8e38-4d8c-b0a7-09226fb72823",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "032",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "7dc71978-0995-4b93-9ba3-83d1118c3c4b",
       "cardId": "d2a9bcb0-a5e1-4413-8140-8b808258a753",
       "name": "Hacked Corpo",
@@ -10471,6 +12271,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "124",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "bc347fa2-8428-44a7-b6e4-2b166b66447c",
+      "cardId": "14d87f2a-8bd7-424f-b65b-3659156cef81",
+      "name": "Psycho Squad",
+      "subname": null,
+      "displayName": "Psycho Squad",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "016",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -10686,6 +12504,60 @@
       "needed": 3
     },
     {
+      "id": "c0a8e28f-7f0c-4631-ad73-2219ab851160",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5d923604-b3a1-4632-b5df-14dadb95caa5",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "033",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "0bb3e3d1-accf-4e8f-9e93-2d4c5c86168e",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "037",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "3bd6767b-ef0c-47dd-9f47-d00112a74111",
       "cardId": "08b52bdb-be1e-4931-90c4-4354eea5b145",
       "name": "Modded Muramasa",
@@ -10767,6 +12639,24 @@
       "needed": 3
     },
     {
+      "id": "695a0906-3118-4ca5-a241-4eea0ed6f7cf",
+      "cardId": "619429c9-132f-496e-8aa0-414e850c87ec",
+      "name": "MT0D12 Flathead",
+      "subname": null,
+      "displayName": "MT0D12 Flathead",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "3193a6bd-3e99-4501-9c5c-8d5ea32c779c",
       "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
       "name": "Rogue Amendiares",
@@ -10782,6 +12672,27 @@
       "collectorNumber": "126",
       "cap": 3,
       "price": 0.9,
+      "priceGuess": false,
+      "cmName": "Rogue Amendiares - Queen of the Afterlife",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9f251692-ea15-45d9-8fa3-5833453502c6",
+      "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
+      "name": "Rogue Amendiares",
+      "subname": "Queen of the Afterlife",
+      "displayName": "Rogue Amendiares: Queen of the Afterlife",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "166",
+      "cap": 3,
+      "price": 11,
       "priceGuess": false,
       "cmName": "Rogue Amendiares - Queen of the Afterlife",
       "have": 0,
@@ -10848,6 +12759,24 @@
       "needed": 3
     },
     {
+      "id": "d97bfbb9-99ca-48bb-922a-367c79d2d689",
+      "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
+      "name": "Rogue Amendiares",
+      "subname": "Queen of the Afterlife",
+      "displayName": "Rogue Amendiares: Queen of the Afterlife",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "166",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "dcfe8370-9abf-4395-b50b-efea505609ba",
       "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
       "name": "Judy Álvarez",
@@ -10863,6 +12792,27 @@
       "collectorNumber": "116",
       "cap": 3,
       "price": 8.9,
+      "priceGuess": false,
+      "cmName": "Judy Álvarez - Nothing to Doubt",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fe26a4ff-1076-4371-8ab5-3f31d0319a3f",
+      "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "171",
+      "cap": 3,
+      "price": 930,
       "priceGuess": false,
       "cmName": "Judy Álvarez - Nothing to Doubt",
       "have": 0,
@@ -10924,6 +12874,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "116",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9aceebe8-9977-4b7b-ad1d-7b75af879f1a",
+      "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "171",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -11088,6 +13056,24 @@
       "needed": 3
     },
     {
+      "id": "0e3c8bcd-da77-408e-b8c6-7f384d569ac3",
+      "cardId": "39665784-d2f1-43e8-a958-894bac716d71",
+      "name": "Tetratronic Rippler",
+      "subname": null,
+      "displayName": "Tetratronic Rippler",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "2b1b6268-193f-4b9e-a63c-0cbc200d6db7",
       "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
       "name": "Dying Night",
@@ -11232,6 +13218,60 @@
       "needed": 3
     },
     {
+      "id": "a287a673-d258-4d60-bc7a-9093678fe5dd",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Rare",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "a96d4bb7-b498-4371-9558-e423be933064",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "016",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d378d160-5c3b-4e45-b9c0-2f5715f01ba0",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "034",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "07f119d6-8fb2-4b23-9862-818a7e941010",
       "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
       "name": "NetWatch Netdriver",
@@ -11302,6 +13342,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "129",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fc2e2d9b-f9ad-4017-b570-9775285dcaed",
+      "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
+      "name": "NetWatch Netdriver",
+      "subname": null,
+      "displayName": "NetWatch Netdriver",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5dea5d8a-4fc5-4598-8e3c-b21d0ef9d85d",
+      "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
+      "name": "NetWatch Netdriver",
+      "subname": null,
+      "displayName": "NetWatch Netdriver",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "035",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -11446,6 +13522,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "132",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "8efe08a5-0691-483d-817c-3aad5b73d28f",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d8b393db-c317-4cb0-bec4-2d5327ce3e37",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d7682383-70b5-4caa-9822-5a6cd46d02af",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "036",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -11623,6 +13753,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "136",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "3558e145-19d6-4273-b4fd-9b0f160a3d8c",
+      "cardId": "ad13a7bc-c49d-4166-8a9c-965e7bfa9b8f",
+      "name": "Reboot Optics",
+      "subname": null,
+      "displayName": "Reboot Optics",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "020",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -12389,6 +14537,24 @@
       "needed": 1
     },
     {
+      "id": "5f758458-2eb7-4286-8649-15195a3b92a3",
+      "cardId": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
+      "name": "Royce",
+      "subname": "Psycho on the Edge",
+      "displayName": "Royce: Psycho on the Edge",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "003",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "a9c1137e-2e33-4293-9dcc-9351c9a0bbee",
       "cardId": "eff41c12-b872-4101-9779-00e691532893",
       "name": "Adam Smasher",
@@ -12579,6 +14745,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "141",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "595437cd-5180-4aef-b110-61950f738d8e",
+      "cardId": "eff41c12-b872-4101-9779-00e691532893",
+      "name": "Adam Smasher",
+      "subname": "Ender of Legends",
+      "displayName": "Adam Smasher: Ender of Legends",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "001",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -12791,6 +14975,24 @@
       "needed": 1
     },
     {
+      "id": "00280859-865f-43ec-a87f-5a2c0f447d4e",
+      "cardId": "91df478a-91d5-4d42-a624-4c20ec61121c",
+      "name": "Dexter DeShawn",
+      "subname": "Off the Grid",
+      "displayName": "Dexter DeShawn: Off the Grid",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "002",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "a8a7d286-0c66-4f01-aca7-45570474d9e4",
       "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
       "name": "Johnny Silverhand",
@@ -12806,6 +15008,27 @@
       "collectorNumber": "003",
       "cap": 1,
       "price": 26.5,
+      "priceGuess": false,
+      "cmName": "Johnny Silverhand - Rocking Renegade",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "cb12d8c4-64b1-4e53-898e-8fd46aeac6bf",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "168",
+      "cap": 1,
+      "price": 1100,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Rocking Renegade",
       "have": 0,
@@ -12854,6 +15077,24 @@
       "needed": 1
     },
     {
+      "id": "b6f81fe8-d0ed-4dcb-b025-058559d0cf98",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "031",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "7f03795b-029a-4347-a685-d67dcd879a93",
       "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
       "name": "Johnny Silverhand",
@@ -12867,6 +15108,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "003",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "7d1960a6-2d90-4278-937c-1e6905a3a396",
+      "cardId": "56947a14-0b1e-4c3d-89e0-17839bcf4280",
+      "name": "Johnny Silverhand",
+      "subname": "Rocking Renegade",
+      "displayName": "Johnny Silverhand: Rocking Renegade",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "168",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -13040,6 +15299,42 @@
       "needed": 1
     },
     {
+      "id": "926a067d-4148-4f04-8468-13f5d435040e",
+      "cardId": "31fa5825-946a-4ca2-afa8-8f07b9898d6a",
+      "name": "Yorinobu Arasaka",
+      "subname": "Embracing Destruction",
+      "displayName": "Yorinobu Arasaka: Embracing Destruction",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "be95c7f4-4a0f-4a96-80d8-03db7c809f74",
+      "cardId": "31fa5825-946a-4ca2-afa8-8f07b9898d6a",
+      "name": "Yorinobu Arasaka",
+      "subname": "Embracing Destruction",
+      "displayName": "Yorinobu Arasaka: Embracing Destruction",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "30619097-d9d7-42fe-bf4c-cd4ae822792d",
       "cardId": "e8b0432c-4d2d-4464-9a00-f3626917a7f0",
       "name": "Japantown Jonin",
@@ -13155,6 +15450,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "dadab555-f412-425e-b700-e33fdfaf74e4",
+      "cardId": "fee335a7-2546-48a5-9bb8-b0886014ce66",
+      "name": "Ruthless Lowlife",
+      "subname": null,
+      "displayName": "Ruthless Lowlife",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "004",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -13296,6 +15609,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "6a6cf4b7-ebca-4ffd-8d9f-14983ab94fe4",
+      "cardId": "3c4e7fcb-933d-4712-9ce7-6052a14f8e94",
+      "name": "Swordwise Huscle",
+      "subname": null,
+      "displayName": "Swordwise Huscle",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "005",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -13454,6 +15785,42 @@
       "needed": 3
     },
     {
+      "id": "e1be086c-78ca-472a-927f-1c145e87646b",
+      "cardId": "5c4d4058-9185-4305-9e8f-7eca41cf6674",
+      "name": "Kerry Eurodyne",
+      "subname": "The Last Rockerboy",
+      "displayName": "Kerry Eurodyne: The Last Rockerboy",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "77189cf1-2e1e-44a6-8190-9175789c8c8d",
+      "cardId": "5c4d4058-9185-4305-9e8f-7eca41cf6674",
+      "name": "Kerry Eurodyne",
+      "subname": "The Last Rockerboy",
+      "displayName": "Kerry Eurodyne: The Last Rockerboy",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "5939771d-bdcc-4b42-aea4-376311189e93",
       "cardId": "21f68be2-c664-4ae0-a7ef-965a3a5a14c8",
       "name": "Meredith Stout",
@@ -13569,6 +15936,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "8af3ebb8-0007-4d24-acd2-0edc9b0e9a34",
+      "cardId": "3c4cf61f-c469-4ad6-a209-67e715f9d45b",
+      "name": "Chrome Fang",
+      "subname": null,
+      "displayName": "Chrome Fang",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "002",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -14033,6 +16418,60 @@
       "needed": 3
     },
     {
+      "id": "35c71811-34bb-4bdf-ad1e-eeff6a8030a6",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "71cad350-657b-4a55-bd07-aada806def8e",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e5207a33-75fe-460c-8476-872cd746c6a6",
+      "cardId": "066641c5-acc2-45f4-ba67-16a8d20cce73",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "020",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "089df0e6-0000-4e6c-b6d3-d9119466b624",
       "cardId": "4c098450-e3ae-47e5-98d4-d51a2ab132ce",
       "name": "Octant",
@@ -14255,6 +16694,24 @@
       "needed": 3
     },
     {
+      "id": "eb57cfca-7635-451c-8d4e-30d0067acbfe",
+      "cardId": "28198e04-60e2-4f81-9786-903a9a947d7a",
+      "name": "Mantis Blades",
+      "subname": null,
+      "displayName": "Mantis Blades",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "007",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "d2da65d5-fdaf-44f4-a692-a5672d2c1cca",
       "cardId": "5233bacc-f39f-4383-8e25-57ef634735ca",
       "name": "Arasaka Emergency Radioport",
@@ -14331,6 +16788,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "023",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d54b768a-bee0-4dd0-be7d-01aa1588183f",
+      "cardId": "5233bacc-f39f-4383-8e25-57ef634735ca",
+      "name": "Arasaka Emergency Radioport",
+      "subname": null,
+      "displayName": "Arasaka Emergency Radioport",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "006",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -14475,6 +16950,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "026",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "7329d165-bd9e-41fd-aaac-38f81a629ec3",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "86665027-3400-4183-a246-a4df93b83c83",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "b142d928-a4fe-4f0a-84f7-860baf5a787f",
+      "cardId": "4670d02b-b97a-4771-bb7e-65bdc012530e",
+      "name": "Satori",
+      "subname": "Sword of Saburo",
+      "displayName": "Satori: Sword of Saburo",
+      "color": "Red",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "021",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -14741,6 +17270,24 @@
       "needed": 3
     },
     {
+      "id": "5eacc91e-1b36-473a-a8d9-b1dfbd3eec59",
+      "cardId": "a708461f-1f91-4789-bb0d-96e3de5fcf44",
+      "name": "Industrial Assembly",
+      "subname": null,
+      "displayName": "Industrial Assembly",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "f274789d-69f2-4acf-a511-f728c67d1a13",
       "cardId": "59ddecca-1501-492a-b8b1-d4b38d4486c9",
       "name": "Appetite for Destruction",
@@ -14921,6 +17468,24 @@
       "needed": 3
     },
     {
+      "id": "2c41626a-3fd6-4510-b75b-c42c6edd8f42",
+      "cardId": "144c3559-3518-4c01-b9e6-af42b7166661",
+      "name": "Over the Edge",
+      "subname": null,
+      "displayName": "Over the Edge",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "efc5dfdd-f393-4bbe-a7bc-ac959ba1e6bc",
       "cardId": "27c01b18-2a9c-4d66-ad21-b75869fba666",
       "name": "Gunpoint Diplomacy",
@@ -15036,6 +17601,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "035",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "a393570d-e0a3-4c87-88bb-e3d93d1c041f",
+      "cardId": "050d0502-94b0-4bee-a7e6-a9b00f31b4ae",
+      "name": "Shattered Memories",
+      "subname": null,
+      "displayName": "Shattered Memories",
+      "color": "Red",
+      "cardType": "Program",
+      "rarity": "Rare",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "011",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -15257,6 +17840,24 @@
       "needed": 1
     },
     {
+      "id": "4054ccb4-9fc8-4588-8277-fb7c3dccc279",
+      "cardId": "012b0300-6af1-417e-86a2-dc208a60ac15",
+      "name": "Rogue Amendiares",
+      "subname": "Preem Solo",
+      "displayName": "Rogue Amendiares: Preem Solo",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "006",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "aaac486c-dbfd-4137-b373-24a2df29522c",
       "cardId": "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
       "name": "Dum Dum",
@@ -15408,6 +18009,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "145",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "de9ec3eb-8d07-4379-a481-f6a1aaa51347",
+      "cardId": "3b3f941d-aa58-4337-99dc-4af3fd3ccd47",
+      "name": "Dum Dum",
+      "subname": "Maelstrom Triggerman",
+      "displayName": "Dum Dum: Maelstrom Triggerman",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "004",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -15737,6 +18356,24 @@
       "needed": 1
     },
     {
+      "id": "76c9d33b-bb78-40f6-803b-007f45e5de9b",
+      "cardId": "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+      "name": "Muamar Reyes",
+      "subname": "El Capitán",
+      "displayName": "Muamar Reyes: El Capitán",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "005",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "b3895f75-e147-49b0-a6d8-6fb35b356b2e",
       "cardId": "e64e2978-695b-4fc5-b17b-62c710a11c47",
       "name": "River Ward",
@@ -15980,6 +18617,42 @@
       "needed": 1
     },
     {
+      "id": "b243251d-b8a9-4af3-8d42-ce800c2b27b4",
+      "cardId": "f090dc44-d7f0-4aec-a19e-9213155a6611",
+      "name": "Viktor Vektor",
+      "subname": "Sit Down and Relax",
+      "displayName": "Viktor Vektor: Sit Down and Relax",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "14eb3f3d-c53c-47ca-a222-40e3680edeea",
+      "cardId": "f090dc44-d7f0-4aec-a19e-9213155a6611",
+      "name": "Viktor Vektor",
+      "subname": "Sit Down and Relax",
+      "displayName": "Viktor Vektor: Sit Down and Relax",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "fcbb6d58-6666-4bd3-8ff0-64930fb0f422",
       "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
       "name": "Secondhand Bombus",
@@ -16142,6 +18815,60 @@
       "needed": 3
     },
     {
+      "id": "cb03d048-2691-421d-9654-e20ffed0592b",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "648a99cd-d25d-4e9e-a45d-14b47ed7f854",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "eb96776d-e7ab-4312-85a8-fe2957f22094",
+      "cardId": "b05cb065-309e-45a3-bbe0-20f4b6ea71aa",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "023",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "12f0398c-bcc3-4944-af72-ac2ae9f36761",
       "cardId": "b3b40c68-705b-41ff-ae10-4132497c4a39",
       "name": "Sketchy Ripper",
@@ -16279,6 +19006,24 @@
       "price": 9.86,
       "priceGuess": false,
       "cmName": "Dexter DeShawn - One Last Chance",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e3b8a9e8-5bed-4449-9738-c824db504be7",
+      "cardId": "f61b944a-32e3-4085-894b-7bd498325156",
+      "name": "Dexter DeShawn",
+      "subname": "One Last Chance",
+      "displayName": "Dexter DeShawn: One Last Chance",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
       "have": 0,
       "needed": 3
     },
@@ -16421,6 +19166,27 @@
       "needed": 3
     },
     {
+      "id": "1a13a5a8-c1d4-4d36-88be-7a6e3cb78c90",
+      "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
+      "name": "Hanako Arasaka",
+      "subname": "In a Gilded Cage",
+      "displayName": "Hanako Arasaka: In a Gilded Cage",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "162",
+      "cap": 3,
+      "price": 22.5,
+      "priceGuess": false,
+      "cmName": "Hanako Arasaka - In a Gilded Cage",
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "ab6fab2a-8101-4bc7-8f5d-b55adf09bc4c",
       "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
       "name": "Hanako Arasaka",
@@ -16476,6 +19242,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "046",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fb1bc28c-21ac-4f41-855d-a0a4c63d5957",
+      "cardId": "2902da45-ec28-4971-a731-ea1eda4c6ba1",
+      "name": "Hanako Arasaka",
+      "subname": "In a Gilded Cage",
+      "displayName": "Hanako Arasaka: In a Gilded Cage",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "162",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -16562,6 +19346,24 @@
       "needed": 3
     },
     {
+      "id": "064e6916-f284-4886-a4d5-380c8c4c81c3",
+      "cardId": "3ce6b982-7bba-46f1-8832-8867ec3588d4",
+      "name": "Offduty Malfini",
+      "subname": null,
+      "displayName": "Offduty Malfini",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "e2e3d98d-0159-4a79-b543-e37264f23118",
       "cardId": "5a5a177c-6ed8-4bd9-8b11-13c2b64414e2",
       "name": "T-Bug",
@@ -16638,6 +19440,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "055",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "46d374ee-5bf1-4244-b93a-411869e26dd9",
+      "cardId": "5a5a177c-6ed8-4bd9-8b11-13c2b64414e2",
+      "name": "T-Bug",
+      "subname": "Amateur Philosopher",
+      "displayName": "T-Bug: Amateur Philosopher",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "006",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -16901,6 +19721,24 @@
       "needed": 3
     },
     {
+      "id": "6af18183-f8ab-40c4-8724-8287619c6c5c",
+      "cardId": "2a9deb43-bf9a-41db-9a05-bb0d357bb08e",
+      "name": "Heywood Ripperdoc",
+      "subname": null,
+      "displayName": "Heywood Ripperdoc",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "12d44604-ad7b-4e82-b517-9edb0be44427",
       "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
       "name": "Jackie Welles",
@@ -16998,6 +19836,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "048",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9fd08b9f-ba4c-44b4-9005-f8007ff7b107",
+      "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ca3dbf6e-ead5-4948-b704-e325a6297fd7",
+      "cardId": "b665e103-456b-4c51-9551-95b0bc87212a",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "022",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -17297,6 +20171,42 @@
       "needed": 3
     },
     {
+      "id": "926893b9-9214-4db7-bf21-f6bfd7b59bdb",
+      "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "002",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "b0d19195-416d-456e-9d6e-e9816aaad0b1",
+      "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "ec3368a9-79f1-4dfc-9cf7-1cb464ec1c88",
       "cardId": "654f2289-5d75-4f8b-bd35-702031fbb214",
       "name": "Kiroshi Optics",
@@ -17394,6 +20304,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "061",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ef40fd67-27e4-45b1-b492-7c40aa29aa23",
+      "cardId": "654f2289-5d75-4f8b-bd35-702031fbb214",
+      "name": "Kiroshi Optics",
+      "subname": null,
+      "displayName": "Kiroshi Optics",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "007",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -17543,6 +20471,60 @@
       "needed": 3
     },
     {
+      "id": "2f9b1516-302b-4a3f-b23a-aea7d5196066",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "aa8dd968-405c-4e82-a6f5-722e1f00c490",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "006",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4706864a-1946-4f13-a433-65add75ad6ca",
+      "cardId": "6720e7fd-d1e8-4c8a-9ff2-f51f62241902",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "024",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "535df2a9-d2af-463c-85dd-dafe67cab8fb",
       "cardId": "6a5a1e34-fdd3-42de-b6bd-4b2553d6df39",
       "name": "Adrenaline Converter",
@@ -17663,6 +20645,24 @@
       "needed": 3
     },
     {
+      "id": "fb1687ac-3b22-4a0e-9f0d-44ef1e001c30",
+      "cardId": "b88d436f-1ec7-4f62-9dbc-c5f5e0d0a0df",
+      "name": "Zetatech Faceplate",
+      "subname": null,
+      "displayName": "Zetatech Faceplate",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "e1959b9e-d32d-43be-94c3-a595809e0c28",
       "cardId": "6dd172b1-2341-473f-8837-a9efe6a75701",
       "name": "Gorilla Arms",
@@ -17715,6 +20715,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "060",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "68e56b4e-9c21-4d09-a270-9b3cc355fa30",
+      "cardId": "6dd172b1-2341-473f-8837-a9efe6a75701",
+      "name": "Gorilla Arms",
+      "subname": null,
+      "displayName": "Gorilla Arms",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "011",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -17978,6 +20996,24 @@
       "needed": 3
     },
     {
+      "id": "c61f50b6-fc6d-4a85-9d06-4d8825593469",
+      "cardId": "d039e4b3-9b83-40da-8d8f-b1dfb1f172f1",
+      "name": "Afterparty at Lizzie's",
+      "subname": null,
+      "displayName": "Afterparty at Lizzie's",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "5d987aa8-baed-45b2-986c-a21e04a53331",
       "cardId": "b4cba235-816d-4888-a308-1c397b9288e7",
       "name": "Safety Override",
@@ -18131,6 +21167,42 @@
       "needed": 3
     },
     {
+      "id": "3f8a1c0a-ebb1-46a7-a6d6-4331f0cee098",
+      "cardId": "87e001dd-8604-4523-af6e-d768118ccf98",
+      "name": "Cyberpsychosis",
+      "subname": null,
+      "displayName": "Cyberpsychosis",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "008",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c9fbad01-853c-4f3f-a550-45951847a04c",
+      "cardId": "87e001dd-8604-4523-af6e-d768118ccf98",
+      "name": "Cyberpsychosis",
+      "subname": null,
+      "displayName": "Cyberpsychosis",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "026",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "f931c82e-a382-4f60-808c-5910ac9850be",
       "cardId": "793d9650-0a59-4c89-9d85-05a9d6873d2e",
       "name": "Live with the Aftermath",
@@ -18240,6 +21312,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "066",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "bf92e29e-162b-47b5-a416-f2ba389fc912",
+      "cardId": "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "007",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "e8882cc2-86a2-49d1-aaf9-a7c315842510",
+      "cardId": "84561b4c-67f0-4b2e-80ac-6b9c0a2396e3",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "025",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -18367,6 +21475,42 @@
       "price": 300,
       "priceGuess": true,
       "cmName": "Goro Takemura - Hands Unclean",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "6f154367-d0cb-4650-9d31-d87193f32bfc",
+      "cardId": "72358c7d-9f29-4ef6-a682-f5bfc72c7714",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "e97ed28b-c4c7-4d21-a11e-057ae5cb43c1",
+      "cardId": "72358c7d-9f29-4ef6-a682-f5bfc72c7714",
+      "name": "Goro Takemura",
+      "subname": "Hands Unclean",
+      "displayName": "Goro Takemura: Hands Unclean",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -18665,6 +21809,24 @@
       "needed": 1
     },
     {
+      "id": "7f38f6ab-10b1-4aaf-b295-53e703921874",
+      "cardId": "424c9c0f-cc01-40ec-8404-75957985c7f8",
+      "name": "Goro Takemura",
+      "subname": "Vengeful Bodyguard",
+      "displayName": "Goro Takemura: Vengeful Bodyguard",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "007",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "2c4a77e8-0fda-4ec1-9519-1d15e0f172b3",
       "cardId": "380b5e52-2651-4cde-8222-1db2ae6469e2",
       "name": "Hanako Arasaka",
@@ -18912,6 +22074,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "153",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "71a05ddb-312c-4976-bdfd-06d9f6feffed",
+      "cardId": "501a3796-9983-400f-86e4-97ffac5d5451",
+      "name": "Padre",
+      "subname": "Man of the Cross",
+      "displayName": "Padre: Man of the Cross",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "008",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -19181,6 +22361,42 @@
       "needed": 1
     },
     {
+      "id": "c5376289-9470-4a11-9f67-def96fb5f6f5",
+      "cardId": "cf50fa24-bf94-4c35-bcc1-c6d56a6f68d8",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "497dca45-581d-4507-a780-4d3f97531df1",
+      "cardId": "cf50fa24-bf94-4c35-bcc1-c6d56a6f68d8",
+      "name": "Saburo Arasaka",
+      "subname": "Stubborn Patriarch",
+      "displayName": "Saburo Arasaka: Stubborn Patriarch",
+      "color": "Green",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "004",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "80dcc139-d31d-4b89-86ff-cdbdd2664953",
       "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
       "name": "Corpo Security",
@@ -19320,6 +22536,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "076",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "67c0d4ad-a044-4240-8941-4a90c8d5eeef",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "014",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5f456afc-0bf1-4675-bee5-1d4bfb72034b",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "009",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "2ba670a8-030e-494c-aeaf-0503926e6eac",
+      "cardId": "71652e73-984a-4630-be47-af947f87d5c1",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "027",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -19466,6 +22736,24 @@
       "needed": 3
     },
     {
+      "id": "72903660-69b5-4198-9bfb-cb58e0964a27",
+      "cardId": "917e6515-ed23-4a1d-baaa-474d879bdabc",
+      "name": "Emergency Atlus",
+      "subname": null,
+      "displayName": "Emergency Atlus",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "876dfa5c-6df4-4930-b284-f2c466e6b90c",
       "cardId": "4a8dfe3f-980d-4370-ac10-6bd989042cdf",
       "name": "Field Operator",
@@ -19586,6 +22874,24 @@
       "needed": 3
     },
     {
+      "id": "e1064ff5-fa7b-4f06-977a-c288a5480c4b",
+      "cardId": "4a8dfe3f-980d-4370-ac10-6bd989042cdf",
+      "name": "Field Operator",
+      "subname": null,
+      "displayName": "Field Operator",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "016",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "22b276f4-7cf6-4b14-a220-8368a0839287",
       "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
       "name": "MaxTac Squadron",
@@ -19674,6 +22980,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "082",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c740f0b7-858c-4792-862d-7dd54372cfff",
+      "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
+      "name": "MaxTac Squadron",
+      "subname": null,
+      "displayName": "MaxTac Squadron",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "010",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "627659e9-5298-466f-8cc2-97caaed5ab48",
+      "cardId": "2a8802d3-598c-4ce3-9051-59ecf965ffbf",
+      "name": "MaxTac Squadron",
+      "subname": null,
+      "displayName": "MaxTac Squadron",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "028",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -19777,6 +23119,24 @@
       "price": 5.94,
       "priceGuess": false,
       "cmName": "Goro Takemura - Losing His Way",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "7f136179-5ad1-4990-872c-be989b77d61b",
+      "cardId": "08e6a687-56b7-4ac1-982f-8a8d6d0c0bc5",
+      "name": "Goro Takemura",
+      "subname": "Losing His Way",
+      "displayName": "Goro Takemura: Losing His Way",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
       "have": 0,
       "needed": 3
     },
@@ -19979,6 +23339,24 @@
       "needed": 3
     },
     {
+      "id": "1684accd-b2bc-4a30-92cb-cc2d6d53429f",
+      "cardId": "d6f16c44-6d56-48ff-8130-154eea5540ca",
+      "name": "MaxTac AV",
+      "subname": null,
+      "displayName": "MaxTac AV",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "1ee3ba07-86b0-4309-be55-4b4698f700b8",
       "cardId": "92edc648-10d6-43d3-b4ab-4ad65a5c7425",
       "name": "Riding Nomad",
@@ -20111,6 +23489,42 @@
       "needed": 3
     },
     {
+      "id": "221a8a1f-77bc-42f4-b044-a3fb09965805",
+      "cardId": "67b47cff-2237-4765-86fb-9b2b3abecbb1",
+      "name": "Wraith Marauders",
+      "subname": null,
+      "displayName": "Wraith Marauders",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "011",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "20d5d227-d18b-4039-9834-6ad5bc324557",
+      "cardId": "67b47cff-2237-4765-86fb-9b2b3abecbb1",
+      "name": "Wraith Marauders",
+      "subname": null,
+      "displayName": "Wraith Marauders",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "029",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "4bab255b-763a-4762-b5e2-430316526b8a",
       "cardId": "3c144d6a-0c1a-43e9-bd35-85d6fc46adef",
       "name": "Nadia",
@@ -20165,6 +23579,27 @@
       "collectorNumber": "085",
       "cap": 3,
       "price": 8.95,
+      "priceGuess": false,
+      "cmName": "Panam Palmer - Strength Through Family",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5632d773-b6c8-402d-a162-364767d3d21e",
+      "cardId": "34774f04-4f16-40eb-8ee4-999144e572ab",
+      "name": "Panam Palmer",
+      "subname": "Strength Through Family",
+      "displayName": "Panam Palmer: Strength Through Family",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "170",
+      "cap": 3,
+      "price": 850,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family",
       "have": 0,
@@ -20231,6 +23666,24 @@
       "needed": 3
     },
     {
+      "id": "b073652b-8428-4aeb-9877-22b50a0110bc",
+      "cardId": "34774f04-4f16-40eb-8ee4-999144e572ab",
+      "name": "Panam Palmer",
+      "subname": "Strength Through Family",
+      "displayName": "Panam Palmer: Strength Through Family",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "170",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "060f0c56-cbb7-45fd-a0cd-9c7b9d0f8103",
       "cardId": "78fee308-5d4e-491c-9596-423dc20da5e3",
       "name": "MaxTac Heavy",
@@ -20291,6 +23744,27 @@
       "needed": 3
     },
     {
+      "id": "6ceb8ace-8b73-4b12-ba75-ee867b936e5c",
+      "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "164",
+      "cap": 3,
+      "price": 11.5,
+      "priceGuess": false,
+      "cmName": "Sandayu Oda - Hanako's Guardian",
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
       "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
       "name": "Sandayu Oda",
@@ -20325,6 +23799,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "088",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "ec17ec9d-88dd-416d-92a5-7eb8c5076603",
+      "cardId": "9611a3ba-d365-453f-89ed-c986a1948edc",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "164",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -20547,6 +24039,78 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "095",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "70d8df05-c5fc-4eaf-8e5b-c81ca96d02e3",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4917aef2-61e8-4208-9ff3-f51903c09494",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "001",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "57e0fbcf-59b2-405a-b35f-30b101e8e9a0",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "003",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "4e8061a5-646b-46e5-be0d-f74af37259f1",
+      "cardId": "55153b49-c3a7-4208-a47b-0a91fa7e3b5c",
+      "name": "Sandevistan",
+      "subname": null,
+      "displayName": "Sandevistan",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcityshowdowns1-FR",
+        "name": "Night City Showdown S1 — FR"
+      },
+      "collectorNumber": "005",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -20927,6 +24491,24 @@
       "needed": 3
     },
     {
+      "id": "cc86f2ba-b196-4316-9476-7dd6ef2194d6",
+      "cardId": "71fb410b-b56e-42b2-a793-4c49e935b9f1",
+      "name": "Corporate Surveillance",
+      "subname": null,
+      "displayName": "Corporate Surveillance",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "embracingpowerretailstarterde-fr",
+        "name": "Embracing Power — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "020",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "7751b719-978b-44b1-a82f-b2881d3a416e",
       "cardId": "c5d2fed1-1470-4ac5-9f84-bf66705901ce",
       "name": "Fool on the Hill",
@@ -21119,6 +24701,42 @@
       "needed": 3
     },
     {
+      "id": "1b15e610-8f48-46f0-8708-5104134e966b",
+      "cardId": "404748b4-f30e-4bf1-8991-5ad449da755a",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "c95ba50a-07d9-4c10-a3e5-4dc5f25a30ef",
+      "cardId": "404748b4-f30e-4bf1-8991-5ad449da755a",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "031",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "54f0308f-8fb2-4861-a414-c15ca24426c3",
       "cardId": "3126fa21-ea19-4096-8233-d63797bb9fe4",
       "name": "Wild in the Streets",
@@ -21233,6 +24851,42 @@
       "needed": 3
     },
     {
+      "id": "bb84e7b0-0a5d-41c5-b60c-56d670777fc6",
+      "cardId": "17a80b46-c583-4867-97ac-7855494363a9",
+      "name": "(Don't Fear) The Reaper",
+      "subname": null,
+      "displayName": "(Don't Fear) The Reaper",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "2c63f11a-7ff6-4460-ad2f-a002405dc555",
+      "cardId": "17a80b46-c583-4867-97ac-7855494363a9",
+      "name": "(Don't Fear) The Reaper",
+      "subname": null,
+      "displayName": "(Don't Fear) The Reaper",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "030",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "2647f881-5a7e-4ffb-b231-6574dc531f43",
       "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
       "name": "Sasha Yakovleva",
@@ -21248,6 +24902,27 @@
       "collectorNumber": "109",
       "cap": 1,
       "price": 15,
+      "priceGuess": false,
+      "cmName": "Sasha Yakovleva - Won't Let You Down",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "307de3c6-6bbd-4e44-8dde-07f4fac45db0",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "169",
+      "cap": 1,
+      "price": 1100,
       "priceGuess": false,
       "cmName": "Sasha Yakovleva - Won't Let You Down",
       "have": 0,
@@ -21296,6 +24971,24 @@
       "needed": 1
     },
     {
+      "id": "e6de94ff-ecf1-4a9f-9992-96ed71100b95",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "052",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "f1e5930a-987d-4b9b-b2f6-7e428df3c302",
       "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
       "name": "Sasha Yakovleva",
@@ -21309,6 +25002,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "109",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "e13a5895-c065-40ad-9f33-901e457e3766",
+      "cardId": "e2dc863c-5bc9-4ad7-9138-2d5b966ed901",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "169",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -21415,6 +25126,42 @@
       "price": 0.5,
       "priceGuess": true,
       "cmName": "V - Corporate Exile",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "98a296a5-1dac-4475-b401-ae3e0e18234a",
+      "cardId": "627186b3-cffb-4228-aed4-b3ee35235fb6",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "012",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "fb1b4f07-a39f-461b-a7e3-92fe886f87be",
+      "cardId": "627186b3-cffb-4228-aed4-b3ee35235fb6",
+      "name": "V",
+      "subname": "Corporate Exile",
+      "displayName": "V: Corporate Exile",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "006",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -21570,6 +25317,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "155",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "99db9a1f-e9ec-4998-9125-b7bcb79c5054",
+      "cardId": "12475e77-0e16-420e-a935-65eb74290de8",
+      "name": "Alt Cunningham",
+      "subname": "Soulkiller Architect",
+      "displayName": "Alt Cunningham: Soulkiller Architect",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "009",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -21818,6 +25583,42 @@
       "needed": 1
     },
     {
+      "id": "1d5a2d7d-a372-409c-9e29-22124525f29a",
+      "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "011",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "483be286-3715-4e5b-a9cb-6299a39ef2b5",
+      "cardId": "40502c1f-78a2-426a-a706-c60ebd4b31e3",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "boxtoppersretail-fr",
+        "name": "Box Toppers — Retail — FR"
+      },
+      "collectorNumber": "005",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "8d0ad645-ac9a-4ecb-93d0-4c2061a4c477",
       "cardId": "4560f3d0-5f63-466b-93b7-fc9d822a556e",
       "name": "Judy Álvarez",
@@ -22049,6 +25850,27 @@
       "needed": 1
     },
     {
+      "id": "94a8e8c1-f953-4ca8-b124-99c7350663b4",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "158",
+      "cap": 1,
+      "price": 65,
+      "priceGuess": false,
+      "cmName": "Wakako Okada - Peace and Harmony",
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "33ee09a3-4591-4302-9052-6dd5130861c6",
       "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
       "name": "Wakako Okada",
@@ -22109,6 +25931,24 @@
       "needed": 1
     },
     {
+      "id": "ad5146fa-964c-436a-84ab-75bf288dd28a",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "edgerunneropens1",
+        "name": "Edgerunner Open S 1"
+      },
+      "collectorNumber": "054",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "69380cd8-83e0-4802-bfe1-54e7d214d30d",
       "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
       "name": "Wakako Okada",
@@ -22122,6 +25962,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "110",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "d14557b2-488f-4da1-9462-4db24b9f8db1",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Iconic Legend",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "158",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "bbbd9bd0-71d3-4a39-8e2d-3d3f10aee23a",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail-FR",
+        "name": "Pre-Release Retail — French"
+      },
+      "collectorNumber": "010",
       "cap": 1,
       "have": 0,
       "needed": 1
@@ -22224,6 +26100,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "113",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "431eaa98-5000-485a-8ac5-3e0c78213588",
+      "cardId": "a3cc3d15-8e6a-4684-b2ca-c843b4a854e2",
+      "name": "Evelyn Parker",
+      "subname": "Scheming Siren",
+      "displayName": "Evelyn Parker: Scheming Siren",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "014",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -22568,6 +26462,60 @@
       "needed": 3
     },
     {
+      "id": "66eb5361-11f4-4880-b347-ca849aa28cb8",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "013",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "6728f922-a514-4f15-991b-27ba0e17951f",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "014",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "65e81385-8e38-4d8c-b0a7-09226fb72823",
+      "cardId": "a1e60653-5e28-49ee-9798-d16520b553c3",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "032",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "7dc71978-0995-4b93-9ba3-83d1118c3c4b",
       "cardId": "d2a9bcb0-a5e1-4413-8140-8b808258a753",
       "name": "Hacked Corpo",
@@ -22704,6 +26652,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "124",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "bc347fa2-8428-44a7-b6e4-2b166b66447c",
+      "cardId": "14d87f2a-8bd7-424f-b65b-3659156cef81",
+      "name": "Psycho Squad",
+      "subname": null,
+      "displayName": "Psycho Squad",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "016",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -22919,6 +26885,60 @@
       "needed": 3
     },
     {
+      "id": "c0a8e28f-7f0c-4631-ad73-2219ab851160",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5d923604-b3a1-4632-b5df-14dadb95caa5",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "033",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "0bb3e3d1-accf-4e8f-9e93-2d4c5c86168e",
+      "cardId": "5380dea3-4d21-445b-af02-487b45d40395",
+      "name": "Maman Brigitte",
+      "subname": "Spirit of Death",
+      "displayName": "Maman Brigitte: Spirit of Death",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "037",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "3bd6767b-ef0c-47dd-9f47-d00112a74111",
       "cardId": "08b52bdb-be1e-4931-90c4-4354eea5b145",
       "name": "Modded Muramasa",
@@ -23021,6 +27041,24 @@
       "needed": 3
     },
     {
+      "id": "695a0906-3118-4ca5-a241-4eea0ed6f7cf",
+      "cardId": "619429c9-132f-496e-8aa0-414e850c87ec",
+      "name": "MT0D12 Flathead",
+      "subname": null,
+      "displayName": "MT0D12 Flathead",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Uncommon",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "015",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "3193a6bd-3e99-4501-9c5c-8d5ea32c779c",
       "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
       "name": "Rogue Amendiares",
@@ -23036,6 +27074,27 @@
       "collectorNumber": "126",
       "cap": 3,
       "price": 0.9,
+      "priceGuess": false,
+      "cmName": "Rogue Amendiares - Queen of the Afterlife",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9f251692-ea15-45d9-8fa3-5833453502c6",
+      "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
+      "name": "Rogue Amendiares",
+      "subname": "Queen of the Afterlife",
+      "displayName": "Rogue Amendiares: Queen of the Afterlife",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "166",
+      "cap": 3,
+      "price": 11,
       "priceGuess": false,
       "cmName": "Rogue Amendiares - Queen of the Afterlife",
       "have": 0,
@@ -23102,6 +27161,24 @@
       "needed": 3
     },
     {
+      "id": "d97bfbb9-99ca-48bb-922a-367c79d2d689",
+      "cardId": "9d994a42-4a63-44ad-ad7a-edead6af06a2",
+      "name": "Rogue Amendiares",
+      "subname": "Queen of the Afterlife",
+      "displayName": "Rogue Amendiares: Queen of the Afterlife",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "166",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "dcfe8370-9abf-4395-b50b-efea505609ba",
       "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
       "name": "Judy Álvarez",
@@ -23117,6 +27194,27 @@
       "collectorNumber": "116",
       "cap": 3,
       "price": 8.9,
+      "priceGuess": false,
+      "cmName": "Judy Álvarez - Nothing to Doubt",
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fe26a4ff-1076-4371-8ab5-3f31d0319a3f",
+      "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "171",
+      "cap": 3,
+      "price": 930,
       "priceGuess": false,
       "cmName": "Judy Álvarez - Nothing to Doubt",
       "have": 0,
@@ -23178,6 +27276,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "116",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "9aceebe8-9977-4b7b-ad1d-7b75af879f1a",
+      "cardId": "cb7f8d05-87cc-4606-ad71-a9283f2f4b20",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Iconic Secret",
+      "set": {
+        "code": "welcometonightcityretail-fr",
+        "name": "Welcome to Night City — Retail — FR"
+      },
+      "collectorNumber": "171",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -23363,6 +27479,24 @@
       "needed": 3
     },
     {
+      "id": "0e3c8bcd-da77-408e-b8c6-7f384d569ac3",
+      "cardId": "39665784-d2f1-43e8-a958-894bac716d71",
+      "name": "Tetratronic Rippler",
+      "subname": null,
+      "displayName": "Tetratronic Rippler",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "2b1b6268-193f-4b9e-a63c-0cbc200d6db7",
       "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
       "name": "Dying Night",
@@ -23507,6 +27641,60 @@
       "needed": 3
     },
     {
+      "id": "a287a673-d258-4d60-bc7a-9093678fe5dd",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Rare",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "a96d4bb7-b498-4371-9558-e423be933064",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "016",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d378d160-5c3b-4e45-b9c0-2f5715f01ba0",
+      "cardId": "df06b6e2-1675-48a3-bfe2-d0bc4c5f35eb",
+      "name": "Dying Night",
+      "subname": "V's Pistol",
+      "displayName": "Dying Night: V's Pistol",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "034",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
       "id": "07f119d6-8fb2-4b23-9862-818a7e941010",
       "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
       "name": "NetWatch Netdriver",
@@ -23577,6 +27765,42 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "129",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "fc2e2d9b-f9ad-4017-b570-9775285dcaed",
+      "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
+      "name": "NetWatch Netdriver",
+      "subname": null,
+      "displayName": "NetWatch Netdriver",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "017",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "5dea5d8a-4fc5-4598-8e3c-b21d0ef9d85d",
+      "cardId": "40c98fdc-45d0-458d-be2c-2697dc337ca5",
+      "name": "NetWatch Netdriver",
+      "subname": null,
+      "displayName": "NetWatch Netdriver",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "035",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -23721,6 +27945,60 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "132",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "8efe08a5-0691-483d-817c-3aad5b73d28f",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "019",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d8b393db-c317-4cb0-bec4-2d5327ce3e37",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "018",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "d7682383-70b5-4caa-9822-5a6cd46d02af",
+      "cardId": "0cd37c43-e722-48eb-91ef-4c1bd1645215",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1-FR",
+        "name": "Night City Brawl S 1 — FR"
+      },
+      "collectorNumber": "036",
       "cap": 3,
       "have": 0,
       "needed": 3
@@ -23898,6 +28176,24 @@
         "name": "Welcome to Night City — Retail — FR"
       },
       "collectorNumber": "136",
+      "cap": 3,
+      "have": 0,
+      "needed": 3
+    },
+    {
+      "id": "3558e145-19d6-4273-b4fd-9b0f160a3d8c",
+      "cardId": "ad13a7bc-c49d-4166-8a9c-965e7bfa9b8f",
+      "name": "Reboot Optics",
+      "subname": null,
+      "displayName": "Reboot Optics",
+      "color": "Blue",
+      "cardType": "Program",
+      "rarity": "Common",
+      "set": {
+        "code": "theheistretailstarterdeck-fr",
+        "name": "The Heist — Retail Starter Deck — FR"
+      },
+      "collectorNumber": "020",
       "cap": 3,
       "have": 0,
       "needed": 3

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-01T14:31:56.411Z",
+  "generatedAt": "2026-11-01T14:36:11.270Z",
   "cards": [
     {
-      "id": "4f8fbab4-7aad-4271-8dd6-8cdf68654c5e",
+      "id": "cb12d8c4-64b1-4e53-898e-8fd46aeac6bf",
       "name": "Johnny Silverhand",
       "subname": "Rocking Renegade",
       "displayName": "Johnny Silverhand: Rocking Renegade",
@@ -14,7 +14,7 @@
       "priceGuess": false
     },
     {
-      "id": "146d6391-3b35-4e74-b270-cef69d8f2a91",
+      "id": "307de3c6-6bbd-4e44-8dde-07f4fac45db0",
       "name": "Sasha Yakovleva",
       "subname": "Won't Let You Down",
       "displayName": "Sasha Yakovleva: Won't Let You Down",
@@ -38,7 +38,7 @@
       "priceGuess": true
     },
     {
-      "id": "2c0d6f48-0804-4d5f-83c2-f28367ce26d5",
+      "id": "fe26a4ff-1076-4371-8ab5-3f31d0319a3f",
       "name": "Judy Álvarez",
       "subname": "Nothing to Doubt",
       "displayName": "Judy Álvarez: Nothing to Doubt",
@@ -50,7 +50,7 @@
       "priceGuess": false
     },
     {
-      "id": "7d71aedf-dbb6-435f-bece-e522834db122",
+      "id": "5632d773-b6c8-402d-a162-364767d3d21e",
       "name": "Panam Palmer",
       "subname": "Strength Through Family",
       "displayName": "Panam Palmer: Strength Through Family",
