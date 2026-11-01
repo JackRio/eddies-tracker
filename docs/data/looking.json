@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:14:00.747Z",
+  "generatedAt": "2026-11-01T14:15:46.770Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "cards": [
     {
@@ -87,7 +87,7 @@
         "name": "Welcome to Night City — Retail"
       },
       "collectorNumber": "041",
-      "needed": 2,
+      "needed": 1,
       "price": 1.85,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"

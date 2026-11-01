@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:14:00.472Z",
+  "generatedAt": "2026-11-01T14:15:46.574Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "main": [
     {
@@ -4937,8 +4937,8 @@
       "price": 32,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat",
-      "have": 0,
-      "needed": 3
+      "have": 1,
+      "needed": 2
     },
     {
       "id": "fdb7a7c3-350e-49ea-8a9e-8477ce6c657a",
