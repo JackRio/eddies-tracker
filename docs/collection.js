@@ -177,6 +177,12 @@ function attachControls() {
   const toggleUnique = () => {
     state.unique = !state.unique;
     el('unique-filter').classList.toggle('active', state.unique);
+    if (state.unique) {
+      state.set = 'all';
+      el('set-filter').value = 'all';
+      state.status = 'all';
+      renderStatusFilters();
+    }
     render();
   };
   el('unique-filter').addEventListener('click', toggleUnique);
@@ -217,7 +223,7 @@ function pendingDeltaFor(id, bucket) {
 const qtyOf = (c, bucket) => Math.max(0, (c[bucket] || 0) + pendingDeltaFor(c.id, bucket));
 
 // One entry per mechanical card: total owned across every printing, shown as
-// the printing you hold most of (ties: lowest rarity, then cheapest).
+// its lowest-value printing (lowest rarity, then cheapest).
 function collapseUnique(rows, keep) {
   const totals = new Map();
   for (const c of rows) totals.set(mechKey(c), (totals.get(mechKey(c)) || 0) + c.qty);
@@ -226,9 +232,8 @@ function collapseUnique(rows, keep) {
     if (!keep(c)) continue;
     const k = mechKey(c);
     const cur = best.get(k);
-    const better = !cur || c.qty > cur.qty ||
-      (c.qty === cur.qty && (rarityRank(c.rarity) < rarityRank(cur.rarity) ||
-        (rarityRank(c.rarity) === rarityRank(cur.rarity) && (c.price ?? Infinity) < (cur.price ?? Infinity))));
+    const better = !cur || rarityRank(c.rarity) < rarityRank(cur.rarity) ||
+      (rarityRank(c.rarity) === rarityRank(cur.rarity) && (c.price ?? Infinity) < (cur.price ?? Infinity));
     if (better) best.set(k, c);
   }
   return [...best.entries()].map(([k, c]) => ({ ...c, qty: totals.get(k) || 0 }));
