@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T23:24:29.323Z",
-  "pricesAsOf": "2026-10-17T02:44:54+0200",
+  "generatedAt": "2026-11-01T14:14:00.747Z",
+  "pricesAsOf": "2026-11-01T02:47:38+0100",
   "cards": [
     {
       "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
@@ -16,7 +16,7 @@
       },
       "collectorNumber": "093",
       "needed": 1,
-      "price": 1,
+      "price": 1.4,
       "priceGuess": false,
       "cmName": "Overwatch - Panam's Gift"
     },
@@ -33,28 +33,10 @@
         "name": "Welcome to Night City — Retail"
       },
       "collectorNumber": "126",
-      "needed": 2,
-      "price": 1,
+      "needed": 1,
+      "price": 0.9,
       "priceGuess": false,
       "cmName": "Rogue Amendiares - Queen of the Afterlife"
-    },
-    {
-      "id": "38d14168-c182-4a34-a3b2-1b8380ab6635",
-      "name": "The Relic",
-      "subname": "Experimental Biochip",
-      "displayName": "The Relic: Experimental Biochip",
-      "color": "Yellow",
-      "cardType": "Gear",
-      "rarity": "Epic",
-      "set": {
-        "code": "welcometonightcityretail",
-        "name": "Welcome to Night City — Retail"
-      },
-      "collectorNumber": "063",
-      "needed": 1,
-      "price": 2,
-      "priceGuess": false,
-      "cmName": "The Relic - Experimental Biochip"
     },
     {
       "id": "2285cd3a-7010-4ba4-b23a-ba40aba296f9",
@@ -70,7 +52,7 @@
       },
       "collectorNumber": "057",
       "needed": 1,
-      "price": 1.8,
+      "price": 1.25,
       "priceGuess": false,
       "cmName": "Viktor Vektor - Drop Your Illusions"
     },
@@ -88,7 +70,7 @@
       },
       "collectorNumber": "020",
       "needed": 1,
-      "price": 1.95,
+      "price": 1.4,
       "priceGuess": false,
       "cmName": "V - Roamer of the Badlands"
     },
@@ -106,7 +88,7 @@
       },
       "collectorNumber": "041",
       "needed": 2,
-      "price": 1.65,
+      "price": 1.85,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
     },
@@ -124,7 +106,7 @@
       },
       "collectorNumber": "048",
       "needed": 1,
-      "price": 4,
+      "price": 4.98,
       "priceGuess": false,
       "cmName": "Jackie Welles - Ride or Die Choom"
     },
@@ -142,7 +124,7 @@
       },
       "collectorNumber": "011",
       "needed": 2,
-      "price": 5.99,
+      "price": 8,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Never Stop Fighting"
     },
@@ -160,7 +142,7 @@
       },
       "collectorNumber": "013",
       "needed": 1,
-      "price": 7.75,
+      "price": 5.94,
       "priceGuess": false,
       "cmName": "Goro Takemura - Losing His Way"
     },
@@ -178,7 +160,7 @@
       },
       "collectorNumber": "002",
       "needed": 1,
-      "price": 5.5,
+      "price": 5.55,
       "priceGuess": false,
       "cmName": "Minotaur"
     },
@@ -214,7 +196,7 @@
       },
       "collectorNumber": "085",
       "needed": 3,
-      "price": 10,
+      "price": 8.95,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family"
     },
@@ -232,7 +214,7 @@
       },
       "collectorNumber": "116",
       "needed": 2,
-      "price": 9,
+      "price": 8.9,
       "priceGuess": false,
       "cmName": "Judy Álvarez - Nothing to Doubt"
     },
@@ -250,7 +232,7 @@
       },
       "collectorNumber": "003",
       "needed": 1,
-      "price": 25.99,
+      "price": 26.5,
       "priceGuess": false,
       "cmName": "Johnny Silverhand - Rocking Renegade"
     }

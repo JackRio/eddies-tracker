@@ -1,7 +1,25 @@
 {
-  "generatedAt": "2026-10-17T23:24:29.320Z",
-  "pricesAsOf": "2026-10-17T02:44:54+0200",
+  "generatedAt": "2026-11-01T14:14:00.737Z",
+  "pricesAsOf": "2026-11-01T02:47:38+0100",
   "cards": [
+    {
+      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β164",
+      "qty": 1,
+      "price": 11.5,
+      "priceGuess": false,
+      "cmName": "Sandayu Oda - Hanako's Guardian"
+    },
     {
       "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
       "name": "Muamar Reyes",
@@ -16,27 +34,9 @@
       },
       "collectorNumber": "β147",
       "qty": 1,
-      "price": 65,
+      "price": 59.98,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán"
-    },
-    {
-      "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
-      "name": "Jackie Welles",
-      "subname": "Pour One Out For Me",
-      "displayName": "Jackie Welles: Pour One Out For Me",
-      "color": "Blue",
-      "cardType": "Legend",
-      "rarity": "Nova Rare",
-      "set": {
-        "code": "boxtoppersbeta",
-        "name": "Box Toppers — Beta"
-      },
-      "collectorNumber": "β005",
-      "qty": 1,
-      "price": 40,
-      "priceGuess": false,
-      "cmName": "Jackie Welles - Pour One Out For Me"
     },
     {
       "id": "0cb4ae83-a7ca-4ca6-9c83-6c0581baae57",
@@ -52,27 +52,27 @@
       },
       "collectorNumber": "β004",
       "qty": 1,
-      "price": 29,
+      "price": 25,
       "priceGuess": false,
       "cmName": "Saburo Arasaka - Stubborn Patriarch"
     },
     {
-      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
-      "name": "Sandayu Oda",
-      "subname": "Hanako's Guardian",
-      "displayName": "Sandayu Oda: Hanako's Guardian",
-      "color": "Green",
-      "cardType": "Unit",
-      "rarity": "Iconic Other",
+      "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Nova Rare",
       "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
+        "code": "boxtoppersbeta",
+        "name": "Box Toppers — Beta"
       },
-      "collectorNumber": "β164",
+      "collectorNumber": "β005",
       "qty": 1,
-      "price": 11.99,
+      "price": 33,
       "priceGuess": false,
-      "cmName": "Sandayu Oda - Hanako's Guardian"
+      "cmName": "Jackie Welles - Pour One Out For Me"
     },
     {
       "id": "a33d3324-fe48-4a9f-80a8-8545a0a4727f",
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "011",
       "qty": 1,
-      "price": 6.5,
+      "price": 8,
       "priceGuess": false,
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
@@ -106,7 +106,7 @@
       },
       "collectorNumber": "012",
       "qty": 1,
-      "price": 2.49,
+      "price": 2.25,
       "priceGuess": false,
       "cmName": "V - Corporate Exile"
     }

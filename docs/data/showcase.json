@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T23:24:29.326Z",
+  "generatedAt": "2026-11-01T14:14:00.752Z",
   "cards": [
     {
       "id": "4f8fbab4-7aad-4271-8dd6-8cdf68654c5e",
@@ -10,7 +10,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Welcome to Night City",
-      "price": 1399,
+      "price": 1100,
       "priceGuess": false
     },
     {
@@ -22,7 +22,7 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Welcome to Night City",
-      "price": 1250,
+      "price": 1100,
       "priceGuess": false
     },
     {
@@ -34,7 +34,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Edgerunner Open S 1",
-      "price": 999,
+      "price": 1000,
       "priceGuess": true
     },
     {
@@ -46,7 +46,7 @@
       "cardType": "Unit",
       "color": "Blue",
       "set": "Welcome to Night City",
-      "price": 950,
+      "price": 930,
       "priceGuess": false
     },
     {
@@ -58,7 +58,7 @@
       "cardType": "Unit",
       "color": "Green",
       "set": "Welcome to Night City",
-      "price": 900,
+      "price": 850,
       "priceGuess": false
     },
     {
@@ -142,8 +142,20 @@
       "cardType": "Legend",
       "color": "Yellow",
       "set": "Edgerunner Open S 1",
-      "price": 299,
+      "price": 300,
       "priceGuess": true
+    },
+    {
+      "id": "17517c74-9e61-423a-9d65-c7f4b56af29a",
+      "name": "Misty Olszewski",
+      "subname": "Mender of Broken Spirits",
+      "displayName": "Misty Olszewski: Mender of Broken Spirits",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Blue",
+      "set": "Set 1 Promos",
+      "price": 145,
+      "priceGuess": false
     },
     {
       "id": "71a35836-e604-4d98-ab56-58bfb4581033",
@@ -154,7 +166,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Set 1 Promos",
-      "price": 239.99,
+      "price": 119,
       "priceGuess": true
     },
     {
@@ -178,7 +190,7 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Box Toppers",
-      "price": 40,
+      "price": 33,
       "priceGuess": false
     },
     {
@@ -202,7 +214,7 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Box Toppers",
-      "price": 29.99,
+      "price": 27,
       "priceGuess": false
     },
     {
@@ -214,7 +226,7 @@
       "cardType": "Legend",
       "color": "Green",
       "set": "Box Toppers",
-      "price": 29,
+      "price": 25,
       "priceGuess": false
     },
     {
@@ -226,7 +238,7 @@
       "cardType": "Legend",
       "color": "Green",
       "set": "Box Toppers",
-      "price": 23,
+      "price": 18,
       "priceGuess": false
     },
     {
@@ -239,18 +251,6 @@
       "color": "Yellow",
       "set": "Box Toppers",
       "price": 17.4,
-      "priceGuess": false
-    },
-    {
-      "id": "dc7bb3cf-1005-4584-ad7a-447f0ccf07bf",
-      "name": "Yorinobu Arasaka",
-      "subname": "Embracing Destruction",
-      "displayName": "Yorinobu Arasaka: Embracing Destruction",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Red",
-      "set": "Box Toppers",
-      "price": 15.68,
       "priceGuess": false
     }
   ]
