@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:26:52.108Z",
+  "generatedAt": "2026-11-01T14:28:00.526Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "main": [
     {
@@ -7991,8 +7991,8 @@
       "price": 11.5,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian",
-      "have": 1,
-      "needed": 2
+      "have": 0,
+      "needed": 3
     },
     {
       "id": "5168d0e9-9bca-4791-967a-319030704cb1",
