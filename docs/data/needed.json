@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:15:46.574Z",
+  "generatedAt": "2026-11-01T14:26:52.108Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "main": [
     {
@@ -273,6 +273,24 @@
       "needed": 1
     },
     {
+      "id": "c89f2af6-dab2-40fe-a29e-6e98c0322f5d",
+      "cardId": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
+      "name": "Royce",
+      "subname": "Psycho on the Edge",
+      "displayName": "Royce: Psycho on the Edge",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail",
+        "name": "Pre-Release Retail"
+      },
+      "collectorNumber": "003",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "cbbe5954-ce33-47aa-83c1-bdda4c7b907f",
       "cardId": "9e681d3e-cbfd-4c7b-a69a-72a83dc8b847",
       "name": "Royce",
@@ -407,6 +425,24 @@
       "price": 104,
       "priceGuess": false,
       "cmName": "Adam Smasher - Ender of Legends",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "3d5b7ebf-0378-401b-bfa2-32a02734c921",
+      "cardId": "eff41c12-b872-4101-9779-00e691532893",
+      "name": "Adam Smasher",
+      "subname": "Ender of Legends",
+      "displayName": "Adam Smasher: Ender of Legends",
+      "color": "Red",
+      "cardType": "Legend",
+      "rarity": "Epic",
+      "set": {
+        "code": "prereleaseretail",
+        "name": "Pre-Release Retail"
+      },
+      "collectorNumber": "001",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -3021,6 +3057,24 @@
       "needed": 1
     },
     {
+      "id": "ce3dacce-fb10-488c-9001-95fe7f3329a4",
+      "cardId": "012b0300-6af1-417e-86a2-dc208a60ac15",
+      "name": "Rogue Amendiares",
+      "subname": "Preem Solo",
+      "displayName": "Rogue Amendiares: Preem Solo",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail",
+        "name": "Pre-Release Retail"
+      },
+      "collectorNumber": "006",
+      "cap": 1,
+      "have": 0,
+      "needed": 1
+    },
+    {
       "id": "254975e9-0381-4a1c-96c7-19186a855e48",
       "cardId": "012b0300-6af1-417e-86a2-dc208a60ac15",
       "name": "Rogue Amendiares",
@@ -3407,6 +3461,24 @@
       "price": 59.98,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "80efc8c5-c352-4d3a-b713-bfcf593a7f2a",
+      "cardId": "fc516d53-5fd8-43dd-8349-9e60f0606efa",
+      "name": "Muamar Reyes",
+      "subname": "El Capitán",
+      "displayName": "Muamar Reyes: El Capitán",
+      "color": "Yellow",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail",
+        "name": "Pre-Release Retail"
+      },
+      "collectorNumber": "005",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
@@ -5456,8 +5528,8 @@
       },
       "collectorNumber": "011",
       "cap": 3,
-      "have": 2,
-      "needed": 1
+      "have": 0,
+      "needed": 3
     },
     {
       "id": "f6a5ea4d-32d6-438d-b14b-83a743d90244",
@@ -9614,6 +9686,24 @@
       "price": 65,
       "priceGuess": false,
       "cmName": "Wakako Okada - Peace and Harmony",
+      "have": 0,
+      "needed": 1
+    },
+    {
+      "id": "ecfd2d86-f9dc-47c4-a4ec-4a1155217dc7",
+      "cardId": "99f5e311-8dfd-42a9-abd0-2e50ac68679e",
+      "name": "Wakako Okada",
+      "subname": "Peace and Harmony",
+      "displayName": "Wakako Okada: Peace and Harmony",
+      "color": "Blue",
+      "cardType": "Legend",
+      "rarity": "Rare",
+      "set": {
+        "code": "prereleaseretail",
+        "name": "Pre-Release Retail"
+      },
+      "collectorNumber": "010",
+      "cap": 1,
       "have": 0,
       "needed": 1
     },
