@@ -1,25 +1,7 @@
 {
-  "generatedAt": "2026-11-01T14:36:11.266Z",
+  "generatedAt": "2026-11-01T19:22:44.892Z",
   "pricesAsOf": "2026-11-01T02:47:38+0100",
   "cards": [
-    {
-      "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
-      "name": "Overwatch",
-      "subname": "Panam's Gift",
-      "displayName": "Overwatch: Panam's Gift",
-      "color": "Green",
-      "cardType": "Gear",
-      "rarity": "Epic",
-      "set": {
-        "code": "welcometonightcityretail",
-        "name": "Welcome to Night City — Retail"
-      },
-      "collectorNumber": "093",
-      "needed": 1,
-      "price": 1.4,
-      "priceGuess": false,
-      "cmName": "Overwatch - Panam's Gift"
-    },
     {
       "id": "3193a6bd-3e99-4501-9c5c-8d5ea32c779c",
       "name": "Rogue Amendiares",
@@ -55,6 +37,24 @@
       "price": 1.25,
       "priceGuess": false,
       "cmName": "Viktor Vektor - Drop Your Illusions"
+    },
+    {
+      "id": "336131d1-3bc8-4b39-b893-5fce9be8ce7f",
+      "name": "Overwatch",
+      "subname": "Panam's Gift",
+      "displayName": "Overwatch: Panam's Gift",
+      "color": "Green",
+      "cardType": "Gear",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "093",
+      "needed": 1,
+      "price": 1.4,
+      "priceGuess": false,
+      "cmName": "Overwatch - Panam's Gift"
     },
     {
       "id": "c1747b7d-de5c-43eb-a4ed-b632f1861712",
@@ -111,22 +111,22 @@
       "cmName": "Jackie Welles - Ride or Die Choom"
     },
     {
-      "id": "14ab188f-2ce3-4790-8823-5a352371ff1f",
-      "name": "Johnny Silverhand",
-      "subname": "Never Stop Fighting",
-      "displayName": "Johnny Silverhand: Never Stop Fighting",
+      "id": "6e023192-0834-4d6f-935a-e5d6d4d6eff0",
+      "name": "Minotaur",
+      "subname": null,
+      "displayName": "Minotaur",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Epic",
+      "rarity": "Uncommon",
       "set": {
-        "code": "welcometonightcityretail",
-        "name": "Welcome to Night City — Retail"
+        "code": "arasakademodeck",
+        "name": "Arasaka Demo Deck"
       },
-      "collectorNumber": "011",
-      "needed": 2,
-      "price": 8,
+      "collectorNumber": "002",
+      "needed": 1,
+      "price": 5.55,
       "priceGuess": false,
-      "cmName": "Johnny Silverhand - Never Stop Fighting"
+      "cmName": "Minotaur"
     },
     {
       "id": "384b716d-fe9c-4a09-86b3-fe9b25928c51",
@@ -147,40 +147,40 @@
       "cmName": "Goro Takemura - Losing His Way"
     },
     {
-      "id": "6e023192-0834-4d6f-935a-e5d6d4d6eff0",
-      "name": "Minotaur",
-      "subname": null,
-      "displayName": "Minotaur",
+      "id": "14ab188f-2ce3-4790-8823-5a352371ff1f",
+      "name": "Johnny Silverhand",
+      "subname": "Never Stop Fighting",
+      "displayName": "Johnny Silverhand: Never Stop Fighting",
       "color": "Red",
       "cardType": "Unit",
-      "rarity": "Uncommon",
-      "set": {
-        "code": "arasakademodeck",
-        "name": "Arasaka Demo Deck"
-      },
-      "collectorNumber": "002",
-      "needed": 1,
-      "price": 5.55,
-      "priceGuess": false,
-      "cmName": "Minotaur"
-    },
-    {
-      "id": "15920617-a06f-4302-9dfb-c85d3470c7eb",
-      "name": "Towerfall",
-      "subname": null,
-      "displayName": "Towerfall",
-      "color": "Blue",
-      "cardType": "Program",
       "rarity": "Epic",
       "set": {
         "code": "welcometonightcityretail",
         "name": "Welcome to Night City — Retail"
       },
-      "collectorNumber": "138",
-      "needed": 1,
-      "price": 9.99,
+      "collectorNumber": "011",
+      "needed": 2,
+      "price": 8,
       "priceGuess": false,
-      "cmName": "Towerfall"
+      "cmName": "Johnny Silverhand - Never Stop Fighting"
+    },
+    {
+      "id": "dcfe8370-9abf-4395-b50b-efea505609ba",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "color": "Blue",
+      "cardType": "Unit",
+      "rarity": "Secret",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "116",
+      "needed": 2,
+      "price": 8.9,
+      "priceGuess": false,
+      "cmName": "Judy Álvarez - Nothing to Doubt"
     },
     {
       "id": "9231f9ff-1ba5-4c4f-bd78-70e0780b58e5",
@@ -201,22 +201,22 @@
       "cmName": "Panam Palmer - Strength Through Family"
     },
     {
-      "id": "dcfe8370-9abf-4395-b50b-efea505609ba",
-      "name": "Judy Álvarez",
-      "subname": "Nothing to Doubt",
-      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "id": "15920617-a06f-4302-9dfb-c85d3470c7eb",
+      "name": "Towerfall",
+      "subname": null,
+      "displayName": "Towerfall",
       "color": "Blue",
-      "cardType": "Unit",
-      "rarity": "Secret",
+      "cardType": "Program",
+      "rarity": "Epic",
       "set": {
         "code": "welcometonightcityretail",
         "name": "Welcome to Night City — Retail"
       },
-      "collectorNumber": "116",
-      "needed": 2,
-      "price": 8.9,
+      "collectorNumber": "138",
+      "needed": 1,
+      "price": 9.99,
       "priceGuess": false,
-      "cmName": "Judy Álvarez - Nothing to Doubt"
+      "cmName": "Towerfall"
     },
     {
       "id": "a8a7d286-0c66-4f01-aca7-45570474d9e4",
