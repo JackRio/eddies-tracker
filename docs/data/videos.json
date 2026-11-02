@@ -78,6 +78,24 @@
   ],
   "videos": [
     {
+      "id": "6N0trDdfREM",
+      "title": "Cyberpunk TCG Pre-Release At Home! (Because I Couldn't Go! 😭)",
+      "published": "2026-11-02T02:48:09+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "q1I35CCX7uw",
+      "title": "But is it REALLY??? YES. And YOU need to either PLAY IT or PREPARE for it.",
+      "published": "2026-11-01T21:16:41+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "KtJ7RkeNM88",
+      "title": "Red Green Tempo is a Meta Powerhouse in Cyberpunk TCG | A Comprehensive Breakdown",
+      "published": "2026-11-01T14:00:09+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
       "id": "8b8c29C1lb0",
       "title": "Celebrate Pre-Release LIVE! Opening BETA vs RETAIL for Cyberpunk TCG BATTLE!",
       "published": "2026-10-31T21:18:12+00:00",
@@ -420,12 +438,6 @@
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
-      "id": "fN0eE7vDgdg",
-      "title": "The Cyberpunk TCG used to be so different back in Alpha",
-      "published": "2026-10-11T23:55:00+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "38Cfxe-bjzU",
       "title": "GAMEPLAY: 🟡🟡🔵 vs 🔴🔴🟢 Someone Getting their BUTT KICKED in Cyberpunk TCG!",
       "published": "2026-10-10T23:28:29+00:00",
@@ -472,18 +484,6 @@
       "title": "What Gear Wins Games? Our Cyberpunk TCG Final Gear Tier List",
       "published": "2026-10-05T11:00:22+00:00",
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
-    },
-    {
-      "id": "0seGZwHjEzY",
-      "title": "An Issue For ONLY CYBERPUNK TCG and No One Else 🤨",
-      "published": "2026-10-04T20:15:18+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
-      "id": "woimCh5dTlc",
-      "title": "Now With SIDEBOARD! Let's Chat About My Favorite Deck 🔵🔵🔴 BBRaindance for Cyberpunk TCG",
-      "published": "2026-10-03T23:24:46+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
     },
     {
       "id": "FgYpjKjUwgM",
@@ -778,14 +778,6 @@
       "short": false
     },
     {
-      "id": "0seGZwHjEzY",
-      "short": false
-    },
-    {
-      "id": "woimCh5dTlc",
-      "short": false
-    },
-    {
       "id": "9j2ondicjPU",
       "short": false
     },
@@ -991,10 +983,6 @@
     },
     {
       "id": "8J4gdFDty7A",
-      "short": false
-    },
-    {
-      "id": "fN0eE7vDgdg",
       "short": false
     },
     {
@@ -1228,7 +1216,19 @@
     {
       "id": "WoshK6SW_hA",
       "short": false
+    },
+    {
+      "id": "KtJ7RkeNM88",
+      "short": false
+    },
+    {
+      "id": "6N0trDdfREM",
+      "short": false
+    },
+    {
+      "id": "q1I35CCX7uw",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-01T13:34:19.106Z"
+  "updatedAt": "2026-11-02T16:09:42.127Z"
 }
