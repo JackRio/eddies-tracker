@@ -3202,7 +3202,7 @@
     },
     "groupId": "gmvz8xzuk",
     "id": "d1793623296008jh2cud",
-    "name": "Name: Adam Yellow",
+    "name": "Suicide Bombus",
     "description": "",
     "descSections": {
       "overview": "Yellow Gear and reanimation control. It trades cheap Units for value, then lands @[Adam Smasher: Metal Over Meat] to wipe the rival's Units.\nThe goal is to put @[Adam Smasher: Metal Over Meat] to trash and recall with relic. Another strategy when @[Adam Smasher: Metal Over Meat] is in starting hand is to try to play 2 @[Bootleg Black Sapphire Show] with minimal defense and blockers",
@@ -3303,7 +3303,7 @@
       "v1"
     ],
     "createdAt": "2026-11-02T12:48:01.048Z",
-    "updatedAt": "2026-11-02T12:48:54.154Z",
+    "updatedAt": "2026-11-02T12:53:37.689Z",
     "colorTag": "YYY"
   },
   {
@@ -3312,8 +3312,9 @@
       "creator": [],
       "misc": []
     },
+    "groupId": "gmvz8xzuk",
     "id": "d1793623830359n2whvt",
-    "name": "Name: Adam Smasher",
+    "name": "Adam's River",
     "description": "",
     "descSections": {},
     "legendCardIds": [
@@ -3409,9 +3410,8 @@
       }
     },
     "links": [],
-    "groupId": "gmvz8xzuk",
     "createdAt": "2026-11-02T12:50:32.800Z",
-    "updatedAt": "2026-11-02T12:50:38.648Z",
+    "updatedAt": "2026-11-02T12:53:27.288Z",
     "colorTag": "YYR"
   },
   {
