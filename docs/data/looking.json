@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T19:22:44.892Z",
-  "pricesAsOf": "2026-11-01T02:47:38+0100",
+  "generatedAt": "2026-11-02T09:26:28.472Z",
+  "pricesAsOf": "2026-11-02T02:50:02+0100",
   "cards": [
     {
       "id": "3193a6bd-3e99-4501-9c5c-8d5ea32c779c",
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "041",
       "needed": 1,
-      "price": 1.85,
+      "price": 1.9,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
     },
@@ -142,7 +142,7 @@
       },
       "collectorNumber": "013",
       "needed": 1,
-      "price": 5.94,
+      "price": 5.37,
       "priceGuess": false,
       "cmName": "Goro Takemura - Losing His Way"
     },
@@ -196,7 +196,7 @@
       },
       "collectorNumber": "085",
       "needed": 3,
-      "price": 8.95,
+      "price": 9.98,
       "priceGuess": false,
       "cmName": "Panam Palmer - Strength Through Family"
     },

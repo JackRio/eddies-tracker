@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T19:22:44.888Z",
-  "pricesAsOf": "2026-11-01T02:47:38+0100",
+  "generatedAt": "2026-11-02T09:26:28.469Z",
+  "pricesAsOf": "2026-11-02T02:50:02+0100",
   "cards": [
     {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
@@ -73,6 +73,24 @@
       "price": 33,
       "priceGuess": false,
       "cmName": "Jackie Welles - Pour One Out For Me"
+    },
+    {
+      "id": "726b13d2-0d74-42db-a5e9-b8b852224a16",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
+      "cardType": "Unit",
+      "rarity": "Iconic Other",
+      "set": {
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
+      },
+      "collectorNumber": "160",
+      "qty": 1,
+      "price": 32,
+      "priceGuess": false,
+      "cmName": "Adam Smasher - Metal Over Meat"
     }
   ]
 }
