@@ -1,9 +1,19 @@
 {
   "groups": [
     {
+      "id": "gmvz8xzuk",
+      "name": "For Mike",
+      "collapsed": false,
+      "deckIds": [
+        "d1793623296008jh2cud",
+        "d1793623830359n2whvt",
+        "d1793623860696ygalji"
+      ]
+    },
+    {
       "id": "gmvccw63e",
       "name": "RareTotem ~ YYR",
-      "collapsed": false,
+      "collapsed": true,
       "deckIds": [
         "d17922385085744cu5ax",
         "d1792239096148iebgbo",
@@ -15,7 +25,7 @@
     {
       "id": "gmv2ji68d",
       "name": "LGS Events",
-      "collapsed": false,
+      "collapsed": true,
       "deckIds": [
         "d17916504414302z824p"
       ]

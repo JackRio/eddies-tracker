@@ -799,6 +799,26 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "e2f38541-ecc9-41dc-ae15-164171391bff": {
+    "id": "e2f38541-ecc9-41dc-ae15-164171391bff",
+    "cardId": "f61b944a-32e3-4085-894b-7bd498325156",
+    "name": "Dexter DeShawn",
+    "subname": "One Last Chance",
+    "displayName": "Dexter DeShawn: One Last Chance",
+    "slug": "dexter-deshawn-one-last-chance",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Uncommon",
+    "ram": 2,
+    "cost": 3,
+    "power": 4,
+    "isEddiable": false,
+    "rulesText": "{Play} {Attack} Adjust a Gig by up to 1.\n{Defeated} If your ☆ (Street Cred) differs from a Rival's by 10+, draw 2.",
+    "set": {
+      "code": "theheistretailstarterdeck",
+      "name": "The Heist — Retail Starter Deck"
+    }
+  },
   "f9c512f2-a41f-4114-9500-cee3f8d8cc35": {
     "id": "f9c512f2-a41f-4114-9500-cee3f8d8cc35",
     "cardId": "f61b944a-32e3-4085-894b-7bd498325156",
@@ -999,6 +1019,46 @@
       "name": "Welcome to Night City — Beta"
     }
   },
+  "3d3e0e55-fa7a-40ba-bf30-0204cca88612": {
+    "id": "3d3e0e55-fa7a-40ba-bf30-0204cca88612",
+    "cardId": "858e95f5-2efb-460e-b890-e8a5140e11c9",
+    "name": "Alt Cunningham",
+    "subname": "Mother of Daemons",
+    "displayName": "Alt Cunningham: Mother of Daemons",
+    "slug": "alt-cunningham-mother-of-daemons",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Rare",
+    "ram": 3,
+    "cost": 7,
+    "power": 8,
+    "isEddiable": false,
+    "rulesText": "When a friendly equipped Unit or Legend is spent, draw 1.\nWhen a rival Unit would steal a Gig, you may discard 1 with cost equal to that Gig's value. If you do, the Gig isn't stolen.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "726b13d2-0d74-42db-a5e9-b8b852224a16": {
+    "id": "726b13d2-0d74-42db-a5e9-b8b852224a16",
+    "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
+    "name": "Adam Smasher",
+    "subname": "Metal Over Meat",
+    "displayName": "Adam Smasher: Metal Over Meat",
+    "slug": "adam-smasher-metal-over-meat",
+    "cardType": "Unit",
+    "color": "Yellow",
+    "rarity": "Iconic Other",
+    "ram": 6,
+    "cost": 9,
+    "power": 15,
+    "isEddiable": false,
+    "rulesText": "{Play} Defeat all other Units.",
+    "set": {
+      "code": "welcometonightcityretail",
+      "name": "Welcome to Night City — Retail"
+    }
+  },
   "fdb7a7c3-350e-49ea-8a9e-8477ce6c657a": {
     "id": "fdb7a7c3-350e-49ea-8a9e-8477ce6c657a",
     "cardId": "a2ad9c2f-bfb7-473b-9408-91af142d269d",
@@ -1014,6 +1074,26 @@
     "power": 15,
     "isEddiable": false,
     "rulesText": "{Play} Defeat all other Units.",
+    "set": {
+      "code": "welcometonightcitybeta",
+      "name": "Welcome to Night City — Beta"
+    }
+  },
+  "d35720e4-f307-4732-ae3d-8f47f1351549": {
+    "id": "d35720e4-f307-4732-ae3d-8f47f1351549",
+    "cardId": "654f2289-5d75-4f8b-bd35-702031fbb214",
+    "name": "Kiroshi Optics",
+    "subname": null,
+    "displayName": "Kiroshi Optics",
+    "slug": "kiroshi-optics",
+    "cardType": "Gear",
+    "color": "Yellow",
+    "rarity": "Common",
+    "ram": 1,
+    "cost": 1,
+    "power": 1,
+    "isEddiable": true,
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Attack} Look at a friendly face-down Legend. (Don't reveal it.)",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1533,7 +1613,7 @@
     "cost": 4,
     "power": 4,
     "isEddiable": true,
-    "rulesText": "{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1553,7 +1633,7 @@
     "cost": 4,
     "power": 4,
     "isEddiable": true,
-    "rulesText": "{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
+    "rulesText": "(Equip to a friendly Unit or face-up Legend.)\n{Quick} 1 €$, {Spend} Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
@@ -1957,6 +2037,26 @@
     "set": {
       "code": "welcometonightcitybeta",
       "name": "Welcome to Night City — Beta"
+    }
+  },
+  "d4a627d7-2ea9-4080-9f54-435a7d77fb27": {
+    "id": "d4a627d7-2ea9-4080-9f54-435a7d77fb27",
+    "cardId": "619429c9-132f-496e-8aa0-414e850c87ec",
+    "name": "MT0D12 Flathead",
+    "subname": null,
+    "displayName": "MT0D12 Flathead",
+    "slug": "mt0d12-flathead",
+    "cardType": "Unit",
+    "color": "Blue",
+    "rarity": "Uncommon",
+    "ram": 3,
+    "cost": 5,
+    "power": 7,
+    "isEddiable": true,
+    "rulesText": "If you have less ☆ (Street Cred) than a Rival, this Unit can't be blocked.",
+    "set": {
+      "code": "theheistbetastarterdeck",
+      "name": "The Heist — Beta Starter Deck"
     }
   },
   "ee22b73e-8b14-4225-9c86-428cfada892f": {
