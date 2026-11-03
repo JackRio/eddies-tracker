@@ -78,10 +78,22 @@
   ],
   "videos": [
     {
+      "id": "zrBRwMmp6WU",
+      "title": "Let's try and find some Iconic Rares live!",
+      "published": "2026-11-02T21:51:14+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
       "id": "6N0trDdfREM",
       "title": "Cyberpunk TCG Pre-Release At Home! (Because I Couldn't Go! 😭)",
-      "published": "2026-11-02T02:48:09+00:00",
+      "published": "2026-11-02T18:50:38+00:00",
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "kPfjaw5WOzE",
+      "title": "Cyberpunk TCG Grand Final Gameplay Analysis with @freshlobster",
+      "published": "2026-11-02T17:00:35+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
       "id": "q1I35CCX7uw",
@@ -396,12 +408,6 @@
       "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
     },
     {
-      "id": "RTbHuzf1BT8",
-      "title": "What on earth is Holophone? (and other news this week) | NCC 013",
-      "published": "2026-10-16T02:44:57+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "YAGv0KRC_gc",
       "title": "Streets of NC - CyberChoom TCG",
       "published": "2026-10-15T15:00:16+00:00",
@@ -543,12 +549,6 @@
       "id": "SdN5TlkrCkg",
       "title": "Is Hanako too strong? Cyberpunk TCG",
       "published": "2026-09-23T12:00:24+00:00",
-      "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "v8RkYR0j580",
-      "title": "Cyberpunk TCG Meta - Is BBG TIER 0?",
-      "published": "2026-09-21T10:13:44+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
@@ -822,10 +822,6 @@
       "short": false
     },
     {
-      "id": "v8RkYR0j580",
-      "short": false
-    },
-    {
       "id": "QX3E3RMjLhY",
       "short": false
     },
@@ -1003,10 +999,6 @@
     },
     {
       "id": "OQVJxk5OsHQ",
-      "short": false
-    },
-    {
-      "id": "RTbHuzf1BT8",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "q1I35CCX7uw",
       "short": false
+    },
+    {
+      "id": "zrBRwMmp6WU",
+      "short": false
+    },
+    {
+      "id": "kPfjaw5WOzE",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-02T16:09:42.127Z"
+  "updatedAt": "2026-11-03T14:26:01.954Z"
 }
