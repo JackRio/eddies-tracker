@@ -78,9 +78,21 @@
   ],
   "videos": [
     {
+      "id": "sOYkLP-k_aI",
+      "title": "Holophone - Join the ALDECALDOS",
+      "published": "2026-11-03T19:13:49+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
+      "id": "-pG-MbO6a84",
+      "title": "RAMP is looking BIG in Icons with these EXCLUSIVE PREVIEWS! - Star Wars Unlimited Icons 2027",
+      "published": "2026-11-03T17:00:13+00:00",
+      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
+    },
+    {
       "id": "zrBRwMmp6WU",
       "title": "Let's try and find some Iconic Rares live!",
-      "published": "2026-11-02T21:51:14+00:00",
+      "published": "2026-11-03T15:22:47+00:00",
       "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
     },
     {
@@ -396,12 +408,6 @@
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
-      "id": "gT__3G0aaY8",
-      "title": "Ranking GA Decks by JUND-INESS??  || Grand Archive TCG Recollection Step 66",
-      "published": "2026-10-16T21:34:57+00:00",
-      "channelId": "UCgdCrVrpiH9XZUfamvuSOHA"
-    },
-    {
       "id": "iTkN9vYAZnc",
       "title": "OK This is REALLY Fun! 🟡🟡🔴 SMASHER! A Sweet Cyberpunk TCG Deck!",
       "published": "2026-10-16T12:00:05+00:00",
@@ -538,12 +544,6 @@
       "title": "The Best Decks on Release! - Month 1 Metagame Tier List (October 2026 Format)",
       "published": "2026-09-27T21:43:32+00:00",
       "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
-    },
-    {
-      "id": "kiC8EqvZ6HI",
-      "title": "Beta Booster Box Battle Ep2 - Can we get ALL BLUE ICONICS in 1 Box?",
-      "published": "2026-09-24T14:00:03+00:00",
-      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
     },
     {
       "id": "SdN5TlkrCkg",
@@ -858,10 +858,6 @@
       "short": false
     },
     {
-      "id": "kiC8EqvZ6HI",
-      "short": false
-    },
-    {
       "id": "NjJNH5lLICo",
       "short": false
     },
@@ -1019,10 +1015,6 @@
     },
     {
       "id": "WK5Tm7lOnNk",
-      "short": false
-    },
-    {
-      "id": "gT__3G0aaY8",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "kPfjaw5WOzE",
       "short": false
+    },
+    {
+      "id": "-pG-MbO6a84",
+      "short": false
+    },
+    {
+      "id": "sOYkLP-k_aI",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-03T14:26:01.954Z"
+  "updatedAt": "2026-11-04T14:40:44.244Z"
 }
