@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "card-rarity",
+      "title": "Know your odds: Cyberpunk TCG rarities and pull rates",
+      "dek": "Every rarity, what is in a pack, WeirdCo's pull rates, Beta vs Retail boxes and your odds of pulling one specific card.",
+      "category": "Collection",
+      "tags": [
+        "rarity",
+        "pull rates",
+        "booster box",
+        "iconic",
+        "collection"
+      ],
+      "date": "2026-11-04",
+      "readMin": 5,
+      "cover": "images/blog/card-rarity.jpg",
+      "coverAlt": "Five Welcome to Night City cards fanned out from Common to Iconic Rare, with Judy Álvarez's Iconic in the middle."
+    },
+    {
       "slug": "card-sorting",
       "title": "From pile to playset: sorting your Cyberpunk cards",
       "dek": "Learn how to sort and store your Cyberpunk TCG cards, for both your playset and your bulk.",

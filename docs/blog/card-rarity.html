@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#07070b" />
+<meta name="description" content="Cyberpunk TCG rarities, what's in a pack, WeirdCo's pull rates, Beta vs Retail boxes and your odds of pulling one specific card." />
+<meta property="og:type" content="article" />
+<meta property="article:tag" content="rarity" />
+<meta property="article:tag" content="pull rates" />
+<meta property="article:tag" content="booster box" />
+<meta property="article:tag" content="iconic" />
+<meta property="article:tag" content="collection" />
+<meta property="og:title" content="Know your odds: Cyberpunk TCG rarities and pull rates" />
+<meta property="og:description" content="Cyberpunk TCG rarities, what's in a pack, WeirdCo's pull rates, Beta vs Retail boxes and your odds of pulling one specific card." />
+<meta property="og:image" content="https://eddies.help/images/blog/card-rarity.jpg" />
+<meta property="og:url" content="https://eddies.help/blog/card-rarity.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>Know your odds — Eddies Blog</title>
+<link rel="icon" href="../images/eddies-glyph-yellow.png" />
+<link rel="stylesheet" href="../style.css?v=20261018" />
+<link rel="stylesheet" href="../blog.css?v=20261012d" />
+<style>
+/* Rarity article components (scoped to .rarity). Card art is the real
+   printing image from docs/images; rarity symbols reuse style.css's
+   .rarity-icon-* masks. */
+.rarity .card-art{display:block;width:100%;height:auto;aspect-ratio:63/88;border-radius:4.5%/3.2%;background:#000;box-shadow:0 10px 24px rgba(0,0,0,.55)}
+.rarity .ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,108px),1fr));gap:16px 14px}
+.rarity .ladder figure,.rarity .pair figure,.rarity .path figure{margin:0;display:flex;flex-direction:column;gap:9px;min-width:0}
+.rarity .cap{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+.rarity .cap .rarity-icon{flex:none;width:18px;height:18px}
+.rarity .sub{font-size:13px;line-height:1.35;color:var(--text-dim)}
+
+/* Fanned 12-card pack: --r rotates, --y (percent of the card's height) drops the outer cards. */
+.rarity .fan{display:flex;justify-content:center;padding:16px 3% 18px;overflow:hidden}
+.rarity .fan .pc{position:relative;display:block;flex:none;width:min(14%,140px);margin-left:-6.4%;transform-origin:50% 100%;transform:translateY(var(--y)) rotate(var(--r));transition:transform .25s var(--ease)}
+.rarity .fan .pc:first-child{margin-left:0}
+.rarity .fan .pc:hover{transform:translateY(calc(var(--y) - 8%)) rotate(var(--r));z-index:2}
+/* Foil sheen on Rare-or-better slots (and every card in a God Pack). */
+.rarity .pc.foil::after{content:"";position:absolute;inset:0;border-radius:4.5%/3.2%;pointer-events:none;mix-blend-mode:screen;
+  background:linear-gradient(115deg,transparent 30%,rgba(53,227,232,.10) 42%,rgba(255,123,213,.12) 50%,rgba(252,238,10,.10) 58%,transparent 70%);background-size:300% 100%;animation:sheen 7s ease-in-out infinite}
+@keyframes sheen{from{background-position:100% 0}to{background-position:-200% 0}}
+.rarity .pc.deal{animation:deal .45s var(--ease) backwards;animation-delay:calc(var(--i) * 45ms)}
+@keyframes deal{from{opacity:0;transform:translateY(-45%) rotate(0deg)}}
+.rarity .fan-key{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px}
+
+/* Rip Pack controls, God Pack banner and the running tally. */
+.rarity .rip-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+.rarity .rip-go{min-width:150px}
+.rarity .rip-go:disabled{opacity:.6;cursor:wait;transform:none}
+.rarity .god-banner{margin:0 auto 4px;font-size:clamp(20px,3vw,30px);font-weight:900;letter-spacing:.18em;text-transform:uppercase;text-align:center;
+  background:linear-gradient(100deg,#35e3e8,#c7f9ff 30%,#ff7bd5 55%,#fcee0a 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rarity .fan.god{background:radial-gradient(ellipse at 50% 60%,rgba(255,123,213,.08),rgba(53,227,232,.04) 45%,transparent 70%)}
+.rarity .fan.god .card-art{box-shadow:0 0 0 1px rgba(199,249,255,.35),0 0 10px rgba(255,123,213,.25),0 10px 24px rgba(0,0,0,.55)}
+.rarity .rip-tally{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.rarity .rip-tally b{color:var(--yellow);font-variant-numeric:tabular-nums}
+
+.rarity .pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;align-items:end}
+.rarity .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rarity .pair-name{grid-column:1/-1;font-size:14px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.rarity .ed{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+.rarity .ed.r{color:var(--yellow)}
+
+.rarity .path{display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr) 34px minmax(0,1fr);align-items:center;max-width:760px;margin:0 auto}
+.rarity .path .arr{height:2px;background:var(--yellow);position:relative;margin:0 6px}
+.rarity .path .arr::after{content:"";position:absolute;right:-2px;top:-5px;border-left:8px solid var(--yellow);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.rarity .trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:760px;margin:0 auto}
+
+.rarity .raretbl .rarity-icon{width:26px;height:26px;vertical-align:middle}
+.rarity .raretbl td:first-child{width:44px}
+.rarity .raretbl td:nth-child(2){font-weight:800;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.rarity .num-cells td:not(:first-child){font-variant-numeric:tabular-nums}
+/* Card-type columns (L/U/G/P), letters in each type's colour; "?" opens the key on hover or tap. */
+.rarity .raretbl .ty{width:44px;text-align:center}
+.rarity .raretbl th.ty{font-size:13px}
+.rarity .raretbl .tl{color:var(--type-legend)}.rarity .raretbl .tu{color:var(--type-unit)}.rarity .raretbl .tg{color:var(--type-gear)}.rarity .raretbl .tp{color:var(--type-program)}
+.rarity .raretbl td.zero{color:var(--border-hi)}
+.rarity .raretbl abbr{text-decoration:none}
+.rarity .raretbl th.tygrp{position:relative;text-align:center;border-bottom:0;padding-bottom:0}
+.rarity .abbr-q{width:18px;height:18px;margin-left:6px;padding:0;border:1px solid var(--border-hi);border-radius:50%;background:transparent;color:var(--text-dim);font:inherit;font-size:11px;line-height:16px;cursor:help;vertical-align:1px}
+.rarity .abbr-q:hover,.rarity .abbr-q:focus-visible{border-color:var(--yellow);color:var(--yellow);outline:none}
+.rarity .abbr-tip{position:absolute;right:calc(50% + 46px);top:50%;transform:translateY(-50%);z-index:3;display:none;padding:8px 11px;background:var(--bg-hi);border:1px solid var(--border-hi);color:var(--text);font-size:12px;letter-spacing:.06em;white-space:nowrap;box-shadow:var(--shadow)}
+.rarity .abbr-q:hover + .abbr-tip,.rarity .abbr-q:focus + .abbr-tip{display:block}
+.rarity .est{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim)}
+.rarity .note{font-size:14px;line-height:1.55;color:var(--text-dim)}
+
+.rarity details.iclist{background:var(--bg-panel);border:1px solid var(--border)}
+.rarity details.iclist summary{cursor:pointer;padding:14px 18px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow)}
+.rarity .ic-body{display:flex;flex-direction:column;gap:14px;padding:0 18px 20px}
+.rarity .ic-grp{margin-top:10px;font-size:12px;letter-spacing:.14em;color:var(--cyan)}
+.rarity .ic-grp span{color:var(--text-dim)}
+.rarity .ic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:16px}
+.rarity .ic{display:flex;flex-direction:column;gap:8px;padding:12px;background:var(--bg-card);border:1px solid var(--border);min-width:0}
+.rarity .ic-arts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rarity .ic figure{margin:0;display:flex;flex-direction:column;gap:4px;min-width:0}
+.rarity .ic .sub{font-size:11px}
+.rarity .ic-name{font-size:13px;font-weight:700;line-height:1.3}
+
+.rarity .calc{display:flex;flex-direction:column;gap:16px;padding:20px;background:var(--bg-panel);border:1px solid var(--border)}
+.rarity .crow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rarity .lab{width:100%;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--text-dim)}
+.rarity .seg{padding:10px 13px;background:var(--bg-card);border:1px solid var(--border);color:var(--text);font:inherit;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer}
+.rarity .seg:hover{border-color:var(--border-hi)}
+.rarity .seg[aria-pressed="true"]{border-color:var(--yellow);color:var(--yellow)}
+.rarity .stepper{display:flex;align-items:center;border:1px solid var(--border)}
+.rarity .stepper button{width:42px;height:42px;background:var(--bg-card);border:0;color:var(--yellow);font:inherit;font-size:20px;font-weight:800;cursor:pointer}
+.rarity .stepper output{min-width:60px;text-align:center;font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.rarity .seg:focus-visible,.rarity .stepper button:focus-visible,.rarity summary:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.rarity .result{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:12px}
+.rarity .big{padding:16px;background:var(--bg-card);border:1px solid var(--border)}
+.rarity .big b{display:block;font-size:clamp(28px,3.4vw,38px);line-height:1;color:var(--yellow);font-variant-numeric:tabular-nums}
+.rarity .big span{display:block;margin-top:8px;font-size:13px;color:var(--text-dim)}
+
+.post-sources{font-size:13px;line-height:1.6;color:var(--text-dim)}
+
+@media (max-width:600px){
+  .rarity .ladder{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 10px}
+  .rarity .cap{font-size:10px;gap:5px;letter-spacing:.06em}
+  .rarity .cap .rarity-icon{width:14px;height:14px}
+  .rarity .sub{font-size:11px}
+  .rarity .path{grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr)}
+  .rarity .path .arr{margin:0 2px}
+  .rarity .trio{gap:8px}
+  .rarity .calc{padding:16px}
+  .rarity .raretbl td:first-child{width:auto;min-width:0;padding-right:2px}
+  .rarity .raretbl .rarity-icon{width:20px;height:20px}
+  .rarity .raretbl .ty{width:26px;padding-inline:3px}
+  .rarity .abbr-tip{white-space:normal;width:150px;right:calc(50% + 40px)}
+}
+@media (prefers-reduced-motion:reduce){.rarity .fan .pc{transition:none}.rarity .pc.deal,.rarity .pc.foil::after{animation:none}}
+</style>
+</head>
+<body>
+  <header class="app-header">
+    <div class="bar">
+      <a class="brand" href="../" aria-label="Eddies home"><img src="../images/eddies-glyph-yellow.png" alt="" /><span class="accent">EDDIES</span></a>
+      <nav class="nav-tabs" aria-label="Main">
+        <a href="../">Home</a>
+        <details class="nav-drop"><summary>Decks</summary><div class="nav-menu"><a href="../decks.html">Deck Library</a><a href="../loadout.html">Loadout</a></div></details>
+        <a href="./" class="active" aria-current="page">Blogs</a>
+        <details class="nav-drop"><summary>Collection</summary><div class="nav-menu"><a href="../collection.html">My Collection</a><a href="../trading.html">Trading</a><a href="../record.html">Record</a></div></details>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post">
+    <a class="post-back" href="./">&larr; All posts</a>
+
+    <div class="post-layout">
+    <div class="post-main">
+    <header class="post-hero page-enter">
+      <div class="post-kicker">Collection &middot; Guide</div>
+      <h1>Know your <span class="accent">odds</span><br />Rarities and <span class="alt">pull rates</span></h1>
+      <p class="dek">Every rarity in Welcome to Night City, what's in a pack, how Beta and Retail boxes differ, and your real chances of pulling the card you want.</p>
+      <div class="post-meta"><span>4 Nov 2026</span><span>5 min read</span><span>Set 1 &middot; Welcome to Night City</span></div>
+    </header>
+    <article class="prose rarity" data-tags="rarity,pull rates,booster box,iconic,collection">
+
+      <section class="take" id="takeaway">
+        <h2>The short version</h2>
+        <p>Every pack has 12 cards: 7 Commons, 3 Uncommons and 2 Rare-or-better. WeirdCo's odds are an Epic about every 4 packs, an Iconic every 18 and a Secret every 24. Beta and Retail share cards and odds but not Iconic art. Nova Rares never come in packs.</p>
+      </section>
+
+      <section id="rarities">
+        <h2><span class="num">01</span>The rarities</h2>
+        <p>The symbol at the bottom of a card sets its rarity. Booster packs hold <strong>140 different cards</strong>, 35 per colour, plus <strong>31 Iconic Rares</strong>: alternate art of cards already in the set, so they add art, not new cards.</p>
+        <p>The two starter decks, Embracing Power and The Heist, add <strong>5 exclusive cards each</strong>, so Set 1 has <strong class="yel">150 mechanically unique cards</strong> in all. The starter-deck cards don't appear in booster packs.</p>
+
+        <figure class="post-fig">
+          <div class="fig-label"><span>Fig. 1 &middot; One card per rarity</span><span>Retail printings</span></div>
+          <div class="ladder">
+            <figure><img class="card-art" src="../images/30619097-d9d7-42fe-bf4c-cd4ae822792d.webp" alt="Japantown Jonin" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-common"></span>Common</span></figure>
+            <figure><img class="card-art" src="../images/c26c7db6-f540-4073-ab33-b09335631764.webp" alt="Kerry Eurodyne: The Last Rockerboy" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-uncommon"></span>Uncommon</span></figure>
+            <figure><img class="card-art" src="../images/2c4a77e8-0fda-4ec1-9519-1d15e0f172b3.webp" alt="Hanako Arasaka: Daughter of the Emperor" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-rare"></span>Rare</span></figure>
+            <figure><img class="card-art" src="../images/a9c1137e-2e33-4293-9dcc-9351c9a0bbee.webp" alt="Adam Smasher: Ender of Legends" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-epic"></span>Epic Rare</span></figure>
+            <figure><img class="card-art" src="../images/a8a7d286-0c66-4f01-aca7-45570474d9e4.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-secret-rare"></span>Secret Rare</span></figure>
+            <figure><img class="card-art" src="../images/9c8b2cab-c07e-44e7-bcfd-277100688d17.webp" alt="Judy Álvarez: Braindance Maestro" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-iconic-rare"></span>Iconic Rare</span></figure>
+            <figure><img class="card-art" src="../images/f509ebd8-c8b7-4a22-8922-2d71c6df0b6f.webp" alt="V: Corporate Exile" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-nova-rare"></span>Nova Rare</span></figure>
+          </div>
+        </figure>
+
+        <div class="table-scroll">
+          <table class="readout raretbl num-cells">
+            <thead>
+              <tr><th rowspan="2"></th><th rowspan="2">Rarity</th><th rowspan="2">In the set</th><th class="tygrp" colspan="4">Type<button type="button" class="abbr-q" aria-label="What L, U, G and P mean" aria-describedby="type-key">?</button><span class="abbr-tip" role="tooltip" id="type-key">L Legend &middot; U Unit &middot; G Gear &middot; P Program</span></th></tr>
+              <tr><th class="ty tl"><abbr title="Legend">L</abbr></th><th class="ty tu"><abbr title="Unit">U</abbr></th><th class="ty tg"><abbr title="Gear">G</abbr></th><th class="ty tp"><abbr title="Program">P</abbr></th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rarity-icon rarity-icon-common" role="img" aria-label="Common symbol"></span></td><td>Common</td><td>60</td><td class="ty zero">0</td><td class="ty">37</td><td class="ty">8</td><td class="ty">15</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-uncommon" role="img" aria-label="Uncommon symbol"></span></td><td>Uncommon</td><td>32</td><td class="ty zero">0</td><td class="ty">13</td><td class="ty">6</td><td class="ty">13</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-rare" role="img" aria-label="Rare symbol"></span></td><td>Rare</td><td>32</td><td class="ty">15</td><td class="ty">11</td><td class="ty">1</td><td class="ty">5</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-epic" role="img" aria-label="Epic Rare symbol"></span></td><td>Epic Rare</td><td>12</td><td class="ty">3</td><td class="ty">6</td><td class="ty">2</td><td class="ty">1</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-secret-rare" role="img" aria-label="Secret Rare symbol"></span></td><td>Secret Rare</td><td>4</td><td class="ty">2</td><td class="ty">2</td><td class="ty zero">0</td><td class="ty zero">0</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-iconic-rare" role="img" aria-label="Iconic Rare symbol"></span></td><td>Iconic Rare</td><td>31 per edition</td><td class="ty">20</td><td class="ty">8</td><td class="ty">2</td><td class="ty">1</td></tr>
+              <tr><td><span class="rarity-icon rarity-icon-nova-rare" role="img" aria-label="Nova Rare symbol"></span></td><td>Nova Rare</td><td>Not in packs</td><td class="ty zero">&mdash;</td><td class="ty zero">&mdash;</td><td class="ty zero">&mdash;</td><td class="ty zero">&mdash;</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">V: Streetkid is the one Rare with two arts (005a and 005b), so there are 33 Rare printings.</p>
+      </section>
+
+      <section id="pack">
+        <h2><span class="num">02</span>What's in a pack</h2>
+        <p>Every pack has <strong class="yel">12 cards</strong>: 7 Commons, 3 Uncommons and 2 "hit" slots that are always Rare or better. So every pack has at least two foils.</p>
+
+        <figure class="post-fig">
+          <div class="fig-label"><span>Fig. 2 &middot; Rip a pack</span><span>12 cards</span></div>
+          <div class="rip-bar" id="rip">
+            <div class="crow" role="group" aria-label="Edition">
+              <button type="button" class="seg" data-ed="beta" aria-pressed="false">Beta</button>
+              <button type="button" class="seg" data-ed="retail" aria-pressed="true">Retail</button>
+            </div>
+            <button type="button" class="cta primary rip-go" id="rip-go">Rip pack</button>
+          </div>
+          <div class="god-banner" id="rip-god" hidden>God Pack</div>
+          <div class="fan" id="rip-fan">
+            <span class="pc" style="--r:-22deg;--y:15%;--i:0"><img class="card-art" src="../images/30619097-d9d7-42fe-bf4c-cd4ae822792d.webp" alt="Japantown Jonin (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:-18deg;--y:10%;--i:1"><img class="card-art" src="../images/fcbb6d58-6666-4bd3-8ff0-64930fb0f422.webp" alt="Secondhand Bombus (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:-14deg;--y:6%;--i:2"><img class="card-art" src="../images/80dcc139-d31d-4b89-86ff-cdbdd2664953.webp" alt="Corpo Security (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:-10deg;--y:3%;--i:3"><img class="card-art" src="../images/8e2f2d0c-0e92-4744-a510-a9c7ac371d81.webp" alt="Jacked-In Voodoo Boy (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:-6deg;--y:1%;--i:4"><img class="card-art" src="../images/7ffa8ba4-f187-4ba0-a719-fa8ebf45a03b.webp" alt="Mantis Blades (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:-2deg;--y:0%;--i:5"><img class="card-art" src="../images/e1959b9e-d32d-43be-94c3-a595809e0c28.webp" alt="Gorilla Arms (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:2deg;--y:0%;--i:6"><img class="card-art" src="../images/91f9d30c-f74d-4be4-8505-52f05d309c92.webp" alt="Floor It (Common)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:6deg;--y:1%;--i:7"><img class="card-art" src="../images/97de62e2-3fea-4324-8367-87d1f1d674ed.webp" alt="Sandevistan (Uncommon)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:10deg;--y:3%;--i:8"><img class="card-art" src="../images/4eca7fcd-85c1-43d0-8a07-4227312ab0db.webp" alt="Viktor Vektor: You Might Feel a Little Pinch (Uncommon)" loading="lazy" decoding="async" /></span>
+            <span class="pc" style="--r:14deg;--y:6%;--i:9"><img class="card-art" src="../images/8a7131eb-e1dd-46d6-84f6-2de315aee975.webp" alt="Maman Brigitte: Spirit of Death (Uncommon)" loading="lazy" decoding="async" /></span>
+            <span class="pc foil" style="--r:18deg;--y:10%;--i:10"><img class="card-art" src="../images/7072a2d2-ec4f-4575-909e-15a107dfef79.webp" alt="Lizzy Wizzy: Delicate Weapon (Rare)" loading="lazy" decoding="async" /></span>
+            <span class="pc foil" style="--r:22deg;--y:15%;--i:11"><img class="card-art" src="../images/3193a6bd-3e99-4501-9c5c-8d5ea32c779c.webp" alt="Rogue Amendiares: Queen of the Afterlife (Epic)" loading="lazy" decoding="async" /></span>
+          </div>
+          <div class="fan-key" id="rip-key">
+            <span class="cap"><span class="rarity-icon rarity-icon-common"></span>7 Common</span>
+            <span class="cap"><span class="rarity-icon rarity-icon-uncommon"></span>3 Uncommon</span>
+            <span class="cap"><span class="rarity-icon rarity-icon-rare"></span>2 Rare or better</span>
+          </div>
+          <figcaption id="rip-cap" aria-live="polite">This Retail pack hit an Epic (Rogue Amendiares) next to its Rare, which happens in about 1 in 4 packs.</figcaption>
+          <div class="rip-tally" id="rip-tally" hidden></div>
+        </figure>
+        <p class="note">Rip pack draws at WeirdCo's rates. A God Pack is 12 different Iconic Rares; WeirdCo hasn't published how often they appear, so the sim uses a guess of 1 in 500.</p>
+      </section>
+
+      <section id="rates">
+        <h2><span class="num">03</span>Pull rates</h2>
+        <p>WeirdCo published these rates in <a href="https://www.kickstarter.com/projects/cyberpunktcg/the-official-cyberpunk-trading-card-game/posts/4656837" target="_blank" rel="noopener">Kickstarter Update #25</a> (9 April 2026). They're averages across the whole print run, so a single box can do better or worse.</p>
+        <div class="table-scroll">
+          <table class="readout num-cells">
+            <thead><tr><th>Rarity</th><th>WeirdCo's rate</th><th>Beta box (36)</th><th>Retail box (24)</th></tr></thead>
+            <tbody>
+              <tr><td>Rare</td><td>More than 1 per pack</td><td>~60</td><td>~40</td></tr>
+              <tr><td>Epic Rare</td><td>~1 in 4 packs</td><td>~9</td><td>~6</td></tr>
+              <tr><td>Iconic Rare</td><td>~1 in 18 packs</td><td>~2</td><td>~1.3</td></tr>
+              <tr><td>Secret Rare</td><td>~1 in 24 packs</td><td>~1.5</td><td>~1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">The box columns are our maths from WeirdCo's rates, not WeirdCo's numbers.</p>
+        <div class="callout"><b>No guarantees</b>On these averages, about 1 in 5 Beta boxes and 1 in 3 Retail boxes have no Secret Rare, and about 1 in 4 Retail boxes have no Iconic. WeirdCo hasn't said whether boxes are packed to even this out.</div>
+      </section>
+
+      <section id="editions">
+        <h2><span class="num">04</span>Beta vs Retail</h2>
+        <p>Same 140 booster cards, same pack layout, same odds. The differences are the box size, the card numbers and the Iconic art.</p>
+        <div class="table-scroll">
+          <table class="readout">
+            <thead><tr><th></th><th>Beta</th><th>Retail</th></tr></thead>
+            <tbody>
+              <tr><td>Packs per box</td><td>36</td><td>24</td></tr>
+              <tr><td>Card numbers</td><td>B prefix, e.g. B025</td><td>Plain, e.g. 025</td></tr>
+              <tr><td>Iconic Rares</td><td>B141&ndash;B171, Beta-only art</td><td>141&ndash;171, Retail-only art</td></tr>
+              <tr><td>Where to get it</td><td>Kickstarter, shipping since September 2026</td><td>Game stores, from 6 Nov 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Both editions give the <strong>same 31 cards</strong> an Iconic version, but every one has different artwork in each edition. A Beta Iconic only comes from Beta packs and a Retail Iconic only from Retail packs, so a full Iconic collection is <strong class="yel">62 cards</strong>.</p>
+
+        <figure class="post-fig">
+          <div class="fig-label"><span>Fig. 3 &middot; Same card, two Iconics</span><span>Beta &middot; Retail</span></div>
+          <div class="pairs">
+            <div class="pair"><span class="pair-name">Adam Smasher: Ender of Legends</span><figure><img class="card-art" src="../images/74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e.webp" alt="Adam Smasher: Ender of Legends" loading="lazy" decoding="async" /><span class="ed">Beta B141</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/828f575e-012d-4287-8b35-b0d8e5a4464c.webp" alt="Adam Smasher: Ender of Legends" loading="lazy" decoding="async" /><span class="ed r">Retail 141</span><span class="sub">Pandart Studio</span></figure></div>
+            <div class="pair"><span class="pair-name">The Relic: Experimental Biochip</span><figure><img class="card-art" src="../images/9a4fafb2-b27b-4b3e-9f57-502040898b0f.webp" alt="The Relic: Experimental Biochip" loading="lazy" decoding="async" /><span class="ed">Beta B163</span><span class="sub">Mooncolony</span></figure><figure><img class="card-art" src="../images/12ff7ae7-9d19-42ec-af5d-45ea0b720d41.webp" alt="The Relic: Experimental Biochip" loading="lazy" decoding="async" /><span class="ed r">Retail 163</span><span class="sub">Łukasz Poller</span></figure></div>
+            <div class="pair"><span class="pair-name">Panam Palmer: Strength Through Family</span><figure><img class="card-art" src="../images/7d71aedf-dbb6-435f-bece-e522834db122.webp" alt="Panam Palmer: Strength Through Family" loading="lazy" decoding="async" /><span class="ed">Beta B170</span><span class="sub">Divebound Studio</span></figure><figure><img class="card-art" src="../images/5632d773-b6c8-402d-a162-364767d3d21e.webp" alt="Panam Palmer: Strength Through Family" loading="lazy" decoding="async" /><span class="ed r">Retail 170</span><span class="sub">Divebound Studio</span></figure></div>
+          </div>
+          <figcaption>Even when the same studio painted both, the Beta and Retail Iconic are different pictures.</figcaption>
+        </figure>
+
+        <details class="iclist">
+          <summary>All 31 Iconic Rares &darr;</summary>
+          <div class="ic-body">
+            <h3 class="ic-grp">Legend Iconics: Legends <span>18</span></h3>
+            <div class="ic-grid">
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e.webp" alt="Adam Smasher: Ender of Legends" loading="lazy" decoding="async" /><span class="ed">B141</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/828f575e-012d-4287-8b35-b0d8e5a4464c.webp" alt="Adam Smasher: Ender of Legends" loading="lazy" decoding="async" /><span class="ed r">141</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Adam Smasher: Ender of Legends</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/9d04877f-050d-485d-9447-1bef7ee6ed40.webp" alt="Dexter DeShawn: Off the Grid" loading="lazy" decoding="async" /><span class="ed">B142</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/3723dc4c-52e1-4091-80c6-38c4175f7145.webp" alt="Dexter DeShawn: Off the Grid" loading="lazy" decoding="async" /><span class="ed r">142</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Dexter DeShawn: Off the Grid</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/f712b214-b109-4e69-bc74-4991905024f7.webp" alt="Royce: Psycho on the Edge" loading="lazy" decoding="async" /><span class="ed">B143</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/181a18f4-f6ba-4b23-bc56-ca43bd7d0843.webp" alt="Royce: Psycho on the Edge" loading="lazy" decoding="async" /><span class="ed r">143</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Royce: Psycho on the Edge</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/20debd66-ff1c-42c3-9869-928cba33ccb5.webp" alt="V: Streetkid" loading="lazy" decoding="async" /><span class="ed">B144</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/837d354a-a1c8-4df0-b4ac-4db43730187a.webp" alt="V: Streetkid" loading="lazy" decoding="async" /><span class="ed r">144</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">V: Streetkid</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/b3b78f89-424e-41b6-9fa9-aea256568dcc.webp" alt="Dum Dum: Maelstrom Triggerman" loading="lazy" decoding="async" /><span class="ed">B145</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/21716e98-de73-4769-aa28-3474841c0f46.webp" alt="Dum Dum: Maelstrom Triggerman" loading="lazy" decoding="async" /><span class="ed r">145</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Dum Dum: Maelstrom Triggerman</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/5ade304e-8e0e-4484-944a-18d8d08caf9f.webp" alt="Kerry Eurodyne: Axe, Attitude, Audience" loading="lazy" decoding="async" /><span class="ed">B146</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/ad827e14-e431-4412-a6c0-b54168d45ab3.webp" alt="Kerry Eurodyne: Axe, Attitude, Audience" loading="lazy" decoding="async" /><span class="ed r">146</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Kerry Eurodyne: Axe, Attitude, Audience</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/2e06439f-fab6-4a65-a1fc-e5f4afc84eb0.webp" alt="Muamar Reyes: El Capitán" loading="lazy" decoding="async" /><span class="ed">B147</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/c3dd649e-92ce-4cc1-8c14-63dda16f5fc1.webp" alt="Muamar Reyes: El Capitán" loading="lazy" decoding="async" /><span class="ed r">147</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Muamar Reyes: El Capitán</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/e59b67b3-a388-4228-94a3-84ee12e68937.webp" alt="River Ward: Detective on the Hunt" loading="lazy" decoding="async" /><span class="ed">B148</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/ef33c0b9-0e13-438e-952b-5d834485b0aa.webp" alt="River Ward: Detective on the Hunt" loading="lazy" decoding="async" /><span class="ed r">148</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">River Ward: Detective on the Hunt</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/6b75ec33-da55-46c7-a88c-f0fb89263253.webp" alt="Rogue Amendiares: Preem Solo" loading="lazy" decoding="async" /><span class="ed">B149</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/cdccc52f-197e-4ba1-8bd9-f40a16ed5f58.webp" alt="Rogue Amendiares: Preem Solo" loading="lazy" decoding="async" /><span class="ed r">149</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Rogue Amendiares: Preem Solo</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/af82881d-9e19-46b3-a723-a2ef224687d8.webp" alt="Goro Takemura: Vengeful Bodyguard" loading="lazy" decoding="async" /><span class="ed">B150</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/a420db68-9911-42d8-a56c-7bb7d7e9849f.webp" alt="Goro Takemura: Vengeful Bodyguard" loading="lazy" decoding="async" /><span class="ed r">150</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Goro Takemura: Vengeful Bodyguard</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/cc3ed2c4-6e6d-47aa-b358-152c56b24bad.webp" alt="Hanako Arasaka: Daughter of the Emperor" loading="lazy" decoding="async" /><span class="ed">B151</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/79307857-811d-4436-b1d9-1190d9376ea0.webp" alt="Hanako Arasaka: Daughter of the Emperor" loading="lazy" decoding="async" /><span class="ed r">151</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Hanako Arasaka: Daughter of the Emperor</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/aadd8dc4-bb37-4901-8200-39b8904268a8.webp" alt="Jackie Welles: Mama's Favorite" loading="lazy" decoding="async" /><span class="ed">B152</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/60a2f877-f004-43c0-a7a8-9e54258caf31.webp" alt="Jackie Welles: Mama's Favorite" loading="lazy" decoding="async" /><span class="ed r">152</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Jackie Welles: Mama's Favorite</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/abd75b6c-0205-4909-a990-237b4bed70e5.webp" alt="Padre: Man of the Cross" loading="lazy" decoding="async" /><span class="ed">B153</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/18c39784-9fb7-4d72-acd4-35eaff669cd6.webp" alt="Padre: Man of the Cross" loading="lazy" decoding="async" /><span class="ed r">153</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Padre: Man of the Cross</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/20c0d91e-76d5-4904-82e8-53907537aee3.webp" alt="Panam Palmer: Nomad Cavalry" loading="lazy" decoding="async" /><span class="ed">B154</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/4337408e-5b98-4860-88f1-5d8ce63cf136.webp" alt="Panam Palmer: Nomad Cavalry" loading="lazy" decoding="async" /><span class="ed r">154</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Panam Palmer: Nomad Cavalry</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/7a6a5336-2b6c-4d8a-b1f0-595a787255ce.webp" alt="Alt Cunningham: Soulkiller Architect" loading="lazy" decoding="async" /><span class="ed">B155</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/1d4ce13a-20de-4f4f-8145-0c8e9892f52c.webp" alt="Alt Cunningham: Soulkiller Architect" loading="lazy" decoding="async" /><span class="ed r">155</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Alt Cunningham: Soulkiller Architect</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/22fe9365-6f33-4aeb-b3a4-a78ab563cbe9.webp" alt="Evelyn Parker: Beautiful Enigma" loading="lazy" decoding="async" /><span class="ed">B156</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/56628f3e-fb9d-4e9f-a525-360b08118cfd.webp" alt="Evelyn Parker: Beautiful Enigma" loading="lazy" decoding="async" /><span class="ed r">156</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Evelyn Parker: Beautiful Enigma</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/0324e335-2f17-496c-9789-59f93ed6d31e.webp" alt="Judy Álvarez: Braindance Maestro" loading="lazy" decoding="async" /><span class="ed">B157</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/9c8b2cab-c07e-44e7-bcfd-277100688d17.webp" alt="Judy Álvarez: Braindance Maestro" loading="lazy" decoding="async" /><span class="ed r">157</span><span class="sub">Pandart Studio</span></figure></div><span class="ic-name">Judy Álvarez: Braindance Maestro</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/16e04a94-086a-4c20-b788-88ac016ec59b.webp" alt="Wakako Okada: Peace and Harmony" loading="lazy" decoding="async" /><span class="ed">B158</span><span class="sub">Pandart Studio</span></figure><figure><img class="card-art" src="../images/94a8e8c1-f953-4ca8-b124-99c7350663b4.webp" alt="Wakako Okada: Peace and Harmony" loading="lazy" decoding="async" /><span class="ed r">158</span><span class="sub">&mdash;</span></figure></div><span class="ic-name">Wakako Okada: Peace and Harmony</span></div>
+            </div>
+            <h3 class="ic-grp">Core Iconics: Units, Gear and Programs <span>9</span></h3>
+            <div class="ic-grid">
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/7b113940-7325-4304-b07a-61719b47a49c.webp" alt="Johnny Silverhand: Never Stop Fighting" loading="lazy" decoding="async" /><span class="ed">B159</span><span class="sub">Dardo Studios</span></figure><figure><img class="card-art" src="../images/41e87b8f-9d0a-4955-a9ec-d1f2fd49f532.webp" alt="Johnny Silverhand: Never Stop Fighting" loading="lazy" decoding="async" /><span class="ed r">159</span><span class="sub">Atomhawk</span></figure></div><span class="ic-name">Johnny Silverhand: Never Stop Fighting</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/59d1ce5c-d616-45d5-9816-576f5f1509f3.webp" alt="Adam Smasher: Metal Over Meat" loading="lazy" decoding="async" /><span class="ed">B160</span><span class="sub">Toni Infante</span></figure><figure><img class="card-art" src="../images/726b13d2-0d74-42db-a5e9-b8b852224a16.webp" alt="Adam Smasher: Metal Over Meat" loading="lazy" decoding="async" /><span class="ed r">160</span><span class="sub">Łukasz Poller</span></figure></div><span class="ic-name">Adam Smasher: Metal Over Meat</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/2e2c4d9d-516d-4fb2-a6ba-bee8dede71d3.webp" alt="Alt Cunningham: Mother of Daemons" loading="lazy" decoding="async" /><span class="ed">B161</span><span class="sub">Dardo Studios</span></figure><figure><img class="card-art" src="../images/7b20d318-5d0c-41fd-8a50-2b53b944e9bc.webp" alt="Alt Cunningham: Mother of Daemons" loading="lazy" decoding="async" /><span class="ed r">161</span><span class="sub">Łukasz Poller</span></figure></div><span class="ic-name">Alt Cunningham: Mother of Daemons</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/005dfb9e-7bdd-4cc1-ade2-08dd28ed5998.webp" alt="Hanako Arasaka: In a Gilded Cage" loading="lazy" decoding="async" /><span class="ed">B162</span><span class="sub">Dardo Studios</span></figure><figure><img class="card-art" src="../images/1a13a5a8-c1d4-4d36-88be-7a6e3cb78c90.webp" alt="Hanako Arasaka: In a Gilded Cage" loading="lazy" decoding="async" /><span class="ed r">162</span><span class="sub">Akram</span></figure></div><span class="ic-name">Hanako Arasaka: In a Gilded Cage</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/9a4fafb2-b27b-4b3e-9f57-502040898b0f.webp" alt="The Relic: Experimental Biochip" loading="lazy" decoding="async" /><span class="ed">B163</span><span class="sub">Mooncolony</span></figure><figure><img class="card-art" src="../images/12ff7ae7-9d19-42ec-af5d-45ea0b720d41.webp" alt="The Relic: Experimental Biochip" loading="lazy" decoding="async" /><span class="ed r">163</span><span class="sub">Łukasz Poller</span></figure></div><span class="ic-name">The Relic: Experimental Biochip</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/b1db8654-6197-4e80-9555-8917dcba6dc7.webp" alt="Sandayu Oda: Hanako's Guardian" loading="lazy" decoding="async" /><span class="ed">B164</span><span class="sub">Dardo Studios</span></figure><figure><img class="card-art" src="../images/6ceb8ace-8b73-4b12-ba75-ee867b936e5c.webp" alt="Sandayu Oda: Hanako's Guardian" loading="lazy" decoding="async" /><span class="ed r">164</span><span class="sub">Mooncolony</span></figure></div><span class="ic-name">Sandayu Oda: Hanako's Guardian</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43.webp" alt="Overwatch: Panam's Gift" loading="lazy" decoding="async" /><span class="ed">B165</span><span class="sub">Michal Ivan</span></figure><figure><img class="card-art" src="../images/768ac843-133b-4c01-b4d9-c1bc9c28470d.webp" alt="Overwatch: Panam's Gift" loading="lazy" decoding="async" /><span class="ed r">165</span><span class="sub">Dardo Studios</span></figure></div><span class="ic-name">Overwatch: Panam's Gift</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/807c871c-bebe-4343-9b68-1f89af5ed0da.webp" alt="Rogue Amendiares: Queen of the Afterlife" loading="lazy" decoding="async" /><span class="ed">B166</span><span class="sub">ADIA</span></figure><figure><img class="card-art" src="../images/9f251692-ea15-45d9-8fa3-5833453502c6.webp" alt="Rogue Amendiares: Queen of the Afterlife" loading="lazy" decoding="async" /><span class="ed r">166</span><span class="sub">Dardo Studios</span></figure></div><span class="ic-name">Rogue Amendiares: Queen of the Afterlife</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72.webp" alt="Towerfall" loading="lazy" decoding="async" /><span class="ed">B167</span><span class="sub">ADIA</span></figure><figure><img class="card-art" src="../images/b4ff8d51-99e1-4d6f-b8b7-c98d59283400.webp" alt="Towerfall" loading="lazy" decoding="async" /><span class="ed r">167</span><span class="sub">Mooncolony</span></figure></div><span class="ic-name">Towerfall</span></div>
+            </div>
+            <h3 class="ic-grp">Secret Iconics: the four Secret Rares <span>4</span></h3>
+            <div class="ic-grid">
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/4f8fbab4-7aad-4271-8dd6-8cdf68654c5e.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="ed">B168</span><span class="sub">Divebound Studio</span></figure><figure><img class="card-art" src="../images/cb12d8c4-64b1-4e53-898e-8fd46aeac6bf.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="ed r">168</span><span class="sub">Divebound Studio</span></figure></div><span class="ic-name">Johnny Silverhand: Rocking Renegade</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/146d6391-3b35-4e74-b270-cef69d8f2a91.webp" alt="Sasha Yakovleva: Won't Let You Down" loading="lazy" decoding="async" /><span class="ed">B169</span><span class="sub">Divebound Studio</span></figure><figure><img class="card-art" src="../images/307de3c6-6bbd-4e44-8dde-07f4fac45db0.webp" alt="Sasha Yakovleva: Won't Let You Down" loading="lazy" decoding="async" /><span class="ed r">169</span><span class="sub">Divebound Studio</span></figure></div><span class="ic-name">Sasha Yakovleva: Won't Let You Down</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/7d71aedf-dbb6-435f-bece-e522834db122.webp" alt="Panam Palmer: Strength Through Family" loading="lazy" decoding="async" /><span class="ed">B170</span><span class="sub">Divebound Studio</span></figure><figure><img class="card-art" src="../images/5632d773-b6c8-402d-a162-364767d3d21e.webp" alt="Panam Palmer: Strength Through Family" loading="lazy" decoding="async" /><span class="ed r">170</span><span class="sub">Divebound Studio</span></figure></div><span class="ic-name">Panam Palmer: Strength Through Family</span></div>
+              <div class="ic"><div class="ic-arts"><figure><img class="card-art" src="../images/2c0d6f48-0804-4d5f-83c2-f28367ce26d5.webp" alt="Judy Álvarez: Nothing to Doubt" loading="lazy" decoding="async" /><span class="ed">B171</span><span class="sub">Divebound Studio</span></figure><figure><img class="card-art" src="../images/fe26a4ff-1076-4371-8ab5-3f31d0319a3f.webp" alt="Judy Álvarez: Nothing to Doubt" loading="lazy" decoding="async" /><span class="ed r">171</span><span class="sub">Divebound Studio</span></figure></div><span class="ic-name">Judy Álvarez: Nothing to Doubt</span></div>
+            </div>
+          </div>
+        </details>
+        <p class="note">Prerelease kits come in Beta and Retail versions, each with six packs of its own edition.</p>
+      </section>
+
+      <section id="chase">
+        <h2><span class="num">05</span>Chasing one card</h2>
+        <p>The rates above are for any card of a rarity. One specific card is much harder. Pick a rarity and how many boxes you'll open.</p>
+        <div class="calc" id="calc">
+          <div class="crow"><span class="lab">Rarity</span>
+            <button type="button" class="seg" data-r="Rare" aria-pressed="false">Rare</button>
+            <button type="button" class="seg" data-r="Epic" aria-pressed="true">Epic</button>
+            <button type="button" class="seg" data-r="Secret" aria-pressed="false">Secret</button>
+            <button type="button" class="seg" data-r="Iconic" aria-pressed="false">Iconic</button>
+          </div>
+          <div class="crow"><span class="lab">Box</span>
+            <button type="button" class="seg" data-e="36" aria-pressed="true">Beta &middot; 36 packs</button>
+            <button type="button" class="seg" data-e="24" aria-pressed="false">Retail &middot; 24 packs</button>
+          </div>
+          <div class="crow"><span class="lab">Boxes</span>
+            <div class="stepper"><button type="button" id="dec" aria-label="Fewer boxes">&minus;</button><output id="n" aria-live="polite">1</output><button type="button" id="inc" aria-label="More boxes">+</button></div>
+          </div>
+          <div class="result" aria-live="polite">
+            <div class="big"><b id="pAny">53%</b><span>chance of at least one copy</span></div>
+            <div class="big"><b id="pExp">0.75</b><span>copies you'd expect</span></div>
+            <div class="big"><b id="pPack">2.1%</b><span>chance per pack</span></div>
+          </div>
+        </div>
+        <p class="note">Estimates from WeirdCo's rates, assuming every card of a rarity is equally likely. Iconic means one specific Iconic from your box's edition.</p>
+      </section>
+
+      <section id="nova">
+        <h2><span class="num">06</span>Nova Rares</h2>
+        <p>Nova Rares never come from booster packs. They're special printings given out as box toppers, prerelease promos, event prizes and convention promos. All but one are versions of cards you can already play from the set or the starter decks. The exception is <strong>Rebecca: Having a Moment</strong>, which only exists as a promo.</p>
+
+        <figure class="post-fig">
+          <div class="fig-label"><span>Fig. 4 &middot; One card, three rarities</span><span>Johnny Silverhand</span></div>
+          <div class="path">
+            <figure><img class="card-art" src="../images/a8a7d286-0c66-4f01-aca7-45570474d9e4.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-secret-rare"></span>Secret Rare</span><span class="sub">Secret Rare &middot; 003</span></figure>
+            <span class="arr" aria-hidden="true"></span>
+            <figure><img class="card-art" src="../images/cb12d8c4-64b1-4e53-898e-8fd46aeac6bf.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-iconic-rare"></span>Iconic Rare</span><span class="sub">Retail Iconic &middot; 168</span></figure>
+            <span class="arr" aria-hidden="true"></span>
+            <figure><img class="card-art" src="../images/b6f81fe8-d0ed-4dcb-b025-058559d0cf98.webp" alt="Johnny Silverhand: Rocking Renegade" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-nova-rare"></span>Nova Rare</span><span class="sub">Edgerunner Open S1</span></figure>
+          </div>
+          <figcaption>The Edgerunner Open Nova Rare reuses the Retail Iconic painting and adds a 00/99 serial box.</figcaption>
+        </figure>
+
+        <div class="table-scroll">
+          <table class="readout num-cells">
+            <thead><tr><th>Source</th><th>Nova Rares</th><th>What they are</th></tr></thead>
+            <tbody>
+              <tr><td>Edgerunner Open S1</td><td>53</td><td>Event promos</td></tr>
+              <tr><td>Night City Brawl S1</td><td>37</td><td>Weekly event prizes</td></tr>
+              <tr><td>Box toppers</td><td>6</td><td>The six starter-deck Legends, in both Beta and Retail versions</td></tr>
+              <tr><td>Night City Showdown S1</td><td>5</td><td>Event promos</td></tr>
+              <tr><td>Set 1 promos</td><td>4</td><td>Rebecca (two arts), Misty Olszewski, Adam Smasher</td></tr>
+              <tr><td>Prerelease</td><td>2</td><td>Mantis Blades (Beta kit), Gorilla Arms (Retail kit)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="post-fig">
+          <div class="fig-label"><span>Fig. 5 &middot; Box toppers</span><span>Nova Rare</span></div>
+          <div class="trio">
+            <figure><img class="card-art" src="../images/dc7bb3cf-1005-4584-ad7a-447f0ccf07bf.webp" alt="Yorinobu Arasaka: Embracing Destruction" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-nova-rare"></span>Nova Rare</span></figure>
+            <figure><img class="card-art" src="../images/1b6e44dd-d6e7-46eb-a5e5-24c38eed888b.webp" alt="Goro Takemura: Hands Unclean" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-nova-rare"></span>Nova Rare</span></figure>
+            <figure><img class="card-art" src="../images/e4e17d32-3ec4-4c74-927c-fd0911b86e72.webp" alt="Jackie Welles: Pour One Out For Me" loading="lazy" decoding="async" /><span class="cap"><span class="rarity-icon rarity-icon-nova-rare"></span>Nova Rare</span></figure>
+          </div>
+          <figcaption>Three of the six box toppers, all Legends from the Embracing Power and The Heist starter decks.</figcaption>
+        </figure>
+      </section>
+
+      <p class="post-sources">Sources: WeirdCo's <a href="https://www.kickstarter.com/projects/cyberpunktcg/the-official-cyberpunk-trading-card-game/posts/4656837" target="_blank" rel="noopener">Kickstarter Update #25</a> for set size, pack layout, pull rates and Beta vs Retail. Card numbers, artists and Nova Rare counts are from the card database behind cyberpunktcg.com (English printings, 2 Nov 2026).</p>
+
+      <div class="post-end">
+        <a class="cta" href="./">&larr; All posts</a>
+        <a class="cta primary" href="../collection.html">My collection</a>
+      </div>
+    </article>
+    </div>
+    <aside class="post-toc" id="post-toc" aria-label="On this page"></aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="build-info" id="build-info"></div>
+    <div class="legal">Eddies is an unofficial fan project, not affiliated with CD PROJEKT RED or Weird Co. Card names and art belong to their owners.</div>
+  </footer>
+
+  <script src="../config.js"></script>
+  <script src="../shared.js?v=20261018"></script>
+  <script src="../blog-post.js?v=20261012"></script>
+<script>
+// "Chasing one card" calculator. Per-pack chance of one specific card:
+// its rarity's per-pack rate (WeirdCo, Update #25) split evenly over the
+// cards of that rarity. Rare = the two hit slots minus the higher hits.
+(function () {
+  var P = {
+    Rare: (2 - 1 / 4 - 1 / 18 - 1 / 24) / 32,
+    Epic: (1 / 4) / 12,
+    Secret: (1 / 24) / 4,
+    Iconic: (1 / 18) / 31
+  };
+  var rarity = 'Epic', packs = 36, boxes = 1;
+  function pct(x) { x *= 100; if (x >= 99.5) return '>99%'; return (x < 1 ? x.toFixed(2) : x < 10 ? x.toFixed(1) : Math.round(x)) + '%'; }
+  function update() {
+    var p = P[rarity], k = packs * boxes;
+    document.getElementById('n').textContent = boxes;
+    document.getElementById('pAny').textContent = pct(1 - Math.pow(1 - p, k));
+    document.getElementById('pExp').textContent = (p * k).toFixed(2);
+    document.getElementById('pPack').textContent = pct(p);
+  }
+  function group(attr, set) {
+    var btns = document.querySelectorAll('#calc .seg[' + attr + ']');
+    btns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        set(b.getAttribute(attr));
+        btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+        update();
+      });
+    });
+  }
+  group('data-r', function (v) { rarity = v; });
+  group('data-e', function (v) { packs = +v; });
+  document.getElementById('dec').addEventListener('click', function () { if (boxes > 1) { boxes--; update(); } });
+  document.getElementById('inc').addEventListener('click', function () { if (boxes < 10) { boxes++; update(); } });
+  update();
+})();
+
+// "Rip a pack" (Fig. 2): 7 Commons, 3 Uncommons and 2 hit slots, drawn from the
+// chosen edition's real printings. WeirdCo's per-pack rates are spread over the
+// two hit slots (Epic 1 in 4 packs -> 1 in 8 per slot, etc.); anything else is a
+// Rare. A God Pack is 12 different Iconic Rares instead (as in opened God Packs
+// players have posted); its rate is a guess - WeirdCo hasn't published one.
+(function () {
+  var POOLS = {"beta":{"C":[["fa9d3c0c-5634-42a1-a665-9173c045fa30","Japantown Jonin"],["23cfc17c-3fab-475b-9a1a-838b98e09bb8","Ruthless Lowlife"],["1b182145-b318-4b10-85e2-fdbf5afdf3c0","Swordwise Huscle"],["8d236321-e94e-41b1-8cb9-c2a533afc112","Valentino Guerrera"],["14e20948-a74b-4a27-a156-d34d8cfb98cc","6th Street Recruits"],["d6dd0114-fdd5-452a-b752-3e58a2e137f5","Chrome Fang"],["c614fc55-c071-456f-a5c3-7274e0073b0c","Screw: Lovelorn Fool"],["81364914-7121-43fc-9610-f2f9736866d1","Animals Wrecker"],["3b8c035e-161d-4a84-bdc8-f76899e8244f","Octant"],["84278f23-7323-47d2-b639-23edd76f87ae","Mantis Blades"],["7ff6a088-1720-45b6-a3cf-30709415df5e","Arasaka Emergency Radioport"],["27a2fceb-5c37-4cfa-8efb-1e4618d22401","All is Lost"],["0ecf513b-64fd-4932-a004-b02b43b21e88","Detonate"],["6213bf57-92d7-4a64-8d80-948ba53b8d80","Over the Edge"],["171b21b1-90d0-4d3b-a060-740c413b7bf2","Carnage at the Colosseum"],["6a8e2aae-694a-43ea-8e3a-0482046a90c5","Secondhand Bombus"],["78b601e2-3dd5-4802-b0e2-5258a4a63363","Sketchy Ripper"],["28973c43-529c-487e-aa05-ac99280d66c3","Augmented Negotiators"],["42236397-716c-422c-8868-9f33dd33b089","Maelstrom Goons"],["cbbcb49e-6c6f-436c-91cf-e9716f6a30af","Gilded Matón"],["37066158-f899-42c6-abd7-4dcd882a75cd","Offduty Malfini"],["03849cd8-c3d8-4741-ae9e-d85cd9bb488d","MaxTac Suppression Team"],["58cffb40-0914-4c6b-81cf-cdd8b2b83f17","Rockn' Rockerboy"],["df879b77-ca97-4e3d-8879-ecd73ceebf21","Trauma Team Operatives"],["d35720e4-f307-4732-ae3d-8f47f1351549","Kiroshi Optics"],["dc0a7e03-54b6-4334-965f-27a3d469fed6","Mandibular Upgrade"],["ccb79cf1-fc2d-4b52-bea5-b427583bfe1b","Adrenaline Converter"],["73b6b3d3-6a7f-44ed-a267-add6ae389b5a","Gorilla Arms"],["5adb7a6a-de7b-4f00-9d5a-2cccfaf4f19d","Afterparty at Lizzie's"],["af696a54-97bf-475b-b721-9a8bb86227a0","Safety Override"],["b2d6aeff-8fa3-4151-9e67-a83188a78197","Live with the Aftermath"],["19737e35-546d-406f-af5f-2fe6865cdd93","Corpo Security"],["4b7d734b-5cc2-4c57-9bcf-7e3b5a0f1f9f","Tyger's Whisper"],["b4a1d2af-4ee4-4ec4-8a5b-eaec9cb3211a","Emergency Atlus"],["62d99053-43eb-4eba-9bf4-9d7c298d03ab","Field Operator"],["f52caed9-3415-4027-a448-2c38b045553b","MaxTac Squadron"],["c828bc68-23a3-41ef-878b-00b13ccf0cdc","Valentino Street Racer"],["ce3770f6-0fa7-41f4-af5f-eacce5846c98","Maelstrom Zealots"],["5131f2e5-fe1b-4a49-b0ba-b85d04c9cd1b","Pacifica Netrunner"],["27c1bf13-5f6b-4421-aa76-5789a94c9c1b","MaxTac AV"],["29b3036d-306a-485f-af6c-b08fb5b912ac","Riding Nomad"],["36735ea2-1489-4e7a-810f-20dab24d503b","Zetatech Berserk"],["2cff513f-6a75-40f0-8e70-e1491d340472","Peace Offering"],["bc78db9f-337e-437e-b247-f1aa798c48d0","Wild in the Streets"],["f18a73a9-fa29-4351-ad96-8e7c1dd0e8a1","Jacked-In Voodoo Boy"],["859345fa-c791-49dc-9258-505982b5adea","Mox Inciters"],["cddf9659-8ba5-4718-827f-5a6518e7df83","Delamain Cab"],["a105464f-997f-4f2b-97dd-3a4f461f0a59","Hacked Corpo"],["61118bbb-c1f6-4b1d-8d46-4f33f0a135b1","Psycho Squad"],["6b5606c9-12a2-46d6-b13f-a672c6bd5f07","Rita Wheeler: No Stupid Questions"],["1e2413a0-aa80-4883-806a-d8e9ed32bbca","Westbrook Netrunner"],["2b247956-465f-4b39-8091-a95c90bc8b70","Modded Muramasa"],["ee22b73e-8b14-4225-9c86-428cfada892f","Modded Kusanagi"],["74eb81ab-aa0a-4b09-8cfe-94dddd70f4b1","Tetratronic Rippler"],["859c8d1d-b715-4a9a-b7cc-96ecfe135a00","Floor It"],["f9a81013-9c64-4e48-8d1d-cd1b41b72ee0","Trust No One"],["06570cd2-25fc-4c5e-86e1-cba8000edc97","Reboot Optics"],["0449bc78-983b-4681-b062-0738de3c487b","Three Mouths, One Desire"],["0be394e3-ce41-4f16-a95b-33ec951bf43c","Chrome Reverie"],["54575eba-9d21-43fe-b6df-7cd2564dd37b","Unlikely Bond"]],"U":[["91e553d4-ac26-4135-bcd9-9fc2661d3e90","La Llorona: Ghost of the Past"],["1a986e5a-fe97-408c-81e9-b675c64bdcf9","Kerry Eurodyne: The Last Rockerboy"],["a4276d5e-cdf1-42cb-a6c3-8722d8c7c595","Royce: Don't Call Me Simon"],["b12e1665-bf29-4b2c-b92d-865cff227a67","Satori: Sword of Saburo"],["e53bdb8b-5b1f-4f31-ad74-a43a4925c2d1","Deadman Transmitter"],["161bfaaf-ec85-4142-8538-f5faf9181267","Industrial Assembly"],["d2aed299-7c88-484a-aa8a-e2e2f09bf8a8","Appetite for Destruction"],["2ca6ae1f-b10c-439d-a929-cd82c3b1158c","Bonnie and Clyde"],["e3d061b0-fb02-481d-8afa-f4b5bce4ed39","Gunpoint Diplomacy"],["e3005cf1-4dbc-4f4e-922b-af81d6086015","Viktor Vektor: You Might Feel a Little Pinch"],["f3ca6b06-28da-42be-8526-743f22dc56b3","T-Bug: Amateur Philosopher"],["2a6b5b50-b007-40f4-bbdc-90f6bdc3761a","Heywood Ripperdoc"],["25077971-70cc-4524-b7cf-cd8258abc28c","Zetatech Faceplate"],["709ec425-eda5-4621-b907-94a507a20351","The Heist"],["b3329aae-77de-4c61-b400-114f51bbae5a","Cyberpsychosis"],["20c23b0f-187d-41d8-9670-b8e603049b3d","Bootleg Black Sapphire Show"],["786d5ce2-bfc0-4648-9c7d-323e939a1d34","Pepe Najarro: Working Doubles"],["89c5ec5e-dcc1-4ce4-970d-28b0226272b1","Wraith Marauders"],["8cb7b93c-e281-4d94-a4b0-bb0cb5d0fa16","Nadia: Fighting Through Grief"],["0f60c84e-e84f-49a3-b913-0039d8262371","MaxTac Heavy"],["fa711a0e-06bb-429b-a43a-89c50fb9d590","Riot Shield"],["f0de2baf-27a9-426e-89cf-68abaceec507","Sandevistan"],["535cec6e-269d-4c2d-860c-5c8eff999c21","Synapse Burnout"],["539138ff-af5a-47e3-abf0-cc772eaa8b9e","Corporate Surveillance"],["a7a49ccf-4b85-4997-b08c-16e8e80d9aa8","Take Control"],["7a8c2032-e753-43ab-9c3b-adefb4281241","Memory Relapse"],["3488c7f7-c797-4c3a-8d49-e5cdcf0e8d74","We Gotta Live Together"],["c40f0461-c757-4e09-94cc-27ed31f08dd7","Evelyn Parker: Scheming Siren"],["32f8d89a-1e4b-46b8-9323-77c297c5b5ae","Delamain: Rideshare AI"],["220bef49-2e98-4bc6-b023-5bb8f492b29b","Maman Brigitte: Spirit of Death"],["e2a34251-d2d9-46e0-9840-ca69a358a6ae","NetWatch Netdriver"],["7e86c639-5225-4a91-be33-6ab86c9adfe2","Les Élémens"]],"R":[["79119e83-b50b-4a79-8a6c-f496d9ed7ef6","V: Streetkid"],["e6dbfd52-85c5-4fd4-a77c-ca829e827d8a","V: Streetkid"],["0e4966a2-e5cf-4acd-905a-750e9c4cefff","Royce: Psycho on the Edge"],["f4ff466c-22ad-4c50-9f4c-29933e51f739","Dexter DeShawn: Off the Grid"],["96e76b12-4e53-4e2c-aca3-3fedf6f21e18","Meredith Stout: Stone Cold Corpo"],["c180e174-f1b6-4b9c-b2c8-db0551ae49d2","El Sombrerón: La Venganza Lenta"],["19ef8a11-606b-44f3-b20e-08800c9d6cc2","Yorinobu Arasaka: Steel Dragon"],["80735f9a-6c20-4d24-9138-b3c0d2e6bf46","Shattered Memories"],["dd2f97c2-5ea6-4564-8b39-4f21ad0a7885","Rogue Amendiares: Preem Solo"],["33cfbdb0-a169-458a-86dc-9123697654d7","Dum Dum: Maelstrom Triggerman"],["0557c333-1700-439d-bb85-dfec8d578ded","Kerry Eurodyne: Axe, Attitude, Audience"],["3d1e6590-5cdc-4605-8b61-915f21f5514d","Muamar Reyes: El Capitán"],["b217ae88-52a6-44b3-b021-964db4534dbd","River Ward: Detective on the Hunt"],["ab6fab2a-8101-4bc7-8f5d-b55adf09bc4c","Hanako Arasaka: In a Gilded Cage"],["20cd09ad-b0c6-4ffe-9036-04ff24d8fe59","Caliber: Totentanz's Top Dog"],["3d3e0e55-fa7a-40ba-bf30-0204cca88612","Alt Cunningham: Mother of Daemons"],["c1f9ae1a-841f-431f-919a-429de14be070","Jackie Welles: Mama's Favorite"],["5f3c905b-0834-46a2-be33-ea46e59d4c7f","Goro Takemura: Vengeful Bodyguard"],["1435b785-967e-48a7-8ef7-f7fecbb27aaf","Hanako Arasaka: Daughter of the Emperor"],["e1f5dc01-9e96-4102-af3f-07ad31f5db15","Padre: Man of the Cross"],["28cf40e2-f83a-47f4-9c4d-c0b5157e84e6","Sandayu Oda: Hanako's Guardian"],["ce429abf-a099-48bf-a158-e32adc73b42e","Saul Bright: Stormrider"],["04511c2f-c766-4d1a-9176-66f913789667","Fool on the Hill"],["1f173d96-9ca1-4298-b479-71f06ee1f558","(Don't Fear) The Reaper"],["873656f0-c32a-46fb-856f-8a5ee44b8d21","Alt Cunningham: Soulkiller Architect"],["080b22ac-9c3d-48ee-ad4f-4e9579f22adc","Evelyn Parker: Beautiful Enigma"],["33ee09a3-4591-4302-9052-6dd5130861c6","Wakako Okada: Peace and Harmony"],["e4a8b8fc-fbc7-41ce-9f89-7538690b9c62","Misty Olszewski: Mender of Broken Spirits"],["929b5e98-ab82-4e36-bb72-a00a223ded77","Lizzy Wizzy: Delicate Weapon"],["0ff059f8-90c3-47ef-ba3b-cd380f30f14e","Placide: Voodoo Sentinel"],["3ceebded-0941-477f-b486-f2cb22ca653d","Dying Night: V's Pistol"],["dfd5d1df-2b47-4ddd-9d6a-35430a892cfc","Nocturne OP55 N1"],["bab79ef1-57fb-4b24-b50a-e08899699862","Pyramid Song"]],"E":[["4d75c13e-bde2-409b-8bcc-516e054f28f5","Adam Smasher: Ender of Legends"],["b460b92c-c0fd-43ed-84db-8615032e47f4","V: Roamer of the Badlands"],["975957a0-9c72-4a67-8260-f86c1c70bfb5","Johnny Silverhand: Never Stop Fighting"],["ade4a2d5-df74-44fe-ab5f-222dc6e2ce27","Viktor Vektor: Drop Your Illusions"],["93f68b18-e15c-44be-883b-8db7990646f1","Jackie Welles: Ride or Die Choom"],["fdb7a7c3-350e-49ea-8a9e-8477ce6c657a","Adam Smasher: Metal Over Meat"],["a55809aa-170d-42b4-8768-f0b873fd0dc4","The Relic: Experimental Biochip"],["2cfe57a5-cafe-4611-90fd-c72f33250933","Panam Palmer: Nomad Cavalry"],["0f825d0d-be91-4f42-9e97-5d87488ee2fc","Overwatch: Panam's Gift"],["d74468ab-6024-4ae6-b69a-ac41f6e9cfce","Judy Álvarez: Braindance Maestro"],["4abedde2-f9db-4451-a2ab-fc7f594ea132","Rogue Amendiares: Queen of the Afterlife"],["25508f49-7256-47be-bc95-c420c7105c62","Towerfall"]],"S":[["1159e69c-614f-4a8e-be76-d69ee734bd22","Johnny Silverhand: Rocking Renegade"],["544f8db8-02af-44e5-992e-170f51ffca37","Panam Palmer: Strength Through Family"],["fa80313c-9aeb-4ae8-ad81-35b3f45fcbfe","Sasha Yakovleva: Won't Let You Down"],["98b18e2d-a955-43c7-880c-6233166c673a","Judy Álvarez: Nothing to Doubt"]],"I":[["20debd66-ff1c-42c3-9869-928cba33ccb5","V: Streetkid"],["f712b214-b109-4e69-bc74-4991905024f7","Royce: Psycho on the Edge"],["74c794ed-2ca7-4318-bcdd-8e3fe5a11f4e","Adam Smasher: Ender of Legends"],["9d04877f-050d-485d-9447-1bef7ee6ed40","Dexter DeShawn: Off the Grid"],["4f8fbab4-7aad-4271-8dd6-8cdf68654c5e","Johnny Silverhand: Rocking Renegade"],["7b113940-7325-4304-b07a-61719b47a49c","Johnny Silverhand: Never Stop Fighting"],["6b75ec33-da55-46c7-a88c-f0fb89263253","Rogue Amendiares: Preem Solo"],["b3b78f89-424e-41b6-9fa9-aea256568dcc","Dum Dum: Maelstrom Triggerman"],["5ade304e-8e0e-4484-944a-18d8d08caf9f","Kerry Eurodyne: Axe, Attitude, Audience"],["2e06439f-fab6-4a65-a1fc-e5f4afc84eb0","Muamar Reyes: El Capitán"],["e59b67b3-a388-4228-94a3-84ee12e68937","River Ward: Detective on the Hunt"],["005dfb9e-7bdd-4cc1-ade2-08dd28ed5998","Hanako Arasaka: In a Gilded Cage"],["2e2c4d9d-516d-4fb2-a6ba-bee8dede71d3","Alt Cunningham: Mother of Daemons"],["59d1ce5c-d616-45d5-9816-576f5f1509f3","Adam Smasher: Metal Over Meat"],["9a4fafb2-b27b-4b3e-9f57-502040898b0f","The Relic: Experimental Biochip"],["aadd8dc4-bb37-4901-8200-39b8904268a8","Jackie Welles: Mama's Favorite"],["af82881d-9e19-46b3-a723-a2ef224687d8","Goro Takemura: Vengeful Bodyguard"],["cc3ed2c4-6e6d-47aa-b358-152c56b24bad","Hanako Arasaka: Daughter of the Emperor"],["abd75b6c-0205-4909-a990-237b4bed70e5","Padre: Man of the Cross"],["20c0d91e-76d5-4904-82e8-53907537aee3","Panam Palmer: Nomad Cavalry"],["7d71aedf-dbb6-435f-bece-e522834db122","Panam Palmer: Strength Through Family"],["b1db8654-6197-4e80-9555-8917dcba6dc7","Sandayu Oda: Hanako's Guardian"],["775e7d6b-b9d9-48cf-a34d-00ba2b1c0a43","Overwatch: Panam's Gift"],["146d6391-3b35-4e74-b270-cef69d8f2a91","Sasha Yakovleva: Won't Let You Down"],["7a6a5336-2b6c-4d8a-b1f0-595a787255ce","Alt Cunningham: Soulkiller Architect"],["22fe9365-6f33-4aeb-b3a4-a78ab563cbe9","Evelyn Parker: Beautiful Enigma"],["0324e335-2f17-496c-9789-59f93ed6d31e","Judy Álvarez: Braindance Maestro"],["16e04a94-086a-4c20-b788-88ac016ec59b","Wakako Okada: Peace and Harmony"],["807c871c-bebe-4343-9b68-1f89af5ed0da","Rogue Amendiares: Queen of the Afterlife"],["2c0d6f48-0804-4d5f-83c2-f28367ce26d5","Judy Álvarez: Nothing to Doubt"],["4d8a1ccb-6d46-45b1-839a-fd3b7fa84b72","Towerfall"]]},"retail":{"C":[["30619097-d9d7-42fe-bf4c-cd4ae822792d","Japantown Jonin"],["e1b674d0-4ac7-4523-be19-809308871d49","Ruthless Lowlife"],["1c053198-187e-49ab-a9e0-0661b4c3b337","Swordwise Huscle"],["67b82386-5cb0-4ae7-b940-ac0d982b773c","Valentino Guerrera"],["756f3e53-9ff3-4c01-9f33-bb27a1cd5957","6th Street Recruits"],["40db55a6-0220-4cb9-8854-0e23f7cb91f8","Chrome Fang"],["a7117b0f-74ab-44b5-87fb-de267d0f2164","Screw: Lovelorn Fool"],["7514dd38-6e2d-43dd-9715-6b3a32615382","Animals Wrecker"],["089df0e6-0000-4e6c-b6d3-d9119466b624","Octant"],["7ffa8ba4-f187-4ba0-a719-fa8ebf45a03b","Mantis Blades"],["d2da65d5-fdaf-44f4-a692-a5672d2c1cca","Arasaka Emergency Radioport"],["d1a3c0e0-e0e7-418d-afb4-e6e43400c42e","All is Lost"],["bec995b7-b76b-4605-9c36-3d7697cdd4f5","Detonate"],["f1cf4133-45ef-4de5-abfc-757de1613731","Over the Edge"],["36128749-4cb1-440d-b4de-4fd463cc2f5c","Carnage at the Colosseum"],["fcbb6d58-6666-4bd3-8ff0-64930fb0f422","Secondhand Bombus"],["12f0398c-bcc3-4944-af72-ac2ae9f36761","Sketchy Ripper"],["a195323a-e29e-4c05-8e6c-7f1638c8264c","Augmented Negotiators"],["e14bdd12-1214-4104-bfdd-ae023c21527c","Maelstrom Goons"],["846b55b4-5e12-44b6-a204-53bd8c862888","Gilded Matón"],["fbefb447-34a3-4d53-9b23-d1bf141f8eec","Offduty Malfini"],["47f55164-e5da-494e-9d55-02bd0b7f97c1","MaxTac Suppression Team"],["07aaea5c-5aef-466e-956a-2e68930669c0","Rockn' Rockerboy"],["0d6c1f36-628b-4631-a96d-2000f6fb054e","Trauma Team Operatives"],["ec3368a9-79f1-4dfc-9cf7-1cb464ec1c88","Kiroshi Optics"],["219b7a29-0f8b-4750-bc46-0f39eec6721b","Mandibular Upgrade"],["535df2a9-d2af-463c-85dd-dafe67cab8fb","Adrenaline Converter"],["e1959b9e-d32d-43be-94c3-a595809e0c28","Gorilla Arms"],["d53925ee-df55-4b71-8ca0-13ec3ede2076","Afterparty at Lizzie's"],["5d987aa8-baed-45b2-986c-a21e04a53331","Safety Override"],["f931c82e-a382-4f60-808c-5910ac9850be","Live with the Aftermath"],["80dcc139-d31d-4b89-86ff-cdbdd2664953","Corpo Security"],["28267ce7-17dc-42c4-b8c4-4235a7f3c3df","Tyger's Whisper"],["9c18b6ae-765d-4244-8de4-e382c4767de1","Emergency Atlus"],["876dfa5c-6df4-4930-b284-f2c466e6b90c","Field Operator"],["22b276f4-7cf6-4b14-a220-8368a0839287","MaxTac Squadron"],["dc15db71-3443-4de0-b988-c62601bae5e1","Valentino Street Racer"],["43e5568f-a609-4eff-8502-e81ba9134d2c","Maelstrom Zealots"],["b43f5006-7388-4189-81ff-343b5428305b","Pacifica Netrunner"],["f1fa787d-e936-42a8-b42f-14999e722793","MaxTac AV"],["1ee3ba07-86b0-4309-be55-4b4698f700b8","Riding Nomad"],["8b8bcfcd-37c8-4bca-8c25-17a3b3363349","Zetatech Berserk"],["8570122a-52aa-4a6b-8d72-4c8848df0f9b","Peace Offering"],["54f0308f-8fb2-4861-a414-c15ca24426c3","Wild in the Streets"],["8e2f2d0c-0e92-4744-a510-a9c7ac371d81","Jacked-In Voodoo Boy"],["354fd7d3-070d-4767-989c-5b3efbd9f30d","Mox Inciters"],["5b9cdefa-29f4-4a3a-a426-eea46302ef60","Delamain Cab"],["7dc71978-0995-4b93-9ba3-83d1118c3c4b","Hacked Corpo"],["d7e0e2e5-6e22-4b45-9e91-50936773e2e1","Psycho Squad"],["5d795b32-9ad8-4c94-abd4-d01e389db389","Rita Wheeler: No Stupid Questions"],["5801d086-7e87-4645-95e2-68239230098d","Westbrook Netrunner"],["3bd6767b-ef0c-47dd-9f47-d00112a74111","Modded Muramasa"],["50e8101a-3d0e-45ea-9444-22007f7f9cb0","Modded Kusanagi"],["576f82ff-3c4d-4637-aa91-2773de43bbc8","Tetratronic Rippler"],["91f9d30c-f74d-4be4-8505-52f05d309c92","Floor It"],["70a2a18e-05c2-4a49-9236-e33b2c9819a5","Trust No One"],["fb096d3f-48eb-47c0-a065-81b39691e12f","Reboot Optics"],["573a88e9-ac01-4402-8e3d-2420dc4ca949","Three Mouths, One Desire"],["3f0319b8-e315-4e71-85b7-147a5b8ceba5","Chrome Reverie"],["b21f86a3-cb77-44a3-bf94-4c5e068ac2c8","Unlikely Bond"]],"U":[["e3d1d8a0-1d53-4c85-84ca-66439fd3639a","La Llorona: Ghost of the Past"],["c26c7db6-f540-4073-ab33-b09335631764","Kerry Eurodyne: The Last Rockerboy"],["b749ce16-1b44-47d8-bce4-4fd373007a5c","Royce: Don't Call Me Simon"],["11a8fed4-5401-4cfc-901b-ab9b5b94d0ab","Satori: Sword of Saburo"],["32957075-42ff-47e3-8252-e78877ef61f7","Deadman Transmitter"],["9103b5db-bf95-4385-8941-308cb0353c9a","Industrial Assembly"],["f274789d-69f2-4acf-a511-f728c67d1a13","Appetite for Destruction"],["26d60270-1b43-4af3-a8b7-1c3db9675cfa","Bonnie and Clyde"],["efc5dfdd-f393-4bbe-a7bc-ac959ba1e6bc","Gunpoint Diplomacy"],["4eca7fcd-85c1-43d0-8a07-4227312ab0db","Viktor Vektor: You Might Feel a Little Pinch"],["e2e3d98d-0159-4a79-b543-e37264f23118","T-Bug: Amateur Philosopher"],["2fc5ac93-dae5-4af5-a813-77abc0cc8dfd","Heywood Ripperdoc"],["79cdc9a5-d94d-4df4-9f88-aa02fb0357b3","Zetatech Faceplate"],["a1e2c25e-fb27-458f-984d-df422f879664","The Heist"],["5aafe80b-7c7d-4060-8677-a2881a21dd72","Cyberpsychosis"],["decc76ed-f5ed-4f02-90d7-e01e2a3975e0","Bootleg Black Sapphire Show"],["0de81196-f1d3-4fd0-ae6a-062dae3f3f2c","Pepe Najarro: Working Doubles"],["0944037e-5b14-4332-b345-7935924c2125","Wraith Marauders"],["4bab255b-763a-4762-b5e2-430316526b8a","Nadia: Fighting Through Grief"],["060f0c56-cbb7-45fd-a0cd-9c7b9d0f8103","MaxTac Heavy"],["ce570725-0de7-438a-a9c8-33074a7180ba","Riot Shield"],["97de62e2-3fea-4324-8367-87d1f1d674ed","Sandevistan"],["4277845b-1209-46df-8353-8fd36f56148a","Synapse Burnout"],["d3dc7194-a545-4588-9702-b094c27ce359","Corporate Surveillance"],["bc1401d4-5b9b-495a-853e-0a22a11f6f4c","Take Control"],["ef9f2959-de87-4a54-be45-5c9dcc507aba","Memory Relapse"],["63821536-cdf5-4347-812a-0bf72d727596","We Gotta Live Together"],["7d174619-2183-4058-a89a-082c6b7b5a5c","Evelyn Parker: Scheming Siren"],["c7eba3a0-63cb-4311-988e-d487a7c0841a","Delamain: Rideshare AI"],["8a7131eb-e1dd-46d6-84f6-2de315aee975","Maman Brigitte: Spirit of Death"],["07f119d6-8fb2-4b23-9862-818a7e941010","NetWatch Netdriver"],["14a0b813-d5e3-46e6-a001-aebbd3a95f11","Les Élémens"]],"R":[["3fc63c58-5954-4744-a5af-047bfc5cb159","V: Streetkid"],["c2d0e2a7-470f-4498-b6d5-5df1e3ecc3ef","V: Streetkid"],["3e2e228b-dbfb-484b-b82d-6972ff184aab","Royce: Psycho on the Edge"],["9a298f42-3a9f-4510-b2fd-9cf1b34ade27","Dexter DeShawn: Off the Grid"],["5939771d-bdcc-4b42-aea4-376311189e93","Meredith Stout: Stone Cold Corpo"],["94180516-28a6-4f5c-b79e-de38a95ed47b","El Sombrerón: La Venganza Lenta"],["c057ccc4-bb15-4efd-8115-8d223568134b","Yorinobu Arasaka: Steel Dragon"],["3401c7cf-45c5-4fe4-a883-284a9334262d","Shattered Memories"],["2dd7547d-5098-4082-a98b-f39a583a222f","Rogue Amendiares: Preem Solo"],["aaac486c-dbfd-4137-b373-24a2df29522c","Dum Dum: Maelstrom Triggerman"],["e54e06c0-3f9c-412a-8dea-942eebecd687","Kerry Eurodyne: Axe, Attitude, Audience"],["dbbf4a6c-340d-4356-81ad-776940a7ee32","Muamar Reyes: El Capitán"],["b3895f75-e147-49b0-a6d8-6fb35b356b2e","River Ward: Detective on the Hunt"],["7386d22f-1065-4043-a6c4-9cee6256fe8a","Hanako Arasaka: In a Gilded Cage"],["4b5dc479-0db1-46dd-859f-e7dc34d50f03","Caliber: Totentanz's Top Dog"],["e782dd02-a136-4bf8-b04b-328c65b84f19","Alt Cunningham: Mother of Daemons"],["9f61ebda-53fd-4b23-8383-d0e0bd32b847","Jackie Welles: Mama's Favorite"],["0f6e52f0-511f-4ae9-a380-5e718b26e58a","Goro Takemura: Vengeful Bodyguard"],["2c4a77e8-0fda-4ec1-9519-1d15e0f172b3","Hanako Arasaka: Daughter of the Emperor"],["c7f0583f-2493-4e1f-9967-977bc0c6fa15","Padre: Man of the Cross"],["f452a0ca-3204-48d5-8565-ec746f27959b","Sandayu Oda: Hanako's Guardian"],["60e476b4-51ab-4b10-8861-a8362b4232d7","Saul Bright: Stormrider"],["7751b719-978b-44b1-a82f-b2881d3a416e","Fool on the Hill"],["e96d3167-5115-4c82-9b35-546cba0aaead","(Don't Fear) The Reaper"],["cb23a651-dd1d-48f8-aca3-8d33fef79fdd","Alt Cunningham: Soulkiller Architect"],["ba766c1d-d929-4a22-bc91-7400784536c8","Evelyn Parker: Beautiful Enigma"],["8f7a7d0b-5935-4732-a9ba-76b19467d5a0","Wakako Okada: Peace and Harmony"],["17252514-02ba-4d0d-a9cc-3590cee528af","Misty Olszewski: Mender of Broken Spirits"],["7072a2d2-ec4f-4575-909e-15a107dfef79","Lizzy Wizzy: Delicate Weapon"],["81c55c1f-362e-4ffd-8f9b-4162b298dbd5","Placide: Voodoo Sentinel"],["2b1b6268-193f-4b9e-a63c-0cbc200d6db7","Dying Night: V's Pistol"],["70c7f11e-e41d-44f2-b5cd-e8568915d6ac","Nocturne OP55 N1"],["3b1d0570-bb8e-4ea5-9ec7-c698d9c9f94d","Pyramid Song"]],"E":[["a9c1137e-2e33-4293-9dcc-9351c9a0bbee","Adam Smasher: Ender of Legends"],["c1747b7d-de5c-43eb-a4ed-b632f1861712","V: Roamer of the Badlands"],["14ab188f-2ce3-4790-8823-5a352371ff1f","Johnny Silverhand: Never Stop Fighting"],["2285cd3a-7010-4ba4-b23a-ba40aba296f9","Viktor Vektor: Drop Your Illusions"],["12d44604-ad7b-4e82-b517-9edb0be44427","Jackie Welles: Ride or Die Choom"],["d23e322f-ad60-431d-b33e-1e8a813248ff","Adam Smasher: Metal Over Meat"],["38d14168-c182-4a34-a3b2-1b8380ab6635","The Relic: Experimental Biochip"],["6e4ee31b-82d1-421c-b658-ba3f79520365","Panam Palmer: Nomad Cavalry"],["336131d1-3bc8-4b39-b893-5fce9be8ce7f","Overwatch: Panam's Gift"],["8d0ad645-ac9a-4ecb-93d0-4c2061a4c477","Judy Álvarez: Braindance Maestro"],["3193a6bd-3e99-4501-9c5c-8d5ea32c779c","Rogue Amendiares: Queen of the Afterlife"],["15920617-a06f-4302-9dfb-c85d3470c7eb","Towerfall"]],"S":[["a8a7d286-0c66-4f01-aca7-45570474d9e4","Johnny Silverhand: Rocking Renegade"],["9231f9ff-1ba5-4c4f-bd78-70e0780b58e5","Panam Palmer: Strength Through Family"],["2647f881-5a7e-4ffb-b231-6574dc531f43","Sasha Yakovleva: Won't Let You Down"],["dcfe8370-9abf-4395-b50b-efea505609ba","Judy Álvarez: Nothing to Doubt"]],"I":[["837d354a-a1c8-4df0-b4ac-4db43730187a","V: Streetkid"],["181a18f4-f6ba-4b23-bc56-ca43bd7d0843","Royce: Psycho on the Edge"],["828f575e-012d-4287-8b35-b0d8e5a4464c","Adam Smasher: Ender of Legends"],["3723dc4c-52e1-4091-80c6-38c4175f7145","Dexter DeShawn: Off the Grid"],["cb12d8c4-64b1-4e53-898e-8fd46aeac6bf","Johnny Silverhand: Rocking Renegade"],["41e87b8f-9d0a-4955-a9ec-d1f2fd49f532","Johnny Silverhand: Never Stop Fighting"],["cdccc52f-197e-4ba1-8bd9-f40a16ed5f58","Rogue Amendiares: Preem Solo"],["21716e98-de73-4769-aa28-3474841c0f46","Dum Dum: Maelstrom Triggerman"],["ad827e14-e431-4412-a6c0-b54168d45ab3","Kerry Eurodyne: Axe, Attitude, Audience"],["c3dd649e-92ce-4cc1-8c14-63dda16f5fc1","Muamar Reyes: El Capitán"],["ef33c0b9-0e13-438e-952b-5d834485b0aa","River Ward: Detective on the Hunt"],["1a13a5a8-c1d4-4d36-88be-7a6e3cb78c90","Hanako Arasaka: In a Gilded Cage"],["7b20d318-5d0c-41fd-8a50-2b53b944e9bc","Alt Cunningham: Mother of Daemons"],["726b13d2-0d74-42db-a5e9-b8b852224a16","Adam Smasher: Metal Over Meat"],["12ff7ae7-9d19-42ec-af5d-45ea0b720d41","The Relic: Experimental Biochip"],["60a2f877-f004-43c0-a7a8-9e54258caf31","Jackie Welles: Mama's Favorite"],["a420db68-9911-42d8-a56c-7bb7d7e9849f","Goro Takemura: Vengeful Bodyguard"],["79307857-811d-4436-b1d9-1190d9376ea0","Hanako Arasaka: Daughter of the Emperor"],["18c39784-9fb7-4d72-acd4-35eaff669cd6","Padre: Man of the Cross"],["4337408e-5b98-4860-88f1-5d8ce63cf136","Panam Palmer: Nomad Cavalry"],["5632d773-b6c8-402d-a162-364767d3d21e","Panam Palmer: Strength Through Family"],["6ceb8ace-8b73-4b12-ba75-ee867b936e5c","Sandayu Oda: Hanako's Guardian"],["768ac843-133b-4c01-b4d9-c1bc9c28470d","Overwatch: Panam's Gift"],["307de3c6-6bbd-4e44-8dde-07f4fac45db0","Sasha Yakovleva: Won't Let You Down"],["1d4ce13a-20de-4f4f-8145-0c8e9892f52c","Alt Cunningham: Soulkiller Architect"],["56628f3e-fb9d-4e9f-a525-360b08118cfd","Evelyn Parker: Beautiful Enigma"],["9c8b2cab-c07e-44e7-bcfd-277100688d17","Judy Álvarez: Braindance Maestro"],["94a8e8c1-f953-4ca8-b124-99c7350663b4","Wakako Okada: Peace and Harmony"],["9f251692-ea15-45d9-8fa3-5833453502c6","Rogue Amendiares: Queen of the Afterlife"],["fe26a4ff-1076-4371-8ab5-3f31d0319a3f","Judy Álvarez: Nothing to Doubt"],["b4ff8d51-99e1-4d6f-b8b7-c98d59283400","Towerfall"]]}};
+  var GOD_PACK = 1 / 500;
+  var HIT_ODDS = [['S', 1 / 48], ['I', 1 / 36], ['E', 1 / 8]];
+  var NAME = { C: 'Common', U: 'Uncommon', R: 'Rare', E: 'Epic Rare', S: 'Secret Rare', I: 'Iconic Rare' };
+  var ICON = { R: 'rare', E: 'epic', S: 'secret-rare', I: 'iconic-rare' };
+  var ORDER = { R: 0, E: 1, I: 2, S: 3 };
+  var edition = 'retail', busy = false;
+  // ?godpack in the URL makes the first rip a God Pack, to preview the look.
+  var forceGod = /[?&]godpack(&|=|$)/.test(location.search);
+  var tally = { packs: 0, R: 0, E: 0, I: 0, S: 0, god: 0 };
+  var fan = document.getElementById('rip-fan'), go = document.getElementById('rip-go');
+  var cap = document.getElementById('rip-cap'), god = document.getElementById('rip-god'), tallyEl = document.getElementById('rip-tally');
+
+  function drawFrom(list, used) {
+    var card;
+    do { card = list[Math.floor(Math.random() * list.length)]; } while (used[card[0]]);
+    used[card[0]] = true;
+    return card;
+  }
+  function hitRarity() {
+    var x = Math.random(), acc = 0;
+    for (var i = 0; i < HIT_ODDS.length; i++) { acc += HIT_ODDS[i][1]; if (x < acc) return HIT_ODDS[i][0]; }
+    return 'R';
+  }
+  // Wait for the new art so the cards don't deal in blank; give up after 4s.
+  function ready(img) {
+    var wait = img.decode ? img.decode().catch(function () {}) : Promise.resolve();
+    return Promise.race([wait, new Promise(function (r) { setTimeout(r, 4000); })]);
+  }
+
+  function rip() {
+    if (busy) return;
+    busy = true; go.disabled = true;
+    var pool = POOLS[edition], used = {}, slots = [], hits, i;
+    var isGod = forceGod || Math.random() < GOD_PACK;
+    forceGod = false;
+    if (isGod) {
+      hits = [];
+      for (i = 0; i < 12; i++) { hits.push('I'); slots.push({ r: 'I', card: drawFrom(pool.I, used) }); }
+    } else {
+      for (i = 0; i < 7; i++) slots.push({ r: 'C', card: drawFrom(pool.C, used) });
+      for (i = 0; i < 3; i++) slots.push({ r: 'U', card: drawFrom(pool.U, used) });
+      hits = [hitRarity(), hitRarity()].sort(function (a, b) { return ORDER[a] - ORDER[b]; });
+      hits.forEach(function (r) { slots.push({ r: r, card: drawFrom(pool[r], used) }); });
+    }
+
+    var els = slots.map(function (s, i) {
+      var d = i - 5.5, pc = document.createElement('span'), img = new Image();
+      pc.className = 'pc deal' + (i >= 10 || isGod ? ' foil' : '');
+      pc.style.cssText = '--r:' + d * 4 + 'deg;--y:' + Math.round(d * d * 0.5) + '%;--i:' + i;
+      img.className = 'card-art';
+      img.alt = s.card[1] + ' (' + NAME[s.r] + ')';
+      img.src = '../images/' + s.card[0] + '.webp';
+      pc.appendChild(img);
+      return pc;
+    });
+    Promise.all(els.map(function (pc) { return ready(pc.firstChild); })).then(function () {
+      fan.replaceChildren.apply(fan, els);
+      god.hidden = !isGod;
+      fan.classList.toggle('god', isGod);
+      document.getElementById('rip-key').hidden = isGod;
+      tally.packs++; if (isGod) tally.god++;
+      hits.forEach(function (r) { tally[r]++; });
+      cap.textContent = isGod
+        ? 'God Pack! All 12 cards are Iconic Rares.'
+        : 'Hits: ' + slots.slice(10).map(function (s) { return s.card[1] + ' (' + NAME[s.r] + ')'; }).join(' and ') + '.';
+      renderTally();
+      busy = false; go.disabled = false;
+    });
+  }
+
+  function renderTally() {
+    var item = function (label, n, icon) {
+      return '<span class="cap">' + (icon ? '<span class="rarity-icon rarity-icon-' + icon + '"></span>' : '') + label + ' <b>' + n + '</b></span>';
+    };
+    tallyEl.innerHTML = item('Packs', tally.packs)
+      + ['R', 'E', 'I', 'S'].map(function (r) { return item(NAME[r], tally[r], ICON[r]); }).join('')
+      + item('God Packs', tally.god);
+    tallyEl.hidden = false;
+  }
+
+  var eds = document.querySelectorAll('#rip .seg[data-ed]');
+  eds.forEach(function (b) {
+    b.addEventListener('click', function () {
+      edition = b.getAttribute('data-ed');
+      eds.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+    });
+  });
+  go.addEventListener('click', rip);
+})();
+</script>
+</body>
+</html>
