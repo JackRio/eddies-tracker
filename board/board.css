@@ -1,0 +1,209 @@
+/* Board / replay viewer. The two mats come from learnCTCG's two-player board template
+   (exports/two-player-board-template.html): the Rival's mat is turned 180°, so the Gig areas meet. */
+:root {
+  --bg: #08080d; --panel: #101016; --line: #23232e; --text: #ececf2; --dim: #9a9aab;
+  --yellow: #f5e400; --red: #ff4d5e; --green: #3ddc84; --cyan: #3fd4ff;
+  --head: "Rajdhani", "Segoe UI", sans-serif;
+  --top-h: 52px; --tl-h: 58px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 14px/1.45 "Inter", "Segoe UI", sans-serif; }
+body { display: grid; grid-template-rows: var(--top-h) 1fr auto; overflow: hidden; }
+button, select, input { font: inherit; color: inherit; }
+
+/* ── top bar ── */
+.top { display: flex; align-items: center; gap: 12px; padding: 0 16px; border-bottom: 1px solid var(--line); background: #0b0b11; }
+.top h1 { margin: 0; font: 700 1.25rem var(--head); letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.top h1 b { color: var(--yellow); }
+.top select { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; max-width: 360px; }
+.match-info { margin-left: auto; display: flex; gap: 14px; align-items: center; color: var(--dim); white-space: nowrap; }
+.match-info .who b { color: var(--text); }
+.match-info .res { font: 700 .95rem var(--head); letter-spacing: .08em; text-transform: uppercase; padding: 2px 10px; border-radius: 4px; }
+.res.win { background: rgba(61,220,132,.15); color: var(--green); } .res.loss { background: rgba(255,77,94,.15); color: var(--red); }
+.btn { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+.btn:hover { border-color: #3a3a4a; } .btn:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
+
+/* ── layout ── */
+.layout { display: grid; grid-template-columns: 1fr 340px; min-height: 0; }
+.board-col { min-width: 0; min-height: 0; display: grid; place-items: center; padding: 10px 14px; position: relative; }
+.board-col.drag { outline: 2px dashed var(--yellow); outline-offset: -10px; }
+.empty { color: var(--dim); text-align: center; max-width: 420px; }
+.side { min-height: 0; border-left: 1px solid var(--line); background: #0b0b11; display: grid; grid-template-rows: auto auto 1fr; }
+.side h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.side h2 span { color: var(--text); }
+.turn-box { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.turn-box .t { font: 700 1.2rem var(--head); letter-spacing: .04em; }
+.turn-box .t .mine { color: var(--yellow); } .turn-box .t .theirs { color: var(--red); }
+.turn-box .act { color: var(--dim); margin-top: 2px; min-height: 1.45em; }
+.turn-box .act b { color: var(--text); font-weight: 600; }
+.hand-box { padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.hand { display: flex; flex-wrap: wrap; gap: 6px; min-height: 30px; }
+.hand .card { --cw: 58px; }
+.log-box { min-height: 0; display: flex; flex-direction: column; padding: 10px 0 0 14px; }
+.log { list-style: none; margin: 0; padding: 0 14px 14px 0; overflow-y: auto; flex: 1; font-size: 12.5px; }
+.log .turn-h { margin: 10px 0 4px; font: 700 .85rem var(--head); letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.log .turn-h.mine { color: #cfc23a; } .log .turn-h.theirs { color: #e3727d; }
+.log .e { padding: 3px 6px; border-radius: 4px; cursor: pointer; color: #c7c7d2; border-left: 2px solid transparent; }
+.log .e:hover { background: #16161e; }
+.log .e.future { opacity: .32; }
+.log .e.now { background: rgba(245,228,0,.09); border-left-color: var(--yellow); color: var(--text); }
+
+/* ── timeline ── */
+.timeline { grid-column: 1 / -1; height: var(--tl-h); display: flex; align-items: center; gap: 8px; padding: 0 16px; border-top: 1px solid var(--line); background: #0b0b11; }
+.timeline .btn { min-width: 40px; }
+.timeline .play.on { color: var(--yellow); border-color: var(--yellow); }
+.timeline input[type=range] { flex: 1; accent-color: var(--yellow); }
+.counter { color: var(--dim); font-variant-numeric: tabular-nums; min-width: 150px; text-align: right; }
+
+/* ── the table: two mats (1000 x 560 each), sized to the space left ── */
+.table { container-type: inline-size; display: grid; gap: .8cqw;
+  width: min(100%, calc((100vh - var(--top-h) - var(--tl-h) - 24px) / 1.17)); }
+
+.mat {
+  --mat-line: #d9c43a; --mat-dim: rgba(217, 196, 58, .35); --trace: rgba(160, 145, 40, .38);
+  --cw: 8.4cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  position: relative; aspect-ratio: 1000 / 560; border-radius: 2.2cqw; overflow: hidden;
+  background:
+    radial-gradient(rgba(217,196,58,.10) 1px, transparent 1.3px) 0 0 / 1.6cqw 1.6cqw,
+    linear-gradient(160deg, #0f1614, #0a0f0e 60%, #0d1311);
+  border: 1px solid #2a3330; box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  display: grid; gap: 1.4cqw; padding: 2.4cqw 2.6cqw;
+  grid-template-columns: 9.5% 1fr 1fr 12%;
+  grid-template-rows: 11% 1fr 1fr 1fr;
+  grid-template-areas:
+    ".     rgig   fgig   ."
+    "fixer field  field  ."
+    "fixer field  field  deck"
+    "fixer legends eddies trash";
+}
+.mat.rival { transform: rotate(180deg); --mat-line: #e3727d; --mat-dim: rgba(255, 77, 94, .38); --trace: rgba(200, 70, 80, .32); }
+/* things that should stay readable on the turned mat */
+.mat.rival .mat-tab b, .mat.rival .mat-die i, .mat.rival .gig i, .mat.rival .badge, .mat.rival .count,
+.mat.rival .chips, .mat.rival .cname, .mat.rival .who-tag { display: inline-block; transform: rotate(180deg); }
+.mat.active { box-shadow: 0 0 0 2px var(--mat-line), 0 18px 40px rgba(0,0,0,.45); }
+
+.mat-trace { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.mat-trace path { fill: none; stroke: var(--trace); stroke-width: 14; stroke-linejoin: bevel; }
+.mat-trace path.thin { stroke-width: 3; stroke: var(--mat-dim); }
+
+.area { position: relative; z-index: 1; min-width: 0; min-height: 0; display: grid; place-items: center;
+  background: rgba(8, 12, 11, .55); border: max(1px, .18cqw) solid var(--mat-dim); border-radius: 1cqw; }
+.a-fixer { grid-area: fixer; } .a-field { grid-area: field; } .a-legends { grid-area: legends; } .a-eddies { grid-area: eddies; }
+.a-deck { grid-area: deck; } .a-trash { grid-area: trash; }
+.a-rgig { grid-area: rgig; margin: -2.4cqw 6% 0 14%; border-top: 0; border-radius: 0 0 1cqw 1cqw; }
+.a-fgig { grid-area: fgig; margin: -2.4cqw 14% 0 6%; border-top: 0; border-radius: 0 0 1cqw 1cqw; }
+.a-eddies { background-image: linear-gradient(135deg, transparent 0 82%, rgba(217,196,58,.18) 82% 84%, transparent 84% 86%, rgba(217,196,58,.18) 86% 88%, transparent 88%); }
+
+.mat-tab { position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 50%); white-space: nowrap; z-index: 6;
+  background: var(--mat-line); color: #0a0f0e; font: 700 max(7px, 1.3cqw) var(--head); letter-spacing: .1em; text-transform: uppercase;
+  padding: .15cqw 1.3cqw; clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%); }
+.mat-tab b { font-weight: inherit; }
+.a-field .mat-tab, .a-deck .mat-tab { bottom: auto; top: 0; transform: translate(-50%, -50%); }
+.who-tag { position: absolute; z-index: 6; left: 1.4cqw; top: 1cqw; font: 700 max(8px, 1.5cqw) var(--head); letter-spacing: .06em; color: var(--mat-line); }
+.clock { font-variant-numeric: tabular-nums; color: var(--dim); }
+.clock.ticking { color: var(--text); }
+.clock.low { color: var(--red); }
+
+/* fixer dice: dim once rolled in */
+.mat-dice { display: grid; grid-template-rows: repeat(6, 1fr); height: 100%; width: 100%; padding: 1.2cqw 0 1.6cqw; }
+.mat-die { position: relative; display: grid; place-items: center; }
+.mat-die svg { width: 5.2cqw; height: 5.2cqw; }
+.mat-die polygon { fill: none; stroke: var(--mat-line); stroke-width: 4; stroke-linejoin: round; }
+.mat-die i { position: absolute; font: 700 max(7px, 1.2cqw) var(--head); font-style: normal; color: var(--mat-line); }
+.mat-die.used { opacity: .18; }
+
+/* Gig dice in the Friendly Gigs area: colored by OWNER (green = yours, red = Rival's) */
+.gigs { --gs: min(4.6cqw, calc(27cqw / var(--n, 1) - .5cqw)); display: flex; gap: .5cqw; align-items: center; justify-content: center; padding: .4cqw .4cqw 1.2cqw; }
+/* a Gig die: solid body in the owner's color, the value big, the die type small underneath */
+.gig { position: relative; width: var(--gs); height: var(--gs); flex: none; display: grid; place-items: center; cursor: default; }
+.gig svg { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 .25cqw .4cqw rgba(0,0,0,.6)); }
+.gig polygon { stroke-width: 5; stroke-linejoin: round; }
+.gig.mine polygon { fill: #1f8f57; stroke: #6ff2ad; }
+.gig.theirs polygon { fill: #a8283a; stroke: #ff8c99; }
+.gig.stolen polygon { stroke: #fff; stroke-dasharray: 9 6; }   /* sitting in the other player's Gig area */
+.gig b { position: relative; font: 700 max(9px, calc(var(--gs) * .46)) var(--head); line-height: 1; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); }
+.mat.rival .gig b { display: inline-block; transform: rotate(180deg); }
+
+/* cards */
+.card { --ch: calc(var(--cw) * 1024 / 733); position: relative; flex: none; display: block; width: var(--cw); height: var(--ch);
+  border-radius: .5cqw; background: #1a1d20 center / cover no-repeat; box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); overflow: hidden; }
+.hand .card { border-radius: 4px; }
+.card .cname { position: absolute; inset: auto 0 0; padding: 2px 3px; font-size: 9px; line-height: 1.15; color: #ddd; background: rgba(0,0,0,.6); }
+.card.has-img .cname { display: none; }
+.card.face { cursor: zoom-in; }
+.slot { box-shadow: none; background: none; border: max(1px, .15cqw) solid var(--mat-dim); }
+/* official card backs: the Legend back as-is; every other card is the same art with yellow and black swapped */
+.back { background: #111 url(assets/card-back-legend.webp) center / cover no-repeat; }
+.back:not(.legend) { filter: url(#ctcg-swap); }
+.eddies .card.spent-e { filter: url(#ctcg-swap) brightness(.45); }
+/* cards the current action names glow briefly */
+.card.hot { animation: hot 1.6s ease-out; }
+@keyframes hot { 0%, 35% { box-shadow: 0 0 0 .35cqw var(--cyan), 0 0 2cqw var(--cyan); } 100% { box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); } }
+
+/* Field: Units in a row; Gear tucked under each Unit so its bottom text box shows (Rules 11.6.1.1) */
+.field { display: flex; gap: 1.4cqw; align-items: flex-start; justify-content: center; flex-wrap: wrap; padding: 2.4cqw 1.2cqw 1.2cqw; width: 100%; height: 100%; align-content: flex-start; }
+.field.crowded { --cw: 6.6cqw; gap: 1cqw; }
+.unit { position: relative; flex: none; width: var(--cw); height: calc(var(--ch) + var(--n, 0) * var(--peek)); transition: transform .25s; }
+.unit .card { position: absolute; left: 0; }
+.unit .card.host { top: 0; z-index: 3; }
+.unit .card.gear { top: calc((var(--i) + 1) * var(--peek)); z-index: calc(2 - var(--i)); }
+.unit.spent { transform: rotate(90deg); margin: 0 calc((var(--ch) + var(--n, 0) * var(--peek) - var(--cw)) / 2); }
+.badge { position: absolute; z-index: 5; right: -.5cqw; top: -.5cqw; min-width: 2.6cqw; padding: .1cqw .5cqw; border-radius: 1cqw;
+  background: #0a0a0f; border: max(1px, .15cqw) solid var(--mat-line); font: 700 max(8px, 1.4cqw) var(--head); text-align: center; }
+.badge.up { border-color: var(--green); color: var(--green); } .badge.down { border-color: var(--red); color: var(--red); }
+
+.legends { display: flex; gap: 1.2cqw; align-items: center; }
+.legends .unit { --n: 0; }
+.legends .unit.spent { margin: 0 calc((var(--ch) - var(--cw)) / 2 - .4cqw); }
+
+.pile-wrap { position: relative; }
+.pile { position: relative; display: inline-block; }
+.pile .card { position: relative; z-index: 1; }
+.pile::before, .pile::after { content: ""; position: absolute; inset: 0; border-radius: .5cqw; background: #1b1f22; border: 1px solid #2c3236; }
+.pile::before { transform: translate(.4cqw, .4cqw); } .pile::after { transform: translate(.2cqw, .2cqw); }
+.count { position: absolute; z-index: 5; left: 50%; bottom: -.4cqw; transform: translateX(-50%); padding: 0 .7cqw; border-radius: 1cqw;
+  background: #0a0a0f; border: max(1px, .15cqw) solid var(--mat-line); font: 700 max(8px, 1.4cqw) var(--head); white-space: nowrap; }
+.mat.rival .count { transform: translateX(50%) rotate(180deg); }
+.a-trash .pile-wrap { cursor: pointer; }
+
+.eddies { position: relative; height: var(--ch); width: calc(var(--cw) + 5 * 1.6cqw); }
+.eddies .card { position: absolute; top: 0; left: calc(var(--i) * 1.6cqw); }
+
+/* Rival's hand: backs fanned along the far edge of their mat, hanging from their side as if held */
+.rival-fan { position: relative; height: 6.2cqw; margin-bottom: -1.6cqw; overflow: hidden; z-index: 2; }
+.fan .card { --cw: 5.2cqw; position: absolute; left: 50%; top: -2.6cqw; border-radius: .35cqw;
+  transform-origin: 50% -60%; transform: translateX(calc(-50% + var(--k) * 2.3cqw)) rotate(calc(var(--k) * -7deg)); box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.7); }
+.fan-count { position: absolute; left: 50%; top: .6cqw; transform: translateX(calc(-50% + 18cqw)); padding: 0 .8cqw; border-radius: 1cqw;
+  background: #0a0a0f; border: 1px solid #e3727d; color: #ffc3c9; font: 700 max(9px, 1.4cqw) var(--head); white-space: nowrap; }
+
+/* hover: the card large and upright, with its live status underneath */
+.zoom { position: fixed; z-index: 50; width: 300px; pointer-events: none; border-radius: 12px; overflow: hidden;
+  background: #0d0d13; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,.7); }
+.zimg { aspect-ratio: 733 / 1024; background: #111 center / cover no-repeat; }
+.zi { padding: 8px 10px 10px; display: grid; gap: 5px; font-size: 12px; }
+.zi-row { display: flex; justify-content: space-between; gap: 10px; color: var(--dim); }
+.zi-row b { color: var(--text); font-weight: 600; text-align: right; }
+.zi-row small, .zi-fx small { color: var(--dim); font-weight: 400; }
+.zi-fx { color: #c7c7d2; line-height: 1.35; }
+.zi-fx b { font: 700 .82rem var(--head); letter-spacing: .06em; margin-right: 4px; }
+.zi-fx.lag b { color: #ffb347; } .zi-fx.positive b { color: var(--green); } .zi-fx.negative b, .zi-fx.warning b { color: var(--red); }
+
+/* log lines: Verb [Card] → [Card] · detail */
+.log .e { border-left-width: 3px; }
+.log .e.mine { border-left-color: rgba(245,228,0,.35); } .log .e.theirs { border-left-color: rgba(255,77,94,.45); }
+.log .e.now { background: rgba(245,228,0,.09); border-left-color: var(--yellow); }
+.lv { font: 700 .86rem var(--head); letter-spacing: .05em; text-transform: uppercase; color: var(--text); margin-right: 2px; }
+.ld { color: var(--dim); }
+.lt { color: #c7c7d2; }
+.ctag { display: inline-block; padding: 0 5px; border-radius: 4px; background: #1b1b25; border: 1px solid #2d2d3b; color: #f0e98a; white-space: nowrap; }
+.ctag[data-img] { cursor: zoom-in; }
+.ctag[data-img]:hover { border-color: var(--yellow); }
+.turn-box .act { line-height: 1.7; }
+.none { color: var(--dim); }
+
+.pile-dialog { background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 10px; max-width: 760px; }
+.pile-dialog::backdrop { background: rgba(0,0,0,.6); }
+.pile-dialog h2 { margin: 0 0 10px; font: 700 1.1rem var(--head); letter-spacing: .06em; text-transform: uppercase; }
+.pile-cards { display: flex; flex-wrap: wrap; gap: 8px; max-height: 60vh; overflow: auto; margin-bottom: 12px; }
+.pile-cards .card { --cw: 96px; border-radius: 6px; }

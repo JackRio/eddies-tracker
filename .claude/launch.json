@@ -8,6 +8,12 @@
       "port": 4173
     },
     {
+      "name": "board",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve-board.js"],
+      "port": 4181
+    },
+    {
       "name": "marble-run",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8791", "--directory", "D:/projects/marble-racing/flag-war-marble-run"],

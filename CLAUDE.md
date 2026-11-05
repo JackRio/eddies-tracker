@@ -939,6 +939,27 @@ computed in code; the tool schema makes the model fill an `analysis` (themes,
 plan, loop, weaknesses) before the sections, and the prompt forbids explaining
 game rules - the description must describe the deck.
 
+## Rules engine (`src/engine/`) and replay board (`board/`)
+
+- `src/engine/` is a patched fork of PUNKSIM's MIT `cyber-sim-engine`, fixed against the Oct 29 2026
+  Comprehensive Rules + Rules FAQ. Fix list and API changes: `notes/engine-audit.md`; engine API in
+  `src/engine/README.md`. Tests: `node src/engine/test/run.js [filter] [--fuzz N]` - each case fails on
+  the upstream engine and passes here; the fuzz plays `test/decks/*.txt` against each other with rule
+  invariants. User rulings confirmed with Weird Co (Johnny Silverhand readies on the rival's turn too,
+  Radioport can Call on the rival's turn) are tests - don't "fix" them back.
+- `board/` is a standalone replay viewer for **cyberpunk-tcg-sim** replay JSON (snapshot + per-action
+  patches; ChoomBattler's text log is too thin and isn't supported). Run `node scripts/serve-board.js`
+  (port 4181, launch.json `board`): serves card art from the Eddies image cache (`/card/<simCardId>`,
+  matched on letters only - accented slugs are odd) and lists `~/Downloads/cyberpunk-tcg-sim-replay-*.json`.
+  Mats come from learnCTCG's two-player template (Rival's mat turned 180°). Card backs are the official
+  Legend back (`board/assets/card-back-legend.webp`); non-Legend backs are the same image through the
+  `#ctcg-swap` SVG filter (yellow/black swapped). Gig dice: colored by owner (green yours, red Rival's),
+  stolen dice sit in the controller's "Rival Gigs" zone. Status effects (Lag, Adrenaline...) are only
+  in the hover panel, never on the card; the power badge shows only when power differs from printed.
+  `board/logfmt.js` rewrites every sim log line into one fixed format (`Verb [Card] → [Card] · detail ·
+  via [Card]`); add a rule there for any new message (unmatched lines fall back to raw text).
+  Stepping one action animates via FLIP (elements on the Rival's turned mat negate their offsets).
+
 ## Known CSS gotchas (already solved, don't reintroduce)
 
 - **`overflow-x: auto` + `overflow-y: visible` silently forces vertical
