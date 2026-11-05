@@ -28,17 +28,15 @@ function _resolveAnytimeSpend(b, input) {
   return resolveSpendActivated(b, input, b.active_player, { window: 'Anytime' });
 }
 
+// Paying a cost and playing/calling the card happen together: the "when spent"
+// triggers of whatever paid and the card's play/call triggers are ONE pending set
+// (turn player first, owner orders them — rule 10.14.1 / 10.15).
 function _fireEventsWithSpends(b, pid, spentLegends, events, ctx) {
-  if (!spentLegends || !spentLegends.length) {
-    return fireEventChain(b, events, ctx, pid);
-  }
-  const chain = [
-    ...spentLegends.map(r => ({
-      action: '_FireSubEvent', event: 'OnSpent',
-      sub_ctx: { source_pid: pid, source_iid: r.iid, source_card_id: r.card_id },
-    })),
-    ...events.map(event => ({ action: '_FireSubEvent', event, sub_ctx: ctx })),
-  ];
+  const chain = [{ action: '_FireTogether', events: [
+    ...(spentLegends || []).map(r => ({ event: 'OnSpent',
+      sub_ctx: { source_pid: pid, source_iid: r.iid, source_card_id: r.card_id } })),
+    ...events.map(event => ({ event, sub_ctx: ctx })),
+  ] }];
   const res = resolveEffects(chain, b, { bindings: {} });
   if (res.halted) return haltToWaiting(b, 'resume_effects', res, pid);
   return null;

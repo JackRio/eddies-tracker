@@ -10,7 +10,7 @@ Every issue below is fixed in the patched copy at `src/engine/`, plus these foun
   of their own pending effects (10.14.1, new `choose_pending_order` choice).
 - Rebecca: Having a Moment (promo, no text) is rejected by deck validation as not legal.
 
-48 tests in `src/engine/test/cases/`, each failing on the upstream engine and passing on the
+50 tests in `src/engine/test/cases/`, each failing on the upstream engine and passing on the
 fork; 240-game self-play fuzz over the 4 meta decks has no issues.
 
 Engine API changes callers must know: a `mulligan_decision` step before turn 1
@@ -18,9 +18,11 @@ Engine API changes callers must know: a `mulligan_decision` step before turn 1
 defensive Call takes `pay_iids`, Blocker keeps the React Step open (the fight starts on
 `pass_defensive`), new `choose_pending_order` choice, new events `OnTurnStart` and `OnStealGig`.
 
-Still open (minor ordering): events fired through `_FireSubEvent` resolve immediately rather than
-after the current effect; when playing a Unit/Gear, cost-spend triggers resolve before play
-triggers instead of as one pending set. Rule ambiguities left as-is: effect sells vs the
+Ordering gaps closed later: every event raised during an effect now resolves after that effect
+(only engine-level chains and "would ..." replacement windows resolve on the spot), and playing or
+Calling a card puts its cost-spend triggers and its play triggers into one pending set. 50 tests.
+
+Rule ambiguities left as-is: effect sells vs the
 once-per-turn sell flag, raising/lowering a Gig past its range, Gear on a Go Solo Legend that
 leaves (goes to removed).
 

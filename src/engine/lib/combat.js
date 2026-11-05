@@ -398,17 +398,20 @@ function playProgram(b, pid, ref, spentLegends) {
     self_pid:   pid, self_iid:   ref.iid, self_card_id:   ref.card_id,
     bindings: {},
   };
-  // Legends/Eddies spent to pay: their "when spent" triggers go pending now and
-  // resolve after the Program's own effect (FAQ Zetatech Faceplate).
+  // Paying and playing happen together: the "when spent" triggers of what paid
+  // and the "when you play" triggers go pending now, as ONE set, and resolve after
+  // the Program's own effect (FAQ Zetatech Faceplate; rules 10.14.1 / 10.15).
   const { collectPending } = require('./events');
-  const spendPending = spentLegends.flatMap(r => collectPending(b, 'OnSpent',
-    { source_pid: pid, source_iid: r.iid, source_card_id: r.card_id }));
+  const pending = [
+    ...spentLegends.flatMap(r => collectPending(b, 'OnSpent',
+      { source_pid: pid, source_iid: r.iid, source_card_id: r.card_id })),
+    ...collectPending(b, 'OnPlay', subCtx, { skipSelf: true }),
+    ...collectPending(b, 'OnCardPlayed', subCtx),
+  ];
   const chain = [
     ...(cardScript?.onPlay || []),
-    { action: '_FireSubEvent', event: 'OnPlay',       sub_ctx: subCtx, opts: { skipSelf: true } },
-    { action: '_FireSubEvent', event: 'OnCardPlayed', sub_ctx: subCtx },
     { action: '_PlaceInZone',  pid, ref: { iid: ref.iid, card_id: ref.card_id }, zone: 'trash' },
-    ...(spendPending.length ? [{ action: '_RunPending', entries: spendPending }] : []),
+    ...(pending.length ? [{ action: '_RunPending', entries: pending }] : []),
   ];
   const res = resolveEffects(chain, b, ctx);
   if (res.halted) return haltToWaiting(b, 'resume_effects', res, pid);
@@ -471,10 +474,12 @@ function handleDefensive(b, input) {
       const legCtx = { source_pid: opp, source_iid: leg.iid, source_card_id: leg.card_id };
 
       return runChain(b, [
-        ...spentLegends.map(r => ({ action: '_FireSubEvent', event: 'OnSpent',
-          sub_ctx: { source_pid: opp, source_iid: r.iid, source_card_id: r.card_id } })),
-        { action: '_FireSubEvent', event: 'OnCall', sub_ctx: legCtx },
-        { action: '_FireSubEvent', event: 'OnFlip', sub_ctx: legCtx },
+        { action: '_FireTogether', events: [
+          ...spentLegends.map(r => ({ event: 'OnSpent',
+            sub_ctx: { source_pid: opp, source_iid: r.iid, source_card_id: r.card_id } })),
+          { event: 'OnCall', sub_ctx: legCtx },
+          { event: 'OnFlip', sub_ctx: legCtx },
+        ] },
       ], opp);
     }
 
@@ -497,10 +502,10 @@ function handleDefensive(b, input) {
       atk.target      = { kind: 'unit', iid: input.iid };
       delete atk.ready_target_ok;
       return runChain(b, [
-        { action: '_FireSubEvent', event: 'OnSpent',
-          sub_ctx: { source_pid: opp, source_iid: blocker.iid, source_card_id: blocker.card_id } },
-        { action: '_FireSubEvent', event: 'OnBlock',
-          sub_ctx: { source_pid: opp, source_iid: blocker.iid, source_card_id: blocker.card_id } },
+        { action: '_FireTogether', events: [
+          { event: 'OnSpent', sub_ctx: { source_pid: opp, source_iid: blocker.iid, source_card_id: blocker.card_id } },
+          { event: 'OnBlock', sub_ctx: { source_pid: opp, source_iid: blocker.iid, source_card_id: blocker.card_id } },
+        ] },
       ], opp);
     }
 

@@ -918,6 +918,15 @@ function resolveEffect(effect, b, ctx) {
     }
 
     case '_FireSubEvent': {
+      // Rule 10.16 — an event raised while a card effect is resolving makes its
+      // triggers pending NOW and they resolve after that effect finishes (drained
+      // at the end of the effect's chain). Engine-level chains (no source card)
+      // and replacement windows ("would ..."), which must answer before the
+      // change happens, still resolve on the spot.
+      if (ctx?.self_card_id != null && !effect.now && !/^OnWould/.test(effect.event)) {
+        _postPending(b, ctx, effect.event, effect.sub_ctx, effect.opts);
+        return { continue: true };
+      }
       const { fireEvent } = require('./events');
       const result = fireEvent(b, effect.event, effect.sub_ctx, effect.opts);
       if (result?.halted) return { continue: false, fire_event_halt: result };
@@ -1272,9 +1281,9 @@ function resolveEffect(effect, b, ctx) {
 // Rule 10.16.1 — an event raised mid-effect makes its triggers pending at that
 // moment (matched against the board as it is then); they resolve after the
 // current effect finishes (drained below), turn player first.
-function _postPending(b, ctx, event, sub_ctx) {
+function _postPending(b, ctx, event, sub_ctx, opts) {
   const { collectPending } = require('./events');
-  ctx._post_pending = (ctx._post_pending || []).concat(collectPending(b, event, sub_ctx));
+  ctx._post_pending = (ctx._post_pending || []).concat(collectPending(b, event, sub_ctx, opts));
 }
 
 function _gigChangedCtx(b, ctx, g) {
