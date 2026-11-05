@@ -98,6 +98,24 @@
     return ` · <span class="clock${c.running ? ' ticking' : ''}${low ? ' low' : ''}" title="${c.ot ? 'Overtime clock' : 'Match clock'}: time left">${c.ot ? 'OT ' : ''}⏱ ${mmss(c.ms)}</span>`;
   }
 
+  // One row per player: name, clock, the Gig race (7 pips; dashed = taken from the Rival), counts.
+  function glanceHtml(st, pid) {
+    const p = st.players[pid], g = st.game;
+    const gigs = p.gigDice || [];
+    const stolenN = gigs.filter(d => d.originalOwnerId && d.originalOwnerId !== pid).length;
+    const pips = Array.from({ length: 7 }, (_, i) => `<i class="${i < gigs.length ? 'on' : ''}${i >= gigs.length - stolenN && i < gigs.length ? ' st' : ''}"></i>`).join('');
+    const c = g.matchClockEnabled ? clockLeft(g, pid) : null;
+    const eddies = p.eddies || [];
+    const ready = eddies.filter(e => !e.exhausted).length;
+    const hand = p.handCount ?? (p.hand || []).length;
+    return `<div class="gl ${pid === R.me ? 'mine' : 'theirs'}">
+      <span class="nm">${esc(R.labels[pid])}</span>
+      ${c ? `<span class="ck${c.running ? ' ticking' : ''}${c.ms < 120000 ? ' low' : ''}">${c.ot ? 'OT ' : ''}${mmss(c.ms)}</span>` : '<span></span>'}
+      <span class="pips" title="${gigs.length} of 7 Gigs${stolenN ? `, ${stolenN} taken from the Rival` : ''}">${pips}</span><span class="ck">${gigs.length}/7</span>
+      <span class="nums">Hand <b>${hand}</b> · Deck <b>${p.deckCount ?? '?'}</b> · Eddies <b>${ready}/${eddies.length}</b>${p.streetCred != null ? ` · ☆ <b>${p.streetCred}</b>` : ''}</span>
+    </div>`;
+  }
+
   // The Rival's hand: card backs fanned along the far edge of their mat, as if they're holding them.
   function rivalHandHtml(st) {
     const p = st.players[R.rival];
@@ -121,17 +139,22 @@
       + (o.via ? ` <span class="ld">· via</span> ${tag(o.via)}` : '');
   }
   function buildLog() {
-    let lastTurn = null, html = '';
+    let lastTurn = null, html = '', lastLine = '';
     for (const e of R.log) {
       const o = fmt(e.message);
       if (!o) continue;
       if (e.turnNumber !== lastTurn) {
-        lastTurn = e.turnNumber;
+        lastTurn = e.turnNumber; lastLine = '';
         const side = e.turnOwnerPlayerId ? (e.turnOwnerPlayerId === R.me ? 'mine' : 'theirs') : '';
         html += `<li class="turn-h ${side}">${e.turnNumber ? `T${e.turnNumber} · ${esc(e.turnOwnerLabel)}` : 'Setup'}</li>`;
       }
       const who = o.actor || e.turnOwnerPlayerId;
-      html += `<li class="e ${who ? (who === R.me ? 'mine' : 'theirs') : ''}" data-step="${e.step}" title="${esc(e.message)}">${entryHtml(o)}</li>`;
+      // name the player only when it isn't the turn's owner (setup, defensive Calls, Blockers…)
+      const name = o.actor && o.actor !== e.turnOwnerPlayerId ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : '';
+      const line = name + entryHtml(o);
+      if (line === lastLine) continue;               // the sim sometimes logs the same thing twice
+      lastLine = line;
+      html += `<li class="e ${who ? (who === R.me ? 'mine' : 'theirs') : ''}" data-step="${e.step}" title="${esc(e.message)}">${line}</li>`;
     }
     $('log').innerHTML = html;
   }
@@ -187,12 +210,15 @@
     const hand = st.players[R.me].hand || [];
     $('my-hand').innerHTML = hand.map(c => face(c)).join('') || '<span class="none">Empty</span>';
     $('hand-count').textContent = hand.length ? `· ${hand.length}` : '';
+    $('glance').innerHTML = [R.rival, R.me].map(pid => glanceHtml(st, pid)).join('');
 
     const g = st.game;
     const who = g.activePlayerLabel ? `<span class="${g.activePlayerId === R.me ? 'mine' : 'theirs'}">${esc(g.activePlayerLabel)}</span>` : esc(g.stageLabel || 'Setup');
     const lines = s.newLog.map(e => fmt(e.message)).filter(Boolean);
     $('turn-box').innerHTML = `<div class="t">${g.turnNumber ? `Turn ${g.turnNumber} · ` : ''}${who}</div>
       <div class="act">${lines.length ? lines.map(entryHtml).join('<br>') : esc(s.action?.label || 'Start of the match')}</div>`;
+
+    showBanner(s, lines, dir);
 
     // cards named in this step's log glow on the board
     const named = new Set(lines.flatMap(o => [...(o.a || []), o.via]).filter(p => p && p.card).map(p => short(p.card)));
@@ -213,6 +239,31 @@
     $('counter').textContent = `${cur} / ${R.steps.length - 1}${s.elapsed != null ? ` · ${mmss(s.elapsed)}` : ''}`;
     $('counter').title = 'Action / total · match time';
     animate(before, dir);
+  }
+
+  // What just happened, on the board itself: a banner over the seam between the mats.
+  // It slides in when you step through actions and fades after a few seconds so the Gig dice stay visible.
+  let bannerTimer = null;
+  function showBanner(s, lines, dir) {
+    const el = $('banner');
+    clearTimeout(bannerTimer);
+    if (!dir || !lines.length) { el.hidden = true; return; }
+    const g = s.state.game;
+    const actor = lines.find(o => o.actor)?.actor || g.activePlayerId;
+    el.className = `banner ${actor === R.me ? 'mine' : 'theirs'}`;
+    el.innerHTML = `<div class="bn-h">${g.turnNumber ? `Turn ${g.turnNumber} · ` : ''}${esc(R.labels[actor] || '')}</div>`
+      + lines.map(o => `<div class="bn-l">${o.actor && o.actor !== actor ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : ''}${entryHtml(o)}</div>`).join('');
+    // sit on the seam between the two mats
+    const mats = $('table').querySelectorAll('.mat');
+    const col = document.querySelector('.board-col').getBoundingClientRect();
+    if (mats.length === 2) {
+      const a = mats[0].getBoundingClientRect(), b = mats[1].getBoundingClientRect();
+      el.style.top = `${(a.bottom + b.top) / 2 - col.top}px`;
+      el.style.left = `${(a.left + a.right) / 2 - col.left}px`;
+    }
+    el.hidden = false;
+    el.classList.remove('show'); void el.offsetWidth; el.classList.add('show');
+    bannerTimer = setTimeout(() => el.classList.remove('show'), timer ? 1000 : 3200);
   }
 
   function matchInfo() {
@@ -308,12 +359,18 @@
     zoom.style.left = x + 'px'; zoom.style.top = y + 'px';
   });
 
-  // card art that's missing locally: fall back to the name label
+  // card art that's missing locally: show the name label instead (checked once per image)
+  const missingArt = new Set(), checkedArt = new Set();
   new MutationObserver(() => {
     for (const el of document.querySelectorAll('.card.face:not([data-checked])')) {
       el.dataset.checked = '1';
-      const url = el.dataset.img; if (!url) continue;
-      const img = new Image(); img.onload = () => el.classList.add('has-img'); img.src = url;
+      const url = el.dataset.img;
+      if (!url || missingArt.has(url)) { el.classList.add('no-img'); continue; }
+      if (checkedArt.has(url)) continue;
+      checkedArt.add(url);
+      const img = new Image();
+      img.onerror = () => { missingArt.add(url); document.querySelectorAll(`.card.face[data-img="${CSS.escape(url)}"]`).forEach(c => c.classList.add('no-img')); };
+      img.src = url;
     }
   }).observe(document.body, { childList: true, subtree: true });
 

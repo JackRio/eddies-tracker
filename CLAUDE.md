@@ -958,7 +958,10 @@ game rules - the description must describe the deck.
   in the hover panel, never on the card; the power badge shows only when power differs from printed.
   `board/logfmt.js` rewrites every sim log line into one fixed format (`Verb [Card] → [Card] · detail ·
   via [Card]`); add a rule there for any new message (unmatched lines fall back to raw text).
-  Stepping one action animates via FLIP (elements on the Rival's turned mat negate their offsets).
+  Stepping one action animates via FLIP (elements on the Rival's turned mat negate their offsets) and
+  shows that step's lines in a banner over the seam between the mats (fades after ~3s so the Gig dice
+  under it stay readable). Mats are 1000 x 440, not the template's 1000 x 560, so two stacked mats fit
+  a desktop window; wide screens (>1450px) get a left column (turn, match at a glance, your hand).
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 

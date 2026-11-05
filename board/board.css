@@ -25,11 +25,38 @@ button, select, input { font: inherit; color: inherit; }
 .btn:hover { border-color: #3a3a4a; } .btn:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; }
 
 /* ── layout ── */
-.layout { display: grid; grid-template-columns: 1fr 340px; min-height: 0; }
+/* wide screens: turn + hand on the left, board in the middle, log on the right.
+   narrower: board left, and the left panel stacks above the log on the right. */
+.layout { display: grid; min-height: 0; grid-template-columns: minmax(300px, 380px) 1fr 340px; grid-template-areas: "left board side"; }
+.left { grid-area: left; min-height: 0; overflow-y: auto; border-right: 1px solid var(--line); background: #0b0b11; }
+.board-col { grid-area: board; }
+.side { grid-area: side; }
+.left h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.left h2 span { color: var(--text); }
+.left .hand .card { --cw: calc((100% - 18px) / 4); width: calc((100% - 18px) / 4); height: auto; aspect-ratio: 733 / 1024; border-radius: 6px; }
+@media (max-width: 1450px) {
+  .layout { grid-template-columns: 1fr 340px; grid-template-rows: auto 1fr; grid-template-areas: "board left" "board side"; }
+  .left { border-right: 0; border-left: 1px solid var(--line); max-height: 52vh; }
+  .left .hand .card { width: 58px; }
+}
+/* match at a glance: one row per player */
+.glance { padding: 10px 14px; border-bottom: 1px solid var(--line); display: grid; gap: 8px; }
+.gl { display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; align-items: center; }
+.gl .nm { font: 700 1rem var(--head); letter-spacing: .04em; }
+.gl.mine .nm { color: var(--yellow); } .gl.theirs .nm { color: #ff8c99; }
+.gl .ck { font: 700 1rem var(--head); font-variant-numeric: tabular-nums; color: var(--dim); }
+.gl .ck.ticking { color: var(--text); } .gl .ck.low { color: var(--red); }
+.gl .pips { display: flex; gap: 4px; }
+.gl .pips i { width: 16px; height: 8px; border-radius: 2px; background: #22222c; }
+.gl.mine .pips i.on { background: var(--green); } .gl.theirs .pips i.on { background: var(--red); }
+.gl .pips i.on.st { outline: 1px dashed #fff; outline-offset: 1px; }
+.gl .nums { grid-column: 1 / -1; color: var(--dim); font-size: 12px; }
+.gl .nums b { color: var(--text); font-weight: 600; }
 .board-col { min-width: 0; min-height: 0; display: grid; place-items: center; padding: 10px 14px; position: relative; }
 .board-col.drag { outline: 2px dashed var(--yellow); outline-offset: -10px; }
 .empty { color: var(--dim); text-align: center; max-width: 420px; }
-.side { min-height: 0; border-left: 1px solid var(--line); background: #0b0b11; display: grid; grid-template-rows: auto auto 1fr; }
+.side { min-height: 0; border-left: 1px solid var(--line); background: #0b0b11; display: flex; flex-direction: column; }
+.side .log-box { flex: 1; }
 .side h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
 .side h2 span { color: var(--text); }
 .turn-box { padding: 12px 14px; border-bottom: 1px solid var(--line); }
@@ -58,12 +85,14 @@ button, select, input { font: inherit; color: inherit; }
 
 /* ── the table: two mats (1000 x 560 each), sized to the space left ── */
 .table { container-type: inline-size; display: grid; gap: .8cqw;
-  width: min(100%, calc((100vh - var(--top-h) - var(--tl-h) - 24px) / 1.17)); }
+  width: min(100%, calc((100vh - var(--top-h) - var(--tl-h) - 24px) / .95)); }
 
+/* mats are 1000 x 440 (wider than the printed 1000 x 560, like learnCTCG's Scenarios board) so two
+   stacked mats fit a desktop window; every area and card scales with the mat width */
 .mat {
   --mat-line: #d9c43a; --mat-dim: rgba(217, 196, 58, .35); --trace: rgba(160, 145, 40, .38);
-  --cw: 8.4cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
-  position: relative; aspect-ratio: 1000 / 560; border-radius: 2.2cqw; overflow: hidden;
+  --cw: 7cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  position: relative; aspect-ratio: 1000 / 440; border-radius: 2.2cqw; overflow: hidden;
   background:
     radial-gradient(rgba(217,196,58,.10) 1px, transparent 1.3px) 0 0 / 1.6cqw 1.6cqw,
     linear-gradient(160deg, #0f1614, #0a0f0e 60%, #0d1311);
@@ -80,7 +109,7 @@ button, select, input { font: inherit; color: inherit; }
 .mat.rival { transform: rotate(180deg); --mat-line: #e3727d; --mat-dim: rgba(255, 77, 94, .38); --trace: rgba(200, 70, 80, .32); }
 /* things that should stay readable on the turned mat */
 .mat.rival .mat-tab b, .mat.rival .mat-die i, .mat.rival .gig i, .mat.rival .badge, .mat.rival .count,
-.mat.rival .chips, .mat.rival .cname, .mat.rival .who-tag { display: inline-block; transform: rotate(180deg); }
+.mat.rival .who-tag { display: inline-block; transform: rotate(180deg); }
 .mat.active { box-shadow: 0 0 0 2px var(--mat-line), 0 18px 40px rgba(0,0,0,.45); }
 
 .mat-trace { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -130,7 +159,9 @@ button, select, input { font: inherit; color: inherit; }
   border-radius: .5cqw; background: #1a1d20 center / cover no-repeat; box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); overflow: hidden; }
 .hand .card { border-radius: 4px; }
 .card .cname { position: absolute; inset: auto 0 0; padding: 2px 3px; font-size: 9px; line-height: 1.15; color: #ddd; background: rgba(0,0,0,.6); }
-.card.has-img .cname { display: none; }
+.card .cname { display: none; }                       /* only when the art is missing, so it never flashes on redraw */
+.card.no-img .cname { display: block; }
+.mat.rival .card.no-img .cname { transform: rotate(180deg); }
 .card.face { cursor: zoom-in; }
 .slot { box-shadow: none; background: none; border: max(1px, .15cqw) solid var(--mat-dim); }
 /* official card backs: the Legend back as-is; every other card is the same art with yellow and black swapped */
@@ -143,7 +174,7 @@ button, select, input { font: inherit; color: inherit; }
 
 /* Field: Units in a row; Gear tucked under each Unit so its bottom text box shows (Rules 11.6.1.1) */
 .field { display: flex; gap: 1.4cqw; align-items: flex-start; justify-content: center; flex-wrap: wrap; padding: 2.4cqw 1.2cqw 1.2cqw; width: 100%; height: 100%; align-content: flex-start; }
-.field.crowded { --cw: 6.6cqw; gap: 1cqw; }
+.field.crowded { --cw: 5.8cqw; gap: 1cqw; }
 .unit { position: relative; flex: none; width: var(--cw); height: calc(var(--ch) + var(--n, 0) * var(--peek)); transition: transform .25s; }
 .unit .card { position: absolute; left: 0; }
 .unit .card.host { top: 0; z-index: 3; }
@@ -195,6 +226,20 @@ button, select, input { font: inherit; color: inherit; }
 .log .e.now { background: rgba(245,228,0,.09); border-left-color: var(--yellow); }
 .lv { font: 700 .86rem var(--head); letter-spacing: .05em; text-transform: uppercase; color: var(--text); margin-right: 2px; }
 .ld { color: var(--dim); }
+.lp { font-weight: 600; color: var(--text); }
+
+/* on-board banner: the action you just stepped to */
+.banner { position: absolute; z-index: 20; transform: translate(-50%, -50%) scale(.96); opacity: 0; pointer-events: none;
+  max-width: min(640px, 80%); padding: 10px 18px 12px; border-radius: 10px; font-size: 15px; line-height: 1.75;
+  background: rgba(10, 10, 16, .92); border: 1px solid #2d2d3b; border-left: 4px solid var(--yellow);
+  box-shadow: 0 14px 40px rgba(0,0,0,.6); backdrop-filter: blur(4px); transition: opacity .5s, transform .5s; }
+.banner.theirs { border-left-color: var(--red); }
+.banner.show { opacity: 1; transform: translate(-50%, -50%) scale(1); transition: opacity .18s, transform .18s; }
+.bn-h { font: 700 .8rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.banner.mine .bn-h { color: #cfc23a; } .banner.theirs .bn-h { color: #ff8c99; }
+.bn-l { white-space: nowrap; }
+.bn-l .lv { font-size: 1rem; }
+.banner .ctag { font-size: 14px; }
 .lt { color: #c7c7d2; }
 .ctag { display: inline-block; padding: 0 5px; border-radius: 4px; background: #1b1b25; border: 1px solid #2d2d3b; color: #f0e98a; white-space: nowrap; }
 .ctag[data-img] { cursor: zoom-in; }
