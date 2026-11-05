@@ -959,9 +959,26 @@ game rules - the description must describe the deck.
   `board/logfmt.js` rewrites every sim log line into one fixed format (`Verb [Card] → [Card] · detail ·
   via [Card]`); add a rule there for any new message (unmatched lines fall back to raw text).
   Stepping one action animates via FLIP (elements on the Rival's turned mat negate their offsets) and
-  shows that step's lines in a banner over the seam between the mats (fades after ~3s so the Gig dice
-  under it stay readable). Mats are 1000 x 440, not the template's 1000 x 560, so two stacked mats fit
-  a desktop window; wide screens (>1450px) get a left column (turn, match at a glance, your hand).
+  shows that step's lines in a caption strip in its own gap between the two mats (`bannerHtml()`, part
+  of `#table`). Never float overlays on the mats - an earlier banner covered the Gig dice. The board
+  column is exactly the board's width (`--bw` on `.layout`); the left and right panels share the rest.
+  Deck/Trash/Eddies counts are badges in the pile's top corner (area labels sit on the bottom edge).
+  `logfmt.js` covers every line in 15 replays (Oct + Nov 2026 servers); newer servers write card names
+  as "Name: Subtitle" (older: "Name — Subtitle") - `short()` and the matcher handle both. Known names
+  are matched as whole words only and names under 3 letters are skipped ("V" broke "Viktor").
+  To check new replays: run every `history` message through the formatter with the same name list the
+  app builds (full + short names) and look for lines with no verb. Mats are 1000 x 440, not the template's 1000 x 560, so two stacked mats fit
+  a desktop window; wide screens (>1450px) get a left column (turn, then one block per player: clock,
+  Gig race, counts, and their hand fanned - Rival as backs, yours face up). No hands on the mats.
+  Mat columns: slim Deck/Trash column (8.8%), slim Gig strip (6.5% row). Field and Legends card sizes
+  are computed per step by `sizeFields()` (largest size that fits every Unit, its Gear strips and spent
+  rotation in one row; Field capped at 12cqw, Legends 7.5cqw). `--ch`/`--peek` are re-declared on
+  `.field`/`.legends` - a custom property computed on `.mat` keeps the mat's smaller size and the Unit
+  footprints overlap. `popArrivals()`: any card arriving in your hand, a trash or a Unit's Gear from a
+  hidden place or your hand (draws, deck trashes, discards, played Programs/Gear, recoveries) pops up
+  in the middle, then flies to its spot; it cancels that card's own FLIP slide first, or it measures the
+  slide's start (the hand) as the destination. Field → trash moves keep the normal slide. The step glow (`.hot`) is per card *instance*: when
+  several copies share a name, only the copy whose zone/state changed this step glows (`cardSigs()`).
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 

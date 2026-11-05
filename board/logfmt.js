@@ -21,7 +21,39 @@ window.LogFmt = (() => {
     [R('{P} must choose {N} Gigs? to steal from {P}'), null],
     [R('{C} made a Gig attack on {P} and will steal {N} Gigs? if the defender cannot stop it'), null],
     [R('{P} must choose whether to go first or second'), null],
-    [R('{P} may play a cheap Unit from hand or trash for free with {C}'), null],
+    [R('{P} may play a cheap (?:Unit|Program) from hand or trash for free with {C}'), null],
+    [R("{P} triggered {C}'s PLAY ability"), null],
+
+    // ── added for the Nov 2026 replays (server r-20261031+) ──
+    [/^Both players began each of the last two consecutive turns with empty Fixer areas\. Overtime is now active\..*$/, () => ({ v: 'Overtime', d: '7 Gigs on your own turn wins · clocks capped at 7:30' })],
+    [R('{P} attacked with {C} and is searching the top {N} cards for (\\w+)'), m => ({ v: 'Search', d: `top ${m[3]} for ${m[4]}`, via: m[2] })],
+    [R('{P} attacked with {C}, revealed the top {N} cards, and found no (\\w+)'), m => ({ v: 'Search', d: `top ${m[3]} · no ${m[4]}`, via: m[2] })],
+    [R("{P} finished {C}'s search without taking an? (\\w+)"), m => ({ v: 'Search', d: 'took nothing', via: m[2] })],
+    [R('{C} made a Gig attack on {P}, but did not have enough power to steal a Gig'), m => ({ v: 'Steal', a: [m[1]], d: 'not enough power' })],
+    [R('{P} revealed {C} and {C} with {C} and added them to hand'), m => ({ v: 'Add', a: [m[2], m[3], '→ hand'], via: m[4] })],
+    [R('{P} had no (\\w+) to defeat with {C}'), m => ({ v: 'No target', d: `no ${m[2]} to defeat`, via: m[3] })],
+    [R('{P} sold the top card of their deck into Eddies with {C}'), m => ({ v: 'Sell', d: 'top card of deck', via: m[2] })],
+    [R('{P} controls .*? and drew {N} cards? with {C}'), m => ({ v: 'Draw', d: cards(m[2]), via: m[3] })],
+    [R('{P} controls .*? and drew (.+) with {C}'), m => ({ v: 'Draw', a: m[2].split(/,\s*|\s+and\s+/), via: m[3] })],
+    [R('{P} drew (.+, .+) with {C}'), m => ({ v: 'Draw', a: m[2].split(/,\s*/), via: m[3] })],
+    [R("{P} drew a card from {C}'s \\w+ trigger"), m => ({ v: 'Draw', d: '1 card', via: m[2] })],
+    [R('{C} readied after winning its first fight this turn'), m => ({ v: 'Ready', a: [m[1]], d: 'won its first fight' })],
+    [R("{P} cancelled {C}'s \\w+ ability"), m => ({ v: 'Cancel', a: [m[2]], d: 'ability' })],
+    [R('{P} declined {C}'), m => ({ v: 'Decline', a: [m[2]] })],
+    [R('{C} was defeated, entered trash, and was removed from the game because Legends cannot remain there(?:; its {N} Gear cards? remains? in trash)?\\..*'),
+      m => ({ v: 'Defeated', a: [m[1]], d: `Legend removed${m[2] ? ` · +${m[2]} Gear` : ''}` })],
+    [R("{C} was defeated and sent to trash\\. {C}'s PLAY effect defeated it"), m => ({ v: 'Defeated', a: [m[1]], via: m[2] })],
+    [R('{P} kept Gig values unchanged for {C}'), m => ({ v: 'Gig', d: 'unchanged', via: m[2] })],
+    [R('{P} used {C} to stop {C} from attacking until .+'), m => ({ v: 'No attack', a: [m[3]], d: 'until their next turn', via: m[2] })],
+    [R('{P} trashed {C} from the top of their deck with {C}'), m => ({ v: 'Trash top', a: [m[2]], via: m[3] })],
+    [R('{P} gave {N} rival Units (-{N}) power this turn with {C}'), m => ({ v: 'Power', d: `${m[2]} rival Units ${m[3]} this turn`, via: m[5] })],
+    [R("{C} was returned to the bottom of {P}'s deck with {N} attached Gear cards?\\. {C}'s PLAY trigger bottom-decked it"), m => ({ v: 'Bottom-deck', a: [m[1]], d: `+${m[3]} Gear`, via: m[4] })],
+    [R('{P} readied an Eddie with {C}'), m => ({ v: 'Ready', d: 'an Eddie', via: m[2] })],
+    [R('{P} spent {C} to give {C} (-{N}) power this turn'), m => ({ v: 'Power', a: [m[3]], d: `${m[4]} this turn`, via: m[2] })],
+    [R('{P} used {C} to make {C} attack next turn if able'), m => ({ v: 'Must attack', a: [m[3]], via: m[2] })],
+    [R('{P} used {C} to give {C} \\+{N} power until end of turn\\. It will be defeated at end of turn if it steals or fights'), m => ({ v: 'Power', a: [m[3]], d: `+${m[4]} · defeated at end of turn if it fights or steals`, via: m[2] })],
+    [R('{P} called {C}, had no friendly Gear to defeat, and drew a card'), m => ({ v: 'Call', a: [m[2]], d: 'no Gear to defeat · drew 1' })],
+    [R('{C} gave {C} BLOCKER and \\+{N} power for the turn'), m => ({ v: 'Power', a: [m[2]], d: `+${m[3]} and Blocker this turn`, via: m[1] })],
     [R('{P} triggered {C} and may decrease a friendly Gig by up to {N}'), null],
     [R('{P} finished resolving {C} without calling a Legend'), null],
     [R("{P} may discard {N} Programs for {C}'s PLAY trigger"), null],
@@ -46,8 +78,8 @@ window.LogFmt = (() => {
     [R('{P} controlled .*? and drew {C}'), m => ({ v: 'Draw', a: [m[2]] })],
     [R('{P} controls .*? and drew a card with {C}'), m => ({ v: 'Draw', d: '1 card', via: m[2] })],
     [R('{P} made d{N} a min Gig and drew a card'), m => ({ v: 'Draw', d: `1 card · d${m[2]} is a min Gig` })],
-    [R('{C} won the fight with (\\w+) equipped and {P} drew {N} cards?'), m => ({ v: 'Draw', d: cards(m[4]), via: m[2] })],
-    [R('{C} won the fight with (\\w+) equipped and {P} drew {C}'), m => ({ v: 'Draw', a: [m[4]], via: m[2] })],
+    [R('{C} won the fight with {C} equipped and {P} drew {N} cards?'), m => ({ v: 'Draw', d: cards(m[4]), via: m[2] })],
+    [R('{C} won the fight with {C} equipped and {P} drew {C}'), m => ({ v: 'Draw', a: [m[4]], via: m[2] })],
 
     [R('{P} sold {C} into Eddies'), m => ({ v: 'Sell', a: [m[2]] })],
     [R('{P} called a Legend (by spending .+?)\\. {C} was revealed'), m => ({ v: 'Call', a: [m[3]], d: cost(m[2]) })],
@@ -69,13 +101,13 @@ window.LogFmt = (() => {
     [R("{C} returned to {P}'s hand\\..*"), m => ({ v: 'Return', a: [m[1], '→ hand'] })],
     [R('{P} returned {C} from trash to hand\\. Recovered with {C}'), m => ({ v: 'Return', a: [m[2], '→ hand'], via: m[3] })],
     [R('{P} added {C} to hand with {C}'), m => ({ v: 'Add', a: [m[2], '→ hand'], via: m[3] })],
-    [R("{P} discarded {C}\\. Discarded for {C}(?:'s PLAY trigger)?"), m => ({ v: 'Discard', a: [m[2]], via: m[3] })],
+    [R("{P} discarded {C}\\. Discarded for {C}(?:'s \\w+ trigger)?"), m => ({ v: 'Discard', a: [m[2]], via: m[3] })],
     [R('{P} triggered {C}, discarded {N} cards from the top of the deck.*'), m => ({ v: 'Trash top', d: cards(m[3]), via: m[2] })],
     [R('{P} trashed the top {N} cards with {C}.*'), m => ({ v: 'Trash top', d: cards(m[2]), via: m[3] })],
     [R("{P} trashed {C} from {C}'s search"), m => ({ v: 'Trash', a: [m[2]], via: m[3] })],
     [R('{P} searched the top {N} cards with {C}'), m => ({ v: 'Search', d: `top ${m[2]}`, via: m[3] })],
     [R('{P} flipped {C} and is searching the top {N} cards for (\\w+)'), m => ({ v: 'Search', d: `top ${m[3]} for ${m[4]}`, via: m[2] })],
-    [R('{P} added {N} cards to hand with {C}'), m => ({ v: 'Add', d: `${cards(m[2])} → hand`, via: m[3] })],
+    [R('{P} added {N} cards? to hand with {C}'), m => ({ v: 'Add', d: `${cards(m[2])} → hand`, via: m[3] })],
     [R('{P} revealed {C} with {C} and added it to hand'), m => ({ v: 'Add', a: [m[2], '→ hand'], via: m[3] })],
     [R('{C} made the next Program this turn cost {N} less \\(total discount {N}\\).*'), m => ({ v: 'Discount', d: `next Program −${m[2]}`, via: m[1] })],
     [R('{P} readied {C} with {C}'), m => ({ v: 'Ready', a: [m[2]], via: m[3] })],
@@ -100,19 +132,25 @@ window.LogFmt = (() => {
 
     [R('{P} wins\\. {P} conceded the match'), () => ({ v: 'Win', d: 'rival conceded' })],
     [R('{P} wins\\. {P} had {N} Gig dice when overtime would begin'), m => ({ v: 'Win', d: `${m[3]} Gigs at overtime` })],
-    [R('{P} wins\\. (.+)'), m => ({ v: 'Win', d: m[2] })],
+    [R('{P} wins\\. {P} reached {N} Gig dice'), m => ({ v: 'Win', d: `${m[3]} Gigs` })],
+    [R('{P} wins\\. Overtime {N} Gig threshold was reached'), m => ({ v: 'Win', d: `${m[2]} Gigs in overtime` })],
+    [R('{P} wins\\. {P} forfeited after disconnecting'), () => ({ v: 'Win', d: 'rival disconnected' })],
+    [R('{P} wins\\. (.+?)\\.?'), m => ({ v: 'Win', d: m[2] })],
   ];
 
   // Known names are swapped for tokens first (longest first), so names with spaces/punctuation can't
   // confuse the patterns. Plain-text card names (not exposed by the sim) still match {C}.
   function makeFormatter(cardNames, playerLabels) {
-    const names = [...new Set(cardNames)].filter(Boolean).sort((a, b) => b.length - a.length);
+    // whole names only (a short name like "V" must not match inside "Viktor" or "Voodoo")
+    const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const names = [...new Set(cardNames)].filter(n => n && n.length >= 3).sort((a, b) => b.length - a.length)
+      .map(n => [n, new RegExp(`(?<![\\w'])${reEsc(n)}(?![\\w])`, 'g')]);
     const players = Object.entries(playerLabels);   // [[pid, label], …]
     return function format(msg) {
       let t = String(msg).trim();
       const found = [];
       for (const [i, [, label]] of players.entries()) t = t.split(label).join(`⟪${i}⟫`);
-      for (const n of names) if (t.includes(n)) t = t.split(n).join(`⟦${found.push(n) - 1}⟧`);
+      for (const [n, re] of names) if (t.includes(n)) { const tok = `⟦${found.push(n) - 1}⟧`; t = t.replace(re, tok); }
       const text = s => String(s).replace(/⟪(\d+)⟫/g, (_, i) => players[+i][1]).replace(/⟦(\d+)⟧/g, (_, i) => found[+i]);
       const part = s => {
         const k = String(s).match(/^⟦(\d+)⟧$/);

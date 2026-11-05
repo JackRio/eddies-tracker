@@ -21,9 +21,7 @@
 
 <main class="layout">
   <section class="board-col">
-    <div id="table" class="table" hidden></div>
-    <div id="banner" class="banner" hidden aria-live="polite"></div>
-    <div id="empty" class="empty">
+    <div id="table" class="table" hidden></div>    <div id="empty" class="empty">
       <p>Pick one of your replays above, open a file, or drop a <code>cyberpunk-tcg-sim-replay-*.json</code> here.</p>
     </div>
   </section>
@@ -31,11 +29,9 @@
   <!-- left on wide screens; stacks above the log in the right column on narrower ones -->
   <aside class="left">
     <div class="turn-box" id="turn-box"></div>
-    <div class="glance" id="glance"></div>
-    <div class="hand-box">
-      <h2>Your hand <span id="hand-count"></span></h2>
-      <div id="my-hand" class="hand"></div>
-    </div>
+    <!-- each player: name, clock, Gig race, counts, and their hand fanned -->
+    <div class="pblock" id="rival-block"></div>
+    <div class="pblock" id="me-block"></div>
   </aside>
 
   <aside class="side">

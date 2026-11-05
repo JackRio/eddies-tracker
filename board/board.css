@@ -27,17 +27,21 @@ button, select, input { font: inherit; color: inherit; }
 /* ── layout ── */
 /* wide screens: turn + hand on the left, board in the middle, log on the right.
    narrower: board left, and the left panel stacks above the log on the right. */
-.layout { display: grid; min-height: 0; grid-template-columns: minmax(300px, 380px) 1fr 340px; grid-template-areas: "left board side"; }
-.left { grid-area: left; min-height: 0; overflow-y: auto; border-right: 1px solid var(--line); background: #0b0b11; }
+/* --bw = the board's width: the height left after the bars and the caption gap, over two mats' height:width
+   (2 x .45). The board column is exactly that wide; the two side panels share the rest equally. */
+.layout { --cap-h: 40px; --bw: min(calc((100vh - var(--top-h) - var(--tl-h) - 24px - var(--cap-h) - 16px) / .9), calc(100vw - 2 * 330px - 28px));
+  display: grid; min-height: 0; grid-template-columns: minmax(330px, 1fr) calc(var(--bw) + 28px) minmax(330px, 1fr); grid-template-areas: "left board side"; }
+.left { grid-area: left; min-height: 0; overflow-y: auto; overflow-x: hidden; border-right: 1px solid var(--line); background: #0b0b11; }
 .board-col { grid-area: board; }
 .side { grid-area: side; }
 .left h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
 .left h2 span { color: var(--text); }
-.left .hand .card { --cw: calc((100% - 18px) / 4); width: calc((100% - 18px) / 4); height: auto; aspect-ratio: 733 / 1024; border-radius: 6px; }
 @media (max-width: 1450px) {
-  .layout { grid-template-columns: 1fr 340px; grid-template-rows: auto 1fr; grid-template-areas: "board left" "board side"; }
-  .left { border-right: 0; border-left: 1px solid var(--line); max-height: 52vh; }
-  .left .hand .card { width: 58px; }
+  .layout { --bw: min(calc((100vh - var(--top-h) - var(--tl-h) - 24px - var(--cap-h) - 16px) / .9), calc(100vw - 340px - 28px));
+    grid-template-columns: 1fr 340px; grid-template-rows: auto 1fr; grid-template-areas: "board left" "board side"; }
+  .left { border-right: 0; border-left: 1px solid var(--line); max-height: 60vh; }
+  .hfan { --hw: 58px; }
+  .hfan.backs { --hw: 38px; }
 }
 /* match at a glance: one row per player */
 .glance { padding: 10px 14px; border-bottom: 1px solid var(--line); display: grid; gap: 8px; }
@@ -52,6 +56,8 @@ button, select, input { font: inherit; color: inherit; }
 .gl .pips i.on.st { outline: 1px dashed #fff; outline-offset: 1px; }
 .gl .nums { grid-column: 1 / -1; color: var(--dim); font-size: 12px; }
 .gl .nums b { color: var(--text); font-weight: 600; }
+/* --bw: the board's width — the space left after the bars and the caption, divided by the board's height:width (.95) */
+/* board width: height left after the bars and the caption gap, divided by two mats' height:width (2 x .45) */
 .board-col { min-width: 0; min-height: 0; display: grid; place-items: center; padding: 10px 14px; position: relative; }
 .board-col.drag { outline: 2px dashed var(--yellow); outline-offset: -10px; }
 .empty { color: var(--dim); text-align: center; max-width: 420px; }
@@ -59,7 +65,7 @@ button, select, input { font: inherit; color: inherit; }
 .side .log-box { flex: 1; }
 .side h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
 .side h2 span { color: var(--text); }
-.turn-box { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.turn-box { padding: 12px 14px; border-bottom: 1px solid var(--line); height: 132px; overflow-y: auto; }
 .turn-box .t { font: 700 1.2rem var(--head); letter-spacing: .04em; }
 .turn-box .t .mine { color: var(--yellow); } .turn-box .t .theirs { color: var(--red); }
 .turn-box .act { color: var(--dim); margin-top: 2px; min-height: 1.45em; }
@@ -84,22 +90,21 @@ button, select, input { font: inherit; color: inherit; }
 .counter { color: var(--dim); font-variant-numeric: tabular-nums; min-width: 150px; text-align: right; }
 
 /* ── the table: two mats (1000 x 560 each), sized to the space left ── */
-.table { container-type: inline-size; display: grid; gap: .8cqw;
-  width: min(100%, calc((100vh - var(--top-h) - var(--tl-h) - 24px) / .95)); }
+.table { container-type: inline-size; display: grid; gap: 8px; width: var(--bw); }
 
 /* mats are 1000 x 440 (wider than the printed 1000 x 560, like learnCTCG's Scenarios board) so two
    stacked mats fit a desktop window; every area and card scales with the mat width */
 .mat {
   --mat-line: #d9c43a; --mat-dim: rgba(217, 196, 58, .35); --trace: rgba(160, 145, 40, .38);
-  --cw: 7cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
-  position: relative; aspect-ratio: 1000 / 440; border-radius: 2.2cqw; overflow: hidden;
+  --cw: 6.8cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  position: relative; aspect-ratio: 1000 / 450; border-radius: 2.2cqw; overflow: hidden;
   background:
     radial-gradient(rgba(217,196,58,.10) 1px, transparent 1.3px) 0 0 / 1.6cqw 1.6cqw,
     linear-gradient(160deg, #0f1614, #0a0f0e 60%, #0d1311);
   border: 1px solid #2a3330; box-shadow: 0 18px 40px rgba(0,0,0,.45);
   display: grid; gap: 1.4cqw; padding: 2.4cqw 2.6cqw;
-  grid-template-columns: 9.5% 1fr 1fr 12%;
-  grid-template-rows: 11% 1fr 1fr 1fr;
+  grid-template-columns: 9.5% 1fr 1fr 8.8%;   /* Deck/Trash column just fits a card */
+  grid-template-rows: 6.5% 1.2fr 1.2fr 1fr;   /* slim Gig strip; the Field gets the most height */
   grid-template-areas:
     ".     rgig   fgig   ."
     "fixer field  field  ."
@@ -128,7 +133,7 @@ button, select, input { font: inherit; color: inherit; }
   background: var(--mat-line); color: #0a0f0e; font: 700 max(7px, 1.3cqw) var(--head); letter-spacing: .1em; text-transform: uppercase;
   padding: .15cqw 1.3cqw; clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%); }
 .mat-tab b { font-weight: inherit; }
-.a-field .mat-tab, .a-deck .mat-tab { bottom: auto; top: 0; transform: translate(-50%, -50%); }
+.a-field .mat-tab { bottom: auto; top: 0; transform: translate(-50%, -50%); }   /* Deck and Trash labels sit on the bottom edge, counts in the top corner */
 .who-tag { position: absolute; z-index: 6; left: 1.4cqw; top: 1cqw; font: 700 max(8px, 1.5cqw) var(--head); letter-spacing: .06em; color: var(--mat-line); }
 .clock { font-variant-numeric: tabular-nums; color: var(--dim); }
 .clock.ticking { color: var(--text); }
@@ -143,7 +148,7 @@ button, select, input { font: inherit; color: inherit; }
 .mat-die.used { opacity: .18; }
 
 /* Gig dice in the Friendly Gigs area: colored by OWNER (green = yours, red = Rival's) */
-.gigs { --gs: min(4.6cqw, calc(27cqw / var(--n, 1) - .5cqw)); display: flex; gap: .5cqw; align-items: center; justify-content: center; padding: .4cqw .4cqw 1.2cqw; }
+.gigs { --gs: min(3.5cqw, calc(27cqw / var(--n, 1) - .5cqw)); display: flex; gap: .5cqw; align-items: center; justify-content: center; padding: .2cqw .4cqw 1cqw; }
 /* a Gig die: solid body in the owner's color, the value big, the die type small underneath */
 .gig { position: relative; width: var(--gs); height: var(--gs); flex: none; display: grid; place-items: center; cursor: default; }
 .gig svg { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 .25cqw .4cqw rgba(0,0,0,.6)); }
@@ -173,8 +178,12 @@ button, select, input { font: inherit; color: inherit; }
 @keyframes hot { 0%, 35% { box-shadow: 0 0 0 .35cqw var(--cyan), 0 0 2cqw var(--cyan); } 100% { box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); } }
 
 /* Field: Units in a row; Gear tucked under each Unit so its bottom text box shows (Rules 11.6.1.1) */
-.field { display: flex; gap: 1.4cqw; align-items: flex-start; justify-content: center; flex-wrap: wrap; padding: 2.4cqw 1.2cqw 1.2cqw; width: 100%; height: 100%; align-content: flex-start; }
-.field.crowded { --cw: 5.8cqw; gap: 1cqw; }
+/* Field cards are bigger than the rest of the mat: they're what you read most */
+/* Field cards: app.js (sizeFields) sets --cw to the largest size that fits every Unit, its Gear and
+   spent rotation in one row. --ch and --peek are recomputed HERE, because a custom property computed on
+   .mat would keep the mat's smaller card size and the Units' footprints would overlap. */
+.field { --cw: 9.6cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  display: flex; gap: 1.4cqw; align-items: center; justify-content: center; flex-wrap: nowrap; padding: 1cqw 1.2cqw .6cqw; width: 100%; height: 100%; }
 .unit { position: relative; flex: none; width: var(--cw); height: calc(var(--ch) + var(--n, 0) * var(--peek)); transition: transform .25s; }
 .unit .card { position: absolute; left: 0; }
 .unit .card.host { top: 0; z-index: 3; }
@@ -184,29 +193,35 @@ button, select, input { font: inherit; color: inherit; }
   background: #0a0a0f; border: max(1px, .15cqw) solid var(--mat-line); font: 700 max(8px, 1.4cqw) var(--head); text-align: center; }
 .badge.up { border-color: var(--green); color: var(--green); } .badge.down { border-color: var(--red); color: var(--red); }
 
-.legends { display: flex; gap: 1.2cqw; align-items: center; }
-.legends .unit { --n: 0; }
-.legends .unit.spent { margin: 0 calc((var(--ch) - var(--cw)) / 2 - .4cqw); }
+/* Legends row: sized like the Field (sizeFields) so a spent Legend or one carrying Gear never spills */
+.legends { --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  display: flex; gap: 1.2cqw; align-items: center; justify-content: center; width: 100%; height: 100%; padding: .5cqw .8cqw; }
 
 .pile-wrap { position: relative; }
 .pile { position: relative; display: inline-block; }
 .pile .card { position: relative; z-index: 1; }
 .pile::before, .pile::after { content: ""; position: absolute; inset: 0; border-radius: .5cqw; background: #1b1f22; border: 1px solid #2c3236; }
 .pile::before { transform: translate(.4cqw, .4cqw); } .pile::after { transform: translate(.2cqw, .2cqw); }
-.count { position: absolute; z-index: 5; left: 50%; bottom: -.4cqw; transform: translateX(-50%); padding: 0 .7cqw; border-radius: 1cqw;
+.count { position: absolute; z-index: 5; right: .25cqw; top: .25cqw; padding: 0 .7cqw; border-radius: 1cqw;
   background: #0a0a0f; border: max(1px, .15cqw) solid var(--mat-line); font: 700 max(8px, 1.4cqw) var(--head); white-space: nowrap; }
-.mat.rival .count { transform: translateX(50%) rotate(180deg); }
+.mat.rival .count { transform: rotate(180deg); }
 .a-trash .pile-wrap { cursor: pointer; }
 
 .eddies { position: relative; height: var(--ch); width: calc(var(--cw) + 5 * 1.6cqw); }
 .eddies .card { position: absolute; top: 0; left: calc(var(--i) * 1.6cqw); }
 
-/* Rival's hand: backs fanned along the far edge of their mat, hanging from their side as if held */
-.rival-fan { position: relative; height: 6.2cqw; margin-bottom: -1.6cqw; overflow: hidden; z-index: 2; }
-.fan .card { --cw: 5.2cqw; position: absolute; left: 50%; top: -2.6cqw; border-radius: .35cqw;
-  transform-origin: 50% -60%; transform: translateX(calc(-50% + var(--k) * 2.3cqw)) rotate(calc(var(--k) * -7deg)); box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.7); }
-.fan-count { position: absolute; left: 50%; top: .6cqw; transform: translateX(calc(-50% + 18cqw)); padding: 0 .8cqw; border-radius: 1cqw;
-  background: #0a0a0f; border: 1px solid #e3727d; color: #ffc3c9; font: 700 max(9px, 1.4cqw) var(--head); white-space: nowrap; }
+/* Hands, in the left bar next to each player: fanned like held cards.
+   Rival: backs hanging from the top (they hold them facing away). You: face up, arcing from the bottom. */
+.pblock { padding: 10px 14px 12px; border-bottom: 1px solid var(--line); }
+.hfan { --hw: 84px; container-type: inline-size; position: relative; margin-inline: 12px; height: calc(var(--hw) * 1024 / 733 + 18px); margin-top: 8px; }
+.hfan.backs { --hw: 46px; height: calc(var(--hw) * 1024 / 733 + 8px); }
+.hfan .card { --cw: var(--hw); position: absolute; top: 10px; border-radius: 5px; box-shadow: 0 4px 10px rgba(0,0,0,.6);
+  --step: min(calc(var(--hw) * .78), calc((100cqw - var(--hw)) / var(--n1, 1)));
+  left: calc(50% - var(--hw) / 2 + var(--k) * var(--step));
+  transform-origin: 50% 160%; transform: rotate(calc(var(--k) * 1.6deg)); transition: transform .15s; }
+.hfan.backs .card { top: 2px; transform-origin: 50% -80%; transform: rotate(calc(var(--k) * -3deg)); }
+.hfan:not(.backs) .card:hover { z-index: 5; transform: translateY(-8px) rotate(calc(var(--k) * 1.6deg)); }
+.hfan .none { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; }
 
 /* hover: the card large and upright, with its live status underneath */
 .zoom { position: fixed; z-index: 50; width: 300px; pointer-events: none; border-radius: 12px; overflow: hidden;
@@ -228,18 +243,18 @@ button, select, input { font: inherit; color: inherit; }
 .ld { color: var(--dim); }
 .lp { font-weight: 600; color: var(--text); }
 
-/* on-board banner: the action you just stepped to */
-.banner { position: absolute; z-index: 20; transform: translate(-50%, -50%) scale(.96); opacity: 0; pointer-events: none;
-  max-width: min(640px, 80%); padding: 10px 18px 12px; border-radius: 10px; font-size: 15px; line-height: 1.75;
-  background: rgba(10, 10, 16, .92); border: 1px solid #2d2d3b; border-left: 4px solid var(--yellow);
-  box-shadow: 0 14px 40px rgba(0,0,0,.6); backdrop-filter: blur(4px); transition: opacity .5s, transform .5s; }
-.banner.theirs { border-left-color: var(--red); }
-.banner.show { opacity: 1; transform: translate(-50%, -50%) scale(1); transition: opacity .18s, transform .18s; }
-.bn-h { font: 700 .8rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+/* caption strip under the board: the action you're on, never covering the mats */
+.banner { width: 100%; height: var(--cap-h); display: flex; align-items: center; gap: 12px; padding: 0 14px; overflow: hidden;
+  border-radius: 8px; background: #0e0e15; border: 1px solid #23232e; border-left: 4px solid #3a3a48; font-size: 14.5px; white-space: nowrap; }
+.banner.mine { border-left-color: var(--yellow); } .banner.theirs { border-left-color: var(--red); }
+.bn-h { flex: none; font: 700 .85rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
 .banner.mine .bn-h { color: #cfc23a; } .banner.theirs .bn-h { color: #ff8c99; }
-.bn-l { white-space: nowrap; }
-.bn-l .lv { font-size: 1rem; }
-.banner .ctag { font-size: 14px; }
+.bn-body { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.bn-sep { margin: 0 10px; color: #4a4a5a; font-weight: 700; }
+.bn-l .lv { font-size: .95rem; }
+.banner.show .bn-body { animation: cap-in .28s ease-out; }
+@keyframes cap-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .banner.show .bn-body { animation: none; } }
 .lt { color: #c7c7d2; }
 .ctag { display: inline-block; padding: 0 5px; border-radius: 4px; background: #1b1b25; border: 1px solid #2d2d3b; color: #f0e98a; white-space: nowrap; }
 .ctag[data-img] { cursor: zoom-in; }
@@ -252,3 +267,9 @@ button, select, input { font: inherit; color: inherit; }
 .pile-dialog h2 { margin: 0 0 10px; font: 700 1.1rem var(--head); letter-spacing: .06em; text-transform: uppercase; }
 .pile-cards { display: flex; flex-wrap: wrap; gap: 8px; max-height: 60vh; overflow: auto; margin-bottom: 12px; }
 .pile-cards .card { --cw: 96px; border-radius: 6px; }
+
+/* a played Program / Gear, shown big mid-board before it flies to its Unit or the trash */
+.pop-card { pointer-events: none; border-radius: 12px; box-shadow: 0 24px 60px rgba(0,0,0,.75), 0 0 0 2px rgba(63,212,255,.6); }
+
+/* the Field and Legends rows fill their area exactly, so sizeFields measures the real space */
+.field, .legends { align-self: stretch; justify-self: stretch; width: auto; height: auto; min-width: 0; min-height: 0; }

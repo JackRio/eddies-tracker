@@ -4,7 +4,7 @@
 (() => {
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const short = n => String(n || '').split(' — ')[0];
+  const short = n => String(n || '').split(/ — |: /)[0];   // newer servers write "Name: Subtitle"
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const DIE = {   // same die outlines as the template's fixer area
@@ -72,7 +72,7 @@
       <div class="area a-fixer"><div class="mat-dice">${fixer}</div><span class="mat-tab"><b>Fixer</b></span></div>
       <div class="area a-rgig"><div class="gigs" style="--n:${stolen.length}">${stolen.map(g => gigHtml(g, pid)).join('')}</div><span class="mat-tab"><b>Rival Gigs${stolen.length ? ` ${stolen.length}` : ''}</b></span></div>
       <div class="area a-fgig"><div class="gigs" style="--n:${own.length}">${own.map(g => gigHtml(g, pid)).join('')}</div><span class="mat-tab"><b>Gigs ${gigs.length}/7</b></span></div>
-      <div class="area a-field"><div class="field${field.length > 5 ? ' crowded' : ''}">${field.map(u => unitHtml(u)).join('')}</div><span class="mat-tab"><b>Field</b></span></div>
+      <div class="area a-field"><div class="field">${field.map(u => unitHtml(u)).join('')}</div><span class="mat-tab"><b>Field</b></span></div>
       <div class="area a-legends"><div class="legends">${legends.map(l => unitHtml(l, true)).join('')}</div><span class="mat-tab"><b>Legends</b></span></div>
       <div class="area a-eddies">${eddies.length ? `<div class="eddies">${Array.from({ length: shownE }, (_, i) => back(i >= shownE - shownSpent ? 'spent-e' : '', `--i:${i}`)).join('')}<span class="count" title="ready / total">${eddies.length - spentE}/${eddies.length}</span></div>` : ''}<span class="mat-tab"><b>Eddies</b></span></div>
       <div class="area a-deck"><div class="pile-wrap" data-zone="${pid}-deck"><span class="pile">${back()}</span><span class="count">${p.deckCount ?? '?'}</span></div><span class="mat-tab"><b>Deck</b></span></div>
@@ -116,14 +116,31 @@
     </div>`;
   }
 
-  // The Rival's hand: card backs fanned along the far edge of their mat, as if they're holding them.
-  function rivalHandHtml(st) {
-    const p = st.players[R.rival];
-    const n = p.handCount ?? (p.hand || []).length;
+  // Where each card instance is and how it sits, to tell which copy of a card an action touched.
+  function cardSigs(st) {
+    const m = new Map();
+    for (const [pid, p] of Object.entries(st.players))
+      for (const z of ['hand', 'field', 'legends', 'trash'])
+        for (const c of p[z] || []) {
+          m.set(c.id, `${pid}:${z}:${c.exhausted ? 1 : 0}:${c.faceDown ? 1 : 0}:${(c.attachments || []).map(g => g.id).join(',')}:${c.attackPower ?? ''}`);
+          for (const g of c.attachments || []) m.set(g.id, `${pid}:gear:${c.id}`);
+        }
+    return m;
+  }
+
+  // A player's hand, fanned in the left bar: the Rival's as backs, yours face up (hover for the big view).
+  function handFanHtml(st, pid) {
+    const p = st.players[pid];
+    const mine = pid === R.me;
+    const cards = mine ? (p.hand || []) : [];
+    const n = mine ? cards.length : (p.handCount ?? (p.hand || []).length);
     const shown = Math.min(n, 12);
-    const cards = Array.from({ length: shown }, (_, i) => back('', `--k:${i - (shown - 1) / 2}`)).join('');
-    return `<div class="rival-fan" data-zone="${R.rival}-hand" title="${esc(R.labels[R.rival])}: ${n} card${n === 1 ? '' : 's'} in hand">
-      <div class="fan">${cards}</div>${n ? `<span class="fan-count">${n}</span>` : ''}</div>`;
+    const k = i => `--k:${i - (shown - 1) / 2}`;
+    const inner = !n ? '<span class="none">No cards</span>'
+      : mine ? cards.slice(0, 12).map((c, i) => face(c, '', k(i))).join('')
+      : Array.from({ length: shown }, (_, i) => back('', k(i))).join('');
+    return `<div class="hfan${mine ? '' : ' backs'}"${mine ? ' id="my-hand"' : ''} data-zone="${pid}-hand" style="--n1:${Math.max(1, shown - 1)}"
+      title="${esc(R.labels[pid])}: ${n} card${n === 1 ? '' : 's'} in hand">${inner}</div>`;
   }
 
   // ── log: one fixed format per action ────────────────────────────────────
@@ -178,14 +195,17 @@
       let was = before.get(key);
       if (!was && el.dataset.uid) was = before.get('c' + el.dataset.uid);   // e.g. hand card → field Unit
       const now = el.getBoundingClientRect();
+      // fanned hand cards keep their tilt: animate back to their own CSS transform
+      const rest = el.closest('.hfan') ? getComputedStyle(el).transform : null;
       const rot = el.classList.contains('spent') ? 90 : 0;
+      const restT = rest && rest !== 'none' ? rest : `rotate(${rot}deg)`;
       const flip = el.closest('.mat.rival') ? -1 : 1;     // the Rival's mat is turned 180°, so its local axes are too
       if (was) {
         const dx = flip * ((was.r.left + was.r.width / 2) - (now.left + now.width / 2));
         const dy = flip * ((was.r.top + was.r.height / 2) - (now.top + now.height / 2));
         const wasRot = was.spent ? 90 : 0;
         if (Math.abs(dx) > 1 || Math.abs(dy) > 1 || wasRot !== rot)
-          el.animate([{ transform: `translate(${dx}px, ${dy}px) rotate(${wasRot}deg)` }, { transform: `rotate(${rot}deg)` }], opts);
+          el.animate([{ transform: rest ? `translate(${dx}px, ${dy}px) ${restT}` : `translate(${dx}px, ${dy}px) rotate(${wasRot}deg)` }, { transform: restT }], opts);
         if (el.dataset.gid && was.v !== el.dataset.v)
           el.animate([{ transform: 'scale(1.5)', filter: 'brightness(2.2)' }, { transform: 'none', filter: 'none' }], { duration: 520, easing: 'ease-out' });
       } else if (dir > 0) {
@@ -195,36 +215,133 @@
         const from = src && !el.dataset.gid
           ? `translate(${flip * ((src.r.left + src.r.width / 2) - (now.left + now.width / 2))}px, ${flip * ((src.r.top + src.r.height / 2) - (now.top + now.height / 2))}px) rotate(${rot}deg) scale(.6)`
           : `rotate(${rot}deg) scale(${el.dataset.gid ? 1.8 : .6})`;
-        el.animate([{ transform: from, opacity: 0 }, { transform: `rotate(${rot}deg)`, opacity: 1 }], opts);
+        el.animate([{ transform: from, opacity: 0 }, { transform: restT, opacity: 1 }], opts);
       }
     }
   }
 
+  // Field cards as large as the Field allows: one row, every Unit's Gear strips and spent rotation included.
+  const CARD_H = 1024 / 733, PEEK = .24, FIELD_GAP = 1.4, MAX_CW = 12;
+  function sizeFields() {
+    const cq = $('table').clientWidth / 100;                // px per cqw
+    if (!cq) return;
+    for (const f of document.querySelectorAll('#table .field, #table .legends')) {
+      const leg = f.classList.contains('legends');
+      const units = [...f.querySelectorAll(':scope > .unit')];
+      if (!units.length) { f.style.removeProperty('--cw'); continue; }
+      const availW = f.clientWidth / cq - (leg ? 1.6 : 2.4), availH = f.clientHeight / cq - (leg ? 1 : 1.6);   // minus padding
+      let sumW = 0, maxH = 0;
+      for (const u of units) {
+        const len = CARD_H * (1 + PEEK * (+u.style.getPropertyValue('--n') || 0));   // card + Gear strips, in card widths
+        const spent = u.classList.contains('spent');
+        sumW += spent ? len : 1; maxH = Math.max(maxH, spent ? 1 : len);
+      }
+      const gap = leg ? 1.2 : FIELD_GAP;
+      const cw = Math.min(leg ? 7.5 : MAX_CW, availH / maxH, (availW - gap * (units.length - 1)) / sumW);
+      f.style.setProperty('--cw', `${Math.max(3, cw).toFixed(2)}cqw`);
+    }
+  }
+
+  // Every card that arrives from somewhere hidden or from your hand pops up big in the middle of the board,
+  // holds a moment, then flies to where it went: draws to your hand, cards trashed from the deck (V, Judy,
+  // River Ward), discards and played Programs to the trash, Gear onto its Unit, recovered cards to hand.
+  // Units moving between the Field and the trash keep their normal slide (FLIP).
+  const POP_ZONES = new Set(['hand', 'trash', 'gear']);
+  function cardLocations(st) {
+    const m = new Map();
+    for (const [pid, p] of Object.entries(st.players)) {
+      for (const z of ['hand', 'field', 'legends', 'trash'])
+        for (const c of p[z] || []) {
+          if (c.id && c.cardId) m.set(c.id, { pid, zone: z, c });
+          for (const g of c.attachments || []) m.set(g.id, { pid, zone: 'gear', c: g });
+        }
+    }
+    return m;
+  }
+  let pops = [];
+  function clearPops() { for (const p of pops) { p.clone.remove(); if (p.dest) p.dest.style.visibility = ''; } pops = []; }
+  function popArrivals(prevState, st) {
+    clearPops();
+    if (reduceMotion) return;
+    const was = cardLocations(prevState), now = cardLocations(st);
+    const arrivals = [];
+    for (const [id, n] of now) {
+      if (!POP_ZONES.has(n.zone)) continue;
+      if (n.zone === 'hand' && n.pid !== R.me) continue;              // the Rival's hand is hidden
+      const w = was.get(id);
+      if (w && (w.zone === n.zone || w.zone === 'field' || w.zone === 'gear' || w.zone === 'legends')) continue;
+      arrivals.push({ id, ...n });
+    }
+    if (!arrivals.length) return;
+    const shown = arrivals.slice(0, 6);
+    const T = $('table').getBoundingClientRect();
+    const k = shown.length, gap = 14;
+    const W = Math.min(200, (T.width * .9 - gap * (k - 1)) / k), H = W * CARD_H;
+    const rowLeft = T.left + T.width / 2 - (k * W + (k - 1) * gap) / 2, top = T.top + T.height / 2 - H / 2;
+    shown.forEach((a, i) => {
+      // destination: the card itself if it's drawn on screen, else its owner's trash pile
+      const side = a.pid === R.me ? 'you' : 'rival';
+      let dest = document.querySelector(`#table [data-cid="${CSS.escape(a.id)}"], #my-hand [data-cid="${CSS.escape(a.id)}"]`);
+      const exact = !!dest;
+      if (!dest) dest = document.querySelector(`#table .mat.${side} .a-trash .pile-wrap`);
+      if (!dest) return;
+      // this card's normal slide (e.g. hand → trash) would start it back at its old spot: the pop replaces it
+      if (exact) dest.getAnimations().forEach(x => x.cancel());
+      const d = dest.getBoundingClientRect();
+      const x = rowLeft + i * (W + gap), y = top;
+      const clone = document.createElement('div');
+      clone.className = 'card face pop-card';
+      clone.style.cssText = `position:fixed; z-index:40; width:${W}px; height:${H}px; left:${x}px; top:${y}px; background-image:url('${imgUrl(a.c.cardId)}')`;
+      document.body.appendChild(clone);
+      if (exact) dest.style.visibility = 'hidden';
+      pops.push({ clone, dest: exact ? dest : null });
+      const dx = (d.left + d.width / 2) - (x + W / 2), dy = (d.top + d.height / 2) - (y + H / 2);
+      const flip = dest.closest('.mat.rival') ? 180 : 0;        // lands the way it lies on the Rival's turned mat
+      const end = `translate(${dx}px, ${dy}px) scale(${Math.min(d.width, d.height / CARD_H) / W}) rotate(${flip}deg)`;
+      const anim = clone.animate([
+        { transform: 'scale(.4)', opacity: 0, offset: 0 },
+        { transform: 'scale(1.04)', opacity: 1, offset: .14 },
+        { transform: 'scale(1)', opacity: 1, offset: .2 },
+        { transform: 'scale(1)', opacity: 1, offset: .58 },
+        { transform: end, opacity: exact ? 1 : .2, offset: 1 },
+      ], { duration: 1250, delay: i * 90, easing: 'cubic-bezier(.3,.7,.3,1)', fill: 'both' });
+      anim.onfinish = () => { clone.remove(); if (exact) dest.style.visibility = ''; pops = pops.filter(p => p.clone !== clone); };
+    });
+  }
+
   // ── render one step ─────────────────────────────────────────────────────
   function render(dir = 0) {
+    clearPops();
     const before = Math.abs(dir) === 1 ? snapshot() : null;
     const s = R.steps[cur], st = s.state;
     cardsById = new Map();
 
-    $('table').innerHTML = rivalHandHtml(st) + matHtml(st, R.rival, true) + matHtml(st, R.me, false);
-    const hand = st.players[R.me].hand || [];
-    $('my-hand').innerHTML = hand.map(c => face(c)).join('') || '<span class="none">Empty</span>';
-    $('hand-count').textContent = hand.length ? `· ${hand.length}` : '';
-    $('glance').innerHTML = [R.rival, R.me].map(pid => glanceHtml(st, pid)).join('');
+    const lines = s.newLog.map(e => fmt(e.message)).filter(Boolean);
+    $('table').innerHTML = matHtml(st, R.rival, true) + bannerHtml(s, lines, dir) + matHtml(st, R.me, false);
+    $('rival-block').innerHTML = glanceHtml(st, R.rival) + handFanHtml(st, R.rival);
+    $('me-block').innerHTML = glanceHtml(st, R.me) + handFanHtml(st, R.me);
 
     const g = st.game;
     const who = g.activePlayerLabel ? `<span class="${g.activePlayerId === R.me ? 'mine' : 'theirs'}">${esc(g.activePlayerLabel)}</span>` : esc(g.stageLabel || 'Setup');
-    const lines = s.newLog.map(e => fmt(e.message)).filter(Boolean);
     $('turn-box').innerHTML = `<div class="t">${g.turnNumber ? `Turn ${g.turnNumber} · ` : ''}${who}</div>
       <div class="act">${lines.length ? lines.map(entryHtml).join('<br>') : esc(s.action?.label || 'Start of the match')}</div>`;
 
-    showBanner(s, lines, dir);
-
-    // cards named in this step's log glow on the board
+    // Cards named in this step's log glow. With several copies of a name, only the copy that changed
+    // this step (moved, spent/readied, flipped, gained Gear) glows; one unchanged copy glows on its own;
+    // otherwise none, rather than lighting up the wrong Meredith.
     const named = new Set(lines.flatMap(o => [...(o.a || []), o.via]).filter(p => p && p.card).map(p => short(p.card)));
-    for (const el of document.querySelectorAll('#table .card[data-cid]')) {
-      const c = cardsById.get(el.dataset.cid);
-      if (c && named.has(short(c.name))) el.classList.add('hot');
+    if (named.size) {
+      const was = cur > 0 ? cardSigs(R.steps[cur - 1].state) : new Map(), now = cardSigs(st);
+      const byName = new Map();
+      for (const el of document.querySelectorAll('#table .card[data-cid], #my-hand .card[data-cid]')) {
+        const c = cardsById.get(el.dataset.cid);
+        if (!c || !named.has(short(c.name))) continue;
+        const list = byName.get(short(c.name)) || []; list.push({ el, changed: was.get(c.id) !== now.get(c.id) }); byName.set(short(c.name), list);
+      }
+      for (const list of byName.values()) {
+        const changed = list.filter(x => x.changed);
+        (changed.length ? changed : list.length === 1 ? list : []).forEach(x => x.el.classList.add('hot'));
+      }
     }
 
     for (const li of $('log').querySelectorAll('.e')) {
@@ -238,32 +355,23 @@
     $('scrub').value = cur;
     $('counter').textContent = `${cur} / ${R.steps.length - 1}${s.elapsed != null ? ` · ${mmss(s.elapsed)}` : ''}`;
     $('counter').title = 'Action / total · match time';
+    sizeFields();
     animate(before, dir);
+    if (dir === 1) popArrivals(R.steps[cur - 1].state, st);
   }
 
-  // What just happened, on the board itself: a banner over the seam between the mats.
-  // It slides in when you step through actions and fades after a few seconds so the Gig dice stay visible.
-  let bannerTimer = null;
-  function showBanner(s, lines, dir) {
-    const el = $('banner');
-    clearTimeout(bannerTimer);
-    if (!dir || !lines.length) { el.hidden = true; return; }
+  // What just happened: a caption strip in its own gap between the two mats, so it never covers a card.
+  // It slides in fresh when you step forward or back (not when you jump).
+  function bannerHtml(s, lines, dir) {
     const g = s.state.game;
     const actor = lines.find(o => o.actor)?.actor || g.activePlayerId;
-    el.className = `banner ${actor === R.me ? 'mine' : 'theirs'}`;
-    el.innerHTML = `<div class="bn-h">${g.turnNumber ? `Turn ${g.turnNumber} · ` : ''}${esc(R.labels[actor] || '')}</div>`
-      + lines.map(o => `<div class="bn-l">${o.actor && o.actor !== actor ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : ''}${entryHtml(o)}</div>`).join('');
-    // sit on the seam between the two mats
-    const mats = $('table').querySelectorAll('.mat');
-    const col = document.querySelector('.board-col').getBoundingClientRect();
-    if (mats.length === 2) {
-      const a = mats[0].getBoundingClientRect(), b = mats[1].getBoundingClientRect();
-      el.style.top = `${(a.bottom + b.top) / 2 - col.top}px`;
-      el.style.left = `${(a.left + a.right) / 2 - col.left}px`;
-    }
-    el.hidden = false;
-    el.classList.remove('show'); void el.offsetWidth; el.classList.add('show');
-    bannerTimer = setTimeout(() => el.classList.remove('show'), timer ? 1000 : 3200);
+    const side = actor ? (actor === R.me ? 'mine' : 'theirs') : '';
+    const head = `<span class="bn-h">${g.turnNumber ? `T${g.turnNumber} · ` : ''}${esc(R.labels[actor] || 'Setup')}</span>`;
+    const body = lines.length
+      ? lines.map(o => `<span class="bn-l">${o.actor && o.actor !== actor ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : ''}${entryHtml(o)}</span>`).join('<span class="bn-sep">›</span>')
+      : `<span class="bn-l ld">${esc(s.action?.label || 'Start of the match')}</span>`;
+    const tip = lines.length ? s.newLog.map(e => e.message).join('\n') : '';
+    return `<div class="banner ${side}${Math.abs(dir) === 1 ? ' show' : ''}" aria-live="polite" title="${esc(tip)}">${head}<span class="bn-body">${body}</span></div>`;
   }
 
   function matchInfo() {
@@ -288,7 +396,7 @@
   function togglePlay(force) {
     const on = force ?? !timer;
     clearInterval(timer); timer = null;
-    if (on) timer = setInterval(() => { if (cur >= R.steps.length - 1) togglePlay(false); else go(cur + 1); }, 1100);
+    if (on) timer = setInterval(() => { if (cur >= R.steps.length - 1) togglePlay(false); else go(cur + 1); }, 1500);
     $('play').classList.toggle('on', on); $('play').textContent = on ? '❚❚' : '▶';
   }
 
