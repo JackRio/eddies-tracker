@@ -78,6 +78,18 @@
   ],
   "videos": [
     {
+      "id": "6nR8oZLwGOQ",
+      "title": "How to Deal With YYR In Cyberpunk TCG - A guide on how to beat YYR.",
+      "published": "2026-11-05T12:39:06+00:00",
+      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
+      "id": "uxT9SroA3vY",
+      "title": "Chrome Up - 4 | Cyberpunk TCG Decklist",
+      "published": "2026-11-05T06:30:22+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
       "id": "sOYkLP-k_aI",
       "title": "Holophone - Join the ALDECALDOS",
       "published": "2026-11-03T19:13:49+00:00",
@@ -462,12 +474,6 @@
       "channelId": "UCJavloH4k2Wyyf4eElRac2A"
     },
     {
-      "id": "NjJNH5lLICo",
-      "title": "Cyberpunk News and Ichorus's Decklist— Episode 3 | Cyberpunk TCG Podcast",
-      "published": "2026-10-09T19:29:10+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
-    },
-    {
       "id": "9j2ondicjPU",
       "title": "Cyberpunk TCG Blue Units Tier List for Set 1 \"Welcome to Night City\"",
       "published": "2026-10-09T02:26:26+00:00",
@@ -526,12 +532,6 @@
       "title": "Who is the Best Legend in Cyberpunk TCG? Our Final Ranking of all Welcome to Night City Legends",
       "published": "2026-09-28T10:00:10+00:00",
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
-    },
-    {
-      "id": "hBa42MSmWnY",
-      "title": "Cyberpunk TCG Yellow Units Tier List for Set 1 \"Welcome To Night City.\"",
-      "published": "2026-09-28T01:14:51+00:00",
-      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
       "id": "3-8N-4ABAfU",
@@ -790,10 +790,6 @@
       "short": false
     },
     {
-      "id": "hBa42MSmWnY",
-      "short": false
-    },
-    {
       "id": "wTbbphbbXb8",
       "short": false
     },
@@ -855,10 +851,6 @@
     },
     {
       "id": "DaN0e76Dvd8",
-      "short": false
-    },
-    {
-      "id": "NjJNH5lLICo",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "sOYkLP-k_aI",
       "short": false
+    },
+    {
+      "id": "6nR8oZLwGOQ",
+      "short": false
+    },
+    {
+      "id": "uxT9SroA3vY",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-04T14:40:44.244Z"
+  "updatedAt": "2026-11-05T14:45:42.393Z"
 }
