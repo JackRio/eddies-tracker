@@ -279,6 +279,19 @@
     </div>
   </div>
 
+  <div id="ai-overwrite-overlay" class="legend-picker-overlay" hidden>
+    <div class="legend-picker-card export-card" style="max-width: 420px">
+      <div class="legend-picker-header">
+        <h3>Overwrite existing text?</h3>
+        <button id="ai-overwrite-close" class="popped-close-btn">&#10005;</button>
+      </div>
+      <div class="export-actions">
+        <button id="ai-overwrite-yes" class="btn btn-primary">Overwrite</button>
+        <button id="ai-overwrite-no" class="btn">Fill empty only</button>
+      </div>
+    </div>
+  </div>
+
   <div id="export-overlay" class="legend-picker-overlay" hidden>
     <div class="legend-picker-card export-card">
       <div class="legend-picker-header">
@@ -319,7 +332,6 @@
       </div>
       <div class="ai-bar">
         <button id="ai-draft-btn" class="ai-btn">&#10024; AI Draft</button>
-        <label class="ai-overwrite" title="Off: only empty sections are filled. On: replaces sections you've already written."><input type="checkbox" id="ai-overwrite" /> Overwrite filled sections</label>
         <span id="ai-key-badge" class="ai-key-badge"></span>
         <button id="ai-key-btn" class="ai-link-btn"></button>
         <span id="ai-status" class="ai-status"></span>

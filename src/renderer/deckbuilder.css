@@ -127,6 +127,41 @@ body.deckbuilder-body {
 
 .deck-card:hover { border-color: rgba(245, 228, 0, 0.45); transform: translateY(-2px); }
 .deck-card.is-selected { border-color: var(--yellow); box-shadow: 0 0 0 1px var(--yellow) inset; }
+.deck-card.is-copy { border-color: #ff2bd6; }
+.deck-copy-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+.deck-copy-banner span {
+  background: #ff2bd6;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 1px 6px;
+}
+.deck-copy-banner button {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 1px 6px;
+  font-size: 11px;
+  color: #ff2bd6;
+  border-color: #ff2bd6;
+  background: transparent;
+  cursor: pointer;
+}
+.deck-copy-banner button:hover { background: rgba(255, 43, 214, 0.15); }
+.deck-card.copy-flash { animation: copy-flash 1.4s ease-out; }
+@keyframes copy-flash {
+  0%, 40% { box-shadow: 0 0 0 3px #ff2bd6, 0 0 24px #ff2bd6; }
+  100% { box-shadow: none; }
+}
 
 .deck-card-top {
   display: flex;

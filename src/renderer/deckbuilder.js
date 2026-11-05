@@ -504,6 +504,9 @@ function renderList() {
   container.innerHTML = groupedListHtml(list, deckCardHtml);
   renderAiQueueBar();
 
+  container.querySelectorAll('[data-jump-deck]').forEach((btn) => {
+    btn.addEventListener('click', () => jumpToDeck(btn.dataset.jumpDeck));
+  });
   container.querySelectorAll('[data-view-deck]').forEach((btn) => {
     btn.addEventListener('click', () => openDeckView(btn.dataset.viewDeck));
   });
@@ -577,7 +580,49 @@ async function publishDecks() {
   }
 }
 
+// Decks with the same Legends, main deck and sideboard (by card, not art) are
+// copies of each other. Returns deckId -> [other deckIds] for every deck that has one.
+function duplicateDeckMap() {
+  const sortedEntries = (o) => Object.entries(o || {}).filter(([, q]) => q > 0).sort(([a], [b]) => a.localeCompare(b));
+  const bySig = new Map();
+  for (const d of Object.values(decks)) {
+    const legends = (d.legendCardIds || []).filter(Boolean).sort();
+    const cards = sortedEntries(d.cards);
+    if (!legends.length && !cards.length) continue;
+    const sig = JSON.stringify([legends, cards, sortedEntries(d.sideboard)]);
+    if (!bySig.has(sig)) bySig.set(sig, []);
+    bySig.get(sig).push(d.id);
+  }
+  const map = {};
+  for (const ids of bySig.values()) {
+    if (ids.length > 1) for (const id of ids) map[id] = ids.filter((x) => x !== id);
+  }
+  return map;
+}
+
+function jumpToDeck(deckId) {
+  const find = () => el('deck-grid').querySelector(`[data-deck-id="${deckId}"]`);
+  let target = find();
+  if (!target) {
+    // It may sit in a minimized group - open that group for now (not saved).
+    const g = groups.find((x) => x.id === decks[deckId]?.groupId);
+    if (g) g.collapsed = false;
+    else ungroupedCollapsed = false;
+    renderList();
+    target = find();
+  }
+  if (!target) return;
+  target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  target.classList.remove('copy-flash');
+  void target.offsetWidth;
+  target.classList.add('copy-flash');
+}
+
 function deckCardHtml(deck) {
+  const copyOf = (duplicateDeckMap()[deck.id] || []).filter((id) => decks[id]);
+  const copyBanner = copyOf.length
+    ? `<div class="deck-copy-banner"><span>COPY</span>${copyOf.map((id) => `<button data-jump-deck="${id}" title="Go to ${escapeHtml(decks[id].name || 'Untitled Deck')}">${escapeHtml(decks[id].name || 'Untitled Deck')} &#10140;</button>`).join('')}</div>`
+    : '';
   const stats = computeDeckStats(deck);
   const legendCards = Array.from({ length: LEGEND_SLOTS }, (_, i) => {
     const cardId = deck.legendCardIds[i];
@@ -620,7 +665,8 @@ function deckCardHtml(deck) {
   const isSelected = listUiState.selectedIds.has(deck.id);
 
   return `
-    <div class="deck-card${isSelected ? ' is-selected' : ''}" data-deck-id="${deck.id}" draggable="true">
+    <div class="deck-card${isSelected ? ' is-selected' : ''}${copyOf.length ? ' is-copy' : ''}" data-deck-id="${deck.id}" draggable="true">
+      ${copyBanner}
       <div class="deck-card-top">
         <input type="checkbox" class="deck-card-select" data-select-deck="${deck.id}" ${isSelected ? 'checked' : ''} title="Select for Prep List" />
         <div class="deck-card-name" title="${escapeHtml(deck.name || 'Untitled Deck')}">${escapeHtml(deck.name || 'Untitled Deck')}</div>
@@ -1790,6 +1836,23 @@ function mergeAiSections(target, aiSections, overwrite) {
   return filled;
 }
 
+// Resolves true (overwrite), false (fill empty only) or null (cancelled).
+function askOverwrite() {
+  return new Promise((resolve) => {
+    const overlay = el('ai-overwrite-overlay');
+    const done = (v) => {
+      overlay.hidden = true;
+      overlay.onclick = null;
+      resolve(v);
+    };
+    el('ai-overwrite-yes').onclick = () => done(true);
+    el('ai-overwrite-no').onclick = () => done(false);
+    el('ai-overwrite-close').onclick = () => done(null);
+    overlay.onclick = (e) => { if (e.target === overlay) done(null); };
+    overlay.hidden = false;
+  });
+}
+
 let aiBusy = false;
 
 async function runAiDraft() {
@@ -1801,11 +1864,17 @@ async function runAiDraft() {
     setAiStatus('Add a Legend and some cards first.', true);
     return;
   }
+  // Only ask when there is already text that a draft could replace.
+  let overwrite = false;
+  if (Object.values(draft.descSections || {}).some((t) => (t || '').trim())) {
+    const choice = await askOverwrite();
+    if (choice === null) return;
+    overwrite = choice;
+  }
   // The draft takes a while and you may leave this deck meanwhile, so remember
-  // which deck it is for and what the checkbox said when you clicked.
+  // which deck it is for and what you chose when you clicked.
   const target = draft;
   const targetId = draft.id;
-  const overwrite = el('ai-overwrite').checked;
   const btn = el('ai-draft-btn');
   aiBusy = true;
   btn.disabled = true;
@@ -1830,7 +1899,7 @@ async function runAiDraft() {
     });
     updateDescSummary();
     openDescEditor();
-    setAiStatus(filled ? `Drafted ${filled} section${filled === 1 ? '' : 's'} - review and edit before saving.` : 'Nothing to fill (turn on "Overwrite filled sections" to replace).');
+    setAiStatus(filled ? `Drafted ${filled} section${filled === 1 ? '' : 's'} - review and edit before saving.` : 'Nothing to fill.');
     return;
   }
   // You moved on. Never touch whatever deck is open now. A saved deck gets the

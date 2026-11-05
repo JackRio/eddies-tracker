@@ -1,0 +1,32 @@
+# 4 Red / 2 Green (standard)
+
+// Legends (3)
+1 Adam Smasher: Ender of Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Units (16)
+3 6th Street Recruits
+2 Animals Wrecker
+1 Field Operator
+1 Maelstrom Zealots
+1 MaxTac AV
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+1 Valentino Street Racer
+3 Yorinobu Arasaka: Steel Dragon
+
+// Gears (7)
+3 Mantis Blades
+1 Riot Shield
+3 Satori: Sword of Saburo
+
+// Programs (17)
+2 Bonnie and Clyde
+3 Carnage at the Colosseum
+2 Detonate
+2 Industrial Assembly
+3 Memory Relapse
+1 Over the Edge
+2 Peace Offering
+2 Synapse Burnout

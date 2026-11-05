@@ -1,0 +1,32 @@
+# 4 Yellow / 2 Red (standard)
+
+// Legends (3)
+1 Adam Smasher: Ender of Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Units (16)
+2 6th Street Recruits
+1 Heywood Ripperdoc
+3 Johnny Silverhand: Never Stop Fighting
+1 MaxTac Suppression Team
+3 Meredith Stout: Stone Cold Corpo
+1 Rockn' Rockerboy
+2 Secondhand Bombus
+3 Sketchy Ripper
+
+// Gears (15)
+3 Adrenaline Converter
+1 Arasaka Emergency Radioport
+1 Gorilla Arms
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+
+// Programs (9)
+3 Bootleg Black Sapphire Show
+1 Detonate
+3 Live with the Aftermath
+1 Over the Edge
+1 Safety Override
