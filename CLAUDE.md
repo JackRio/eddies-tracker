@@ -950,7 +950,8 @@ game rules - the description must describe the deck.
 - `board/` is a standalone replay viewer for **cyberpunk-tcg-sim** replay JSON (snapshot + per-action
   patches; ChoomBattler's text log is too thin and isn't supported). Run `node scripts/serve-board.js`
   (port 4181, launch.json `board`): serves card art from the Eddies image cache (`/card/<simCardId>`,
-  matched on letters only - accented slugs are odd) and lists `~/Downloads/cyberpunk-tcg-sim-replay-*.json`.
+  matched on letters only - accented slugs are odd) and lists `cyberpunk-tcg-sim-replay-*.json` from
+  `~/Downloads` and `board/replays/` (the 15 shared replays, Oct-Nov 2026 - use them to test changes).
   Mats come from learnCTCG's two-player template (Rival's mat turned 180°). Card backs are the official
   Legend back (`board/assets/card-back-legend.webp`); non-Legend backs are the same image through the
   `#ctcg-swap` SVG filter (yellow/black swapped). Gig dice: colored by owner (green yours, red Rival's),

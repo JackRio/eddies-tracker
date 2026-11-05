@@ -2,7 +2,7 @@
 //   /                     board/ static files
 //   /card/<cardId>        card art from the Eddies image cache (%APPDATA%/cyberpunk-tcg-tracker/images),
 //                         cardId = the sim's snake_case id, e.g. meredith_stout_stone_cold_corpo
-//   /api/replays          list of cyberpunk-tcg-sim replay files in ~/Downloads
+//   /api/replays          list of cyberpunk-tcg-sim replay files in ~/Downloads and board/replays
 //   /api/replays/<name>   one replay file
 // Run: node scripts/serve-board.js   (port 4181)
 const http = require('http');
@@ -14,6 +14,7 @@ const root = path.join(__dirname, '..', 'board');
 const port = 4181;
 const userData = path.join(process.env.APPDATA || path.join(os.homedir(), '.config'), 'cyberpunk-tcg-tracker');
 const downloads = path.join(os.homedir(), 'Downloads');
+const replaysDir = path.join(root, 'replays');
 const REPLAY_RE = /^cyberpunk-tcg-sim-replay-.*\.json$/;
 
 const MIME = {
@@ -58,19 +59,24 @@ http.createServer((req, res) => {
       (res.writeHead(200, { 'Content-Type': 'image/webp', 'Cache-Control': 'max-age=3600' }), res.end(data)));
   }
 
+  // replays from ~/Downloads and from board/replays (the ones shared in the repo); same name = same file
   if (url === '/api/replays') {
-    let list = [];
-    try {
-      list = fs.readdirSync(downloads).filter(f => REPLAY_RE.test(f))
-        .map(f => ({ name: f, mtime: fs.statSync(path.join(downloads, f)).mtimeMs }))
-        .sort((a, b) => b.mtime - a.mtime);
-    } catch { /* no Downloads folder */ }
+    const seen = new Map();
+    for (const dir of [downloads, replaysDir]) {
+      try {
+        for (const f of fs.readdirSync(dir).filter(f => REPLAY_RE.test(f)))
+          if (!seen.has(f)) seen.set(f, { name: f, date: (f.match(/replay-(\d{4}-\d\d-\d\d)/) || [])[1] || '' });
+      } catch { /* folder missing */ }
+    }
+    const list = [...seen.values()].sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
     return send(res, 200, JSON.stringify(list), MIME['.json']);
   }
   if (url.startsWith('/api/replays/')) {
     const name = path.basename(url.slice('/api/replays/'.length));
     if (!REPLAY_RE.test(name)) return send(res, 400, 'bad name');
-    return fs.readFile(path.join(downloads, name), (err, data) => err ? send(res, 404, 'not found') : send(res, 200, data, MIME['.json']));
+    const file = [downloads, replaysDir].map(d => path.join(d, name)).find(f => fs.existsSync(f));
+    if (!file) return send(res, 404, 'not found');
+    return fs.readFile(file, (err, data) => err ? send(res, 404, 'not found') : send(res, 200, data, MIME['.json']));
   }
 
   let filePath = path.join(root, url);
