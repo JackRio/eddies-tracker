@@ -977,7 +977,9 @@ game rules - the description must describe the deck.
   footprints overlap. `popArrivals()`: any card arriving in your hand, a trash or a Unit's Gear from a
   hidden place or your hand (draws, deck trashes, discards, played Programs/Gear, recoveries) pops up
   in the middle, then flies to its spot; it cancels that card's own FLIP slide first, or it measures the
-  slide's start (the hand) as the destination. Field → trash moves keep the normal slide. The step glow (`.hot`) is per card *instance*: when
+  slide's start (the hand) as the destination. Field → trash moves keep the normal slide.
+  Legends don't stack Gear strips under the card (it made them tiny): Gear sits tucked behind as thin
+  edges (`.gear.tucked`) with a "⚙ N" badge, and the hover panel shows every attached Gear card. The step glow (`.hot`) is per card *instance*: when
   several copies share a name, only the copy whose zone/state changed this step glows (`cardSigs()`).
 
 ## Known CSS gotchas (already solved, don't reintroduce)

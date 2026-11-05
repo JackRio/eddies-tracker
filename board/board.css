@@ -273,3 +273,16 @@ button, select, input { font: inherit; color: inherit; }
 
 /* the Field and Legends rows fill their area exactly, so sizeFields measures the real space */
 .field, .legends { align-self: stretch; justify-self: stretch; width: auto; height: auto; min-width: 0; min-height: 0; }
+
+/* Legends carry Gear tucked behind the card (thin edges top-right) with a count badge, so they stay full size */
+.unit.lg .card.gear.tucked { top: calc(var(--i) * -.45cqw - .45cqw); left: calc((var(--i) + 1) * .45cqw); z-index: calc(1 - var(--i)); filter: brightness(.7); }
+.gear-badge { position: absolute; z-index: 5; left: -.4cqw; bottom: -.4cqw; padding: 0 .6cqw; border-radius: 1cqw; background: #0a0a0f;
+  border: max(1px, .15cqw) solid var(--cyan); color: var(--cyan); font: 700 max(8px, 1.2cqw) var(--head); white-space: nowrap; }
+.mat.rival .gear-badge { transform: rotate(180deg); }
+
+/* hover panel: each attached Gear as its own card */
+.zi-gear > span { color: var(--dim); }
+.zi-gear > div { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.zi-gear figure { margin: 0; width: 62px; }
+.zi-gear i { display: block; aspect-ratio: 733 / 1024; border-radius: 4px; background: #111 center / cover no-repeat; }
+.zi-gear figcaption { font-size: 10px; line-height: 1.2; color: #c7c7d2; margin-top: 2px; }

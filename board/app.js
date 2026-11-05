@@ -38,6 +38,13 @@
     const delta = power - base;
     // power shows only when an effect changed it, like a counter on a real table
     const badge = delta && (!isLegend || u.zone === 'field') ? `<span class="badge ${delta > 0 ? 'up' : 'down'}">${power}</span>` : '';
+    // A Legend keeps its full size: its Gear sits tucked just behind it (thin edges) with a count badge;
+    // hover shows every Gear card. Units on the Field show the Gear's bottom strip under the card instead.
+    if (isLegend && u.zone !== 'field') {
+      return `<div class="unit lg${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:0">
+        ${gear.map((g, i) => face(g, 'gear tucked', `--i:${i}`)).join('')}${face(u, 'host')}${badge}
+        ${gear.length ? `<span class="gear-badge" title="${esc(gear.map(g => short(g.name)).join(', '))}">⚙ ${gear.length}</span>` : ''}</div>`;
+    }
     return `<div class="unit${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:${gear.length}">
       ${gear.map((g, i) => face(g, 'gear', `--i:${i}`)).join('')}${face(u, 'host')}${badge}</div>`;
   }
@@ -448,7 +455,8 @@
     }
     for (const e of c.currentEffects || [])
       if (!/^(spent|ready|power)$/i.test(e.kind) && !/^(SPENT|READY)$/.test(e.label)) rows.push(`<div class="zi-fx ${e.kind === 'lag' ? 'lag' : esc(e.tone || '')}"><b>${esc(e.label)}</b> ${esc(e.description)}${e.sourceName && e.sourceName !== 'Game rule' ? ` <small>${esc(e.sourceName)}</small>` : ''}</div>`);
-    if (c.attachments?.length) rows.push(`<div class="zi-row"><span>Gear</span><b>${c.attachments.map(g => esc(short(g.name))).join(', ')}</b></div>`);
+    if (c.attachments?.length) rows.push(`<div class="zi-gear"><span>Gear · ${c.attachments.length}</span><div>${c.attachments.map(g =>
+      `<figure><i style="background-image:url('${imgUrl(g.cardId)}')"></i><figcaption>${esc(short(g.name))}</figcaption></figure>`).join('')}</div></div>`);
     return rows.length ? `<div class="zi">${rows.join('')}</div>` : '';
   }
   document.addEventListener('mouseover', e => {
