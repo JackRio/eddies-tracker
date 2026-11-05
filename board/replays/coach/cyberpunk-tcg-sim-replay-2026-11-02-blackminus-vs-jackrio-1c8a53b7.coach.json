@@ -1,0 +1,786 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-02-blackminus-vs-jackrio-1c8a53b7.json",
+ "matchId": "1c8a53b7-4191-4ff8-936f-7ed72f0aa1a4",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "BlackMinus",
+ "result": {
+  "loserId": "player1",
+  "reason": "BlackMinus conceded the match.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "42 cards seen in the game, rest from published deck \"Adam Smasher ~ YYR\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax",
+    "River Ward: Detective on the Hunt"
+   ],
+   "seen": 19
+  },
+  "rival": {
+   "source": "10 cards seen in the game, rest from meta deck \"4 Blue / 2 Green (standard)\"",
+   "legends": [
+    "Alt Cunningham: Soulkiller Architect",
+    "Judy Álvarez: Braindance Maestro",
+    "Hanako Arasaka: Daughter of the Emperor"
+   ],
+   "seen": 9
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 378,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "stepB": 13,
+   "youDid": [
+    "JackRio sold Mandibular Upgrade into Eddies.",
+    "JackRio played Dexter DeShawn: One Last Chance by spending 1 Eddie and 2 Legends.",
+    "JackRio used Dexter DeShawn: One Last Chance to increase BlackMinus's d4 from 1 to 2.",
+    "JackRio called a Legend by spending 1 Legend. Adam Smasher: Ender of Legends was revealed."
+   ],
+   "actual": {
+    "p": 0.7083333333333334,
+    "se": 0.09477598811252412,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 4,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.09477598811252412,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Mandibular Upgrade",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.130031582934249,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    },
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": -0.25,
+     "gainSe": 0.0902893898143269,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  +1 - Dexter DeShawn: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 0,
+      "unspent": 0,
+      "faceUpLegends": 0
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.4166666666666667,
+     "se": 0.10279899245732683,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Bootleg Black Sapphire Show",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Out of 24 playouts you lost 7 after your turn, and 6 after the coach's."
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 23,
+   "stepB": 27,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Bootleg Black Sapphire Show by spending 2 Eddies and 3 Legends.",
+    "JackRio sold the top card of their deck into Eddies with Bootleg Black Sapphire Show.",
+    "JackRio controls even and odd Gig values and drew Bootleg Black Sapphire Show and Satori: Sword of Saburo with Bootleg Black Sapphire Show.",
+    "JackRio called a Legend by spending 1 Eddie. Viktor Vektor: Sit Down and Relax was revealed.",
+    "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+    "JackRio revealed Zetatech Faceplate and Mandibular Upgrade with Viktor Vektor and added them to hand."
+   ],
+   "actual": {
+    "p": 0.9583333333333334,
+    "se": 0.04166666666666667,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 4,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 8,
+     "eddies": 3,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.08333333333333334,
+     "moves": [
+      "Call River Ward: Detective on the Hunt",
+      "Play Secondhand Bombus",
+      "Sell Mantis Blades",
+      "Play Adrenaline Converter on Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 7,
+      "rivalPower": 0,
+      "readyUnits": 2,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002614,
+     "gain": -0.125,
+     "gainSe": 0.0915348195410129,
+     "moves": [
+      "Call River Ward: Detective on the Hunt",
+      "Play Secondhand Bombus",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 6,
+      "rivalPower": 0,
+      "readyUnits": 2,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.0982946374365981,
+     "moves": [
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Bootleg Black Sapphire Show",
+      "Play Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 7,
+      "rivalPower": 0,
+      "readyUnits": 2,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "Sell Bootleg Black Sapphire Show",
+      "Play Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 7,
+      "rivalPower": 0,
+      "readyUnits": 2,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 21
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 6,
+   "stepA": 40,
+   "stepB": 44,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Bootleg Black Sapphire Show by spending 4 Eddies and 1 Legend.",
+    "JackRio sold the top card of their deck into Eddies with Bootleg Black Sapphire Show.",
+    "JackRio controls even and odd Gig values and drew Johnny Silverhand: Never Stop Fighting and Live with the Aftermath with Bootleg Black Sapphire Show.",
+    "JackRio played Secondhand Bombus by spending 1 Eddie and 1 Legend.",
+    "JackRio called a Legend by spending 1 Legend. River Ward: Detective on the Hunt was revealed."
+   ],
+   "actual": {
+    "p": 0.8333333333333334,
+    "se": 0.07770873402002614,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 4,
+     "rivalPower": 2,
+     "readyUnits": 2,
+     "hand": 8,
+     "eddies": 5,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Sell Satori: Sword of Saburo",
+      "Play Mantis Blades on Johnny Silverhand: Never Stop Fighting"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 14,
+      "rivalPower": 2,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666667,
+     "gain": 0.125,
+     "gainSe": 0.0915348195410129,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Sell Adrenaline Converter"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 12,
+      "rivalPower": 2,
+      "readyUnits": 2,
+      "hand": 7,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9166666666666666,
+     "se": 0.05763033956734371,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.10279899245732688,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Sell Adrenaline Converter",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 12,
+      "rivalPower": 2,
+      "readyUnits": 2,
+      "hand": 7,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.11227500313294322,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Sell Satori: Sword of Saburo",
+      "Play Mantis Blades on Dexter DeShawn: One Last Chance"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 14,
+      "rivalPower": 2,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "mistake",
+   "why": [
+    "Ends with Johnny Silverhand (10 power) on the field, where you had Secondhand Bombus (0 power).",
+    "Equips Mantis Blades on Johnny Silverhand.",
+    "Sells Satori instead of Mantis Blades.",
+    "Out of 24 playouts you lost 4 after your turn, and 0 after the coach's.",
+    "By the end of your next turn you're at 5 Gigs on average, instead of 4.1."
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 56,
+   "stepB": 70,
+   "youDid": [
+    "JackRio sold Arasaka Emergency Radioport into Eddies.",
+    "JackRio played Johnny Silverhand: Never Stop Fighting by spending 6 Eddies.",
+    "JackRio played Secondhand Bombus by spending 2 Legends.",
+    "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free.",
+    "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+    "JackRio declared Johnny Silverhand: Never Stop Fighting against Lizzy Wizzy: Delicate Weapon. BlackMinus must respond after attack effects resolve.",
+    "Johnny Silverhand: Never Stop Fighting (11) fought Lizzy Wizzy: Delicate Weapon (2) and won.",
+    "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+    "Lizzy Wizzy: Delicate Weapon was defeated. JackRio's attack won the fight.",
+    "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. BlackMinus must respond after attack effects resolve.",
+    "Johnny Silverhand: Never Stop Fighting made a Gig attack on BlackMinus and will steal 2 Gigs if the defender cannot stop it.",
+    "JackRio must choose 2 Gigs to steal from BlackMinus.",
+    "JackRio stole d10 (1) from BlackMinus. JackRio now has 5 Gig dice.",
+    "JackRio stole d4 (2) from BlackMinus. JackRio now has 5 Gig dice."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 5,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 0,
+     "power": 11,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 6,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002614,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d6 (5) and the Rival's d8 (5)",
+      "Sell Satori: Sword of Saburo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 2,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002614,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d6 (5) and the Rival's d8 (3)",
+      "Sell Mandibular Upgrade"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 2,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002614,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d4 (2) and the Rival's d6 (5)",
+      "Sell Mandibular Upgrade"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 2,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": -0.5416666666666666,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Use River Ward: Detective on the Hunt",
+      "  pick Satori: Sword of Saburo",
+      "  pick River Ward: Detective on the Hunt - Equip to a friendly Unit or face-up Legend",
+      "Sell Mandibular Upgrade",
+      "Play Zetatech Faceplate on Viktor Vektor: Sit Down and Relax",
+      "  pick the Rival's d8 (5) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 8,
+      "rivalPower": 2,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 6,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 10,
+   "stepA": 78,
+   "stepB": 91,
+   "youDid": [
+    "JackRio sold Live with the Aftermath into Eddies.",
+    "JackRio sent Adam Smasher: Ender of Legends GO SOLO onto the field.",
+    "Placide: Voodoo Sentinel was defeated. Adam Smasher: Ender of Legends's PLAY effect defeated it.",
+    "JackRio equipped Zetatech Faceplate to Adam Smasher: Ender of Legends for free.",
+    "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. BlackMinus must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d4 from 1 to 2.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Gorilla Arms.",
+    "Adam Smasher: Ender of Legends made a Gig attack on BlackMinus and will steal 2 Gigs if the defender cannot stop it.",
+    "JackRio must choose 2 Gigs to steal from BlackMinus.",
+    "JackRio stole d8 (3) from BlackMinus. JackRio now has 8 Gig dice.",
+    "JackRio stole d8 (5) from BlackMinus. JackRio now has 8 Gig dice."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 8,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 0,
+     "power": 11,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 7,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Adam Smasher: Ender of Legends goes Solo",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  steal the Rival's d6 (5)",
+      "Sell Satori: Sword of Saburo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 9,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Adam Smasher: Ender of Legends goes Solo",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  steal the Rival's d8 (5)",
+      "Sell Mandibular Upgrade",
+      "Attack the Rival's Gigs with Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 9,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Adam Smasher: Ender of Legends goes Solo",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  steal the Rival's d12 (5)",
+      "Sell Mandibular Upgrade",
+      "Attack the Rival's Gigs with Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 9,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Adam Smasher: Ender of Legends goes Solo",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  steal the Rival's d6 (5)",
+      "Sell Zetatech Faceplate",
+      "Play Mandibular Upgrade on River Ward: Detective on the Hunt",
+      "Attack the Rival's Gigs with Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 0,
+      "power": 9,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 4,
+      "eddies": 7,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  }
+ ]
+}

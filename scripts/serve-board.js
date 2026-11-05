@@ -4,6 +4,7 @@
 //                         cardId = the sim's snake_case id, e.g. meredith_stout_stone_cold_corpo
 //   /api/replays          list of cyberpunk-tcg-sim replay files in ~/Downloads and board/replays
 //   /api/replays/<name>   one replay file
+//   /api/coach/<name>     Replay Coach result for that replay (board/replays/coach/, from scripts/coach.js)
 // Run: node scripts/serve-board.js   (port 4181)
 const http = require('http');
 const fs = require('fs');
@@ -70,6 +71,13 @@ http.createServer((req, res) => {
     }
     const list = [...seen.values()].sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name));
     return send(res, 200, JSON.stringify(list), MIME['.json']);
+  }
+  // Replay Coach results (node scripts/coach.js), keyed by replay file name
+  if (url.startsWith('/api/coach/')) {
+    const name = path.basename(url.slice('/api/coach/'.length));
+    if (!REPLAY_RE.test(name)) return send(res, 400, 'bad name');
+    const file = path.join(replaysDir, 'coach', name.replace(/\.json$/, '.coach.json'));
+    return fs.readFile(file, (err, data) => err ? send(res, 404, 'not coached yet') : send(res, 200, data, MIME['.json']));
   }
   if (url.startsWith('/api/replays/')) {
     const name = path.basename(url.slice('/api/replays/'.length));

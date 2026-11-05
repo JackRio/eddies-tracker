@@ -1,0 +1,833 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-10-drmil-vs-jackrio-2a340cc3.json",
+ "matchId": "2a340cc3-48f5-4b93-8279-f9c0e1d1b947",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Drmil",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid",
+    "Evelyn Parker: Beautiful Enigma"
+   ],
+   "seen": 18
+  },
+  "rival": {
+   "source": "14 cards seen in the game, rest from meta deck \"Adam Smasher / Muamar Reyes / River Ward\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt",
+    "Royce: Psycho on the Edge"
+   ],
+   "seen": 11
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 568,
+ "turns": [
+  {
+   "turn": 1,
+   "stepA": 4,
+   "stepB": 10,
+   "youDid": [
+    "JackRio played Industrial Assembly by spending 1 Legend.",
+    "JackRio used Industrial Assembly to increase JackRio's d12 from 6 to 10.",
+    "JackRio controlled a Gig with 8+ value and drew Bonnie and Clyde.",
+    "JackRio sold Bonnie and Clyde into Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. V — Streetkid was revealed.",
+    "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, and may recover a Braindance Program from trash.",
+    "JackRio returned Industrial Assembly from trash to hand. Recovered with V Streetkid."
+   ],
+   "actual": {
+    "p": 0.375,
+    "se": 0.10094660663590603,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 0,
+     "units": 0,
+     "rivalUnits": 0,
+     "power": 0,
+     "rivalPower": 0,
+     "readyUnits": 0,
+     "hand": 7,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.10279899245732688,
+     "moves": [
+      "Call V: Streetkid",
+      "Sell Industrial Assembly"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 0,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    },
+    {
+     "p": 0.4166666666666667,
+     "se": 0.10279899245732683,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.11227500313294322,
+     "moves": [
+      "Call Evelyn Parker: Beautiful Enigma",
+      "Sell Industrial Assembly"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 0,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": 0,
+     "gainSe": 0.1203858530857692,
+     "moves": [
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 0,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 0,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Also sells Industrial Assembly for Eddies.",
+    "Out of 24 playouts you lost 15 after your turn, and 13 after the coach's."
+   ]
+  },
+  {
+   "turn": 3,
+   "stepA": 17,
+   "stepB": 24,
+   "youDid": [
+    "JackRio played Industrial Assembly by spending 1 Eddie.",
+    "JackRio used Industrial Assembly to increase JackRio's d10 from 2 to 6.",
+    "JackRio controlled a Gig with 8+ value and drew Bonnie and Clyde.",
+    "JackRio sold Bonnie and Clyde into Eddies.",
+    "JackRio played La Llorona — Ghost of the Past by spending 1 Eddie and 2 Legends.",
+    "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+    "JackRio drew Animals Wrecker with Dexter DeShawn — Off the Grid."
+   ],
+   "actual": {
+    "p": 0.5,
+    "se": 0.10425720702853739,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 1,
+     "power": 3,
+     "rivalPower": 2,
+     "readyUnits": 1,
+     "hand": 7,
+     "eddies": 2,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.1408973141692084,
+     "moves": [
+      "Play Psycho Squad",
+      "Sell Bonnie and Clyde",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 2,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.125,
+     "gainSe": 0.15123285625681412,
+     "moves": [
+      "Play Psycho Squad",
+      "Sell Industrial Assembly",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 2,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.125,
+     "gainSe": 0.125,
+     "moves": [
+      "Play Psycho Squad",
+      "Sell Industrial Assembly"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 2,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.125,
+     "gainSe": 0.125,
+     "moves": [
+      "Play Psycho Squad"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 2,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 5,
+   "stepA": 31,
+   "stepB": 34,
+   "youDid": [
+    "JackRio sold Industrial Assembly into Eddies.",
+    "JackRio played Royce — Don't Call Me Simon by spending 3 Eddies and 2 Legends.",
+    "Augmented Negotiators was defeated. Royce — Don't Call Me Simon's PLAY effect defeated it."
+   ],
+   "actual": {
+    "p": 0.4583333333333333,
+    "se": 0.10389457216622948,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 7,
+     "rivalPower": 5,
+     "readyUnits": 2,
+     "hand": 6,
+     "eddies": 3,
+     "unspent": 1,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Royce: Don't Call Me Simon",
+      "Sell Bonnie and Clyde"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 7,
+      "rivalPower": 5,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.4166666666666667,
+     "se": 0.10279899245732685,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.14089731416920842,
+     "moves": [
+      "Play Psycho Squad",
+      "Sell Industrial Assembly",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick your d12 (10) - Dexter DeShawn: choose a Gig to increase",
+      "  0 - Increase by how much?",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 9,
+      "rivalPower": 7,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.11912523349835939,
+     "moves": [
+      "Play Royce: Don't Call Me Simon",
+      "Sell Bonnie and Clyde",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 7,
+      "rivalPower": 5,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.10279899245732686,
+     "moves": [
+      "Play Psycho Squad",
+      "Sell Bonnie and Clyde",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d10 (9) - Dexter DeShawn: choose a Gig to increase",
+      "  +2 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 9,
+      "rivalPower": 7,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 7,
+   "stepA": 46,
+   "stepB": 57,
+   "youDid": [
+    "JackRio sold Bonnie and Clyde into Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. Evelyn Parker — Beautiful Enigma was revealed.",
+    "JackRio played Modded Kusanagi by spending 3 Eddies and 3 Legends.",
+    "JackRio chose Modded Kusanagi to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Modded Kusanagi. Drmil must respond after attack effects resolve.",
+    "Modded Kusanagi made a Gig attack on Drmil and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Drmil.",
+    "JackRio stole d10 (9) from Drmil. JackRio now has 5 Gig dice.",
+    "JackRio chose Royce — Don't Call Me Simon to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Royce — Don't Call Me Simon. Drmil must respond after attack effects resolve.",
+    "Royce — Don't Call Me Simon (4) fought Meredith Stout — Stone Cold Corpo (5) and lost.",
+    "Royce — Don't Call Me Simon was defeated. Drmil's defender held the line."
+   ],
+   "actual": {
+    "p": 0,
+    "se": 0,
+    "outcome": {
+     "gigs": 5,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 11,
+     "rivalPower": 10,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.4166666666666667,
+     "se": 0.10279899245732683,
+     "gain": 0.4166666666666667,
+     "gainSe": 0.10279899245732683,
+     "moves": [
+      "Play Animals Wrecker",
+      "Sell Bonnie and Clyde"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 3,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 17,
+      "rivalPower": 10,
+      "readyUnits": 3,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.16666666666666666,
+     "se": 0.07770873402002614,
+     "gain": 0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Animals Wrecker",
+      "Sell Bonnie and Clyde",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 3,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 17,
+      "rivalPower": 10,
+      "readyUnits": 3,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.125,
+     "se": 0.0689596605459213,
+     "gain": 0.125,
+     "gainSe": 0.0689596605459213,
+     "moves": [
+      "Play Animals Wrecker",
+      "Sell Bonnie and Clyde",
+      "Attack the Rival's Gigs with Royce: Don't Call Me Simon",
+      "Attack the Rival's Gigs with La Llorona: Ghost of the Past",
+      "  steal the Rival's d8 (2)",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 13,
+      "rivalPower": 10,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "  steal the Rival's d12 (7)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 2,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 15,
+      "rivalPower": 10,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Ends with Royce (4 power) and Animals Wrecker (10 power) on the field, where you had Modded Kusanagi (8 power).",
+    "Out of 24 playouts you lost 24 after your turn, and 14 after the coach's.",
+    "By the end of your next turn you're at 7.2 Gigs on average, instead of 5.4."
+   ]
+  },
+  {
+   "turn": 9,
+   "stepA": 74,
+   "stepB": 75,
+   "youDid": [
+    "JackRio played Kerry Eurodyne — The Last Rockerboy by spending 4 Eddies."
+   ],
+   "actual": {
+    "p": 0,
+    "se": 0,
+    "outcome": {
+     "gigs": 6,
+     "rivalGigs": 3,
+     "units": 1,
+     "rivalUnits": 3,
+     "power": 5,
+     "rivalPower": 17,
+     "readyUnits": 1,
+     "hand": 6,
+     "eddies": 4,
+     "unspent": 3,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Animals Wrecker",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d12 (7) - Dexter DeShawn: choose a Gig to increase",
+      "  0 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 3,
+      "power": 10,
+      "rivalPower": 17,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Modded Kusanagi"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 3,
+      "power": 8,
+      "rivalPower": 17,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Animals Wrecker",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d8 (2) - Dexter DeShawn: choose a Gig to increase",
+      "  +1 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 3,
+      "power": 10,
+      "rivalPower": 17,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 11,
+   "stepA": 99,
+   "stepB": 102,
+   "youDid": [
+    "JackRio played Meredith Stout — Stone Cold Corpo by spending 4 Eddies.",
+    "JackRio used Kerry Eurodyne — The Last Rockerboy to draw Carnage at the Colosseum, La Llorona — Ghost of the Past.",
+    "JackRio played La Llorona — Ghost of the Past by spending 3 Legends."
+   ],
+   "actual": {
+    "p": 0,
+    "se": 0,
+    "outcome": {
+     "gigs": 5,
+     "rivalGigs": 6,
+     "units": 3,
+     "rivalUnits": 4,
+     "power": 13,
+     "rivalPower": 27,
+     "readyUnits": 2,
+     "hand": 7,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Kerry Eurodyne: The Last Rockerboy",
+      "  steal the Rival's d4 (4)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 5,
+      "units": 2,
+      "rivalUnits": 4,
+      "power": 13,
+      "rivalPower": 27,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Modded Kusanagi",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d8 (2) - Dexter DeShawn: choose a Gig to increase",
+      "  +1 - Increase by how much?",
+      "Attack the Rival's Gigs with Kerry Eurodyne: The Last Rockerboy",
+      "  steal the Rival's d8 (4)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 5,
+      "units": 2,
+      "rivalUnits": 4,
+      "power": 13,
+      "rivalPower": 27,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Animals Wrecker",
+      "Use Kerry Eurodyne: The Last Rockerboy",
+      "Sell Industrial Assembly",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d12 (8) - Dexter DeShawn: choose a Gig to increase",
+      "  0 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 4,
+      "power": 15,
+      "rivalPower": 27,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 5,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 12
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Animals Wrecker",
+      "Use Kerry Eurodyne: The Last Rockerboy",
+      "Sell Industrial Assembly",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick the Rival's d6 (3) - Dexter DeShawn: choose a Gig to increase",
+      "  +2 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 4,
+      "power": 15,
+      "rivalPower": 27,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 5,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 12
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  }
+ ]
+}

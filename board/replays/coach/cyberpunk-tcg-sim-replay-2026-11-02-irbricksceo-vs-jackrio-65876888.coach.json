@@ -1,0 +1,1170 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-02-irbricksceo-vs-jackrio-65876888.json",
+ "matchId": "65876888-7c3e-4192-b548-f90c04db02cf",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Irbricksceo",
+ "result": {
+  "loserId": "player2",
+  "reason": "Overtime 7 Gig threshold was reached.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "42 cards seen in the game, rest from published deck \"Adam Smasher ~ YYR\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax",
+    "River Ward: Detective on the Hunt"
+   ],
+   "seen": 19
+  },
+  "rival": {
+   "source": "12 cards seen in the game, rest from published deck \"RRB ~ Anti-Alt\"",
+   "legends": [
+    "Royce: Psycho on the Edge",
+    "Evelyn Parker: Beautiful Enigma",
+    "Dexter DeShawn: Off the Grid"
+   ],
+   "seen": 12
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 570,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 9,
+   "stepB": 13,
+   "youDid": [
+    "JackRio called a Legend by spending 1 Legend. Adam Smasher: Ender of Legends was revealed.",
+    "JackRio sold Arasaka Emergency Radioport into Eddies.",
+    "JackRio played Sketchy Ripper by spending 1 Eddie and 1 Legend.",
+    "JackRio equipped Mantis Blades to Sketchy Ripper by spending 1 Legend."
+   ],
+   "actual": {
+    "p": 0.375,
+    "se": 0.10094660663590603,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 2,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 4,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": 0.125,
+     "gainSe": 0.1387378405691724,
+     "moves": [
+      "Call Adam Smasher: Ender of Legends",
+      "Play Sketchy Ripper",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.3333333333333333,
+     "se": 0.0982946374365981,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card",
+      "Sell Mantis Blades",
+      "Play Adrenaline Converter on Viktor Vektor: Sit Down and Relax"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    },
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252415,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.11912523349835939,
+     "moves": [
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card",
+      "Sell Arasaka Emergency Radioport",
+      "Play Mantis Blades on Viktor Vektor: Sit Down and Relax"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 2,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    },
+    {
+     "p": 0.08333333333333333,
+     "se": 0.057630339567343716,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Viktor Vektor: Sit Down and Relax",
+      "Play Adrenaline Converter on Viktor Vektor: Sit Down and Relax"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 3
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Doesn't equip Mantis Blades on Sketchy Ripper.",
+    "Sells Mantis Blades instead of Arasaka Emergency Radioport.",
+    "Out of 24 playouts you lost 15 after your turn, and 12 after the coach's."
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 22,
+   "stepB": 26,
+   "youDid": [
+    "JackRio sold Adrenaline Converter into Eddies.",
+    "JackRio played Bootleg Black Sapphire Show by spending 2 Eddies and 3 Legends.",
+    "JackRio sold the top card of their deck into Eddies with Bootleg Black Sapphire Show.",
+    "JackRio controls even and odd Gig values and drew Zetatech Faceplate and Mandibular Upgrade with Bootleg Black Sapphire Show.",
+    "JackRio called a Legend by spending 1 Eddie. Viktor Vektor: Sit Down and Relax was revealed.",
+    "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+    "JackRio revealed Mandibular Upgrade and Adrenaline Converter with Viktor Vektor and added them to hand."
+   ],
+   "actual": {
+    "p": 0.5833333333333334,
+    "se": 0.10279899245732686,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 0,
+     "rivalUnits": 0,
+     "power": 0,
+     "rivalPower": 0,
+     "readyUnits": 0,
+     "hand": 7,
+     "eddies": 3,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.08333333333333334,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Sell Adrenaline Converter",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 6,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 3
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.10389457216622947,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 6,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.10389457216622947,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Sell Adrenaline Converter"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 6,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 6,
+   "stepA": 34,
+   "stepB": 37,
+   "youDid": [
+    "JackRio played 6th Street Recruits by spending 3 Eddies and 1 Legend.",
+    "JackRio sold Mandibular Upgrade into Eddies.",
+    "JackRio equipped Satori: Sword of Saburo to 6th Street Recruits by spending 2 Legends."
+   ],
+   "actual": {
+    "p": 0.5416666666666666,
+    "se": 0.10389457216622948,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 1,
+     "rivalUnits": 1,
+     "power": 8,
+     "rivalPower": 5,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 4,
+     "unspent": 1,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Adrenaline Converter",
+      "Play Zetatech Faceplate on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 8,
+      "rivalPower": 5,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.4583333333333333,
+     "se": 0.10389457216622948,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 9,
+      "rivalPower": 5,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.11526067913468745,
+     "moves": [
+      "Play 6th Street Recruits",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Sell Mandibular Upgrade",
+      "Play Mandibular Upgrade on Viktor Vektor: Sit Down and Relax"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 9,
+      "rivalPower": 5,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 8,
+   "stepA": 43,
+   "stepB": 64,
+   "youDid": [
+    "JackRio sold Mandibular Upgrade into Eddies.",
+    "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. River Ward: Detective on the Hunt was revealed.",
+    "JackRio played Dexter DeShawn: One Last Chance by spending 2 Eddies and 1 Legend.",
+    "JackRio declined Dexter DeShawn: One Last Chance.",
+    "JackRio equipped Zetatech Faceplate to Adam Smasher: Ender of Legends for free.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 3 to 4.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Mandibular Upgrade.",
+    "6th Street Recruits made a Gig attack on Irbricksceo and will steal 2 Gigs if the defender cannot stop it.",
+    "JackRio must choose 2 Gigs to steal from Irbricksceo.",
+    "JackRio stole d6 (5) from Irbricksceo. JackRio now has 6 Gig dice.",
+    "JackRio stole d8 (6) from Irbricksceo. JackRio now has 6 Gig dice.",
+    "JackRio used 6th Street Recruits to increase JackRio's d8 from 3 to 8.",
+    "JackRio equipped Mandibular Upgrade to Dexter DeShawn: One Last Chance by spending 1 Legend.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 4 to 5.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Mantis Blades."
+   ],
+   "actual": {
+    "p": 0.75,
+    "se": 0.0902893898143269,
+    "outcome": {
+     "gigs": 6,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 14,
+     "rivalPower": 15,
+     "readyUnits": 1,
+     "hand": 3,
+     "eddies": 5,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.5833333333333334,
+     "se": 0.10279899245732686,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.11526067913468743,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d6 (5)",
+      "  skip the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (6) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Sell Zetatech Faceplate",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Play Mandibular Upgrade on Viktor Vektor: Sit Down and Relax"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 15,
+      "readyUnits": 1,
+      "hand": 1,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.13431477557289842,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d8 (6)",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d10 (5) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 15,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.25,
+     "gainSe": 0.12409089702567905,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d10 (5)",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (6) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Play Zetatech Faceplate on Adam Smasher: Ender of Legends",
+      "  pick your d12 (7) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Satori: Sword of Saburo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 15,
+      "rivalPower": 15,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 14
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.25,
+     "gainSe": 0.10851434153530388,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d6 (5)",
+      "  skip the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Call River Ward: Detective on the Hunt",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d10 (5) - Dexter DeShawn: choose a Gig to adjust",
+      "  +1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Adrenaline Converter",
+      "Play Zetatech Faceplate on River Ward: Detective on the Hunt",
+      "  pick your d12 (7) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 15,
+      "rivalPower": 15,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 10,
+   "stepA": 82,
+   "stepB": 105,
+   "youDid": [
+    "JackRio sold Bootleg Black Sapphire Show into Eddies.",
+    "JackRio sent Adam Smasher: Ender of Legends GO SOLO onto the field.",
+    "Animals Wrecker was defeated and sent to trash with 1 attached Gear card. Adam Smasher: Ender of Legends's PLAY effect defeated it.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 5 to 6.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Mantis Blades.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared 6th Street Recruits against Meredith Stout: Stone Cold Corpo. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d4 from 4 to 4.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Johnny Silverhand: Never Stop Fighting.",
+    "6th Street Recruits (10) fought Meredith Stout: Stone Cold Corpo (5) and won.",
+    "6th Street Recruits won the fight with Satori equipped and JackRio drew Secondhand Bombus.",
+    "Meredith Stout: Stone Cold Corpo was defeated. JackRio's attack won the fight.",
+    "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust Irbricksceo's d6 from 5 to 6.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Rockn' Rockerboy.",
+    "Irbricksceo spent Rogue Amendiares: Queen of the Afterlife to give Adam Smasher: Ender of Legends -4 power this turn.",
+    "Adam Smasher: Ender of Legends made a Gig attack on Irbricksceo and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Irbricksceo.",
+    "JackRio stole d6 (6) from Irbricksceo. JackRio now has 7 Gig dice.",
+    "JackRio used 6th Street Recruits to increase Irbricksceo's d10 from 5 to 10."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 7,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 21,
+     "rivalPower": 4,
+     "readyUnits": 0,
+     "hand": 9,
+     "eddies": 6,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.08468112965594378,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (3) and the Rival's d6 (5)",
+      "  use the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "  pick your d12 (7) - 6th Street Recruits: choose a Gig to increase",
+      "  +3 - Increase by how much?",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "  pick your d10 (6) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 23,
+      "rivalPower": 21,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 6,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 18
+    },
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252412,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.09477598811252415,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d4 (3) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (3) and the Rival's d6 (5)",
+      "  use the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "  pick the Rival's d10 (5) - 6th Street Recruits: choose a Gig to increase",
+      "  +6 - Increase by how much?",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "  pick your d10 (6) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Arasaka Emergency Radioport",
+      "Play Mantis Blades on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 23,
+      "rivalPower": 21,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 6,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 12
+    },
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252415,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.09477598811252415,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d10 (5) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (1)",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "  pick your d12 (7) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 21,
+      "rivalPower": 21,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 18
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": -0.4583333333333333,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (3)",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "  pick your d12 (7) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 21,
+      "rivalPower": 21,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 12
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 12,
+   "stepA": 120,
+   "stepB": 145,
+   "youDid": [
+    "JackRio played Johnny Silverhand: Never Stop Fighting by spending 6 Eddies.",
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Secondhand Bombus by spending 1 Eddie and 1 Legend.",
+    "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free.",
+    "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+    "JackRio declared Adam Smasher: Ender of Legends against Royce: Psycho on the Edge. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d20 from 7 to 8.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Zetatech Faceplate.",
+    "Irbricksceo spent Rogue Amendiares: Queen of the Afterlife to give Adam Smasher: Ender of Legends -4 power this turn.",
+    "Adam Smasher: Ender of Legends (7) fought Royce: Psycho on the Edge (8) and lost.",
+    "Adam Smasher: Ender of Legends was defeated, entered trash, and was removed from the game because Legends cannot remain there; its 1 Gear card remains in trash. Irbricksceo's defender held the line.",
+    "JackRio trashed Live with the Aftermath from River Ward's search.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d20 from 8 to 9.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Live with the Aftermath.",
+    "Irbricksceo played Floor It by spending 1 Eddie.",
+    "Irbricksceo used Floor It to give 6th Street Recruits -1 power this turn.",
+    "Irbricksceo drew a card with Floor It.",
+    "6th Street Recruits made a Gig attack on Irbricksceo and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Irbricksceo.",
+    "JackRio stole d8 (8) from Irbricksceo. JackRio now has 7 Gig dice."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 7,
+     "rivalGigs": 5,
+     "units": 3,
+     "rivalUnits": 2,
+     "power": 21,
+     "rivalPower": 12,
+     "readyUnits": 2,
+     "hand": 8,
+     "eddies": 7,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d10 (10) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (9) and the Rival's d8 (8)",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  pick the Rival's d12 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d20 (4) and the Rival's d12 (7)",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Johnny Silverhand: Never Stop Fighting"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 10,
+      "rivalGigs": 2,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 34,
+      "rivalPower": 12,
+      "readyUnits": 1,
+      "hand": 8,
+      "eddies": 7,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10) and the Rival's d20 (4)",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  pick the Rival's d12 (7) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (8) and the Rival's d8 (8)",
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Sell Gorilla Arms",
+      "Play Mantis Blades on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 10,
+      "rivalGigs": 2,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 34,
+      "rivalPower": 12,
+      "readyUnits": 1,
+      "hand": 8,
+      "eddies": 7,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d4 (3) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10) and the Rival's d12 (7)",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  pick the Rival's d4 (3) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (2) and the Rival's d20 (4)",
+      "Play Rockn' Rockerboy",
+      "Play Adrenaline Converter on Rockn' Rockerboy",
+      "Sell Gorilla Arms",
+      "Play Adrenaline Converter on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 10,
+      "rivalGigs": 2,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 35,
+      "rivalPower": 12,
+      "readyUnits": 1,
+      "hand": 8,
+      "eddies": 7,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d4 (3) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d8 (8)",
+      "Attack the Rival's Gigs with Adam Smasher: Ender of Legends",
+      "  pick the Rival's d10 (10) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10) and the Rival's d12 (7)",
+      "Play 6th Street Recruits",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Use River Ward: Detective on the Hunt",
+      "  pick Mantis Blades",
+      "  pick Viktor Vektor: Sit Down and Relax - Equip to a friendly Unit or face-up Legend",
+      "Sell Adrenaline Converter",
+      "Play Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 9,
+      "rivalGigs": 3,
+      "units": 4,
+      "rivalUnits": 2,
+      "power": 30,
+      "rivalPower": 12,
+      "readyUnits": 2,
+      "hand": 7,
+      "eddies": 7,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 16
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 14,
+   "stepA": 164,
+   "stepB": 194,
+   "youDid": [
+    "JackRio played Johnny Silverhand: Never Stop Fighting by spending 6 Eddies.",
+    "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free.",
+    "JackRio equipped Zetatech Faceplate to Johnny Silverhand: Never Stop Fighting by spending 1 Eddie and 1 Legend.",
+    "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 6 to 7.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Satori: Sword of Saburo.",
+    "Johnny Silverhand: Never Stop Fighting (13) fought Mox Inciters (2) and won.",
+    "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+    "Mox Inciters was defeated. JackRio's attack won the fight.",
+    "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 7 to 8.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Viktor Vektor: You Might Feel a Little Pinch.",
+    "Johnny Silverhand: Never Stop Fighting (13) fought Lizzy Wizzy: Delicate Weapon (2) and won.",
+    "Lizzy Wizzy: Delicate Weapon was defeated. JackRio's attack won the fight.",
+    "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. Irbricksceo must respond after attack effects resolve.",
+    "Irbricksceo spent Rogue Amendiares: Queen of the Afterlife to give Johnny Silverhand: Never Stop Fighting -4 power this turn.",
+    "Johnny Silverhand: Never Stop Fighting made a Gig attack on Irbricksceo and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Irbricksceo.",
+    "JackRio stole d20 (9) from Irbricksceo. JackRio now has 6 Gig dice.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared 6th Street Recruits against Royce: Psycho on the Edge. Irbricksceo must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d20 from 9 to 10.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Johnny Silverhand: Never Stop Fighting.",
+    "6th Street Recruits (10) fought Royce: Psycho on the Edge (8) and won.",
+    "6th Street Recruits won the fight with Satori equipped and JackRio drew 6th Street Recruits.",
+    "Royce: Psycho on the Edge was defeated, entered trash, and was removed from the game because Legends cannot remain there; its 1 Gear card remains in trash. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 6,
+     "rivalGigs": 6,
+     "units": 3,
+     "rivalUnits": 1,
+     "power": 34,
+     "rivalPower": 4,
+     "readyUnits": 0,
+     "hand": 10,
+     "eddies": 7,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Attack Royce: Psycho on the Edge with Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d10 (10) and the Rival's d12 (7)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d8 (8) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d20 (4) and the Rival's d8 (7)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Mantis Blades - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Johnny Silverhand: Never Stop Fighting - Viktor Vektor: equip it to another friendly Unit",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Johnny Silverhand: Never Stop Fighting"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 9,
+      "rivalGigs": 3,
+      "units": 4,
+      "rivalUnits": 3,
+      "power": 36,
+      "rivalPower": 14,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 8,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 17
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Attack Royce: Psycho on the Edge with Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d10 (10) and the Rival's d20 (9)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d8 (8)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Mantis Blades - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Johnny Silverhand: Never Stop Fighting - Viktor Vektor: equip it to another friendly Unit",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Viktor Vektor: You Might Feel a Little Pinch"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 4,
+      "units": 4,
+      "rivalUnits": 3,
+      "power": 36,
+      "rivalPower": 14,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 8,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 17
+    },
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Rockn' Rockerboy",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d10 (10) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10) and the Rival's d20 (9)",
+      "Attack Rogue Amendiares: Queen of the Afterlife with Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Rockn' Rockerboy",
+      "Sell Gorilla Arms",
+      "Play Mantis Blades on Rockn' Rockerboy",
+      "Play Zetatech Faceplate on Rockn' Rockerboy"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 5,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 36,
+      "rivalPower": 10,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 8,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666669,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666669,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Attack Royce: Psycho on the Edge with Johnny Silverhand: Never Stop Fighting",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d20 (4) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10) and the Rival's d8 (8)",
+      "Attack the Rival's Gigs with Johnny Silverhand: Never Stop Fighting",
+      "  steal the Rival's d20 (9)",
+      "Use River Ward: Detective on the Hunt",
+      "  pick Arasaka Emergency Radioport",
+      "  pick Viktor Vektor: Sit Down and Relax - Equip to a friendly Unit or face-up Legend",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "  skip the optional effect - Arasaka Emergency Radioport: look at a friendly face-down Legend?",
+      "Sell Gorilla Arms"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 4,
+      "units": 3,
+      "rivalUnits": 3,
+      "power": 32,
+      "rivalPower": 14,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 8,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  }
+ ]
+}

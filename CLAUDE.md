@@ -983,6 +983,51 @@ game rules - the description must describe the deck.
   edges (`.gear.tucked`) with a "⚙ N" badge, and the hover panel shows every attached Gear card. The step glow (`.hot`) is per card *instance*: when
   several copies share a name, only the copy whose zone/state changed this step glows (`cardSigs()`).
 
+## Replay Coach (`src/coach/`, `scripts/coach.js`, `board/coach.js`)
+
+Grades each of your turns in a replay: "you had X% to win, this line had Y%, here's why".
+`node scripts/coach.js [files|folder] [--force] [--samples N]` writes
+`board/replays/coach/<replay>.coach.json` (about 2 min per replay per worker; runs replays in
+parallel); the board fetches it from `/api/coach/<replay>` and shows the Coach panel above the log
+plus marks on the timeline. `node scripts/coach-check.js [--coverage] [--bot]` is the health check.
+
+- **No move translation.** Sim replay actions are text labels only ("Resolved an action"), so the
+  coach compares *positions*: A = first calm state of your turn (after the Gig roll), B = last calm
+  state before you ended it (`positions.js`). "Calm" = `turnStep 'play'` *or* `'attack'` with no
+  pending prompt: after the first attack the sim stays in 'attack' for the rest of the turn, and
+  accepting only 'play' once put B before every attack (all attacking turns graded as non-attacks).
+  The end-turn action's `turnNumber` is already the *next* turn's - match on order, not number.
+- **Bridge** (`bridge.js`): sim state → engine board. Visible cards keep their sim id as iid
+  (UUID → first 8 chars; hidden ids like `player1:eddies:hidden:0` stay whole - shortening them
+  made every hidden card the same iid). Hidden cards (Rival hand, both deck orders, face-down
+  Legends - yours too, the replay hides them - and every Eddie) are dealt from the inferred
+  decklist with a seeded RNG: one deal = one "determinization". Status effects map to engine
+  fields (lag → `entered_play_turn`, must-attack, ready/attack locks → `_until_keywords`, "+N this
+  turn" → `_temp_power`); attachment/passive power is left to the engine. Built boards go through
+  `combat.mainWaiting()`, never `step(b, undefined)` (in the main phase that ends the turn).
+- **Decklists** (`decks.js`): every instance seen face up over the whole game (your full list is
+  revealed by game end), then the closest base list - meta decks (`board/meta-decks/*.txt` plus the
+  engine's `test/decks`) and `published-decks.json` (via `catalog.json` UUIDs); by deck name for
+  you, by overlap for the Rival - then extra copies / same-colour cards. Adding real meta lists to
+  `board/meta-decks/` is the main lever on Rival realism. Hindsight on purpose; the panel says so.
+  `board/meta-decks/choombattler-*.txt` are ChoomBattler's ranked "standard list" per Legend trio
+  (choombattler.com/meta, Core BO1, 30 days, fetched Nov 5 2026; trios at 54-62% win rate with
+  500+ games, plus Alt/Dexter/V at 57% over 370). Refresh them from the trio pages' List view.
+- **Why** (`explain.js`): named board differences between your end-of-turn board and the coach's
+  (units, Gear, cards sold *from the starting hand* - effect sales like Bootleg's top card are
+  unseen, so never named - Legends called, Rival Units removed, Gigs) plus playout stats recorded
+  by `rollout()` (`atEnd`/`afterRival`/`afterMine` snapshots: losses, Rival's Gigs after their
+  reply, yours after your next turn). The panel shows only the coach's line and these reasons.
+- **Search** (`analyze.js`, `search.js`, `policy.js`): the bot plays 6 turn plans from A
+  (greedy + noisy), keeps the 4 best distinct ones, and plays each plus your B to the end of the
+  game 24 times, each sample a fresh deal shared by every option (paired comparison). Verdicts:
+  blunder > +18 points, mistake > +8 (and > 2 standard errors), inaccuracy > +4. The bot is
+  one-ply greedy over "macro" moves (a play plus its taps) with a hand-tuned position score; it
+  beats random play every time (`--bot`) but is not a strong player - read results as hints.
+- **Shadow check** (`coverage.js`): can the engine get from A to your B? About 17% exact and 42% to
+  within one detail on the 15 shared replays; the misses are mid-turn draws (a new deal draws
+  different cards) and lines the bot didn't try, not rules disagreements.
+
 ## Known CSS gotchas (already solved, don't reintroduce)
 
 - **`overflow-x: auto` + `overflow-y: visible` silently forces vertical

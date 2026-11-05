@@ -365,6 +365,7 @@
     sizeFields();
     animate(before, dir);
     if (dir === 1) popArrivals(R.steps[cur - 1].state, st);
+    document.dispatchEvent(new CustomEvent('board:step', { detail: { step: cur } }));
   }
 
   // What just happened: a caption strip in its own gap between the two mats, so it never covers a card.
@@ -424,8 +425,11 @@
     $('empty').hidden = true; $('table').hidden = false; $('timeline').hidden = false;
     $('scrub').max = R.steps.length - 1;
     matchInfo(); buildLog();
+    document.dispatchEvent(new CustomEvent('board:open', { detail: { name, steps: R.steps.length, matchId: R.match.matchId } }));
     cur = R.turnStarts.find(t => t.turn >= 1)?.step ?? 0; render();
   }
+  // for board/coach.js: jump to a step
+  window.BoardNav = { go: i => go(i) };
 
   // ── wiring ──────────────────────────────────────────────────────────────
   $('step-prev').onclick = () => go(cur - 1);

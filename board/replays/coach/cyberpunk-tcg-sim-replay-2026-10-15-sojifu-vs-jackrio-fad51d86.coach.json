@@ -1,0 +1,666 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-15-sojifu-vs-jackrio-fad51d86.json",
+ "matchId": "fad51d86-6343-455e-b37e-dd7ec2061b4c",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Sojifu",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Dexter DeShawn: Off the Grid",
+    "Muamar Reyes: El Capitán",
+    "River Ward: Detective on the Hunt"
+   ],
+   "seen": 17
+  },
+  "rival": {
+   "source": "10 cards seen in the game, rest from meta deck \"Adam Smasher / Muamar Reyes / River Ward\"",
+   "legends": [
+    "Muamar Reyes: El Capitán",
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax"
+   ],
+   "seen": 7
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 517,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 9,
+   "stepB": 11,
+   "youDid": [
+    "JackRio sold Gorilla Arms into Eddies.",
+    "JackRio played Meredith Stout — Stone Cold Corpo by spending 1 Eddie and 3 Legends."
+   ],
+   "actual": {
+    "p": 0.5833333333333334,
+    "se": 0.10279899245732685,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 5,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 0
+    }
+   },
+   "options": [
+    {
+     "p": 0.625,
+     "se": 0.10094660663590603,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.15321632271365124,
+     "moves": [
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Play Secondhand Bombus",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.5833333333333334,
+     "se": 0.10279899245732686,
+     "gain": 0,
+     "gainSe": 0.14744195615489714,
+     "moves": [
+      "Call Muamar Reyes: El Capitán",
+      "  skip the optional effect - Muamar Reyes: make a friendly Unit safe from fight defeats this turn? (No = draw 1)",
+      "Sell Zetatech Faceplate",
+      "Use Muamar Reyes: El Capitán",
+      "  pick the Rival's d12 (3) - Muamar Reyes: choose a Gig to adjust",
+      "  +1 - Muamar Reyes: adjust the Gig by 1, up or down",
+      "Play Secondhand Bombus"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.15321632271365124,
+     "moves": [
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 3,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Call Muamar Reyes: El Capitán",
+      "  skip the optional effect - Muamar Reyes: make a friendly Unit safe from fight defeats this turn? (No = draw 1)",
+      "Sell Bootleg Black Sapphire Show",
+      "Play Zetatech Faceplate on Muamar Reyes: El Capitán"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Ends with Secondhand Bombus (0 power) on the field, where you had Meredith Stout (5 power).",
+    "Sells Zetatech Faceplate instead of Gorilla Arms.",
+    "Calls Dexter DeShawn.",
+    "Out of 24 playouts you lost 10 after your turn, and 9 after the coach's.",
+    "You still hold 1.8 Gigs on average once the Rival's turn is over, instead of 1."
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 17,
+   "stepB": 21,
+   "youDid": [
+    "JackRio sold Gorilla Arms into Eddies.",
+    "JackRio played 6th Street Recruits by spending 2 Eddies and 2 Legends.",
+    "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+    "JackRio drew Meredith Stout — Stone Cold Corpo with Dexter DeShawn — Off the Grid."
+   ],
+   "actual": {
+    "p": 0.5,
+    "se": 0.10425720702853739,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 11,
+     "rivalPower": 7,
+     "readyUnits": 2,
+     "hand": 5,
+     "eddies": 2,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666669,
+     "gain": 0.4583333333333333,
+     "gainSe": 0.12007193898409806,
+     "moves": [
+      "Attack the Rival's Gigs with Meredith Stout: Stone Cold Corpo",
+      "  steal the Rival's d10 (9)",
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Sell Bootleg Black Sapphire Show",
+      "Play 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 7,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": 0.375,
+     "gainSe": 0.11753044625585937,
+     "moves": [
+      "Attack the Rival's Gigs with Meredith Stout: Stone Cold Corpo",
+      "  steal the Rival's d10 (9)",
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 7,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": 0.375,
+     "gainSe": 0.11753044625585937,
+     "moves": [
+      "Attack the Rival's Gigs with Meredith Stout: Stone Cold Corpo",
+      "  steal the Rival's d10 (9)",
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 7,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": 0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Attack the Rival's Gigs with Meredith Stout: Stone Cold Corpo",
+      "  steal the Rival's d10 (9)",
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call Muamar Reyes: El Capitán",
+      "  skip the optional effect - Muamar Reyes: make a friendly Unit safe from fight defeats this turn? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 11,
+      "rivalPower": 7,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Sells Bootleg Black Sapphire Show instead of Gorilla Arms.",
+    "Takes 1 more Gig this turn (3 vs your 2).",
+    "Out of 24 playouts you lost 12 after your turn, and 1 after the coach's.",
+    "After the Rival's next turn they have 3 Gigs on average, instead of 3.9 after your line.",
+    "You still hold 2 Gigs on average once the Rival's turn is over, instead of 1.1.",
+    "By the end of your next turn you're at 4.8 Gigs on average, instead of 3.8."
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 35,
+   "stepB": 40,
+   "youDid": [
+    "JackRio called a Legend by spending 1 Eddie. Muamar Reyes — El Capitán was revealed.",
+    "JackRio drew Jackie Welles — Ride or Die Choom with Muamar Reyes — El Capitán.",
+    "JackRio sold Bootleg Black Sapphire Show into Eddies.",
+    "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Eddies.",
+    "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Legends."
+   ],
+   "actual": {
+    "p": 0,
+    "se": 0,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 1,
+     "rivalUnits": 2,
+     "power": 10,
+     "rivalPower": 12,
+     "readyUnits": 1,
+     "hand": 4,
+     "eddies": 3,
+     "unspent": 1,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.16666666666666666,
+     "se": 0.07770873402002614,
+     "gain": 0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Meredith Stout: Stone Cold Corpo",
+      "Call Muamar Reyes: El Capitán",
+      "  skip the optional effect - Muamar Reyes: make a friendly Unit safe from fight defeats this turn? (No = draw 1)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d10 (9)",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 11,
+      "rivalPower": 12,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.041666666666666664,
+     "se": 0.04166666666666669,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.04166666666666669,
+     "moves": [
+      "Play Bootleg Black Sapphire Show",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d12 (3)",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Zetatech Faceplate",
+      "Play Mantis Blades on River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 12,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Bootleg Black Sapphire Show",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d12 (3)",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt",
+      "Play Mantis Blades on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 8,
+      "rivalPower": 12,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Meredith Stout: Stone Cold Corpo",
+      "Call Muamar Reyes: El Capitán",
+      "  use the optional effect - Muamar Reyes: make a friendly Unit safe from fight defeats this turn? (No = draw 1)",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 11,
+      "rivalPower": 12,
+      "readyUnits": 2,
+      "hand": 4,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "mistake",
+   "why": [
+    "Also gets Meredith Stout (5 power) onto the field.",
+    "Doesn't equip Zetatech Faceplate on 6th Street Recruits and Zetatech Faceplate on 6th Street Recruits.",
+    "Sells Zetatech Faceplate instead of Bootleg Black Sapphire Show.",
+    "Takes 1 more Gig this turn (4 vs your 3).",
+    "Out of 24 playouts you lost 24 after your turn, and 20 after the coach's.",
+    "After the Rival's next turn they have 4.5 Gigs on average, instead of 7 after your line.",
+    "You still hold 2.5 Gigs on average once the Rival's turn is over, instead of 0.",
+    "By the end of your next turn you're at 4.7 Gigs on average, instead of 2.7."
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 54,
+   "stepB": 66,
+   "youDid": [
+    "JackRio played Johnny Silverhand — Never Stop Fighting by spending 3 Eddies and 3 Legends.",
+    "JackRio sold Gorilla Arms into Eddies.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Sojifu must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust Sojifu's d8 from 3 to 4.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 5 to 6.",
+    "JackRio discarded Meredith Stout — Stone Cold Corpo. Discarded for Augmented Negotiators.",
+    "6th Street Recruits (10) fought Augmented Negotiators (2) and won.",
+    "Augmented Negotiators was defeated. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0.20833333333333334,
+    "se": 0.0846811296559438,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 6,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 18,
+     "rivalPower": 17,
+     "readyUnits": 1,
+     "hand": 2,
+     "eddies": 4,
+     "unspent": 1,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252415,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.11912523349835939,
+     "moves": [
+      "Play Jackie Welles: Ride or Die Choom",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (3) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d8 (3) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (9) and the Rival's d10 (3)",
+      "Sell Adrenaline Converter"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 18,
+      "rivalPower": 19,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.25,
+     "se": 0.0902893898143269,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.09477598811252415,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Sell Adrenaline Converter",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d10 (9) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d8 (3) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick Gorilla Arms"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 17,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594378,
+     "gain": 0,
+     "gainSe": 0.1203858530857692,
+     "moves": [
+      "Play Jackie Welles: Ride or Die Choom",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d12 (3) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d12 (2) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (9) and the Rival's d8 (6)",
+      "Sell Gorilla Arms"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 18,
+      "rivalPower": 19,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 21
+    },
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594378,
+     "gain": 0,
+     "gainSe": 0.1203858530857692,
+     "moves": [
+      "Play Jackie Welles: Ride or Die Choom",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d6 (4) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d8 (3) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (3) and the Rival's d10 (9)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 18,
+      "rivalPower": 19,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Ends with Jackie Welles (8 power) on the field, where you had Johnny Silverhand (8 power).",
+    "Sells Adrenaline Converter instead of Gorilla Arms.",
+    "Doesn't remove the Rival's Augmented Negotiators like you did, but comes out ahead anyway.",
+    "Takes 2 more Gigs this turn (4 vs your 2).",
+    "Out of 24 playouts you lost 19 after your turn, and 17 after the coach's."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,707 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-01-puzonyyx-vs-jackrio-99a24db7.json",
+ "matchId": "99a24db7-0855-4092-a7aa-8a0aad6719dc",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "puzonyyx",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax"
+   ],
+   "seen": 19
+  },
+  "rival": {
+   "source": "10 cards seen in the game, rest from meta deck \"4 Yellow / 2 Red (standard)\"",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax",
+    "Adam Smasher: Ender of Legends"
+   ],
+   "seen": 7
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 669,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "stepB": 10,
+   "youDid": [
+    "JackRio sold Gorilla Arms into Eddies.",
+    "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends."
+   ],
+   "actual": {
+    "p": 0.8333333333333334,
+    "se": 0.07770873402002614,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 1,
+     "power": 6,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 0
+    }
+   },
+   "options": [
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.11227500313294322,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Zetatech Faceplate",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Call River Ward: Detective on the Hunt",
+      "Sell Bootleg Black Sapphire Show",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick your d12 (2) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659807,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.13003158293424902,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Gorilla Arms",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Bootleg Black Sapphire Show",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 4,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 4,
+   "stepA": 16,
+   "stepB": 25,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Dexter DeShawn: One Last Chance by spending 2 Eddies and 1 Legend.",
+    "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d10 from 6 to 7.",
+    "JackRio played Secondhand Bombus by spending 2 Legends.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. puzonyyx must respond after attack effects resolve.",
+    "6th Street Recruits (6) fought Secondhand Bombus (0) and won.",
+    "Secondhand Bombus was defeated. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0.9166666666666666,
+    "se": 0.05763033956734371,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 3,
+     "rivalUnits": 1,
+     "power": 10,
+     "rivalPower": 8,
+     "readyUnits": 2,
+     "hand": 3,
+     "eddies": 2,
+     "unspent": 0,
+     "faceUpLegends": 0
+    }
+   },
+   "options": [
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d8 (3)",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Zetatech Faceplate",
+      "Play Mantis Blades on Dexter DeShawn: One Last Chance"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252412,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.12007193898409804,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.0982946374365981,
+     "gain": -0.25,
+     "gainSe": 0.12409089702567905,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d8 (4)",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick your d12 (2) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card",
+      "Sell Adrenaline Converter",
+      "Play Mantis Blades on Dexter DeShawn: One Last Chance"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 11
+    },
+    {
+     "p": 0.625,
+     "se": 0.10094660663590603,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.09477598811252412,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Bootleg Black Sapphire Show"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 2,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 6,
+   "stepA": 35,
+   "stepB": 45,
+   "youDid": [
+    "JackRio called a Legend by spending 1 Eddie. River Ward: Detective on the Hunt was revealed.",
+    "JackRio sold Bootleg Black Sapphire Show into Eddies.",
+    "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Eddies.",
+    "JackRio played Sketchy Ripper by spending 2 Legends.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared 6th Street Recruits against Rockn' Rockerboy. puzonyyx must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 2 to 3.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Zetatech Faceplate.",
+    "6th Street Recruits (8) fought Rockn' Rockerboy (8) and traded.",
+    "Rockn' Rockerboy was defeated. JackRio's attack won the fight.",
+    "6th Street Recruits was defeated and sent to trash with 1 attached Gear card. puzonyyx's defender held the line.",
+    "JackRio trashed Mandibular Upgrade from River Ward's search."
+   ],
+   "actual": {
+    "p": 0.4583333333333333,
+    "se": 0.10389457216622948,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 4,
+     "rivalPower": 8,
+     "readyUnits": 2,
+     "hand": 2,
+     "eddies": 3,
+     "unspent": 1,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": 0.4166666666666667,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (4)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d8 (4)",
+      "Play Rockn' Rockerboy",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 16,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 0
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002615,
+     "gain": 0.375,
+     "gainSe": 0.11753044625585937,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (4)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d6 (1)",
+      "  use the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "  pick the Rival's d8 (4) - 6th Street Recruits: choose a Gig to increase",
+      "  +2 - Increase by how much?",
+      "Play Rockn' Rockerboy"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 16,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 0
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": 0.3333333333333333,
+     "gainSe": 0.130031582934249,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (4)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d8 (3)",
+      "Play Rockn' Rockerboy",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 16,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659807,
+     "gain": 0.20833333333333334,
+     "gainSe": 0.14718575794891015,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d8 (4)",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d6 (1)",
+      "  skip the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "Call River Ward: Detective on the Hunt",
+      "Sell Bootleg Black Sapphire Show",
+      "Play Rockn' Rockerboy"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 16,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Ends with 6th Street Recruits (6 power) and Rockn' Rockerboy (8 power) on the field, where you had Sketchy Ripper (0 power).",
+    "Sells Zetatech Faceplate instead of Bootleg Black Sapphire Show.",
+    "Doesn't remove the Rival's Rockn' Rockerboy like you did, but comes out ahead anyway.",
+    "Takes 2 more Gigs this turn (5 vs your 3).",
+    "Out of 24 playouts you lost 13 after your turn, and 3 after the coach's.",
+    "After the Rival's next turn they have 4 Gigs on average, instead of 5 after your line.",
+    "You still hold 3 Gigs on average once the Rival's turn is over, instead of 2.",
+    "By the end of your next turn you're at 6.8 Gigs on average, instead of 4."
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 62,
+   "stepB": 81,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Rockn' Rockerboy by spending 4 Eddies and 1 Legend.",
+    "JackRio cancelled River Ward's QUICK ability.",
+    "JackRio called a Legend by spending 1 Legend. Viktor Vektor: Sit Down and Relax was revealed.",
+    "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+    "JackRio revealed Adrenaline Converter and Mandibular Upgrade with Viktor Vektor and added them to hand.",
+    "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Dexter DeShawn: One Last Chance. puzonyyx must respond after attack effects resolve.",
+    "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d8 from 1 to 2.",
+    "Dexter DeShawn: One Last Chance made a Gig attack on puzonyyx and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from puzonyyx.",
+    "JackRio stole d10 (7) from puzonyyx. JackRio now has 3 Gig dice.",
+    "JackRio equipped Zetatech Faceplate to Rockn' Rockerboy for free.",
+    "JackRio chose Sketchy Ripper to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Sketchy Ripper. puzonyyx must respond after attack effects resolve.",
+    "JackRio attacked with Sketchy Ripper, revealed the top 3 cards, and found no Gear.",
+    "JackRio finished Sketchy Ripper's search without taking a Gear.",
+    "Sketchy Ripper made a Gig attack on puzonyyx, but did not have enough power to steal a Gig."
+   ],
+   "actual": {
+    "p": 0.2916666666666667,
+    "se": 0.09477598811252415,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 5,
+     "units": 3,
+     "rivalUnits": 3,
+     "power": 14,
+     "rivalPower": 11,
+     "readyUnits": 1,
+     "hand": 2,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.1464144735592518,
+     "moves": [
+      "Play Rockn' Rockerboy",
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (7)",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card",
+      "Sell Zetatech Faceplate",
+      "Play Mantis Blades on Sketchy Ripper",
+      "Attack the Rival's Gigs with Sketchy Ripper",
+      "  pick a hidden card - Sketchy Ripper: reveal a Gear and add it to your hand",
+      "  steal the Rival's d4 (4)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 3,
+      "rivalUnits": 3,
+      "power": 14,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 9
+    },
+    {
+     "p": 0.3333333333333333,
+     "se": 0.09829463743659808,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.1408973141692084,
+     "moves": [
+      "Play Rockn' Rockerboy",
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d10 (2) - Dexter DeShawn: choose a Gig to adjust",
+      "  +1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (3)",
+      "Play Mantis Blades on Sketchy Ripper",
+      "Attack the Rival's Gigs with Sketchy Ripper",
+      "  steal the Rival's d12 (3)",
+      "Sell Zetatech Faceplate",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 3,
+      "rivalUnits": 3,
+      "power": 14,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 20
+    },
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252415,
+     "gain": 0,
+     "gainSe": 0.13459547551454137,
+     "moves": [
+      "Play Rockn' Rockerboy",
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades",
+      "Play Zetatech Faceplate on Sketchy Ripper",
+      "Attack the Rival's Gigs with Sketchy Ripper",
+      "  pick a hidden card",
+      "  pick the Rival's d10 (2) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d8 (4)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 14,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 0,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 20
+    },
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594378,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.1191252334983594,
+     "moves": [
+      "Play Rockn' Rockerboy",
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (4) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (3)",
+      "Sell Mantis Blades",
+      "Play Zetatech Faceplate on Rockn' Rockerboy"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 3,
+      "rivalUnits": 3,
+      "power": 14,
+      "rivalPower": 11,
+      "readyUnits": 2,
+      "hand": 0,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Equips Mantis Blades on Sketchy Ripper (you equipped Zetatech Faceplate on Rockn' Rockerboy).",
+    "Sells Zetatech Faceplate instead of Mantis Blades.",
+    "Takes 1 more Gig this turn (4 vs your 3).",
+    "Out of 24 playouts you lost 17 after your turn, and 15 after the coach's.",
+    "After the Rival's next turn they have 7.8 Gigs on average, instead of 8.5 after your line.",
+    "You still hold 1.4 Gigs on average once the Rival's turn is over, instead of 0.5."
+   ]
+  }
+ ]
+}

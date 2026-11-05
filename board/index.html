@@ -32,6 +32,12 @@
     <!-- each player: name, clock, Gig race, counts, and their hand fanned -->
     <div class="pblock" id="rival-block"></div>
     <div class="pblock" id="me-block"></div>
+    <!-- Replay Coach (board/coach.js): fills the space under the player blocks -->
+    <div class="coach-box" id="coach-box" hidden>
+      <h2>Coach <span id="coach-sum"></span></h2>
+      <ol id="coach" class="coach"></ol>
+      <div id="coach-detail" class="coach-detail"></div>
+    </div>
   </aside>
 
   <aside class="side">
@@ -48,7 +54,7 @@
   <button class="btn play" id="play" title="Play / pause (Space)">▶</button>
   <button class="btn" id="step-next" title="Next action (→)">▶︎|</button>
   <button class="btn" id="turn-next" title="Next turn (Shift+→)">⏭</button>
-  <input id="scrub" type="range" min="0" value="0" aria-label="Timeline">
+  <div class="scrub-wrap"><input id="scrub" type="range" min="0" value="0" aria-label="Timeline"><div id="coach-marks" class="coach-marks"></div></div>
   <span id="counter" class="counter"></span>
 </footer>
 
@@ -58,5 +64,6 @@
 <script src="replay.js"></script>
 <script src="logfmt.js"></script>
 <script src="app.js"></script>
+<script src="coach.js"></script>
 </body>
 </html>

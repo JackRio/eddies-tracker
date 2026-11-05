@@ -1,0 +1,1197 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-02-runner84848-vs-jackrio-8858d42b.json",
+ "matchId": "8858d42b-902c-48dc-91f7-8fa7f3b7dcb4",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Runner84848",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax",
+    "Adam Smasher: Ender of Legends"
+   ],
+   "seen": 19
+  },
+  "rival": {
+   "source": "11 cards seen in the game, rest from meta deck \"Adam Smasher / Dexter DeShawn / Saburo Arasaka\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "Goro Takemura: Vengeful Bodyguard",
+    "Dexter DeShawn: Off the Grid"
+   ],
+   "seen": 9
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 514,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "stepB": 10,
+   "youDid": [
+    "JackRio sold Mandibular Upgrade into Eddies.",
+    "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends."
+   ],
+   "actual": {
+    "p": 0.7916666666666666,
+    "se": 0.08468112965594378,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 6,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 0
+    }
+   },
+   "options": [
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.09477598811252412,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 3,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 1,
+      "faceUpLegends": 0
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659808,
+     "gain": -0.125,
+     "gainSe": 0.1387378405691724,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 3,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5833333333333334,
+     "se": 0.10279899245732683,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.10389457216622945,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Sell Satori: Sword of Saburo",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick nothing"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 3,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 2
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.4166666666666667,
+     "gainSe": 0.11912523349835938,
+     "moves": [
+      "Call River Ward: Detective on the Hunt",
+      "Sell Satori: Sword of Saburo",
+      "Play Secondhand Bombus",
+      "Play Mandibular Upgrade on River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 4,
+   "stepA": 17,
+   "stepB": 28,
+   "youDid": [
+    "JackRio sold Satori: Sword of Saburo into Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. River Ward: Detective on the Hunt was revealed.",
+    "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 1 Eddie and 1 Legend.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Runner84848 must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d10 from 4 to 5.",
+    "6th Street Recruits made a Gig attack on Runner84848 and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Runner84848.",
+    "JackRio stole d6 (1) from Runner84848. JackRio now has 3 Gig dice.",
+    "JackRio used 6th Street Recruits to increase JackRio's d10 from 5 to 10."
+   ],
+   "actual": {
+    "p": 0.625,
+    "se": 0.10094660663590603,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 1,
+     "power": 8,
+     "rivalPower": 6,
+     "readyUnits": 0,
+     "hand": 4,
+     "eddies": 2,
+     "unspent": 2,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252412,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d4 (1)",
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call River Ward: Detective on the Hunt"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 12,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252412,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.13346913374198452,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d4 (1)",
+      "Play 6th Street Recruits",
+      "Sell Satori: Sword of Saburo",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 12,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659808,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.09477598811252412,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d6 (1)",
+      "  use the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "  pick your d12 (7) - 6th Street Recruits: choose a Gig to increase",
+      "  +4 - Increase by how much?",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Call Viktor Vektor: Sit Down and Relax",
+      "  pick a hidden card, a hidden card",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 9,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 11
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": -0.125,
+     "gainSe": 0.15123285625681412,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d4 (1)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Call Adam Smasher: Ender of Legends",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 9,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 2,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Also gets 6th Street Recruits (6 power) onto the field.",
+    "Doesn't equip Zetatech Faceplate on 6th Street Recruits.",
+    "Sells Zetatech Faceplate instead of Satori.",
+    "Out of 24 playouts you lost 9 after your turn, and 7 after the coach's.",
+    "By the end of your next turn you're at 4.7 Gigs on average, instead of 3.9."
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 46,
+   "stepB": 63,
+   "youDid": [
+    "JackRio sold Satori: Sword of Saburo into Eddies.",
+    "JackRio played Secondhand Bombus by spending 2 Eddies.",
+    "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Runner84848 must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 5 to 6.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Mantis Blades.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 7 to 8.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Live with the Aftermath.",
+    "Goro Takemura: Vengeful Bodyguard gave Maelstrom Zealots BLOCKER and +1 power for the turn.",
+    "Runner84848 discarded Emergency Atlus. Discarded for Goro Takemura's BLOCKER trigger.",
+    "Runner84848 drew a card with Goro Takemura.",
+    "6th Street Recruits (10) fought Maelstrom Zealots (1) and won.",
+    "6th Street Recruits was defeated and sent to trash with 2 attached Gear cards. Maelstrom Zealots defeated the opposing rival Unit after losing the fight.",
+    "JackRio trashed Sketchy Ripper from River Ward's search.",
+    "Maelstrom Zealots was defeated. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0.5416666666666666,
+    "se": 0.10389457216622948,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 6,
+     "rivalPower": 6,
+     "readyUnits": 2,
+     "hand": 5,
+     "eddies": 3,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": 0.25,
+     "gainSe": 0.10851434153530388,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d6 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d8 (1) and the Rival's d6 (1)",
+      "  use the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "  pick your d8 (5) - 6th Street Recruits: choose a Gig to increase",
+      "  +2 - Increase by how much?",
+      "Play 6th Street Recruits",
+      "Sell Live with the Aftermath",
+      "Play Adrenaline Converter on 6th Street Recruits"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 19,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.08468112965594378,
+     "gain": 0.25,
+     "gainSe": 0.1379193210918426,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d6 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d6 (1) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (1) and the Rival's d6 (2)",
+      "  skip the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "Play 6th Street Recruits",
+      "Sell Live with the Aftermath",
+      "Play Zetatech Faceplate on Viktor Vektor: Sit Down and Relax",
+      "  pick your d8 (5) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 19
+    },
+    {
+     "p": 0.5833333333333334,
+     "se": 0.10279899245732685,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.15321632271365124,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (1) and the Rival's d6 (1)",
+      "  skip the optional effect - 6th Street Recruits: increase a Gig by up to 6?",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "Play Zetatech Faceplate on Viktor Vektor: Sit Down and Relax",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Live with the Aftermath",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 13,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 22
+    },
+    {
+     "p": 0.5833333333333334,
+     "se": 0.10279899245732685,
+     "gain": 0.041666666666666664,
+     "gainSe": 0.14089731416920842,
+     "moves": [
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  pick the Rival's d4 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  pick the Rival's d4 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (1) and the Rival's d8 (1)",
+      "Play 6th Street Recruits",
+      "Call Adam Smasher: Ender of Legends",
+      "Sell Adrenaline Converter"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Ends with 6th Street Recruits (9 power) on the field, where you had Secondhand Bombus (0 power).",
+    "Equips Zetatech Faceplate on 6th Street Recruits, Zetatech Faceplate on 6th Street Recruits and Adrenaline Converter on 6th Street Recruits.",
+    "Sells Live with the Aftermath instead of Satori.",
+    "Doesn't remove the Rival's Maelstrom Zealots like you did, but comes out ahead anyway.",
+    "Takes 2 more Gigs this turn (5 vs your 3).",
+    "Out of 24 playouts you lost 11 after your turn, and 5 after the coach's.",
+    "After the Rival's next turn they have 3 Gigs on average, instead of 4.5 after your line.",
+    "You still hold 4 Gigs on average once the Rival's turn is over, instead of 2.5.",
+    "By the end of your next turn you're at 5.7 Gigs on average, instead of 4.8."
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 74,
+   "stepB": 87,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. Adam Smasher: Ender of Legends was revealed.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with 6th Street Recruits. Runner84848 must respond after attack effects resolve.",
+    "Runner84848 discarded La Llorona: Ghost of the Past. Discarded for Goro Takemura's BLOCKER trigger.",
+    "Runner84848 drew a card with Goro Takemura.",
+    "6th Street Recruits (6) fought Maelstrom Zealots (1) and won.",
+    "6th Street Recruits was defeated. Maelstrom Zealots defeated the opposing rival Unit after losing the fight.",
+    "Maelstrom Zealots was defeated and sent to trash with 1 attached Gear card. JackRio's attack won the fight.",
+    "JackRio played Live with the Aftermath by spending 3 Eddies.",
+    "Secondhand Bombus was defeated. Live with the Aftermath required JackRio to defeat one of their Units.",
+    "6th Street Recruits was defeated. Live with the Aftermath required Runner84848 to defeat one of their Units.",
+    "JackRio played Dexter DeShawn: One Last Chance by spending 3 Legends.",
+    "JackRio used Dexter DeShawn: One Last Chance to increase Runner84848's d4 from 1 to 2."
+   ],
+   "actual": {
+    "p": 0.4583333333333333,
+    "se": 0.10389457216622949,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 5,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 4,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 3,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.875,
+     "se": 0.0689596605459213,
+     "gain": 0.4166666666666667,
+     "gainSe": 0.11912523349835939,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Secondhand Bombus - Viktor Vektor: equip it to another friendly Unit",
+      "Play Adrenaline Converter on 6th Street Recruits",
+      "Call Adam Smasher: Ender of Legends",
+      "Attack 6th Street Recruits with 6th Street Recruits",
+      "  pick a hidden card - River Ward: trash 1 of the top 2 cards",
+      "Attack the Rival's Gigs with Secondhand Bombus",
+      "  pick the Rival's d10 (10) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (9)",
+      "Sell Live with the Aftermath",
+      "Play Mantis Blades on Viktor Vektor: You Might Feel a Little Pinch"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 7,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 23
+    },
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": 0.2916666666666667,
+     "gainSe": 0.15321632271365124,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Secondhand Bombus - Viktor Vektor: equip it to another friendly Unit",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Attack the Rival's Gigs with Secondhand Bombus",
+      "  pick the Rival's d4 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (10)",
+      "Sell Adrenaline Converter",
+      "Call Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 4,
+      "rivalUnits": 2,
+      "power": 15,
+      "rivalPower": 7,
+      "readyUnits": 3,
+      "hand": 4,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.75,
+     "se": 0.0902893898143269,
+     "gain": 0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Secondhand Bombus - Viktor Vektor: equip it to another friendly Unit",
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  +1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Sell Live with the Aftermath",
+      "Play Mantis Blades on 6th Street Recruits",
+      "Attack the Rival's Gigs with Secondhand Bombus",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (1)",
+      "Attack 6th Street Recruits with 6th Street Recruits",
+      "  pick a hidden card - River Ward: trash 1 of the top 2 cards"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 3,
+      "rivalUnits": 1,
+      "power": 9,
+      "rivalPower": 6,
+      "readyUnits": 2,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5416666666666666,
+     "se": 0.10389457216622948,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.15830472663009768,
+     "moves": [
+      "Play Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "Play Live with the Aftermath",
+      "  pick Dexter DeShawn: One Last Chance - Defeat one of your Units",
+      "Attack the Rival's Gigs with 6th Street Recruits",
+      "  steal the Rival's d10 (10)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Ends with Secondhand Bombus (2 power) and Viktor Vektor (5 power) on the field, where you had Dexter DeShawn (4 power).",
+    "Equips Zetatech Faceplate on Secondhand Bombus and Mantis Blades on Viktor Vektor.",
+    "Sells Live with the Aftermath instead of Mantis Blades.",
+    "Doesn't remove the Rival's 6th Street Recruits like you did, but comes out ahead anyway.",
+    "Takes 1 more Gig this turn (4 vs your 3).",
+    "Out of 24 playouts you lost 13 after your turn, and 3 after the coach's.",
+    "By the end of your next turn you're at 5.8 Gigs on average, instead of 5."
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 95,
+   "stepB": 114,
+   "youDid": [
+    "JackRio played Viktor Vektor: You Might Feel a Little Pinch by spending 3 Eddies.",
+    "JackRio equipped Zetatech Faceplate to Dexter DeShawn: One Last Chance for free.",
+    "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Dexter DeShawn: One Last Chance. Runner84848 must respond after attack effects resolve.",
+    "JackRio used Dexter DeShawn: One Last Chance to increase Runner84848's d12 from 4 to 5.",
+    "JackRio used Zetatech Faceplate to adjust Runner84848's d6 from 1 to 2.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Bootleg Black Sapphire Show.",
+    "Runner84848 called a Legend by spending 1 Legend. Dexter DeShawn: Off the Grid was revealed.",
+    "Runner84848 drew a card with Dexter DeShawn: Off the Grid.",
+    "Dexter DeShawn: One Last Chance made a Gig attack on Runner84848 and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Runner84848.",
+    "JackRio stole d10 (10) from Runner84848. JackRio now has 5 Gig dice.",
+    "JackRio sold Bootleg Black Sapphire Show into Eddies.",
+    "JackRio played Secondhand Bombus by spending 2 Eddies.",
+    "JackRio played Live with the Aftermath by spending 3 Legends.",
+    "Secondhand Bombus was defeated. Live with the Aftermath required JackRio to defeat one of their Units.",
+    "Maelstrom Zealots was defeated. Live with the Aftermath required Runner84848 to defeat one of their Units."
+   ],
+   "actual": {
+    "p": 0.5,
+    "se": 0.10425720702853739,
+    "outcome": {
+     "gigs": 5,
+     "rivalGigs": 5,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 9,
+     "rivalPower": 9,
+     "readyUnits": 1,
+     "hand": 1,
+     "eddies": 5,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252415,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.13431477557289842,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d4 (2) - Dexter DeShawn: choose a Gig to adjust",
+      "  +1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d4 (3)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "Use River Ward: Detective on the Hunt",
+      "  pick Viktor Vektor: You Might Feel a Little Pinch - Equip to a friendly Unit or face-up Legend",
+      "Sell Live with the Aftermath"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 5,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 9,
+      "readyUnits": 1,
+      "hand": 1,
+      "eddies": 5,
+      "unspent": 4,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 22
+    },
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594378,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.14089731416920842,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d6 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (4)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "Play Adrenaline Converter on Viktor Vektor: You Might Feel a Little Pinch"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 5,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 9,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 4,
+      "unspent": 2,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594377,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.12739256153441422,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  -1 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (4)",
+      "Play Adrenaline Converter on Dexter DeShawn: One Last Chance",
+      "Play Secondhand Bombus",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "  pick Secondhand Bombus - Viktor Vektor: equip it to another friendly Unit"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 5,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 9,
+      "readyUnits": 2,
+      "hand": 1,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.041666666666666664,
+     "se": 0.041666666666666685,
+     "gain": -0.4583333333333333,
+     "gainSe": 0.12007193898409806,
+     "moves": [
+      "Attack the Rival's Gigs with Dexter DeShawn: One Last Chance",
+      "  pick the Rival's d8 (1) - Dexter DeShawn: choose a Gig to adjust",
+      "  0 - Dexter DeShawn: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d12 (4)",
+      "Play Viktor Vektor: You Might Feel a Little Pinch",
+      "  pick Zetatech Faceplate - Viktor Vektor: play a CYBERWARE Gear (cost ≤2) from your trash",
+      "Play Secondhand Bombus",
+      "Play Adrenaline Converter on Viktor Vektor: You Might Feel a Little Pinch"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 5,
+      "units": 3,
+      "rivalUnits": 2,
+      "power": 12,
+      "rivalPower": 9,
+      "readyUnits": 2,
+      "hand": 1,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 12,
+   "stepA": 130,
+   "stepB": 142,
+   "youDid": [
+    "JackRio sold Gorilla Arms into Eddies.",
+    "JackRio sent Adam Smasher: Ender of Legends GO SOLO onto the field.",
+    "Yorinobu Arasaka: Steel Dragon was defeated. Adam Smasher: Ender of Legends's PLAY effect defeated it.",
+    "Runner84848 drew a card from Yorinobu Arasaka: Steel Dragon's DEFEATED trigger.",
+    "Runner84848 drew a card from Yorinobu Arasaka: Steel Dragon's DEFEATED trigger.",
+    "JackRio chose Viktor Vektor: You Might Feel a Little Pinch to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Viktor Vektor: You Might Feel a Little Pinch. Runner84848 must respond after attack effects resolve.",
+    "Viktor Vektor: You Might Feel a Little Pinch made a Gig attack on Runner84848 and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Runner84848.",
+    "JackRio stole d10 (10) from Runner84848. JackRio now has 6 Gig dice.",
+    "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. Runner84848 must respond after attack effects resolve.",
+    "Adam Smasher: Ender of Legends made a Gig attack on Runner84848 and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from Runner84848.",
+    "JackRio stole d8 (6) from Runner84848. JackRio now has 7 Gig dice."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 7,
+     "rivalGigs": 5,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 12,
+     "rivalPower": 9,
+     "readyUnits": 0,
+     "hand": 3,
+     "eddies": 6,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.8333333333333334,
+     "se": 0.07770873402002614,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.07770873402002614,
+     "moves": [
+      "Attack the Rival's Gigs with Viktor Vektor: You Might Feel a Little Pinch",
+      "  steal the Rival's d8 (6)",
+      "Play Gorilla Arms on Viktor Vektor: You Might Feel a Little Pinch",
+      "Play Sketchy Ripper",
+      "Play Adrenaline Converter on Sketchy Ripper",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 9,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 0,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.375,
+     "se": 0.10094660663590603,
+     "gain": -0.625,
+     "gainSe": 0.10094660663590603,
+     "moves": [
+      "Attack the Rival's Gigs with Viktor Vektor: You Might Feel a Little Pinch",
+      "  steal the Rival's d12 (5)",
+      "Play Sketchy Ripper",
+      "Play Gorilla Arms on Sketchy Ripper",
+      "Play Zetatech Faceplate on Viktor Vektor: Sit Down and Relax",
+      "  pick the Rival's d4 (2) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Adrenaline Converter",
+      "Play Mandibular Upgrade on Adam Smasher: Ender of Legends"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 0,
+      "eddies": 6,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 23
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -1,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with Viktor Vektor: You Might Feel a Little Pinch",
+      "  steal the Rival's d10 (10)",
+      "Play Adrenaline Converter on Viktor Vektor: You Might Feel a Little Pinch",
+      "Play Sketchy Ripper",
+      "Play Zetatech Faceplate on River Ward: Detective on the Hunt",
+      "  pick the Rival's d4 (2) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Gorilla Arms"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 1,
+      "eddies": 6,
+      "unspent": 3,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -1,
+     "gainSe": 0,
+     "moves": [
+      "Attack the Rival's Gigs with Viktor Vektor: You Might Feel a Little Pinch",
+      "  steal the Rival's d8 (6)",
+      "Play Sketchy Ripper",
+      "Play Adrenaline Converter on Viktor Vektor: You Might Feel a Little Pinch",
+      "Play Zetatech Faceplate on River Ward: Detective on the Hunt",
+      "  pick the Rival's d6 (2) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Mandibular Upgrade"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 1,
+      "eddies": 6,
+      "unspent": 3,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 9
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 14,
+   "stepA": 154,
+   "stepB": 160,
+   "youDid": [
+    "JackRio played Johnny Silverhand: Never Stop Fighting by spending 6 Eddies.",
+    "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free.",
+    "JackRio sold Zetatech Faceplate into Eddies.",
+    "JackRio played Sketchy Ripper by spending 1 Eddie and 1 Legend."
+   ],
+   "actual": {
+    "p": 0.08333333333333333,
+    "se": 0.057630339567343716,
+    "outcome": {
+     "gigs": 6,
+     "rivalGigs": 6,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 11,
+     "rivalPower": 18,
+     "readyUnits": 2,
+     "hand": 0,
+     "eddies": 7,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.041666666666666664,
+     "se": 0.041666666666666685,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.07320723677962593,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Zetatech Faceplate on Viktor Vektor: Sit Down and Relax",
+      "  pick the Rival's d8 (1) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Live with the Aftermath"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 8,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 11
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.057630339567343716,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Zetatech Faceplate on River Ward: Detective on the Hunt",
+      "  pick the Rival's d4 (2) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Adrenaline Converter"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 8,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.057630339567343716,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Adrenaline Converter on Johnny Silverhand: Never Stop Fighting",
+      "Sell Zetatech Faceplate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 11,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 1,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.057630339567343716,
+     "moves": [
+      "Play Johnny Silverhand: Never Stop Fighting",
+      "Play Zetatech Faceplate on River Ward: Detective on the Hunt",
+      "  pick the Rival's d12 (5) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Live with the Aftermath"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 6,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 8,
+      "rivalPower": 18,
+      "readyUnits": 1,
+      "hand": 2,
+      "eddies": 7,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 11
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  }
+ ]
+}

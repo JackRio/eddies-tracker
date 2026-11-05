@@ -1,0 +1,958 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-13-jackrio-vs-omegabone-972812ac.json",
+ "matchId": "972812ac-7fbc-4777-89b8-5641cb15c539",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "omegabone",
+ "result": {
+  "loserId": "player1",
+  "reason": "omegabone reached 7 Gig dice.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Muamar Reyes: El Capitán",
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid"
+   ],
+   "seen": 17
+  },
+  "rival": {
+   "source": "18 cards seen in the game, rest from meta deck \"4 Blue / 2 Green (standard)\"",
+   "legends": [
+    "Hanako Arasaka: Daughter of the Emperor",
+    "Alt Cunningham: Soulkiller Architect",
+    "Jackie Welles: Pour One Out For Me"
+   ],
+   "seen": 16
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 339,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "stepB": 12,
+   "youDid": [
+    "JackRio sold Zetatech Faceplate into Eddies.",
+    "JackRio played Augmented Negotiators by spending 1 Eddie and 2 Legends.",
+    "JackRio called a Legend by spending 1 Legend. Muamar Reyes — El Capitán was revealed.",
+    "JackRio drew Carnage at the Colosseum with Muamar Reyes — El Capitán."
+   ],
+   "actual": {
+    "p": 1,
+    "se": 0,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 1,
+     "rivalUnits": 0,
+     "power": 2,
+     "rivalPower": 0,
+     "readyUnits": 1,
+     "hand": 6,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666669,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666669,
+     "moves": [
+      "Play Augmented Negotiators",
+      "Sell Zetatech Faceplate",
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 2,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9166666666666666,
+     "se": 0.05763033956734371,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.05763033956734371,
+     "moves": [
+      "Play Augmented Negotiators",
+      "Sell Bonnie and Clyde",
+      "Call V: Streetkid"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 1,
+      "rivalUnits": 0,
+      "power": 2,
+      "rivalPower": 0,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7083333333333334,
+     "se": 0.09477598811252412,
+     "gain": -0.2916666666666667,
+     "gainSe": 0.09477598811252415,
+     "moves": [
+      "Call V: Streetkid",
+      "Sell Bonnie and Clyde",
+      "Play Zetatech Faceplate on V: Streetkid",
+      "Play Detonate",
+      "  pick the Rival's d4 (2) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 1
+    },
+    {
+     "p": 0.625,
+     "se": 0.10094660663590603,
+     "gain": -0.375,
+     "gainSe": 0.10094660663590603,
+     "moves": [
+      "Call V: Streetkid",
+      "Sell Detonate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 3,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 1
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 4,
+   "stepA": 19,
+   "stepB": 22,
+   "youDid": [
+    "JackRio sold Detonate into Eddies.",
+    "JackRio played 6th Street Recruits by spending 2 Eddies and 2 Legends.",
+    "JackRio called a Legend by spending 1 Legend. V — Streetkid was revealed.",
+    "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, but had no Braindance Program in trash to recover."
+   ],
+   "actual": {
+    "p": 0.875,
+    "se": 0.0689596605459213,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 8,
+     "rivalPower": 6,
+     "readyUnits": 2,
+     "hand": 5,
+     "eddies": 2,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 1,
+     "se": 0,
+     "gain": 0.125,
+     "gainSe": 0.0689596605459213,
+     "moves": [
+      "Attack the Rival's Gigs with Augmented Negotiators",
+      "  steal the Rival's d4 (2)",
+      "Play 6th Street Recruits",
+      "Sell Bonnie and Clyde",
+      "Call V: Streetkid"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 8,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666669,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.08333333333333337,
+     "moves": [
+      "Attack the Rival's Gigs with Augmented Negotiators",
+      "  steal the Rival's d4 (2)",
+      "Play 6th Street Recruits",
+      "Sell Zetatech Faceplate",
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "  pick Augmented Negotiators - Give a friendly Unit +2 power this turn"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 8,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.9583333333333334,
+     "se": 0.04166666666666667,
+     "gain": 0.08333333333333333,
+     "gainSe": 0.05763033956734371,
+     "moves": [
+      "Attack the Rival's Gigs with Augmented Negotiators",
+      "  steal the Rival's d4 (2)",
+      "Play Meredith Stout: Stone Cold Corpo",
+      "Sell Detonate",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 7,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.7916666666666666,
+     "se": 0.0846811296559438,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.10279899245732688,
+     "moves": [
+      "Attack the Rival's Gigs with Augmented Negotiators",
+      "  steal the Rival's d4 (2)",
+      "Call V: Streetkid",
+      "Sell Carnage at the Colosseum",
+      "Play Meredith Stout: Stone Cold Corpo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 1,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 7,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 1
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Sells Bonnie and Clyde instead of Detonate.",
+    "Takes 1 more Gig this turn (3 vs your 2).",
+    "Out of 24 playouts you lost 3 after your turn, and 0 after the coach's.",
+    "After the Rival's next turn they have 3 Gigs on average, instead of 3.5 after your line.",
+    "You still hold 2 Gigs on average once the Rival's turn is over, instead of 1.5.",
+    "By the end of your next turn you're at 5.2 Gigs on average, instead of 4.4."
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 38,
+   "stepB": 48,
+   "youDid": [
+    "JackRio equipped Zetatech Faceplate to V — Streetkid by spending 2 Eddies.",
+    "JackRio sold Bonnie and Clyde into Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. Dexter DeShawn — Off the Grid was revealed.",
+    "JackRio drew Detonate with Dexter DeShawn — Off the Grid.",
+    "JackRio used Dexter DeShawn — Off the Grid to increase JackRio's d8 from 1 to 3.",
+    "JackRio played Detonate by spending 1 Legend.",
+    "JackRio's Detonate had no rival Gear with power 2 or less to defeat.",
+    "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 3 to 4.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Yorinobu Arasaka — Steel Dragon."
+   ],
+   "actual": {
+    "p": 0.20833333333333334,
+    "se": 0.08468112965594378,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 0,
+     "rivalUnits": 1,
+     "power": 0,
+     "rivalPower": 6,
+     "readyUnits": 0,
+     "hand": 5,
+     "eddies": 3,
+     "unspent": 1,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659807,
+     "gain": 0.4583333333333333,
+     "gainSe": 0.1471857579489102,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d6 (1)",
+      "Sell Carnage at the Colosseum",
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 6,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.6666666666666666,
+     "se": 0.09829463743659805,
+     "gain": 0.4583333333333333,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d4 (2)",
+      "Sell Carnage at the Colosseum"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 6,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.625,
+     "se": 0.10094660663590603,
+     "gain": 0.4166666666666667,
+     "gainSe": 0.11912523349835938,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d8 (1)",
+      "Sell Carnage at the Colosseum"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 6,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": 0.2916666666666667,
+     "gainSe": 0.11227500313294325,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d4 (2)",
+      "Sell Bonnie and Clyde",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 6,
+      "rivalPower": 6,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Also gets V (8 power) onto the field.",
+    "Doesn't equip Zetatech Faceplate on V.",
+    "Sells Carnage at the Colosseum instead of Bonnie and Clyde.",
+    "Takes 1 more Gig this turn (4 vs your 3).",
+    "Out of 24 playouts you lost 19 after your turn, and 8 after the coach's.",
+    "After the Rival's next turn they have 4 Gigs on average, instead of 5.1 after your line.",
+    "You still hold 3 Gigs on average once the Rival's turn is over, instead of 1.9.",
+    "By the end of your next turn you're at 4.6 Gigs on average, instead of 3.1."
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 67,
+   "stepB": 74,
+   "youDid": [
+    "JackRio sold Carnage at the Colosseum into Eddies.",
+    "JackRio played Yorinobu Arasaka — Steel Dragon by spending 4 Eddies and 3 Legends.",
+    "JackRio used Zetatech Faceplate to adjust omegabone's d4 from 1 to 2.",
+    "JackRio may play a cheap Unit from hand or trash for free with Yorinobu Arasaka — Steel Dragon.",
+    "JackRio played Augmented Negotiators for free."
+   ],
+   "actual": {
+    "p": 0.2916666666666667,
+    "se": 0.09477598811252415,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 5,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 11,
+     "rivalPower": 8,
+     "readyUnits": 2,
+     "hand": 4,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 3
+    }
+   },
+   "options": [
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252415,
+     "gain": 0,
+     "gainSe": 0.10425720702853739,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "  pick your d6 (4) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  pick your d6 (3) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  steal the Rival's d10 (2)",
+      "Play Mantis Blades on V: Streetkid",
+      "Sell Carnage at the Colosseum"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 4,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 23
+    },
+    {
+     "p": 0.125,
+     "se": 0.0689596605459213,
+     "gain": -0.16666666666666666,
+     "gainSe": 0.130031582934249,
+     "moves": [
+      "Play Animals Wrecker",
+      "  pick your d6 (4) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.08333333333333333,
+     "se": 0.057630339567343716,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.12007193898409804,
+     "moves": [
+      "Play Animals Wrecker",
+      "  pick your d8 (4) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.08333333333333333,
+     "se": 0.05763033956734371,
+     "gain": -0.20833333333333334,
+     "gainSe": 0.10389457216622947,
+     "moves": [
+      "Play Animals Wrecker",
+      "  pick your d8 (4) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Carnage at the Colosseum",
+      "Play Mantis Blades on Muamar Reyes: El Capitán"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 5,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 10,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 10,
+   "stepA": 96,
+   "stepB": 116,
+   "youDid": [
+    "JackRio sold Shattered Memories into Eddies.",
+    "JackRio sent V — Streetkid GO SOLO onto the field.",
+    "JackRio used Zetatech Faceplate to adjust omegabone's d6 from 1 to 2.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew 6th Street Recruits.",
+    "JackRio equipped Mantis Blades to V — Streetkid by spending 1 Eddie.",
+    "JackRio used Dexter DeShawn — Off the Grid to increase omegabone's d8 from 1 to 3.",
+    "JackRio played Industrial Assembly by spending 1 Legend.",
+    "JackRio used Industrial Assembly to increase omegabone's d12 from 1 to 5.",
+    "JackRio controlled a Gig with 8+ value and drew Satori — Sword of Saburo.",
+    "JackRio chose V — Streetkid to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with V — Streetkid. omegabone must respond after attack effects resolve.",
+    "JackRio used Zetatech Faceplate to adjust omegabone's d4 from 2 to 3.",
+    "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew 6th Street Recruits.",
+    "omegabone played Take Control by spending 2 Legends.",
+    "omegabone used Take Control to make V — Streetkid steal 1 fewer Gig this turn.",
+    "V — Streetkid made a Gig attack on omegabone and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from omegabone.",
+    "JackRio stole d4 (3) from omegabone. JackRio now has 4 Gig dice."
+   ],
+   "actual": {
+    "p": 0.041666666666666664,
+    "se": 0.04166666666666668,
+    "outcome": {
+     "gigs": 4,
+     "rivalGigs": 6,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 19,
+     "rivalPower": 8,
+     "readyUnits": 0,
+     "hand": 6,
+     "eddies": 5,
+     "unspent": 0,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666668,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  pick a hidden card",
+      "  use the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick Augmented Negotiators",
+      "  pick your d8 (4) - Zetatech Faceplate: choose a Gig",
+      "  0 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Mantis Blades",
+      "Attack Jacked-In Voodoo Boy with Augmented Negotiators"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 7,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 18,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 7,
+      "eddies": 5,
+      "unspent": 1,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666668,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  pick a hidden card",
+      "  pick your d10 (9) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  use the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick Meredith Stout: Stone Cold Corpo",
+      "Attack Jacked-In Voodoo Boy with Meredith Stout: Stone Cold Corpo",
+      "Sell Mantis Blades",
+      "Play Industrial Assembly"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 7,
+      "units": 3,
+      "rivalUnits": 1,
+      "power": 23,
+      "rivalPower": 6,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666668,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  pick a hidden card",
+      "  skip the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick your d4 (2) - Zetatech Faceplate: choose a Gig",
+      "  -1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "Sell Shattered Memories",
+      "Play Mantis Blades on Yorinobu Arasaka: Steel Dragon"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 7,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 20,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.04166666666666668,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  pick a hidden card",
+      "  pick your d10 (9) - Zetatech Faceplate: choose a Gig",
+      "  +1 - Zetatech Faceplate: adjust the Gig by up to 1, up or down",
+      "  skip the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "Sell Satori: Sword of Saburo",
+      "Play Industrial Assembly",
+      "  pick your d4 (2) - Industrial Assembly: choose a Gig to increase",
+      "  +3 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 7,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 8,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 3
+     },
+     "divergedSamples": 12
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 12,
+   "stepA": 144,
+   "stepB": 153,
+   "youDid": [
+    "JackRio sold Detonate into Eddies.",
+    "JackRio played Yorinobu Arasaka — Steel Dragon by spending 6 Eddies and 1 Legend.",
+    "JackRio may play a cheap Unit from hand or trash for free with Yorinobu Arasaka — Steel Dragon.",
+    "JackRio played 6th Street Recruits for free.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio's last action was undone by agreement.",
+    "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+    "JackRio declared 6th Street Recruits against Jacked-In Voodoo Boy. omegabone must respond after attack effects resolve.",
+    "6th Street Recruits (6) fought Jacked-In Voodoo Boy (2) and won.",
+    "Jacked-In Voodoo Boy was defeated. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0,
+    "se": 0,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 9,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 15,
+     "rivalPower": 9,
+     "readyUnits": 1,
+     "hand": 4,
+     "eddies": 6,
+     "unspent": 1,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  use the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick 6th Street Recruits",
+      "Attack Jacked-In Voodoo Boy with 6th Street Recruits",
+      "Sell Satori: Sword of Saburo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 9,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 15,
+      "rivalPower": 9,
+      "readyUnits": 1,
+      "hand": 4,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  use the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick 6th Street Recruits",
+      "Sell Detonate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 9,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 15,
+      "rivalPower": 11,
+      "readyUnits": 2,
+      "hand": 4,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  use the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "  pick Augmented Negotiators"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 9,
+      "units": 2,
+      "rivalUnits": 3,
+      "power": 11,
+      "rivalPower": 11,
+      "readyUnits": 2,
+      "hand": 6,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": 0,
+     "gainSe": 0,
+     "moves": [
+      "Play Yorinobu Arasaka: Steel Dragon",
+      "  skip the optional effect - Steel Dragon: play a Unit (cost ≤4) from hand or trash for free?",
+      "Sell Detonate"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 9,
+      "units": 1,
+      "rivalUnits": 3,
+      "power": 9,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 6,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  }
+ ]
+}

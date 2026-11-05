@@ -1,0 +1,799 @@
+{
+ "format": "eddies-replay-coach",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-10-jackrio-vs-poolpartyjosh-a616bda6.json",
+ "matchId": "a616bda6-4d1e-413c-82c5-958307e22a06",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "poolpartyjosh",
+ "result": {
+  "loserId": "player1",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid",
+    "Evelyn Parker: Beautiful Enigma"
+   ],
+   "seen": 18
+  },
+  "rival": {
+   "source": "13 cards seen in the game, rest from meta deck \"Adam Smasher / Saburo Arasaka / V\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "V: Streetkid",
+    "Saburo Arasaka: Stubborn Patriarch"
+   ],
+   "seen": 10
+  }
+ },
+ "settings": {
+  "samples": 24,
+  "plans": 6,
+  "keep": 4,
+  "depth": 40,
+  "noise": 3
+ },
+ "seconds": 340,
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "stepB": 18,
+   "youDid": [
+    "JackRio sold Mantis Blades into Eddies.",
+    "JackRio played Industrial Assembly by spending 1 Eddie.",
+    "JackRio used Industrial Assembly to increase JackRio's d12 from 6 to 10.",
+    "JackRio controlled a Gig with 8+ value and drew Chrome Fang.",
+    "JackRio called a Legend by spending 1 Legend. V — Streetkid was revealed.",
+    "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, and may recover a Braindance Program from trash.",
+    "JackRio returned Industrial Assembly from trash to hand. Recovered with V Streetkid.",
+    "JackRio played Industrial Assembly by spending 1 Legend.",
+    "JackRio used Industrial Assembly to increase JackRio's d12 from 10 to 12.",
+    "JackRio controlled a Gig with 8+ value and drew Satori — Sword of Saburo.",
+    "JackRio equipped Mantis Blades to V — Streetkid by spending 1 Legend."
+   ],
+   "actual": {
+    "p": 0.16666666666666666,
+    "se": 0.07770873402002615,
+    "outcome": {
+     "gigs": 1,
+     "rivalGigs": 1,
+     "units": 0,
+     "rivalUnits": 0,
+     "power": 0,
+     "rivalPower": 0,
+     "readyUnits": 0,
+     "hand": 6,
+     "eddies": 1,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.125,
+     "se": 0.0689596605459213,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.11227500313294325,
+     "moves": [
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 7,
+      "eddies": 1,
+      "unspent": 3,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.08333333333333333,
+     "se": 0.05763033956734371,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.10279899245732686,
+     "moves": [
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Sell Carnage at the Colosseum",
+      "Play Mantis Blades on Dexter DeShawn: Off the Grid"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 2,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.08333333333333333,
+     "se": 0.05763033956734371,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.10279899245732686,
+     "moves": [
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "Sell Industrial Assembly",
+      "Play Mantis Blades on Dexter DeShawn: Off the Grid",
+      "Play Mantis Blades on Dexter DeShawn: Off the Grid",
+      "Use Dexter DeShawn: Off the Grid",
+      "  pick your d12 (6) - Dexter DeShawn: choose a Gig to increase",
+      "  +2 - Increase by how much?"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 4,
+      "eddies": 1,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.041666666666666664,
+     "se": 0.04166666666666668,
+     "gain": -0.125,
+     "gainSe": 0.0915348195410129,
+     "moves": [
+      "Call V: Streetkid",
+      "Sell Mantis Blades"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 1,
+      "rivalGigs": 1,
+      "units": 0,
+      "rivalUnits": 0,
+      "power": 0,
+      "rivalPower": 0,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 1,
+      "unspent": 3,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 1
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 4,
+   "stepA": 25,
+   "stepB": 27,
+   "youDid": [
+    "JackRio sold Satori — Sword of Saburo into Eddies.",
+    "JackRio played Chrome Fang by spending 2 Eddies and 3 Legends.",
+    "JackRio used Chrome Fang; rival Units cannot steal JackRio's Gigs whose value is higher than their power until JackRio's next turn."
+   ],
+   "actual": {
+    "p": 0.16666666666666666,
+    "se": 0.07770873402002614,
+    "outcome": {
+     "gigs": 2,
+     "rivalGigs": 2,
+     "units": 1,
+     "rivalUnits": 1,
+     "power": 6,
+     "rivalPower": 4,
+     "readyUnits": 1,
+     "hand": 5,
+     "eddies": 2,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.2916666666666667,
+     "se": 0.09477598811252412,
+     "gain": 0.125,
+     "gainSe": 0.1095527799473975,
+     "moves": [
+      "Play Meredith Stout: Stone Cold Corpo",
+      "Sell Satori: Sword of Saburo",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 5,
+      "rivalPower": 4,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.16666666666666666,
+     "se": 0.07770873402002614,
+     "gain": 0,
+     "gainSe": 0.10425720702853739,
+     "moves": [
+      "Play Kerry Eurodyne: The Last Rockerboy",
+      "Sell Carnage at the Colosseum",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 5,
+      "rivalPower": 4,
+      "readyUnits": 1,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.16666666666666666,
+     "se": 0.07770873402002614,
+     "gain": 0,
+     "gainSe": 0.08512565307587486,
+     "moves": [
+      "Play Kerry Eurodyne: The Last Rockerboy",
+      "Sell Satori: Sword of Saburo",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 5,
+      "rivalPower": 4,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.125,
+     "se": 0.0689596605459213,
+     "gain": -0.041666666666666664,
+     "gainSe": 0.09477598811252412,
+     "moves": [
+      "Play Meredith Stout: Stone Cold Corpo",
+      "Sell Satori: Sword of Saburo",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 2,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 1,
+      "power": 5,
+      "rivalPower": 4,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "inaccuracy",
+   "why": [
+    "Ends with Meredith Stout (5 power) on the field, where you had Chrome Fang (6 power).",
+    "Calls Dexter DeShawn.",
+    "Out of 24 playouts you lost 20 after your turn, and 17 after the coach's.",
+    "After the Rival's next turn they have 3.3 Gigs on average, instead of 4.2 after your line.",
+    "You still hold 1.7 Gigs on average once the Rival's turn is over, instead of 0.8.",
+    "By the end of your next turn you're at 4 Gigs on average, instead of 3."
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 40,
+   "stepB": 46,
+   "youDid": [
+    "JackRio equipped Satori — Sword of Saburo to Chrome Fang by spending 2 Eddies.",
+    "JackRio sold Bonnie and Clyde into Eddies.",
+    "JackRio played Kerry Eurodyne — The Last Rockerboy by spending 1 Eddie and 3 Legends.",
+    "JackRio chose Chrome Fang to attack and must lock a legal target before spending it.",
+    "JackRio declared Chrome Fang against Field Operator. poolpartyjosh must respond after attack effects resolve.",
+    "Chrome Fang (8) fought Field Operator (4) and won.",
+    "Chrome Fang won the fight with Satori equipped and JackRio drew Meredith Stout — Stone Cold Corpo.",
+    "Field Operator was defeated and sent to trash with 1 attached Gear card. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0.5416666666666666,
+    "se": 0.10389457216622948,
+    "outcome": {
+     "gigs": 3,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 13,
+     "rivalPower": 7,
+     "readyUnits": 1,
+     "hand": 4,
+     "eddies": 3,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.20833333333333334,
+     "se": 0.08468112965594378,
+     "gain": -0.3333333333333333,
+     "gainSe": 0.130031582934249,
+     "moves": [
+      "Play Kerry Eurodyne: The Last Rockerboy",
+      "Call Evelyn Parker: Beautiful Enigma",
+      "Sell Satori: Sword of Saburo"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 3,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 11,
+      "rivalPower": 11,
+      "readyUnits": 2,
+      "hand": 4,
+      "eddies": 3,
+      "unspent": 1,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.5416666666666666,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack Field Operator with V: Streetkid",
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d12 (8)",
+      "Sell Carnage at the Colosseum",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 11,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.5416666666666666,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack Field Operator with V: Streetkid",
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d10 (8)",
+      "Sell Carnage at the Colosseum",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 11,
+      "readyUnits": 0,
+      "hand": 5,
+      "eddies": 3,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.5416666666666666,
+     "gainSe": 0.10389457216622948,
+     "moves": [
+      "V: Streetkid goes Solo",
+      "Attack Field Operator with V: Streetkid",
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d10 (8)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 4,
+      "rivalGigs": 2,
+      "units": 1,
+      "rivalUnits": 2,
+      "power": 6,
+      "rivalPower": 11,
+      "readyUnits": 0,
+      "hand": 6,
+      "eddies": 2,
+      "unspent": 0,
+      "faceUpLegends": 0
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 8,
+   "stepA": 53,
+   "stepB": 65,
+   "youDid": [
+    "JackRio sold Nocturne OP55 N1 into Eddies.",
+    "JackRio sent V — Streetkid GO SOLO onto the field.",
+    "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+    "JackRio used Dexter DeShawn — Off the Grid to give V — Streetkid +2 power this turn.",
+    "JackRio chose Chrome Fang to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with Chrome Fang. poolpartyjosh must respond after attack effects resolve.",
+    "Chrome Fang made a Gig attack on poolpartyjosh and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from poolpartyjosh.",
+    "JackRio stole d10 (8) from poolpartyjosh. JackRio now has 5 Gig dice.",
+    "JackRio chose V — Streetkid to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with V — Streetkid. poolpartyjosh must respond after attack effects resolve.",
+    "V — Streetkid (10) fought Meredith Stout — Stone Cold Corpo (9) and won.",
+    "Meredith Stout — Stone Cold Corpo was defeated and sent to trash with 1 attached Gear card. JackRio's attack won the fight."
+   ],
+   "actual": {
+    "p": 0.3333333333333333,
+    "se": 0.09829463743659808,
+    "outcome": {
+     "gigs": 5,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 1,
+     "power": 16,
+     "rivalPower": 9,
+     "readyUnits": 0,
+     "hand": 4,
+     "eddies": 4,
+     "unspent": 0,
+     "faceUpLegends": 1
+    }
+   },
+   "options": [
+    {
+     "p": 0.08333333333333333,
+     "se": 0.05763033956734371,
+     "gain": -0.25,
+     "gainSe": 0.0902893898143269,
+     "moves": [
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d10 (8)",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "Sell Carnage at the Colosseum",
+      "Call Dexter DeShawn: Off the Grid",
+      "  use the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)",
+      "  pick Chrome Fang - Give a friendly Unit +2 power this turn"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 1,
+      "power": 16,
+      "rivalPower": 9,
+      "readyUnits": 0,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.3333333333333333,
+     "gainSe": 0.09829463743659808,
+     "moves": [
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d12 (8)",
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "  steal the Rival's d10 (8)",
+      "Sell Carnage at the Colosseum",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 16,
+      "readyUnits": 0,
+      "hand": 4,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.3333333333333333,
+     "gainSe": 0.09829463743659808,
+     "moves": [
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "  steal the Rival's d8 (8)",
+      "Sell Carnage at the Colosseum",
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d12 (8)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 6,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 16,
+      "readyUnits": 0,
+      "hand": 3,
+      "eddies": 4,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.3333333333333333,
+     "gainSe": 0.09829463743659808,
+     "moves": [
+      "Attack the Rival's Gigs with Chrome Fang",
+      "  steal the Rival's d10 (8)",
+      "V: Streetkid goes Solo",
+      "Sell Nocturne OP55 N1",
+      "Call Dexter DeShawn: Off the Grid",
+      "  skip the optional effect - Dexter DeShawn: give a friendly Unit +2 power? (No = draw 1)"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 5,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 16,
+      "readyUnits": 1,
+      "hand": 5,
+      "eddies": 4,
+      "unspent": 0,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "good",
+   "why": []
+  },
+  {
+   "turn": 10,
+   "stepA": 78,
+   "stepB": 85,
+   "youDid": [
+    "JackRio sold Carnage at the Colosseum into Eddies.",
+    "JackRio played Meredith Stout — Stone Cold Corpo by spending 4 Eddies.",
+    "JackRio called a Legend by spending 1 Eddie. Evelyn Parker — Beautiful Enigma was revealed.",
+    "JackRio chose V — Streetkid to attack and must lock a legal target before spending it.",
+    "JackRio declared a Gig attack with V — Streetkid. poolpartyjosh must respond after attack effects resolve.",
+    "V — Streetkid made a Gig attack on poolpartyjosh and will steal 1 Gig if the defender cannot stop it.",
+    "JackRio must choose 1 Gig to steal from poolpartyjosh.",
+    "JackRio stole d12 (8) from poolpartyjosh. JackRio now has 7 Gig dice."
+   ],
+   "actual": {
+    "p": 0.125,
+    "se": 0.0689596605459213,
+    "outcome": {
+     "gigs": 7,
+     "rivalGigs": 3,
+     "units": 2,
+     "rivalUnits": 2,
+     "power": 13,
+     "rivalPower": 11,
+     "readyUnits": 1,
+     "hand": 3,
+     "eddies": 5,
+     "unspent": 2,
+     "faceUpLegends": 2
+    }
+   },
+   "options": [
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": 0.375,
+     "gainSe": 0.1320476966966806,
+     "moves": [
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d12 (8)",
+      "Play Animals Wrecker",
+      "Sell Carnage at the Colosseum",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.5,
+     "se": 0.10425720702853739,
+     "gain": 0.375,
+     "gainSe": 0.1320476966966806,
+     "moves": [
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d8 (8)",
+      "Play Animals Wrecker",
+      "Sell Carnage at the Colosseum",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 7,
+      "rivalGigs": 3,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 18,
+      "rivalPower": 11,
+      "readyUnits": 1,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0.041666666666666664,
+     "se": 0.04166666666666668,
+     "gain": -0.08333333333333333,
+     "gainSe": 0.08333333333333334,
+     "moves": [
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d6 (6)",
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "  steal the Rival's d8 (8)",
+      "Sell Carnage at the Colosseum",
+      "Call Evelyn Parker: Beautiful Enigma"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 11,
+      "readyUnits": 0,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 0,
+      "faceUpLegends": 2
+     },
+     "divergedSamples": 0
+    },
+    {
+     "p": 0,
+     "se": 0,
+     "gain": -0.125,
+     "gainSe": 0.0689596605459213,
+     "moves": [
+      "Attack the Rival's Gigs with V: Streetkid",
+      "  steal the Rival's d8 (8)",
+      "Play Modded Kusanagi",
+      "Attack the Rival's Gigs with Modded Kusanagi",
+      "  steal the Rival's d6 (6)",
+      "Sell Carnage at the Colosseum"
+     ],
+     "sameAsYours": false,
+     "outcome": {
+      "gigs": 8,
+      "rivalGigs": 2,
+      "units": 2,
+      "rivalUnits": 2,
+      "power": 16,
+      "rivalPower": 11,
+      "readyUnits": 0,
+      "hand": 3,
+      "eddies": 5,
+      "unspent": 1,
+      "faceUpLegends": 1
+     },
+     "divergedSamples": 0
+    }
+   ],
+   "verdict": "blunder",
+   "why": [
+    "Ends with Animals Wrecker (10 power) on the field, where you had Meredith Stout (5 power).",
+    "Out of 24 playouts you lost 21 after your turn, and 12 after the coach's."
+   ]
+  }
+ ]
+}
