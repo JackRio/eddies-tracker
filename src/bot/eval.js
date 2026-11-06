@@ -7,6 +7,8 @@ const policy = require('../coach/policy');
 
 // policy.chooseMove with a pluggable evaluation
 function chooseMove(wf, b, opts = {}) {
+  // keep/mulligan by hand quality (src/bot/mulligan.js); opts.mull === 'old': the old score-based tie (always keeps)
+  if (wf.step === 'mulligan_decision' && opts.mull !== 'old') return require('./mulligan').choose(b, wf, opts.rng || Math.random);
   const ev = opts.ev || policy.evaluate;
   const pid = wf.owner || b.active_player;
   const cands = policy.moves(wf, b);

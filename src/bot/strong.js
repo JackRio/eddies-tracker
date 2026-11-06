@@ -15,9 +15,10 @@
 // policy it plays out with, and the arena measures how much better (scripts/arena.js).
 //
 // Options (bot spec "strong:key=value:..."): deals (6), k (5), horizon (1), w (tuned|default:
-// the weights of the greedy policy and the leaf score), mull (0: greedy mulligan), leaf (prob|score|net),
+// the weights of the greedy policy and the leaf score), mull (0: hand-quality mulligan, src/bot/mulligan.js; 'old': the old always-keep tie; 1: search it), leaf (prob|score|net),
 // scale (score points per logit for 'prob'), belief (1: guess the Rival's deck from what they showed,
-// src/bot/belief.js; 0: old reshuffle that knows their list), loo (1: testing - hide their real list), explore (extra random
+// src/bot/belief.js; 0: old reshuffle that knows their list), loo (1: testing - hide their real list), sh (1: sequential
+// halving over the shortlist at the same total budget), explore (extra random
 // moves searched per decision, for training data), prior (greedy|net|mix: who picks the shortlist; mix = greedy's top k + the net's top kn),
 // cont (greedy|net: who plays the rest of the bot's own turn inside each playout), pb (weight of the
 // net's log-probability added to each searched move's value; needs prior=net|mix).
@@ -33,7 +34,7 @@ const { mulberry } = require('../coach/bridge');
 
 // default = value-net leaf (beat the play-to-end version 64.8%, 44 pairs); the old default is
 // strong:leaf=prob:horizon=99:deals=6:k=4
-const DEFAULTS = { deals: 8, k: 5, horizon: 1, w: 'tuned', mull: 0, leaf: 'net', scale: 30, belief: 1, loo: 0, vnet: '', pnet: '', explore: 0, prior: 'greedy', kn: 3, pb: 0, cont: 'greedy' };
+const DEFAULTS = { deals: 8, k: 5, horizon: 1, w: 'tuned', mull: 0, leaf: 'net', scale: 30, belief: 1, loo: 0, vnet: '', pnet: '', explore: 0, prior: 'greedy', kn: 3, pb: 0, cont: 'greedy', sh: 0 };
 
 function shuffleInPlace(a, rng) {
   for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
@@ -44,18 +45,22 @@ function shuffleInPlace(a, rng) {
 // belief.js) the Rival's hand, deck, Eddies and face-down Legends come from a decklist drawn from
 // the deck-guessing posterior. Without it (belief=0, the old behaviour) their actual remaining
 // cards are only reshuffled between hand and deck - which leaks their 40-card list.
+// Shuffles start from a SORTED list, so the result can't depend on the real hidden order (checked by
+// scripts/leak-test.js). EDDIES_LEGACY_SHUFFLE=1 restores the old behaviour (shuffle in board order),
+// needed only to replay games recorded before Nov 6 2026 exactly (Reanalyse of rounds 1-3).
+const canon = a => (BELIEF.legacy.on ? a : a.sort());
 function determinize(b, me, rng, belief) {
   const d = cloneBoard(b);
   const R = d[policy.opp(me)].zones;
   if (belief) BELIEF.redeal(d, me, rng, belief.post, belief.seen);
   else {
-    const pool = shuffleInPlace([...R.hand, ...R.deck].map(x => x.card_id), rng);
+    const pool = shuffleInPlace(canon([...R.hand, ...R.deck].map(x => x.card_id)), rng);
     R.hand.forEach((h, i) => { h.card_id = pool[i]; });
     R.deck.forEach((c, i) => { c.card_id = pool[R.hand.length + i]; });
   }
   hideOwnLegends(d, me, rng, false);
   const M = d[me].zones.deck;
-  const mine = shuffleInPlace(M.map(x => x.card_id), rng);
+  const mine = shuffleInPlace(canon(M.map(x => x.card_id)), rng);
   M.forEach((c, i) => { c.card_id = mine[i]; });
   d._rngState = Math.floor(rng() * 4294967296) | 0;
   d._rngMap = null;
@@ -68,7 +73,7 @@ function determinize(b, me, rng, belief) {
 function hideOwnLegends(d, me, rng, copy = true) {
   if (copy) d = cloneBoard(d);
   const down = d[me].zones.legends.filter(l => l.face !== 'face_up');
-  const ids = shuffleInPlace(down.map(l => l.card_id), rng);
+  const ids = shuffleInPlace(canon(down.map(l => l.card_id)), rng);
   down.forEach((l, i) => { l.card_id = ids[i]; });
   return d;
 }
@@ -168,19 +173,47 @@ function make(name, opts = {}) {
       belief = { seen, post: BELIEF.posterior(seen, real ? { exclude: d => BELIEF.sameList(d, real) } : {}) };
       ctx.belief = belief.post.slice(0, 3).map(x => ({ deck: x.deck.name || x.deck, p: x.w }));
     }
-    const worlds = Array.from({ length: o.deals }, (_, i) => determinize(b, me, mulberry(seed + i), belief));
+    // a world = one re-deal of everything hidden; world i is shared by every move (paired comparison)
+    const worlds = [];
+    const world = i => (worlds[i] ||= determinize(b, me, mulberry(seed + i), belief));
+    const stats = new Map(keep.map(x => [x.seq, { total: 0, ok: 0, n: 0 }]));
+    const run = (seq, from, to) => {
+      const st = stats.get(seq);
+      for (let i = from; i < to; i++) {
+        st.n++;
+        const r = policy.tryApply(world(i), wf, seq);
+        if (!r) continue;
+        st.ok++;
+        st.total += score(playout(r.board, r.waitingFor, me, mulberry(seed + 5000 + i)), me);
+      }
+    };
+    if (o.sh && keep.length > 2) {
+      // sh=1: sequential halving (Gumbel-style root search) with the SAME total budget as the flat
+      // search (moves x deals playouts): every move gets a few worlds, the worse half is dropped, the
+      // survivors get more worlds, and so on until 2 are left - budget goes to the moves that matter
+      const budget = keep.length * o.deals, rounds = Math.ceil(Math.log2(keep.length));
+      let alive = keep.map(x => x.seq), used = 0;
+      for (let rd = 0; rd < rounds && alive.length > 1; rd++) {
+        const per = Math.max(1, Math.floor(budget / rounds / alive.length));
+        for (const seq of alive) { const st = stats.get(seq); run(seq, st.n, st.n + per); }
+        used += per * alive.length;
+        const mean = q => { const st = stats.get(q); return st.ok ? st.total / st.ok : -Infinity; };
+        alive = alive.slice().sort((x, y) => mean(y) - mean(x)).slice(0, Math.max(2, Math.ceil(alive.length / 2)));
+        if (alive.length === 2 && rd < rounds - 1) {   // last round: the final two share what is left
+          const left = Math.max(0, budget - used), each = Math.max(1, Math.floor(left / 2));
+          for (const seq of alive) { const st = stats.get(seq); run(seq, st.n, st.n + each); }
+          break;
+        }
+      }
+    } else {
+      for (const { seq } of keep) run(seq, 0, o.deals);
+    }
     const options = [];
     for (const { seq } of keep) {
-      let total = 0, ok = 0;
-      worlds.forEach((w, i) => {
-        const r = policy.tryApply(w, wf, seq);
-        if (!r) return;
-        ok++;
-        total += score(playout(r.board, r.waitingFor, me, mulberry(seed + 5000 + i)), me);
-      });
+      const st = stats.get(seq);
       // pb: AlphaZero-style blend - add pb x log(intuition probability), so a move that only looks
       // best because its few noisy playouts got lucky has to beat the net's opinion too
-      if (ok) options.push({ seq, value: total / ok + (o.pb && lastLogp ? o.pb * Math.max(-10, lastLogp.get(seq) ?? -10) : 0) });
+      if (st.ok) options.push({ seq, value: st.total / st.ok + (o.pb && lastLogp ? o.pb * Math.max(-10, lastLogp.get(seq) ?? -10) : 0), n: st.ok });
     }
     options.sort((x, y) => y.value - x.value);
     ctx.lastSearch = { ranked: R.map(x => x.seq), shortlist: shortlist.map(x => x.seq), options };
@@ -188,7 +221,7 @@ function make(name, opts = {}) {
   }
 
   function act(b, wf, me, ctx) {
-    if (wf.step === 'mulligan_decision' && !o.mull) return E.chooseMove(wf, b, { ...pol, rng: ctx.rng });
+    if (wf.step === 'mulligan_decision' && o.mull !== 1) return E.chooseMove(wf, b, { ...pol, rng: ctx.rng, mull: o.mull });
     const r = search(b, wf, me, ctx);
     ctx.last = r.options;   // for UIs / explanations: every option tried and its mean score
     return r.seq || E.chooseMove(wf, b, { ...pol, rng: ctx.rng }) || (defaultPassAction(wf) ? [defaultPassAction(wf)] : null);

@@ -66,8 +66,21 @@ function resolveEffect(effect, b, ctx) {
     }
 
     case 'ChooseAmount': {
-      const min = evalExpr(effect.min, b, ctx);
-      const max = evalExpr(effect.max, b, ctx);
+      let min = evalExpr(effect.min, b, ctx);
+      let max = evalExpr(effect.max, b, ctx);
+      // only amounts the chosen Gig can take (see linkAmountsToGigs in cards.js)
+      // (globalThis.__eddiesLegacy.on: exact replays of games recorded before Nov 7 2026 - see src/bot/belief.js)
+      const bound = effect._gig && !globalThis.__eddiesLegacy?.on && ctx.bindings?.[effect._gig.binding];
+      const one = bound && (Array.isArray(bound) ? bound.length === 1 && bound[0] : bound);
+      const owner = one?.iid && P.findGigOwner(b, one.iid);
+      const die = owner && b[owner].zones.gigs.find(g => g.iid === one.iid);   // the live die, not a snapshot
+      if (die) {
+        const up = die.sides - die.value, down = die.value - 1;
+        // never an empty range: if nothing fits, the smallest amount stays (and fails, as before)
+        if (effect._gig.dir === 'up') max = Math.max(min, Math.min(max, up));
+        else if (effect._gig.dir === 'down') max = Math.max(min, Math.min(max, down));
+        else { const lo = Math.max(min, -down), hi = Math.min(max, up); if (lo <= hi) { min = lo; max = hi; } }
+      }
       return {
         continue: false,
         no_repush: true,

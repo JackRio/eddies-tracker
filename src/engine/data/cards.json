@@ -1864,7 +1864,7 @@
     "power": null,
     "ram": 3,
     "keywords": null,
-    "rules_text": "Choose one effect. If a friendly d4 is a min Gig, choose both instead.\nGive a rival Unit -5 power this turn. // Bottom-deck a rival Unit with power 0.",
+    "rules_text": "Choose one effect. If a friendly d4 is a min Gig, choose both instead.\nGive a rival Unit -4 power this turn. // Bottom-deck a rival Unit with power 0.",
     "set": "Welcome to Night City — Retail (WELCOMETONIGHTCITYRETAIL)",
     "number": "WNTC-135",
     "illustrated_by": "Elizaveta Kazakova",

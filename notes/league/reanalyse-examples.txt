@@ -1,0 +1,312 @@
+Reanalyse examples from data-2001.jsonl: decisions where the deeper search (new) prefers a different move
+than the old bot played by 3+ points. Scores = estimated win chance for the deciding player.
+372 re-searched games have at least one such decision; showing 3.
+
+══ match 112 game 1: BBG vs RGB, BBG first, winner RGB in 14 turns
+
+  Turn 1, BBG - main phase
+    BBG (deciding): hand Placide, Peace Offering, Jacked-In Voodoo Boy, Peace Offering, Psycho Squad, Trust No One, Synapse Burnout
+      field - | Legends face-down, face-down, face-down | Eddies 0 ready / 0 | Gigs d4=2
+    RGB: hand 6 cards | field - | Legends face-down, face-down, face-down | Eddies 0 | Gigs -
+       old   new
+    better ★  25%   49%   Call a Legend - random of 3 face-down
+                -   45%   Play Program Trust No One
+                -   45%   Play Program Synapse Burnout
+              26%   45%   Sell Peace Offering
+              26%   45%   Sell Peace Offering
+              25%   44%   Sell Synapse Burnout
+    played ▶  26%   44%   Sell Trust No One
+                -   43%   Play Program Peace Offering
+
+  Turn 1, BBG - main phase
+    BBG (deciding): hand Placide, Peace Offering, Jacked-In Voodoo Boy, Peace Offering, Psycho Squad, Synapse Burnout
+      field - | Legends face-down, face-down, face-down | Eddies 1 ready / 1 | Gigs d4=2
+    RGB: hand 6 cards | field - | Legends face-down, face-down, face-down | Eddies 0 | Gigs -
+       old   new
+    better ★  42%   49%   Call a Legend - random of 3 face-down
+                -   45%   Play Program Synapse Burnout
+    played ▶  45%   44%   Play Unit Jacked-In Voodoo Boy
+              34%   42%   Play Program Peace Offering
+              34%   42%   Play Program Peace Offering
+              33%   36%   End turn
+
+  Turn 3, BBG - main phase
+    BBG (deciding): hand Placide, Peace Offering, Peace Offering, Psycho Squad, Synapse Burnout, Floor It
+      field Jacked-In Voodoo Boy | Legends face-down, face-down, face-down | Eddies 1 ready / 1 | Gigs d4=2 d6=3
+    RGB: hand 6 cards | field Valentino Street Racer | Legends Wakako Okada (spent), face-down, face-down | Eddies 1 | Gigs d4=3
+       old   new
+    better ★    -   36%   Play Program Peace Offering
+                -   36%   Play Program Peace Offering
+                -   31%   Call a Legend - random of 3 face-down
+    played ▶  13%   29%   Sell Floor It
+                -   28%   Play Program Floor It
+              11%   28%   Sell Synapse Burnout
+              10%   27%   Play Unit Psycho Squad
+              10%   26%   Sell Peace Offering
+
+  Turn 4, RGB - main phase
+    RGB (deciding): hand Psycho Squad, Lizzy Wizzy, 6th Street Recruits, Satori, Mantis Blades, Placide, Memory Relapse
+      field Valentino Street Racer | Legends Wakako Okada, face-down, face-down | Eddies 1 ready / 1 | Gigs d12=11
+    BBG: hand 5 cards | field Jacked-In Voodoo Boy (spent) | Legends Alt Cunningham (spent), face-down, face-down | Eddies 2 | Gigs d4=2 d6=2 d4=2
+       old   new
+    better ★    -   79%   Attack Jacked-In Voodoo Boy with Valentino Street Racer
+    played ▶  80%   67%   Sell Mantis Blades
+              79%   67%   Attack opponent's Gigs with Valentino Street Racer
+              79%   67%   Sell Satori
+              79%   67%   Play Unit Psycho Squad
+                -   67%   Call a Legend - random of 2 face-down
+                -   65%   Play Unit 6th Street Recruits
+              79%   65%   Sell Memory Relapse
+
+  Turn 6, RGB - main phase
+    RGB (deciding): hand Psycho Squad, Lizzy Wizzy, Satori, Placide, Memory Relapse, Nocturne OP55 N1, Floor It
+      field - | Legends Wakako Okada, Dexter DeShawn, face-down | Eddies 2 ready / 2 | Gigs d12=11 d6=2
+    BBG: hand 3 cards | field - | Legends Alt Cunningham (spent), Jackie Welles (spent), face-down | Eddies 3 | Gigs d4=2 d6=2 d4=2 d8=8
+       old   new
+    better ★    -   61%   Use Wakako Okada
+              64%   51%   Sell Floor It
+    played ▶  65%   49%   Sell Nocturne OP55 N1
+              63%   48%   Sell Satori
+              63%   48%   Play Unit Psycho Squad
+                -   48%   Call Padre - last face-down Legend
+                -   47%   Play Program Floor It
+              63%   46%   Sell Memory Relapse
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Placide, Psycho Squad, Pyramid Song, Nocturne OP55 N1
+      field - | Legends Alt Cunningham, Jackie Welles, face-down | Eddies 3 ready / 3 | Gigs d4=1 d6=2 d4=2 d8=8 d12=6
+    RGB: hand 6 cards | field Psycho Squad | Legends Wakako Okada (spent), Dexter DeShawn (spent), Padre (spent) | Eddies 3 | Gigs d12=11 d6=2
+       old   new
+    better ★    -   55%   Call Hanako Arasaka - last face-down Legend
+    played ▶  51%   48%   Sell Pyramid Song
+              51%   48%   Play Unit Psycho Squad
+              51%   48%   Play Program Nocturne OP55 N1
+                -   48%   Use Alt Cunningham
+                -   41%   Use Alt Cunningham
+              35%   26%   End turn
+              15%   18%   Sell Nocturne OP55 N1
+
+  Turn 8, RGB - main phase
+    RGB (deciding): hand Lizzy Wizzy, Satori, Placide, Memory Relapse, Synapse Burnout, Psycho Squad
+      field - | Legends Wakako Okada, Dexter DeShawn, Padre | Eddies 4 ready / 4 | Gigs d12=11 d6=2 d8=1
+    BBG: hand 3 cards | field - | Legends Alt Cunningham (spent), Jackie Welles (spent), face-down | Eddies 4 | Gigs d4=1 d6=2 d4=2 d8=8 d12=6
+       old   new
+    better ★  68%   49%   Play Unit Psycho Squad
+              68%   49%   Use Wakako Okada
+              68%   49%   Use Dexter DeShawn
+                -   49%   Use Padre
+    played ▶  75%   38%   Play Unit Lizzy Wizzy
+                -   32%   Play Satori on Wakako Okada
+                -   32%   Play Satori on Dexter DeShawn
+                -   32%   Play Satori on Padre
+
+  Turn 8, RGB - main phase
+    RGB (deciding): hand Satori, Placide, Memory Relapse, Synapse Burnout, Psycho Squad
+      field Lizzy Wizzy | Legends Wakako Okada (spent), Dexter DeShawn, Padre | Eddies 0 ready / 4 | Gigs d12=11 d6=2 d8=1
+    BBG: hand 3 cards | field - | Legends Alt Cunningham (spent), Jackie Welles (spent), face-down | Eddies 4 | Gigs d4=1 d6=2 d4=2 d8=8 d12=6
+       old   new
+    better ★  66%   44%   Play Satori on Lizzy Wizzy
+              68%   39%   Use Dexter DeShawn
+              68%   39%   End turn
+              68%   39%   Use Padre
+                -   36%   Play Program Synapse Burnout
+    played ▶  71%   28%   Play Satori on Wakako Okada
+                -   28%   Play Satori on Dexter DeShawn
+                -   28%   Play Satori on Padre
+
+  Turn 11, BBG - main phase
+    BBG (deciding): hand Psycho Squad, Maman Brigitte, Three Mouths, One Desire
+      field - | Legends Alt Cunningham, Jackie Welles, face-down | Eddies 5 ready / 5 | Gigs d4=1 d6=1 d4=2 d8=8 d12=6 d10=5 d20=12
+    RGB: hand 2 cards | field Placide | Legends Wakako Okada (spent), Dexter DeShawn (spent), Padre (spent) | Eddies 5 | Gigs d12=11 d6=2 d8=1 d10=8
+       old   new
+    better ★  86%   80%   Play Program Three Mouths, One Desire
+    played ▶  86%   77%   Use Alt Cunningham
+               4%   11%   Sell Three Mouths, One Desire
+               4%   11%   Play Unit Psycho Squad
+               4%   11%   Play Unit Maman Brigitte
+               1%    3%   Call Hanako Arasaka - last face-down Legend
+               1%    2%   Use Alt Cunningham
+               1%    1%   End turn
+
+  Turn 11, BBG - effect choice
+    BBG (deciding): hand Psycho Squad, Maman Brigitte, Three Mouths, One Desire
+      field - | Legends Alt Cunningham (spent), Jackie Welles, face-down | Eddies 4 ready / 5 | Gigs d4=1 d6=1 d4=2 d8=8 d12=6 d10=5 d20=12
+    RGB: hand 2 cards | field Placide | Legends Wakako Okada (spent), Dexter DeShawn (spent), Padre (spent) | Eddies 5 | Gigs d12=11 d6=2 d8=1 d10=8
+       old   new
+    better ★  81%   74%   Alt Cunningham: picks Nocturne OP55 N1
+    played ▶  90%   52%   Alt Cunningham: picks Peace Offering
+              90%   52%   Alt Cunningham: picks Peace Offering
+               0%    2%   Alt Cunningham: picks Synapse Burnout
+
+══ match 84 game 2: BBG vs YYR, BBG first, winner BBG in 15 turns
+
+  Turn 3, BBG - main phase
+    BBG (deciding): hand Pyramid Song, Peace Offering, Lizzy Wizzy, Placide, Valentino Street Racer, Trust No One
+      field Jacked-In Voodoo Boy | Legends face-down, face-down, face-down | Eddies 1 ready / 1 | Gigs d4=4 d6=2
+    YYR: hand 5 cards | field 6th Street Recruits | Legends face-down, face-down, face-down | Eddies 1 | Gigs d12=11
+       old   new
+    better ★    -   40%   Play Program Peace Offering
+                -   38%   Play Program Trust No One
+    played ▶  18%   32%   Play Unit Valentino Street Racer
+              17%   31%   Sell Pyramid Song
+                -   29%   Call a Legend - random of 3 face-down
+              18%   27%   Sell Peace Offering
+              17%   26%   Sell Trust No One
+               9%   15%   Play Program Pyramid Song
+
+  Turn 4, YYR - main phase
+    YYR (deciding): hand Zetatech Faceplate, Johnny Silverhand, Detonate, Secondhand Bombus, Rockn' Rockerboy
+      field 6th Street Recruits (spent), Meredith Stout | Legends face-down, face-down, face-down | Eddies 0 ready / 1 | Gigs d10=3
+    BBG: hand 4 cards | field Valentino Street Racer | Legends Hanako Arasaka (spent), face-down, face-down | Eddies 2 | Gigs d4=2 d6=2 d12=11
+       old   new
+    better ★  59%   63%   Sell Zetatech Faceplate
+              60%   62%   Sell Detonate
+    played ▶  64%   56%   End turn
+
+  Turn 5, BBG - main phase
+    BBG (deciding): hand Lizzy Wizzy, Placide, Trust No One, Chrome Reverie, Chrome Reverie
+      field Valentino Street Racer | Legends Hanako Arasaka, face-down, face-down | Eddies 3 ready / 3 | Gigs d4=2 d6=2 d12=11 d12=6
+    YYR: hand 5 cards | field 6th Street Recruits (spent), Meredith Stout | Legends face-down, face-down, face-down | Eddies 1 | Gigs d10=3
+       old   new
+    better ★  40%   67%   Play Unit Lizzy Wizzy
+                -   63%   Attack opponent's Gigs with Valentino Street Racer
+              34%   59%   Use Hanako Arasaka
+    played ▶  41%   57%   Play Program Trust No One
+              32%   46%   Call a Legend - random of 2 face-down
+                -   31%   Attack 6th Street Recruits with Valentino Street Racer
+                -   24%   Play Program Chrome Reverie
+                -   24%   Play Program Chrome Reverie
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Lizzy Wizzy, Placide, Chrome Reverie, Chrome Reverie, Les Élémens, Floor It
+      field Valentino Street Racer, Lizzy Wizzy | Legends Hanako Arasaka, face-down, face-down | Eddies 3 ready / 3 | Gigs d4=2 d12=6 d8=8
+    YYR: hand 4 cards | field 6th Street Recruits (spent), Meredith Stout (spent), Rockn' Rockerboy | Legends face-down, face-down, face-down | Eddies 2 | Gigs d10=9 d8=6 d6=1 d12=1
+       old   new
+    better ★  70%   71%   Sell Floor It
+              57%   59%   Play Program Floor It
+              55%   57%   Play Program Les Élémens
+              55%   57%   Call a Legend - random of 2 face-down
+    played ▶  55%   57%   Attack opponent's Gigs with Lizzy Wizzy
+              55%   57%   Attack opponent's Gigs with Valentino Street Racer
+              55%   57%   Sell Chrome Reverie
+              55%   57%   Sell Chrome Reverie
+
+  Turn 8, YYR - main phase
+    YYR (deciding): hand Zetatech Faceplate, Johnny Silverhand, Detonate, Secondhand Bombus, Adrenaline Converter
+      field 6th Street Recruits, Rockn' Rockerboy | Legends face-down, face-down, face-down | Eddies 2 ready / 2 | Gigs d6=1 d12=1 d6=4
+    BBG: hand 4 cards | field Valentino Street Racer (spent), Lizzy Wizzy (spent) | Legends Hanako Arasaka (spent), face-down, Jackie Welles | Eddies 4 | Gigs d4=2 d12=6 d8=8 d10=9 d8=6
+       old   new
+    better ★    -   65%   Attack Lizzy Wizzy with 6th Street Recruits
+                -   65%   Attack Lizzy Wizzy with Rockn' Rockerboy
+                -   65%   Attack Valentino Street Racer with 6th Street Recruits
+                -   65%   Attack Valentino Street Racer with Rockn' Rockerboy
+    played ▶  55%   54%   Sell Detonate
+              52%   52%   Attack opponent's Gigs with 6th Street Recruits
+              52%   52%   Attack opponent's Gigs with Rockn' Rockerboy
+              52%   52%   Sell Zetatech Faceplate
+
+  Turn 10, YYR - main phase
+    YYR (deciding): hand Johnny Silverhand, Mantis Blades
+      field 6th Street Recruits, Rockn' Rockerboy | Legends face-down, face-down, face-down | Eddies 3 ready / 3 | Gigs d6=1 d12=1 d6=4 d4=2 d4=2
+    BBG: hand 2 cards | field Placide | Legends Hanako Arasaka (spent), Alt Cunningham (spent), Jackie Welles (spent) | Eddies 5 | Gigs d12=6 d8=8 d10=9 d8=6 d10=9
+       old   new
+    better ★  80%   53%   Play Unit Johnny Silverhand
+              80%   53%   Call a Legend - random of 3 face-down
+    played ▶  82%   50%   Attack opponent's Gigs with 6th Street Recruits
+              82%   50%   Attack opponent's Gigs with Rockn' Rockerboy
+              82%   50%   Sell Mantis Blades
+                -   33%   Play Mantis Blades on Rockn' Rockerboy
+                -   25%   Play Mantis Blades on 6th Street Recruits
+               5%    1%   End turn
+
+  Turn 11, BBG - main phase
+    BBG (deciding): hand Lizzy Wizzy, Pepe Najarro, Valentino Street Racer
+      field Placide (spent) | Legends Hanako Arasaka, Alt Cunningham, Jackie Welles | Eddies 5 ready / 5 | Gigs d12=6 d8=8 d10=9 d20=3
+    YYR: hand 2 cards | field 6th Street Recruits (spent), Johnny Silverhand | Legends Viktor Vektor (spent), face-down, face-down | Eddies 4 | Gigs d6=1 d12=1 d6=4 d4=2 d4=2 d8=6 d10=9
+       old   new
+    better ★  33%   20%   Play Unit Pepe Najarro
+              33%   20%   Use Alt Cunningham
+                -   20%   Use Hanako Arasaka
+    played ▶  43%   16%   Play Unit Lizzy Wizzy
+               0%    0%   Play Unit Valentino Street Racer
+               0%    0%   Use Alt Cunningham
+               0%    0%   End turn
+
+══ match 142 game 3: RRG vs BBG, BBG first, winner RRG in 14 turns
+
+  Turn 5, BBG - main phase
+    BBG (deciding): hand Towerfall, Valentino Street Racer, Maman Brigitte, Three Mouths, One Desire, Chrome Reverie, Nocturne OP55 N1, Peace Offering
+      field Pepe Najarro | Legends face-down, face-down, face-down | Eddies 1 ready / 1 | Gigs d4=3 d10=1
+    RRG: hand 5 cards | field Meredith Stout (spent), 6th Street Recruits | Legends Padre (spent), face-down, face-down | Eddies 2 | Gigs d10=8 d12=9 d12=6
+       old   new
+    better ★    -   45%   Attack Meredith Stout with Pepe Najarro
+    played ▶  25%   22%   Attack opponent's Gigs with Pepe Najarro
+              25%   22%   Sell Towerfall
+              22%   20%   Sell Three Mouths, One Desire
+                -   20%   Sell Peace Offering
+              18%   17%   Sell Chrome Reverie
+              19%   17%   Sell Nocturne OP55 N1
+                -   10%   Play Unit Valentino Street Racer
+
+  Turn 6, RRG - main phase
+    RRG (deciding): hand Riot Shield, Valentino Street Racer, Yorinobu Arasaka, La Llorona, Meredith Stout
+      field Meredith Stout, Meredith Stout | Legends Padre, face-down, face-down | Eddies 0 ready / 2 | Gigs d10=8 d12=6 d8=2
+    BBG: hand 3 cards | field Pepe Najarro (spent), Maman Brigitte | Legends face-down, face-down, face-down | Eddies 2 | Gigs d4=3 d10=1 d12=9
+       old   new
+    better ★  89%   92%   End turn
+    played ▶  89%   86%   Call a Legend - random of 2 face-down
+              82%   86%   Use Padre
+              84%   86%   Attack opponent's Gigs with Meredith Stout
+              84%   86%   Sell Riot Shield
+                -   54%   Attack Pepe Najarro with Meredith Stout
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Valentino Street Racer, Peace Offering, Three Mouths, One Desire
+      field Pepe Najarro, Maman Brigitte | Legends face-down, face-down, face-down | Eddies 3 ready / 3 | Gigs d4=3 d10=1 d12=9 d8=6
+    RRG: hand 5 cards | field Meredith Stout, Meredith Stout | Legends Padre (spent), Adam Smasher (spent), face-down | Eddies 2 | Gigs d10=8 d12=6 d8=2
+       old   new
+    better ★    -   57%   Attack opponent's Gigs with Maman Brigitte
+    played ▶  38%   41%   Attack opponent's Gigs with Pepe Najarro
+              38%   41%   Play Unit Valentino Street Racer
+              38%   41%   Call a Legend - random of 3 face-down
+              36%   37%   Play Program Three Mouths, One Desire
+                -   25%   Play Program Peace Offering
+               3%    2%   End turn
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Valentino Street Racer, Peace Offering, Three Mouths, One Desire
+      field Pepe Najarro (spent), Maman Brigitte | Legends face-down, face-down, face-down | Eddies 3 ready / 3 | Gigs d4=3 d10=1 d12=9 d8=6 d10=8
+    RRG: hand 5 cards | field Meredith Stout, Meredith Stout | Legends Padre (spent), Adam Smasher (spent), face-down | Eddies 2 | Gigs d12=6 d8=2
+       old   new
+    better ★    -   67%   Attack opponent's Gigs with Maman Brigitte
+    played ▶  35%   49%   Play Program Three Mouths, One Desire
+              35%   48%   Play Unit Valentino Street Racer
+              35%   48%   Call a Legend - random of 3 face-down
+              33%   43%   Play Program Peace Offering
+               7%   14%   End turn
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Valentino Street Racer, Peace Offering, Jacked-In Voodoo Boy, Chrome Reverie
+      field Pepe Najarro (spent), Maman Brigitte | Legends face-down, face-down, face-down | Eddies 1 ready / 3 | Gigs d4=3 d10=1 d12=9 d8=6 d10=8
+    RRG: hand 5 cards | field Meredith Stout, Meredith Stout | Legends Padre (spent), Adam Smasher (spent), face-down | Eddies 2 | Gigs d12=6 d8=2
+       old   new
+    better ★    -   67%   Attack opponent's Gigs with Maman Brigitte
+    played ▶  49%   48%   Call a Legend - random of 3 face-down
+              49%   48%   Play Unit Valentino Street Racer
+                -   46%   Play Program Peace Offering
+              34%   40%   Play Unit Jacked-In Voodoo Boy
+              38%   28%   Play Program Chrome Reverie
+              19%   21%   End turn
+
+  Turn 7, BBG - main phase
+    BBG (deciding): hand Valentino Street Racer, Peace Offering, Jacked-In Voodoo Boy, Chrome Reverie
+      field Pepe Najarro (spent), Maman Brigitte | Legends Hanako Arasaka, face-down, face-down | Eddies 0 ready / 3 | Gigs d4=3 d10=1 d12=9 d8=6 d10=8
+    RRG: hand 5 cards | field Meredith Stout, Meredith Stout | Legends Padre (spent), Adam Smasher (spent), face-down | Eddies 2 | Gigs d12=6 d8=2
+       old   new
+    better ★    -   74%   Attack opponent's Gigs with Maman Brigitte
+                -   54%   Play Program Peace Offering
+    played ▶  63%   53%   Play Unit Valentino Street Racer
+              57%   45%   Play Unit Jacked-In Voodoo Boy
+              57%   45%   Use Hanako Arasaka
+              33%   28%   End turn
+              45%   27%   Play Program Chrome Reverie

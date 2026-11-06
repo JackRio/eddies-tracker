@@ -12,3 +12,9 @@ notes/policy-data*.jsonl
 
 # card images from the official database (node scripts/fetch-card-art.js)
 board/card-art/
+notes/league*/data-*.jsonl
+notes/league*/games-*.jsonl
+notes/league*/value-rows*.jsonl
+notes/decks/netdeck-raw/
+notes/nets/
+notes/league*/*.skip

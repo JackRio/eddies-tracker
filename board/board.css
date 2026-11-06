@@ -152,10 +152,6 @@ button, select, input { font: inherit; color: inherit; }
 /* a Gig die: solid body in the owner's color, the value big, the die type small underneath */
 .gig { position: relative; width: var(--gs); height: var(--gs); flex: none; display: grid; place-items: center; cursor: default; }
 .gig svg { position: absolute; inset: 0; width: 100%; height: 100%; filter: drop-shadow(0 .25cqw .4cqw rgba(0,0,0,.6)); }
-.gig polygon { stroke-width: 5; stroke-linejoin: round; }
-.gig.mine polygon { fill: #1f8f57; stroke: #6ff2ad; }
-.gig.theirs polygon { fill: #a8283a; stroke: #ff8c99; }
-.gig.stolen polygon { stroke: #fff; stroke-dasharray: 9 6; }   /* sitting in the other player's Gig area */
 .gig b { position: relative; font: 700 max(9px, calc(var(--gs) * .46)) var(--head); line-height: 1; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.6); }
 .mat.rival .gig b { display: inline-block; transform: rotate(180deg); }
 
@@ -172,9 +168,10 @@ button, select, input { font: inherit; color: inherit; }
 /* official card backs: the Legend back as-is; every other card is the same art with yellow and black swapped */
 .back { background: #111 url(assets/card-back-legend.webp) center / cover no-repeat; }
 .back:not(.legend) { filter: url(#ctcg-swap); }
-.eddies .card.spent-e { filter: url(#ctcg-swap) brightness(.45); }
+/* a spent Eddie lies sideways, like a spent Unit (app.js spendFx animates the turn) */
+.eddies .card.spent-e { filter: url(#ctcg-swap) brightness(.6); transform: rotate(90deg); }
 /* cards the current action names glow briefly */
-.card.hot { animation: hot 1.6s ease-out; }
+.card.hot { animation: hot calc(1.6s * var(--spd, 1)) ease-out; outline: max(2px, .25cqw) solid var(--cyan); outline-offset: max(1px, .15cqw); }
 @keyframes hot { 0%, 35% { box-shadow: 0 0 0 .35cqw var(--cyan), 0 0 2cqw var(--cyan); } 100% { box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); } }
 
 /* Field: Units in a row; Gear tucked under each Unit so its bottom text box shows (Rules 11.6.1.1) */
@@ -327,3 +324,145 @@ button, select, input { font: inherit; color: inherit; }
 .cd-cmp td.up { color: var(--green); font-weight: 600; } .cd-cmp td.down { color: var(--red); font-weight: 600; }
 .cd-foot { margin-top: 10px; font-size: 11.5px; color: var(--dim); } .cd-foot summary { cursor: pointer; } .cd-foot p { margin: 4px 0; }
 .card.fd { filter: brightness(.5) saturate(.6); }   /* your own face-down Legend in a live game */
+
+/* live games: what's acting this step */
+.unit.just-spent > .card.host { animation: spend-flash calc(1s * var(--spd, 1)) ease-out; }
+@keyframes spend-flash { 0%, 40% { box-shadow: 0 0 0 .35cqw var(--yellow), 0 0 2.4cqw var(--yellow); } 100% { box-shadow: 0 .3cqw .8cqw rgba(0,0,0,.5); } }
+.unit.attacking > .card.host { outline: max(2px, .3cqw) solid var(--red); outline-offset: max(1px, .2cqw); box-shadow: 0 0 2.4cqw rgba(255,60,60,.8); }
+.unit.attacked > .card.host, .unit.blocking > .card.host { outline: max(2px, .3cqw) dashed var(--red); outline-offset: max(1px, .2cqw); }
+.unit.blocking > .card.host { outline-color: var(--cyan); outline-style: solid; }
+.a-fgig.attacked { box-shadow: inset 0 0 0 max(2px, .3cqw) var(--red); }
+/* picked to pay (play page) */
+.card.pay-pick, .unit.pay-pick > .card.host { outline: max(2px, .3cqw) solid var(--yellow); outline-offset: max(1px, .15cqw); box-shadow: 0 0 2cqw rgba(245,228,0,.7); }
+
+/* ══ Layout v2: one shared play area (after the simulator's own board) ══════════════════════════
+   board | side panel. The table: left column (Rival hand, fixer dice, Gigs | status + caption |
+   your Gigs, dice, hand), the centre play area (Legends + Eddies rows around both Fields) and a
+   strip of trash / deck piles. Everything scales with the table width (cqw); the table is 16:10. */
+.layout { --cap-h: auto; display: grid; min-height: 0; grid-template-columns: minmax(0, 1fr) 400px; grid-template-areas: "board side"; }
+.layout > .left { display: none; }
+.board-col { padding: 10px 12px; }
+.side { border-left: 1px solid #12333a; background: #071015; }
+.table { --bh: calc(100vh - var(--top-h) - var(--tl-h) - 20px);
+  container-type: inline-size; width: min(100%, calc(var(--bh) * 1.6)); aspect-ratio: 16 / 10;
+  display: grid; grid-template-columns: 29% minmax(0, 1fr) 8.5%; gap: 1cqw;
+  --cw: 6cqw; --ch: calc(var(--cw) * 1024 / 733); --peek: calc(var(--ch) * .24);
+  --mat-line: #3fd4ff; --mat-dim: rgba(63,212,255,.25); --frame: rgba(63,212,255,.45); }
+.pz.you { --mat-line: #e8d53a; --mat-dim: rgba(232,213,58,.28); }
+.pz.rival { --mat-line: #ff7b88; --mat-dim: rgba(255,77,94,.28); }
+.tb-left, .tb-play, .tb-piles { min-width: 0; min-height: 0; display: grid; gap: .8cqw; }
+.tb-left { grid-template-rows: 21% 7% 9% minmax(0, 1fr) 9% 7% 21%; }
+.tb-play { position: relative; grid-template-rows: 19% minmax(0, 1fr) 2px minmax(0, 1fr) 19%; gap: .6cqw; padding: .8cqw;
+  border: 1px solid var(--frame); border-radius: 1.2cqw;   /* no clip-path: it clipped cards flying in or out */
+  background: radial-gradient(rgba(63,212,255,.10) 1px, transparent 1.3px) 0 0 / 1.4cqw 1.4cqw, linear-gradient(160deg, #0a1a1f, #061014 60%, #0a161a); }
+.tb-piles { grid-template-rows: repeat(4, minmax(0, 1fr)); }
+.midline { background: linear-gradient(90deg, transparent, var(--frame) 15%, var(--frame) 85%, transparent); }
+
+/* frames for the left column zones */
+.hand-z, .dice-z, .gig-z, .status, .pile-z { position: relative; min-height: 0; border: 1px solid var(--mat-dim); border-radius: .8cqw; background: rgba(6, 16, 20, .7); }
+.pz.active.hand-z { box-shadow: 0 0 0 1px var(--mat-line), 0 0 1.6cqw rgba(0,0,0,.4); }
+.who-tag { position: absolute; z-index: 6; left: .8cqw; font: 700 max(9px, 1cqw) var(--head); letter-spacing: .08em; text-transform: uppercase; color: var(--mat-line); }
+.pz.rival .who-tag { bottom: .2cqw; } .pz.you .who-tag { top: .2cqw; }
+.handrow { position: absolute; inset: .7cqw .7cqw 1.7cqw; }
+.pz.you .handrow { inset: 1.7cqw .7cqw .7cqw; }
+.handrow .card { position: absolute; top: 0; border-radius: .5cqw; transition: transform .15s; }
+.handrow:not(.backs) .card:hover { transform: translateY(-6%); z-index: 5; }
+.handrow .none { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; }
+
+.dice-z { display: flex; align-items: center; justify-content: center; gap: 1.2cqw; }
+.dice-z .mat-die svg { width: 3.4cqw; height: 3.4cqw; }
+.dice-z .mat-die i { font-size: max(8px, .95cqw); }
+.gig-z { display: flex; align-items: center; gap: .8cqw; padding: 0 .8cqw; }
+/* dice shrink to fit the row: up to 7 own + stolen ones next to the N/7 box */
+.gig-z .gigs { --gs: min(3.6cqw, calc((29cqw - 7.5cqw) / var(--n, 1) - .5cqw)); flex: 1; min-width: 0; justify-content: center; gap: .4cqw; padding: 0; }
+.gig-count { flex: none; display: grid; place-items: center; min-width: 4.4cqw; padding: .3cqw .6cqw; border: 1px solid var(--mat-line); border-radius: .7cqw; line-height: 1.1; }
+.gig-count b { font: 700 max(10px, 1.3cqw) var(--head); color: var(--mat-line); }
+.gig-count span { font: 700 max(9px, 1.1cqw) var(--head); color: var(--text); }
+.gig-z.attacked { box-shadow: inset 0 0 0 max(2px, .3cqw) var(--red); }
+
+/* status: whose turn, turn | phase, and what just happened */
+.status { display: flex; flex-direction: column; align-items: stretch; justify-content: center; gap: .7cqw; padding: .8cqw 1cqw; border-color: var(--frame); }
+.turn-pill { text-align: center; font: 700 max(13px, 1.9cqw) var(--head); letter-spacing: .14em; text-transform: uppercase; padding: .3cqw 1cqw;
+  border: 2px solid var(--mat-line); border-radius: 3cqw; color: var(--mat-line); background: rgba(0,0,0,.35); }
+.turn-pill.you { --mat-line: #e8d53a; box-shadow: 0 0 1.4cqw rgba(232,213,58,.25); } .turn-pill.rival { --mat-line: #ff7b88; box-shadow: 0 0 1.4cqw rgba(255,77,94,.25); }
+.turn-sub { text-align: center; font: 700 max(10px, 1.15cqw) var(--head); letter-spacing: .1em; text-transform: uppercase; color: #e8d53a; }
+.status .banner { height: auto; min-height: 0; white-space: normal; flex-wrap: wrap; gap: 4px 8px; padding: .5cqw .8cqw; font-size: max(11px, 1cqw); border-radius: .6cqw; }
+.status .bn-body { overflow: visible; }
+
+/* centre rows: Legends (wide) + Eddies */
+.row-z { display: grid; grid-template-columns: minmax(0, 1fr) 30%; gap: .8cqw; min-height: 0; }
+.tb-play .area { background: rgba(4, 12, 15, .55); }
+.a-eddies .eddies { --cw: 4.6cqw; --ch: calc(var(--cw) * 1024 / 733); }
+.zone-tag { position: absolute; z-index: 6; right: .6cqw; bottom: .4cqw; font: 700 max(9px, .95cqw) var(--head); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--mat-line); background: rgba(0,0,0,.55); border: 1px solid var(--mat-dim); border-radius: 1cqw; padding: 0 .7cqw; }
+.a-legends .zone-tag { right: auto; left: .6cqw; }
+.pile-z { display: grid; place-items: center; }
+.pile-z .card { --cw: 6cqw; }
+.pile-z .count { border-color: var(--mat-line); }
+.pile-z .zone-tag { right: 50%; transform: translateX(50%); }
+.side .coach-box { max-height: 45vh; overflow-y: auto; border-bottom: 1px solid var(--line); }
+.side h2 { color: var(--cyan); }
+/* the old two-mat grid named these areas; inside the shared table they flow in order */
+.table .area, .table .a-field, .table .a-legends, .table .a-eddies, .table .a-deck, .table .a-trash { grid-area: auto; margin: 0; }
+
+/* full window: no title bar, the table fills everything left of the side panel */
+body { grid-template-rows: minmax(0, 1fr) auto; }
+body > .top { display: none; }
+:root { --top-h: 0px; --tl-h: 40px; }
+.board-col { padding: 4px; place-items: stretch; }
+.table { width: 100%; height: 100%; aspect-ratio: auto; }
+.timeline { height: var(--tl-h); padding: 0 10px; }
+.side { overflow: hidden; }
+.side-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.side-top select { flex: 1; min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; }
+.side-top .match-info { margin: 0; width: 100%; white-space: normal; font-size: 12px; flex-wrap: wrap; gap: 4px 10px; }
+/* layout v2 at any width: board | side panel (the old narrow-screen rules stacked the panels) */
+.layout { grid-template-rows: minmax(0, 1fr); }
+@media (max-width: 1450px) { .layout { grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: "board side"; } }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr) 280px; } }
+.roll-die { pointer-events: none; filter: drop-shadow(0 12px 24px rgba(0,0,0,.7)); }
+.roll-die b { font-size: calc(var(--gs) * .42); }
+.gig.gig-hot::after { content: ''; position: absolute; inset: -18%; border-radius: 50%; border: max(2px, .25cqw) solid var(--cyan); box-shadow: 0 0 1.2cqw var(--cyan); animation: gig-ring calc(1.2s * var(--spd, 1)) ease-out; }
+@keyframes gig-ring { from { transform: scale(1.6); opacity: 0; } to { transform: none; opacity: 1; } }
+/* a card mid-flight (FLIP slide, deal) is lifted above every zone it passes over */
+.table .card.flying, .table .unit.flying { z-index: 60; }
+/* shuffle / mulligan cards in flight: plain cards, no pop-up glow */
+.riffle { pointer-events: none; border-radius: .5cqw; box-shadow: 0 2px 6px rgba(0,0,0,.55); }
+/* hand zones: the player's name gets its own slim row, the cards fill the rest (no overlap) */
+.hand-z { display: flex; flex-direction: column; padding: .4cqw .7cqw; gap: .3cqw; }
+.hand-z .who-tag { position: static; flex: none; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hand-z .handrow, .pz.you .handrow { position: relative; inset: auto; flex: 1; min-height: 0; }
+.snd { display: inline-flex; align-items: center; gap: 4px; }
+.snd input[type=range] { width: 70px; accent-color: var(--cyan); }
+.snd input:disabled { opacity: .35; }
+/* the table is exactly the board column's height: its one row can't grow with its content (it did
+   on wide screens - big cards made it taller, then the card sizing measured the taller space) */
+.board-col { display: flex; }
+.table { flex: 1; height: auto; min-height: 0; grid-template-rows: minmax(0, 1fr); overflow: hidden; }
+.tb-left > *, .tb-play > *, .tb-piles > * { min-height: 0; }
+
+/* attack lock: crossed-out sword in the card's top-left corner (power badge sits top-right) */
+.no-atk { position: absolute; z-index: 5; left: -.5cqw; top: -.5cqw; width: max(16px, 2.6cqw); height: max(16px, 2.6cqw);
+  display: grid; place-items: center; border-radius: 50%; background: #0a0a0f; border: max(1px, .15cqw) solid var(--red);
+  color: var(--red); box-shadow: 0 0 6px rgba(255, 60, 60, .5); }
+.no-atk svg { width: 72%; height: 72%; }
+
+/* ── polyhedral dice (app.js dieSvg): body + lighter front face + facet edges + a gloss ── */
+.gig { --die: #1c8a53; --die-hi: #7af5b6; }
+.gig.theirs { --die: #a3263a; --die-hi: #ff9aa6; }
+.gig svg { overflow: visible; }
+.gig .d-body { fill: var(--die); stroke: var(--die-hi); stroke-width: 3.5; stroke-linejoin: round; }
+.gig .d-face { fill: rgba(255,255,255,.22); stroke: rgba(255,255,255,.65); stroke-width: 1.6; stroke-linejoin: round; }
+.gig .d-edge { stroke: rgba(255,255,255,.42); stroke-width: 1.6; stroke-linecap: round; }
+.gig .d-gloss { fill: url(#die-gloss); stroke: none; pointer-events: none; }
+.gig.stolen .d-body { stroke: #fff; stroke-dasharray: 9 6; }
+.gig b { position: absolute; left: 0; right: 0; top: var(--ny, 50%); transform: translateY(-50%); text-align: center;
+  font-size: max(9px, calc(var(--gs) * .4)); text-shadow: 0 1px 0 rgba(0,0,0,.55), 0 0 6px rgba(0,0,0,.35); }
+.mat.rival .gig b { transform: translateY(-50%) rotate(180deg); }
+.gig.gig-hot .d-body { stroke: var(--yellow); stroke-width: 5; }
+/* the fixer's unrolled dice: the same shapes as glowing line art */
+.mat-die svg { overflow: visible; }
+.mat-die .d-body { fill: rgba(0,0,0,.25); stroke: var(--mat-line); stroke-width: 4; stroke-linejoin: round; filter: drop-shadow(0 0 3px var(--mat-line)); }
+.mat-die .d-face { fill: none; stroke: var(--mat-line); stroke-width: 2; opacity: .55; }
+.mat-die .d-edge { stroke: var(--mat-line); stroke-width: 2; opacity: .45; }
+.mat-die .d-gloss { display: none; }

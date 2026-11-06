@@ -38,6 +38,11 @@ ap.add_argument('--batch', type=int, default=1024)
 ap.add_argument('--lr', type=float, default=2e-3)
 ap.add_argument('--msize', type=int, default=0, help='move table size (menc.js SIZE); 0 = read from data')
 ap.add_argument('--grank', type=int, default=900, help='move-table offset for the greedy-rank input (0 = off)')
+# --init: start from an existing net (its weights and input normalization); --teach-only / --informative-only
+# pick which decisions train (league data: teacher re-scored ones / best 5-95% and top two >= 1 point apart)
+ap.add_argument('--init', default=None)
+ap.add_argument('--teach-only', action='store_true')
+ap.add_argument('--informative-only', action='store_true')
 args = ap.parse_args()
 
 DENSE, NSP = 45, 13 * 150
@@ -56,7 +61,12 @@ for f in args.files:
             if line.strip():
                 o = json.loads(line)
                 for r in o['recs']:
-                    recs.append(r); test.append(o['g'] % 10 == 0)
+                    vals = sorted([c[3] for c in r['c'] if c[3] is not None], reverse=True)
+                    if args.teach_only and not r.get('teach'):
+                        continue
+                    if args.informative_only and not r.get('teach') and not (len(vals) >= 2 and 0.05 <= vals[0] <= 0.95 and vals[0] - vals[1] >= 0.01):
+                        continue
+                    recs.append(r); test.append(abs(o['g']) % 10 == 0)
 N = len(recs)
 C = min(48, max(len(r['c']) for r in recs))
 P = max(len(c[0]) for r in recs for c in r['c'][:C]) + (1 if args.grank else 0)
@@ -89,7 +99,13 @@ T = np.asarray(test)
 keep = tried.sum(1) >= 2          # the search compared at least two moves
 print(f'{N} decisions ({keep.sum()} with a search comparison, {T.sum()} held out), up to {C} moves, move table {MSIZE}, loaded in {time.time() - t0:.0f}s')
 
-mean = dense[~T].mean(0); std = dense[~T].std(0); std[std < 1e-6] = 1
+INIT = json.load(open(args.init)) if args.init else None
+if INIT:
+    mean = np.asarray(INIT['mean'], np.float32); std = np.asarray(INIT['std'], np.float32)
+    args.hidden, args.mhidden = len(INIT['b1']), len(INIT['s2b'])
+    MSIZE = max(MSIZE, len(INIT['M']))
+else:
+    mean = dense[~T].mean(0); std = dense[~T].std(0); std[std < 1e-6] = 1
 dn = (dense - mean) / std
 to = lambda a: torch.from_numpy(a).to(dev)
 D = {k: to(v) for k, v in dict(dn=dn, sidx=sidx, sval=sval, midx=midx, mval=mval, legal=legal, tried=tried, value=value, grank=grank.astype(np.float32)).items()}
@@ -122,6 +138,16 @@ def batch(ix):
 
 
 net = PNet(args.hidden, args.mhidden).to(dev)
+if INIT:
+    T_ = lambda a: torch.tensor(np.asarray(a, dtype=np.float32), device=dev)
+    with torch.no_grad():
+        net.d.weight.copy_(T_(INIT['Wd'])); net.d.bias.copy_(T_(INIT['b1'])); net.e.weight.copy_(T_(INIT['E']))
+        net.s2.weight.copy_(T_(INIT['S2'])); net.s2.bias.copy_(T_(INIT['s2b']))
+        Mi = np.zeros((MSIZE, args.mhidden), np.float32); Mi[:len(INIT['M'])] = np.asarray(INIT['M'], np.float32)
+        net.m.weight.copy_(T_(Mi)); net.mb.copy_(T_(INIT['mb']))
+        net.j.weight.copy_(T_(INIT['J'])); net.j.bias.copy_(T_(INIT['jb']))
+        net.o.weight.copy_(T_([INIT['o']])); net.o.bias.copy_(T_([INIT['ob']]))
+    print('starting from', args.init)
 opt = torch.optim.AdamW(net.parameters(), lr=args.lr, weight_decay=1e-4)
 tr = torch.from_numpy(np.nonzero(keep & ~T)[0]).to(dev)
 te_all = np.nonzero(T)[0]

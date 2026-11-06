@@ -49,15 +49,15 @@ function evaluate(b, pid) {
 const winProb = score => 1 / (1 + Math.exp(-score / 22));
 
 // ─── move generation ────────────────────────────────────────────────────────
-function readyResources(b, pid) {
+function readyResources(b, pid, exclude = null) {
   const p = b[pid], Z = p.zones;
   const eddies = Z.eddies.filter(e => e.state === 'ready' && !p.tapped.includes(e.iid));
-  const legs = Z.legends.filter(l => l.state === 'ready' && !p.tapped.includes(l.iid) && legendSpendable(l));
+  const legs = Z.legends.filter(l => l.state === 'ready' && !p.tapped.includes(l.iid) && legendSpendable(l) && l.iid !== exclude);
   // face-down Legends before face-up ones: a face-up Legend may have a {Spend} ability worth keeping
   return [...eddies, ...legs.filter(l => l.face !== 'face_up'), ...legs.filter(l => l.face === 'face_up')];
 }
-function taps(b, pid, n) {
-  const res = readyResources(b, pid);
+function taps(b, pid, n, exclude = null) {
+  const res = readyResources(b, pid, exclude);
   const need = Math.max(0, n - b[pid].tapped.length);
   if (need > res.length) return null;
   return res.slice(0, need).map(x => ({ step: 'tap_resource', iid: x.iid }));
@@ -98,11 +98,12 @@ function moves(wf, b) {
         } else if (c.type === 'Unit' || c.type === 'Program') out.push([...pay, { step: 'play_card', iid: h.iid }]);
       }
       // Face-down Legends are hidden from their owner too: a Call flips a random one, so there is
-      // ONE call option (the first face-down slot - setup shuffled them), never a choice of Legend
-      const down = Z.legends.find(l => l.face !== 'face_up');
+      // ONE call option (the first face-down slot - setup shuffled them), never a choice of Legend.
+      // A called Legend keeps its state, so call a READY face-down one and never pay with it.
+      const down = Z.legends.find(l => l.face !== 'face_up' && l.state === 'ready') || Z.legends.find(l => l.face !== 'face_up');
       if (down && !p.called_legend_this_turn) {
         let cost = 1; try { cost = legendCallCost(b, pid); } catch { /* default */ }
-        const pay = taps(b, pid, cost);
+        const pay = taps(b, pid, cost, down.iid) || taps(b, pid, cost);   // last resort: it pays for itself, flips up spent
         if (pay) out.push([...pay, { step: 'call_legend', iid: down.iid }]);
       }
       for (const l of Z.legends) {
@@ -126,7 +127,14 @@ function moves(wf, b) {
     }
     case 'defensive_step': {
       for (const x of wf.blocker_iids || []) out.push([{ step: 'blocker', iid: x }]);
-      if (wf.can_call_legend) for (const l of Z.legends.filter(l => l.face !== 'face_up').slice(0, 1)) out.push([{ step: 'call_legend_defensive', iid: l.iid, pay_iids: (wf.call_legend_payable_iids || []).slice(0, wf.call_legend_cost ?? 1) }]);
+      if (wf.can_call_legend) {
+        const l = Z.legends.find(x => x.face !== 'face_up' && x.state === 'ready') || Z.legends.find(x => x.face !== 'face_up');
+        // pay with Eddies first, never with the Legend being called (it would flip up spent)
+        const ok = wf.call_legend_payable_iids || [];
+        const payable = [...readyResources(b, pid, l.iid), ...readyResources(b, pid).filter(x => x.iid === l.iid)].map(x => x.iid).filter(i => ok.includes(i));
+        const pay = payable.slice(0, wf.call_legend_cost ?? 1);
+        if (pay.length === (wf.call_legend_cost ?? 1)) out.push([{ step: 'call_legend_defensive', iid: l.iid, pay_iids: pay }]);
+      }
       for (const x of wf.interrupt_castable_iids || []) out.push([{ step: 'play_card_interrupt_cast', iid: x }]);
       for (const x of wf.interrupt_spendable_iids || []) out.push([{ step: 'activate_asset_spend', iid: x.iid, ability_idx: x.ability_idx }]);
       out.push([{ step: 'pass_defensive' }]);
@@ -201,6 +209,7 @@ function settle(b, wf, pid, cap = 30) {
 // ─── the bot ────────────────────────────────────────────────────────────────
 // opts: { rng, noise (0 = pure greedy), maxMoves }
 function chooseMove(wf, b, opts = {}) {
+  if (wf.step === 'mulligan_decision' && opts.mull !== 'old') return require('../bot/mulligan').choose(b, wf, opts.rng || Math.random);
   const pid = wf.owner || b.active_player;
   const cands = moves(wf, b);
   if (!cands.length) { const d = defaultPassAction(wf); return d ? [d] : null; }
@@ -239,4 +248,4 @@ function botStep(b, wf, opts) {
   return r ? { ...r, seq } : null;
 }
 
-module.exports = { evaluate, winProb, moves, chooseMove, botStep, settle, tryApply, apply, unitPower, opp, nm, card };
+module.exports = { readyResources, evaluate, winProb, moves, chooseMove, botStep, settle, tryApply, apply, unitPower, opp, nm, card };

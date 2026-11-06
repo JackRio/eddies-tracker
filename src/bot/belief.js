@@ -15,6 +15,10 @@
 // redeal(b, me, rng, post) re-deals everything `me` can't see of the Rival - hand, deck, face-down
 // Eddies, face-down Legends - from one list drawn from the posterior, minus what has been shown.
 'use strict';
+// EDDIES_LEGACY_SHUFFLE=1: behave as before Nov 6 2026 (sold cards not remembered) - exact replays of old games only
+// (a mutable switch: scripts/reanalyse.js turns it on only while replaying, off for its new search)
+const legacy = { on: !!process.env.EDDIES_LEGACY_SHUFFLE };
+globalThis.__eddiesLegacy = legacy;   // the engine's amount ranges (effects.js ChooseAmount) follow it too
 const { CARDS } = require('../engine');
 const fs = require('fs');
 const path = require('path');
@@ -61,6 +65,8 @@ function shown(b, pid) {
   for (const u of Z.field) { add(u.card_id); for (const g of u.equipped_gear || []) add(g.card_id); }
   for (const l of Z.legends) { if (l.face === 'face_up') add(l.card_id); for (const g of l.equipped_gear || []) add(g.card_id); }
   for (const c of [...Z.trash, ...(Z.removed || [])]) add(c.card_id);
+  // cards sold from hand were revealed when sold (top-of-deck sales by effect were not)
+  if (!legacy.on) for (const e of Z.eddies || []) if (e.seen) add(e.card_id);
   return { cards, legends };
 }
 
@@ -146,7 +152,7 @@ function redeal(d, me, rng, post, seen) {
   for (const [n, k] of seen.cards) left.set(n, Math.max(0, (left.get(n) || 0) - k));
   const pool = [];
   for (const [n, k] of left) for (let i = 0; i < k; i++) pool.push(n);
-  const slots = [...rv.hand, ...rv.deck, ...rv.eddies];
+  const slots = [...rv.hand, ...rv.deck, ...rv.eddies.filter(e => legacy.on || !e.seen)];   // known sold cards keep their identity
   if (pool.length < slots.length) {
     const ceil = ceilings(deck.legends);
     const fill = MAINS.filter(c => fits(c.number, ceil));
@@ -180,4 +186,4 @@ function trueList(b, pid) {
 const sameList = (d, t) => d.legends.slice().sort().join() === t.legends.slice().sort().join()
   && d.cards.size === t.cards.size && [...d.cards].every(([n, k]) => t.cards.get(n) === k);
 
-module.exports = { shown, posterior, redeal, customDeck, candidates, ceilings, trueList, sameList };
+module.exports = { legacy, shown, posterior, redeal, customDeck, candidates, ceilings, trueList, sameList };

@@ -947,6 +947,10 @@ game rules - the description must describe the deck.
   the upstream engine and passes here; the fuzz plays `test/decks/*.txt` against each other with rule
   invariants. User rulings confirmed with Weird Co (Johnny Silverhand readies on the rival's turn too,
   Radioport can Call on the rival's turn) are tests - don't "fix" them back.
+- Card data audit (Nov 6 2026): every engine card's text / cost / power / RAM was compared with the
+  official data in Eddies' `cards-cache.json` (match on "Name: Subtitle"). Only real difference:
+  **Pyramid Song is -4 power** (upstream said -5, in `cards.json` and `card_scripts.json`); fixed,
+  test `cards-pyramid-song.test.js`. Re-run that comparison after updating the engine's card data.
 - `board/` is a standalone replay viewer for **cyberpunk-tcg-sim** replay JSON (snapshot + per-action
   patches; ChoomBattler's text log is too thin and isn't supported). Run `node scripts/serve-board.js`
   (port 4181, launch.json `board`): serves card art from the Eddies image cache (`/card/<simCardId>`,
@@ -956,7 +960,8 @@ game rules - the description must describe the deck.
   Legend back (`board/assets/card-back-legend.webp`); non-Legend backs are the same image through the
   `#ctcg-swap` SVG filter (yellow/black swapped). Gig dice: colored by owner (green yours, red Rival's),
   stolen dice sit in the controller's "Rival Gigs" zone. Status effects (Lag, Adrenaline...) are only
-  in the hover panel, never on the card; the power badge shows only when power differs from printed.
+  in the hover panel, never on the card - except attack locks (`CANNOT_ATTACK[_GIGS]`, e.g. Chrome Reverie / Nocturne):
+  a red crossed-out sword top-left (`noAttackHtml()`, user request), on Units and face-up Legends; the power badge shows only when power differs from printed.
   `board/logfmt.js` rewrites every sim log line into one fixed format (`Verb [Card] → [Card] · detail ·
   via [Card]`); add a rule there for any new message (unmatched lines fall back to raw text).
   Stepping one action animates via FLIP (elements on the Rival's turned mat negate their offsets) and
@@ -982,6 +987,25 @@ game rules - the description must describe the deck.
   Legends don't stack Gear strips under the card (it made them tiny): Gear sits tucked behind as thin
   edges (`.gear.tucked`) with a "⚙ N" badge, and the hover panel shows every attached Gear card. The step glow (`.hot`) is per card *instance*: when
   several copies share a name, only the copy whose zone/state changed this step glows (`cardSigs()`).
+
+- **Layout v2 (Nov 6 2026, supersedes the two-mat notes above):** one shared table after the simulator's
+  own board, filling the window (no title bar): left column = Rival hand, fixer dice, Gigs (+ "N/7 · total"
+  box), a status block (whose turn, Turn N | phase, the step caption `bannerHtml()`), then yours mirrored;
+  centre = Rival Legends + Eddies row, both Fields split by a line, your Legends + Eddies row; a strip of
+  Trash/Deck piles on the right (`tableHtml()` in `app.js`). Nothing is rotated any more, so FLIP/pop
+  code has no flip. Player zones are `.pz.you` / `.pz.rival` (colours via `--mat-line`). The old `.a-*`
+  classes still exist but their grid-area names are reset inside `.table`. Hands are sized by
+  `sizeHands()` (row height, overlap when needed). The right panel holds the replay picker / match info,
+  Coach (replays) or decision + bot's thinking + controls (play page), and the log.
+- Spent Eddies lie sideways; `spendFx()` animates freshly spent ones and flashes Legends/Units spent this
+  step. During an attack the attacker (red), its target and a blocker stay marked (`attackMarks()`, from
+  `game.attack` in `simview.js`). Pop-ups of drawn cards set their own background size (they used to get
+  `no-img` and show only the art's corner).
+- Pop-ups start where the card came from (deck if the deck shrank, else trash / hand) and include
+  sales (`game.sold` from `play.js`; replays: your own hand → Eddies). `rollFx()` tumbles a new Gig
+  die from the fixer dice to the middle and into the Gig row; `dealFx()` deals opening hands from the
+  deck (`openLive`); `mulliganFx()` sends the hand back, shuffles the deck, redeals. Durations scale
+  with `Board.setSpeed()` (bot pace), and live steps wait for them (`animUntil` in `extend`).
 
 ## Replay Coach (`src/coach/`, `scripts/coach.js`, `board/coach.js`)
 
@@ -1169,12 +1193,184 @@ replay viewer, driven live: play a bot, or watch two bots ("Next move" / "Finish
   the decision box; Legend "call" prompts read "Draw 1 (instead of: ...)"); forced
   single-option prompts are auto-played. "Bot's thinking" lists every bot decision of the turn on screen:
   the moves it compared with estimated win chance, how many it didn't search, and its deck guess.
-- Bots offered: **Bot A - Net Searcher** (`strong`), **Bot B - Playout Searcher**
+- **You choose what pays.** `humanOptions()` in `play.js` strips the bots' automatic taps: each option has
+  a cost `n` and `payables` (ready Eddies, face-down Legends "#slot", spendable face-up Legends); the page
+  pre-picks Eddies, then face-down Legends, then face-up ones, and lets you change it (`move {i, pay}`).
+  {Spend} abilities with a €$ cost pass `pay_iids` (engine `resolveSpendActivated` accepts it).
+  Calls are offered per face-down slot (identity still unknown) because a Called Legend keeps its state:
+  call a ready one and pay with something else to get it ready. Bots now do the same (`policy.moves`
+  calls a ready face-down Legend and avoids paying with it).
+- **Log detail** (`results()` in `play.js`, by diffing the board before/after each move): what paid
+  ("paid 1 Eddie + 2 Legends" - counts only, no slot numbers, on request), roll results ("Roll the d6 →
+  4"), dice changed / taken named by owner + size + old value ("Bot A's d6: 4 → 5"; choice lines'
+  "own/opponent's d6" are rewritten the same way) with a ring on that die (`diceMarks()` in app.js),
+  draws (named only if the viewer may see them), discards, deck trashes, trash returns, and a
+  "Turn N starts: readies N spent cards · draws X" line after each end turn.
+  Units leaving the Field say where they went (defeated / put on the bottom of the deck / returned to
+  hand / removed / changes sides) and effect power changes are logged ("Meredith Stout: power 5 → 1").
+  Two bots of the same kind are named by their deck colours ("Bot A (YYR)" / "Bot A (BBG)").
+  Phrasing rules (`results(s, before, after, seq, subj)` + the folds in `apply()`): the line's player
+  (`subj`) is unnamed ("draws X", "own d12"), the other is named with grammar ("you draw", "your
+  Meredith Stout", "Bot A's d12"); dice are named by OWNER everywhere (describe's `choiceName` too).
+  A choice and its result are said once: "decreases own d12 by 2 (3 → 1)", "adjusts by +1",
+  "sets X's d10 (9 → 2)", "copies the value of your d12 (9)", "swaps own d4 (1) with your d12 (3)",
+  "takes back own d12", "Adam Smasher: Bot A's Pepe Najarro defeated", "discards X"; engine prompts
+  that repeat their card ("Jackie: choose…") lose the prefix. Gear leaving a Unit is logged
+  ("Mantis Blades (on Johnny Silverhand) defeated"); a mulligan "draws a new hand".
+  **Split by source**: `apply()` turns on the engine trace (`b._trace`, lines like "T8/trig p1/HEIST-002#22
+  Draw{n:2} ok") for each move; draws made by a different card's effect than the line's own get their
+  own line (River Ward's trash, then "Dexter DeShawn: draws X, Y" - two triggers resolved in one engine
+  step). Keyword effects put on Units are logged ("Johnny Silverhand: can't attack until Bot A (BBG)'s
+  next turn") and listed in the hover panel (`unitKeywords()` in simview.js) - a hidden Chrome Reverie
+  lock once made the bot look like it skipped a lethal-saving attack. `_sessions` is exported from
+  play.js for debugging (replay a seed, then inspect `s.b`). Pop-ups now play 420 ms apart.
+  To review wording: play ~30 bot games and print one example per line shape (card names → X,
+  numbers → N) - that is how these were found.
+- **Hidden information.** Play mode: you never see the bot's hand, deck or face-down Legends, its
+  private picks read "looks at the top 5 of the deck, takes a card" / "picks a card you can't see"
+  (`privateText()`), and its thinking panel shows only the moves it made - what it compared (it names
+  its hand) and its hand check are sent only once the game is over (`poll()` strips them; live.js
+  refetches at game end). Every bot decides on `botView()`: your hand, deck, Eddies and face-down
+  Legends re-dealt from its deck guess (belief.js), its own deck and face-down Legends shuffled - before
+  this the greedy bot and the strong bot's shortlist ranking ran on the real board. Watch mode shows
+  everything to you; the bots still only get their own `botView()`. The arena script still gives
+  greedy bots the real board.
+- **Sound** (`board/sfx.js`): table sounds are recorded clips from Kenney's CC0 packs **Casino Audio** and
+  **Impact Sounds** (kenney.nl; 57 clips, ~550 KB in `board/sfx/`, licenses alongside), mapped in
+  `CLIPS` (layers x random variants, slight pitch jitter); turn / win / lose chimes and any clip that
+  hasn't loaded are synthesized. kenney.nl blocks scripted downloads - get packs via the site's
+  Download button. `soundFx(prev, st)` in app.js plays
+  per forward step (turn change, rolls, units in / defeated, Gear, Programs, draws, sales, spends,
+  flips, attacks, blocks, dice changed / taken); deal / shuffle / mulligan sound from their animations;
+  win / lose from live.js. 🔊 button + volume slider on both pages, M toggles.
+- The table's one grid row is capped (`grid-template-rows: minmax(0, 1fr)`, board column is flex): on
+  wide screens it used to grow taller than the window behind the timeline. Gig dice shrink with
+  their count (`--n` on `.gigs`).
+- Keys (both pages, `app.js` keydown): A / D step back / forward, S play-pause, Q / E a whole turn
+  back / forward (arrows, Shift+arrows and Space still work). Bot vs bot on the latest step: D = next
+  bot move, E = finish the turn, S = Auto (`board:live-key` event, handled in live.js).
+- Bot pace: Step (click each move) / Very slow 6 s / Slow 4 s / Normal 1.8 s / Fast 1 s per move (`eddies_bot_pace`); live steps play one at a
+  time (`Board.extend(steps, log, gap)` is async) so every move animates.
+- **Mulligans** (`src/bot/mulligan.js`, used by every bot: greedy, greedyt, strong): the search score
+  only counts hand size, so bots used to keep every hand. Now a hand is scored by rules (sellable
+  cards, a Unit castable on your first turn - 2 €$ going first, 4 going second (rule 7.7.4) - Units by
+  turn 2, 6+ cost clunk) and compared with 400 sampled fresh hands from the same deck: mulligan only
+  in the bottom 25% and 1+ below the mean (~25% of hands). Arena: greedyt with it vs `greedyt:mull=old`
+  52.5% [50.6, 54.4], +17 Elo (400 pairs); 15/35/45% cut-offs were within noise. The play page shows
+  the bot's hand score and reason. `mull=old` restores always-keep.
+- **Undo** (play mode, button or U): `move()` saves the game (board, decision, log/step counts) before each
+  of your decisions; `undo()` (`POST /api/play/<id>/undo`) restores the last save, bot moves after it
+  included, and live.js reloads the board there.
+- **Playing look** (Nov 7 2026): while you play (`body.playing`) the replay timeline and the match header
+  (names + Legends) are hidden; buttons are cut-corner neon, your options are lit-edge cards with the cost as
+  a chip, End turn in red; bigger log text. Dice are drawn as polyhedra (`DIE3D`/`dieSvg()` in app.js: body,
+  lighter front face, facet edges, `#die-gloss` gradient defined in each page's hidden SVG).
+- **Amount choices fit the die** (engine, rule 6.4.4 + FAQ "up to"): a ChooseAmount feeding an
+  Increase/Decrease/AdjustGig of an already-chosen Gig only offers amounts that die can take
+  (`linkAmountsToGigs()` in engine `cards.js`, range in effects.js; test `cards-amount-fits-gig`). Industrial
+  Assembly on a d4 at 2 offers +1..+2 (it used to offer +4, which fails by rule). Off under the legacy switch.
+- Bots offered: **Bot A - Net Searcher** (`strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix`
+  since Nov 6 2026 - league round 2 nets, see "Archetype pilots"), **Bot B - Playout Searcher**
   (`strong:leaf=prob:horizon=99:deals=6:k=4`), tuned greedy. Defaults: you = Adam/River/Viktor
   (Yellow 4 / Red 2), Bot A deck = Dexter/Padre/V (Red 4 / Green 2), Bot B = Alt/Hanako/Jackie
-  (Blue 4 / Green 2). All training datasets were deleted on 2026-11-06 (bad data: greedy playouts
-  snowballed; the value net learned that selling is bad - see "Data checks"); the plan is to verify
-  the bots by playing them here before generating data again.
+  (Blue 4 / Green 2). The old greedy-self-play datasets were deleted on 2026-11-06 (bad data: greedy
+  playouts snowballed); training data now comes from the league (see "Archetype pilots").
+
+## Archetype pilots and the league (`src/bot/pilot.js`, `match.js`, `view.js`, `scripts/league.js`)
+
+Four Bot A "pilots", one per colour combo, each on the best ChoomBattler list (choombattler.com/meta,
+30 days, fetched Nov 6 2026; `src/bot/pilots/choombattler.json` holds each trio's standard list and
+its top-20 card table, also written to `board/meta-decks/`): **YYR** Adam/River/Viktor (Bo3 list, 66%
+over 219), **BBG** Alt/Hanako/Jackie Pour One Out (Bo3, 57% over 172), **RRG** Adam/Dexter/Padre (Bo1,
+67% over 219; Dexter/Padre/V and Adam/Saburo/V as variants), **RGB** Dexter/Padre/Wakako (Bo1, 45% over
+62 - the only Red-Green-Blue trio ChoomBattler has; "V" has a red and a blue version, trio colours come
+from the exact Legend slugs in the trio links). No ChoomBattler sideboards exist: each pilot's 7 start
+from trio cards the standard list doesn't max.
+
+- **Bo3 matches** (`playMatch()` in `match.js`, user's tournament rule): every game both players roll a
+  D20 (re-roll ties) and the higher roller chooses first or second; first to 2 wins. A game still going
+  after turn 16 (8 turns each, `MAX_TURNS` in match.js) is a draw: half a game each. Sideboard rules:
+  exactly 7, no Legends, max 3 copies across main + side, 1-for-1 swaps between games, RAM legal
+  (`legal()` in pilot.js). Bots always decide on `botView()` (`src/bot/view.js`, shared with play.js).
+- **What a pilot learns outside the nets** (`src/bot/pilots/state/<ID>.json`, Thompson sampling over
+  Beta posteriors): go first/second per opponent (prior 59.5% first, ChoomBattler's field); its deck -
+  a one-card challenger (main or side, from the trio pool or any legal card) alternates with the
+  champion, promoted at P(better) > 0.85 after >= 24 matches, rejected < 0.3 or at 80. Learned so far:
+  RGB +Johnny Silverhand -Pepe Najarro, RRG +Maelstrom Zealots -Industrial Assembly, BBG +Synapse
+  Burnout -Lizzy Wizzy; YYR rejected every change. **Sideboarding is ON HOLD** (`--sideboard` to
+  re-enable): per-plan stats per opponent never got enough games, and whole-game swap tests are far too
+  noisy (a one-card change is a few points; 24 paired games = +-14). Kept for later:
+  `scripts/sideboard-lab.js` (paired swap games) and `scripts/card-review.js` (add each legal card to the
+  hand at real positions, the search scores it - "would Dexter DeShawn have helped vs BBG here"; needs
+  ~50 positions per matchup to be stable). The user's idea for the real fix: learn card-vs-card values
+  (MaxTac Suppression Team vs Go Solo Legends / Adrenaline, Rockn' Rockerboy otherwise).
+- **League** (`node scripts/league.js [--matches N] [--record] [--teach 0.15]`, 15 workers): pilots vs
+  each other (50%), mirrors (10%) and a field of every legal list we have (ChoomBattler + engine tests +
+  published decks + coverage decks, ~70). ~3-5 min per Bo3 match per worker, ~150-225 matches/hour.
+  The run log prints one line per finished game (winner, turns, D20, who went first).
+  `notes/league/matches.jsonl` (results, decks, D20s, plans) and `data-<seed>.jsonl` (policy-data
+  format, gitignored). The user wants the playing bot and the teacher at FULL settings for data - don't
+  lighten them to save time without asking.
+- **Teacher**: on 15% of undecided decisions a deeper search (`deals=24:k=10`, same nets) re-scores the
+  options; those records carry its values (`teach: 1`) and `mistake: 1` when its best beat the played
+  move by 3+ points. Round 2: 554 / 7,557 (7.3%); round 3 with the r2 bot: 2.6%. Hand-checked
+  (`scripts/league-check.js --mistakes`): the mistakes are real and mostly moves never on the
+  shortlist - attacking a Unit, equipping Gear - which the policy net's `prior=mix` picks fix.
+- **Data checks** (`scripts/league-check.js [--games N] [--all] [--mistakes]`): replays games exactly
+  and flags END+ (ended the turn with a play scored within 3 points), TIE (top two within 1 point),
+  DONE (all <5% or >95%), MISS (legal moves never searched). Round 1: only 28% informative, 69% ties,
+  43% with unsearched moves; the value net is calibrated at the extremes but too pessimistic at 10-40%
+  (actually 31-49%). Policy training therefore uses teacher + informative decisions only.
+- **Training without PyTorch** (the laptop had none): `scripts/train-value.js` / `train-policy.js`
+  re-tune the existing nets in plain Node (same file formats, checked equal to value.js / pnet.js);
+  `scripts/league-to-value.js` turns league games into value rows (first main-phase decision per turn).
+  The Python trainers now also take `--init` (and `--teach-only` / `--informative-only` for policy).
+  CUDA on the laptop (RTX 3060): `D:/Codebase/venv/nitorch/Scripts/python.exe` (Python 3.12, torch
+  2.6.0+cu124, CUDA works). Wheel kept in `D:/Codebase/wheels`; the pytorch.org download stalls - use
+  curl with `--speed-limit/--speed-time` and `-C -` resume. The Anaconda `mmseg` env's torch is broken.
+- **Gate** (`node scripts/pilot-arena.js <specA> <specB> [--pairs N]`): paired Bo3 matches on the four
+  pilots' decks, bots swapped per pair. Round 2 nets (value: 10k league positions, held-out log loss
+  0.521 -> 0.493; policy: 28k decisions incl. 7.9k teacher, regret 3.16 -> 2.29 pts vs greedy 3.52) with
+  `prior=mix` beat the old Bot A **62.5% of Bo3 matches [53.4, 71.6], +89 Elo** (40 pairs, games 60.8%)
+  -> promoted to `src/bot/value-net-r2.json` + `policy-net-r2.json`, the play page's Bot A and the
+  league default. Loop: league round (record + teach) -> re-tune nets -> gate -> promote only winners.
+
+### Research-plan upgrades (Nov 6 2026, see `notes/research-plan-gap.md`)
+
+- **Leak test** (`node scripts/leak-test.js [--games N]`): at every decision of fast games it builds a
+  second board that differs only in hidden facts (Rival hand/deck/Eddies with different cards,
+  face-down Legends swapped, own deck reordered) and requires `botView()` to be identical. Shuffles in
+  `determinize()`/`hideOwnLegends()` now start from a sorted list so the view can't depend on hidden
+  order; `EDDIES_LEGACY_SHUFFLE=1` restores the old board-order shuffle, needed ONLY to replay games
+  recorded before this change exactly (`reanalyse.js` sets it).
+- **Sold cards are remembered** (ruling from the user): a card sold from hand is revealed, then goes face
+  down. The engine marks those Eddies `seen: true` (turn.js); `belief.shown()` counts them (deck guess) and
+  `redeal()` keeps them (they can't also be in hand/deck). Top-of-deck sales by effect stay hidden.
+  `BELIEF.legacy.on` (env `EDDIES_LEGACY_SHUFFLE=1`) turns this and the sorted shuffles off for exact
+  replays of older games; `reanalyse.js` switches it on only while replaying.
+- **Move lists**: league games now also write `games-<seed>.jsonl` (decks, first player, every applied
+  move), so any position can be rebuilt with the engine alone, whatever the bot code becomes (needed for
+  future Reanalyse and the card-encoding project #8).
+- **Reanalyse** (`node scripts/reanalyse.js <data.jsonl> --bot <spec that played it> [--by spec]
+  [--rate 1]`): replays recorded games exactly (checked decision by decision; drifting games are
+  dropped) and re-scores every undecided decision with a deeper/newer search (default: teacher depth
+  with the r2 nets). Writes `data-<seed>-re.jsonl` (records marked `teach: 1, re: 1`, `v` = best value).
+- **Value targets**: `league-to-value.js --mix L` makes the label L x result + (1-L) x search value
+  (held-out loss is still on real results); rows carry turns-left for `train-value.py`'s auxiliary
+  head (`--aux 0.1`, training only, not saved). `train-value.py` with `--init` never ends worse than
+  the starting net.
+- **Past bots** (`league.js --past specA,specB [--past-share 0.2]`): that share of matches gives the
+  opponent to an older Bot A; its decisions aren't recorded and its pilot stats don't change.
+- **Community field** (`node scripts/fetch-netdeck.js`): every public Standard deck on netdeck.gg (the
+  cyberpunktcg.com deckbuilder; `GET api.netdeck.gg/api/cyberpunk/decks/public?limit=100&offset=N&sort=liked`,
+  no auth, robots allow) -> `src/bot/field-decks/netdeck/*.txt` (legal + distinct only; header has author,
+  likes, views; sideboard as `# side:` comments). Nov 6 2026: 1,697 public -> 1,600 kept, all 150 legal
+  cards in 2+ lists, 20 colour combos (most: YYR 215, BBG 163, RRY 133, YYY 128). Details cached in
+  `notes/decks/netdeck-raw/` (gitignored); re-run to refresh. `league.js --net-share 0.5`: that share of
+  field matches uses these, weighted 1 + likes. ChoomBattler has only per-trio stats (tRPC
+  `meta.field`), no lists; no tournament lists exist yet. Not in `belief.js` candidates (yet).
+- **Sequential halving** (`strong` option `sh=1`): same total playouts (moves x deals), spent in rounds
+  that drop the worse half of the shortlist. Being tested against the flat search in the arena.
 
 ## Known CSS gotchas (already solved, don't reintroduce)
 

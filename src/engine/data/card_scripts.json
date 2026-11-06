@@ -3981,9 +3981,9 @@
               "side": "opponent",
               "chooser": "controller",
               "optional": true,
-              "prompt": "Give a rival Unit -5 power this turn"
+              "prompt": "Give a rival Unit -4 power this turn"
             },
-            "amount": -5
+            "amount": -4
           },
           {
             "action": "BottomDeckFromField",
@@ -4002,7 +4002,7 @@
         "else": [
           {
             "action": "Optional",
-            "prompt": "Pyramid Song: give a rival Unit -5 power? (No = bottom-deck a rival Unit with power 0)",
+            "prompt": "Pyramid Song: give a rival Unit -4 power? (No = bottom-deck a rival Unit with power 0)",
             "body": [
               {
                 "action": "GrantTempPower",
@@ -4011,9 +4011,9 @@
                   "side": "opponent",
                   "chooser": "controller",
                   "optional": true,
-                  "prompt": "Give a rival Unit -5 power this turn"
+                  "prompt": "Give a rival Unit -4 power this turn"
                 },
-                "amount": -5
+                "amount": -4
               }
             ],
             "otherwise": [

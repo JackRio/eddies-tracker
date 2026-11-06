@@ -12,7 +12,24 @@
     20: '50,3 93,27 93,73 50,97 7,73 7,27', 12: '50,4 96,38 79,94 21,94 4,38', 10: '50,4 94,40 50,96 6,40',
     8: '50,4 96,50 50,96 4,50', 6: '12,12 88,12 88,88 12,88', 4: '50,6 95,90 5,90',
   };
-  const TRACE = `<svg class="mat-trace" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
+  // Polyhedral dice: silhouette (body), the front face the number sits on, and facet edges from the front
+  // face's corners out to the silhouette - read as real d4..d20 rather than flat outlines. `n` = where the
+  // number sits (y, in the 0-100 box).
+  const DIE3D = {
+    4:  { body: '50,4 96,92 4,92', face: '50,34 74,80 26,80', edges: [[50, 34, 50, 4], [74, 80, 96, 92], [26, 80, 4, 92]], n: 64 },
+    6:  { body: '10,10 90,10 90,90 10,90', face: '24,24 76,24 76,76 24,76', edges: [[24, 24, 10, 10], [76, 24, 90, 10], [76, 76, 90, 90], [24, 76, 10, 90]], n: 50 },
+    8:  { body: '50,3 97,50 50,97 3,50', face: '50,24 79,68 21,68', edges: [[50, 24, 50, 3], [79, 68, 97, 50], [79, 68, 50, 97], [21, 68, 50, 97], [21, 68, 3, 50]], n: 55 },
+    10: { body: '50,3 95,42 50,97 5,42', face: '50,26 74,46 50,78 26,46', edges: [[50, 26, 50, 3], [74, 46, 95, 42], [50, 78, 50, 97], [26, 46, 5, 42]], n: 50 },
+    12: { body: '50,4 96,38 79,94 21,94 4,38', face: '50,28 73,45 64,73 36,73 27,45', edges: [[50, 28, 50, 4], [73, 45, 96, 38], [64, 73, 79, 94], [36, 73, 21, 94], [27, 45, 4, 38]], n: 54 },
+    20: { body: '50,3 93,27 93,73 50,97 7,73 7,27', face: '50,24 76,69 24,69', edges: [[50, 24, 50, 3], [50, 24, 93, 27], [50, 24, 7, 27], [76, 69, 93, 27], [76, 69, 93, 73], [76, 69, 50, 97], [24, 69, 50, 97], [24, 69, 7, 73], [24, 69, 7, 27]], n: 55 },
+  };
+  const dieSvg = sides => {
+    const d = DIE3D[sides] || DIE3D[6];
+    return `<svg viewBox="0 0 100 100" aria-hidden="true"><polygon class="d-body" points="${d.body}"/>`
+      + d.edges.map(([a, b, c, e]) => `<line class="d-edge" x1="${a}" y1="${b}" x2="${c}" y2="${e}"/>`).join('')
+      + `<polygon class="d-face" points="${d.face}"/><polygon class="d-gloss" points="${d.body}"/></svg>`;
+  };
+  const TRACE = `<svg class="mat-trace\" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
       <path d="M30 120 L30 40 L70 10 L300 10 M700 10 L930 10 L975 55 L975 200 M975 380 L975 500 L940 545 L620 545 M380 545 L60 545 L30 515 L30 420"/>
       <path class="thin" d="M50 140 L50 60 L80 32 M920 32 L955 70 L955 190 M955 390 L955 490 L925 525"/></svg>`;
 
@@ -22,6 +39,9 @@
   let nameToId = new Map();   // card name (full and short) → cardId, for log tags
   let cardsById = new Map();  // card instance id → card object at the current step (hover panel)
   let fmt = null;
+  let SPD = 1;                // animation length multiplier (live games: set from the bot pace)
+  let animUntil = 0;          // live games: the next step waits until the long animations (deal, mulligan, pops, rolls) end
+  const busyFor = ms => { animUntil = Math.max(animUntil, performance.now() + ms); };
 
   // ── cards ───────────────────────────────────────────────────────────────
   const imgUrl = cardId => cardId ? `/card/${encodeURIComponent(cardId)}` : '';
@@ -32,6 +52,13 @@
   }
   const back = (cls = '', style = '', cid = '') => `<div class="card back ${cls}"${cid ? ` data-cid="${esc(cid)}"` : ''} style="${style}"></div>`;
 
+  // an attack lock (a Program like Chrome Reverie / Nocturne) shows on the card as a crossed-out sword;
+  // hovering it says until when. The only status shown ON the card - the rest stay in the hover panel.
+  const SWORD_OFF = '<svg viewBox="0 0 24 24"><path d="M14.5 3.5 20.5 3.5 20.5 9.5 10 20 4 14Z M6.5 15.5 3 19 5 21 8.5 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 3 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
+  function noAttackHtml(u) {
+    const e = (u.currentEffects || []).find(x => x.kind === 'CANNOT_ATTACK' || x.kind === 'CANNOT_ATTACK_GIGS');
+    return e ? `<span class="no-atk" title="${esc(`${e.label} - ${e.description}`)}">${SWORD_OFF}</span>` : '';
+  }
   function unitHtml(u, isLegend = false) {
     // live games (board/play.html): your own face-down Legends are known to you - shown dimmed, not as backs
     if (isLegend && u.faceDown && !u.known) return `<div class="unit${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:0">${back('legend host', '', u.id)}</div>`;
@@ -39,7 +66,7 @@
     const power = u.attackPower ?? u.power ?? 0, base = u.basePower ?? u.power ?? 0;
     const delta = power - base;
     // power shows only when an effect changed it, like a counter on a real table
-    const badge = delta && (!isLegend || u.zone === 'field') ? `<span class="badge ${delta > 0 ? 'up' : 'down'}">${power}</span>` : '';
+    const badge = (delta && (!isLegend || u.zone === 'field') ? `<span class="badge ${delta > 0 ? 'up' : 'down'}">${power}</span>` : '') + noAttackHtml(u);
     // A Legend keeps its full size: its Gear sits tucked just behind it (thin edges) with a count badge;
     // hover shows every Gear card. Units on the Field show the Gear's bottom strip under the card instead.
     if (isLegend && u.zone !== 'field') {
@@ -56,13 +83,13 @@
     const mine = (g.originalOwnerId || ownerPid) === R.me;
     const tip = `${g.label} · ${g.value}${stolen ? ` · stolen from ${R.labels[g.originalOwnerId]}` : ''}`;
     return `<span class="gig ${mine ? 'mine' : 'theirs'}${stolen ? ' stolen' : ''}" data-gid="${esc(g.id)}" data-v="${g.value}" title="${esc(tip)}">
-      <svg viewBox="0 0 100 100"><polygon points="${DIE[g.sides] || DIE[6]}"/></svg><b>${g.value}</b></span>`;
+      ${dieSvg(g.sides)}<b style="--ny:${(DIE3D[g.sides] || DIE3D[6]).n}%">${g.value}</b></span>`;
   }
 
   function matHtml(st, pid, rival) {
     const p = st.players[pid];
     const fixer = [...(p.dicePool || [])].sort((a, b) => b.sides - a.sides)
-      .map(d => `<span class="mat-die${d.available ? '' : ' used'}"><svg viewBox="0 0 100 100"><polygon points="${DIE[d.sides]}"/></svg><i>D${d.sides}</i></span>`).join('');
+      .map(d => `<span class="mat-die${d.available ? '' : ' used'}">${dieSvg(d.sides)}<i>D${d.sides}</i></span>`).join('');
     const field = p.field || [];
     const legends = [...(p.legends || [])].sort((a, b) => (a.slotIndex ?? 0) - (b.slotIndex ?? 0));
     const eddies = p.eddies || [];
@@ -83,10 +110,76 @@
       <div class="area a-fgig"><div class="gigs" style="--n:${own.length}">${own.map(g => gigHtml(g, pid)).join('')}</div><span class="mat-tab"><b>Gigs ${gigs.length}/7</b></span></div>
       <div class="area a-field"><div class="field">${field.map(u => unitHtml(u)).join('')}</div><span class="mat-tab"><b>Field</b></span></div>
       <div class="area a-legends"><div class="legends">${legends.map(l => unitHtml(l, true)).join('')}</div><span class="mat-tab"><b>Legends</b></span></div>
-      <div class="area a-eddies">${eddies.length ? `<div class="eddies">${Array.from({ length: shownE }, (_, i) => back(i >= shownE - shownSpent ? 'spent-e' : '', `--i:${i}`)).join('')}<span class="count" title="ready / total">${eddies.length - spentE}/${eddies.length}</span></div>` : ''}<span class="mat-tab"><b>Eddies</b></span></div>
+      <div class="area a-eddies">${eddies.length ? `<div class="eddies" data-eddies="${pid}">${Array.from({ length: shownE }, (_, i) => back(i >= shownE - shownSpent ? 'spent-e' : '', `--i:${i}`)).join('')}<span class="count" title="ready / total">${eddies.length - spentE}/${eddies.length}</span></div>` : ''}<span class="mat-tab"><b>Eddies</b></span></div>
       <div class="area a-deck"><div class="pile-wrap" data-zone="${pid}-deck"><span class="pile">${back()}</span><span class="count">${p.deckCount ?? '?'}</span></div><span class="mat-tab"><b>Deck</b></span></div>
       <div class="area a-trash">${top ? `<div class="pile-wrap" data-trash="${pid}"><span class="pile">${face(top)}</span><span class="count">${trash.length}</span></div>` : '<span class="card slot"></span>'}<span class="mat-tab"><b>Trash</b></span></div>
     </div>`;
+  }
+
+  // ── the table (one shared play area, like the simulator's own board) ──────
+  // left column: Rival hand, fixer dice, Gigs | status + caption | your Gigs, dice, hand
+  // centre: Rival Legends + Eddies, both Fields, your Legends + Eddies; right strip: trash and deck piles
+  const sideOf = pid => (pid === R.me ? 'you' : 'rival');
+  function diceRowHtml(p) {
+    return [...(p.dicePool || [])].sort((a, b) => a.sides - b.sides)
+      .map(d => `<span class="mat-die${d.available ? '' : ' used'}">${dieSvg(d.sides)}<i>D${d.sides}</i></span>`).join('');
+  }
+  function gigRowHtml(st, pid) {
+    const gigs = st.players[pid].gigDice || [];
+    const own = gigs.filter(g => !g.originalOwnerId || g.originalOwnerId === pid);
+    const stolen = gigs.filter(g => g.originalOwnerId && g.originalOwnerId !== pid);
+    const total = gigs.reduce((a, g) => a + (+g.value || 0), 0);
+    return `<div class="gigs" style="--n:${Math.max(1, gigs.length)}">${own.map(g => gigHtml(g, pid)).join('')}${stolen.map(g => gigHtml(g, pid)).join('')}</div>
+      <div class="gig-count" title="Gigs (7 wins) · total value"><b>${gigs.length}/7</b><span>${total}</span></div>`;
+  }
+  function handRowHtml(st, pid) {
+    const p = st.players[pid], mine = pid === R.me;
+    const cards = p.hand || [];
+    const n = cards.length ? cards.length : (p.handCount ?? 0);
+    // replays list the Rival's hand as hidden entries (no card): show those as backs
+    const inner = cards.length ? cards.map((c, i) => c.cardId ? face(c, '', `--i:${i}`) : back('', `--i:${i}`, c.id)).join('')
+      : Array.from({ length: n }, (_, i) => back('', `--i:${i}`)).join('');
+    return `<div class="handrow${cards.length ? '' : ' backs'}"${mine ? ' id="my-hand"' : ''} data-zone="${pid}-hand" data-n="${n}" title="${esc(R.labels[pid])}: ${n} card${n === 1 ? '' : 's'} in hand">${inner || '<span class="none">No cards</span>'}</div>`;
+  }
+  function eddiesHtml(st, pid) {
+    const eddies = st.players[pid].eddies || [];
+    const spentE = eddies.filter(e => e.exhausted).length;
+    const shownE = Math.min(6, eddies.length), shownSpent = Math.min(shownE, spentE);
+    return `${eddies.length ? `<div class="eddies" data-eddies="${pid}">${Array.from({ length: shownE }, (_, i) => back(i >= shownE - shownSpent ? 'spent-e' : '', `--i:${i}`)).join('')}</div>` : ''}
+      <span class="zone-tag" title="ready / total">Eddies ${eddies.length - spentE}/${eddies.length}</span>`;
+  }
+  function pileHtml(st, pid, kind) {
+    const p = st.players[pid];
+    if (kind === 'deck') return `<div class="pile-wrap" data-zone="${pid}-deck"><span class="pile">${back()}</span><span class="count">${p.deckCount ?? '?'}</span></div><span class="zone-tag">Deck</span>`;
+    const trash = p.trash || [], top = trash[trash.length - 1];
+    return `${top ? `<div class="pile-wrap" data-trash="${pid}"><span class="pile">${face(top)}</span><span class="count">${trash.length}</span></div>` : '<span class="card slot"></span>'}<span class="zone-tag">Trash</span>`;
+  }
+  function statusHtml(st, s, lines, dir) {
+    const g = st.game, act = g.activePlayerId;
+    const who = !g.turnNumber ? 'Setup' : act === R.me ? (R.labels[R.me] === 'You' ? 'Your turn' : `${R.labels[R.me]}'s turn`) : `${R.labels[act] || ''}'s turn`;
+    const phase = String(g.stageLabel || g.phase || '').replace(/_/g, ' ');
+    return `<div class="turn-pill ${act ? sideOf(act) : ''}">${esc(who)}</div>
+      <div class="turn-sub">${g.turnNumber ? `Turn ${g.turnNumber}` : 'Mulligan'}${phase && g.turnNumber ? ` | ${esc(phase)}` : ''}${clockHtml(g, act)}</div>
+`;   // what just happened is in the log on the right
+  }
+  function tableHtml(st, s, lines, dir) {
+    const r = R.rival, m = R.me, g = st.game;
+    const zone = (pid, cls, html) => `<div class="pz ${sideOf(pid)} ${cls}${g.activePlayerId === pid ? ' active' : ''}">${html}</div>`;
+    const legends = pid => [...(st.players[pid].legends || [])].sort((a, b) => (a.slotIndex ?? 0) - (b.slotIndex ?? 0)).map(l => unitHtml(l, true)).join('');
+    const row = pid => zone(pid, 'row-z', `<div class="area a-legends"><div class="legends">${legends(pid)}</div><span class="zone-tag">Legends</span></div>
+      <div class="area a-eddies">${eddiesHtml(st, pid)}</div>`);
+    const field = pid => zone(pid, 'area a-field', `<div class="field">${(st.players[pid].field || []).map(u => unitHtml(u)).join('')}</div>`);
+    return `<div class="tb-left">
+        ${zone(r, 'hand-z', `<span class="who-tag">${esc(R.labels[r])}${st.players[r].streetCred != null ? ` · ☆${st.players[r].streetCred}` : ''}</span>${handRowHtml(st, r)}`)}
+        ${zone(r, 'dice-z', diceRowHtml(st.players[r]))}
+        ${zone(r, 'gig-z', gigRowHtml(st, r))}
+        <div class="status">${statusHtml(st, s, lines, dir)}</div>
+        ${zone(m, 'gig-z', gigRowHtml(st, m))}
+        ${zone(m, 'dice-z', diceRowHtml(st.players[m]))}
+        ${zone(m, 'hand-z', `${handRowHtml(st, m)}<span class="who-tag">${esc(R.labels[m])}${st.players[m].streetCred != null ? ` · ☆${st.players[m].streetCred}` : ''}</span>`)}
+      </div>
+      <div class="tb-play">${row(r)}${field(r)}<div class="midline"></div>${field(m)}${row(m)}</div>
+      <div class="tb-piles">${zone(r, 'pile-z', pileHtml(st, r, 'trash'))}${zone(r, 'pile-z', pileHtml(st, r, 'deck'))}${zone(m, 'pile-z', pileHtml(st, m, 'deck'))}${zone(m, 'pile-z', pileHtml(st, m, 'trash'))}</div>`;
   }
 
   // Chess-style match clock: time left for each player at this step (the running one has ticked since its last update).
@@ -196,7 +289,7 @@
   }
   function animate(before, dir) {
     if (reduceMotion || !before) return;
-    const opts = { duration: 420, easing: 'cubic-bezier(.2,.8,.2,1)' };
+    const opts = { duration: 420 * SPD, easing: 'cubic-bezier(.2,.8,.2,1)' };
     const els = document.querySelectorAll('#table [data-uid], #table .card[data-cid], #my-hand .card[data-cid], #table [data-gid]');
     for (const el of els) {
       if (el.closest('.unit') && !el.dataset.uid) continue;          // a Unit and its Gear move together
@@ -205,25 +298,27 @@
       if (!was && el.dataset.uid) was = before.get('c' + el.dataset.uid);   // e.g. hand card → field Unit
       const now = el.getBoundingClientRect();
       // fanned hand cards keep their tilt: animate back to their own CSS transform
-      const rest = el.closest('.hfan') ? getComputedStyle(el).transform : null;
+      const rest = null;
       const rot = el.classList.contains('spent') ? 90 : 0;
       const restT = rest && rest !== 'none' ? rest : `rotate(${rot}deg)`;
-      const flip = el.closest('.mat.rival') ? -1 : 1;     // the Rival's mat is turned 180°, so its local axes are too
+      const flip = 1;
       if (was) {
         const dx = flip * ((was.r.left + was.r.width / 2) - (now.left + now.width / 2));
         const dy = flip * ((was.r.top + was.r.height / 2) - (now.top + now.height / 2));
         const wasRot = was.spent ? 90 : 0;
+        if (Math.abs(dx) > 1 || Math.abs(dy) > 1) { el.classList.add('flying'); setTimeout(() => el.classList.remove('flying'), opts.duration + 50); }
         if (Math.abs(dx) > 1 || Math.abs(dy) > 1 || wasRot !== rot)
           el.animate([{ transform: rest ? `translate(${dx}px, ${dy}px) ${restT}` : `translate(${dx}px, ${dy}px) rotate(${wasRot}deg)` }, { transform: restT }], opts);
         if (el.dataset.gid && was.v !== el.dataset.v)
-          el.animate([{ transform: 'scale(1.5)', filter: 'brightness(2.2)' }, { transform: 'none', filter: 'none' }], { duration: 520, easing: 'ease-out' });
+          el.animate([{ transform: 'scale(1.5)', filter: 'brightness(2.2)' }, { transform: 'none', filter: 'none' }], { duration: 520 * SPD, easing: 'ease-out' });
       } else if (dir > 0) {
         // something new: glide in from its owner's hand (rival) or deck (you), else just fade in
-        const pid = el.closest('.mat')?.classList.contains('rival') ? R.rival : R.me;
+        const pid = el.closest('.pz')?.classList.contains('rival') ? R.rival : R.me;
         const src = before.get(`z${pid}-hand`) || before.get(`z${pid}-deck`);
         const from = src && !el.dataset.gid
           ? `translate(${flip * ((src.r.left + src.r.width / 2) - (now.left + now.width / 2))}px, ${flip * ((src.r.top + src.r.height / 2) - (now.top + now.height / 2))}px) rotate(${rot}deg) scale(.6)`
           : `rotate(${rot}deg) scale(${el.dataset.gid ? 1.8 : .6})`;
+        el.classList.add('flying'); setTimeout(() => el.classList.remove('flying'), opts.duration + 50);
         el.animate([{ transform: from, opacity: 0 }, { transform: restT, opacity: 1 }], opts);
       }
     }
@@ -231,23 +326,45 @@
 
   // Field cards as large as the Field allows: one row, every Unit's Gear strips and spent rotation included.
   const CARD_H = 1024 / 733, PEEK = .24, FIELD_GAP = 1.4, MAX_CW = 12;
+  // Card sizes on the Field and Legends rows. Sized for room to spare - every Unit spent (lying
+  // sideways) and carrying up to GEAR_RESERVE Gear strips - so attaching Gear or attacking doesn't
+  // resize the board; sizes change when the number of Units does, or past that reserve. Both players'
+  // Fields share one size (and both Legends rows), so the two sides always match.
+  const GEAR_RESERVE = 2;
   function sizeFields() {
     const cq = $('table').clientWidth / 100;                // px per cqw
     if (!cq) return;
-    for (const f of document.querySelectorAll('#table .field, #table .legends')) {
-      const leg = f.classList.contains('legends');
-      const units = [...f.querySelectorAll(':scope > .unit')];
-      if (!units.length) { f.style.removeProperty('--cw'); continue; }
-      const availW = f.clientWidth / cq - (leg ? 1.6 : 2.4), availH = f.clientHeight / cq - (leg ? 1 : 1.6);   // minus padding
-      let sumW = 0, maxH = 0;
-      for (const u of units) {
-        const len = CARD_H * (1 + PEEK * (+u.style.getPropertyValue('--n') || 0));   // card + Gear strips, in card widths
-        const spent = u.classList.contains('spent');
-        sumW += spent ? len : 1; maxH = Math.max(maxH, spent ? 1 : len);
+    for (const sel of ['#table .field', '#table .legends']) {
+      const rows = [...document.querySelectorAll(sel)];
+      let cw = Infinity;
+      for (const f of rows) {
+        const leg = f.classList.contains('legends');
+        const units = [...f.querySelectorAll(':scope > .unit')];
+        const n = Math.max(units.length, leg ? 3 : 1);
+        const availW = f.clientWidth / cq - (leg ? 1.6 : 2.4), availH = f.clientHeight / cq - (leg ? 1 : 1.6);   // minus padding
+        const gap = leg ? 1.2 : FIELD_GAP;
+        const gearMax = Math.max(leg ? 0 : GEAR_RESERVE, ...units.map(u => (leg ? 0 : +u.style.getPropertyValue('--n') || 0)));
+        const tall = CARD_H * (1 + PEEK * gearMax);           // a ready Unit with its Gear strips, in card widths
+        // reserve: each Unit as wide as a spent card; the real layout wins only if it needs even more room
+        let sumW = 0;
+        for (const u of units) sumW += u.classList.contains('spent') ? CARD_H * (1 + PEEK * (leg ? 0 : +u.style.getPropertyValue('--n') || 0)) : 1;
+        const fit = Math.min(availH / tall, (availW - gap * (n - 1)) / Math.max(n * CARD_H, sumW));
+        cw = Math.min(cw, leg ? 8.5 : MAX_CW, fit);
       }
-      const gap = leg ? 1.2 : FIELD_GAP;
-      const cw = Math.min(leg ? 7.5 : MAX_CW, availH / maxH, (availW - gap * (units.length - 1)) / sumW);
-      f.style.setProperty('--cw', `${Math.max(3, cw).toFixed(2)}cqw`);
+      for (const f of rows) f.style.setProperty('--cw', `${Math.max(3, cw).toFixed(2)}cqw`);
+    }
+  }
+
+  // Hands: cards as tall as their row, overlapping when they don't fit side by side
+  function sizeHands() {
+    for (const h of document.querySelectorAll('#table .handrow')) {
+      const cards = [...h.querySelectorAll(':scope > .card')];
+      if (!cards.length) continue;
+      const H = h.clientHeight, W = h.clientWidth;
+      const cw = Math.min(H / CARD_H, W);
+      const step = cards.length > 1 ? Math.min(cw + 6, (W - cw) / (cards.length - 1)) : 0;
+      const off = Math.max(0, (W - (cw + step * (cards.length - 1))) / 2);
+      cards.forEach((c, i) => { c.style.width = `${cw}px`; c.style.height = `${cw * CARD_H}px`; c.style.left = `${off + i * step}px`; });
     }
   }
 
@@ -279,7 +396,16 @@
       if (n.zone === 'hand' && n.pid !== R.me) continue;              // the Rival's hand is hidden
       const w = was.get(id);
       if (w && (w.zone === n.zone || w.zone === 'field' || w.zone === 'gear' || w.zone === 'legends')) continue;
-      arrivals.push({ id, ...n });
+      arrivals.push({ id, ...n, from: w?.zone || null });
+    }
+    // sales: a card that left a hand for the Eddies pile (live games name it in game.sold, since the
+    // Rival's hand is hidden; replays: cards from your own hand)
+    const before = new Set(Object.values(prevState.players).flatMap(p => (p.eddies || []).map(e => e.id)));
+    for (const [pid, p] of Object.entries(st.players)) for (const e of p.eddies || []) {
+      if (!e.id || before.has(e.id)) continue;
+      const sold = st.game.sold?.id === e.id ? st.game.sold : null, w = was.get(e.id);
+      const c = sold ? { id: e.id, cardId: sold.cardId, name: sold.name } : w?.zone === 'hand' ? w.c : null;
+      if (c) arrivals.push({ id: e.id, pid, zone: 'eddies', c, from: 'hand' });
     }
     if (!arrivals.length) return;
     const shown = arrivals.slice(0, 6);
@@ -287,12 +413,23 @@
     const k = shown.length, gap = 14;
     const W = Math.min(200, (T.width * .9 - gap * (k - 1)) / k), H = W * CARD_H;
     const rowLeft = T.left + T.width / 2 - (k * W + (k - 1) * gap) / 2, top = T.top + T.height / 2 - H / 2;
+    // where it comes from: its trash or hand if it was seen there, else (hidden) the deck when the deck
+    // shrank this step (draws, top-of-deck trashes), else the hand (the Rival's hidden hand)
+    const srcEl = a => {
+      let from = a.from;
+      if (!from) from = (prevState.players[a.pid]?.deckCount ?? 0) > (st.players[a.pid]?.deckCount ?? 0) ? 'deck' : 'hand';
+      return (from === 'trash' && document.querySelector(`#table [data-trash="${a.pid}"]`))
+        || (from === 'hand' && document.querySelector(`#table [data-zone="${a.pid}-hand"]`))
+        || document.querySelector(`#table [data-zone="${a.pid}-deck"]`);
+    };
     shown.forEach((a, i) => {
       // destination: the card itself if it's drawn on screen, else its owner's trash pile
-      const side = a.pid === R.me ? 'you' : 'rival';
-      let dest = document.querySelector(`#table [data-cid="${CSS.escape(a.id)}"], #my-hand [data-cid="${CSS.escape(a.id)}"]`);
+      let dest = a.zone === 'eddies' ? null : document.querySelector(`#table [data-cid="${CSS.escape(a.id)}"]`);
+      // a sale lands on the newest ready Eddie, which stays hidden until it arrives
+      if (a.zone === 'eddies') dest = [...document.querySelectorAll(`#table [data-eddies="${a.pid}"] > .card:not(.spent-e)`)].pop() || null;
       const exact = !!dest;
-      if (!dest) dest = document.querySelector(`#table .mat.${side} .a-trash .pile-wrap`);
+      if (!dest && a.zone === 'eddies') dest = document.querySelector(`#table [data-eddies="${a.pid}"]`);
+      if (!dest) dest = document.querySelector(`#table [data-trash="${a.pid}"]`) || document.querySelector(`#table [data-zone="${a.pid}-deck"]`);
       if (!dest) return;
       // this card's normal slide (e.g. hand → trash) would start it back at its old spot: the pop replaces it
       if (exact) dest.getAnimations().forEach(x => x.cancel());
@@ -300,22 +437,285 @@
       const x = rowLeft + i * (W + gap), y = top;
       const clone = document.createElement('div');
       clone.className = 'card face pop-card';
-      clone.style.cssText = `position:fixed; z-index:40; width:${W}px; height:${H}px; left:${x}px; top:${y}px; background-image:url('${imgUrl(a.c.cardId)}')`;
+      // data-img: the missing-art check must not mark it no-img (that style reset the background
+      // and only the art's top-left corner showed); size/position set here so nothing can override them
+      clone.dataset.img = imgUrl(a.c.cardId);
+      if (missingArt.has(clone.dataset.img)) clone.classList.add('no-img');
+      clone.dataset.checked = '1';
+      clone.innerHTML = `<span class="cname">${esc(short(a.c.name))}</span>`;
+      clone.style.cssText = `position:fixed; z-index:40; width:${W}px; height:${H}px; left:${x}px; top:${y}px; background-image:url('${imgUrl(a.c.cardId)}'); background-size:cover; background-position:center`;
       document.body.appendChild(clone);
       if (exact) dest.style.visibility = 'hidden';
       pops.push({ clone, dest: exact ? dest : null });
       const dx = (d.left + d.width / 2) - (x + W / 2), dy = (d.top + d.height / 2) - (y + H / 2);
-      const flip = dest.closest('.mat.rival') ? 180 : 0;        // lands the way it lies on the Rival's turned mat
+      const flip = 0;
       const end = `translate(${dx}px, ${dy}px) scale(${Math.min(d.width, d.height / CARD_H) / W}) rotate(${flip}deg)`;
+      // starts on its source pile / hand at that card size, rises to the middle, holds, then flies
+      const src = srcEl(a), S = src ? src.getBoundingClientRect() : null;
+      if (a.zone === 'hand' && src?.matches?.('[data-zone$="-deck"]')) snd('draw', i * 420 * SPD);
+      const sw = S ? Math.min(S.width, S.height / CARD_H, W) : W * .4;
+      const start = S ? `translate(${(S.left + S.width / 2) - (x + W / 2)}px, ${(S.top + S.height / 2) - (y + H / 2)}px) scale(${sw / W})` : 'scale(.4)';
       const anim = clone.animate([
-        { transform: 'scale(.4)', opacity: 0, offset: 0 },
-        { transform: 'scale(1.04)', opacity: 1, offset: .14 },
-        { transform: 'scale(1)', opacity: 1, offset: .2 },
-        { transform: 'scale(1)', opacity: 1, offset: .58 },
+        { transform: start, opacity: S ? 1 : 0, offset: 0, easing: 'cubic-bezier(.2,.7,.3,1)' },
+        { transform: 'scale(1.04)', opacity: 1, offset: .26 },
+        { transform: 'scale(1)', opacity: 1, offset: .32 },
+        { transform: 'scale(1)', opacity: 1, offset: .66, easing: 'cubic-bezier(.5,0,.3,1)' },
         { transform: end, opacity: exact ? 1 : .2, offset: 1 },
-      ], { duration: 1250, delay: i * 90, easing: 'cubic-bezier(.3,.7,.3,1)', fill: 'both' });
+      ], { duration: 1700 * SPD, delay: i * 420 * SPD, fill: 'both' });   // each leg eases on its own; one after another
+      busyFor((1700 + i * 420) * SPD);
       anim.onfinish = () => { clone.remove(); if (exact) dest.style.visibility = ''; pops = pops.filter(p => p.clone !== clone); };
     });
+  }
+
+  // Paying: Eddies spent this step turn sideways one after another with a yellow flash, and
+  // Legends spent to pay (or by their own {Spend}) flash too, so you see what paid.
+  function spendFx(prev, st) {
+    if (reduceMotion) return;
+    for (const pid of Object.keys(st.players)) {
+      const spentOf = s => (s.players[pid]?.eddies || []).filter(e => e.exhausted).length;
+      const fresh = spentOf(st) - spentOf(prev);
+      if (fresh > 0) {
+        const cards = [...document.querySelectorAll(`#table [data-eddies="${pid}"] .card.spent-e`)];
+        cards.slice(0, fresh).forEach((el, i) => el.animate([
+          { transform: 'rotate(0deg) translateY(0)', filter: 'url(#ctcg-swap) brightness(1.5) drop-shadow(0 0 6px #f5e400)' },
+          { transform: 'rotate(0deg) translateY(-12%)', filter: 'url(#ctcg-swap) brightness(1.7) drop-shadow(0 0 10px #f5e400)', offset: .35 },
+          { transform: 'rotate(90deg) translateY(0)', filter: 'url(#ctcg-swap) brightness(.6)' },
+        ], { duration: 650 * SPD, delay: i * 140 * SPD, easing: 'cubic-bezier(.3,.7,.3,1)', fill: 'backwards' }));
+      }
+      const was = new Map((prev.players[pid]?.legends || []).concat(prev.players[pid]?.field || []).map(u => [u.id, u.exhausted]));
+      for (const u of (st.players[pid]?.legends || []).concat(st.players[pid]?.field || []))
+        if (u.exhausted && was.get(u.id) === false) document.querySelector(`#table [data-uid="${CSS.escape(u.id)}"]`)?.classList.add('just-spent');
+    }
+  }
+
+  // ── sound (board/sfx.js), one call per forward step, timed to the animations ──
+  const snd = (name, ms = 0) => window.Sfx?.play(name, ms);
+  const ST = () => window.Sfx?.TIMING || { shuffle: 640, drawPeak: 220, rollSettle: 560, flipPeak: 220 };
+  function soundFx(prev, st, mull = null) {   // mull: whose mulligan this step is (mulliganFx sounds its cards)
+    const g0 = prev.game, g1 = st.game;
+    if (g1.turnNumber && g1.turnNumber !== g0.turnNumber) snd(g1.activePlayerId === R.me ? 'yourturn' : 'turn');
+    if (g1.attack && (!g0.attack || g0.attack.attackerId !== g1.attack.attackerId)) snd('attack');
+    if (g1.attack?.blockerId && !g0.attack?.blockerId) snd('block');
+    let draws = 0, rolls = 0;
+    for (const pid of Object.keys(st.players)) {
+      const a = prev.players[pid] || {}, b = st.players[pid] || {};
+      const ids = (list, f = x => x.id) => new Set((list || []).map(f));
+      // dice: new = rolled (rollFx), value changed = blip, changed hands = whoosh
+      const was = new Map(Object.values(prev.players).flatMap(q => (q.gigDice || []).map(d => [d.id, { v: d.value, q }])));
+      for (const d of b.gigDice || []) {
+        const w = was.get(d.id);
+        if (!w) { if ((!d.originalOwnerId || d.originalOwnerId === pid) && reduceMotion) snd('roll', rolls++ * 150 * SPD); }
+        else if (w.q !== a) snd('steal', 100);
+        else if (w.v !== d.value) snd('blip', 150 * SPD);
+      }
+      // Eddies: a sale lands as a coin, spending ticks one by one
+      const newE = (b.eddies || []).filter(e => !ids(a.eddies).has(e.id)).length;
+      for (let i = 0; i < Math.min(2, newE); i++) snd('sell', 1500 * SPD + i * 120);
+      const spent = x => (x.eddies || []).filter(e => e.exhausted).length;
+      for (let i = 0; i < Math.min(5, spent(b) - spent(a)); i++) snd('spend', i * 140 * SPD);
+      // Units in / out, Gear attached, Legends flipped
+      const before = ids(a.field), after = ids(b.field);
+      for (const u of b.field || []) if (!before.has(u.id)) snd('unit', 300 * SPD);
+      const trashNow = ids(b.trash);
+      for (const u of a.field || []) if (!after.has(u.id) && trashNow.has(u.id)) snd('defeat', 200 * SPD);
+      const gearOf = x => new Set([...(x.field || []), ...(x.legends || [])].flatMap(h => (h.attachments || []).map(g => g.id)));
+      const g0s = gearOf(a);
+      for (const id of gearOf(b)) if (!g0s.has(id)) snd('gear', 1550 * SPD);
+      const up0 = new Set((a.legends || []).filter(l => !l.faceDown).map(l => l.id));
+      for (const l of b.legends || []) if (!l.faceDown && !up0.has(l.id) && reduceMotion) snd('flip', 100);   // else flipFx
+      // cards: drawn (your hand, or the Rival's hand count), Programs played, other cards trashed
+      const handN = x => (x.hand || []).length || x.handCount || 0;
+      const drawn = Math.max(0, (a.deckCount ?? 0) - (b.deckCount ?? 0));
+      if (drawn && handN(b) > handN(a) && pid !== mull && (pid !== R.me || reduceMotion)) for (let i = 0; i < Math.min(2, drawn); i++) snd('draw', draws++ * 160 * SPD);
+      const hand0 = ids(a.hand);
+      for (const c of b.trash || []) {
+        if (trashNow.has(c.id) && ids(a.trash).has(c.id)) continue;
+        if (before.has(c.id)) continue;   // a defeated Unit
+        snd(/program/i.test(c.type || c.cardType || '') && (hand0.has(c.id) || !hand0.size) ? 'program' : 'deal', 120 * SPD);
+      }
+    }
+  }
+
+  // ── opening hand / mulligan ──
+  const handEls = pid => [...document.querySelectorAll(`#table [data-zone="${pid}-hand"] > .card`)];
+  const deckEl = pid => document.querySelector(`#table [data-zone="${pid}-deck"]`);
+  // the cards now in pid's hand fly in from the deck one after another (no stop in the middle)
+  function dealFx(pid, delay = 0) {
+    const deck = deckEl(pid);
+    if (reduceMotion || !deck) return;
+    const D = deck.getBoundingClientRect();
+    handEls(pid).forEach((el, i) => {
+      const r = el.getBoundingClientRect();
+      const from = `translate(${D.left + D.width / 2 - (r.left + r.width / 2)}px, ${D.top + D.height / 2 - (r.top + r.height / 2)}px) scale(${Math.min(1, D.width / r.width)})`;
+      el.classList.add('flying');
+      el.animate([{ transform: from }, { transform: 'none' }], { duration: 520 * SPD, delay: (delay + i * 130) * SPD, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' })
+        .onfinish = () => el.classList.remove('flying');
+      busyFor((520 + delay + i * 130) * SPD);
+      snd('deal', (delay + i * 130) * SPD);
+    });
+  }
+  // A riffle shuffle on a deck pile, `total` ms for two riffles: the pile splits into two halves that
+  // slide apart and tilt, then the cards drop back into one pile alternating left / right.
+  function riffleFx(deck, total) {
+    const A = ST().shuffle;                                   // the sound's cascade, ms
+    const R = Math.max(A + 380, total / 2);                   // one riffle
+    const split = R - A - 120;                                // halves slide apart (silent)
+    snd('shuffle', split); snd('shuffle', R + split);
+    if (reduceMotion || !document.contains(deck)) return;
+    const D = deck.querySelector('.card')?.getBoundingClientRect() || deck.getBoundingClientRect();
+    const N = 12, half = N / 2, w = D.width;
+    deck.style.visibility = 'hidden';
+    const cards = [];
+    for (let j = 0; j < N; j++) {
+      const c = document.createElement('div');
+      c.className = 'card back riffle';
+      c.style.cssText = `position:fixed; z-index:45; left:${D.left}px; top:${D.top}px; width:${D.width}px; height:${D.height}px`;
+      document.body.appendChild(c);
+      cards.push(c);
+      const left = j < half, k = left ? j : j - half;
+      const side = `translate(${left ? -0.62 * w : 0.62 * w}px, ${-k * 1.5}px) rotate(${left ? -9 : 9}deg)`;
+      const order = 2 * k + (left ? 0 : 1);                  // interleave: L0 R0 L1 R1 ...
+      // card `order` lands at its share of the cascade; the last ones on its loud end
+      const land = (split + A * (order + 1) / N) / R, lift = Math.max(split / R, land - 70 / R);
+      const pile = `translate(0, ${-order * 0.9}px)`;
+      c.animate([
+        { transform: `translate(0, ${-j * 0.9}px)`, offset: 0 },
+        { transform: side, offset: Math.min(lift, (split - 40) / R), easing: 'ease-in-out' },
+        { transform: side, offset: lift },
+        { transform: pile, offset: Math.min(.99, land), easing: 'ease-in' },
+        { transform: pile, offset: 1 },
+      ], { duration: R, iterations: 2, easing: 'linear', fill: 'both' });
+      pops.push({ clone: c, dest: null });
+    }
+    setTimeout(() => {
+      cards.forEach(c => { c.remove(); pops = pops.filter(q => q.clone !== c); });
+      deck.style.visibility = '';
+    }, 2 * R + 40);
+    return 2 * R;
+  }
+
+  // whose mulligan this step is (its log line says so; that player's hand was replaced)
+  function mulliganOf(s, prev, st) {
+    const line = (s.newLog || []).find(e => /mulligan/i.test(e.message) && !/keep/i.test(e.message));
+    if (!line) return null;
+    const pid = Object.keys(st.players).find(p => p === line.turnOwnerPlayerId) || Object.keys(st.players).find(p => line.message.startsWith(R.labels[p]));
+    return pid || null;
+  }
+  // the old hand goes back face down into the deck, the deck shuffles, then the new six are dealt
+  function mulliganFx(pid, prev, st) {
+    const deck = deckEl(pid), row = document.querySelector(`#table [data-zone="${pid}-hand"]`);
+    if (reduceMotion || !deck || !row) return;
+    const D = deck.getBoundingClientRect(), H = row.getBoundingClientRect();
+    const n = (prev.players[pid].hand || []).length || prev.players[pid].handCount || 6;
+    const cw = Math.min(H.height / CARD_H, H.width), step = n > 1 ? Math.min(cw + 6, (H.width - cw) / (n - 1)) : 0;
+    const off = Math.max(0, (H.width - (cw + step * (n - 1))) / 2);
+    handEls(pid).forEach(el => { el.style.visibility = 'hidden'; });
+    for (let i = 0; i < n; i++) {
+      const x = H.left + off + i * step, y = H.top;
+      const c = document.createElement('div');
+      c.className = 'card back riffle';
+      c.style.cssText = `position:fixed; z-index:40; left:${x}px; top:${y}px; width:${cw}px; height:${cw * CARD_H}px`;
+      document.body.appendChild(c);
+      pops.push({ clone: c, dest: null });
+      const to = `translate(${D.left + D.width / 2 - (x + cw / 2)}px, ${D.top + D.height / 2 - (y + cw * CARD_H / 2)}px) scale(${D.width / cw})`;
+      const a = c.animate([{ transform: 'none' }, { transform: to }], { duration: 480 * SPD, delay: i * 90 * SPD, easing: 'cubic-bezier(.4,0,.2,1)', fill: 'both' });
+      a.onfinish = () => { c.remove(); pops = pops.filter(q => q.clone !== c); };
+      snd('deal', i * 90 * SPD);
+    }
+    const backIn = (480 + n * 90) * SPD;
+    const SHUF = Math.max(2 * (ST().shuffle + 380), 1900 * SPD);   // two riffles (riffleFx's length)
+    busyFor(backIn + SHUF + 60 * SPD + (520 + 6 * 130) * SPD);
+    setTimeout(() => riffleFx(deck, SHUF), backIn);
+    setTimeout(() => {
+      if (!document.contains(row)) return;   // stepped away meanwhile
+      handEls(pid).forEach(el => { el.style.visibility = ''; });
+      dealFx(pid);
+    }, backIn + SHUF + 60 * SPD);
+  }
+
+  // A Gig die rolled this step tumbles out of its owner's fixer dice to the middle of the table,
+  // its number flickering, settles on the result, then drops into the Gig row.
+  function rollFx(prev, st) {
+    if (reduceMotion) return;
+    const old = new Set(Object.values(prev.players).flatMap(q => (q.gigDice || []).map(g => g.id)));
+    const T = $('table').getBoundingClientRect();
+    let k = 0;
+    for (const [pid, p] of Object.entries(st.players)) for (const g of p.gigDice || []) {
+      if (old.has(g.id) || (g.originalOwnerId && g.originalOwnerId !== pid)) continue;   // new, not stolen
+      const el = document.querySelector(`#table [data-gid="${CSS.escape(g.id)}"]`);
+      const src = document.querySelector(`#table .pz.${sideOf(pid)}.dice-z`);
+      if (!el || !src) continue;
+      el.getAnimations().forEach(a => a.cancel());
+      const size = Math.min(T.width, T.height) * .16, d = el.getBoundingClientRect(), S = src.getBoundingClientRect();
+      const x = T.left + T.width / 2 - size / 2 + k * size * 1.2, y = T.top + T.height / 2 - size / 2;
+      const clone = el.cloneNode(true);
+      clone.removeAttribute('data-gid');
+      clone.classList.add('roll-die');
+      clone.style.cssText = `position:fixed; z-index:41; left:${x}px; top:${y}px; width:${size}px; height:${size}px; --gs:${size}px`;
+      document.body.appendChild(clone);
+      el.style.visibility = 'hidden';
+      pops.push({ clone, dest: el });
+      const b = clone.querySelector('b'), final = b.textContent;
+      const iv = setInterval(() => { b.textContent = 1 + Math.floor(Math.random() * (g.sides || 6)); }, 70);
+      const settle = .58 * 2200 * SPD;                       // the keyframe where it comes to rest
+      setTimeout(() => { clearInterval(iv); b.textContent = final; }, settle + k * 150 * SPD);
+      snd('roll', k * 150 * SPD + Math.max(0, settle - ST().rollSettle));
+      const from = `translate(${S.left + S.width / 2 - (x + size / 2)}px, ${S.top + S.height / 2 - (y + size / 2)}px) rotate(0deg) scale(.3)`;
+      const to = `translate(${d.left + d.width / 2 - (x + size / 2)}px, ${d.top + d.height / 2 - (y + size / 2)}px) rotate(1080deg) scale(${d.width / size})`;
+      const anim = clone.animate([
+        { transform: from, offset: 0, easing: 'cubic-bezier(.2,.7,.3,1)' },
+        { transform: 'translate(0, 0) rotate(720deg) scale(1.1)', offset: .45, easing: 'ease-out' },
+        { transform: 'translate(0, 0) rotate(1080deg) scale(1)', offset: .58 },
+        { transform: 'translate(0, 0) rotate(1080deg) scale(1)', offset: .78, easing: 'cubic-bezier(.5,0,.3,1)' },
+        { transform: to, offset: 1 },
+      ], { duration: 2200 * SPD, delay: k * 150 * SPD, fill: 'both' });
+      busyFor((2200 + k * 150) * SPD);
+      anim.onfinish = () => { clearInterval(iv); clone.remove(); el.style.visibility = ''; pops = pops.filter(q => q.clone !== clone); };
+      k++;
+    }
+  }
+
+  // A Legend turned face up this step flips over (back -> face); edge-on exactly on the flip sound's snap.
+  function flipFx(prev, st) {
+    if (reduceMotion) return;
+    let k = 0;
+    for (const pid of Object.keys(st.players)) {
+      const up0 = new Set((prev.players[pid]?.legends || []).filter(l => !l.faceDown).map(l => l.id));
+      for (const l of st.players[pid]?.legends || []) {
+        if (l.faceDown || up0.has(l.id)) continue;
+        const el = document.querySelector(`#table [data-uid="${CSS.escape(l.id)}"]`);
+        const delay = 100 + k++ * 300, P = ST().flipPeak;
+        snd('flip', delay);
+        if (!el) continue;
+        el.animate([
+          { transform: 'perspective(600px) rotateY(180deg)', filter: 'brightness(.25)' },
+          { transform: 'perspective(600px) rotateY(90deg)', filter: 'brightness(.25)', offset: .5 },
+          { transform: 'perspective(600px) rotateY(90deg)', filter: 'brightness(1.4)', offset: .501 },
+          { transform: 'perspective(600px) rotateY(0deg)', filter: 'brightness(1)' },
+        ], { duration: 2 * P, delay, easing: 'ease-in-out', fill: 'backwards' });
+        busyFor(delay + 2 * P);
+      }
+    }
+  }
+
+  // A die whose value changed or that changed hands this step keeps a ring while you're on the step,
+  // so "Bot A's d6: 4 → 5" points at one die even though both players have a d6.
+  function diceMarks(prev, st) {
+    const was = new Map(Object.entries(prev.players).flatMap(([pid, p]) => (p.gigDice || []).map(g => [g.id, { v: g.value, pid }])));
+    for (const [pid, p] of Object.entries(st.players)) for (const g of p.gigDice || []) {
+      const w = was.get(g.id);
+      if (w && (w.v !== g.value || w.pid !== pid)) document.querySelector(`#table [data-gid="${CSS.escape(g.id)}"]`)?.classList.add('gig-hot');
+    }
+  }
+
+  // During an attack the attacker and what it attacks stay marked until the fight is over.
+  function attackMarks(st) {
+    const A = st.game.attack;
+    if (!A) return;
+    document.querySelector(`#table [data-uid="${CSS.escape(A.attackerId)}"]`)?.classList.add('attacking');
+    if (A.targetId) document.querySelector(`#table [data-uid="${CSS.escape(A.targetId)}"]`)?.classList.add('attacked');
+    else document.querySelector(`#table .pz.${A.targetSide === R.me ? 'you' : 'rival'}.gig-z`)?.classList.add('attacked');
+    if (A.blockerId) document.querySelector(`#table [data-uid="${CSS.escape(A.blockerId)}"]`)?.classList.add('blocking');
   }
 
   // ── render one step ─────────────────────────────────────────────────────
@@ -326,14 +726,7 @@
     cardsById = new Map();
 
     const lines = s.newLog.map(e => fmt(e.message)).filter(Boolean);
-    $('table').innerHTML = matHtml(st, R.rival, true) + bannerHtml(s, lines, dir) + matHtml(st, R.me, false);
-    $('rival-block').innerHTML = glanceHtml(st, R.rival) + handFanHtml(st, R.rival);
-    $('me-block').innerHTML = glanceHtml(st, R.me) + handFanHtml(st, R.me);
-
-    const g = st.game;
-    const who = g.activePlayerLabel ? `<span class="${g.activePlayerId === R.me ? 'mine' : 'theirs'}">${esc(g.activePlayerLabel)}</span>` : esc(g.stageLabel || 'Setup');
-    $('turn-box').innerHTML = `<div class="t">${g.turnNumber ? `Turn ${g.turnNumber} · ` : ''}${who}</div>
-      <div class="act">${lines.length ? lines.map(entryHtml).join('<br>') : esc(s.action?.label || 'Start of the match')}</div>`;
+    $('table').innerHTML = tableHtml(st, s, lines, dir);
 
     // Cards named in this step's log glow. With several copies of a name, only the copy that changed
     // this step (moved, spent/readied, flipped, gained Gear) glows; one unchanged copy glows on its own;
@@ -364,9 +757,17 @@
     $('scrub').value = cur;
     $('counter').textContent = `${cur} / ${R.steps.length - 1}${s.elapsed != null ? ` · ${mmss(s.elapsed)}` : ''}`;
     $('counter').title = 'Action / total · match time';
-    sizeFields();
+    sizeFields(); sizeHands();
     animate(before, dir);
-    if (dir === 1) popArrivals(R.steps[cur - 1].state, st);
+    if (dir === 1) {
+      const prev = R.steps[cur - 1].state;
+      const mull = mulliganOf(s, prev, st);
+      if (mull) mulliganFx(mull, prev, st);
+      else { spendFx(prev, st); popArrivals(prev, st); rollFx(prev, st); flipFx(prev, st); }
+      soundFx(prev, st, mull);
+    }
+    attackMarks(st);
+    if (cur > 0) diceMarks(R.steps[cur - 1].state, st);
     document.dispatchEvent(new CustomEvent('board:step', { detail: { step: cur } }));
   }
 
@@ -458,9 +859,12 @@
       $('scrub').max = R.steps.length - 1;
       matchInfo(); buildLog();
       cur = R.steps.length - 1; render();
+      // a new game: both opening hands are dealt from the decks
+      if (!R.steps[cur].state.game.turnNumber) for (const pid of [R.rival, R.me]) dealFx(pid, pid === R.me ? 300 : 0);
     },
-    // append steps; follow the game if you were watching the latest step
-    extend(steps, log) {
+    // append steps; if you were watching the latest step, play them one at a time (`gap` ms apart)
+    // so every move animates instead of jumping to the end. Resolves when the last one is shown.
+    async extend(steps, log, gap = 0) {
       if (!R || !steps.length) return;
       const follow = cur >= R.steps.length - 1;
       R.steps.push(...steps); R.log.push(...log);
@@ -469,8 +873,17 @@
       R.turnStarts = turnStartsOf(R.steps);
       $('scrub').max = R.steps.length - 1;
       buildLog();
-      if (follow) go(R.steps.length - 1); else render(0);
+      if (!follow) { render(0); return; }
+      const end = R.steps.length - 1;
+      const wait = ms => new Promise(ok => setTimeout(ok, ms));
+      while (cur < end) {
+        go(cur + 1);
+        const at = cur;
+        await wait(Math.max(cur < end ? gap : 0, animUntil - performance.now()));
+        if (cur !== at) return;   // you moved the timeline meanwhile
+      }
     },
+    setSpeed(k) { SPD = k; document.documentElement.style.setProperty('--spd', k); },
     current: () => cur, total: () => (R ? R.steps.length : 0), step: i => R?.steps[i],
   };
 
@@ -488,6 +901,18 @@
     else if (e.key === 'ArrowRight') { e.shiftKey ? turnJump(1) : go(cur + 1); e.preventDefault(); }
     else if (e.key === ' ') { togglePlay(); e.preventDefault(); }
     else if (e.key === 'Home') go(0); else if (e.key === 'End') go(R.steps.length - 1);
+    // A / S / D: step back, play-pause, step forward; Q / E: a whole turn back / forward.
+    // Live games on the latest step: D = the bot's next move, E = finish the turn, S = Auto (live.js).
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    const k = e.key.toLowerCase(), atEnd = cur >= R.steps.length - 1;
+    const live = what => document.dispatchEvent(new CustomEvent('board:live-key', { detail: what }));
+    if (k === 'a') go(cur - 1);
+    else if (k === 'd') { if (R.live && atEnd) live('step'); else go(cur + 1); }
+    else if (k === 'q') turnJump(-1);
+    else if (k === 'e') { if (R.live && atEnd) live('turn'); else turnJump(1); }
+    else if (k === 's') { if (R.live) live('auto'); else togglePlay(); }
+    else return;
+    e.preventDefault();
   });
 
   // hover: the card upright and large, plus its live status (Lag, Adrenaline, power changes, Gear)

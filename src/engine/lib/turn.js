@@ -198,7 +198,8 @@ function stepMain(b, input) {
       const c = getCard(p.zones.hand[idx].card_id);
       if (!c.eddie) throw new Error(`${c.name} has no sell tag`);
       const [ref] = p.zones.hand.splice(idx, 1);
-      p.zones.eddies.push({ iid: ref.iid, card_id: ref.card_id, state: 'ready' });
+      // sold from hand: revealed, then face down - both players know which card it is (seen)
+      p.zones.eddies.push({ iid: ref.iid, card_id: ref.card_id, state: 'ready', seen: true });
       p.sold_card_this_turn = true;
       return mainWaiting(b);
     }

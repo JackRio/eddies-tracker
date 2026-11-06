@@ -1,0 +1,1675 @@
+{
+ "id": "RGB",
+ "trio": "Dexter DeShawn / Padre / Wakako Okada",
+ "source": "core-bo1 62 games 45.2%",
+ "legends": [
+  "WNTC-002",
+  "WNTC-074",
+  "WNTC-110"
+ ],
+ "pool": [
+  "WNTC-134",
+  "WNTC-102",
+  "WNTC-006",
+  "WNTC-025",
+  "WNTC-086",
+  "WNTC-124",
+  "WNTC-026",
+  "WNTC-100",
+  "WNTC-131",
+  "WNTC-034",
+  "WNTC-117",
+  "WNTC-091",
+  "WNTC-132",
+  "WNTC-083",
+  "WNTC-123",
+  "WNTC-011",
+  "WNTC-129",
+  "WNTC-080",
+  "WNTC-031",
+  "WNTC-104"
+ ],
+ "champion": {
+  "main": {
+   "WNTC-091": 2,
+   "WNTC-006": 3,
+   "WNTC-086": 2,
+   "WNTC-124": 3,
+   "WNTC-117": 2,
+   "WNTC-080": 1,
+   "WNTC-011": 2,
+   "WNTC-083": 1,
+   "WNTC-123": 1,
+   "WNTC-025": 3,
+   "WNTC-026": 3,
+   "WNTC-129": 1,
+   "WNTC-031": 1,
+   "WNTC-132": 2,
+   "WNTC-102": 3,
+   "WNTC-131": 3,
+   "WNTC-134": 3,
+   "WNTC-034": 2,
+   "WNTC-100": 2
+  },
+  "side": {
+   "WNTC-100": 1,
+   "WNTC-034": 1,
+   "WNTC-117": 1,
+   "WNTC-091": 1,
+   "WNTC-132": 1,
+   "WNTC-083": 1,
+   "WNTC-123": 1
+  }
+ },
+ "challenger": {
+  "main": {
+   "WNTC-091": 2,
+   "WNTC-006": 3,
+   "WNTC-086": 2,
+   "WNTC-124": 3,
+   "WNTC-117": 2,
+   "WNTC-080": 1,
+   "WNTC-011": 2,
+   "WNTC-083": 1,
+   "WNTC-123": 2,
+   "WNTC-025": 3,
+   "WNTC-026": 3,
+   "WNTC-129": 1,
+   "WNTC-031": 1,
+   "WNTC-132": 2,
+   "WNTC-102": 3,
+   "WNTC-131": 3,
+   "WNTC-134": 3,
+   "WNTC-034": 1,
+   "WNTC-100": 2
+  },
+  "side": {
+   "WNTC-100": 1,
+   "WNTC-034": 1,
+   "WNTC-117": 1,
+   "WNTC-091": 1,
+   "WNTC-132": 1,
+   "WNTC-083": 1,
+   "WNTC-123": 1
+  },
+  "change": {
+   "kind": "main",
+   "out": "WNTC-034",
+   "in": "WNTC-123"
+  }
+ },
+ "tune": {
+  "champ": [
+   26,
+   49
+  ],
+  "chall": [
+   29,
+   51
+  ]
+ },
+ "first": {
+  "BBG": {
+   "first": [
+    48,
+    90
+   ],
+   "second": [
+    45,
+    90
+   ]
+  },
+  "RRG": {
+   "first": [
+    39,
+    78
+   ],
+   "second": [
+    26,
+    83
+   ]
+  },
+  "RGB": {
+   "first": [
+    40,
+    72
+   ],
+   "second": [
+    32,
+    72
+   ]
+  },
+  "pub:Against BBG #2 ~ RareTotem": {
+   "first": [
+    1,
+    5
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "YYR": {
+   "first": [
+    39,
+    91
+   ],
+   "second": [
+    22,
+    77
+   ]
+  },
+  "pub:River's Closet": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:choombattler-adam-muamar-river": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    1,
+    3
+   ]
+  },
+  "deck:coverage-16": {
+   "first": [
+    3,
+    3
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-08": {
+   "first": [
+    4,
+    4
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "pub:RRB ~ Fixers": {
+   "first": [
+    4,
+    5
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "deck:coverage-12": {
+   "first": [
+    4,
+    7
+   ],
+   "second": [
+    3,
+    3
+   ]
+  },
+  "deck:coverage-18": {
+   "first": [
+    0,
+    3
+   ],
+   "second": [
+    2,
+    3
+   ]
+  },
+  "pub:YYR ~ Fixers": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    3
+   ]
+  },
+  "deck:choombattler-adam-hanako-padre": {
+   "first": [
+    2,
+    4
+   ],
+   "second": [
+    1,
+    3
+   ]
+  },
+  "pub:Adam's River": {
+   "first": [
+    2,
+    4
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "deck:choombattler-adam-dexter-saburo": {
+   "first": [
+    1,
+    4
+   ],
+   "second": [
+    1,
+    3
+   ]
+  },
+  "pub:RED Deck Wins": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "pub:BBG ~ Mass Removal Aggro": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "deck:coverage-22": {
+   "first": [
+    5,
+    6
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "deck:coverage-20": {
+   "first": [
+    3,
+    5
+   ],
+   "second": [
+    2,
+    4
+   ]
+  },
+  "pub:Suicide Bombus": {
+   "first": [
+    4,
+    8
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "pub:RGB": {
+   "first": [
+    3,
+    5
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "deck:coverage-01": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "pub:YYR Generalist": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    6
+   ]
+  },
+  "pub:BBG ~ Alt": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "pub:YYR - TTO": {
+   "first": [
+    1,
+    3
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "deck:coverage-14": {
+   "first": [
+    3,
+    5
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "pub:BBG Vex": {
+   "first": [
+    1,
+    4
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:choombattler-adam-saburo-v": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:coverage-04": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-03": {
+   "first": [
+    4,
+    4
+   ],
+   "second": [
+    4,
+    4
+   ]
+  },
+  "pub:Placid YYB": {
+   "first": [
+    4,
+    5
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "pub:RGB ~ Fixers": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "deck:choombattler-adam-dexter-padre": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    0,
+    3
+   ]
+  },
+  "pub:YYR ~ V TTO": {
+   "first": [
+    2,
+    4
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:coverage-05": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:4-blue-2-green-standard": {
+   "first": [
+    2,
+    6
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-11": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-13": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-19": {
+   "first": [
+    3,
+    3
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "pub:Relic Smasher 3.1": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-23": {
+   "first": [
+    3,
+    3
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:choombattler-adam-river-viktor-bo3": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    4
+   ]
+  },
+  "pub:RRB ~ Anti-Alt": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "deck:choombattler-alt-dexter-v": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "pub:Panam Panam Panam": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "pub:BBG ~ Judy": {
+   "first": [
+    2,
+    4
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "deck:4-red-2-green-standard": {
+   "first": [
+    0,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "pub:The Lone Rangers": {
+   "first": [
+    1,
+    3
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "pub:RED Cyberdeck Wins": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:choombattler-alt-hanako-jackie": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:4-yellow-2-red-standard": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "pub:YYB ~ Turbo Placide": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:choombattler-adam-river-viktor": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "pub:Adam Smasher ~ YYR": {
+   "first": [
+    0,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-21": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:coverage-02": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-09": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  }
+ },
+ "swaps": {
+  "BBG|WNTC-131>WNTC-034": [
+   0,
+   1
+  ],
+  "BBG|WNTC-011>WNTC-083": [
+   1,
+   2
+  ],
+  "BBG|WNTC-102>WNTC-083": [
+   2,
+   2
+  ],
+  "BBG|WNTC-134>WNTC-091": [
+   1,
+   1
+  ],
+  "RRG|WNTC-123>WNTC-091": [
+   1,
+   1
+  ],
+  "RRG|WNTC-025>WNTC-091": [
+   0,
+   1
+  ],
+  "RGB|WNTC-086>WNTC-123": [
+   2,
+   3
+  ],
+  "RGB|WNTC-025>WNTC-117,WNTC-131>WNTC-034": [
+   0,
+   1
+  ],
+  "pub:Against BBG #2 ~ RareTotem|WNTC-026>WNTC-123": [
+   0,
+   1
+  ],
+  "BBG|WNTC-131>WNTC-091": [
+   1,
+   1
+  ],
+  "BBG|WNTC-083>WNTC-091,WNTC-132>WNTC-083": [
+   0,
+   1
+  ],
+  "YYR|WNTC-100>WNTC-034": [
+   0,
+   1
+  ],
+  "YYR|WNTC-129>WNTC-091": [
+   1,
+   1
+  ],
+  "YYR|WNTC-011>WNTC-132,WNTC-134>WNTC-083": [
+   0,
+   1
+  ],
+  "pub:River's Closet|WNTC-102>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:River's Closet|WNTC-129>WNTC-132": [
+   1,
+   1
+  ],
+  "BBG|WNTC-123>WNTC-132": [
+   0,
+   1
+  ],
+  "BBG|WNTC-134>WNTC-132": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-muamar-river|WNTC-034>WNTC-091": [
+   1,
+   1
+  ],
+  "deck:choombattler-adam-muamar-river|WNTC-091>WNTC-034,WNTC-100>WNTC-132": [
+   0,
+   1
+  ],
+  "deck:coverage-16|WNTC-080>WNTC-091,WNTC-131>WNTC-034": [
+   1,
+   1
+  ],
+  "YYR|WNTC-131>WNTC-034": [
+   0,
+   1
+  ],
+  "RRG|WNTC-117>WNTC-091": [
+   0,
+   1
+  ],
+  "deck:coverage-08|WNTC-011>WNTC-034": [
+   1,
+   1
+  ],
+  "YYR|WNTC-102>WNTC-091,WNTC-134>WNTC-132": [
+   1,
+   1
+  ],
+  "YYR|WNTC-011>WNTC-117,WNTC-083>WNTC-100": [
+   0,
+   1
+  ],
+  "BBG|WNTC-086>WNTC-083": [
+   1,
+   2
+  ],
+  "RRG|WNTC-091>WNTC-100": [
+   0,
+   1
+  ],
+  "pub:RRB ~ Fixers|WNTC-124>WNTC-034": [
+   1,
+   1
+  ],
+  "deck:coverage-12|WNTC-124>WNTC-083": [
+   1,
+   1
+  ],
+  "deck:coverage-12|WNTC-025>WNTC-083,WNTC-091>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-080>WNTC-091": [
+   0,
+   2
+  ],
+  "BBG|WNTC-031>WNTC-091,WNTC-132>WNTC-117": [
+   0,
+   1
+  ],
+  "deck:coverage-18|WNTC-034>WNTC-132": [
+   1,
+   1
+  ],
+  "deck:coverage-18|WNTC-086>WNTC-083": [
+   0,
+   1
+  ],
+  "RRG|WNTC-134>WNTC-091": [
+   1,
+   2
+  ],
+  "RRG|WNTC-011>WNTC-034,WNTC-080>WNTC-100": [
+   0,
+   1
+  ],
+  "RGB|WNTC-129>WNTC-083": [
+   1,
+   2
+  ],
+  "BBG|WNTC-100>WNTC-123": [
+   1,
+   1
+  ],
+  "YYR|WNTC-102>WNTC-034,WNTC-129>WNTC-100": [
+   0,
+   1
+  ],
+  "YYR|WNTC-124>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-011>WNTC-117,WNTC-034>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-117>WNTC-083,WNTC-124>WNTC-091": [
+   1,
+   1
+  ],
+  "RGB|WNTC-011>WNTC-100,WNTC-011>WNTC-117": [
+   0,
+   1
+  ],
+  "RGB|WNTC-117>WNTC-132": [
+   1,
+   1
+  ],
+  "pub:YYR ~ Fixers|WNTC-025>WNTC-117": [
+   0,
+   1
+  ],
+  "YYR|WNTC-083>WNTC-034": [
+   0,
+   2
+  ],
+  "YYR|WNTC-031>WNTC-123": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-hanako-padre|WNTC-011>WNTC-117": [
+   1,
+   1
+  ],
+  "RRG|WNTC-025>WNTC-083,WNTC-102>WNTC-132": [
+   0,
+   1
+  ],
+  "pub:Adam's River|WNTC-080>WNTC-100,WNTC-091>WNTC-083": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-dexter-saburo|WNTC-025>WNTC-117,WNTC-034>WNTC-123": [
+   0,
+   1
+  ],
+  "YYR|WNTC-080>WNTC-083": [
+   0,
+   1
+  ],
+  "YYR|WNTC-080>WNTC-083,WNTC-132>WNTC-123": [
+   0,
+   1
+  ],
+  "YYR|WNTC-031>WNTC-083": [
+   0,
+   1
+  ],
+  "RGB|WNTC-091>WNTC-100": [
+   2,
+   2
+  ],
+  "RGB|WNTC-080>WNTC-132": [
+   0,
+   1
+  ],
+  "RGB|WNTC-026>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-100>WNTC-117": [
+   2,
+   2
+  ],
+  "BBG|WNTC-129>WNTC-123": [
+   0,
+   1
+  ],
+  "YYR|WNTC-011>WNTC-083,WNTC-123>WNTC-091": [
+   0,
+   1
+  ],
+  "YYR|WNTC-091>WNTC-034": [
+   1,
+   2
+  ],
+  "YYR|WNTC-011>WNTC-034": [
+   0,
+   1
+  ],
+  "RRG|WNTC-131>WNTC-123": [
+   0,
+   1
+  ],
+  "RRG|WNTC-083>WNTC-117,WNTC-124>WNTC-123": [
+   0,
+   1
+  ],
+  "pub:RED Deck Wins|WNTC-006>WNTC-083": [
+   1,
+   1
+  ],
+  "RRG|WNTC-026>WNTC-034": [
+   1,
+   1
+  ],
+  "RRG|WNTC-031>WNTC-091": [
+   1,
+   1
+  ],
+  "YYR|WNTC-025>WNTC-083": [
+   0,
+   1
+  ],
+  "BBG|WNTC-129>WNTC-034": [
+   0,
+   1
+  ],
+  "RRG|WNTC-025>WNTC-091,WNTC-086>WNTC-132": [
+   0,
+   1
+  ],
+  "YYR|WNTC-129>WNTC-083": [
+   0,
+   1
+  ],
+  "RGB|WNTC-083>WNTC-117,WNTC-131>WNTC-100": [
+   0,
+   1
+  ],
+  "RGB|WNTC-129>WNTC-117": [
+   1,
+   1
+  ],
+  "BBG|WNTC-123>WNTC-117": [
+   0,
+   1
+  ],
+  "pub:Against BBG #2 ~ RareTotem|WNTC-134>WNTC-091": [
+   1,
+   1
+  ],
+  "pub:Against BBG #2 ~ RareTotem|WNTC-025>WNTC-083,WNTC-129>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-102>WNTC-034": [
+   0,
+   1
+  ],
+  "BBG|WNTC-086>WNTC-100": [
+   0,
+   1
+  ],
+  "pub:BBG ~ Mass Removal Aggro|WNTC-006>WNTC-117": [
+   0,
+   1
+  ],
+  "RRG|WNTC-031>WNTC-123,WNTC-117>WNTC-034": [
+   1,
+   1
+  ],
+  "deck:coverage-22|WNTC-091>WNTC-083,WNTC-117>WNTC-100": [
+   1,
+   1
+  ],
+  "deck:coverage-22|WNTC-131>WNTC-034": [
+   1,
+   1
+  ],
+  "BBG|WNTC-124>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-034>WNTC-091,WNTC-124>WNTC-117": [
+   0,
+   1
+  ],
+  "YYR|WNTC-025>WNTC-117": [
+   2,
+   3
+  ],
+  "RRG|WNTC-091>WNTC-123": [
+   0,
+   1
+  ],
+  "BBG|WNTC-026>WNTC-034": [
+   1,
+   1
+  ],
+  "RRG|WNTC-080>WNTC-034": [
+   0,
+   1
+  ],
+  "BBG|WNTC-083>WNTC-100": [
+   1,
+   1
+  ],
+  "RRG|WNTC-091>WNTC-132,WNTC-123>WNTC-117": [
+   0,
+   1
+  ],
+  "RRG|WNTC-034>WNTC-123": [
+   0,
+   1
+  ],
+  "BBG|WNTC-124>WNTC-083": [
+   0,
+   1
+  ],
+  "BBG|WNTC-031>WNTC-100": [
+   1,
+   1
+  ],
+  "YYR|WNTC-132>WNTC-091": [
+   0,
+   1
+  ],
+  "BBG|WNTC-026>WNTC-100": [
+   0,
+   1
+  ],
+  "BBG|WNTC-034>WNTC-083": [
+   1,
+   1
+  ],
+  "YYR|WNTC-034>WNTC-123": [
+   1,
+   2
+  ],
+  "deck:coverage-20|WNTC-123>WNTC-091": [
+   1,
+   1
+  ],
+  "deck:coverage-20|WNTC-083>WNTC-034": [
+   1,
+   1
+  ],
+  "RGB|WNTC-131>WNTC-100": [
+   1,
+   1
+  ],
+  "RGB|WNTC-026>WNTC-091": [
+   1,
+   1
+  ],
+  "RGB|WNTC-131>WNTC-083": [
+   0,
+   1
+  ],
+  "RGB|WNTC-132>WNTC-091": [
+   0,
+   1
+  ],
+  "RGB|WNTC-025>WNTC-132,WNTC-123>WNTC-034": [
+   1,
+   1
+  ],
+  "RGB|WNTC-132>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-091>WNTC-117": [
+   0,
+   1
+  ],
+  "RGB|WNTC-134>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:Suicide Bombus|WNTC-086>WNTC-091,WNTC-132>WNTC-123": [
+   1,
+   1
+  ],
+  "pub:Suicide Bombus|WNTC-086>WNTC-100,WNTC-091>WNTC-034": [
+   1,
+   1
+  ],
+  "deck:coverage-20|WNTC-031>WNTC-132,WNTC-086>WNTC-034": [
+   0,
+   1
+  ],
+  "deck:coverage-20|WNTC-123>WNTC-100": [
+   0,
+   1
+  ],
+  "BBG|WNTC-011>WNTC-117,WNTC-026>WNTC-132": [
+   1,
+   1
+  ],
+  "BBG|WNTC-129>WNTC-117": [
+   1,
+   1
+  ],
+  "RGB|WNTC-026>WNTC-123": [
+   1,
+   1
+  ],
+  "RGB|WNTC-031>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-132>WNTC-100": [
+   0,
+   1
+  ],
+  "RGB|WNTC-124>WNTC-034,WNTC-124>WNTC-083": [
+   1,
+   1
+  ],
+  "YYR|WNTC-134>WNTC-123": [
+   0,
+   1
+  ],
+  "YYR|WNTC-134>WNTC-091": [
+   0,
+   1
+  ],
+  "YYR|WNTC-006>WNTC-123,WNTC-026>WNTC-083": [
+   0,
+   1
+  ],
+  "YYR|WNTC-131>WNTC-091": [
+   0,
+   1
+  ],
+  "RGB|WNTC-086>WNTC-091,WNTC-102>WNTC-083": [
+   1,
+   1
+  ],
+  "RGB|WNTC-025>WNTC-100": [
+   0,
+   1
+  ],
+  "BBG|WNTC-083>WNTC-132": [
+   1,
+   1
+  ],
+  "BBG|WNTC-131>WNTC-100": [
+   0,
+   1
+  ],
+  "YYR|WNTC-034>WNTC-117": [
+   0,
+   1
+  ],
+  "RGB|WNTC-031>WNTC-117,WNTC-102>WNTC-034": [
+   1,
+   1
+  ],
+  "RGB|WNTC-086>WNTC-091": [
+   0,
+   1
+  ],
+  "RGB|WNTC-031>WNTC-117": [
+   0,
+   1
+  ],
+  "RGB|WNTC-031>WNTC-083,WNTC-080>WNTC-123": [
+   1,
+   1
+  ],
+  "YYR|WNTC-129>WNTC-100": [
+   1,
+   1
+  ],
+  "YYR|WNTC-006>WNTC-117": [
+   0,
+   1
+  ],
+  "pub:RGB|WNTC-086>WNTC-091": [
+   0,
+   1
+  ],
+  "RRG|WNTC-100>WNTC-034": [
+   0,
+   1
+  ],
+  "RRG|WNTC-006>WNTC-123,WNTC-124>WNTC-083": [
+   0,
+   1
+  ],
+  "deck:coverage-22|WNTC-011>WNTC-117,WNTC-083>WNTC-034": [
+   1,
+   1
+  ],
+  "deck:coverage-01|WNTC-129>WNTC-117": [
+   1,
+   1
+  ],
+  "deck:coverage-01|WNTC-006>WNTC-123": [
+   1,
+   1
+  ],
+  "RRG|WNTC-026>WNTC-123": [
+   1,
+   2
+  ],
+  "RRG|WNTC-080>WNTC-091,WNTC-132>WNTC-123": [
+   1,
+   1
+  ],
+  "RRG|WNTC-086>WNTC-091": [
+   0,
+   1
+  ],
+  "RRG|WNTC-011>WNTC-083": [
+   2,
+   2
+  ],
+  "pub:YYR Generalist|WNTC-083>WNTC-117,WNTC-086>WNTC-083": [
+   1,
+   1
+  ],
+  "pub:YYR Generalist|WNTC-011>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-117>WNTC-091": [
+   0,
+   1
+  ],
+  "BBG|WNTC-025>WNTC-123": [
+   0,
+   1
+  ],
+  "pub:BBG ~ Alt|WNTC-031>WNTC-034": [
+   0,
+   1
+  ],
+  "pub:BBG ~ Alt|WNTC-086>WNTC-100": [
+   1,
+   1
+  ],
+  "pub:YYR - TTO|WNTC-080>WNTC-123,WNTC-134>WNTC-132": [
+   1,
+   1
+  ],
+  "pub:YYR - TTO|WNTC-134>WNTC-132": [
+   1,
+   1
+  ],
+  "YYR|WNTC-131>WNTC-083": [
+   0,
+   1
+  ],
+  "YYR|WNTC-129>WNTC-123,WNTC-134>WNTC-117": [
+   0,
+   1
+  ],
+  "RRG|WNTC-117>WNTC-132": [
+   1,
+   1
+  ],
+  "deck:coverage-14|WNTC-083>WNTC-034": [
+   0,
+   1
+  ],
+  "deck:coverage-14|WNTC-034>WNTC-091,WNTC-129>WNTC-132": [
+   1,
+   1
+  ],
+  "BBG|WNTC-031>WNTC-034,WNTC-083>WNTC-132": [
+   0,
+   1
+  ],
+  "pub:BBG Vex|WNTC-091>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:BBG Vex|WNTC-025>WNTC-091": [
+   0,
+   1
+  ],
+  "BBG|WNTC-011>WNTC-091,WNTC-025>WNTC-117": [
+   1,
+   1
+  ],
+  "BBG|WNTC-080>WNTC-132": [
+   0,
+   1
+  ],
+  "YYR|WNTC-034>WNTC-100,WNTC-132>WNTC-117": [
+   1,
+   1
+  ],
+  "YYR|WNTC-080>WNTC-123": [
+   1,
+   1
+  ],
+  "BBG|WNTC-134>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:YYR - TTO|WNTC-132>WNTC-091": [
+   0,
+   1
+  ],
+  "RRG|WNTC-011>WNTC-132,WNTC-129>WNTC-034": [
+   1,
+   1
+  ],
+  "RRG|WNTC-124>WNTC-083": [
+   1,
+   1
+  ],
+  "pub:RGB|WNTC-034>WNTC-132,WNTC-091>WNTC-100": [
+   1,
+   1
+  ],
+  "BBG|WNTC-006>WNTC-132": [
+   1,
+   1
+  ],
+  "BBG|WNTC-026>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-031>WNTC-123": [
+   1,
+   1
+  ],
+  "deck:choombattler-adam-saburo-v|WNTC-132>WNTC-100": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-saburo-v|WNTC-011>WNTC-034,WNTC-034>WNTC-100": [
+   0,
+   1
+  ],
+  "RRG|WNTC-025>WNTC-083,WNTC-134>WNTC-132": [
+   0,
+   1
+  ],
+  "deck:coverage-04|WNTC-091>WNTC-132,WNTC-102>WNTC-083": [
+   1,
+   1
+  ],
+  "RGB|WNTC-091>WNTC-100,WNTC-102>WNTC-034": [
+   1,
+   1
+  ],
+  "RGB|WNTC-006>WNTC-123": [
+   1,
+   1
+  ],
+  "RGB|WNTC-011>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-117>WNTC-034": [
+   0,
+   1
+  ],
+  "YYR|WNTC-006>WNTC-034": [
+   0,
+   1
+  ],
+  "YYR|WNTC-086>WNTC-117": [
+   1,
+   1
+  ],
+  "deck:coverage-03|WNTC-100>WNTC-083": [
+   1,
+   1
+  ],
+  "YYR|WNTC-011>WNTC-034,WNTC-025>WNTC-132": [
+   1,
+   1
+  ],
+  "deck:coverage-08|WNTC-129>WNTC-123": [
+   1,
+   1
+  ],
+  "BBG|WNTC-080>WNTC-083,WNTC-100>WNTC-123": [
+   1,
+   1
+  ],
+  "pub:Placid YYB|WNTC-123>WNTC-117": [
+   1,
+   1
+  ],
+  "BBG|WNTC-134>WNTC-034": [
+   1,
+   1
+  ],
+  "YYR|WNTC-102>WNTC-132": [
+   0,
+   1
+  ],
+  "YYR|WNTC-080>WNTC-034": [
+   0,
+   1
+  ],
+  "pub:RGB ~ Fixers|WNTC-011>WNTC-034": [
+   0,
+   1
+  ],
+  "pub:RGB ~ Fixers|WNTC-129>WNTC-091": [
+   1,
+   1
+  ],
+  "pub:Suicide Bombus|WNTC-026>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:RGB|WNTC-080>WNTC-100,WNTC-086>WNTC-034": [
+   1,
+   1
+  ],
+  "pub:RGB|WNTC-011>WNTC-034": [
+   0,
+   1
+  ],
+  "BBG|none": [
+   1,
+   1
+  ],
+  "BBG|WNTC-129>WNTC-091": [
+   0,
+   1
+  ],
+  "RRG|WNTC-083>WNTC-123,WNTC-132>WNTC-100": [
+   0,
+   1
+  ],
+  "pub:RRB ~ Fixers|WNTC-025>WNTC-100,WNTC-100>WNTC-034": [
+   0,
+   1
+  ],
+  "pub:RRB ~ Fixers|WNTC-129>WNTC-083": [
+   1,
+   1
+  ],
+  "RGB|WNTC-006>WNTC-117": [
+   1,
+   1
+  ],
+  "RGB|WNTC-026>WNTC-123,WNTC-117>WNTC-132": [
+   1,
+   1
+  ],
+  "RGB|WNTC-034>WNTC-091": [
+   0,
+   1
+  ],
+  "RGB|WNTC-006>WNTC-083,WNTC-124>WNTC-123": [
+   0,
+   1
+  ],
+  "RGB|WNTC-031>WNTC-083": [
+   1,
+   1
+  ],
+  "YYR|WNTC-134>WNTC-117": [
+   1,
+   1
+  ],
+  "YYR|WNTC-026>WNTC-091": [
+   0,
+   1
+  ],
+  "pub:Suicide Bombus|WNTC-031>WNTC-100,WNTC-131>WNTC-034": [
+   0,
+   1
+  ],
+  "RRG|WNTC-080>WNTC-100": [
+   0,
+   1
+  ],
+  "RRG|WNTC-026>WNTC-117": [
+   0,
+   1
+  ],
+  "RRG|WNTC-091>WNTC-132": [
+   1,
+   1
+  ],
+  "RRG|WNTC-102>WNTC-123": [
+   1,
+   1
+  ],
+  "RGB|WNTC-134>WNTC-083": [
+   1,
+   1
+  ],
+  "RGB|WNTC-124>WNTC-083": [
+   0,
+   1
+  ],
+  "RGB|WNTC-102>WNTC-117": [
+   0,
+   1
+  ],
+  "YYR|WNTC-102>WNTC-123": [
+   0,
+   1
+  ],
+  "YYR|WNTC-031>WNTC-091": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-dexter-padre|WNTC-091>WNTC-083,WNTC-134>WNTC-132": [
+   0,
+   1
+  ],
+  "deck:choombattler-adam-dexter-padre|WNTC-102>WNTC-132": [
+   0,
+   1
+  ],
+  "RRG|WNTC-124>WNTC-091": [
+   1,
+   1
+  ],
+  "YYR|WNTC-011>WNTC-123": [
+   1,
+   1
+  ],
+  "YYR|WNTC-131>WNTC-117": [
+   0,
+   1
+  ],
+  "BBG|WNTC-100>WNTC-123,WNTC-102>WNTC-117": [
+   1,
+   1
+  ],
+  "pub:YYR ~ V TTO|WNTC-131>WNTC-100": [
+   0,
+   1
+  ],
+  "RRG|WNTC-100>WNTC-083,WNTC-132>WNTC-123": [
+   1,
+   1
+  ]
+ },
+ "history": [
+  {
+   "at": 79,
+   "verdict": "rejected",
+   "change": {
+    "kind": "side",
+    "out": "WNTC-132",
+    "in": "WNTC-095",
+    "outName": "Floor It",
+    "inName": "Sandevistan"
+   },
+   "chall": [
+    8,
+    24
+   ],
+   "champ": [
+    11,
+    23
+   ],
+   "p": 0.19
+  },
+  {
+   "at": 125,
+   "verdict": "promoted",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-086",
+    "in": "WNTC-011",
+    "outName": "Pepe Najarro: Working Doubles",
+    "inName": "Johnny Silverhand: Never Stop Fighting"
+   },
+   "chall": [
+    17,
+    27
+   ],
+   "champ": [
+    13,
+    27
+   ],
+   "p": 0.88
+  },
+  {
+   "at": 172,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-025",
+    "in": "WNTC-086",
+    "outName": "Mantis Blades",
+    "inName": "Pepe Najarro: Working Doubles"
+   },
+   "chall": [
+    10,
+    24
+   ],
+   "champ": [
+    18,
+    30
+   ],
+   "p": 0.09
+  },
+  {
+   "at": 214,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-102",
+    "in": "WNTC-086",
+    "outName": "Synapse Burnout",
+    "inName": "Pepe Najarro: Working Doubles"
+   },
+   "chall": [
+    11,
+    24
+   ],
+   "champ": [
+    18,
+    30
+   ],
+   "p": 0.17
+  }
+ ],
+ "version": 2,
+ "matches": 331
+}

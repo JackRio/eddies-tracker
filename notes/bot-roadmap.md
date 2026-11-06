@@ -161,3 +161,42 @@ Next (on the user's go-ahead only):
   re-measure before quoting Elo again.
 - Then: a few bot-vs-bot matches -> regenerate data (fix the snowballing first: informative
   decisions only / stronger playouts) -> retrain the nets.
+
+## Status 2026-11-06 (laptop session) - archetype pilots + league
+
+Full write-up in CLAUDE.md "Archetype pilots and the league". Short version:
+- Four pilots (YYR, BBG, RRG, RGB) on ChoomBattler lists play Bo3 (D20 roll-off, winner picks
+  first/second) in a league against each other, mirrors and ~70 field decks. Pilots learn go-first per
+  opponent and one-card deck changes (Thompson sampling). Sideboarding is on hold (too noisy).
+- Round 2 nets (league data + 15% teacher relabels) beat the old Bot A: 62.5% of Bo3 matches
+  [53.4, 71.6], +89 Elo. Promoted: `src/bot/value-net-r2.json`, `policy-net-r2.json`, now Bot A.
+- Round 3 data: `notes/league/data-3001.jsonl` (~100 matches, partial) and `data-3301.jsonl` (running,
+  400 matches, full bot + teacher settings). `data-3101` / `data-3201` were made with lightened
+  settings - exclude them from training.
+- CUDA works in `D:/Codebase/venv/nitorch` (torch 2.6.0+cu124).
+
+Next:
+1. Run 3301 stopped at 160/400 (restarted to add per-game log lines); 3302 plays the other 240.
+   When it ends: train value + policy on rounds 2+3 (data-2001, 3001, 3301, 3302) with the Python
+   trainers on GPU (`--init` from the r2 nets; policy `--teach-only`/`--informative-only`).
+2. Gate with `scripts/pilot-arena.js` vs the r2 Bot A (40 pairs); promote only if better.
+3. Next league round with the winner; repeat.
+4. Later: sideboard via card-vs-card values (`scripts/card-review.js`), more pilots for other decks.
+
+## Next (agreed Nov 6 2026, start after the round 3 training + gate finish): payment as part of the move
+Found in a user game: Bot A attacked with Pepe Najarro (ready 2 Merc Legends if value-pair) BEFORE spending
+its Merc Legends, wasting 2 €$, because bots never choose how to pay (policy.taps: Eddies first, Legends last).
+General fix (no card-specific rules - user asked for general, not Pepe detection):
+1. Payment classes: ready Eddies (interchangeable), face-down Legends (interchangeable), each face-up Legend
+   (distinct: abilities, Merc/Netrunner tags). Each distinct way to pay a costed move = its own option.
+2. Merge options that produce the same board (hash the resulting board) - usually 1-3 versions per play.
+3. Drop do-nothing plays: the only change is losing the card + the payment (turn-1 Synapse Burnout with no Unit).
+4. Playouts use the same move list, so "pay with Mercs, then attack with Pepe" scores higher on its own; the
+   policy net then learns it from league data. Covers River Ward (keep her for her ability), Call timing, etc.
+5. Arena-test vs current Bot A before switching (more options thin the search: sh=1 + net prior help).
+Also pending: update the play page's Bot A description text after the gate (it describes the old bot).
+Also (same change, user-found Nov 7 2026): Bot A often attacks first and plays Gear after (Adrenaline
+Converter / Gorilla Arms on Johnny AFTER his attacks). Cause: the search shortlist (greedy top 5 + net top 3)
+rarely includes Gear while an attack is available, because the one-ply score rewards an immediate steal.
+Fix: shortlist always includes the best move of EACH kind (attack, equip, program, unit, call, sell...),
+affordable with sh=1. Not card-specific.

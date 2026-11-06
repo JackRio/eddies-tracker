@@ -56,7 +56,7 @@ function choiceName(b, cn, iid, pid) {
   if (pe) return cardName(pe.name);
   for (const p of ['p1', 'p2']) {
     const g = b[p].zones.gigs.find(x => x.iid === iid);
-    if (g) return `${p === pid ? 'own' : "opponent's"} d${g.sides} (${g.value})`;
+    if (g) { const o = (String(g.iid).match(/^(p[12])/) || [])[1] || p; return `${o === pid ? 'own' : "opponent's"} d${g.sides} (${g.value})`; }
   }
   const n = findName(b, iid);
   if (n) return n;
@@ -68,20 +68,38 @@ function effectText(b, pid, a, cn) {
   const r = a.response || {};
   const { src, what } = sourceOf(cn);
   const pre = src ? `${src}: ` : '';
-  const q = what.replace(/\?$/, '');
+  // the engine's prompt often repeats its card ("Jackie: choose a Gig to decrease"): drop that prefix
+  const q = what.replace(/\?$/, '').replace(/^([^:]{1,30}):\s*/, (m, w) => (src && src.toLowerCase().includes(w.trim().toLowerCase()) ? '' : m)).replace(/^(swap|copy|set):\s*/i, '');
   if (r.acknowledge) return `${pre}OK`;
   if (cn?.kind === 'choose_pending_order') return `Resolve ${choiceName(b, cn, r.iid || r.selected_iids?.[0], pid)} first`;
   if (cn?.kind === 'choose_from_top_n') {
     const look = (cn.available_refs || []).length;
     const took = (r.selected_iids || []).map(i => choiceName(b, cn, i, pid));
-    return `${pre}look at top ${look}, take ${took.length ? took.join(', ') : 'nothing'}`;
+    // the prompt says what happens to the picked cards: River Ward trashes, others take to hand
+    const verb = /trash/i.test(cn.prompt || '') ? 'trashes' : /bottom/i.test(cn.prompt || '') ? 'bottom-decks' : 'takes';
+    return `${pre}looks at the top ${look}, ${verb} ${took.length ? took.join(', ') : 'nothing'}`;
   }
-  if (r.amount !== undefined) return `${pre}${q || 'amount'} → ${cn?.bind_to === 'delta' ? signed(r.amount) : r.amount}`;
+  if (r.amount !== undefined) {
+    const v = cn?.bind_to === 'delta' ? signed(r.amount) : r.amount;
+    const m = q.match(/^(increase|decrease|adjust)\b/i);   // "Decrease by 1 or 2" -> "decreases by 2", "adjust the Gig by up to 1" -> "adjusts by +1"
+    if (m && /^adjust/i.test(m[1])) return `${pre}adjusts by ${r.amount > 0 ? '+' : ''}${r.amount}`;
+    return m ? `${pre}${m[1].toLowerCase()}s by ${Math.abs(r.amount)}` : `${pre}${q || 'amount'} → ${v}`;
+  }
   if (r.card_type) return `${pre}name ${r.card_type}`;
   if (r.accept === false) return `${pre}skip (${q})`;
   if (r.accept === true) return `${pre}yes (${q})`;
   const ids = r.iid ? [r.iid] : r.selected_iids;
-  if (ids) return `${pre}${q && !/^(Choose|Click)/i.test(q) ? q + ' → ' : 'pick '}${ids.length ? ids.map(i => choiceName(b, cn, i, pid)).join(', ') : 'nothing'}`;
+  if (ids) {
+    const names = ids.length ? ids.map(i => choiceName(b, cn, i, pid)).join(', ') : 'nothing';
+    // "choose a Gig to decrease" -> "picks own d12 (3) to decrease"
+    // Peace Offering / Padre: "Copy value FROM" -> "copies the value of X"; "Set value ON" -> "picks X to set"
+    if (/\bplay\b.*\bfrom (your |the )?trash\b/i.test(cn?.prompt || '')) return `${pre}plays ${names} from the trash`;
+    if (/^(to )?copy (the )?value from/i.test(q) || /\bto copy the value from$/i.test(q)) return `${pre}copies the value of ${names}`;
+    if (/^set (the )?value on/i.test(q)) return `${pre}picks ${names} to set`;
+    if (!q || /^(choose|click|pick|select)\b/i.test(q)) {
+      if (/\bto copy the value from$/i.test(q)) return `${pre}copies the value of ${names}`; const why = q.replace(/\s*\([^)]*\)\s*$/, '').match(/\b(to \w.*)$/i); return `${pre}picks ${names}${why ? ` ${why[1]}` : ''}`; }
+    return `${pre}${q} → ${names}`;
+  }
   return `${pre}${q || 'choice'}`;
 }
 
@@ -99,7 +117,7 @@ function describe(b, pid, seq, cn) {
     // a Call flips a random face-down Legend; only the last one is known (by elimination)
     const down = b[pid].zones.legends.filter(l => l.face !== 'face_up');
     const when = a.step === 'call_legend_defensive' ? ' (as a reaction)' : '';
-    return down.length === 1 ? `Call ${nm(down[0].card_id).split(':')[0]} - your last Legend${when}` : `Call a Legend - random of ${down.length} face-down${when}`;
+    return down.length === 1 ? `Call ${nm(down[0].card_id).split(':')[0]} - last face-down Legend${when}` : `Call a Legend - random of ${down.length} face-down${when}`;
   }
   const w = describePlan([{ owner: pid, seq, before: b, prompt: null }], pid).map(s => s.trim()).join('; ');
   // neutral wording: these lines are read by both players ("your d12" from the bot's side is its own)
@@ -107,7 +125,7 @@ function describe(b, pid, seq, cn) {
     const c = CARDS.find(x => x.number === b[pid].zones.hand.find(h => h.iid === a.iid)?.card_id);
     if (c) return `Play ${c.type === 'Program' ? 'Program' : c.type === 'Unit' ? 'Unit' : c.type} ${c.name.split(':')[0]}`;
   }
-  if (w) return cardName(w.replace(/^pick /, 'Pick ').replace(/^steal /, 'Steal ').replace(/your d(\d)/g, 'own d$1').replace(/the Rival's/g, "opponent's"));
+  if (w) return cardName(w.replace(/^pick /, 'Pick ').replace(/^steal /, 'Steal ').replace(/\byour d(\d)/g, 'own d$1').replace(/the Rival's/g, "opponent's"));
   return { end_turn: 'End turn', pass_defensive: "Don't block / don't respond", pass_attacker_interrupt: "Don't interrupt",
     mulligan: a.mulligan ? 'Mulligan (redraw)' : 'Keep this hand' }[a.step] || (a.response?.acknowledge ? 'OK' : a.step.replace(/_/g, ' '));
 }

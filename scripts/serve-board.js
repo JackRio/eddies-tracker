@@ -21,7 +21,7 @@ const REPLAY_RE = /^cyberpunk-tcg-sim-replay-.*\.json$/;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
-  '.json': 'application/json', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml',
+  '.json': 'application/json', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.ogg': 'audio/ogg', '.mp3': 'audio/mpeg', '.txt': 'text/plain; charset=utf-8',
 };
 
 // cardId -> image file. Prefer the plainest printing that has an image: Retail set, lowest rarity.
@@ -56,8 +56,9 @@ function send(res, code, body, type = 'text/plain') {
 //   GET  /api/play/config            bots, decks, defaults
 //   POST /api/play/new               { mode, you, bots: {p1,p2}, decks: {p1,p2}, first, seed } -> { id }
 //   GET  /api/play/<id>?from=N       board steps since N + the current decision
-//   POST /api/play/<id>/move         { i } - you play option i
+//   POST /api/play/<id>/move         { i, pay? } - you play option i, paid with the iids in pay
 //   POST /api/play/<id>/advance      the bot to act makes one decision
+//   POST /api/play/<id>/undo         take back your last decision (and the bot moves after it)
 let PLAY = null;
 const play = () => (PLAY ||= require('../src/bot/play'));
 const readBody = req => new Promise(ok => { let d = ''; req.on('data', c => { d += c; if (d.length > 1e5) req.destroy(); }); req.on('end', () => { try { ok(JSON.parse(d || '{}')); } catch { ok({}); } }); });
@@ -66,11 +67,12 @@ async function playApi(req, res, url) {
   try {
     if (url === '/api/play/config') return json(200, play().config());
     if (url === '/api/play/new' && req.method === 'POST') return json(200, { id: play().create(await readBody(req)) });
-    const m = url.match(/^\/api\/play\/(\d+)(\/move|\/advance)?$/);
+    const m = url.match(/^\/api\/play\/(\d+)(\/move|\/advance|\/undo)?$/);
     if (!m) return json(404, { error: 'no such route' });
     if (!m[2]) { const from = +(new URLSearchParams(req.url.split('?')[1] || '').get('from') || 0); const p = play().poll(m[1], from); return p ? json(200, p) : json(404, { error: 'no such game' }); }
     if (req.method !== 'POST') return json(405, { error: 'POST only' });
-    const r = m[2] === '/move' ? play().move(m[1], (await readBody(req)).i) : play().advance(m[1]);
+    const body = m[2] === '/move' ? await readBody(req) : null;
+    const r = m[2] === '/move' ? play().move(m[1], body.i, body.pay) : m[2] === '/undo' ? play().undo(m[1]) : play().advance(m[1]);
     return json(r.error ? 400 : 200, r);
   } catch (e) {
     console.error(e);

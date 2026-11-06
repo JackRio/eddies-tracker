@@ -364,7 +364,11 @@ function resolveSpendActivated(b, input, casterPid, opts) {
 
   const spentForCost = [];
   if (ab.cost?.spend?.from_self) { spender.state = 'spent'; spentForCost.push(spender); }
-  if (eddieCost) spentForCost.push(...(P.spendEddies(b[casterPid], eddieCost, ref.iid) || []));
+  // `pay_iids` (optional): the player picks what pays the €$ cost (11.11.1); else auto-pick
+  if (eddieCost && input.pay_iids) {
+    if (input.pay_iids.includes(ref.iid)) throw new Error('An ability can\'t pay for itself');
+    spentForCost.push(...P.spendChosen(b[casterPid], input.pay_iids, eddieCost));
+  } else if (eddieCost) spentForCost.push(...(P.spendEddies(b[casterPid], eddieCost, ref.iid) || []));
 
   const rl = ab.trigger.rate_limit;
   if (rl === 'first_per_turn') {

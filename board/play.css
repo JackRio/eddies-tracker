@@ -74,3 +74,82 @@ details.panel:not([open]) > summary::after { content: ' ▸'; }
 .rv { border: 1px solid var(--cyan); border-radius: 6px; padding: 3px 7px; font-size: 12px; }
 .rv small { color: var(--dim); }
 .rv.no { border-color: var(--line); color: var(--dim); }
+
+/* bot speed */
+.pace-row { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border-bottom: 1px solid var(--line); color: var(--dim); font-size: 12px; }
+.pace-row select { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 3px 6px; color: var(--text); }
+
+/* paying: pick which Eddies / Legends pay */
+.pay-what { font-size: 13px; margin-bottom: 6px; }
+.payers { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+.payer { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 4px 10px; font-size: 12px; color: var(--text); cursor: pointer; }
+.payer.eddie { color: var(--yellow); }
+.payer.legend-down { color: var(--cyan); }
+.payer.on { border-color: var(--yellow); background: rgba(245,228,0,.16); box-shadow: 0 0 0 1px var(--yellow); }
+.pay-ctl { display: flex; gap: 6px; justify-content: flex-end; }
+
+/* layout v2: right panel = decision, log, bot's thinking, controls; setup is a dialog */
+.side { display: flex; flex-direction: column; min-height: 0; }
+.side .log-box { flex: 1; min-height: 120px; }
+.info-panel { border: 1px solid rgba(63,212,255,.35); border-radius: 10px; margin: 8px 10px; background: rgba(8,26,32,.6); }
+#decision-box { background: rgba(245,228,0,.05); border-color: rgba(245,228,0,.45); max-height: 48vh; overflow-y: auto; }
+#think-box { max-height: 34vh; overflow-y: auto; }
+.side h2 { margin: 0 0 6px; font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--cyan); }
+#decision-box h2 { color: var(--yellow); }
+.side-ctl { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-top: 1px solid var(--line); }
+.side-ctl .pace-row { flex: 1; padding: 0; border: 0; }
+.setup-dlg { width: min(460px, 94vw); background: #0b161b; color: var(--text); border: 1px solid rgba(63,212,255,.45); border-radius: 12px; padding: 14px 16px; z-index: 30; }
+.setup-dlg:not([open]) { display: none; }
+.setup-dlg::backdrop { background: rgba(0,0,0,.6); }
+.setup-dlg h2 { margin: 0 0 4px; font: 700 1.1rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--cyan); }
+.dlg-ctl { display: flex; justify-content: flex-end; gap: 8px; }
+
+/* ── look & feel (Nov 7 2026): playing yourself hides the replay timeline and the match header ── */
+body.playing { --tl-h: 0px; }
+body.playing .timeline, body.playing .side-top { display: none !important; }
+
+/* buttons: cut corners, condensed caps, neon edge */
+.side .btn, .setup-dlg .btn, .timeline .btn {
+  --edge: rgba(63,212,255,.45);
+  font: 700 .82rem var(--head); letter-spacing: .08em; text-transform: uppercase; color: var(--text);
+  background: linear-gradient(180deg, #13202a, #0c141a); border: 1px solid var(--edge); border-radius: 0;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  padding: 6px 14px; transition: background .15s, border-color .15s, color .15s, box-shadow .15s; }
+.side .btn:hover, .setup-dlg .btn:hover, .timeline .btn:hover { --edge: var(--cyan); color: #fff; background: linear-gradient(180deg, #17303c, #0e1d25); }
+.side .btn.primary, .setup-dlg .btn.primary { --edge: var(--yellow); background: var(--yellow); color: #111; }
+.side .btn.primary:hover, .setup-dlg .btn.primary:hover { background: #fff36b; color: #111; }
+#undo { --edge: rgba(255,179,71,.6); color: #ffcf8a; }
+#undo:hover { --edge: #ffb347; color: #fff; }
+#snd-btn { padding: 6px 9px; }
+
+/* your move: options as cards with a lit edge */
+.prompt { font-size: 14px; line-height: 1.45; }
+.choices { gap: 6px; }
+.choice { position: relative; align-items: center; font: 600 14px "Inter", sans-serif; color: var(--text); line-height: 1.3;
+  background: linear-gradient(90deg, rgba(245,228,0,.07), rgba(20,20,28,.9) 38%); border: 1px solid #2c2c3a; border-left: 3px solid rgba(245,228,0,.55);
+  border-radius: 0 8px 8px 0; padding: 9px 12px; transition: transform .12s, border-color .12s, background .12s, box-shadow .12s; }
+.choice:hover { transform: translateX(3px); border-color: rgba(245,228,0,.7); border-left-color: var(--yellow);
+  background: linear-gradient(90deg, rgba(245,228,0,.16), rgba(28,28,38,.95) 45%); box-shadow: 0 0 14px rgba(245,228,0,.18); }
+.choice:active { transform: translateX(1px) scale(.995); }
+.choice .pay { flex: none; font: 700 12px var(--head); letter-spacing: .05em; color: var(--yellow); background: rgba(245,228,0,.1);
+  border: 1px solid rgba(245,228,0,.35); border-radius: 10px; padding: 1px 8px; }
+.choice.end { border-style: solid; border-left-color: rgba(255,77,94,.6); color: #e3a1a8; background: linear-gradient(90deg, rgba(255,77,94,.08), rgba(20,20,28,.9) 38%); }
+.choice.end:hover { border-color: rgba(255,77,94,.7); border-left-color: var(--red); color: #fff; box-shadow: 0 0 14px rgba(255,77,94,.18); }
+.choice-group { margin: 10px 0 2px; color: #8f8fa6; }
+#decision-box { padding: 12px 14px 14px; box-shadow: 0 0 24px rgba(245,228,0,.07) inset; }
+#decision-box h2 { font-size: 1rem; text-shadow: 0 0 10px rgba(245,228,0,.35); }
+
+/* paying */
+.payer { font: 600 12.5px "Inter", sans-serif; padding: 5px 12px; transition: background .12s, border-color .12s; }
+.payer:hover { border-color: rgba(245,228,0,.6); }
+
+/* log: bigger, calmer */
+.log { font-size: 13.5px; line-height: 1.45; }
+.log .e { padding: 4px 8px; }
+.log .turn-h { margin: 14px 0 6px; padding-bottom: 3px; border-bottom: 1px solid #22222e; }
+
+/* bot's thinking + controls */
+#think-box { background: rgba(10,18,24,.7); }
+.side-ctl { gap: 6px; flex-wrap: wrap; background: #0a0f14; }
+.pace-row select, .setup select { background: #0f171d; border: 1px solid rgba(63,212,255,.3); border-radius: 0; padding: 5px 8px; color: var(--text); }
+.setup-dlg { box-shadow: 0 0 40px rgba(63,212,255,.15); }
