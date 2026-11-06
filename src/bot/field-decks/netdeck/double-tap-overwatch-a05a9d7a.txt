@@ -1,0 +1,24 @@
+# Double Tap Overwatch - by Frobones (netdeck.gg a05a9d7a-b6f5-4db1-871c-cad037c3eb7a, 0 likes, 2 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+3 MaxTac Squadron
+3 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+1 Jackie Welles: Ride or Die Choom
+3 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+3 The Heist
+3 Memory Relapse
+1 (Don't Fear) The Reaper

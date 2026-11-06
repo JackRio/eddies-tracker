@@ -1,0 +1,24 @@
+# Jim - by ? (netdeck.gg 82eb6b28-99ec-493e-a2e8-1aeff2a0d324, 0 likes, 0 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+2 Delamain: Rideshare AI
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Peace Offering
+2 Synapse Burnout
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall

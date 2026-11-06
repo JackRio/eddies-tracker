@@ -1,0 +1,32 @@
+# BBG ALT - by Vex (netdeck.gg 6da6bc2f-40bb-4368-a9a2-d765cd4f78e2, 1 likes, 106 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+1 Mox Inciters
+1 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+1 Lizzy Wizzy: Delicate Weapon
+1 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 1 Sandayu Oda: Hanako's Guardian
+# side: 2 Riot Shield

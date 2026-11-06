@@ -1,0 +1,23 @@
+# V/Dex/Padre - RRG - by caelebq (netdeck.gg a986b92a-0fe3-4fca-a5d5-5c693ffe92c6, 0 likes, 1 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 Field Operator
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+3 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Over the Edge
+2 Memory Relapse
+3 Carnage at the Colosseum

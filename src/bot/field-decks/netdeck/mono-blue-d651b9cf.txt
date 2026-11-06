@@ -1,0 +1,25 @@
+# mono blue - by Trashpanda (netdeck.gg d651b9cf-6bfc-48e3-9c40-b606b80d511c, 0 likes, 1 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Mox Inciters
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

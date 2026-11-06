@@ -1,0 +1,24 @@
+# New Deck - by DopeParpa (netdeck.gg 96221e80-71d8-4588-a2e7-a3203805bd1f, 0 likes, 5 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+2 Offduty Malfini
+2 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Detonate
+2 Safety Override

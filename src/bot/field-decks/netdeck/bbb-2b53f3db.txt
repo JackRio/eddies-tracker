@@ -1,0 +1,26 @@
+# BBB - by Snapquester Mage (netdeck.gg 2b53f3db-5992-41af-823d-6de65194f6f5, 0 likes, 18 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Delamain: Rideshare AI
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+2 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Les Élémens
+2 Towerfall

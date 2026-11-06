@@ -1,0 +1,24 @@
+# Arasaka - by Nivelis (netdeck.gg 89c3fcdf-700a-453a-96bc-d19931269507, 0 likes, 40 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+2 Field Operator
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+2 V: Roamer of the Badlands
+3 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Sandevistan
+3 All is Lost
+1 Detonate
+3 Industrial Assembly
+3 Peace Offering
+3 (Don't Fear) The Reaper

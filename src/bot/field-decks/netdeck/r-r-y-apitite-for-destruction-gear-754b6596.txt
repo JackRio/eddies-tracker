@@ -1,0 +1,23 @@
+# R/R/Y Apitite for destruction/gear - by Melkdud33319 (netdeck.gg 754b6596-55e9-43a1-86a6-bd6d61d587dc, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Offduty Malfini
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 Industrial Assembly
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Carnage at the Colosseum

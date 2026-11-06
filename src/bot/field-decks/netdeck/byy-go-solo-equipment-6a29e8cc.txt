@@ -1,0 +1,31 @@
+# BYY Go Solo/Equipment - by G Fuzzy (netdeck.gg 6a29e8cc-2194-4afb-86f4-390c88bf2acc, 0 likes, 70 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Psycho Squad
+3 MaxTac Suppression Team
+2 Rogue Amendiares: Queen of the Afterlife
+3 Viktor Vektor: Drop Your Illusions
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Tetratronic Rippler
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+1 Gorilla Arms
+2 Reboot Optics
+2 Safety Override
+
+# Sideboard (not loaded):
+# side: 1 Sketchy Ripper
+# side: 1 Kiroshi Optics
+# side: 3 Zetatech Faceplate
+# side: 2 Gorilla Arms

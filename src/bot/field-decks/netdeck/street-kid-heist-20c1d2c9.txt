@@ -1,0 +1,25 @@
+# Street Kid Heist - by CITY (netdeck.gg 20c1d2c9-ddcd-47ec-9a6d-4912fa9efcb7, 0 likes, 48 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Mox Inciters
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

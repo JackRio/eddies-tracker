@@ -1,0 +1,29 @@
+# Don't Let Down Sasha - by Ender (netdeck.gg fec2b655-93db-49fe-8258-a8f2f443a105, 1 likes, 18 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Corpo Security
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 Trust No One
+3 Chrome Reverie
+
+# Sideboard (not loaded):
+# side: 1 Rogue Amendiares: Queen of the Afterlife
+# side: 1 Sandayu Oda: Hanako's Guardian
+# side: 1 Placide: Voodoo Sentinel
+# side: 1 Saul Bright: Stormrider

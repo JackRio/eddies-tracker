@@ -1,0 +1,24 @@
+# The Heist but Hanako is on it - by VOID1355 (netdeck.gg 6cfb16b6-ffc8-4428-85f8-55d417c89891, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+2 Synapse Burnout
+3 Trust No One
+2 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,39 @@
+# New Deck - by Trickster_Yuuki (netdeck.gg f2f9e571-aba0-49a9-a95c-64a99f6f4b54, 1 likes, 11 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+1 Offduty Malfini
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+1 NetWatch Netdriver
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+2 The Heist
+2 Three Mouths, One Desire
+2 Nocturne OP55 N1
+2 Pyramid Song
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Lizzy Wizzy: Delicate Weapon
+# side: 1 Floor It
+# side: 1 Three Mouths, One Desire
+# side: 1 Nocturne OP55 N1
+# side: 1 Pyramid Song
+# side: 1 Les Élémens
+# side: 1 Towerfall

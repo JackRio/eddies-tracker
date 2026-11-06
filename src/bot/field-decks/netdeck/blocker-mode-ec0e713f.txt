@@ -1,0 +1,30 @@
+# Blocker Mode - by ? (netdeck.gg ec0e713f-bdb2-49e0-b738-1d161e2635f5, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 T-Bug: Amateur Philosopher
+2 Viktor Vektor: Drop Your Illusions
+1 Panam Palmer: Strength Through Family
+1 Trauma Team Operatives
+1 Saul Bright: Stormrider
+3 Kiroshi Optics
+2 Mandibular Upgrade
+2 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+2 Afterparty at Lizzie's
+2 Peace Offering
+2 Fool on the Hill
+3 Take Control
+3 The Heist
+3 We Gotta Live Together

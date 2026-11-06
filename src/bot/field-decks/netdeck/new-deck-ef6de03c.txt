@@ -1,0 +1,23 @@
+# New Deck - by Pypes (netdeck.gg ef6de03c-be63-4b12-a5b0-971bdef8a2f8, 0 likes, 10 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Secondhand Bombus
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Cyberpsychosis
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,36 @@
+# Low Cred Score - by ImTyrd (netdeck.gg 0ff88d32-d106-4690-8608-3563c209b6c3, 0 likes, 22 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Wakako Okada: Peace and Harmony
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+1 Delamain: Rideshare AI
+1 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+1 Delamain Cab
+2 Rita Wheeler: No Stupid Questions
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+3 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+1 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Unlikely Bond
+1 Les Élémens
+2 Towerfall

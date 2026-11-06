@@ -1,0 +1,24 @@
+# Braindancin' in the Rain - by Undercommoner (netdeck.gg e33358c8-fbe3-4e0f-8db5-a2db13243691, 0 likes, 22 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

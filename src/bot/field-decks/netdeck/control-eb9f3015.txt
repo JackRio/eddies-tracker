@@ -1,0 +1,28 @@
+# control - by LilSmilodonBravo (netdeck.gg eb9f3015-1a33-45d2-a926-e2e0252c4410, 0 likes, 12 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Muamar Reyes: El Capitán
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+1 Lizzy Wizzy: Delicate Weapon
+3 Rogue Amendiares: Queen of the Afterlife
+3 Mandibular Upgrade
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

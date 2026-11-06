@@ -1,0 +1,23 @@
+# RBB Blocker(Tc) - by RootsOfOneTree (netdeck.gg e0fa7872-cc86-4bfd-9ef6-b21e9579f5a0, 1 likes, 16 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Wakako Okada: Peace and Harmony
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Screw: Lovelorn Fool
+3 Arasaka Emergency Radioport
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Les Élémens

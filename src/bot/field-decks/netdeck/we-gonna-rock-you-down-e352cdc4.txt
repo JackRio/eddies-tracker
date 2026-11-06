@@ -1,0 +1,33 @@
+# We Gonna Rock You Down - by Datadog (netdeck.gg e352cdc4-6be9-4e62-b17b-7b283aba00ee, 0 likes, 25 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Corporate Exile
+
+// Main deck
+2 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Detonate
+2 Floor It
+3 Industrial Assembly
+3 Chrome Reverie
+1 Nocturne OP55 N1
+2 Over the Edge
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 2 Jackie Welles: Ride or Die Choom
+# side: 2 Mantis Blades

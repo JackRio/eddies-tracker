@@ -1,0 +1,26 @@
+# 6Y Adam Smashing - by EdSpaged (netdeck.gg b08c9e7e-f0ad-4219-af4d-4ceeae898edd, 0 likes, 32 views, updated 2026-10-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+2 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 Hanako Arasaka: In a Gilded Cage
+1 Viktor Vektor: Drop Your Illusions
+3 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+1 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath

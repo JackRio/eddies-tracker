@@ -1,0 +1,24 @@
+# Adam smashin it - by Stuart-lil2005 (netdeck.gg 68b3b58c-10dc-47bf-ad56-68261ec2dca4, 2 likes, 99 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,25 @@
+# Neon Bloodline - by MaxxFolder (netdeck.gg 55174abc-f130-43d0-a8ba-630181d1ee95, 0 likes, 2 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Swordwise Huscle
+3 Kerry Eurodyne: The Last Rockerboy
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+2 Sandayu Oda: Hanako's Guardian
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Zetatech Berserk
+3 Industrial Assembly
+3 Shattered Memories

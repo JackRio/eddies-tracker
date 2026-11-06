@@ -1,0 +1,29 @@
+# New Deck - by ? (netdeck.gg 47dc0ca8-92dd-4e01-a354-62461fb1c105, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Sketchy Ripper
+2 Augmented Negotiators
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Rockn' Rockerboy
+1 Viktor Vektor: Drop Your Illusions
+1 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+1 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+1 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Detonate
+2 The Heist
+3 Live with the Aftermath
+1 Shattered Memories
+1 Bootleg Black Sapphire Show

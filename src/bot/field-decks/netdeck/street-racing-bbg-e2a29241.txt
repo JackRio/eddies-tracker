@@ -1,0 +1,25 @@
+# Street Racing BBG - by Sammy (netdeck.gg e2a29241-2ee4-4770-bd08-68f76324220a, 1 likes, 46 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+2 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Take Control
+2 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens

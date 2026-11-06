@@ -1,0 +1,25 @@
+# gears - by Valere (netdeck.gg 1e2bbeb2-bff0-4758-a2a8-7988f0e1e8d4, 1 likes, 9 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Viktor Vektor: Drop Your Illusions
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+2 Cyberpsychosis

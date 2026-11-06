@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg edb07205-1dab-4425-ac6f-44f595edb3c1, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+3 Memory Relapse
+3 Les Élémens

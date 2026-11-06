@@ -1,0 +1,29 @@
+# BBGish - by morsdraconis (netdeck.gg 1983e20d-5473-4783-9afb-e6c09fecf487, 0 likes, 13 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Tyger's Whisper
+2 Delamain: Rideshare AI
+2 Maelstrom Zealots
+2 Lizzy Wizzy: Delicate Weapon
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 3 Modded Kusanagi
+# side: 2 Nadia: Fighting Through Grief

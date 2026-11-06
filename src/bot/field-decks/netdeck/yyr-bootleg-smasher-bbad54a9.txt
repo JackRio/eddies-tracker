@@ -1,0 +1,27 @@
+# YYR Bootleg Smasher - by ManWasBrother (netdeck.gg bbad54a9-d846-41c2-9069-30f6f65b6bef, 0 likes, 12 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+2 Valentino Guerrera
+3 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+2 Chrome Fang
+3 MaxTac Suppression Team
+2 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Gorilla Arms
+3 Detonate
+3 Industrial Assembly
+3 Live with the Aftermath
+3 Over the Edge
+3 Bootleg Black Sapphire Show

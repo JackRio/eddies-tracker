@@ -1,0 +1,24 @@
+# RRY Trash Recycle - by Aqua (netdeck.gg 3412807a-980a-4a35-952e-104369cbefec, 0 likes, 17 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+1 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Animals Wrecker
+3 Trauma Team Operatives
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Industrial Assembly
+3 The Heist
+3 Bonnie and Clyde
+2 Carnage at the Colosseum

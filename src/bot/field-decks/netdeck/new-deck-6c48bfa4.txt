@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 6c48bfa4-6a53-4778-b5e5-b993a34e0051, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Delamain Cab
+3 Rita Wheeler: No Stupid Questions
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Towerfall

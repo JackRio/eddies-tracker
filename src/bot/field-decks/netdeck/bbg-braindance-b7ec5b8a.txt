@@ -1,0 +1,25 @@
+# BBG Braindance - by Crandolph (netdeck.gg b7ec5b8a-0f83-428a-b60c-3c699a7de05c, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Pyramid Song
+2 Towerfall

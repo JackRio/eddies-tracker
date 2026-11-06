@@ -1,0 +1,33 @@
+# Corpo Burn - by ? (netdeck.gg f1ece979-99b9-4b54-971b-307b27a3b6b7, 0 likes, 16 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+3 Japantown Jonin
+3 Tyger's Whisper
+3 Field Operator
+2 Valentino Guerrera
+2 Valentino Street Racer
+2 Riding Nomad
+1 V: Roamer of the Badlands
+2 Wraith Marauders
+1 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+1 Mantis Blades
+1 Arasaka Emergency Radioport
+1 Riot Shield
+2 Satori: Sword of Saburo
+1 Sandevistan
+1 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 All is Lost
+2 Detonate
+2 Synapse Burnout
+1 Fool on the Hill
+3 Over the Edge

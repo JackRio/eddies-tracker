@@ -1,0 +1,27 @@
+# .Taking Care of Business (Corpo Deck) - by ? (netdeck.gg d9909b97-b0e1-43c4-b4fd-0a7389c01e4f, 0 likes, 1 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+3 6th Street Recruits
+1 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+1 Minotaur
+1 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Detonate
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+1 Take Control
+2 (Don't Fear) The Reaper

@@ -1,0 +1,24 @@
+# (R/R/Y) Street Cred - by DenkiFox (netdeck.gg 48debc35-e085-436f-b3e5-93272b97566c, 1 likes, 64 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+2 Chrome Fang
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+2 Octant
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Industrial Assembly
+3 Cyberpsychosis
+3 Carnage at the Colosseum

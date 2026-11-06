@@ -1,0 +1,32 @@
+# blue yellow sasha - by Lathi39 (netdeck.gg 82859f4f-4e3f-40a3-9cf0-05ca51e479fd, 0 likes, 6 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+1 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+1 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Afterparty at Lizzie's
+2 The Heist
+2 Three Mouths, One Desire
+3 Nocturne OP55 N1
+2 Pyramid Song
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Evelyn Parker: Scheming Siren
+# side: 2 Unlikely Bond
+# side: 3 Les Élémens

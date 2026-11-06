@@ -1,0 +1,25 @@
+# yyr aggro - by MDsouthpaw (netdeck.gg 9197b3cb-8798-489f-a9dd-7d5a8f203f39, 0 likes, 0 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+2 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 The Relic: Experimental Biochip
+2 Detonate
+3 Live with the Aftermath
+2 Shattered Memories
+3 Bootleg Black Sapphire Show

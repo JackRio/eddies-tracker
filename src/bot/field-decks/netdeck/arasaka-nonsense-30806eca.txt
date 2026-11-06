@@ -1,0 +1,28 @@
+# Arasaka Nonsense - by morsdraconis (netdeck.gg 30806eca-1c0b-491c-92bf-9644b02f4252, 0 likes, 19 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Augmented Negotiators
+3 Field Operator
+3 Hanako Arasaka: In a Gilded Cage
+3 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Peace Offering
+
+# Sideboard (not loaded):
+# side: 2 Detonate
+# side: 3 Take Control
+# side: 2 Memory Relapse

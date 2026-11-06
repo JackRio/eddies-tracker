@@ -1,0 +1,31 @@
+# Welcome To Night City - by Django (netdeck.gg c5c8d4d4-c585-4e01-91d7-6c6d4b9bd510, 1 likes, 32 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+1 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 All is Lost
+2 Detonate
+2 Industrial Assembly
+3 Bonnie and Clyde
+2 Over the Edge
+2 Gunpoint Diplomacy
+2 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Corpo Security
+# side: 2 Riot Shield
+# side: 1 Synapse Burnout
+# side: 2 Take Control

@@ -1,0 +1,28 @@
+# Ghost in the Machine - by JoKari (netdeck.gg 1e01a5a5-32d6-4f36-96b9-ed94f6a09218, 4 likes, 144 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Delamain: Rideshare AI
+2 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+2 Peace Offering
+3 Trust No One
+2 Reboot Optics
+2 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+3 Memory Relapse
+2 Les Élémens
+2 Towerfall

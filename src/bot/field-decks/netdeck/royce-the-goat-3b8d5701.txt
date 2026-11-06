@@ -1,0 +1,23 @@
+# Royce the GOAT - by Fanshan (netdeck.gg 3b8d5701-9212-4354-a3c1-4e8dcf7dc100, 0 likes, 1 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Kerry Eurodyne: The Last Rockerboy
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 Detonate
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,26 @@
+# RED BLUE GO SOLO - by Pan Bulwa (netdeck.gg b459e2ba-fa9c-4239-b659-79c93934822d, 0 likes, 2 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Swordwise Huscle
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Towerfall

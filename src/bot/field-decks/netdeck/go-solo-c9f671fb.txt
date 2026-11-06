@@ -1,0 +1,30 @@
+# Go solo - by Anomoirae (netdeck.gg c9f671fb-7c95-4d62-b9b3-2276cfed6a6e, 0 likes, 6 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Tyger's Whisper
+2 Swordwise Huscle
+2 Valentino Guerrera
+2 Kerry Eurodyne: The Last Rockerboy
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 MaxTac AV
+2 Screw: Lovelorn Fool
+3 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Modded Kusanagi
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Dying Night: V's Pistol
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Zetatech Berserk
+2 Synapse Burnout
+2 Nocturne OP55 N1
+2 Over the Edge

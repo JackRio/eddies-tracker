@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg a5b377be-1b7b-487b-b70f-d5f44ec1e606, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Rita Wheeler: No Stupid Questions
+3 Caliber: Totentanz's Top Dog
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

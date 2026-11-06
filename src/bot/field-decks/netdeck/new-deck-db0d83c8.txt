@@ -1,0 +1,29 @@
+# New Deck - by Rayla Gonk of the East (netdeck.gg db0d83c8-cd03-4a37-b568-1849d254c54d, 0 likes, 1 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Augmented Negotiators
+3 Emergency Atlus
+2 Maelstrom Goons
+3 MaxTac Squadron
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 T-Bug: Amateur Philosopher
+1 MaxTac Suppression Team
+3 Jackie Welles: Ride or Die Choom
+1 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+1 Overwatch: Panam's Gift
+2 Corporate Surveillance
+2 Take Control
+2 (Don't Fear) The Reaper

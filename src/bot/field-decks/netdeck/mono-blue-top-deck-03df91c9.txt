@@ -1,0 +1,23 @@
+# Mono Blue Top deck - by Verso (netdeck.gg 03df91c9-c3ce-4b56-9963-3ec0d3af7ef2, 0 likes, 6 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Delamain: Rideshare AI
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

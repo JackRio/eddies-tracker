@@ -1,0 +1,24 @@
+# Gears Gears Gears! - by Seraph017 (netdeck.gg 75ae560b-bb82-425b-9493-e6ab612e5b02, 0 likes, 18 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show

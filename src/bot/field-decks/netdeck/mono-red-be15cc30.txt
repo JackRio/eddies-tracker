@@ -1,0 +1,24 @@
+# Mono-Red - by Brakdrud (netdeck.gg be15cc30-0ae9-42f5-847f-ce3c784c5560, 0 likes, 5 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Swordwise Huscle
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Chrome Fang
+3 Screw: Lovelorn Fool
+2 Minotaur
+2 Octant
+3 Yorinobu Arasaka: Steel Dragon
+2 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+2 Over the Edge
+3 Gunpoint Diplomacy
+2 Shattered Memories

@@ -1,0 +1,24 @@
+# YYR - by Frits (netdeck.gg 089f6fb8-dcc7-4eef-9bb7-45cb8bcbf92b, 0 likes, 1 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Caliber: Totentanz's Top Dog
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+2 Safety Override
+3 The Heist

@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 56d614d2-0b96-40c6-acd8-1cf24d3cb9fd, 0 likes, 8 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+
+// Main deck
+1 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Maelstrom Zealots
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 Modded Muramasa
+3 Riding Nomad
+3 Sandayu Oda: Hanako's Guardian
+3 NetWatch Netdriver
+3 Floor It
+3 Corporate Surveillance
+3 Memory Relapse
+3 We Gotta Live Together
+3 Wild in the Streets

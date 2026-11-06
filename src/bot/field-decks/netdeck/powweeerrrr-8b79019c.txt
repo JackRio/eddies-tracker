@@ -1,0 +1,27 @@
+# POWWEEERRRR - by Nivalex (netdeck.gg 8b79019c-68c3-4471-8193-3aea1e3a01a7, 0 likes, 10 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Valentino Guerrera
+3 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+2 Chrome Fang
+1 El Sombrerón: La Venganza Lenta
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 All is Lost
+2 Detonate
+3 Industrial Assembly
+2 Appetite for Destruction
+3 Bonnie and Clyde
+1 Over the Edge
+1 Carnage at the Colosseum

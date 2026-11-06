@@ -1,0 +1,24 @@
+# Never fade away - by Choombatta (netdeck.gg 0f0f47bc-c1c1-4b03-9424-e85aa4060d4a, 8 likes, 139 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+1 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 All is Lost
+3 Industrial Assembly
+1 Over the Edge
+3 Bootleg Black Sapphire Show

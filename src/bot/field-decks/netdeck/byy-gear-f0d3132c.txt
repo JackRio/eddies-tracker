@@ -1,0 +1,24 @@
+# BYY Gear - by Gorarath (netdeck.gg f0d3132c-96eb-4fa5-8866-6ee87691ca75, 0 likes, 4 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Caliber: Totentanz's Top Dog
+2 Lizzy Wizzy: Delicate Weapon
+3 Viktor Vektor: Drop Your Illusions
+3 Alt Cunningham: Mother of Daemons
+2 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+2 NetWatch Netdriver
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Cyberpsychosis

@@ -1,0 +1,41 @@
+# First Time? - by Dboy (netdeck.gg 1a2163d8-aa29-4df7-b67f-b5ba32299a3f, 0 likes, 10 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Japantown Jonin
+2 Ruthless Lowlife
+1 Sketchy Ripper
+2 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+3 La Llorona: Ghost of the Past
+1 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 6th Street Recruits
+1 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+1 T-Bug: Amateur Philosopher
+1 Royce: Don't Call Me Simon
+1 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+1 Trauma Team Operatives
+1 Minotaur
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Cyberpsychosis
+
+# Sideboard (not loaded):
+# side: 3 Chrome Fang
+# side: 2 Screw: Lovelorn Fool
+# side: 2 V: Roamer of the Badlands

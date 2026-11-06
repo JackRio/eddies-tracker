@@ -1,0 +1,35 @@
+# Johnny Beta Gig - by CyberBeastO (netdeck.gg 3019fe33-59c1-498d-85d9-026b0b89ef03, 0 likes, 12 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+
+// Main deck
+2 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+1 Mox Inciters
+2 Valentino Guerrera
+2 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+1 El Sombrerón: La Venganza Lenta
+2 Lizzy Wizzy: Delicate Weapon
+1 Rogue Amendiares: Queen of the Afterlife
+1 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+1 Deadman Transmitter
+1 NetWatch Netdriver
+2 Industrial Assembly
+2 Trust No One
+2 Appetite for Destruction
+1 Bonnie and Clyde
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Gunpoint Diplomacy
+1 Unlikely Bond
+1 Carnage at the Colosseum

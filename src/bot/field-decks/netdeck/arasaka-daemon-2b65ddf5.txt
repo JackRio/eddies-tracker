@@ -1,0 +1,30 @@
+# Arasaka Daemon - by Jelo_Art (netdeck.gg 2b65ddf5-39c8-409c-8918-9757120b8a73, 3 likes, 184 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+1 6th Street Recruits
+2 Goro Takemura: Losing His Way
+2 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+2 MaxTac AV
+1 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Industrial Assembly
+3 Synapse Burnout
+3 Corporate Surveillance
+2 Over the Edge
+1 Memory Relapse
+2 Shattered Memories
+3 (Don't Fear) The Reaper

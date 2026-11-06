@@ -1,0 +1,32 @@
+# Force Playing Sasha - by Avincry (netdeck.gg 7c7b1452-2f89-415d-a992-2fcf51497d29, 18 likes, 1004 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 MaxTac Heavy
+3 Tetratronic Rippler
+2 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+1 Zetatech Berserk
+3 Reboot Optics
+2 Nocturne OP55 N1
+2 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Peace Offering
+# side: 2 Corporate Surveillance
+# side: 1 Nocturne OP55 N1

@@ -1,0 +1,23 @@
+# YYB gear aggro - by ? (netdeck.gg 10771165-8364-4dd4-9469-576f7e05696d, 0 likes, 39 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+2 Maelstrom Goons
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 The Heist
+3 Cyberpsychosis
+3 Bootleg Black Sapphire Show

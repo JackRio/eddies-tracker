@@ -1,0 +1,25 @@
+# scars - by scar (netdeck.gg 1eef1e09-bad9-4d7a-99b5-4b47dbfae8f4, 0 likes, 5 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Corpo Security
+3 Japantown Jonin
+3 Field Operator
+3 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+2 Chrome Fang
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+3 Minotaur
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Detonate
+3 Industrial Assembly
+2 Shattered Memories
+2 (Don't Fear) The Reaper

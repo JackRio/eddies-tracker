@@ -1,0 +1,25 @@
+# A Good Time - by Bebsi (netdeck.gg a2060b87-d322-4920-ac48-283f636506ca, 0 likes, 0 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Placide: Voodoo Sentinel
+2 Mantis Blades
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+2 Towerfall

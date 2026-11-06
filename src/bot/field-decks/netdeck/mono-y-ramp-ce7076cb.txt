@@ -1,0 +1,23 @@
+# Mono Y Ramp - by Eyeless (netdeck.gg ce7076cb-32bd-4f6a-a0bb-183068ddc196, 2 likes, 159 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Adam Smasher: Metal Over Meat
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

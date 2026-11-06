@@ -1,0 +1,25 @@
+# Mono Blue - by Vex (netdeck.gg ac2c80bf-e550-4f43-9ef7-bbda56b10847, 1 likes, 57 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

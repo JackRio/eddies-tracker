@@ -1,0 +1,25 @@
+# Relic Smasher - by kalinon (netdeck.gg a1eef8de-b397-4a97-9971-65dc43afe5d2, 0 likes, 0 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+2 Viktor Vektor: Drop Your Illusions
+3 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath

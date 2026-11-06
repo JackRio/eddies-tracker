@@ -1,0 +1,25 @@
+# I hope they mail the card - by Kylefromxbox (netdeck.gg 355921a2-0713-478b-9e7a-cf0158c32322, 0 likes, 2 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

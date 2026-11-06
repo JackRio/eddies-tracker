@@ -1,0 +1,28 @@
+# Maelstrom - by ? (netdeck.gg 768af9a1-0952-4f4d-b69a-4b2b1b4133a5, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Viktor Vektor: Drop Your Illusions
+1 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+3 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+3 Cyberpsychosis

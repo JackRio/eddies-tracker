@@ -1,0 +1,33 @@
+# reverse engineering - by Bromyos (netdeck.gg 474d8831-d152-48d6-a2f1-6a3a65360e87, 0 likes, 20 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+1 Hanako Arasaka: In a Gilded Cage
+2 Offduty Malfini
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+3 MaxTac AV
+1 Heywood Ripperdoc
+3 Jackie Welles: Ride or Die Choom
+1 Modded Kusanagi
+3 Mandibular Upgrade
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 Zetatech Faceplate
+3 Floor It
+3 Synapse Burnout
+2 Corporate Surveillance
+3 Nocturne OP55 N1
+1 Memory Relapse
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 2 Caliber: Totentanz's Top Dog
+# side: 1 Heywood Ripperdoc
+# side: 1 Modded Kusanagi
+# side: 1 Corporate Surveillance

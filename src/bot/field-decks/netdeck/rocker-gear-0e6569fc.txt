@@ -1,0 +1,23 @@
+# Rocker Gear - by SeaOtterChaos (netdeck.gg 0e6569fc-fcc6-4ae6-b1e9-1a4417a87981, 0 likes, 4 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Synapse Burnout
+3 Cyberpsychosis

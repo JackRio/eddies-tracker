@@ -1,0 +1,29 @@
+# Into the Bin - by DeathMonkeyXL (netdeck.gg 884c0701-5bdc-4ab8-b714-e097c298fe7a, 0 likes, 25 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+1 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+3 Mantis Blades
+2 Tetratronic Rippler
+2 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+2 Floor It
+3 Reboot Optics
+3 The Heist
+3 Shattered Memories

@@ -1,0 +1,24 @@
+# New Deck - by FeatheredCactus (netdeck.gg f944350f-ddf1-4357-9e94-e72a076be626, 0 likes, 12 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Screw: Lovelorn Fool
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Detonate
+3 Trust No One
+2 Chrome Reverie
+3 Pyramid Song
+3 Shattered Memories
+3 Les Élémens
+2 Towerfall

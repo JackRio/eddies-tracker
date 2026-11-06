@@ -1,0 +1,28 @@
+# New Deck - by DarkDaw63 (netdeck.gg 18d1c101-5d55-413b-9868-5ee488bfb699, 0 likes, 6 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+1 Sandayu Oda: Hanako's Guardian
+2 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Riot Shield
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Peace Offering
+3 Trust No One
+1 Reboot Optics
+2 Memory Relapse

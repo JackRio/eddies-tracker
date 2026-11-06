@@ -1,0 +1,30 @@
+# FourSixZoo - by WilliamTrainor (netdeck.gg 3a9c2923-aa60-49a9-9747-870754e019e3, 0 likes, 42 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 Valentino Street Racer
+3 6th Street Recruits
+1 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Nocturne OP55 N1
+3 Memory Relapse
+1 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 Riot Shield
+# side: 2 Detonate
+# side: 1 We Gotta Live Together

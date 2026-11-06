@@ -1,0 +1,28 @@
+# The Big Leagues - by SashaFan1 (netdeck.gg 3dad4ad4-447c-4913-8e70-ec6f8abd58d7, 1 likes, 92 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 MT0D12 Flathead
+3 Kiroshi Optics
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+2 Les Élémens
+2 Towerfall

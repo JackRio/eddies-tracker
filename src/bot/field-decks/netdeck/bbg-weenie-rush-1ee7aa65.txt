@@ -1,0 +1,29 @@
+# BBG Weenie Rush - by CRAWLER2000 (netdeck.gg 1ee7aa65-1dba-4832-8fd8-2a218025c5fb, 0 likes, 19 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Tyger's Whisper
+3 Delamain: Rideshare AI
+3 Valentino Street Racer
+1 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+1 We Gotta Live Together
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 2 Modded Kusanagi
+# side: 3 Nadia: Fighting Through Grief

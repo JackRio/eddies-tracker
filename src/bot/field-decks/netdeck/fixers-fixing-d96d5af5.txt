@@ -1,0 +1,28 @@
+# Fixers Fixing - by Corvus (netdeck.gg d96d5af5-4e3e-448c-a347-f31e06db39ff, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 Caliber: Totentanz's Top Dog
+1 MaxTac Suppression Team
+3 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Kiroshi Optics
+2 Mandibular Upgrade
+2 Tetratronic Rippler
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+2 Corporate Surveillance
+2 Reboot Optics
+2 The Heist
+2 Cyberpsychosis
+2 Memory Relapse

@@ -1,0 +1,25 @@
+# RUG - by CowboyKatakuri (netdeck.gg a4823844-a085-4f06-a323-c5f0dfb00755, 0 likes, 28 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+2 Corpo Security
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Rogue Amendiares: Queen of the Afterlife
+2 Johnny Silverhand: Never Stop Fighting
+1 Nadia: Fighting Through Grief
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+1 Chrome Reverie
+3 Memory Relapse

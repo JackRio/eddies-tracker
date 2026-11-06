@@ -1,0 +1,37 @@
+# Street Gang Hustle - by NeoRaider621 (netdeck.gg d6164727-e306-4f9a-9f63-1d9f559c7ba3, 1 likes, 21 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Japantown Jonin
+3 Field Operator
+3 Valentino Guerrera
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+1 Psycho Squad
+3 Screw: Lovelorn Fool
+1 V: Roamer of the Badlands
+3 Wraith Marauders
+1 Johnny Silverhand: Never Stop Fighting
+2 Saul Bright: Stormrider
+1 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+3 Riot Shield
+2 Detonate
+3 Reboot Optics
+2 Take Control
+2 Over the Edge
+2 Shattered Memories
+2 Unlikely Bond
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 1 Ruthless Lowlife
+# side: 1 La Llorona: Ghost of the Past
+# side: 3 Chrome Fang
+# side: 2 NetWatch Netdriver

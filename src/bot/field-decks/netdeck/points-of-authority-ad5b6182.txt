@@ -1,0 +1,28 @@
+# Points of Authority - by RootsOfOneTree (netdeck.gg ad5b6182-9e84-4c76-9be6-18594028e1a3, 0 likes, 19 views, updated 2026-10-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Augmented Negotiators
+2 Mox Inciters
+2 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+2 Rockn' Rockerboy
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Afterparty at Lizzie's
+2 Floor It
+2 Industrial Assembly
+2 Nocturne OP55 N1
+2 Over the Edge

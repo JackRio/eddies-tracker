@@ -1,0 +1,23 @@
+# Royce Megatron - by Polyphagus (netdeck.gg c25f5eb9-1750-4ebf-931a-37b545edbd1d, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Cyberpsychosis

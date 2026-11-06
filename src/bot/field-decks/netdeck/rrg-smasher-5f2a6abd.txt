@@ -1,0 +1,30 @@
+# RRG Smasher - by Etheos (netdeck.gg 5f2a6abd-c3eb-41e0-9387-ccf7ae9d1fbc, 0 likes, 39 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Valentino Street Racer
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Nadia: Fighting Through Grief
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+1 Gunpoint Diplomacy
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Detonate
+# side: 2 Synapse Burnout
+# side: 1 Gunpoint Diplomacy

@@ -1,0 +1,28 @@
+# YYR Borge Royce - by PiperVsPiper (netdeck.gg 94fa28a4-c87b-49b5-8ff0-2b4b7cc8d62e, 0 likes, 4 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Swordwise Huscle
+2 T-Bug: Amateur Philosopher
+1 V: Roamer of the Badlands
+3 Heywood Ripperdoc
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+1 Detonate
+1 Safety Override
+2 Live with the Aftermath
+2 Over the Edge
+3 Bootleg Black Sapphire Show

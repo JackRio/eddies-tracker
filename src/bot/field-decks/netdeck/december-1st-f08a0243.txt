@@ -1,0 +1,28 @@
+# December 1st - by RootsOfOneTree (netdeck.gg f08a0243-9bf9-4e3a-a000-785cd2c9982e, 0 likes, 16 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Johnny Silverhand: Rocking Renegade
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 Yorinobu Arasaka: Steel Dragon
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 Zetatech Berserk
+2 Industrial Assembly
+2 Over the Edge
+2 Gunpoint Diplomacy
+2 Memory Relapse
+2 Shattered Memories
+2 Carnage at the Colosseum

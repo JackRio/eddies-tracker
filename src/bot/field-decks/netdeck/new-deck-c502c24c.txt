@@ -1,0 +1,29 @@
+# New Deck - by GRoyale (netdeck.gg c502c24c-6109-4500-a6bb-183985927c21, 0 likes, 9 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+3 Panam Palmer: Strength Through Family
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Synapse Burnout
+3 Reboot Optics
+3 Memory Relapse
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 3 Riot Shield
+# side: 2 Wild in the Streets

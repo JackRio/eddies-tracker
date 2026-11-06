@@ -1,0 +1,26 @@
+# Party rockers - by GSith85 (netdeck.gg 78989f4e-0cef-4c1d-a448-96381c542a8d, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 V: Corporate Exile
+
+// Main deck
+3 Mox Inciters
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Detonate
+3 Industrial Assembly
+2 Bonnie and Clyde
+2 Nocturne OP55 N1
+2 Gunpoint Diplomacy

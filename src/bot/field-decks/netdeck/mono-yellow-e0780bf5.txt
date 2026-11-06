@@ -1,0 +1,26 @@
+# Mono Yellow - by Aknos (netdeck.gg e0780bf5-4ea2-4be2-90f5-313c6ab7b246, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+1 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+1 Cyberpsychosis
+2 Bootleg Black Sapphire Show

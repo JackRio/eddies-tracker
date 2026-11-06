@@ -1,0 +1,26 @@
+# Judy Brain Blast - by ? (netdeck.gg 0d13c3b7-6ac1-468b-8733-6145af16666a, 0 likes, 9 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Mox Inciters
+1 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+1 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 NetWatch Netdriver
+1 Floor It
+2 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

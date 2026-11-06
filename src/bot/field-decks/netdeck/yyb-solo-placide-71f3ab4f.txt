@@ -1,0 +1,28 @@
+# YYB Solo Placide - by picklemire (netdeck.gg 71f3ab4f-0089-482e-8d6b-34b2bf9e9a65, 0 likes, 11 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Rita Wheeler: No Stupid Questions
+3 MaxTac Suppression Team
+2 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Trust No One
+3 Reboot Optics
+2 Safety Override
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Rockn' Rockerboy
+# side: 2 Gorilla Arms
+# side: 2 Cyberpsychosis

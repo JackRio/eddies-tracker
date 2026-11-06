@@ -1,0 +1,24 @@
+# Burn it Down Sasha - by Rats T. Rats Dave (netdeck.gg 390df907-0775-4d74-b6ba-00b42742ea7c, 0 likes, 27 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Corpo Security
+3 Japantown Jonin
+3 Mox Inciters
+3 Valentino Street Racer
+3 Maelstrom Zealots
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Riot Shield
+3 All is Lost
+3 Industrial Assembly
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Shattered Memories
+3 We Gotta Live Together

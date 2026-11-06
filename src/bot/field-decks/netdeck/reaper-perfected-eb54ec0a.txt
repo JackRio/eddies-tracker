@@ -1,0 +1,28 @@
+# Reaper Perfected - by RootsOfOneTree (netdeck.gg eb54ec0a-5e24-43fb-9713-a18e9173eb4d, 0 likes, 9 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Johnny Silverhand: Never Stop Fighting
+2 Nadia: Fighting Through Grief
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Industrial Assembly
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 6th Street Recruits
+# side: 1 Saul Bright: Stormrider
+# side: 3 Peace Offering

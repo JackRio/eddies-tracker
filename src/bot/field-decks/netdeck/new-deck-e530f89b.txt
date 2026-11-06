@@ -1,0 +1,23 @@
+# New Deck - by xTHENATURALx (netdeck.gg e530f89b-8ffe-477e-9cb0-6633d9bd629c, 0 likes, 19 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Delamain Cab
+3 Psycho Squad
+3 Modded Muramasa
+3 Judy Álvarez: Nothing to Doubt
+2 Modded Kusanagi
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+2 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens

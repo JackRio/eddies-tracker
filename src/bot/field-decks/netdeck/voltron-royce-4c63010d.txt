@@ -1,0 +1,30 @@
+# Voltron Royce - by Zaidanplaze (netdeck.gg 4c63010d-f19d-4c8e-ac1b-f5f96e1d8a5d, 0 likes, 17 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Sketchy Ripper
+# side: 1 MaxTac Suppression Team
+# side: 2 Detonate
+# side: 2 Over the Edge

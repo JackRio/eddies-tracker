@@ -1,0 +1,30 @@
+# SHE DECK - by Rooster (netdeck.gg 8e4881e2-3006-47eb-93d6-58a0133a9055, 0 likes, 2 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+2 Goro Takemura: Losing His Way
+2 Maelstrom Zealots
+2 Lizzy Wizzy: Delicate Weapon
+2 Modded Kusanagi
+2 MaxTac Heavy
+2 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+2 Tetratronic Rippler
+3 Riot Shield
+2 NetWatch Netdriver
+2 Sandevistan
+1 Overwatch: Panam's Gift
+2 Floor It
+2 Peace Offering
+3 Synapse Burnout
+2 Trust No One
+2 Take Control
+2 Unlikely Bond
+2 Wild in the Streets

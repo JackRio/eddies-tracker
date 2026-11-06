@@ -1,0 +1,23 @@
+# B Night at Lizzie's - by MaelstromMitch (netdeck.gg 400ddde4-4983-4ae9-8c1a-f7c941ae751b, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Mox Inciters
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Towerfall

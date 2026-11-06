@@ -1,0 +1,29 @@
+# major crimes - by drwnd (netdeck.gg 76f1fb1b-ad8e-4592-b713-2b614054c84c, 0 likes, 33 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+2 Augmented Negotiators
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Floor It
+3 Reboot Optics
+3 Safety Override
+2 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 3 NetWatch Netdriver
+# side: 2 Gorilla Arms
+# side: 2 The Relic: Experimental Biochip

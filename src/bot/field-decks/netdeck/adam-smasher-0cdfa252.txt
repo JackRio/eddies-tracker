@@ -1,0 +1,23 @@
+# Adam smasher - by Sorzi (netdeck.gg 0cdfa252-c043-4308-b552-659fbf32e026, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 T-Bug: Amateur Philosopher
+3 Viktor Vektor: Drop Your Illusions
+3 Heywood Ripperdoc
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+1 Live with the Aftermath

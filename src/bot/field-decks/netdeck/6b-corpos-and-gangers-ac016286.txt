@@ -1,0 +1,28 @@
+# 6B Corpos and Gangers - by EdSpaged (netdeck.gg ac016286-464c-43de-9b3f-9c262f9bb1b7, 0 likes, 11 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Mox Inciters
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+1 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+1 Pyramid Song
+2 Les Élémens
+2 Towerfall

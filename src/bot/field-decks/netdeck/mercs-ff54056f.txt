@@ -1,0 +1,25 @@
+# mercs - by MrWesLee (netdeck.gg ff54056f-02f6-494d-bffa-8852d90f70fb, 0 likes, 8 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Corpo Security
+3 MaxTac Squadron
+2 Offduty Malfini
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Mandibular Upgrade
+2 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Afterparty at Lizzie's
+3 Peace Offering
+2 Synapse Burnout
+3 Fool on the Hill
+2 Memory Relapse

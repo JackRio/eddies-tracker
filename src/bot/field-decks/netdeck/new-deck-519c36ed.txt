@@ -1,0 +1,28 @@
+# New Deck - by Nahara974 (netdeck.gg 519c36ed-31b2-4c94-a663-0c13ab9cab46, 0 likes, 14 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+
+// Main deck
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Westbrook Netrunner
+2 Caliber: Totentanz's Top Dog
+2 Rogue Amendiares: Queen of the Afterlife
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+2 Adrenaline Converter
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Trust No One
+3 Reboot Optics
+2 Safety Override
+3 Chrome Reverie
+2 Cyberpsychosis
+2 Live with the Aftermath

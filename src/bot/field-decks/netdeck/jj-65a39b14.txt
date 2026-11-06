@@ -1,0 +1,23 @@
+# JJ - by Kebaku (netdeck.gg 65a39b14-0a7f-4352-ba1e-f6f4232b58a7, 0 likes, 5 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Riot Shield
+2 Satori: Sword of Saburo
+3 All is Lost
+3 Detonate
+3 Industrial Assembly
+2 Peace Offering
+3 Corporate Surveillance
+3 Appetite for Destruction
+3 Memory Relapse

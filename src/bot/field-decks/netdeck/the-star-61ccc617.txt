@@ -1,0 +1,26 @@
+# The Star - by Charmancer0427 (netdeck.gg 61ccc617-3380-45f0-a7d6-ff7b642b077c, 0 likes, 8 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+2 Field Operator
+2 Mox Inciters
+2 Valentino Street Racer
+3 Maelstrom Zealots
+2 Psycho Squad
+3 MaxTac AV
+2 Modded Kusanagi
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Riot Shield
+2 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+2 Pyramid Song
+2 Towerfall

@@ -1,0 +1,24 @@
+# Embracing Power Starter Deck (UPDATED) - by Vex (netdeck.gg f7081f70-39d8-4854-9924-a7d5fe4507dc, 0 likes, 29 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 Swordwise Huscle
+3 6th Street Recruits
+2 Goro Takemura: Losing His Way
+2 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+2 Over the Edge
+2 Memory Relapse

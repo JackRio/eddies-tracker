@@ -1,0 +1,30 @@
+# YYR - TTO - by RareTotem (netdeck.gg 1c961723-df3c-411e-b8df-b26ef53701b9, 7 likes, 324 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 The Heist
+3 Live with the Aftermath
+2 Over the Edge
+
+# Sideboard (not loaded):
+# side: 3 Sketchy Ripper
+# side: 2 MaxTac Suppression Team
+# side: 1 Heywood Ripperdoc
+# side: 1 Over the Edge

@@ -1,0 +1,32 @@
+# Love Like Fire - by Jonfucius (netdeck.gg 770fc1d6-b3c3-4054-9850-f01aebb1fe2d, 0 likes, 15 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Johnny Silverhand: Rocking Renegade
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+1 Modded Muramasa
+2 Rogue Amendiares: Queen of the Afterlife
+1 V: Roamer of the Badlands
+1 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mantis Blades
+1 Dying Night: V's Pistol
+1 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 All is Lost
+3 Floor It
+3 Trust No One
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Shattered Memories

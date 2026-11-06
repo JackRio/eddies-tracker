@@ -1,0 +1,28 @@
+# NNeeds more gig - by Mr.1000 Years (netdeck.gg 38db239c-1485-4df6-bbe6-4cbc104713f9, 0 likes, 2 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Muamar Reyes: El Capitán
+
+// Main deck
+1 Dexter DeShawn: One Last Chance
+2 La Llorona: Ghost of the Past
+3 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Minotaur
+1 Octant
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Zetatech Faceplate
+2 Deadman Transmitter
+2 Afterparty at Lizzie's
+1 Detonate
+3 Industrial Assembly
+1 Appetite for Destruction
+2 Gunpoint Diplomacy
+1 Carnage at the Colosseum

@@ -1,0 +1,28 @@
+# Arasaka Bulwark - by Nivalex (netdeck.gg 5ec00429-0938-429c-b4fe-6485e0f8ea72, 0 likes, 6 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+2 Corpo Security
+2 Tyger's Whisper
+2 Emergency Atlus
+2 Field Operator
+2 MaxTac Squadron
+2 Goro Takemura: Losing His Way
+2 Maelstrom Zealots
+3 Pacifica Netrunner
+2 Pepe Najarro: Working Doubles
+2 Wraith Marauders
+1 Nadia: Fighting Through Grief
+1 MaxTac Heavy
+1 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Synapse Burnout
+3 Fool on the Hill

@@ -1,0 +1,25 @@
+# GreenGreenYellow - by ZB1997 (netdeck.gg d19ff8de-f1ab-4a46-b363-00eb50d2eea6, 0 likes, 3 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Goro Takemura: Losing His Way
+2 Maelstrom Zealots
+3 Panam Palmer: Strength Through Family
+3 Kiroshi Optics
+3 Mandibular Upgrade
+2 Zetatech Faceplate
+2 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Peace Offering
+2 Fool on the Hill
+3 (Don't Fear) The Reaper

@@ -1,0 +1,27 @@
+# New Deck - by Splati (netdeck.gg 2b537d0a-816b-4533-9b83-fc92224cb4b8, 0 likes, 28 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Rockn' Rockerboy
+3 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mandibular Upgrade
+1 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Floor It
+3 Reboot Optics
+3 The Heist

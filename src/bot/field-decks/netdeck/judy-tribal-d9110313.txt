@@ -1,0 +1,25 @@
+# Judy Tribal - by Scarlett (netdeck.gg d9110313-474e-4e7f-a63f-e69d6c2bb86e, 0 likes, 182 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Misty Olszewski: Mender of Broken Spirits
+3 Delamain Cab
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Towerfall

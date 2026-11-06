@@ -1,0 +1,23 @@
+# Ninja's Mono Blue Control - by Surgical Ninja (netdeck.gg 3fb788ef-47b6-4216-8a55-8e7231ccbc2d, 0 likes, 138 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Mox Inciters
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

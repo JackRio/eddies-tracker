@@ -1,0 +1,30 @@
+# New Deck - by daigadesu (netdeck.gg f87c6fb9-4a26-43d0-8539-9ede26cb3d56, 0 likes, 29 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Screw: Lovelorn Fool
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Mantis Blades
+2 Dying Night: V's Pistol
+2 All is Lost
+2 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Shattered Memories
+2 Unlikely Bond
+2 Les Élémens
+1 Towerfall

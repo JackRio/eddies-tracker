@@ -1,0 +1,25 @@
+# (GGY) Panam Gears - by SkullDelta (netdeck.gg f76e8581-c666-499b-a4ea-fc54cd586790, 0 likes, 53 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Pepe Najarro: Working Doubles
+3 Riding Nomad
+1 Jackie Welles: Ride or Die Choom
+2 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 Fool on the Hill
+2 Wild in the Streets
+3 (Don't Fear) The Reaper

@@ -1,0 +1,23 @@
+# VOLTRON - by ? (netdeck.gg 7b86bd4f-ae7d-4853-9b94-a6f9320c5eb3, 0 likes, 0 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Caliber: Totentanz's Top Dog
+3 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Heist
+3 Cyberpsychosis
+1 Shattered Memories

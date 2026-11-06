@@ -1,0 +1,28 @@
+# Maximum Rolls - by Eradcliffe (netdeck.gg a2f58fc0-c248-43b5-9b21-5f4444e0326a, 0 likes, 3 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Valentino Guerrera
+2 Kerry Eurodyne: The Last Rockerboy
+2 El Sombrerón: La Venganza Lenta
+2 Royce: Don't Call Me Simon
+2 V: Roamer of the Badlands
+1 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+2 Octant
+3 Satori: Sword of Saburo
+2 All is Lost
+3 Industrial Assembly
+3 Appetite for Destruction
+2 Bonnie and Clyde
+2 Over the Edge
+3 Gunpoint Diplomacy
+2 Shattered Memories
+3 Carnage at the Colosseum

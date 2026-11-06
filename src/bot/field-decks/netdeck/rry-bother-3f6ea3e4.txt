@@ -1,0 +1,28 @@
+# RRY-bother - by CamWill (netdeck.gg 3f6ea3e4-9108-47fb-ac8c-98d106acea35, 0 likes, 63 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+3 Rockn' Rockerboy
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+1 Industrial Assembly
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Maelstrom Goons
+# side: 3 Meredith Stout: Stone Cold Corpo
+# side: 2 Deadman Transmitter

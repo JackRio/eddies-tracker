@@ -1,0 +1,24 @@
+# BD Aggro - by DohnDohnson (netdeck.gg efd21efe-7c48-4a1d-9717-ea453741ecec, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Tyger's Whisper
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Memory Relapse

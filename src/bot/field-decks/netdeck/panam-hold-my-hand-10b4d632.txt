@@ -1,0 +1,24 @@
+# Panam Hold my Hand - by ArkAngel.exe (netdeck.gg 10b4d632-7cee-4160-ae01-c18f349e9731, 0 likes, 8 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Swordwise Huscle
+3 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+2 Zetatech Berserk
+3 Industrial Assembly
+2 Peace Offering
+3 Synapse Burnout
+2 Gunpoint Diplomacy

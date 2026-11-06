@@ -1,0 +1,23 @@
+# New Deck - by FeatheredCactus (netdeck.gg 870f05a4-f9f0-4e9d-b077-4bd70d79a55d, 0 likes, 10 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Field Operator
+3 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+3 Panam Palmer: Strength Through Family
+3 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Synapse Burnout
+3 Fool on the Hill
+3 Memory Relapse
+3 (Don't Fear) The Reaper

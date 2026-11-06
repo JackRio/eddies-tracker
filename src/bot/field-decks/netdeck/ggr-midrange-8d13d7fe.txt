@@ -1,0 +1,33 @@
+# GGR Midrange - by Cobibzen (netdeck.gg 8d13d7fe-7c54-4c42-b8f4-8843a1d751cb, 0 likes, 58 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Valentino Street Racer
+3 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+1 Riot Shield
+3 Satori: Sword of Saburo
+1 Detonate
+2 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Riot Shield
+# side: 1 Detonate
+# side: 1 Synapse Burnout
+# side: 1 Gunpoint Diplomacy

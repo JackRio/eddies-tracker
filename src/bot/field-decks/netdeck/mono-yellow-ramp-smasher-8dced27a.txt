@@ -1,0 +1,28 @@
+# Mono Yellow - Ramp Smasher - by Rip Studwell (netdeck.gg 8dced27a-6a5c-4fa4-a882-c9edb936a1a3, 0 likes, 2 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Caliber: Totentanz's Top Dog
+1 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+3 Cyberpsychosis
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,33 @@
+# RRG - Saka's Nine - by Nomatic_Kiwi (netdeck.gg 3b7bbbad-3df9-4071-8bb6-c18303a7f54d, 2 likes, 38 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Animals Wrecker
+1 Nadia: Fighting Through Grief
+1 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Nadia: Fighting Through Grief
+# side: 1 Minotaur
+# side: 2 Deadman Transmitter
+# side: 1 Synapse Burnout

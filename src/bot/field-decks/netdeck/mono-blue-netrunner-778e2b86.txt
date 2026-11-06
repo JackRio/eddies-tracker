@@ -1,0 +1,23 @@
+# Mono Blue Netrunner - by Joj (netdeck.gg 778e2b86-cee3-46ea-b7b9-880bef19d3a6, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+2 Westbrook Netrunner
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

@@ -1,0 +1,26 @@
+# New Deck - by thepate (netdeck.gg c3a89908-cab0-4ecc-b3e3-f14a1c9fe731, 0 likes, 6 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Tyger's Whisper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Caliber: Totentanz's Top Dog
+1 MaxTac Suppression Team
+1 Viktor Vektor: Drop Your Illusions
+1 Alt Cunningham: Mother of Daemons
+1 Saul Bright: Stormrider
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Heist
+3 Live with the Aftermath
+3 Memory Relapse
+3 Bootleg Black Sapphire Show

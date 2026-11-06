@@ -1,0 +1,25 @@
+# Judy Spam - by sunderland96 (netdeck.gg b27dc46e-1ada-4812-8b42-8b7e1fb71b0f, 0 likes, 3 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Wakako Okada: Peace and Harmony
+1 V: Corporate Exile
+
+// Main deck
+1 Jacked-In Voodoo Boy
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens

@@ -1,0 +1,23 @@
+# KP YYB Ramp Placide - by Vex (netdeck.gg 8f471230-9c77-4580-9349-27673b4d5f46, 0 likes, 20 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Floor It
+3 Trust No One
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show

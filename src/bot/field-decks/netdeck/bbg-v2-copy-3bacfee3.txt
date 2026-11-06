@@ -1,0 +1,30 @@
+# BBG v2 (Copy) - by ? (netdeck.gg 3bacfee3-3d6d-42d5-9cd0-1972fb192ae2, 0 likes, 4 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+2 Hacked Corpo
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 MaxTac AV
+1 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+2 Dying Night: V's Pistol
+2 Riot Shield
+2 NetWatch Netdriver
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall

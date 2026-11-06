@@ -1,0 +1,23 @@
+# RRY Fixers - by ? (netdeck.gg b8caae5e-fe13-47f9-af23-b0fbb90e3b37, 0 likes, 14 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 V: Roamer of the Badlands
+3 Animals Wrecker
+3 Trauma Team Operatives
+3 Yorinobu Arasaka: Steel Dragon
+2 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Industrial Assembly
+3 The Heist
+3 Bonnie and Clyde
+3 Carnage at the Colosseum

@@ -1,0 +1,26 @@
+# Selesnya Twiddles - by RydenABike (netdeck.gg a6c3ff8d-6c09-4440-85ba-1c74a8fe7702, 0 likes, 11 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+2 MaxTac AV
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+2 Saul Bright: Stormrider
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 Zetatech Berserk
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+2 Memory Relapse

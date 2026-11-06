@@ -1,0 +1,24 @@
+# YYRelic trauma Team - by AllTwiX (netdeck.gg 46f0a670-fe61-490b-a427-94c4ff580c16, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+2 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+2 Industrial Assembly
+3 The Heist
+2 Shattered Memories
+3 Bootleg Black Sapphire Show

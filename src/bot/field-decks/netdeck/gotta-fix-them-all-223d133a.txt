@@ -1,0 +1,32 @@
+# Gotta Fix Them All - by ? (netdeck.gg 223d133a-4186-4a5f-bc6f-d64e014dcd14, 0 likes, 9 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+2 Mox Inciters
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Hanako Arasaka: In a Gilded Cage
+2 Rita Wheeler: No Stupid Questions
+3 T-Bug: Amateur Philosopher
+2 Westbrook Netrunner
+1 Rogue Amendiares: Queen of the Afterlife
+1 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Adrenaline Converter
+2 Dying Night: V's Pistol
+3 Gorilla Arms
+1 Afterparty at Lizzie's
+3 Floor It
+1 Trust No One
+3 Safety Override
+2 The Heist
+2 Nocturne OP55 N1
+2 Unlikely Bond
+1 Bootleg Black Sapphire Show

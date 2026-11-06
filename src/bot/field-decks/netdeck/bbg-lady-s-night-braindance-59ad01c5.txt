@@ -1,0 +1,24 @@
+# BBG - Lady's Night Braindance - by Ylithian (netdeck.gg 59ad01c5-a1fe-4b44-9528-98baae5c352f, 0 likes, 61 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Mox Inciters
+2 Valentino Street Racer
+3 Rita Wheeler: No Stupid Questions
+3 MaxTac AV
+2 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+2 Saul Bright: Stormrider
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Berserk
+2 Trust No One
+3 Corporate Surveillance
+3 Three Mouths, One Desire
+3 Pyramid Song
+2 Towerfall

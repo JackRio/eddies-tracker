@@ -1,0 +1,30 @@
+# YYB RoD - by KayTMo (netdeck.gg 2ec276bc-388b-47d0-b1c6-414fe9f2574f, 0 likes, 4 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Sketchy Ripper
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 MaxTac Suppression Team
+2 Jackie Welles: Ride or Die Choom
+3 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist
+2 Chrome Reverie
+2 Live with the Aftermath
+2 Nocturne OP55 N1
+2 Bootleg Black Sapphire Show

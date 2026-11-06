@@ -1,0 +1,25 @@
+# FLEX - by Root (netdeck.gg c78da9d1-5841-4424-9d67-368a517fac0d, 1 likes, 26 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+3 Augmented Negotiators
+3 Goro Takemura: Losing His Way
+3 Riding Nomad
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+2 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Take Control
+3 Memory Relapse
+2 (Don't Fear) The Reaper

@@ -1,0 +1,26 @@
+# BBG_v2 - by mori (netdeck.gg 63c8cc09-ec3b-4331-a9a9-98426fac74fc, 0 likes, 46 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Emergency Atlus
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+3 MaxTac AV
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+1 Unlikely Bond
+3 Les Élémens

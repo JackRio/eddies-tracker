@@ -1,0 +1,30 @@
+# New Deck - by KollKolll (netdeck.gg 323ac9ec-5f75-4a31-8ef1-4720c265ed15, 0 likes, 20 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Field Operator
+2 Pepe Najarro: Working Doubles
+1 Jackie Welles: Ride or Die Choom
+2 Nadia: Fighting Through Grief
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+2 Mandibular Upgrade
+3 Riot Shield
+2 Zetatech Faceplate
+2 Sandevistan
+2 Overwatch: Panam's Gift
+2 Zetatech Berserk
+2 Peace Offering
+2 Take Control
+1 The Heist
+2 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

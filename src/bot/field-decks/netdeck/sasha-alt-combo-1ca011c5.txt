@@ -1,0 +1,27 @@
+# Sasha Alt Combo - by GRoyale (netdeck.gg 1ca011c5-502f-42f5-bcf3-7444096548ce, 0 likes, 7 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Corpo Security
+2 Maelstrom Zealots
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+2 MaxTac AV
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Zetatech Berserk
+2 Peace Offering
+2 Synapse Burnout
+3 Reboot Optics
+2 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall

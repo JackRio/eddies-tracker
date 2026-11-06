@@ -1,0 +1,30 @@
+# YYR Gear Heavy Aggro - by ManWasBrother (netdeck.gg 132f3d49-7617-4c8b-9976-da14bc8830f6, 0 likes, 70 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+2 Caliber: Totentanz's Top Dog
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+1 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+2 The Heist
+3 Cyberpsychosis

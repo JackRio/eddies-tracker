@@ -1,0 +1,24 @@
+# Aggro RRG - by HungSpellboundGames (netdeck.gg 75ec47a3-48a8-428a-a40d-8bf66ecbca4b, 0 likes, 199 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 Field Operator
+1 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+2 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Over the Edge
+3 Memory Relapse
+3 Carnage at the Colosseum

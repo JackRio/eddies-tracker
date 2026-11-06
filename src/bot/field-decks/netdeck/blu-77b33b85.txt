@@ -1,0 +1,29 @@
+# Blu - by Psybite (netdeck.gg 77b33b85-c7bb-4a25-acdd-17a748791bcd, 0 likes, 4 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Delamain: Rideshare AI
+2 Misty Olszewski: Mender of Broken Spirits
+2 Hacked Corpo
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

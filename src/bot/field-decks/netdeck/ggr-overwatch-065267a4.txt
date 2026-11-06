@@ -1,0 +1,31 @@
+# GGR Overwatch - by Nath (netdeck.gg 065267a4-0c60-4ab0-a15b-67772d4541fd, 1 likes, 49 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+1 MaxTac Squadron
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Screw: Lovelorn Fool
+1 V: Roamer of the Badlands
+2 Nadia: Fighting Through Grief
+3 Panam Palmer: Strength Through Family
+2 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Industrial Assembly
+3 Memory Relapse
+1 Shattered Memories
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Saul Bright: Stormrider
+# side: 1 Riot Shield
+# side: 2 Detonate

@@ -1,0 +1,28 @@
+# Fixer Fun - by kidneymann (netdeck.gg 8856ce81-9f33-41af-a710-68cb9c32f362, 0 likes, 2 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Corpo Security
+2 Secondhand Bombus
+2 Dexter DeShawn: One Last Chance
+2 Field Operator
+2 Mox Inciters
+2 Pacifica Netrunner
+3 Modded Muramasa
+2 Rogue Amendiares: Queen of the Afterlife
+1 Jackie Welles: Ride or Die Choom
+2 Sandayu Oda: Hanako's Guardian
+2 Kiroshi Optics
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Peace Offering
+2 Trust No One
+2 Take Control
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse

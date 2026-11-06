@@ -1,0 +1,23 @@
+# GGR Midrange - by RefuseResist (netdeck.gg 225cd5e3-7e78-4dec-895c-0f98e705fc35, 0 likes, 7 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Field Operator
+3 6th Street Recruits
+3 Goro Takemura: Losing His Way
+3 Pepe Najarro: Working Doubles
+3 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Take Control
+3 Memory Relapse

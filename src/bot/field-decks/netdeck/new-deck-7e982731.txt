@@ -1,0 +1,27 @@
+# New Deck - by Darklord 1988 (netdeck.gg 7e982731-8fa2-498d-95c4-a9cc03191081, 0 likes, 41 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Corpo Security
+3 Jacked-In Voodoo Boy
+2 Field Operator
+2 Misty Olszewski: Mender of Broken Spirits
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+2 Towerfall

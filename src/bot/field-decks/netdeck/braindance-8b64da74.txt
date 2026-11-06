@@ -1,0 +1,24 @@
+# Braindance - by erosenin (netdeck.gg 8b64da74-3838-44cb-bfa6-2648e7aa124d, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+3 Misty Olszewski: Mender of Broken Spirits
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Placide: Voodoo Sentinel
+2 All is Lost
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Over the Edge
+3 Pyramid Song
+3 Shattered Memories
+3 Les Élémens
+3 Towerfall

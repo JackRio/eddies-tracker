@@ -1,0 +1,24 @@
+# Ladies, Ladies - by Gallagherbst (netdeck.gg 899f3b56-8dfc-4384-8f6b-e2cd703b519f, 0 likes, 3 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Corporate Exile
+
+// Main deck
+3 Field Operator
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Synapse Burnout
+3 Three Mouths, One Desire
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall

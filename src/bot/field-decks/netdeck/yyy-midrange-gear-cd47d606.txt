@@ -1,0 +1,24 @@
+# YYY Midrange Gear - by Of_1nfinite_Jest (netdeck.gg cd47d606-5a08-4a87-9d8c-4ee19ce17916, 0 likes, 3 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Afterparty at Lizzie's
+2 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

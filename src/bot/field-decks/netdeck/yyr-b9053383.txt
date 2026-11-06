@@ -1,0 +1,32 @@
+# YYR - by mori (netdeck.gg b9053383-ab6e-4a17-856c-e9b04b3f9e85, 0 likes, 27 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+1 Augmented Negotiators
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+1 Offduty Malfini
+1 T-Bug: Amateur Philosopher
+1 Chrome Fang
+2 MaxTac Suppression Team
+2 Rockn' Rockerboy
+2 Alt Cunningham: Mother of Daemons
+2 Mandibular Upgrade
+1 Mantis Blades
+2 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+1 All is Lost
+2 Safety Override
+2 The Heist
+2 Cyberpsychosis
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show

@@ -1,0 +1,25 @@
+# Blue/Green control - by TheMadHouse (netdeck.gg 5b2eeba8-7fe0-46b4-8c6c-89c896208894, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Tyger's Whisper
+2 Delamain: Rideshare AI
+3 Emergency Atlus
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+2 Three Mouths, One Desire
+3 Pyramid Song
+2 Towerfall

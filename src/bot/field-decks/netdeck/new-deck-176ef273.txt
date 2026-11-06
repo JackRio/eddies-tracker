@@ -1,0 +1,40 @@
+# New Deck - by HorseSnorkel (netdeck.gg 176ef273-768b-4085-b35f-ad6224483256, 0 likes, 13 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+1 Corpo Security
+2 Jacked-In Voodoo Boy
+1 Field Operator
+2 Hacked Corpo
+3 Pacifica Netrunner
+1 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 MaxTac AV
+1 Wraith Marauders
+1 Nadia: Fighting Through Grief
+1 Sandayu Oda: Hanako's Guardian
+1 Placide: Voodoo Sentinel
+1 NetWatch Netdriver
+1 Zetatech Berserk
+1 Floor It
+1 Peace Offering
+2 Synapse Burnout
+1 Corporate Surveillance
+2 Reboot Optics
+1 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+1 Pyramid Song
+2 Memory Relapse
+2 Unlikely Bond
+1 Les Élémens
+1 We Gotta Live Together

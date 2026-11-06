@@ -1,0 +1,28 @@
+# New Deck - by AzureZombie (netdeck.gg 5636eb9d-d7e4-4f28-b1e5-e474c596a3a2, 0 likes, 19 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+2 Take Control
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+
+# Sideboard (not loaded):
+# side: 3 Three Mouths, One Desire
+# side: 2 Memory Relapse
+# side: 2 Towerfall

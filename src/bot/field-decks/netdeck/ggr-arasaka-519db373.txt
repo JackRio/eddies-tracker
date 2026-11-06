@@ -1,0 +1,29 @@
+# GGR - Arasaka - by Rip Studwell (netdeck.gg 519db373-7156-4135-b118-526e81319e5e, 0 likes, 1 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Field Operator
+2 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+2 Panam Palmer: Strength Through Family
+1 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Detonate
+3 Peace Offering
+3 Synapse Burnout
+3 Fool on the Hill
+3 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

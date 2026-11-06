@@ -1,0 +1,31 @@
+# YYY - Night City Street Level - by GeneLantern (netdeck.gg d0ec5788-686e-4349-a01e-73a7d89b42da, 0 likes, 21 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Sketchy Ripper
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Safety Override
+2 The Heist
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 2 Afterparty at Lizzie's
+# side: 2 Cyberpsychosis

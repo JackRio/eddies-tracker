@@ -1,0 +1,30 @@
+# Street Cred Galore - by GonkyChoomCyberPunk (netdeck.gg e0209e19-17b2-4c12-9352-1350c9757464, 0 likes, 9 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+2 La Llorona: Ghost of the Past
+2 Valentino Guerrera
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Offduty Malfini
+2 Chrome Fang
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+2 Minotaur
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Industrial Assembly
+3 Safety Override
+2 Over the Edge
+3 Shattered Memories

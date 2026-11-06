@@ -1,0 +1,24 @@
+# The big 'Saka - by Ash Wantusis (netdeck.gg 4541b976-ed24-4fb3-ac56-ff717c72b779, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+2 La Llorona: Ghost of the Past
+3 MaxTac Squadron
+3 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+2 Minotaur
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Industrial Assembly
+2 Synapse Burnout
+2 Corporate Surveillance
+3 Memory Relapse

@@ -1,0 +1,33 @@
+# New Deck - by CiMaK (netdeck.gg 4bfa4585-4ed4-4116-a1cd-b62056b5789a, 0 likes, 31 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Japantown Jonin
+1 Ruthless Lowlife
+1 Swordwise Huscle
+1 Meredith Stout: Stone Cold Corpo
+1 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+1 Chrome Fang
+2 Royce: Don't Call Me Simon
+3 Screw: Lovelorn Fool
+1 Animals Wrecker
+2 Modded Kusanagi
+2 Mantis Blades
+1 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 Deadman Transmitter
+2 Detonate
+3 Floor It
+1 Trust No One
+1 Appetite for Destruction
+1 Bonnie and Clyde
+2 Chrome Reverie
+2 Gunpoint Diplomacy
+2 Shattered Memories
+2 Carnage at the Colosseum

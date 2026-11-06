@@ -1,0 +1,31 @@
+# BBB - Braindance Girl's Power - by Ylithian (netdeck.gg f7e1e1db-9b24-48f9-bb97-6131c7f1a863, 1 likes, 24 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Unlikely Bond
+# side: 1 Towerfall

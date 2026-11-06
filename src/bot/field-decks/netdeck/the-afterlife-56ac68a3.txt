@@ -1,0 +1,28 @@
+# The Afterlife - by MaxxFolder (netdeck.gg 56ac68a3-a1b6-46b0-b66a-a7d26c1f4110, 0 likes, 19 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 Rogue Amendiares: Queen of the Afterlife
+2 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 All is Lost
+3 Reboot Optics
+2 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+2 Shattered Memories
+2 Towerfall

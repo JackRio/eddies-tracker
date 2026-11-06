@@ -1,0 +1,32 @@
+# True Nomadic Chaos - by ArbokKing (netdeck.gg deb65537-952d-4702-927c-72bd617a0177, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+1 Tyger's Whisper
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+1 Chrome Fang
+2 MaxTac AV
+2 V: Roamer of the Badlands
+3 Wraith Marauders
+2 Johnny Silverhand: Never Stop Fighting
+1 Panam Palmer: Strength Through Family
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+1 Riot Shield
+1 Overwatch: Panam's Gift
+3 Industrial Assembly
+2 Peace Offering
+3 Synapse Burnout
+2 Corporate Surveillance
+3 Fool on the Hill
+3 Take Control
+2 Over the Edge
+2 Memory Relapse
+3 Wild in the Streets
+1 (Don't Fear) The Reaper

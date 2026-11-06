@@ -1,0 +1,29 @@
+# Goro goes solo at the start of the game - by Rats T. Rats Dave (netdeck.gg fd262360-c266-4ef8-8520-46f26ec84a2f, 0 likes, 64 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Corpo Security
+3 Augmented Negotiators
+3 MaxTac Squadron
+3 Valentino Street Racer
+3 MaxTac Suppression Team
+2 Jackie Welles: Ride or Die Choom
+3 Zetatech Faceplate
+3 Sandevistan
+3 Zetatech Berserk
+2 Peace Offering
+3 The Heist
+3 Cyberpsychosis
+2 Memory Relapse
+3 We Gotta Live Together
+2 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 3 Pacifica Netrunner
+# side: 2 Riot Shield
+# side: 2 Corporate Surveillance

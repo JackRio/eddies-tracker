@@ -1,0 +1,30 @@
+# Sasha draft - by RootsOfOneTree (netdeck.gg 855b4e0d-a359-4cc2-a913-fd9410abc48d, 0 likes, 11 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Dying Night: V's Pistol
+3 Trust No One
+3 Reboot Optics
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Mox Inciters
+# side: 2 Psycho Squad
+# side: 1 MT0D12 Flathead
+# side: 1 Detonate
+# side: 2 Chrome Reverie

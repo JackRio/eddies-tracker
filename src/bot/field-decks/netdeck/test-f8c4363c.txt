@@ -1,0 +1,25 @@
+# Test - by IMCALLEDJAMIE (netdeck.gg f8c4363c-c34c-4621-aa38-3e5c6bbcddb0, 0 likes, 6 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Rita Wheeler: No Stupid Questions
+3 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 Sandayu Oda: Hanako's Guardian
+3 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+2 Overwatch: Panam's Gift
+3 Synapse Burnout
+3 Trust No One
+3 Fool on the Hill
+3 Take Control
+3 Chrome Reverie
+2 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

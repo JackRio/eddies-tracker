@@ -1,0 +1,25 @@
+# New Deck - by ? (netdeck.gg 274d66b1-468f-486d-9c4d-596116cd4570, 0 likes, 11 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+1 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+2 Cyberpsychosis
+3 Bootleg Black Sapphire Show

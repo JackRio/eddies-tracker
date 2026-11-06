@@ -1,0 +1,25 @@
+# All Gear No Breaks - by Vindious (netdeck.gg a6f5be7d-1b71-4b64-a537-431a1c8cb5a3, 0 likes, 52 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+2 Hanako Arasaka: In a Gilded Cage
+2 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Safety Override
+2 The Heist
+3 Live with the Aftermath
+2 We Gotta Live Together

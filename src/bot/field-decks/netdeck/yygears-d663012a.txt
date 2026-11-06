@@ -1,0 +1,24 @@
+# YYGears - by peacemaker1015 (netdeck.gg d663012a-f194-47f8-a521-477ecb32487d, 0 likes, 33 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 MaxTac Suppression Team
+2 Nadia: Fighting Through Grief
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Corporate Surveillance
+3 Live with the Aftermath

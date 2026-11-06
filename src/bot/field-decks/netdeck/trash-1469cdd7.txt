@@ -1,0 +1,23 @@
+# Trash - by Felix Tetreault (netdeck.gg 1469cdd7-bcde-4544-bb71-b45c08fd8d77, 0 likes, 12 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Nadia: Fighting Through Grief
+3 Trauma Team Operatives
+3 Saul Bright: Stormrider
+3 Mantis Blades
+3 Riot Shield
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+3 Shattered Memories
+3 We Gotta Live Together

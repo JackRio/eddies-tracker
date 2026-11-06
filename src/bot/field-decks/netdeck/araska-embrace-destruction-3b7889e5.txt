@@ -1,0 +1,30 @@
+# Araska Embrace Destruction - by Cryptrunner89 (netdeck.gg 3b7889e5-0c54-4042-a253-e73fa20191c6, 0 likes, 54 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Ruthless Lowlife
+2 Emergency Atlus
+1 Field Operator
+3 Swordwise Huscle
+1 Valentino Street Racer
+1 6th Street Recruits
+2 Goro Takemura: Losing His Way
+2 Pepe Najarro: Working Doubles
+2 Chrome Fang
+1 V: Roamer of the Badlands
+1 Panam Palmer: Strength Through Family
+1 Minotaur
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+1 Zetatech Berserk
+2 Industrial Assembly
+1 Peace Offering
+1 Synapse Burnout
+3 Over the Edge

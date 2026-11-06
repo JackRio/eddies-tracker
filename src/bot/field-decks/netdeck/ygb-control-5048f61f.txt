@@ -1,0 +1,23 @@
+# YGB Control - by NobodyToBeKnown (netdeck.gg 5048f61f-6274-43bc-9bff-5e5e38b9a23f, 0 likes, 17 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Zealots
+3 MaxTac Suppression Team
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Kiroshi Optics
+3 Riot Shield
+3 Floor It
+3 Reboot Optics
+3 Take Control
+3 Chrome Reverie
+3 Cyberpsychosis
+3 Nocturne OP55 N1
+3 Memory Relapse

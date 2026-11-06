@@ -1,0 +1,24 @@
+# Arasaka beatdown - by ? (netdeck.gg 49175b1e-0fb6-4362-ac27-73cfcf252522, 0 likes, 76 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Detonate
+1 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Bonnie and Clyde
+2 Gunpoint Diplomacy
+3 Carnage at the Colosseum

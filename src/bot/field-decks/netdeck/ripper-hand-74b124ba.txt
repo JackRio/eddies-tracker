@@ -1,0 +1,26 @@
+# Ripper Hand - by Chronocoretcg (netdeck.gg 74b124ba-9d39-45a2-9715-ef9e9fad8ac6, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Caliber: Totentanz's Top Dog
+2 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

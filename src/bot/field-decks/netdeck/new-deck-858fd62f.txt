@@ -1,0 +1,26 @@
+# New Deck - by ? (netdeck.gg 858fd62f-413c-4f15-bb16-da9a6456aba7, 0 likes, 8 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+3 Royce: Don't Call Me Simon
+3 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Arasaka Emergency Radioport
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Detonate
+3 Shattered Memories

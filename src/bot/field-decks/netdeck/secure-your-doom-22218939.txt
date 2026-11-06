@@ -1,0 +1,23 @@
+# Secure Your Doom - by NatCat (netdeck.gg 22218939-0d0f-48f2-85ad-1993708caa94, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+2 T-Bug: Amateur Philosopher
+3 Caliber: Totentanz's Top Dog
+2 Viktor Vektor: Drop Your Illusions
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath

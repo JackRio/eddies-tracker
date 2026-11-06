@@ -1,0 +1,23 @@
+# Mono U Program - by DJMI (netdeck.gg 33f75504-c53b-4de8-afb2-881c28be12b5, 0 likes, 9 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,27 @@
+# R/B Programs - by uglypoodle (netdeck.gg c0c2397c-ebe7-49d3-a5f9-5fa7bacfafe5, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Detonate
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Shattered Memories
+3 Unlikely Bond
+3 Les Élémens
+2 Towerfall

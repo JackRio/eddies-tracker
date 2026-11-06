@@ -1,0 +1,33 @@
+# New Deck - by ? (netdeck.gg 6d2657b2-a5e4-44d6-bb50-66c169b8620f, 0 likes, 11 views, updated 2026-10-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Corpo Security
+2 Jacked-In Voodoo Boy
+1 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 Modded Muramasa
+1 Rogue Amendiares: Queen of the Afterlife
+2 Modded Kusanagi
+1 Saul Bright: Stormrider
+2 Tetratronic Rippler
+1 Dying Night: V's Pistol
+2 Riot Shield
+1 NetWatch Netdriver
+2 Zetatech Berserk
+2 Trust No One
+2 Reboot Optics
+2 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Memory Relapse
+2 Unlikely Bond
+1 Les Élémens
+1 Towerfall

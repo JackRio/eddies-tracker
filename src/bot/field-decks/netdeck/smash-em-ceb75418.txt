@@ -1,0 +1,31 @@
+# SMASH EM - by sawft_pawz (netdeck.gg ceb75418-792b-4dbe-ba98-97b0384c66c4, 0 likes, 17 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+2 Rockn' Rockerboy
+2 Heywood Ripperdoc
+2 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Live with the Aftermath
+2 Over the Edge
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Meredith Stout: Stone Cold Corpo
+# side: 1 MaxTac Suppression Team
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Detonate

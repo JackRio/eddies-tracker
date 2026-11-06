@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg df9d2197-b108-44d1-8b42-f17a20e47e3d, 0 likes, 38 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Chrome Fang
+3 Lizzy Wizzy: Delicate Weapon
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Octant
+1 Placide: Voodoo Sentinel
+3 All is Lost
+3 Floor It
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Shattered Memories
+3 Carnage at the Colosseum

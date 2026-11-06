@@ -1,0 +1,26 @@
+# Gal Pals - by CowboyKatakuri (netdeck.gg 3c98e1b4-1a23-4286-9bb9-6849daf0b81a, 2 likes, 23 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Panam Palmer: Nomad Cavalry
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 Valentino Street Racer
+1 Hanako Arasaka: In a Gilded Cage
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Rogue Amendiares: Queen of the Afterlife
+1 Heywood Ripperdoc
+3 Tetratronic Rippler
+3 Riot Shield
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+2 Chrome Reverie
+3 Memory Relapse
+2 We Gotta Live Together

@@ -1,0 +1,25 @@
+# YYR Gear - by Vizix (netdeck.gg 284be5c2-35ed-44bb-955c-5458d6e853e4, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+2 Johnny Silverhand: Never Stop Fighting
+1 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+1 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 The Heist
+3 Cyberpsychosis

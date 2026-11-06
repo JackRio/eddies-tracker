@@ -1,0 +1,29 @@
+# Arasaka - by ? (netdeck.gg 1982f969-8360-49ee-b2ec-46f3dea9c252, 0 likes, 28 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+2 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+3 Kerry Eurodyne: The Last Rockerboy
+1 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Zetatech Berserk
+3 Synapse Burnout
+
+# Sideboard (not loaded):
+# side: 3 Maelstrom Zealots
+# side: 1 Minotaur
+# side: 3 Detonate

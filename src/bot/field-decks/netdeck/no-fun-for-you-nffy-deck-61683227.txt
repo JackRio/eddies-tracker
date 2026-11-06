@@ -1,0 +1,24 @@
+# No Fun for You! NFFY deck! - by TBrine (netdeck.gg 61683227-e817-4c5a-9808-989e5eb2ac15, 0 likes, 2 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Wakako Okada: Peace and Harmony
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Mox Inciters
+2 Gilded Matón
+2 Westbrook Netrunner
+2 Caliber: Totentanz's Top Dog
+2 MaxTac Suppression Team
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Reboot Optics
+3 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Unlikely Bond

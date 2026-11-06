@@ -1,0 +1,30 @@
+# Afterlife - by BlueDyeNasty (netdeck.gg a1ebdd02-523b-4fc0-9abd-3eecc9d488e4, 18 likes, 722 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 Corpo Security
+2 MaxTac Squadron
+2 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 Rogue Amendiares: Queen of the Afterlife
+2 Panam Palmer: Strength Through Family
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Corporate Surveillance
+3 Nocturne OP55 N1
+2 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Riding Nomad
+# side: 2 Nadia: Fighting Through Grief
+# side: 3 Riot Shield

@@ -1,0 +1,29 @@
+# Rocker Strength Maxxing - by silentnocturne (netdeck.gg ed85a66c-2e51-4f1c-8502-13c3a6f11b27, 0 likes, 3 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+
+// Main deck
+2 Japantown Jonin
+3 Ruthless Lowlife
+2 Secondhand Bombus
+3 La Llorona: Ghost of the Past
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Kerry Eurodyne: The Last Rockerboy
+2 Chrome Fang
+2 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Gorilla Arms
+2 Afterparty at Lizzie's
+2 Detonate
+1 Industrial Assembly
+1 Safety Override
+2 Cyberpsychosis
+2 Over the Edge

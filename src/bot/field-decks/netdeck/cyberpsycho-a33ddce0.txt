@@ -1,0 +1,24 @@
+# Cyberpsycho - by Choom (netdeck.gg a33ddce0-e992-4e67-83d4-2c3f44ddf760, 0 likes, 9 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Ruthless Lowlife
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Screw: Lovelorn Fool
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 All is Lost
+2 Safety Override
+3 Cyberpsychosis
+2 Live with the Aftermath

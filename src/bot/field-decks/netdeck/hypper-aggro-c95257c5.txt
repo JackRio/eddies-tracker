@@ -1,0 +1,25 @@
+# Hypper Aggro - by Farfalla (netdeck.gg c95257c5-84ab-4930-b44d-c19a3aebe3af, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+2 Japantown Jonin
+3 Delamain: Rideshare AI
+2 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Detonate
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Unlikely Bond
+2 Les Élémens
+3 Towerfall

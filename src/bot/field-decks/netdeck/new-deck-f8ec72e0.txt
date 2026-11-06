@@ -1,0 +1,25 @@
+# New Deck - by xTHENATURALx (netdeck.gg f8ec72e0-ea04-4302-9547-9f8a96757f91, 0 likes, 8 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Valentino Street Racer
+2 Screw: Lovelorn Fool
+1 Panam Palmer: Strength Through Family
+2 MaxTac Heavy
+3 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Detonate
+3 Synapse Burnout
+3 Fool on the Hill
+3 (Don't Fear) The Reaper

@@ -1,0 +1,26 @@
+# mono blue - by MrWesLee (netdeck.gg 39fe838f-fc68-459e-a387-9bb7142dc658, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+1 Delamain: Rideshare AI
+2 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+1 Les Élémens
+3 Towerfall

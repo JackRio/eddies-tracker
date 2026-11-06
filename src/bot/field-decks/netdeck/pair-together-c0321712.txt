@@ -1,0 +1,34 @@
+# Pair Together 🟨🟨🟩 - by ChippedInCrown (netdeck.gg c0321712-5a71-4266-b636-d7dae6b07d19, 0 likes, 24 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Augmented Negotiators
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Jackie Welles: Ride or Die Choom
+2 Nadia: Fighting Through Grief
+3 Adrenaline Converter
+2 Riot Shield
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 The Heist
+3 Live with the Aftermath
+2 Memory Relapse
+2 Bootleg Black Sapphire Show
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 2 Dexter DeShawn: One Last Chance
+# side: 2 Rockn' Rockerboy
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 2 Safety Override

@@ -1,0 +1,26 @@
+# MONO YELLOW ADAM - by ? (netdeck.gg dcdf46ec-483e-474e-9aeb-29402a9aba0c, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Gilded Matón
+2 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Adrenaline Converter
+2 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

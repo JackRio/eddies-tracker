@@ -1,0 +1,27 @@
+# Voltron Rush - by Cyber_Dad22 (netdeck.gg 2b59ffd0-0687-4ac8-a9cc-36aaafc7b510, 0 likes, 4 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Ruthless Lowlife
+2 Sketchy Ripper
+2 Swordwise Huscle
+2 Valentino Guerrera
+3 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 MaxTac AV
+2 Royce: Don't Call Me Simon
+2 Kiroshi Optics
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 All is Lost
+2 The Heist
+2 Shattered Memories
+3 We Gotta Live Together

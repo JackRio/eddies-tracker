@@ -1,0 +1,24 @@
+# New Deck - by Kidamasaomi91 (netdeck.gg 5c3a1835-0735-49e4-83bb-cc326324913a, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

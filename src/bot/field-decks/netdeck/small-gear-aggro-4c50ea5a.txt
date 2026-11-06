@@ -1,0 +1,23 @@
+# Small Gear Aggro - by Leotamer (netdeck.gg 4c50ea5a-9cab-499f-b56a-9f3d91460a19, 0 likes, 3 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Rockn' Rockerboy
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+1 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Heist

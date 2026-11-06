@@ -1,0 +1,39 @@
+# Panam Beta Gear - by CyberBeastO (netdeck.gg 9e18ca2a-454a-433a-81c6-bb73af4c91b8, 0 likes, 33 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+1 Augmented Negotiators
+1 Emergency Atlus
+1 Field Operator
+2 MaxTac Squadron
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Hanako Arasaka: In a Gilded Cage
+1 Maelstrom Zealots
+1 Pepe Najarro: Working Doubles
+1 Caliber: Totentanz's Top Dog
+1 MaxTac AV
+1 Riding Nomad
+1 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+1 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+1 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+1 Kiroshi Optics
+2 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+1 Overwatch: Panam's Gift
+2 Zetatech Berserk
+1 Afterparty at Lizzie's
+1 Peace Offering
+1 Fool on the Hill
+1 The Heist
+1 We Gotta Live Together
+1 (Don't Fear) The Reaper

@@ -1,0 +1,23 @@
+# Carnage - by RootsOfOneTree (netdeck.gg 9f4cd322-3c7a-4160-b182-ef4f9d830b36, 0 likes, 1 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+3 6th Street Recruits
+3 Rockn' Rockerboy
+3 Screw: Lovelorn Fool
+3 Animals Wrecker
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Gunpoint Diplomacy
+3 Carnage at the Colosseum

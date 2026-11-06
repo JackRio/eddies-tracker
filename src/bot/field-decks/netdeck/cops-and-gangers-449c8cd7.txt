@@ -1,0 +1,24 @@
+# Cops and Gangers - by Khalt (netdeck.gg 449c8cd7-b9cb-4b60-a74c-6a58078b4759, 0 likes, 138 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 Viktor Vektor: Drop Your Illusions
+2 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+2 Shattered Memories

@@ -1,0 +1,26 @@
+# New Deck - by LOTUS1019 (netdeck.gg f695eb48-17ed-4aac-ab72-3a5f4e454fb5, 0 likes, 5 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Corpo Security
+3 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+3 MT0D12 Flathead
+3 Wraith Marauders
+3 Tetratronic Rippler
+3 Riot Shield
+3 NetWatch Netdriver
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

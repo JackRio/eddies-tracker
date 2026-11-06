@@ -1,0 +1,25 @@
+# El Sombrero Gang - by DDcourse (netdeck.gg 0e6e3986-1165-44a8-b25b-2794678a4864, 0 likes, 2 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 Johnny Silverhand: Rocking Renegade
+
+// Main deck
+2 La Llorona: Ghost of the Past
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 El Sombrerón: La Venganza Lenta
+2 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 NetWatch Netdriver
+3 Industrial Assembly
+2 Reboot Optics
+2 Bonnie and Clyde
+3 Nocturne OP55 N1
+3 Gunpoint Diplomacy
+2 Shattered Memories
+3 Carnage at the Colosseum

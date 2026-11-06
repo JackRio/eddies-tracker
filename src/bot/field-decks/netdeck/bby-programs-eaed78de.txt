@@ -1,0 +1,24 @@
+# BBY Programs - by Gorarath (netdeck.gg eaed78de-b031-419c-854a-fc5fcf4b8f4e, 1 likes, 6 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Hanako Arasaka: In a Gilded Cage
+3 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

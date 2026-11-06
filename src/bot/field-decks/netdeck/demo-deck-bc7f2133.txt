@@ -1,0 +1,29 @@
+# Demo Deck - by firstangel999 (netdeck.gg bc7f2133-f61b-4406-acf1-f5e1b1d77e6b, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Jacked-In Voodoo Boy
+3 Mox Inciters
+2 Delamain Cab
+3 Rita Wheeler: No Stupid Questions
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+1 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 Floor It
+2 Trust No One
+3 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Unlikely Bond
+3 Towerfall

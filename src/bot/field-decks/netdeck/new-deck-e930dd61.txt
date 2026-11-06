@@ -1,0 +1,23 @@
+# New Deck - by Scarycolt (netdeck.gg e930dd61-3273-465c-8466-c8ee87fa7821, 0 likes, 4 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Kerry Eurodyne: The Last Rockerboy
+3 Kiroshi Optics
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 Detonate
+3 Peace Offering
+3 Shattered Memories

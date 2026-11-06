@@ -1,0 +1,28 @@
+# RRB - by TheTallGuy (netdeck.gg 1f15c172-c445-414b-a3bc-a107f3d4cada, 4 likes, 219 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Mox Inciters
+3 6th Street Recruits
+3 V: Roamer of the Badlands
+3 Animals Wrecker
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Industrial Assembly
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Nocturne OP55 N1
+3 Gunpoint Diplomacy
+
+# Sideboard (not loaded):
+# side: 1 Reboot Optics

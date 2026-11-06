@@ -1,0 +1,25 @@
+# Mono Blue Programs - by darksungwen (netdeck.gg 748af723-f231-43cb-8f1d-fe1370bc1dce, 1 likes, 14 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Delamain: Rideshare AI
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

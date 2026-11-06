@@ -1,0 +1,26 @@
+# BBR Program Tempo - by Skrully (netdeck.gg 3d5bb0c6-3ce4-4e20-9551-77548f182e20, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 All is Lost
+1 Detonate
+3 Floor It
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+1 Towerfall

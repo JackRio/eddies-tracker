@@ -1,0 +1,24 @@
+# Main YYR - by ? (netdeck.gg 89c42e81-0025-46fd-81e2-0da15f637026, 0 likes, 21 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+1 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

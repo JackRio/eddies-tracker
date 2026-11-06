@@ -1,0 +1,25 @@
+# gig control - by Holo7 (netdeck.gg a5acb90b-7e18-4a38-bcd5-dadddb5f21bf, 0 likes, 2 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Corpo Security
+3 Emergency Atlus
+2 MaxTac Squadron
+2 Hanako Arasaka: In a Gilded Cage
+3 MaxTac AV
+2 MaxTac Suppression Team
+2 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+2 Zetatech Faceplate
+2 Zetatech Berserk
+2 Afterparty at Lizzie's
+3 Peace Offering
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

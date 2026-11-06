@@ -1,0 +1,23 @@
+# Full Borg - by LilT (netdeck.gg 25caa5a6-5654-4a21-a427-163e5b66c109, 0 likes, 19 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Augmented Negotiators
+3 Offduty Malfini
+2 Caliber: Totentanz's Top Dog
+3 Rockn' Rockerboy
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Safety Override
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

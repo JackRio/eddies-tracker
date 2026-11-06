@@ -1,0 +1,30 @@
+# Maelstrom Bin Run - by HungSpellboundGames (netdeck.gg f6b54f3c-bb73-4634-8ecd-e4fd0e9f3afa, 0 likes, 95 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Maelstrom Goons
+2 Swordwise Huscle
+2 Royce: Don't Call Me Simon
+1 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+3 Minotaur
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 All is Lost
+3 Live with the Aftermath
+3 Over the Edge
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Rockn' Rockerboy
+# side: 3 Safety Override
+# side: 2 Shattered Memories

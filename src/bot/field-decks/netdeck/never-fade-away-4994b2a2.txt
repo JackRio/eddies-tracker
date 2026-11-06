@@ -1,0 +1,31 @@
+# Never Fade Away - by eelnoside (netdeck.gg 4994b2a2-2f61-4d5c-bf5f-3c1cb3e4e050, 1 likes, 84 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 1 Lizzy Wizzy: Delicate Weapon
+# side: 1 Maman Brigitte: Spirit of Death
+# side: 2 Modded Kusanagi
+# side: 1 Towerfall

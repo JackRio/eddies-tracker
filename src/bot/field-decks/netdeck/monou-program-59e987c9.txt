@@ -1,0 +1,25 @@
+# MonoU Program - by Kardia (netdeck.gg 59e987c9-d46f-4eb3-999d-2ed0ea948569, 0 likes, 14 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Unlikely Bond
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,24 @@
+# New Deck - by Kidamasaomi91 (netdeck.gg bff41910-390d-42e6-b866-b17e907eaafd, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+3 Emergency Atlus
+2 Field Operator
+2 MaxTac Squadron
+3 Wraith Marauders
+3 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+2 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+2 Fool on the Hill
+3 Take Control
+3 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

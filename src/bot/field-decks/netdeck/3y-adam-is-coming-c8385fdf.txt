@@ -1,0 +1,25 @@
+# (3Y) Adam is Coming - by SkullDelta (netdeck.gg c8385fdf-387b-4f5f-8858-5b1567eaf99e, 0 likes, 21 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

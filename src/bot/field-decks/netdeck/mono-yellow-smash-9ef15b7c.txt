@@ -1,0 +1,26 @@
+# Mono Yellow Smash - by Spark777 (netdeck.gg 9ef15b7c-17cc-446a-834a-24a7d8523e3e, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+1 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

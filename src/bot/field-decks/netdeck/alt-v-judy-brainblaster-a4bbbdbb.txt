@@ -1,0 +1,26 @@
+# Alt V Judy Brainblaster - by lowfidelity (netdeck.gg a4bbbdbb-656c-405e-b191-97efafc9e455, 0 likes, 48 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+1 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Shattered Memories
+1 Les Élémens
+3 Towerfall

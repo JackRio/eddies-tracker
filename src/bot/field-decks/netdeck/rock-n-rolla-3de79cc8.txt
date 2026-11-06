@@ -1,0 +1,28 @@
+# Rock N Rolla - by Stranger (netdeck.gg 3de79cc8-974b-4003-bb52-10e7f8b88ce2, 0 likes, 25 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Secondhand Bombus
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Animals Wrecker
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 All is Lost
+2 Detonate
+2 The Heist
+2 Appetite for Destruction
+2 Cyberpsychosis

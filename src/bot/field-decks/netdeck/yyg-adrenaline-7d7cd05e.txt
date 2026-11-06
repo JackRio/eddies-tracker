@@ -1,0 +1,24 @@
+# YYG - Adrenaline - by DrewFrees (netdeck.gg 7d7cd05e-0dfa-467c-aed3-b89b569e1c26, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Field Operator
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Nadia: Fighting Through Grief
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Synapse Burnout
+2 Safety Override
+2 The Heist
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+2 We Gotta Live Together

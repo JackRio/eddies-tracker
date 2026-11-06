@@ -1,0 +1,30 @@
+# BBG Ver 1.0 - by Cybermancer (netdeck.gg 67d369f3-fa9f-40fb-b4bc-8896e443bf38, 0 likes, 147 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 2 Modded Kusanagi
+# side: 3 Unlikely Bond

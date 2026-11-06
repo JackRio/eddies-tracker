@@ -1,0 +1,27 @@
+# New Deck - by Dtwenty (netdeck.gg d4164a62-0fec-4f59-825c-f955d44fd9f5, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Mox Inciters
+2 Delamain Cab
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 MaxTac AV
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Towerfall

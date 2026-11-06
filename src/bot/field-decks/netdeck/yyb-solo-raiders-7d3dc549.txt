@@ -1,0 +1,26 @@
+# YYB Solo Raiders - by AutumnRain (netdeck.gg 7d3dc549-7069-4514-911d-4103f47f834c, 0 likes, 21 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Sketchy Ripper
+1 Viktor Vektor: You Might Feel a Little Pinch
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+1 Rogue Amendiares: Queen of the Afterlife
+1 Modded Kusanagi
+1 Alt Cunningham: Mother of Daemons
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Trust No One
+3 Safety Override
+3 The Heist
+2 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1

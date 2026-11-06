@@ -1,0 +1,23 @@
+# Differing Gig Theme Deck - by Analog_V (netdeck.gg f3af0aa4-2428-46c6-8b7e-0115319dfcbe, 0 likes, 31 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Hanako Arasaka: In a Gilded Cage
+2 Rita Wheeler: No Stupid Questions
+2 Jackie Welles: Ride or Die Choom
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show

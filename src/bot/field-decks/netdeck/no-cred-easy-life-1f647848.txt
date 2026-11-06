@@ -1,0 +1,25 @@
+# No Cred Easy Life - by Dwavid (netdeck.gg 1f647848-b8dc-4b11-8fb4-2341eaa642f5, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+1 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,24 @@
+# Date Night - by AgeoftheDragon (netdeck.gg 81afb3fb-61ff-47fd-8394-3f45f1e3f84c, 0 likes, 4 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 6th Street Recruits
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Floor It
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Over the Edge
+3 Shattered Memories
+2 Towerfall

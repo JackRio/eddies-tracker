@@ -1,0 +1,23 @@
+# Chippin' In - by Knightwish (netdeck.gg 000d7834-39de-4a46-8016-965bc6914e34, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 Kerry Eurodyne: The Last Rockerboy
+3 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Satori: Sword of Saburo
+3 Detonate
+3 Safety Override
+3 Cyberpsychosis
+3 Live with the Aftermath
+3 Over the Edge
+3 Shattered Memories
+3 Bootleg Black Sapphire Show

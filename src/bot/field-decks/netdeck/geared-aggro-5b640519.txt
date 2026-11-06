@@ -1,0 +1,25 @@
+# Geared Aggro - by Red (netdeck.gg 5b640519-8e05-41e8-a2b4-b0cc9aa04a6b, 2 likes, 31 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+1 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+3 Afterparty at Lizzie's
+3 Detonate
+2 Industrial Assembly
+3 The Heist
+2 Bonnie and Clyde

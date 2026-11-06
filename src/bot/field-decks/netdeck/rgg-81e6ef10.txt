@@ -1,0 +1,28 @@
+# RGG - by X0TCG (netdeck.gg 81e6ef10-64a2-4e90-bc56-2bf796e35aad, 0 likes, 20 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+2 Corpo Security
+1 Valentino Street Racer
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+2 V: Roamer of the Badlands
+1 Panam Palmer: Strength Through Family
+1 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+1 Fool on the Hill
+1 Memory Relapse
+1 Shattered Memories
+2 (Don't Fear) The Reaper

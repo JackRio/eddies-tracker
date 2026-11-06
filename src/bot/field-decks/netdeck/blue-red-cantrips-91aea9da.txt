@@ -1,0 +1,33 @@
+# blue/red cantrips - by chrisgarry (netdeck.gg 91aea9da-d198-4db3-9294-88b9ac65965d, 2 likes, 164 views, updated 2026-10-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+2 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+3 Detonate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Modded Kusanagi
+# side: 1 Placide: Voodoo Sentinel
+# side: 3 Mantis Blades
+# side: 1 Towerfall

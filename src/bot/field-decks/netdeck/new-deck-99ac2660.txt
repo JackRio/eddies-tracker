@@ -1,0 +1,23 @@
+# New Deck - by V_ (netdeck.gg 99ac2660-337d-4f02-984a-fb3d1b7a9990, 0 likes, 4 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 All is Lost
+3 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+2 Shattered Memories
+3 Carnage at the Colosseum

@@ -1,0 +1,30 @@
+# New Deck - by ? (netdeck.gg f5b4fc9d-c02b-4ba1-aef3-16e93f7ac615, 0 likes, 4 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+1 V: Corporate Exile
+
+// Main deck
+1 Corpo Security
+2 Tyger's Whisper
+2 Emergency Atlus
+2 Field Operator
+2 MaxTac Squadron
+2 Delamain Cab
+1 Goro Takemura: Losing His Way
+2 Psycho Squad
+2 Nadia: Fighting Through Grief
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 Sandevistan
+2 Floor It
+2 Trust No One
+2 Corporate Surveillance
+2 Reboot Optics
+2 Take Control
+2 Nocturne OP55 N1
+2 Memory Relapse
+2 Unlikely Bond

@@ -1,0 +1,25 @@
+# Netrunner - by FatherNature (netdeck.gg 63c163d0-6ca5-4f5b-8c00-e67f0d584095, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

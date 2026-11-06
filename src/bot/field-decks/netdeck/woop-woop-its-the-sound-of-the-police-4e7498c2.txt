@@ -1,0 +1,24 @@
+# Woop Woop Its the Sound of the Police - by Redier (netdeck.gg 4e7498c2-0c6e-45a7-a614-f2402ccb17a4, 0 likes, 4 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Secondhand Bombus
+1 Emergency Atlus
+3 MaxTac Squadron
+3 MaxTac AV
+3 MaxTac Suppression Team
+2 Nadia: Fighting Through Grief
+3 Trauma Team Operatives
+3 MaxTac Heavy
+3 Kiroshi Optics
+3 Riot Shield
+3 Zetatech Faceplate
+3 Zetatech Berserk
+3 Afterparty at Lizzie's
+2 The Heist
+2 Wild in the Streets

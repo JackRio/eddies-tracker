@@ -1,0 +1,25 @@
+# Gearhead Galley - by NatCat (netdeck.gg 16ad9f36-c9f3-4c95-b175-bbf5f70efa8a, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Maelstrom Goons
+3 Caliber: Totentanz's Top Dog
+3 Royce: Don't Call Me Simon
+3 Screw: Lovelorn Fool
+1 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+2 Mantis Blades
+2 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+3 Safety Override
+2 Cyberpsychosis

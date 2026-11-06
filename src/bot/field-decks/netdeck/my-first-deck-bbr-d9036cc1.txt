@@ -1,0 +1,38 @@
+# My First Deck (BBR) - by Drew (netdeck.gg d9036cc1-13e8-4c86-88df-6d03b5ada89e, 0 likes, 18 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+2 Jacked-In Voodoo Boy
+1 Japantown Jonin
+1 Delamain: Rideshare AI
+1 La Llorona: Ghost of the Past
+3 Mox Inciters
+1 Valentino Guerrera
+1 Hacked Corpo
+1 Psycho Squad
+1 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+1 Lizzy Wizzy: Delicate Weapon
+1 Royce: Don't Call Me Simon
+1 Modded Kusanagi
+3 Mantis Blades
+1 Tetratronic Rippler
+1 Arasaka Emergency Radioport
+1 Dying Night: V's Pistol
+1 Satori: Sword of Saburo
+1 NetWatch Netdriver
+2 Floor It
+1 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+1 Chrome Reverie
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Pyramid Song
+1 Unlikely Bond

@@ -1,0 +1,31 @@
+# New Deck - by Dracowyrd (netdeck.gg 8f6bdf27-5c65-4ee0-bd3a-60c85fcb564b, 0 likes, 12 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Padre: Man of the Cross
+
+// Main deck
+3 Mox Inciters
+3 Valentino Street Racer
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+
+# Sideboard (not loaded):
+# side: 2 Riot Shield
+# side: 3 Floor It
+# side: 2 We Gotta Live Together

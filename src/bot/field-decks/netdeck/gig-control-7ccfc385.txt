@@ -1,0 +1,32 @@
+# Gig Control - by Frostybit (netdeck.gg 7ccfc385-6b67-4278-bf69-42f2694586c4, 0 likes, 8 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Japantown Jonin
+2 Ruthless Lowlife
+3 Secondhand Bombus
+2 Dexter DeShawn: One Last Chance
+2 La Llorona: Ghost of the Past
+1 Valentino Guerrera
+2 Hanako Arasaka: In a Gilded Cage
+3 T-Bug: Amateur Philosopher
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+2 Kiroshi Optics
+3 Mantis Blades
+2 Satori: Sword of Saburo
+2 Afterparty at Lizzie's
+2 All is Lost
+3 Detonate
+2 Appetite for Destruction
+2 Bonnie and Clyde
+3 Cyberpsychosis
+2 Over the Edge
+1 Carnage at the Colosseum

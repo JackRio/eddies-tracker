@@ -1,0 +1,36 @@
+# New Deck - by Hiyoma (netdeck.gg d6fc7253-3c94-4f3a-96dd-9d9c924a44f9, 0 likes, 23 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Delamain: Rideshare AI
+2 Mox Inciters
+2 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 1 Psycho Squad
+# side: 1 Lizzy Wizzy: Delicate Weapon
+# side: 1 Chrome Reverie
+# side: 1 Nocturne OP55 N1
+# side: 1 Pyramid Song
+# side: 1 Towerfall

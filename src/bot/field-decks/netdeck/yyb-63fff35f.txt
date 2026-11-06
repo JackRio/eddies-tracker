@@ -1,0 +1,24 @@
+# YYB - by nunkyjoe (netdeck.gg 63fff35f-5ece-482a-a082-6c7de2bdb896, 0 likes, 4 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Secondhand Bombus
+1 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+2 Hanako Arasaka: In a Gilded Cage
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Trust No One
+3 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show

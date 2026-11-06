@@ -1,0 +1,32 @@
+# Keep Sasha Alive - by ShoopGame (netdeck.gg 7b4666bd-d91f-4f2a-b939-f97f7a0ab822, 0 likes, 7 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Sasha Yakovleva: Won't Let You Down
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 MaxTac Squadron
+2 Mox Inciters
+3 Maelstrom Zealots
+2 MaxTac AV
+2 Rogue Amendiares: Queen of the Afterlife
+2 MaxTac Heavy
+2 Saul Bright: Stormrider
+2 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Sandevistan
+3 Zetatech Berserk
+2 Floor It
+3 Synapse Burnout
+2 Reboot Optics
+3 Memory Relapse
+2 Unlikely Bond
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 1 Goro Takemura: Losing His Way
+# side: 2 Pepe Najarro: Working Doubles
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Nocturne OP55 N1

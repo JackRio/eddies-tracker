@@ -1,0 +1,24 @@
+# BBG Control - by ariel (netdeck.gg 9a9ed8ba-693d-47e4-95eb-cc95809dea79, 0 likes, 1 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Delamain: Rideshare AI
+3 Pepe Najarro: Working Doubles
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 Peace Offering
+2 Trust No One
+2 Reboot Optics
+2 Take Control
+2 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 Towerfall

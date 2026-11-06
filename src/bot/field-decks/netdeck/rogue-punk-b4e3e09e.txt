@@ -1,0 +1,27 @@
+# Rogue Punk - by TiredOldCat (netdeck.gg b4e3e09e-13da-41be-8c59-f03ba05ac91f, 0 likes, 3 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Sketchy Ripper
+3 Swordwise Huscle
+2 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+1 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+2 Safety Override
+1 The Heist
+1 Shattered Memories

@@ -1,0 +1,31 @@
+# FirstDeck.json - by vandalactual (netdeck.gg c2f7a5bb-ed06-4a35-a233-05351a397185, 0 likes, 37 views, updated 2026-10-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Secondhand Bombus
+1 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 Delamain Cab
+2 Offduty Malfini
+2 Psycho Squad
+2 T-Bug: Amateur Philosopher
+1 Maman Brigitte: Spirit of Death
+1 MaxTac Suppression Team
+2 MT0D12 Flathead
+2 Heywood Ripperdoc
+1 Modded Kusanagi
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Floor It
+2 Reboot Optics

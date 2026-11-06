@@ -1,0 +1,25 @@
+# Ctrl+Alt+Del - by Gonk Behavior (netdeck.gg 561e6849-30de-4d16-8be5-43ded387cda4, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+2 Corpo Security
+2 Jacked-In Voodoo Boy
+2 Goro Takemura: Losing His Way
+2 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Synapse Burnout
+3 Trust No One
+3 Take Control
+3 Chrome Reverie
+3 Memory Relapse
+3 Unlikely Bond
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

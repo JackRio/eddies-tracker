@@ -1,0 +1,25 @@
+# RYY - Cyberpsychosis - by TheTyrantKing (netdeck.gg 9c08097e-0b60-43d3-a5bb-925d704def1f, 2 likes, 119 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Afterparty at Lizzie's
+2 Detonate
+3 The Heist
+3 Cyberpsychosis
+2 Over the Edge

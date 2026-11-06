@@ -1,0 +1,30 @@
+# Betrayal - by Sagramore (netdeck.gg 2a5e5c59-df6b-4b62-9c14-f647e4653dac, 0 likes, 35 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Emergency Atlus
+3 Field Operator
+2 Mox Inciters
+2 Psycho Squad
+2 Nadia: Fighting Through Grief
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Riot Shield
+2 NetWatch Netdriver
+2 Zetatech Berserk
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Reboot Optics
+2 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Memory Relapse
+2 Unlikely Bond
+2 We Gotta Live Together

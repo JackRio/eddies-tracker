@@ -1,0 +1,26 @@
+# Adam smasher relic - by TBrine (netdeck.gg 59b798f4-c4d4-43dc-9ee6-13d91bb7556f, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+1 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+2 Minotaur
+2 Mandibular Upgrade
+2 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 The Heist
+2 Over the Edge
+2 Bootleg Black Sapphire Show

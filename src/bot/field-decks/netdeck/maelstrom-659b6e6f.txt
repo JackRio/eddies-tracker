@@ -1,0 +1,27 @@
+# Maelstrom - by erosenin (netdeck.gg 659b6e6f-14de-4813-b53a-082ca48efdd7, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+2 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+1 Viktor Vektor: Drop Your Illusions
+1 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mantis Blades
+2 Adrenaline Converter
+3 Satori: Sword of Saburo
+2 Gorilla Arms
+3 All is Lost
+1 The Heist
+3 Cyberpsychosis
+1 Bootleg Black Sapphire Show

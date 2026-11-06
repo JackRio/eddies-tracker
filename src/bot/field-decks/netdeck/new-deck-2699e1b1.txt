@@ -1,0 +1,31 @@
+# New Deck - by Blaky039 (netdeck.gg 2699e1b1-fd22-45dd-adb5-36f126e14345, 1 likes, 32 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Augmented Negotiators
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+1 Royce: Don't Call Me Simon
+3 Screw: Lovelorn Fool
+2 Viktor Vektor: Drop Your Illusions
+1 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+1 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Safety Override
+3 Live with the Aftermath
+3 Over the Edge
+
+# Sideboard (not loaded):
+# side: 2 Maelstrom Goons
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Heywood Ripperdoc
+# side: 2 Detonate

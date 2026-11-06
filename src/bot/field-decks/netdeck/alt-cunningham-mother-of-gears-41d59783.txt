@@ -1,0 +1,23 @@
+# Alt Cunningham: Mother of Gears - by Kajecik (netdeck.gg 41d59783-fd3e-46d7-b274-894b70cf44d8, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Meredith Stout: Stone Cold Corpo
+3 Trauma Team Operatives
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+3 Live with the Aftermath

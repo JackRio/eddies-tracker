@@ -1,0 +1,29 @@
+# Gear and things - by Eradcliffe (netdeck.gg 6ce84dec-9a13-4c99-8e09-426b2644456c, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Japantown Jonin
+1 Ruthless Lowlife
+3 Sketchy Ripper
+3 Maelstrom Goons
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+3 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Detonate
+2 The Heist
+1 Shattered Memories

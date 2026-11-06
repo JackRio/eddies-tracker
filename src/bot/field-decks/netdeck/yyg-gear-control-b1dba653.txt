@@ -1,0 +1,24 @@
+# YYG Gear Control - by TheTallGuy (netdeck.gg b1dba653-47b6-4c64-8ea9-42549afeba7e, 0 likes, 241 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Secondhand Bombus
+2 Tyger's Whisper
+3 Dexter DeShawn: One Last Chance
+3 MaxTac AV
+3 Jackie Welles: Ride or Die Choom
+2 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Peace Offering
+3 Synapse Burnout
+2 Safety Override
+2 Memory Relapse

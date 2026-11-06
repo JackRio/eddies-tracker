@@ -1,0 +1,31 @@
+# RRG Wrecker - by Björn Kimminich (netdeck.gg 4c97efdb-93ee-4ee7-b1ef-2b541d7ce03b, 1 likes, 129 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Field Operator
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Satori: Sword of Saburo
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Bonnie and Clyde
+2 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Maelstrom Zealots
+# side: 1 Johnny Silverhand: Never Stop Fighting
+# side: 2 Riot Shield
+# side: 1 Detonate
+# side: 2 Take Control

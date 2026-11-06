@@ -1,0 +1,29 @@
+# Reapers finally calling my name - by VIKING01257 (netdeck.gg 9a1ea466-36e0-41d0-8b3f-9696a0165e8f, 0 likes, 11 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+3 Screw: Lovelorn Fool
+2 Yorinobu Arasaka: Steel Dragon
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 The Heist
+3 Appetite for Destruction
+2 Cyberpsychosis
+
+# Sideboard (not loaded):
+# side: 2 Augmented Negotiators
+# side: 2 Trauma Team Operatives
+# side: 3 Bonnie and Clyde

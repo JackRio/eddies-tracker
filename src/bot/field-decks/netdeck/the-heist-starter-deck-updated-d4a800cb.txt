@@ -1,0 +1,25 @@
+# The Heist Starter Deck (updated) - by Vex (netdeck.gg d4a800cb-52f4-4799-be2b-c1da45e8ba73, 0 likes, 32 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Psycho Squad
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Trust No One
+3 The Heist
+2 Three Mouths, One Desire
+2 Nocturne OP55 N1

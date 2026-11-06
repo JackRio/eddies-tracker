@@ -1,0 +1,27 @@
+# New Deck - by Redskarr (netdeck.gg aab9abda-a567-42c6-b64e-0fd71dd45381, 0 likes, 1 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,27 @@
+# BrainWaltzing - by Trickster (netdeck.gg 0a8353e2-b3bf-409e-8a40-8444815b7f75, 0 likes, 5 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Placide: Voodoo Sentinel
+3 Detonate
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+2 Unlikely Bond
+2 Les Élémens
+2 Towerfall

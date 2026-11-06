@@ -1,0 +1,28 @@
+# You ain't built for these streets, Choom - by Rats T. Rats Dave (netdeck.gg 3b703447-53bd-4830-9c24-2b695e199b21, 0 likes, 60 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+2 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 Mox Inciters
+3 6th Street Recruits
+2 Chrome Fang
+3 Royce: Don't Call Me Simon
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 2 Rogue Amendiares: Queen of the Afterlife
+# side: 3 V: Roamer of the Badlands

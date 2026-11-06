@@ -1,0 +1,26 @@
+# mono blue brew - by JonB25 (netdeck.gg 62df8834-88d6-4073-9247-3d92b296912c, 0 likes, 24 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+1 V: Corporate Exile
+
+// Main deck
+1 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Judy Álvarez: Nothing to Doubt
+3 Modded Kusanagi
+3 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 Floor It
+2 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

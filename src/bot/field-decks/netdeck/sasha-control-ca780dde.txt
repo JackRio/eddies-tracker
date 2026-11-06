@@ -1,0 +1,26 @@
+# Sasha control - by o3o (netdeck.gg ca780dde-fa6f-47f9-b718-e969e3842a10, 0 likes, 13 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Jackie Welles: Pour One Out For Me
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Riot Shield
+3 Floor It
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+2 Take Control
+3 Three Mouths, One Desire
+1 Nocturne OP55 N1
+2 Pyramid Song
+2 Les Élémens
+2 Towerfall

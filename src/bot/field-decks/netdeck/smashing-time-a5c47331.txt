@@ -1,0 +1,24 @@
+# Smashing Time - by CraigTommo (netdeck.gg a5c47331-5b30-4a3b-8557-d89d93be6fcf, 0 likes, 46 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Hanako Arasaka: In a Gilded Cage
+2 MaxTac Suppression Team
+3 Rockn' Rockerboy
+3 Adam Smasher: Metal Over Meat
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+1 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

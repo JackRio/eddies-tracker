@@ -1,0 +1,23 @@
+# XBD's RRG - by Vex (netdeck.gg 8b86e6a8-167e-4dfa-9b47-a18b0d359d1a, 3 likes, 155 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 Field Operator
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+3 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+2 Peace Offering
+3 Bonnie and Clyde
+3 Over the Edge
+3 Memory Relapse
+3 Carnage at the Colosseum

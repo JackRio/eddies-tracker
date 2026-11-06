@@ -1,0 +1,28 @@
+# RRB - Trying to Make Evelyn Work - by morsdraconis (netdeck.gg aaf76da9-ec2b-4f50-9ad7-3b0c938b51dc, 2 likes, 117 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+3 Animals Wrecker
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Chrome Fang
+# side: 3 Modded Kusanagi
+# side: 2 Detonate

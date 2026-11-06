@@ -1,0 +1,24 @@
+# BBRaindance v2 - by Snapquester Mage (netdeck.gg 808b440b-d362-4ab4-b178-83c23a6244bf, 0 likes, 73 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Detonate
+3 Floor It
+3 Trust No One
+2 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

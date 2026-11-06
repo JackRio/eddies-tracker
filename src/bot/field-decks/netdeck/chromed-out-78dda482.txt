@@ -1,0 +1,32 @@
+# Chromed Out - by ImTyrd (netdeck.gg 78dda482-164e-487e-9476-9ea4d741eaa9, 0 likes, 19 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Sasha Yakovleva: Won't Let You Down
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+1 Secondhand Bombus
+2 Sketchy Ripper
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+1 Caliber: Totentanz's Top Dog
+2 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Adrenaline Converter
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Floor It
+1 Trust No One
+2 Reboot Optics
+2 The Heist
+2 Cyberpsychosis
+1 Nocturne OP55 N1
+1 Unlikely Bond

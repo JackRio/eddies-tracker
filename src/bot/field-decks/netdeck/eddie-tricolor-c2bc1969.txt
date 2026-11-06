@@ -1,0 +1,34 @@
+# Eddie Tricolor - by JDKaos (netdeck.gg c2bc1969-8dfb-4675-af62-5f8e31757c5e, 0 likes, 31 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+2 Field Operator
+2 La Llorona: Ghost of the Past
+2 Valentino Guerrera
+2 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+1 Arasaka Emergency Radioport
+1 Dying Night: V's Pistol
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Floor It
+2 Reboot Optics
+3 Nocturne OP55 N1
+
+# Sideboard (not loaded):
+# side: 2 Mox Inciters
+# side: 2 Wraith Marauders
+# side: 2 All is Lost
+# side: 1 We Gotta Live Together

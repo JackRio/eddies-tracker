@@ -1,0 +1,28 @@
+# BYY Relic Discard W TTO - by ? (netdeck.gg 275f6da1-5649-472d-8560-329083b08639, 0 likes, 33 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Rita Wheeler: No Stupid Questions
+2 Viktor Vektor: Drop Your Illusions
+1 Modded Kusanagi
+3 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Adrenaline Converter
+3 Zetatech Faceplate
+1 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+2 Safety Override
+3 The Heist
+2 Live with the Aftermath
+1 Nocturne OP55 N1

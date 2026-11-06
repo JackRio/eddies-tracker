@@ -1,0 +1,23 @@
+# Arasaka Family - by Encrypt (netdeck.gg 46127489-7b1c-4dc9-a1a5-b7edb0d3b0de, 0 likes, 21 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Corporate Surveillance
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

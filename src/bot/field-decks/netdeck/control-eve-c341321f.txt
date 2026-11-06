@@ -1,0 +1,25 @@
+# Control Eve - by Pypes (netdeck.gg c341321f-badb-49e0-b2f1-80873fccb589, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+2 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Modded Muramasa
+1 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+2 Towerfall

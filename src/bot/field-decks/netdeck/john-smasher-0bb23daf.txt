@@ -1,0 +1,23 @@
+# John Smasher - by TBrine (netdeck.gg 0bb23daf-1cab-4585-9458-3a904f06dbf0, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Viktor Vektor: Drop Your Illusions
+3 Heywood Ripperdoc
+1 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist

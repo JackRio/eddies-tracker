@@ -1,0 +1,29 @@
+# RGY Rush - by Fractal Crab (netdeck.gg 6ad1c9e5-5b0b-4efa-a9ee-c0f12b55fb7f, 0 likes, 18 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Field Operator
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+2 Johnny Silverhand: Never Stop Fighting
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Zetatech Berserk
+3 Corporate Surveillance
+3 The Heist
+3 Memory Relapse
+1 Shattered Memories
+
+# Sideboard (not loaded):
+# side: 3 Detonate
+# side: 2 Shattered Memories
+# side: 2 We Gotta Live Together

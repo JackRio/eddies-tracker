@@ -1,0 +1,24 @@
+# Corpo Outsorucing 2.0 - by ? (netdeck.gg ce63fdcf-4eda-42e9-9669-013327c86ee4, 1 likes, 8 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 MaxTac Squadron
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Screw: Lovelorn Fool
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+2 Fool on the Hill
+1 Over the Edge
+2 Shattered Memories
+3 We Gotta Live Together

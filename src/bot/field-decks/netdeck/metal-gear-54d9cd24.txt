@@ -1,0 +1,29 @@
+# Metal GEAR - by Datadog (netdeck.gg 54d9cd24-67f1-467d-98a6-b0f33dda9d00, 1 likes, 14 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+2 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+2 Meredith Stout: Stone Cold Corpo
+2 MaxTac Suppression Team
+2 Screw: Lovelorn Fool
+2 Viktor Vektor: Drop Your Illusions
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Detonate
+2 Industrial Assembly
+2 Cyberpsychosis
+2 Live with the Aftermath
+2 Over the Edge

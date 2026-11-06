@@ -1,0 +1,29 @@
+# YYR Gear - by Scizriks (netdeck.gg 000b9e6c-d8aa-4bc9-b617-f2adda741e0e, 2 likes, 144 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Detonate
+3 Industrial Assembly
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Secondhand Bombus
+# side: 1 Detonate
+# side: 1 Safety Override

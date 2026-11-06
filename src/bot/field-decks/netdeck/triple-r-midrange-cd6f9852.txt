@@ -1,0 +1,31 @@
+# Triple R - Midrange - by Lash101 (netdeck.gg cd6f9852-b55b-4dd5-a38a-d4562a480b51, 0 likes, 85 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 V: Roamer of the Badlands
+3 Animals Wrecker
+2 Octant
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+1 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 La Llorona: Ghost of the Past
+# side: 2 Chrome Fang
+# side: 1 Deadman Transmitter
+# side: 1 Detonate
+# side: 2 Over the Edge

@@ -1,0 +1,25 @@
+# Hammer Smash Face - by Nazraghoul (netdeck.gg 3ffca3fc-85c6-450d-83dd-07d8fe53c871, 1 likes, 59 views, updated 2026-10-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Johnny Silverhand: Rocking Renegade
+1 V: Corporate Exile
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+2 Over the Edge
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,26 @@
+# Blocker Deck - by The One (netdeck.gg f7cf1e09-328d-4c57-a787-3f7b7456961b, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Viktor Vektor: Sit Down and Relax
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+1 Tyger's Whisper
+3 Augmented Negotiators
+2 Hanako Arasaka: In a Gilded Cage
+2 Maelstrom Zealots
+3 MaxTac AV
+2 Riding Nomad
+2 Heywood Ripperdoc
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Fool on the Hill
+2 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

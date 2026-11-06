@@ -1,0 +1,26 @@
+# Royce gear - by Choom Bedi (netdeck.gg 69907517-df68-463e-84e7-b0a3689fa1d0, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 La Llorona: Ghost of the Past
+3 Maelstrom Goons
+3 Rockn' Rockerboy
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+1 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+3 Mantis Blades
+3 Adrenaline Converter
+1 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Safety Override
+2 Live with the Aftermath
+1 Shattered Memories

@@ -1,0 +1,24 @@
+# GGB Sasha - by ShatteringSkullz (netdeck.gg 4f54068c-2a72-4f1a-8ede-d1154be9b946, 0 likes, 2 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Sasha Yakovleva: Won't Let You Down
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Corpo Security
+3 Jacked-In Voodoo Boy
+3 MaxTac Squadron
+2 Rogue Amendiares: Queen of the Afterlife
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Sandevistan
+3 Peace Offering
+3 Trust No One
+3 Corporate Surveillance
+3 Reboot Optics
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Memory Relapse

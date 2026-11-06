@@ -1,0 +1,28 @@
+# Girly Pop (6B) - by Sekhmet (netdeck.gg 11acc2b2-c820-4340-9c76-a5aa28158f52, 0 likes, 8 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+1 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,25 @@
+# GRY Gear - by MoTheMonster (netdeck.gg d8c58a41-2744-428b-912c-dd5c8c3e1799, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Ruthless Lowlife
+3 Sketchy Ripper
+2 Tyger's Whisper
+2 Dexter DeShawn: One Last Chance
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+1 Saul Bright: Stormrider
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Corporate Surveillance
+2 Take Control

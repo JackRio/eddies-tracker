@@ -1,0 +1,28 @@
+# GGB - by Reed (netdeck.gg 0a0d6297-b904-4130-8311-ad89356442bc, 1 likes, 92 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Rogue Amendiares: Queen of the Afterlife
+3 Panam Palmer: Strength Through Family
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Trust No One
+3 Memory Relapse
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 1 Valentino Street Racer
+# side: 3 Floor It
+# side: 3 Reboot Optics

@@ -1,0 +1,25 @@
+# BBG Braindance Swarm - by Aqua (netdeck.gg 4efd8369-8645-4ce7-b089-c2cf3d1865bc, 0 likes, 8 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Tyger's Whisper
+3 Delamain: Rideshare AI
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+2 Les Élémens
+2 Towerfall

@@ -1,0 +1,26 @@
+# GGB - by Oni0nIt (netdeck.gg 8b39d4db-e711-4f7f-b3e3-da0c4286c410, 0 likes, 2 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+3 MaxTac AV
+2 Modded Muramasa
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+2 Saul Bright: Stormrider
+3 Riot Shield
+2 Sandevistan
+1 Overwatch: Panam's Gift
+3 Zetatech Berserk
+2 Reboot Optics
+2 Nocturne OP55 N1
+3 Unlikely Bond
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

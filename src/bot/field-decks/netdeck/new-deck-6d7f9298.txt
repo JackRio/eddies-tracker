@@ -1,0 +1,31 @@
+# New Deck - by HunterC (netdeck.gg 6d7f9298-462c-418a-8319-72ec0664d4da, 0 likes, 3 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+3 Valentino Guerrera
+3 Delamain Cab
+2 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+3 Chrome Fang
+1 Lizzy Wizzy: Delicate Weapon
+1 MT0D12 Flathead
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Tetratronic Rippler
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Detonate
+3 Floor It
+1 Nocturne OP55 N1
+1 Pyramid Song
+2 Les Élémens
+2 Towerfall

@@ -1,0 +1,24 @@
+# New Deck - by Splati (netdeck.gg 0828c28a-7f37-44fb-8456-47d3b7a6d506, 1 likes, 15 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Ruthless Lowlife
+2 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+3 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Octant
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+2 Shattered Memories
+3 Carnage at the Colosseum

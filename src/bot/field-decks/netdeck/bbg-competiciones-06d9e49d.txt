@@ -1,0 +1,29 @@
+# BBG Competiciones - by Marcos (netdeck.gg 06d9e49d-e671-44af-98d9-9017a5930365, 0 likes, 36 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Modded Kusanagi
+# side: 3 Riot Shield
+# side: 2 Take Control

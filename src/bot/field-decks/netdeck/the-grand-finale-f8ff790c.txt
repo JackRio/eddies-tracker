@@ -1,0 +1,28 @@
+# The Grand Finale - by KP (netdeck.gg f8ff790c-6aeb-49d9-b44d-1b7dfac8a70a, 6 likes, 238 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Detonate
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 3 MaxTac Suppression Team
+# side: 2 Over the Edge

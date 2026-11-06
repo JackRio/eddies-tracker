@@ -1,0 +1,29 @@
+# Mox Crew - by Naythin (netdeck.gg 9a36427c-8825-4b37-a3f7-dc6b3384a814, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Ruthless Lowlife
+2 La Llorona: Ghost of the Past
+3 Mox Inciters
+2 Valentino Guerrera
+2 Meredith Stout: Stone Cold Corpo
+1 Rita Wheeler: No Stupid Questions
+1 Royce: Don't Call Me Simon
+2 Mantis Blades
+2 Tetratronic Rippler
+2 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+2 Les Élémens
+2 Towerfall

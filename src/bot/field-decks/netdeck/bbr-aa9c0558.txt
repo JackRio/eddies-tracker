@@ -1,0 +1,32 @@
+# BBR - by Esco_Bruni (netdeck.gg aa9c0558-cac6-4679-9e6b-96dc0697ee86, 0 likes, 0 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Swordwise Huscle
+2 Rita Wheeler: No Stupid Questions
+3 V: Roamer of the Badlands
+2 Modded Kusanagi
+1 Minotaur
+2 Mantis Blades
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 NetWatch Netdriver
+2 Industrial Assembly
+2 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 All is Lost
+# side: 2 Detonate
+# side: 2 Over the Edge

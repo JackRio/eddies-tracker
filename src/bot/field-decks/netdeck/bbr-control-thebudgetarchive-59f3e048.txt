@@ -1,0 +1,30 @@
+# BBR CONTROL! TheBudgetArchive - by TheBudgetArchiveMitch (netdeck.gg 59f3e048-d466-4b79-96ac-3ddbef1529b9, 1 likes, 55 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Detonate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 MT0D12 Flathead
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Modded Kusanagi
+# side: 1 Over the Edge

@@ -1,0 +1,31 @@
+# BBR - Braindance - by Ylithian (netdeck.gg 65fb4328-6682-4eee-9e5a-6d99b5864d15, 0 likes, 33 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Mox Inciters
+2 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 NetWatch Netdriver
+3 All is Lost
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Detonate

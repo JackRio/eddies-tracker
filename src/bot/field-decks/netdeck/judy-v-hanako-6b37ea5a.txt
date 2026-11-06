@@ -1,0 +1,26 @@
+# Judy/ V/ Hanako - by Forcejr (netdeck.gg 6b37ea5a-bf97-49e8-953f-041d97997670, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+2 MT0D12 Flathead
+3 Wraith Marauders
+3 Tetratronic Rippler
+3 Riot Shield
+3 NetWatch Netdriver
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

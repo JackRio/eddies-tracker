@@ -1,0 +1,24 @@
+# New Deck - by ? (netdeck.gg c556c0f8-43d8-4a5b-a1e6-d389e3c97d15, 0 likes, 21 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 River Ward: Detective on the Hunt
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Trauma Team Operatives
+2 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 The Heist
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 359a77fd-576b-45b4-b8c5-ccf58c975a05, 0 likes, 2 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Royce: Don't Call Me Simon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,29 @@
+# Feeling Blue Braindance's - by Sanctum (netdeck.gg a070c69d-0bfc-4f7b-9a2a-b2406a322c62, 0 likes, 0 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Ruthless Lowlife
+2 Delamain: Rideshare AI
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+2 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+2 Detonate
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Les Élémens
+2 Towerfall

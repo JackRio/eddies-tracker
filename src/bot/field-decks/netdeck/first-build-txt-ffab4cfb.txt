@@ -1,0 +1,26 @@
+# First_Build.txt - by vandalactual (netdeck.gg ffab4cfb-6956-4d48-a80e-843f6e72de64, 0 likes, 14 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Emergency Atlus
+3 Field Operator
+2 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Peace Offering
+3 Take Control
+3 Memory Relapse
+2 We Gotta Live Together

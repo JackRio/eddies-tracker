@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 6cf0bbcc-d22e-4b6e-ac21-da6063790664, 0 likes, 14 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Sketchy Ripper
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Viktor Vektor: Drop Your Illusions
+2 Kiroshi Optics
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Detonate
+3 Industrial Assembly
+3 We Gotta Live Together

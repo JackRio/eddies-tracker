@@ -1,0 +1,32 @@
+# Nomadic Paradise - by ArbokKing (netdeck.gg e4c9cf91-6a2c-407d-8ba8-110fd7a34210, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+2 Japantown Jonin
+1 Tyger's Whisper
+3 La Llorona: Ghost of the Past
+1 Swordwise Huscle
+2 Valentino Guerrera
+3 6th Street Recruits
+1 Goro Takemura: Losing His Way
+2 Riding Nomad
+3 Wraith Marauders
+1 Panam Palmer: Strength Through Family
+1 MaxTac Heavy
+2 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Overwatch: Panam's Gift
+3 Industrial Assembly
+2 Peace Offering
+3 Synapse Burnout
+2 Corporate Surveillance
+3 Fool on the Hill
+3 Take Control
+2 Over the Edge
+2 Memory Relapse
+3 Wild in the Streets

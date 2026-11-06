@@ -1,0 +1,25 @@
+# BLUE rogue - by Trashpanda (netdeck.gg ce3fff88-941a-4884-91f7-ac1fb2f8955c, 0 likes, 0 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,35 @@
+# Mox & Claw - by tsundokugames (netdeck.gg 15525fa9-1f7d-4400-ba9a-ceabe1e02827, 0 likes, 31 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+2 Japantown Jonin
+2 Delamain: Rideshare AI
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Delamain Cab
+2 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Johnny Silverhand: Never Stop Fighting
+1 Modded Kusanagi
+2 Mantis Blades
+2 Tetratronic Rippler
+2 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 NetWatch Netdriver
+2 Floor It
+2 Industrial Assembly
+2 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Pyramid Song
+2 Shattered Memories
+2 Unlikely Bond
+2 Towerfall

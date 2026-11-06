@@ -1,0 +1,30 @@
+# Try - by W3bsor (netdeck.gg 87fa25d7-5956-4e0b-8015-bcee5c2bd7a6, 0 likes, 4 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Hacked Corpo
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 All is Lost
+2 Detonate
+2 Floor It
+3 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Pyramid Song
+2 Shattered Memories

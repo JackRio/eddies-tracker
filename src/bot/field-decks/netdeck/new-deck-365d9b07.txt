@@ -1,0 +1,26 @@
+# New Deck - by chazthewazzer (netdeck.gg 365d9b07-6782-4699-aec0-c46f6255c60e, 0 likes, 17 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+3 Swordwise Huscle
+3 Valentino Street Racer
+1 Goro Takemura: Losing His Way
+3 Pepe Najarro: Working Doubles
+1 MaxTac AV
+3 Panam Palmer: Strength Through Family
+1 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+3 Wild in the Streets
+1 (Don't Fear) The Reaper

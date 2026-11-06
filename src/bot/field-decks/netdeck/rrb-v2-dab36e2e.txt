@@ -1,0 +1,30 @@
+# RRB_v2 - by mori (netdeck.gg dab36e2e-71ec-4d1c-995a-cc93e4625f71, 0 likes, 23 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+
+// Main deck
+2 La Llorona: Ghost of the Past
+1 Valentino Guerrera
+3 6th Street Recruits
+1 Kerry Eurodyne: The Last Rockerboy
+2 El Sombrerón: La Venganza Lenta
+2 Screw: Lovelorn Fool
+3 Animals Wrecker
+2 Octant
+2 Yorinobu Arasaka: Steel Dragon
+2 Mantis Blades
+2 Satori: Sword of Saburo
+2 Deadman Transmitter
+1 NetWatch Netdriver
+1 Floor It
+3 Industrial Assembly
+1 Reboot Optics
+2 Appetite for Destruction
+2 Bonnie and Clyde
+1 Over the Edge
+2 Gunpoint Diplomacy
+3 Carnage at the Colosseum

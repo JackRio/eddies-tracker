@@ -1,0 +1,24 @@
+# RGB #3 - by RareTotem (netdeck.gg 48c7dffc-d878-4593-95af-ada30deaf71e, 1 likes, 226 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 NetWatch Netdriver
+2 Detonate
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+2 Chrome Reverie
+2 Nocturne OP55 N1

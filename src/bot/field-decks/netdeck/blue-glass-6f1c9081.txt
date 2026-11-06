@@ -1,0 +1,24 @@
+# Blue Glass - by OskrDaGrouch (netdeck.gg 6f1c9081-a57d-4e7d-9eae-d9d60e6bc120, 1 likes, 50 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Mox Inciters
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+1 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

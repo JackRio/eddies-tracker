@@ -1,0 +1,25 @@
+# VikVek Deck - by PascoloTCG (netdeck.gg aa6ae3ba-19b2-4fa1-b58c-e9d7ea4b387f, 0 likes, 54 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Detonate
+3 The Heist
+3 Live with the Aftermath

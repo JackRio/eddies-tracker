@@ -1,0 +1,24 @@
+# GEARS - by CyberGuy (netdeck.gg 98f18ddf-8a0d-4b58-80aa-48f7054eabae, 0 likes, 0 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Augmented Negotiators
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Screw: Lovelorn Fool
+2 Jackie Welles: Ride or Die Choom
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Heist
+1 Over the Edge
+2 Shattered Memories

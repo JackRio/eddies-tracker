@@ -1,0 +1,29 @@
+# delicate weapon - by drwnd (netdeck.gg 2a00fdfa-669a-4f37-9660-dfff64c810ef, 0 likes, 32 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Detonate
+3 Floor It
+3 Trust No One
+2 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Psycho Squad
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Modded Kusanagi

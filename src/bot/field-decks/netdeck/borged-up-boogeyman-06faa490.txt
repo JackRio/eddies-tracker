@@ -1,0 +1,23 @@
+# Borged Up Boogeyman - by Dwavid (netdeck.gg 06faa490-6f95-400b-bba3-52fc421e6d9e, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+2 Hanako Arasaka: In a Gilded Cage
+2 T-Bug: Amateur Philosopher
+3 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

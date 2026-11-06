@@ -1,0 +1,28 @@
+# New Deck - by deagen (netdeck.gg fcb8020d-2bbd-4d02-8ee3-9cc7b2a64d71, 0 likes, 2 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Japantown Jonin
+1 Tyger's Whisper
+1 Field Operator
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Sandayu Oda: Hanako's Guardian
+3 Yorinobu Arasaka: Steel Dragon
+1 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 Zetatech Berserk
+1 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Appetite for Destruction
+3 Memory Relapse

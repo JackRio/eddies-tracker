@@ -1,0 +1,29 @@
+# Braindance Bash - by Kydrax (netdeck.gg 7a6cb5a8-50a9-44af-a1a5-19279ccbf9e1, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+2 Detonate
+2 Floor It
+3 Trust No One
+1 Reboot Optics
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+2 Towerfall

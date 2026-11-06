@@ -1,0 +1,31 @@
+# BBY Rogue Super Solos - by WizardOfSteel (netdeck.gg d197579b-398a-428d-9d47-04ff3df5b474, 0 likes, 70 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Psycho Squad
+1 Rita Wheeler: No Stupid Questions
+2 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+2 Chrome Reverie
+2 Cyberpsychosis
+3 Nocturne OP55 N1
+2 Les Élémens
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Rita Wheeler: No Stupid Questions
+# side: 2 MaxTac Suppression Team
+# side: 3 Heywood Ripperdoc

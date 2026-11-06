@@ -1,0 +1,26 @@
+# New Deck - by ? (netdeck.gg 2b2fa598-e5ce-4846-bbcd-27c312bcb098, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Modded Kusanagi
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+2 Riot Shield
+2 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Les Élémens
+1 Towerfall

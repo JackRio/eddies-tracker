@@ -1,0 +1,25 @@
+# Preem Meat Delivery - by kunic (netdeck.gg ae0087d4-895c-40e5-ae89-f75e2d744950, 0 likes, 4 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Hanako Arasaka: In a Gilded Cage
+2 Meredith Stout: Stone Cold Corpo
+2 Caliber: Totentanz's Top Dog
+2 Minotaur
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+2 The Heist
+3 Live with the Aftermath
+2 Shattered Memories
+3 Bootleg Black Sapphire Show

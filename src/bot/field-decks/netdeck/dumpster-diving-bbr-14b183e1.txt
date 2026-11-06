@@ -1,0 +1,31 @@
+# Dumpster diving, BBR - by SLVRrose (netdeck.gg 14b183e1-64c4-4cd2-9b51-2760919e3fbd, 0 likes, 89 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 All is Lost
+2 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Meredith Stout: Stone Cold Corpo
+# side: 3 Detonate
+# side: 1 Floor It
+# side: 1 Nocturne OP55 N1

@@ -1,0 +1,27 @@
+# New Deck - by ? (netdeck.gg 1746a862-9a62-4108-be03-d5558bb97556, 0 likes, 1 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Delamain: Rideshare AI
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+1 Nocturne OP55 N1
+1 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+1 Towerfall

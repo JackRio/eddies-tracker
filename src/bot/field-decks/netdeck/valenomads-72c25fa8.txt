@@ -1,0 +1,27 @@
+# Valenomads - by NatCat (netdeck.gg 72c25fa8-2765-4f4c-8ee8-47788b92d6fb, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Valentino Guerrera
+2 Valentino Street Racer
+2 Riding Nomad
+3 V: Roamer of the Badlands
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Over the Edge
+1 Shattered Memories
+2 We Gotta Live Together
+2 (Don't Fear) The Reaper

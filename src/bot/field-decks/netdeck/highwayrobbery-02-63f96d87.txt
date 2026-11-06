@@ -1,0 +1,23 @@
+# HighwayRobbery 02 - by Platypus (netdeck.gg 63f96d87-b7a0-4cb4-b2c4-0baa60b1fe3f, 0 likes, 7 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 Meredith Stout: Stone Cold Corpo
+2 Rogue Amendiares: Queen of the Afterlife
+3 Johnny Silverhand: Never Stop Fighting
+3 Modded Kusanagi
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Synapse Burnout
+3 Corporate Surveillance
+2 Over the Edge
+3 Shattered Memories

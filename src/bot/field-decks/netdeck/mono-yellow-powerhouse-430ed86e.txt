@@ -1,0 +1,26 @@
+# Mono Yellow Powerhouse - by Red (netdeck.gg 430ed86e-97e6-44f9-ac89-a30d7ca252a6, 3 likes, 66 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Sketchy Ripper
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+3 Caliber: Totentanz's Top Dog
+1 Jackie Welles: Ride or Die Choom
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

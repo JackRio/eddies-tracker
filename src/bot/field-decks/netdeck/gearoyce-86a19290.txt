@@ -1,0 +1,27 @@
+# GeaRoyce - by Root (netdeck.gg 86a19290-b664-4dc2-9c5b-f0a453bdfdf4, 0 likes, 2 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Meredith Stout: Stone Cold Corpo
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Detonate
+3 Cyberpsychosis
+3 Live with the Aftermath
+2 Over the Edge
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Caliber: Totentanz's Top Dog
+# side: 3 Industrial Assembly

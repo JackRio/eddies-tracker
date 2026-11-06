@@ -1,0 +1,30 @@
+# Coupon Control - by Avincry (netdeck.gg 60084749-aab3-4b61-ab3f-a7b12a1d65fa, 1 likes, 87 views, updated 2026-10-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Trust No One
+1 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 1 MT0D12 Flathead
+# side: 2 Riot Shield
+# side: 2 Take Control

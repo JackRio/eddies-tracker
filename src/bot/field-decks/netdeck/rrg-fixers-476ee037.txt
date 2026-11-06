@@ -1,0 +1,29 @@
+# RRG Fixers - by voo (netdeck.gg 476ee037-444e-495b-ac18-40edf1a6cddf, 1 likes, 85 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+2 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+2 Peace Offering
+3 Synapse Burnout
+3 Bonnie and Clyde
+2 Over the Edge
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Riot Shield
+# side: 3 Detonate
+# side: 2 Shattered Memories

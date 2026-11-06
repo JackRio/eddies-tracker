@@ -1,0 +1,30 @@
+# Playing with the Trash - by Rats T. Rats Dave (netdeck.gg 60b3cb9d-8b5d-469b-b08e-5e2557c47cd3, 1 likes, 129 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Augmented Negotiators
+3 MaxTac Squadron
+3 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Hanako Arasaka: In a Gilded Cage
+2 Nadia: Fighting Through Grief
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Fool on the Hill
+3 The Heist
+2 Cyberpsychosis
+3 We Gotta Live Together
+2 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 2 Sketchy Ripper
+# side: 2 Gilded Matón
+# side: 2 Offduty Malfini
+# side: 1 Panam Palmer: Strength Through Family

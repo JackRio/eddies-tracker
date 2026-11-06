@@ -1,0 +1,31 @@
+# Dice Manipulation - by the__ryno (netdeck.gg a3fd949d-9d55-48ef-8118-b1e6bd9071d0, 0 likes, 21 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Padre: Man of the Cross
+
+// Main deck
+3 Secondhand Bombus
+2 Tyger's Whisper
+2 Dexter DeShawn: One Last Chance
+3 Field Operator
+3 Hanako Arasaka: In a Gilded Cage
+2 MaxTac AV
+2 Rockn' Rockerboy
+2 Wraith Marauders
+1 Jackie Welles: Ride or Die Choom
+2 Nadia: Fighting Through Grief
+3 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Sandevistan
+1 Overwatch: Panam's Gift
+3 Afterparty at Lizzie's
+3 Peace Offering
+1 Fool on the Hill
+2 Take Control
+3 Memory Relapse
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

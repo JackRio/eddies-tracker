@@ -1,0 +1,32 @@
+# Lets drive - by Damanta (netdeck.gg c67fe063-edf8-4849-a151-2cfabfc8dcd1, 1 likes, 23 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 Emergency Atlus
+3 Valentino Street Racer
+3 Delamain Cab
+3 MaxTac AV
+2 MaxTac Suppression Team
+2 Modded Muramasa
+2 Modded Kusanagi
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Floor It
+2 Corporate Surveillance
+2 Take Control
+3 Chrome Reverie
+3 Memory Relapse
+2 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 3 Pepe Najarro: Working Doubles
+# side: 3 Trauma Team Operatives
+# side: 1 Saul Bright: Stormrider

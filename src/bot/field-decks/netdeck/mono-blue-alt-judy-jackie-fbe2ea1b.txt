@@ -1,0 +1,24 @@
+# Mono Blue Alt/Judy/Jackie - by The Emerald King (netdeck.gg fbe2ea1b-40cc-4ed2-9f17-7ac4c091457c, 0 likes, 8 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

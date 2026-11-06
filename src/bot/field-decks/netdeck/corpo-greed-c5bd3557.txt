@@ -1,0 +1,25 @@
+# Corpo Greed - by Li0nHeart12 (netdeck.gg c5bd3557-4bbd-45ab-9346-9879890a1baf, 0 likes, 1 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Delamain: Rideshare AI
+3 La Llorona: Ghost of the Past
+3 Mox Inciters
+3 Valentino Guerrera
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+1 V: Roamer of the Badlands
+3 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 All is Lost
+2 Detonate
+2 Industrial Assembly
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Unlikely Bond
+2 Les Élémens

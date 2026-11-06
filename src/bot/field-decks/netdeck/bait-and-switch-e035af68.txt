@@ -1,0 +1,34 @@
+# Bait and Switch - by TacoNomad (netdeck.gg e035af68-dc9a-4787-8fdc-0c84b249dd6d, 1 likes, 18 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+
+// Main deck
+2 Corpo Security
+3 Emergency Atlus
+3 Field Operator
+3 Mox Inciters
+1 Goro Takemura: Losing His Way
+2 Maelstrom Zealots
+1 Rita Wheeler: No Stupid Questions
+1 Rogue Amendiares: Queen of the Afterlife
+1 Modded Kusanagi
+1 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+2 MaxTac Heavy
+1 Tetratronic Rippler
+1 Dying Night: V's Pistol
+2 Riot Shield
+2 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+1 Zetatech Berserk
+2 Synapse Burnout
+1 Corporate Surveillance
+1 Fool on the Hill
+2 Reboot Optics
+2 Take Control
+1 We Gotta Live Together

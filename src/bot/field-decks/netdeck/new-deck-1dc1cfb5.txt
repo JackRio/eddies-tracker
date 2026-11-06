@@ -1,0 +1,24 @@
+# New Deck - by buzzone (netdeck.gg 1dc1cfb5-8727-46e6-8b9b-60f868e96b2d, 0 likes, 5 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Detonate
+3 Floor It
+3 Synapse Burnout
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Memory Relapse
+2 We Gotta Live Together

@@ -1,0 +1,23 @@
+# New Deck - by TytusV2 (netdeck.gg 572f64e7-0386-4cb6-8b4e-09f398df3ede, 0 likes, 7 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Mox Inciters
+3 Pepe Najarro: Working Doubles
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Floor It
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Reboot Optics
+3 Take Control
+3 We Gotta Live Together

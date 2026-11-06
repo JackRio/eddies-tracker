@@ -1,0 +1,29 @@
+# MrBingus' Brilliant Blue Braindances - by MrBingus (netdeck.gg ae7d8134-d67f-455f-8816-3ce4808e489f, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+2 Les Élémens
+2 Towerfall

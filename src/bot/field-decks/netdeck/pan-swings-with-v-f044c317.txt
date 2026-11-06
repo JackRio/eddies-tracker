@@ -1,0 +1,28 @@
+# pan swings with v - by kayne (netdeck.gg f044c317-b6e2-4fca-bf31-4e0021578143, 2 likes, 55 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Pepe Najarro: Working Doubles
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Riot Shield
+# side: 3 Reboot Optics
+# side: 3 Pyramid Song

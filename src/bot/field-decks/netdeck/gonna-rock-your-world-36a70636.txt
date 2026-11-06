@@ -1,0 +1,23 @@
+# Gonna Rock Your World - by morsdraconis (netdeck.gg 36a70636-b623-4d5a-a77d-5821c03a52cf, 0 likes, 8 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Kerry Eurodyne: The Last Rockerboy
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 Detonate
+3 Floor It
+3 Industrial Assembly
+3 Chrome Reverie
+3 Nocturne OP55 N1

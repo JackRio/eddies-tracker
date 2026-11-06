@@ -1,0 +1,28 @@
+# YYB Go Solo V + Rogue - by Alun (netdeck.gg 6df8a2af-6529-4448-b403-eabbbd7a70a4, 1 likes, 66 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Rita Wheeler: No Stupid Questions
+3 MaxTac Suppression Team
+3 Rockn' Rockerboy
+2 Rogue Amendiares: Queen of the Afterlife
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Gorilla Arms
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Afterparty at Lizzie's
+# side: 2 Safety Override
+# side: 2 Cyberpsychosis

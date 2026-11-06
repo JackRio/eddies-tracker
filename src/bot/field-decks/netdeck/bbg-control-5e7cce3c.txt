@@ -1,0 +1,24 @@
+# BBG Control - by DefNotSilencer (netdeck.gg 5e7cce3c-6cd5-4108-be99-c3f385886f67, 2 likes, 127 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+2 Corpo Security
+3 Jacked-In Voodoo Boy
+2 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall

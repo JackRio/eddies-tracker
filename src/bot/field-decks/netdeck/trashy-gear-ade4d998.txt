@@ -1,0 +1,34 @@
+# Trashy Gear - by PresidentSquee (netdeck.gg ade4d998-635a-4b31-8979-18e847b5edfa, 0 likes, 14 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+2 Sketchy Ripper
+2 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Delamain Cab
+2 Gilded Matón
+1 Rita Wheeler: No Stupid Questions
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Adrenaline Converter
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+1 Gorilla Arms
+2 Reboot Optics
+2 Safety Override
+3 The Heist
+3 Cyberpsychosis
+2 Nocturne OP55 N1
+
+# Sideboard (not loaded):
+# side: 1 MaxTac Suppression Team
+# side: 2 Floor It
+# side: 1 Reboot Optics
+# side: 1 Safety Override
+# side: 2 Live with the Aftermath

@@ -1,0 +1,32 @@
+# GHOST PROTOCOL - by WOLFBOY511 (netdeck.gg 50d1054b-3d29-4295-aba2-ec95f0acee2b, 0 likes, 39 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Wakako Okada: Peace and Harmony
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+2 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Chrome Reverie
+2 Pyramid Song
+3 Unlikely Bond
+
+# Sideboard (not loaded):
+# side: 2 Psycho Squad
+# side: 1 Modded Muramasa
+# side: 2 Modded Kusanagi
+# side: 1 Placide: Voodoo Sentinel
+# side: 1 Three Mouths, One Desire

@@ -1,0 +1,30 @@
+# Gonna Be LEGENDS - by Holo7 (netdeck.gg 67664ea4-9d28-482f-b4e5-7801d017eac4, 0 likes, 30 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Corporate Exile
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Rita Wheeler: No Stupid Questions
+1 Rogue Amendiares: Queen of the Afterlife
+2 Jackie Welles: Ride or Die Choom
+1 Modded Kusanagi
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Afterparty at Lizzie's
+2 Trust No One
+2 Reboot Optics
+2 The Heist
+2 Les Élémens
+2 Towerfall

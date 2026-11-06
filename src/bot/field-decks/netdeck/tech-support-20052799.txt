@@ -1,0 +1,25 @@
+# Tech Support - by Hindrax (netdeck.gg 20052799-ad81-4806-bc32-8fd5d23f7279, 0 likes, 2 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Delamain: Rideshare AI
+1 Misty Olszewski: Mender of Broken Spirits
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Detonate
+2 Floor It
+2 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,23 @@
+# Adam Smash You - by Surgical Ninja (netdeck.gg dcd2a5af-efc8-4dbf-bee4-3a93b1b7e993, 0 likes, 100 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 T-Bug: Amateur Philosopher
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

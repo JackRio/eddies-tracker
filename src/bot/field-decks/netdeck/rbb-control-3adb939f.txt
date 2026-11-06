@@ -1,0 +1,27 @@
+# rbb control - by The Emerald King (netdeck.gg 3adb939f-e93f-4571-9ab4-6bcb75987de7, 1 likes, 25 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Delamain: Rideshare AI
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Industrial Assembly
+3 Trust No One
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Meredith Stout: Stone Cold Corpo
+# side: 2 Detonate

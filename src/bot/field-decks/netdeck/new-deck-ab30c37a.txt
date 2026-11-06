@@ -1,0 +1,32 @@
+# New Deck - by Mr.Counterfeit (netdeck.gg ab30c37a-ca7d-4043-9fd5-c80e1724ef49, 1 likes, 141 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Mox Inciters
+2 Lizzy Wizzy: Delicate Weapon
+2 Heywood Ripperdoc
+2 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+1 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Reboot Optics
+2 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 1 Heywood Ripperdoc
+# side: 1 Placide: Voodoo Sentinel
+# side: 1 Safety Override
+# side: 1 Cyberpsychosis

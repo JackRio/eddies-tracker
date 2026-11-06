@@ -1,0 +1,25 @@
+# overwatch - by MrWesLee (netdeck.gg 150cd4ce-7a2f-406e-95e3-fed78129a34f, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Field Operator
+2 MaxTac Squadron
+2 Mox Inciters
+3 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+2 Riding Nomad
+2 MaxTac Heavy
+2 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Corporate Surveillance
+2 Memory Relapse
+3 We Gotta Live Together
+2 (Don't Fear) The Reaper

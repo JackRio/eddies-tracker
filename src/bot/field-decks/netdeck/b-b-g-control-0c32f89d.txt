@@ -1,0 +1,24 @@
+# {B}{B}{G} Control - by DJ Double-Darkness (netdeck.gg 0c32f89d-22e6-410e-b982-9a663b3cd6dc, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+1 Modded Kusanagi
+3 Placide: Voodoo Sentinel
+1 Peace Offering
+3 Trust No One
+3 Reboot Optics
+3 Take Control
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Towerfall

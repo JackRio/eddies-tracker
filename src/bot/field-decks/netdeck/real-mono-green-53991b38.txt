@@ -1,0 +1,24 @@
+# Real Mono-Green - by Brakdrud (netdeck.gg 53991b38-38b1-4d53-8257-b08076ec9c30, 0 likes, 35 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+
+// Main deck
+3 Corpo Security
+2 Field Operator
+3 MaxTac Squadron
+3 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+2 Riding Nomad
+2 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Peace Offering
+2 Corporate Surveillance
+3 Fool on the Hill
+3 Take Control

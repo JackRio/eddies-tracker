@@ -1,0 +1,26 @@
+# New Deck - by Koi (netdeck.gg 3dcff4aa-c4d4-4937-9a36-5ff02dd0ab88, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Corpo Security
+3 Jacked-In Voodoo Boy
+2 Delamain Cab
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Memory Relapse
+2 Les Élémens
+2 Towerfall

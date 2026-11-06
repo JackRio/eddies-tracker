@@ -1,0 +1,25 @@
+# New Deck - by ? (netdeck.gg aab07bda-71cc-4e8a-a11c-8495c4563a53, 0 likes, 22 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+2 Augmented Negotiators
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Viktor Vektor: Drop Your Illusions
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Detonate
+2 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Shattered Memories

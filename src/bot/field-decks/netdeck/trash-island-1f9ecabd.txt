@@ -1,0 +1,34 @@
+# Trash Island - by Nazraghoul (netdeck.gg 1f9ecabd-ac0d-4f17-89e7-95cb45a6933d, 0 likes, 36 views, updated 2026-10-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Augmented Negotiators
+3 Hacked Corpo
+2 MT0D12 Flathead
+1 Heywood Ripperdoc
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+2 Mandibular Upgrade
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+1 NetWatch Netdriver
+3 Trust No One
+2 The Heist
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 1 Heywood Ripperdoc
+# side: 2 Modded Kusanagi
+# side: 1 Nocturne OP55 N1
+# side: 1 Towerfall

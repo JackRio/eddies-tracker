@@ -1,0 +1,23 @@
+# New Deck - by Lionhart (netdeck.gg 0fea49c1-e506-4d42-83db-a6f57c3486b5, 0 likes, 0 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,29 @@
+# Truly Embracing Power - by AaronTheQuill (netdeck.gg 5d1c9c8f-e17f-40ee-81a2-bad0e7f1647a, 1 likes, 47 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 Field Operator
+3 Swordwise Huscle
+2 Goro Takemura: Losing His Way
+2 MaxTac AV
+2 Minotaur
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Sandevistan
+2 Zetatech Berserk
+3 Industrial Assembly
+3 Peace Offering
+3 Corporate Surveillance
+2 Over the Edge
+
+# Sideboard (not loaded):
+# side: 2 Riot Shield
+# side: 2 All is Lost
+# side: 3 (Don't Fear) The Reaper

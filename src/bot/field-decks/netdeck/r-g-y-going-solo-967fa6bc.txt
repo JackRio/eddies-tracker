@@ -1,0 +1,23 @@
+# (R/G/Y) Going Solo - by DenkiFox (netdeck.gg 967fa6bc-ce6e-4733-a89e-ca895c6832a7, 0 likes, 13 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Hands Unclean
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Detonate
+3 Cyberpsychosis
+3 Shattered Memories

@@ -1,0 +1,48 @@
+# Ghost in the Shell - by Afrobane (netdeck.gg 1dedc816-4b04-4181-8590-13d92a498f75, 1 likes, 63 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Corporate Exile
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+1 Jacked-In Voodoo Boy
+1 Delamain: Rideshare AI
+1 Misty Olszewski: Mender of Broken Spirits
+1 Mox Inciters
+1 Delamain Cab
+1 Hacked Corpo
+1 Psycho Squad
+1 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+1 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+1 Tetratronic Rippler
+1 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Evelyn Parker: Scheming Siren
+# side: 1 Misty Olszewski: Mender of Broken Spirits
+# side: 1 Rita Wheeler: No Stupid Questions
+# side: 1 Lizzy Wizzy: Delicate Weapon
+# side: 1 Maman Brigitte: Spirit of Death
+# side: 1 Rogue Amendiares: Queen of the Afterlife
+# side: 1 Judy Álvarez: Nothing to Doubt

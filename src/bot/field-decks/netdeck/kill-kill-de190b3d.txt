@@ -1,0 +1,25 @@
+# Kill Kill - by Knightwish (netdeck.gg de190b3d-12d7-4b8d-b3e6-b970a136fd8c, 0 likes, 2 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 Offduty Malfini
+1 Jackie Welles: Ride or Die Choom
+1 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

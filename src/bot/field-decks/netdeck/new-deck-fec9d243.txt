@@ -1,0 +1,25 @@
+# New Deck - by Poplock04980 (netdeck.gg fec9d243-a6eb-4dda-9108-b836826aa8e1, 0 likes, 8 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+
+// Main deck
+3 Secondhand Bombus
+2 Augmented Negotiators
+3 Swordwise Huscle
+3 6th Street Recruits
+3 V: Roamer of the Badlands
+2 Kiroshi Optics
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Afterparty at Lizzie's
+3 Detonate
+3 Floor It
+2 Reboot Optics
+2 Nocturne OP55 N1
+2 Over the Edge

@@ -1,0 +1,31 @@
+# Backalley Beatdown - by NerdyNova (netdeck.gg 9a1e19f8-4e0b-40cf-88a9-c82c38a61ca9, 0 likes, 1 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Jackie Welles: Mama's Favorite
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Japantown Jonin
+2 Ruthless Lowlife
+2 La Llorona: Ghost of the Past
+2 MaxTac Squadron
+2 6th Street Recruits
+2 Pepe Najarro: Working Doubles
+2 Johnny Silverhand: Never Stop Fighting
+1 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Detonate
+3 Synapse Burnout
+3 Fool on the Hill
+2 Over the Edge
+2 Shattered Memories
+2 (Don't Fear) The Reaper

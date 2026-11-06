@@ -1,0 +1,26 @@
+# Placide v2 - by CJacobsen (netdeck.gg cd924074-5025-45a3-979c-504af6a95a7f, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Riot Shield
+3 Corporate Surveillance
+3 Reboot Optics
+2 Take Control
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Memory Relapse
+2 Les Élémens
+1 Towerfall

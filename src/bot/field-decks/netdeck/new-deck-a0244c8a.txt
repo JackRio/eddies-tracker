@@ -1,0 +1,23 @@
+# New Deck - by Mr.1000 Years (netdeck.gg a0244c8a-dd7a-4712-9d93-aeef8505a619, 0 likes, 4 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Field Operator
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+3 Goro Takemura: Losing His Way
+3 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Detonate
+3 Industrial Assembly
+3 Synapse Burnout
+3 Take Control
+3 Over the Edge
+1 Wild in the Streets

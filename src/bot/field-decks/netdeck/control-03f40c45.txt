@@ -1,0 +1,24 @@
+# Control - by Prinkar (netdeck.gg 03f40c45-d99f-4901-bfb2-8f11fa08b903, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+1 Mox Inciters
+3 T-Bug: Amateur Philosopher
+3 Westbrook Netrunner
+3 MaxTac Suppression Team
+3 Modded Muramasa
+3 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+3 Afterparty at Lizzie's
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Les Élémens
+2 Towerfall

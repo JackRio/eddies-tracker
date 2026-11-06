@@ -1,0 +1,24 @@
+# GGY Overwatch Control - by ? (netdeck.gg 94a56a69-0a8d-4805-904f-125d40e159b1, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+2 Field Operator
+2 Heywood Ripperdoc
+3 Jackie Welles: Ride or Die Choom
+3 Panam Palmer: Strength Through Family
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 Fool on the Hill
+3 We Gotta Live Together
+2 Wild in the Streets
+3 (Don't Fear) The Reaper

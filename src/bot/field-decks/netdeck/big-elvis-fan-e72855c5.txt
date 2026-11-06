@@ -1,0 +1,27 @@
+# Big Elvis Fan - by TBrine (netdeck.gg e72855c5-768e-464a-a0de-e02aaf9baed2, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Hanako Arasaka: In a Gilded Cage
+2 Viktor Vektor: Drop Your Illusions
+1 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+2 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

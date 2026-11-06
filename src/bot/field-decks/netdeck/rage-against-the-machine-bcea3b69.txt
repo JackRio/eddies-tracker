@@ -1,0 +1,24 @@
+# Rage Against the Machine - by FatherNature (netdeck.gg bcea3b69-fcc9-4736-8493-615ced5ca57a, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Hanako Arasaka: In a Gilded Cage
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Caliber: Totentanz's Top Dog
+3 El Sombrerón: La Venganza Lenta
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 Bonnie and Clyde
+3 Shattered Memories

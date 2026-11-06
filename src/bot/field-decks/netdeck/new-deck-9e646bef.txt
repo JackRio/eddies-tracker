@@ -1,0 +1,23 @@
+# New Deck - by Aaron96 (netdeck.gg 9e646bef-213c-40ee-b648-268c092789ae, 0 likes, 10 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

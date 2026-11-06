@@ -1,0 +1,32 @@
+# New Deck - by Dracowyrd (netdeck.gg 7e3c9f13-559c-4be7-afb8-21b910e18f7d, 0 likes, 16 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+2 Valentino Guerrera
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Royce: Don't Call Me Simon
+3 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Zetatech Berserk
+3 Detonate
+3 Appetite for Destruction
+3 Gunpoint Diplomacy
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 La Llorona: Ghost of the Past
+# side: 2 Valentino Street Racer
+# side: 3 Take Control

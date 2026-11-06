@@ -1,0 +1,24 @@
+# New Deck - by 5ouparu (netdeck.gg 908d15a5-652d-4617-bfb1-425290ac5b1d, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Hanako Arasaka: In a Gilded Cage
+2 Caliber: Totentanz's Top Dog
+2 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Safety Override

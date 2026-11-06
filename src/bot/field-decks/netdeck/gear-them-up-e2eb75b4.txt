@@ -1,0 +1,26 @@
+# gear them up - by SlippyTommez (netdeck.gg e2eb75b4-bac5-402b-b5b8-e6fdad3c8d1a, 2 likes, 82 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Meredith Stout: Stone Cold Corpo
+1 Heywood Ripperdoc
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Detonate
+2 Safety Override
+2 Cyberpsychosis

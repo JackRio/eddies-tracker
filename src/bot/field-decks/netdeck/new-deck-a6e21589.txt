@@ -1,0 +1,28 @@
+# New Deck - by ? (netdeck.gg a6e21589-2ee9-44ef-a679-0d188ffa5d28, 0 likes, 3 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Japantown Jonin
+2 Ruthless Lowlife
+2 Secondhand Bombus
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Maelstrom Goons
+3 Valentino Guerrera
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Kerry Eurodyne: The Last Rockerboy
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+1 Satori: Sword of Saburo
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 All is Lost
+2 The Heist
+2 Cyberpsychosis
+3 Shattered Memories

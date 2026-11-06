@@ -1,0 +1,30 @@
+# Samurai - by Esco_Bruni (netdeck.gg e237a2ad-4a12-4611-875a-04cf73684011, 0 likes, 3 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Japantown Jonin
+2 Secondhand Bombus
+3 Kerry Eurodyne: The Last Rockerboy
+2 Rita Wheeler: No Stupid Questions
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+2 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Afterparty at Lizzie's
+2 Floor It
+2 Industrial Assembly
+2 Trust No One
+2 Reboot Optics
+2 Chrome Reverie
+2 Unlikely Bond

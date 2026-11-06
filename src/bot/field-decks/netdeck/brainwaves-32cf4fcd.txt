@@ -1,0 +1,25 @@
+# Brainwaves - by ? (netdeck.gg 32cf4fcd-4430-46ae-aea1-bd3bd637d6ed, 0 likes, 66 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 MT0D12 Flathead
+3 Dying Night: V's Pistol
+3 All is Lost
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+2 Towerfall

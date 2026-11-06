@@ -1,0 +1,31 @@
+# New Deck - by AJ Mock (netdeck.gg b84fbef1-1cdf-4254-bfef-5ae0aaeffc09, 0 likes, 30 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 6th Street Recruits
+1 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+1 Detonate
+3 Industrial Assembly
+1 Trust No One
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Meredith Stout: Stone Cold Corpo
+# side: 2 Animals Wrecker
+# side: 2 Placide: Voodoo Sentinel
+# side: 1 Detonate

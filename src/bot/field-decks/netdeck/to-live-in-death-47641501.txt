@@ -1,0 +1,26 @@
+# To Live In Death - by Neb (netdeck.gg 47641501-f03b-43a0-892f-2110f52e683f, 1 likes, 46 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Emergency Atlus
+2 Maelstrom Goons
+2 Valentino Street Racer
+2 Trauma Team Operatives
+3 Saul Bright: Stormrider
+2 Mandibular Upgrade
+2 Riot Shield
+2 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Synapse Burnout
+3 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+3 We Gotta Live Together

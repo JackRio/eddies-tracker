@@ -1,0 +1,26 @@
+# New Deck - by ? (netdeck.gg 93a7f82f-6834-4fb2-aebc-623aedb00f8d, 0 likes, 0 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Caliber: Totentanz's Top Dog
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+1 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath

@@ -1,0 +1,26 @@
+# BBG-Programs/Gear - by DedDr0p (netdeck.gg d8227249-7a47-48c0-8d0e-cf4bce443882, 0 likes, 116 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+1 Corpo Security
+2 Jacked-In Voodoo Boy
+3 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,23 @@
+# Pan Stand - by Stump (netdeck.gg 6b1c95f8-bf50-41fc-a729-b3d8deb4658d, 0 likes, 3 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Rockn' Rockerboy
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 Safety Override
+3 Memory Relapse

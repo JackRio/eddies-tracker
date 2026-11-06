@@ -1,0 +1,26 @@
+# Big Hitter - by RipperDoc (netdeck.gg 4df3c8a6-d969-40c4-b31b-2c5a6695fce5, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+2 All is Lost
+2 Industrial Assembly
+2 Appetite for Destruction
+3 Bonnie and Clyde
+2 Carnage at the Colosseum

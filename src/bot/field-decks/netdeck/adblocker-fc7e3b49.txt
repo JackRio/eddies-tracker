@@ -1,0 +1,26 @@
+# Adblocker - by JoKari (netdeck.gg fc7e3b49-22a4-41e2-a96e-462cc0350476, 0 likes, 46 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+1 Screw: Lovelorn Fool
+3 Johnny Silverhand: Never Stop Fighting
+2 Saul Bright: Stormrider
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Zetatech Berserk
+2 Cyberpsychosis
+3 Memory Relapse
+2 Shattered Memories

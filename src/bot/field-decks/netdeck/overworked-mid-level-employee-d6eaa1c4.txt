@@ -1,0 +1,24 @@
+# Overworked mid level employee - by Wille_AAAAAH (netdeck.gg d6eaa1c4-6b2f-4713-9c48-c4bff98f64c5, 1 likes, 17 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Ruthless Lowlife
+3 Tyger's Whisper
+3 Field Operator
+2 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+2 Saul Bright: Stormrider
+3 Riot Shield
+2 Deadman Transmitter
+3 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+2 Gunpoint Diplomacy
+3 We Gotta Live Together

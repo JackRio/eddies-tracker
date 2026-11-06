@@ -1,0 +1,23 @@
+# Red Red Green Aggro - by DeadUniverseTCG (netdeck.gg ea552bf5-fa91-4cbb-9b13-aed663962df9, 0 likes, 5 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 V: Streetkid
+
+// Main deck
+3 Emergency Atlus
+3 Field Operator
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 Valentino Street Racer
+1 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Riot Shield
+3 All is Lost
+3 Detonate
+3 Peace Offering
+3 Bonnie and Clyde
+3 Shattered Memories
+3 We Gotta Live Together

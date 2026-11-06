@@ -1,0 +1,23 @@
+# Rockers - by Undercommoner (netdeck.gg 72e7ac6c-17ad-480d-8f5e-a7a211bd0279, 1 likes, 29 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Judy Álvarez: Braindance Maestro
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Secondhand Bombus
+3 Mox Inciters
+3 Kerry Eurodyne: The Last Rockerboy
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Trust No One
+3 Reboot Optics
+3 Chrome Reverie

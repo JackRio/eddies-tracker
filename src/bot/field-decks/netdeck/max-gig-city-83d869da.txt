@@ -1,0 +1,28 @@
+# Max Gig City - by PresidentSquee (netdeck.gg 83d869da-06bf-4509-9b29-28f6f2905938, 0 likes, 11 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Japantown Jonin
+2 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+2 Kerry Eurodyne: The Last Rockerboy
+2 El Sombrerón: La Venganza Lenta
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+1 Minotaur
+1 Octant
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+2 Appetite for Destruction
+2 Over the Edge
+2 Gunpoint Diplomacy
+2 Shattered Memories
+2 Carnage at the Colosseum

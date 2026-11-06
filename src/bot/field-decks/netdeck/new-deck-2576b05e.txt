@@ -1,0 +1,29 @@
+# New Deck - by The4o4xeno (netdeck.gg 2576b05e-657e-4c45-8f8c-15ac40457945, 0 likes, 3 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Japantown Jonin
+2 Secondhand Bombus
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+2 Offduty Malfini
+2 Nadia: Fighting Through Grief
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Zetatech Berserk
+1 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+1 Shattered Memories

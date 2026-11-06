@@ -1,0 +1,25 @@
+# CC - Chrome & Consequences - by buzzone (netdeck.gg 8c8c37f8-553e-470d-b9c0-cf30dfa34b5c, 0 likes, 4 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+2 Jacked-In Voodoo Boy
+3 Sketchy Ripper
+3 Psycho Squad
+2 Rockn' Rockerboy
+1 Jackie Welles: Ride or Die Choom
+1 Alt Cunningham: Mother of Daemons
+1 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Safety Override

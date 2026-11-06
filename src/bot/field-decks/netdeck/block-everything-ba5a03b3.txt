@@ -1,0 +1,23 @@
+# block everything - by Splati (netdeck.gg ba5a03b3-6cc1-41b1-9690-ac143e371ba3, 0 likes, 20 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Goro Takemura: Losing His Way
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Fool on the Hill
+3 We Gotta Live Together
+1 (Don't Fear) The Reaper

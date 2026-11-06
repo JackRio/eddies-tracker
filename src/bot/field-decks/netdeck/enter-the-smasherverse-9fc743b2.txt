@@ -1,0 +1,32 @@
+# Enter The Smasherverse - by Calcifer (netdeck.gg 9fc743b2-37f7-4f86-9a49-bab85e82a6ec, 2 likes, 43 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Japantown Jonin
+2 Ruthless Lowlife
+3 Swordwise Huscle
+1 6th Street Recruits
+2 Chrome Fang
+1 El Sombrerón: La Venganza Lenta
+1 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+1 V: Roamer of the Badlands
+1 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+2 Octant
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 Detonate
+2 Industrial Assembly
+1 Appetite for Destruction
+2 Bonnie and Clyde
+3 Over the Edge
+2 Shattered Memories
+1 Carnage at the Colosseum

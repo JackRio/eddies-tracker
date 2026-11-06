@@ -1,0 +1,26 @@
+# New Deck - by yessey63 (netdeck.gg f5b474c5-a015-45a3-ada1-fa03d9d1be84, 0 likes, 1 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 MaxTac Suppression Team
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+3 Adam Smasher: Metal Over Meat
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show

@@ -1,0 +1,27 @@
+# One Man’s Trash... - by Double_Tracker (netdeck.gg 6b2a24b6-5b4c-4b7c-babe-585a649f4a86, 1 likes, 45 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 La Llorona: Ghost of the Past
+3 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+3 All is Lost
+3 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Shattered Memories
+
+# Sideboard (not loaded):
+# side: 3 MT0D12 Flathead
+# side: 3 Towerfall

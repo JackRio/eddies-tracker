@@ -1,0 +1,30 @@
+# UG MID-CONTROL - by TheHunter345509 (netdeck.gg 1962ee85-c0e1-45f9-81df-8fdea7e2edf1, 0 likes, 12 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+3 Panam Palmer: Strength Through Family
+1 Floor It
+3 Peace Offering
+3 Trust No One
+2 Fool on the Hill
+3 Take Control
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 2 Placide: Voodoo Sentinel
+# side: 3 Riot Shield

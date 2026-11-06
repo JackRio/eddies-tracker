@@ -1,0 +1,23 @@
+# River's Closet - by KP (netdeck.gg 35740fda-5c53-4c5b-b6cb-f4e15efad4d2, 30 likes, 2694 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Swordwise Huscle
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Live with the Aftermath
+2 Over the Edge
+3 Bootleg Black Sapphire Show

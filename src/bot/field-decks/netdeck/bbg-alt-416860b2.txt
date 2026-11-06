@@ -1,0 +1,29 @@
+# BBG Alt - by LewisW94 (netdeck.gg 416860b2-81ae-4150-9798-4bff08dca44c, 0 likes, 55 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Maman Brigitte: Spirit of Death
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Valentino Street Racer
+# side: 1 Nadia: Fighting Through Grief
+# side: 2 Placide: Voodoo Sentinel
+# side: 3 Memory Relapse

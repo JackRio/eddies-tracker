@@ -1,0 +1,25 @@
+# Smash relic - by lukaetar (netdeck.gg 89d5d205-c3ef-421b-9100-516ff1a0e1e6, 0 likes, 3 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+3 Hanako Arasaka: In a Gilded Cage
+1 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 The Heist
+2 Live with the Aftermath

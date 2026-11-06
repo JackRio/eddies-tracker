@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg d8017ff5-cb68-417b-a65e-d0401863f509, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+
+// Main deck
+3 Field Operator
+3 La Llorona: Ghost of the Past
+3 MaxTac Squadron
+3 Valentino Guerrera
+3 Valentino Street Racer
+3 Maelstrom Zealots
+3 Sandayu Oda: Hanako's Guardian
+2 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+2 Over the Edge
+3 Memory Relapse
+3 We Gotta Live Together
+3 (Don't Fear) The Reaper

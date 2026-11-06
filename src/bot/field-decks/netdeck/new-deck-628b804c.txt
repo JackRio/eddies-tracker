@@ -1,0 +1,24 @@
+# New Deck - by Scarycolt (netdeck.gg 628b804c-c40c-4dfc-8f96-b3ecae283d64, 0 likes, 3 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Jackie Welles: Ride or Die Choom
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Deadman Transmitter
+3 Afterparty at Lizzie's
+3 Detonate
+3 Bonnie and Clyde
+3 Shattered Memories
+3 Carnage at the Colosseum

@@ -1,0 +1,23 @@
+# Flesh is for the weak - by Celery (netdeck.gg ef121b39-1ae4-4188-b908-efa4814668a0, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Gilded Matón
+3 MaxTac Suppression Team
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+2 Cyberpsychosis
+3 Bootleg Black Sapphire Show

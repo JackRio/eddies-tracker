@@ -1,0 +1,42 @@
+# Corpo Wasteland - by KingWario (netdeck.gg ceb16e1c-d2b1-4998-8f9b-a2a42a5bc842, 0 likes, 2 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Japantown Jonin
+2 Emergency Atlus
+1 Field Operator
+2 MaxTac Squadron
+1 Swordwise Huscle
+1 Goro Takemura: Losing His Way
+1 Meredith Stout: Stone Cold Corpo
+1 Pacifica Netrunner
+1 V: Roamer of the Badlands
+1 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+1 MaxTac Heavy
+2 Minotaur
+1 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+1 Arasaka Emergency Radioport
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Sandevistan
+1 Zetatech Berserk
+1 All is Lost
+2 Detonate
+1 Industrial Assembly
+1 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Fool on the Hill
+1 Memory Relapse
+1 Shattered Memories
+1 We Gotta Live Together
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

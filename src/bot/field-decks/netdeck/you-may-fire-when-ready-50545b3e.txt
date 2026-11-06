@@ -1,0 +1,27 @@
+# You may fire when ready - by Hatori1181 (netdeck.gg 50545b3e-0094-4fc3-bc9d-8974734bd24b, 1 likes, 23 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Augmented Negotiators
+2 Emergency Atlus
+2 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+2 Trauma Team Operatives
+2 Saul Bright: Stormrider
+2 Mandibular Upgrade
+2 Riot Shield
+2 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Fool on the Hill
+2 The Heist
+2 We Gotta Live Together
+2 Wild in the Streets

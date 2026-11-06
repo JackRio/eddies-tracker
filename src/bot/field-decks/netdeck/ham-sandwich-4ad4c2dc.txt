@@ -1,0 +1,25 @@
+# Ham Sandwich - by CowboyKatakuri (netdeck.gg 4ad4c2dc-5884-4286-8ceb-75b767625b83, 0 likes, 10 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+
+// Main deck
+1 Secondhand Bombus
+2 Dexter DeShawn: One Last Chance
+2 Hanako Arasaka: In a Gilded Cage
+3 Lizzy Wizzy: Delicate Weapon
+2 MaxTac Suppression Team
+2 Alt Cunningham: Mother of Daemons
+3 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+3 NetWatch Netdriver
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Trust No One
+2 Safety Override
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show

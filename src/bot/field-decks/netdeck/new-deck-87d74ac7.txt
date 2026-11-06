@@ -1,0 +1,23 @@
+# New Deck - by Scarycolt (netdeck.gg 87d74ac7-bf51-49ff-9220-114ab180d468, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Psycho Squad
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

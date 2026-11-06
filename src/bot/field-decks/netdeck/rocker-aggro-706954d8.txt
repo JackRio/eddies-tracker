@@ -1,0 +1,23 @@
+# Rocker aggro - by Deejayorr97 (netdeck.gg 706954d8-518d-45de-8ddb-a233a8c5885c, 0 likes, 13 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac Suppression Team
+2 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Industrial Assembly
+3 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

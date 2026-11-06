@@ -1,0 +1,25 @@
+# Executive Override - by Mr. Mattix (netdeck.gg 69d26839-e585-4e35-8e5f-1e51ace47018, 1 likes, 31 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+2 Corpo Security
+2 Tyger's Whisper
+3 MaxTac Squadron
+2 Valentino Street Racer
+3 MaxTac AV
+2 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+2 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+2 Take Control
+2 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

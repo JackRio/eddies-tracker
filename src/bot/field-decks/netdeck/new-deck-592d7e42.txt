@@ -1,0 +1,23 @@
+# New Deck - by LilSmilodonBravo (netdeck.gg 592d7e42-7f7f-4aa7-978a-2e003a03b94d, 0 likes, 6 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Padre: Man of the Cross
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Tyger's Whisper
+3 Emergency Atlus
+3 MaxTac Squadron
+3 Pacifica Netrunner
+3 Pepe Najarro: Working Doubles
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Sandevistan
+3 Corporate Surveillance
+3 Chrome Reverie
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

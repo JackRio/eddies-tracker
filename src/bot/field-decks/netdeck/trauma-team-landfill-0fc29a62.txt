@@ -1,0 +1,29 @@
+# Trauma Team Landfill - by BlacknWhite07 (netdeck.gg 0fc29a62-1e2f-4f85-94e2-4c39868cd498, 1 likes, 45 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 All is Lost
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 1 Heywood Ripperdoc
+# side: 2 Detonate
+# side: 2 Over the Edge
+# side: 2 Shattered Memories

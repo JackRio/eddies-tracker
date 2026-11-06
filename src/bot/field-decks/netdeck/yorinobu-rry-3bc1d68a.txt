@@ -1,0 +1,28 @@
+# yorinobu-rry - by DoBayo (netdeck.gg 3bc1d68a-56bc-42b6-b445-aca580d00d84, 0 likes, 39 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+3 All is Lost
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 3 Mandibular Upgrade
+# side: 3 Appetite for Destruction

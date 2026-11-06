@@ -1,0 +1,27 @@
+# Mono-Yellow Adam Smasher - by Blue (netdeck.gg 75c273d7-a9fa-46e5-aed5-a1222b4e7d5e, 0 likes, 25 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Offduty Malfini
+1 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+1 Trauma Team Operatives
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

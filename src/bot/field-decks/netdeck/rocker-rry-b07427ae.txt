@@ -1,0 +1,25 @@
+# Rocker RRY - by Archeaonathan (netdeck.gg b07427ae-c1e1-4759-8fec-07284a4b359a, 0 likes, 34 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 All is Lost
+2 Industrial Assembly
+2 Bonnie and Clyde
+2 Over the Edge
+2 Gunpoint Diplomacy
+2 Carnage at the Colosseum

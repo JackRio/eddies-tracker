@@ -1,0 +1,25 @@
+# NOverwatch - by ? (netdeck.gg cb424059-3f70-4335-866b-83117ad6d523, 0 likes, 6 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Dying Night: V's Pistol
+2 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+2 Peace Offering
+2 Synapse Burnout
+2 Fool on the Hill
+2 Nocturne OP55 N1
+3 Memory Relapse
+2 (Don't Fear) The Reaper

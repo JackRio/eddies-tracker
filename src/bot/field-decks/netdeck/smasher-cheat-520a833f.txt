@@ -1,0 +1,33 @@
+# Smasher Cheat - by Kennethor (netdeck.gg 520a833f-8b9c-47d3-8e97-9f470e8d4383, 0 likes, 13 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Secondhand Bombus
+2 Maelstrom Goons
+2 MaxTac Suppression Team
+2 Rockn' Rockerboy
+3 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Dexter DeShawn: One Last Chance
+# side: 2 Caliber: Totentanz's Top Dog
+# side: 1 Trauma Team Operatives
+# side: 1 Safety Override
+# side: 1 Live with the Aftermath

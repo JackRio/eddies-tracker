@@ -1,0 +1,27 @@
+# Bbb braindance - by LordDustBunny (netdeck.gg 34d62526-1b7d-4de4-b794-4ea81875b750, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,24 @@
+# Tricky River - by FeyrBert (netdeck.gg 87ee728b-5194-4b3f-baf1-454b8aec9129, 0 likes, 15 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 Emergency Atlus
+3 MaxTac Squadron
+3 Offduty Malfini
+2 Viktor Vektor: Drop Your Illusions
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Synapse Burnout
+3 The Heist
+2 Cyberpsychosis
+2 Wild in the Streets

@@ -1,0 +1,23 @@
+# Paired Gig Theme Deck - by Analog_V (netdeck.gg d26e7f41-782c-452c-9f09-de3c62781aa1, 0 likes, 30 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Field Operator
+3 MaxTac Squadron
+3 Goro Takemura: Losing His Way
+2 MaxTac AV
+3 MaxTac Heavy
+3 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

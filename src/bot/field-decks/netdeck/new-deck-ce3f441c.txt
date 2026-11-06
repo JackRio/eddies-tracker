@@ -1,0 +1,23 @@
+# New Deck - by Scarycolt (netdeck.gg ce3f441c-590e-4d50-b703-6504bf20c294, 0 likes, 2 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+3 Bootleg Black Sapphire Show

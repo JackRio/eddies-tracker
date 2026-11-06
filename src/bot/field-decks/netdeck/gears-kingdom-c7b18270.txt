@@ -1,0 +1,23 @@
+# Gears' Kingdom - by 5elMic (netdeck.gg c7b18270-e140-4612-ac4d-c8e9a87f937b, 0 likes, 2 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Secondhand Bombus
+3 Goro Takemura: Losing His Way
+3 Pepe Najarro: Working Doubles
+3 Rockn' Rockerboy
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+3 Synapse Burnout

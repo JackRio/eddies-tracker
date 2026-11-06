@@ -1,0 +1,27 @@
+# Gear - by SwarmOfBears (netdeck.gg 294c0a86-283a-48ff-8210-67e75146c2bf, 0 likes, 0 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac Suppression Team
+3 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Detonate
+3 Safety Override
+2 Over the Edge

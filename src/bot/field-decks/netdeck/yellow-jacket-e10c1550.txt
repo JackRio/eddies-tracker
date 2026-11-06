@@ -1,0 +1,28 @@
+# Yellow jacket - by ? (netdeck.gg e10c1550-bb14-424c-8f5a-900ce30a0555, 0 likes, 14 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Caliber: Totentanz's Top Dog
+2 Nadia: Fighting Through Grief
+1 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+1 Sandayu Oda: Hanako's Guardian
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Adrenaline Converter
+2 Riot Shield
+3 Zetatech Faceplate
+1 The Relic: Experimental Biochip
+2 Safety Override
+1 The Heist
+3 Bootleg Black Sapphire Show
+3 We Gotta Live Together

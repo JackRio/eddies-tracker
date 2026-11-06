@@ -1,0 +1,25 @@
+# BBR Control - by MoTheMonster (netdeck.gg 0c2c6de4-1af9-4651-8f5f-61a2e6a05332, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+2 Towerfall

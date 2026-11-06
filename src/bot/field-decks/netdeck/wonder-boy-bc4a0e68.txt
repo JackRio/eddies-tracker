@@ -1,0 +1,24 @@
+# wonder boy - by Splati (netdeck.gg bc4a0e68-5d59-466f-b88b-55a82816de8b, 0 likes, 14 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Tyger's Whisper
+3 Field Operator
+2 Meredith Stout: Stone Cold Corpo
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Over the Edge
+3 Carnage at the Colosseum

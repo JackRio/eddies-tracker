@@ -1,0 +1,28 @@
+# RRBraindance - by nightcity_null (netdeck.gg f83e8663-2656-4d1a-8ddb-eb3f4adf1c92, 4 likes, 83 views, updated 2026-10-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Reboot Optics
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Over the Edge
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Modded Kusanagi
+# side: 3 Detonate

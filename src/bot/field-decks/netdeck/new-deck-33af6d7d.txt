@@ -1,0 +1,26 @@
+# New Deck - by The_Legion999 (netdeck.gg 33af6d7d-c8c1-4a0a-8cff-c1b3056e81a3, 0 likes, 5 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 NetWatch Netdriver
+2 Detonate
+3 Industrial Assembly
+2 Trust No One
+2 Bonnie and Clyde
+2 Chrome Reverie
+3 Carnage at the Colosseum

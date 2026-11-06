@@ -1,0 +1,24 @@
+# RareTotem's RGB - by RareTotem (netdeck.gg 2c278283-3a21-4962-9e76-bea427e3bbac, 10 likes, 670 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Nadia: Fighting Through Grief
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Floor It
+3 Synapse Burnout
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Over the Edge
+2 Memory Relapse

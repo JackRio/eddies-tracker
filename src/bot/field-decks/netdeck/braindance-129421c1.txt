@@ -1,0 +1,30 @@
+# Braindance - by Pichy (netdeck.gg 129421c1-7f03-4989-b1f1-6c851789c7e4, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+1 Delamain: Rideshare AI
+2 Mox Inciters
+3 Hacked Corpo
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+1 Reboot Optics
+1 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+1 Unlikely Bond
+1 Les Élémens
+3 Towerfall

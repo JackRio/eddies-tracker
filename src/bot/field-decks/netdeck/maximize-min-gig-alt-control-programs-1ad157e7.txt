@@ -1,0 +1,23 @@
+# Maximize Min-Gig, Alt-Control-Programs - by Stigl (netdeck.gg 1ad157e7-cc5b-4fdc-89d3-2900d9dce466, 0 likes, 5 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+2 Emergency Atlus
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Peace Offering
+3 Trust No One
+3 Reboot Optics
+3 Take Control
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 We Gotta Live Together

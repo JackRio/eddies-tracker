@@ -1,0 +1,27 @@
+# Gear - by yessey63 (netdeck.gg d96483ba-f1ec-4308-8364-4726c77ed5a8, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Pacifica Netrunner
+3 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+3 MaxTac Heavy
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+1 Detonate
+1 Over the Edge
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

@@ -1,0 +1,33 @@
+# New Deck - by Naythin (netdeck.gg e01a9e1c-9061-4eaa-b877-90d875074b52, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Japantown Jonin
+1 Ruthless Lowlife
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+1 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+2 Meredith Stout: Stone Cold Corpo
+1 Chrome Fang
+1 Minotaur
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+1 All is Lost
+2 Live with the Aftermath
+3 Shattered Memories
+1 Bootleg Black Sapphire Show

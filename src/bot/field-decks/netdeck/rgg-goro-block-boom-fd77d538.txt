@@ -1,0 +1,31 @@
+# RGG- Goro Block Boom - by superaznman (netdeck.gg fd77d538-27a2-4ee8-8b78-21e6dc9c524b, 0 likes, 12 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+2 Swordwise Huscle
+2 Valentino Street Racer
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Riot Shield
+2 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Detonate
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+2 Over the Edge
+
+# Sideboard (not loaded):
+# side: 1 Valentino Guerrera
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Memory Relapse
+# side: 2 Shattered Memories

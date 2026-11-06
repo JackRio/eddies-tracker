@@ -1,0 +1,25 @@
+# New Deck - by eurodyne (netdeck.gg 340e8281-15ed-4a65-bcf2-7131ddc94a58, 0 likes, 2 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 MaxTac Suppression Team
+1 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+2 Riot Shield
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Zetatech Berserk
+3 Reboot Optics
+3 Chrome Reverie
+3 Cyberpsychosis
+3 Nocturne OP55 N1

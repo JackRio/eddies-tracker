@@ -1,0 +1,24 @@
+# Mixer Fixer - by ShatteringSkullz (netdeck.gg db894164-99cc-4714-9a46-0d402d3e24d5, 0 likes, 5 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Floor It
+2 Synapse Burnout
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Over the Edge
+2 We Gotta Live Together

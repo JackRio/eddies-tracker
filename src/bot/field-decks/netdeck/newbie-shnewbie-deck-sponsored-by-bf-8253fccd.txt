@@ -1,0 +1,32 @@
+# Newbie Shnewbie Deck (sponsored by BF) - by KatisaKloud (netdeck.gg 8253fccd-fcbf-4fe0-b890-b9593a632192, 0 likes, 2 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Viktor Vektor: Sit Down and Relax
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+1 Secondhand Bombus
+1 Sketchy Ripper
+1 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Maelstrom Zealots
+1 Offduty Malfini
+1 T-Bug: Amateur Philosopher
+2 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+1 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+3 Mandibular Upgrade
+3 Riot Shield
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+1 Synapse Burnout
+2 Corporate Surveillance
+2 Fool on the Hill
+1 The Heist
+1 Cyberpsychosis
+2 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

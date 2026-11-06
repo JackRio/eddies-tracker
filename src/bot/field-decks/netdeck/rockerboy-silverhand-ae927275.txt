@@ -1,0 +1,24 @@
+# Rockerboy Silverhand - by Randall T Savge (netdeck.gg ae927275-70c8-4bc5-8581-73e6ac8f37ff, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+2 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Appetite for Destruction

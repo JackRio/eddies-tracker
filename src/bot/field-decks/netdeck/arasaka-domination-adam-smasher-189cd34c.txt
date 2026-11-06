@@ -1,0 +1,34 @@
+# Arasaka Domination - Adam Smasher - by Bryan RoP (netdeck.gg 189cd34c-b0c5-48ff-9cb0-295e1c23a615, 13 likes, 542 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+3 La Llorona: Ghost of the Past
+2 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Mantis Blades
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Sandevistan
+3 Peace Offering
+2 Fool on the Hill
+3 Memory Relapse
+2 Shattered Memories
+2 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Screw: Lovelorn Fool
+# side: 1 Riot Shield
+# side: 1 Sandevistan
+# side: 2 Detonate
+# side: 1 (Don't Fear) The Reaper

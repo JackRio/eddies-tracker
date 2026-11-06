@@ -1,0 +1,31 @@
+# Riders on the Storm (V2) - by Major_Disturbance (netdeck.gg a31a6790-7c8e-4173-ab44-98d7df517a6c, 0 likes, 48 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Nadia: Fighting Through Grief
+3 Panam Palmer: Strength Through Family
+3 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Fool on the Hill
+3 Memory Relapse
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Field Operator
+# side: 3 Valentino Street Racer
+# side: 1 Saul Bright: Stormrider

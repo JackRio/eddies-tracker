@@ -1,0 +1,26 @@
+# Johnny Silverhand Support Group - by Jack (netdeck.gg e3898b65-ffae-4107-bced-cd4fa0ec4a25, 0 likes, 14 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+2 Towerfall

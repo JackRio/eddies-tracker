@@ -1,0 +1,23 @@
+# BBR Braindance - by Korlash1990 (netdeck.gg de199d04-ad46-44dd-b77f-1aec2b9aae0b, 0 likes, 34 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Johnny Silverhand: Never Stop Fighting
+3 Placide: Voodoo Sentinel
+3 All is Lost
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+2 Towerfall

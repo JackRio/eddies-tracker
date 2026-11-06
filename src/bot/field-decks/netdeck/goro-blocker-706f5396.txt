@@ -1,0 +1,25 @@
+# Goro blocker - by riddance (netdeck.gg 706f5396-c175-4313-a6e0-295c546a2eb0, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+2 Tyger's Whisper
+3 MaxTac Squadron
+2 Delamain Cab
+2 Goro Takemura: Losing His Way
+3 Rogue Amendiares: Queen of the Afterlife
+2 Nadia: Fighting Through Grief
+2 MaxTac Heavy
+3 Dying Night: V's Pistol
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Floor It
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+3 Take Control
+2 Nocturne OP55 N1

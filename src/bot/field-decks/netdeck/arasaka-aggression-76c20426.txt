@@ -1,0 +1,35 @@
+# Arasaka Aggression - by tsundokugames (netdeck.gg 76c20426-2b36-4fa0-99e0-b0638324ec2b, 1 likes, 100 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+2 Field Operator
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Johnny Silverhand: Never Stop Fighting
+1 Minotaur
+1 Sandayu Oda: Hanako's Guardian
+1 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+2 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 Detonate
+2 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+2 Take Control
+2 Appetite for Destruction
+
+# Sideboard (not loaded):
+# side: 2 6th Street Recruits
+# side: 1 Minotaur
+# side: 2 Gunpoint Diplomacy
+# side: 2 We Gotta Live Together

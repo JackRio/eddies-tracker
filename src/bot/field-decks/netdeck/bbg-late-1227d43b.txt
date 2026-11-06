@@ -1,0 +1,31 @@
+# BBG late - by Charlio (netdeck.gg 1227d43b-e4fe-4b37-92ca-3b4b4b972ece, 0 likes, 21 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Valentino Street Racer
+# side: 2 MT0D12 Flathead
+# side: 2 Nadia: Fighting Through Grief
+# side: 1 Nocturne OP55 N1
+# side: 1 Towerfall

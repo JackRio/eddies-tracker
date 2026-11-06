@@ -1,0 +1,24 @@
+# Yellow Red Gear - by rdog1029 (netdeck.gg 2cf738e7-f57a-4eb8-96e9-45b32dfed281, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Japantown Jonin
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Maelstrom Goons
+3 Meredith Stout: Stone Cold Corpo
+3 Offduty Malfini
+3 Viktor Vektor: Drop Your Illusions
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Gorilla Arms
+2 Safety Override
+2 Cyberpsychosis
+2 Live with the Aftermath

@@ -1,0 +1,29 @@
+# Sasha's Utility Belt - by Cyber_Dad22 (netdeck.gg 9951e565-5c5e-4dfc-872f-8635d62cfb49, 1 likes, 7 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Sketchy Ripper
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+3 Caliber: Totentanz's Top Dog
+2 Heywood Ripperdoc
+1 Jackie Welles: Ride or Die Choom
+1 Modded Kusanagi
+1 Alt Cunningham: Mother of Daemons
+1 Placide: Voodoo Sentinel
+3 Kiroshi Optics
+2 Mandibular Upgrade
+2 Tetratronic Rippler
+2 Adrenaline Converter
+3 Zetatech Faceplate
+1 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Floor It
+2 Safety Override
+2 The Heist

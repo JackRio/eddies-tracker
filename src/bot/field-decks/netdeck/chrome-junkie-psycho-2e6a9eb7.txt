@@ -1,0 +1,26 @@
+# Chrome-Junkie Psycho - by ? (netdeck.gg 2e6a9eb7-6f64-4a28-8c6c-08791d6af1a0, 0 likes, 24 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Corpo Security
+2 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Maelstrom Zealots
+1 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Saul Bright: Stormrider
+3 Mandibular Upgrade
+3 Riot Shield
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Zetatech Berserk
+3 The Heist
+3 Cyberpsychosis
+1 Live with the Aftermath

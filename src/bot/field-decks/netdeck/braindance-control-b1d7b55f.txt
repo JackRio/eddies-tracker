@@ -1,0 +1,26 @@
+# Braindance control - by Eradcliffe (netdeck.gg b1d7b55f-8452-4822-9efe-e8d67cc32d2b, 0 likes, 4 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Lizzy Wizzy: Delicate Weapon
+2 Nadia: Fighting Through Grief
+3 Placide: Voodoo Sentinel
+2 Saul Bright: Stormrider
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+3 Towerfall

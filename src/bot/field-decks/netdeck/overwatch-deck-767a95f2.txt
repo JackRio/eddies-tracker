@@ -1,0 +1,24 @@
+# Overwatch.deck - by NotPro (netdeck.gg 767a95f2-f2b5-4b89-88f2-72a83b04d8b3, 0 likes, 3 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Pepe Najarro: Working Doubles
+3 Rita Wheeler: No Stupid Questions
+2 MaxTac AV
+3 Nadia: Fighting Through Grief
+3 Panam Palmer: Strength Through Family
+2 Dying Night: V's Pistol
+2 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Fool on the Hill
+2 Reboot Optics
+3 Nocturne OP55 N1
+2 (Don't Fear) The Reaper

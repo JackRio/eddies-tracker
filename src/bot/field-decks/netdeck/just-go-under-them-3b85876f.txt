@@ -1,0 +1,23 @@
+# Just go under them - by Stocke (netdeck.gg 3b85876f-24a6-4d3b-8cac-864b4384a8b8, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Hands Unclean
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 MaxTac Squadron
+3 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+2 Psycho Squad
+3 MaxTac AV
+3 Riding Nomad
+3 Dying Night: V's Pistol
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Floor It
+3 Fool on the Hill
+3 Nocturne OP55 N1
+3 We Gotta Live Together
+2 (Don't Fear) The Reaper

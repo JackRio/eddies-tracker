@@ -1,0 +1,25 @@
+# Blue - by riddance (netdeck.gg 90b9d107-96e4-48d5-8f09-6d0d45f874fc, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+2 Westbrook Netrunner
+2 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song

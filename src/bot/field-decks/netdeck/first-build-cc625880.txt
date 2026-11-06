@@ -1,0 +1,27 @@
+# first build - by YourLocalChoom (netdeck.gg cc625880-f07e-4049-9029-5e0ea0dc8695, 0 likes, 12 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+2 Augmented Negotiators
+1 Valentino Guerrera
+2 Kerry Eurodyne: The Last Rockerboy
+1 El Sombrerón: La Venganza Lenta
+3 Rockn' Rockerboy
+1 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Deadman Transmitter
+3 Appetite for Destruction
+3 Bonnie and Clyde
+1 Cyberpsychosis
+3 Gunpoint Diplomacy
+2 Carnage at the Colosseum

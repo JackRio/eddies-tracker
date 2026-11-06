@@ -1,0 +1,28 @@
+# New Deck - by Asuramaru (netdeck.gg b8761402-5730-4440-b54d-dd1c7ab6b6d1, 0 likes, 7 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Corpo Security
+3 Augmented Negotiators
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Pepe Najarro: Working Doubles
+2 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+1 Panam Palmer: Strength Through Family
+2 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+2 Synapse Burnout
+3 Corporate Surveillance
+2 Cyberpsychosis
+3 Memory Relapse
+2 We Gotta Live Together

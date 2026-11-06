@@ -1,0 +1,43 @@
+# Alt, Judy cycle deck - by The_Webkiller (netdeck.gg 70d6d6eb-ae3e-4eb6-8a9f-4880d4afb22d, 2 likes, 42 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+2 Augmented Negotiators
+2 Delamain: Rideshare AI
+1 Viktor Vektor: You Might Feel a Little Pinch
+3 Delamain Cab
+3 Rita Wheeler: No Stupid Questions
+2 T-Bug: Amateur Philosopher
+1 Westbrook Netrunner
+1 Caliber: Totentanz's Top Dog
+1 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+1 Modded Muramasa
+1 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+2 Modded Kusanagi
+1 Trauma Team Operatives
+2 Placide: Voodoo Sentinel
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Zetatech Faceplate
+2 NetWatch Netdriver
+3 Afterparty at Lizzie's
+1 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+
+# Sideboard (not loaded):
+# side: 1 Mox Inciters
+# side: 2 Offduty Malfini
+# side: 1 Rockn' Rockerboy
+# side: 1 The Heist
+# side: 1 Cyberpsychosis
+# side: 1 Nocturne OP55 N1

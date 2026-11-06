@@ -1,0 +1,40 @@
+# Another Woman's Treasur - by Afrobane (netdeck.gg 1fd7062c-4fcb-4a88-a50c-af42f31d0eb8, 0 likes, 20 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+1 Corpo Security
+1 Tyger's Whisper
+1 Emergency Atlus
+1 Field Operator
+1 MaxTac Squadron
+1 Valentino Street Racer
+2 Goro Takemura: Losing His Way
+1 Maelstrom Zealots
+1 Pacifica Netrunner
+1 Pepe Najarro: Working Doubles
+1 MaxTac AV
+1 Riding Nomad
+1 Wraith Marauders
+1 Nadia: Fighting Through Grief
+2 Panam Palmer: Strength Through Family
+1 MaxTac Heavy
+1 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+2 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Fool on the Hill
+2 Take Control
+2 Memory Relapse
+2 We Gotta Live Together
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

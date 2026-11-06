@@ -1,0 +1,29 @@
+# New Deck - by ? (netdeck.gg eb048367-1d7d-4db1-9362-0ad6a5f944c8, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Ruthless Lowlife
+3 Secondhand Bombus
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+2 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Detonate
+3 Industrial Assembly
+3 Appetite for Destruction
+3 Cyberpsychosis
+2 Over the Edge

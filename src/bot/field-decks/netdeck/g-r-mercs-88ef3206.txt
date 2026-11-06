@@ -1,0 +1,25 @@
+# G/R Mercs - by Chopper (netdeck.gg 88ef3206-5e9a-4ab0-bd2d-adaa7bb6ca17, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+3 Johnny Silverhand: Never Stop Fighting
+2 Mantis Blades
+3 Satori: Sword of Saburo
+2 Sandevistan
+3 Detonate
+3 Peace Offering
+2 Synapse Burnout
+2 Fool on the Hill
+2 Over the Edge
+2 We Gotta Live Together
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

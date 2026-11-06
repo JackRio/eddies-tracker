@@ -1,0 +1,27 @@
+# Beefed up Royce - by Kingturtleisme (netdeck.gg 71a9cf97-45b0-4ba4-a4bb-d60a9513dce8, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Japantown Jonin
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 T-Bug: Amateur Philosopher
+3 Viktor Vektor: Drop Your Illusions
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+1 Detonate
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis

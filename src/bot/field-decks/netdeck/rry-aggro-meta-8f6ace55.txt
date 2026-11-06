@@ -1,0 +1,25 @@
+# RRY Aggro (META) - by Csteazyy (netdeck.gg 8f6ace55-3258-4017-8d07-41af5e475b7d, 2 likes, 41 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+1 Meredith Stout: Stone Cold Corpo
+1 Jackie Welles: Ride or Die Choom
+3 Yorinobu Arasaka: Steel Dragon
+3 Kiroshi Optics
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+2 Industrial Assembly
+2 Appetite for Destruction
+3 Bonnie and Clyde
+3 Carnage at the Colosseum

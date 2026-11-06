@@ -1,0 +1,23 @@
+# New Deck - by DJC (netdeck.gg 639afc2e-8a7f-4057-af99-2be2743ff5df, 0 likes, 1 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Viktor Vektor: Sit Down and Relax
+1 V: Streetkid
+
+// Main deck
+3 Secondhand Bombus
+3 Valentino Guerrera
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Royce: Don't Call Me Simon
+3 Jackie Welles: Ride or Die Choom
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 The Relic: Experimental Biochip
+3 All is Lost
+3 Detonate
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

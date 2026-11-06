@@ -1,0 +1,28 @@
+# RRY - Rocker Midrange - by ? (netdeck.gg 1fe5c589-a2db-43d8-b38f-124708cab8f9, 0 likes, 9 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+1 V: Roamer of the Badlands
+1 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+1 Octant
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+1 Gunpoint Diplomacy
+2 Carnage at the Colosseum

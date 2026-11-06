@@ -1,0 +1,28 @@
+# Geared Up - by erosenin (netdeck.gg 95ccae40-2fb9-4ec0-ba03-d56ae8a0d16f, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+1 Augmented Negotiators
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+1 Viktor Vektor: Drop Your Illusions
+3 Saul Bright: Stormrider
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Zetatech Berserk
+2 Afterparty at Lizzie's
+2 All is Lost
+2 The Heist
+2 Cyberpsychosis

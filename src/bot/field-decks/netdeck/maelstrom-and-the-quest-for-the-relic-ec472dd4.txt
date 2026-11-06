@@ -1,0 +1,27 @@
+# Maelstrom and the Quest for the Relic - by WendysBaconator (netdeck.gg ec472dd4-e624-4d15-9517-58d55d5d9bc4, 2 likes, 106 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Ruthless Lowlife
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Caliber: Totentanz's Top Dog
+2 Royce: Don't Call Me Simon
+3 Screw: Lovelorn Fool
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Adrenaline Converter
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Detonate
+2 Safety Override
+2 Cyberpsychosis
+2 Live with the Aftermath
+2 Shattered Memories

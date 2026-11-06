@@ -1,0 +1,31 @@
+# Can't Touch This - by Nespelem (netdeck.gg eaacc812-0ca5-4a5a-9372-6ad20fb1a088, 0 likes, 2 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+2 Mox Inciters
+3 Maelstrom Zealots
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 Modded Muramasa
+2 Rogue Amendiares: Queen of the Afterlife
+1 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Riot Shield
+3 NetWatch Netdriver
+3 Floor It
+1 Corporate Surveillance
+3 Reboot Optics
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+2 Towerfall

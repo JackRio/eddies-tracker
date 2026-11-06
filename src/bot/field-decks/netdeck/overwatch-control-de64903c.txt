@@ -1,0 +1,24 @@
+# Overwatch control - by Idris_Elba (netdeck.gg de64903c-f65d-4651-a961-7f6ffcb478f3, 1 likes, 81 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Panam Palmer: Strength Through Family
+1 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Corporate Surveillance
+3 Memory Relapse
+2 (Don't Fear) The Reaper

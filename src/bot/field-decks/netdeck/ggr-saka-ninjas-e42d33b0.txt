@@ -1,0 +1,32 @@
+# GGR Saka Ninjas - by wrthfulhammer (netdeck.gg e42d33b0-6409-40df-8dfc-6f33e0ef3ee5, 0 likes, 53 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Field Operator
+2 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+3 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+1 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Synapse Burnout
+2 Over the Edge
+2 Shattered Memories
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Chrome Fang
+# side: 2 Riot Shield
+# side: 2 Detonate

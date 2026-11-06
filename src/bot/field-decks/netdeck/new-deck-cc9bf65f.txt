@@ -1,0 +1,23 @@
+# New Deck - by ArcaneVi (netdeck.gg cc9bf65f-e3a1-4fcf-85a5-7fe1023863bd, 0 likes, 6 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Hanako Arasaka: In a Gilded Cage
+3 T-Bug: Amateur Philosopher
+2 Rockn' Rockerboy
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Gorilla Arms
+2 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

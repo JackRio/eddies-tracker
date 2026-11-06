@@ -1,0 +1,23 @@
+# New Deck - by Scarycolt (netdeck.gg ee65cfac-0e31-457c-a01d-be06f8b8fcca, 0 likes, 1 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Berserk
+3 Detonate
+3 Shattered Memories
+1 We Gotta Live Together

@@ -1,0 +1,29 @@
+# New Deck - by ZB1997 (netdeck.gg be7ad59c-2aac-4863-bf86-63ba92ccd43d, 0 likes, 1 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+2 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+2 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 Detonate
+3 Peace Offering

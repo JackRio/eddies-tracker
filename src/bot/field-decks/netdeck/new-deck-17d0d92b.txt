@@ -1,0 +1,25 @@
+# New Deck - by oni no chuck (netdeck.gg 17d0d92b-81d5-4afb-9397-2e4bb24330a7, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Caliber: Totentanz's Top Dog
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Safety Override
+2 Cyberpsychosis
+3 Bootleg Black Sapphire Show

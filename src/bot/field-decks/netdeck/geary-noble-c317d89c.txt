@@ -1,0 +1,29 @@
+# Geary Noble - by Francoghini (netdeck.gg c317d89c-54c3-4cc1-8fab-180377f024a6, 1 likes, 39 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+1 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 MaxTac Suppression Team
+3 Jackie Welles: Ride or Die Choom
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Synapse Burnout
+1 Corporate Surveillance
+3 Live with the Aftermath
+3 Memory Relapse
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 2 Nadia: Fighting Through Grief
+# side: 3 Peace Offering

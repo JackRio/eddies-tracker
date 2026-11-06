@@ -1,0 +1,36 @@
+# Y Y R Royce - by ? (netdeck.gg 86fb5978-db9b-46a8-8a7f-015a4f200a2b, 0 likes, 14 views, updated 2026-10-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+1 La Llorona: Ghost of the Past
+2 Meredith Stout: Stone Cold Corpo
+1 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+2 Detonate
+2 Safety Override
+3 The Heist
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 1 Viktor Vektor: You Might Feel a Little Pinch
+# side: 2 Gilded Matón
+# side: 1 Chrome Fang
+# side: 1 Heywood Ripperdoc
+# side: 1 Arasaka Emergency Radioport
+# side: 1 Cyberpsychosis

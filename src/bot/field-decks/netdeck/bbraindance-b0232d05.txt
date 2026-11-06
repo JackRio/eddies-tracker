@@ -1,0 +1,31 @@
+# BBRaindance - by Ender (netdeck.gg b0232d05-e5ec-430e-9068-f701602aa330, 0 likes, 8 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Swordwise Huscle
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Screw: Lovelorn Fool
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 3 Detonate

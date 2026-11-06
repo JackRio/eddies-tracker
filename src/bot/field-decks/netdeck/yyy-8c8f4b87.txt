@@ -1,0 +1,28 @@
+# YYY - by morsdraconis (netdeck.gg 8c8f4b87-e59d-4a9d-bb08-49d41d0b49e5, 1 likes, 52 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Hanako Arasaka: In a Gilded Cage
+2 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Secondhand Bombus
+# side: 2 MaxTac Suppression Team
+# side: 2 Safety Override

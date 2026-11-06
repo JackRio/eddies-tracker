@@ -1,0 +1,23 @@
+# How fast can we deckout - by ShatteringSkullz (netdeck.gg ecaac56f-ab9e-4ced-931d-4e861850c775, 0 likes, 2 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+3 Swordwise Huscle
+3 Hacked Corpo
+3 Kerry Eurodyne: The Last Rockerboy
+3 Tetratronic Rippler
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Shattered Memories

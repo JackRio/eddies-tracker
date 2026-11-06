@@ -1,0 +1,24 @@
+# YYR RAMP - by DJ Death Star (netdeck.gg ac38801b-8023-4959-b051-a454f37a76d6, 0 likes, 4 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

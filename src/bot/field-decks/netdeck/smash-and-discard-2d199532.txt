@@ -1,0 +1,23 @@
+# Smash and discard - by Mochudo (netdeck.gg 2d199532-a9a8-46ce-a5ce-67a2b22470fd, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+3 Caliber: Totentanz's Top Dog
+2 MaxTac Suppression Team
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Safety Override
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

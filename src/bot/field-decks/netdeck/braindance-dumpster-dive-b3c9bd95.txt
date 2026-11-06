@@ -1,0 +1,35 @@
+# Braindance Dumpster Dive - by ImTyrd (netdeck.gg b3c9bd95-9af1-4a92-abba-0115bd04b748, 0 likes, 15 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+1 Delamain: Rideshare AI
+1 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+2 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+2 Unlikely Bond
+2 Les Élémens
+2 Towerfall

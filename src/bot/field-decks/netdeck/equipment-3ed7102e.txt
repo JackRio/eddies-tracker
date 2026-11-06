@@ -1,0 +1,29 @@
+# Equipment - by Kinglonewolf (netdeck.gg 3ed7102e-b5aa-496c-9528-b707ee34794f, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Ruthless Lowlife
+2 Sketchy Ripper
+2 Maelstrom Goons
+2 Swordwise Huscle
+2 Valentino Guerrera
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+2 Viktor Vektor: Drop Your Illusions
+1 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Safety Override
+2 The Heist
+2 Cyberpsychosis
+2 Shattered Memories

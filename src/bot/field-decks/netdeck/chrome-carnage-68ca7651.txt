@@ -1,0 +1,25 @@
+# Chrome Carnage - by Combat Koala (netdeck.gg 68ca7651-202f-4982-8259-5ddcff134b2e, 2 likes, 63 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Rockn' Rockerboy
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+3 Safety Override
+2 The Heist
+3 Cyberpsychosis
+2 Over the Edge

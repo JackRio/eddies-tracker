@@ -1,0 +1,26 @@
+# Panam Jhonny - by Nivelis (netdeck.gg 31369274-8365-4b6e-ad9a-e683ac737af7, 1 likes, 29 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+1 Field Operator
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+1 Take Control
+1 Memory Relapse
+3 (Don't Fear) The Reaper

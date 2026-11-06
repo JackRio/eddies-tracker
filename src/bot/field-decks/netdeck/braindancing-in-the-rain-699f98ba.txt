@@ -1,0 +1,25 @@
+# Braindancing in the Rain - by Jeff Gorgon (netdeck.gg 699f98ba-bc99-4dec-8ab6-7a9f060508aa, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Unlikely Bond
+3 Towerfall

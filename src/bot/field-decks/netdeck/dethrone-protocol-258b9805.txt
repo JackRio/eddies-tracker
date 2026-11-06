@@ -1,0 +1,27 @@
+# Dethrone Protocol - by ? (netdeck.gg 258b9805-4cab-40d5-84ab-627d3f8a2b10, 0 likes, 2 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Yorinobu Arasaka: Embracing Destruction
+1 V: Streetkid
+
+// Main deck
+2 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Screw: Lovelorn Fool
+2 Yorinobu Arasaka: Steel Dragon
+1 Arasaka Emergency Radioport
+1 Satori: Sword of Saburo
+3 All is Lost
+2 Detonate
+3 Floor It
+2 Reboot Optics
+2 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Gunpoint Diplomacy
+2 Shattered Memories
+2 Carnage at the Colosseum

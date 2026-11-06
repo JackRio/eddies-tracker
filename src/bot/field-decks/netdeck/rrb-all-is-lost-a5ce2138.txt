@@ -1,0 +1,27 @@
+# RRB All is Lost - by Kaneko86 (netdeck.gg a5ce2138-f27f-484b-8b08-312396db5bb9, 0 likes, 4 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Valentino Guerrera
+2 Rita Wheeler: No Stupid Questions
+2 El Sombrerón: La Venganza Lenta
+3 Lizzy Wizzy: Delicate Weapon
+1 Rogue Amendiares: Queen of the Afterlife
+2 Screw: Lovelorn Fool
+1 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+2 All is Lost
+3 Industrial Assembly
+2 Appetite for Destruction
+3 Bonnie and Clyde
+2 Unlikely Bond
+3 Carnage at the Colosseum

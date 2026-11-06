@@ -1,0 +1,24 @@
+# New Deck - by DaCurzon (netdeck.gg a711fecf-8c61-4f45-8736-8f66a0bb270e, 0 likes, 5 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+3 Tyger's Whisper
+3 Field Operator
+3 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+2 Sandayu Oda: Hanako's Guardian
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

@@ -1,0 +1,27 @@
+# Hanako Padre Capitan - by Darkeon (netdeck.gg a4a678b4-335a-4dd2-8786-ed7d52b8da2a, 0 likes, 1 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+2 Corpo Security
+3 Dexter DeShawn: One Last Chance
+2 Field Operator
+3 Hanako Arasaka: In a Gilded Cage
+2 Pacifica Netrunner
+3 Pepe Najarro: Working Doubles
+1 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+1 Panam Palmer: Strength Through Family
+2 MaxTac Heavy
+3 Kiroshi Optics
+1 Zetatech Faceplate
+1 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+1 Corporate Surveillance
+3 Memory Relapse
+3 (Don't Fear) The Reaper

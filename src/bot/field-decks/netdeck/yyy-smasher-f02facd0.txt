@@ -1,0 +1,31 @@
+# YYY Smasher - by Björn Kimminich (netdeck.gg f02facd0-0cd0-4359-a643-8e26090fcc0a, 0 likes, 3 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Gilded Matón
+3 MaxTac Suppression Team
+3 Viktor Vektor: Drop Your Illusions
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+2 Adrenaline Converter
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+3 Cyberpsychosis
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Viktor Vektor: You Might Feel a Little Pinch
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 2 Zetatech Faceplate
+# side: 1 Safety Override
+# side: 1 Live with the Aftermath

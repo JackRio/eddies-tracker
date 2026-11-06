@@ -1,0 +1,35 @@
+# Judy/Alt/Kerry - by TacoNomad (netdeck.gg 48115535-333a-4e8c-bc6c-f5463694fb9f, 0 likes, 8 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+1 Jacked-In Voodoo Boy
+2 Secondhand Bombus
+2 Mox Inciters
+1 Offduty Malfini
+1 Rita Wheeler: No Stupid Questions
+1 T-Bug: Amateur Philosopher
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Modded Kusanagi
+1 Trauma Team Operatives
+1 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+1 Unlikely Bond
+1 Les Élémens
+1 Towerfall

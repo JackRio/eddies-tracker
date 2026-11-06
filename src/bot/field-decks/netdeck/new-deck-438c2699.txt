@@ -1,0 +1,28 @@
+# New Deck - by MustyAvenger (netdeck.gg 438c2699-63ca-41df-9723-1ecaacbc8bbe, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+1 Modded Muramasa
+2 MT0D12 Flathead
+2 Johnny Silverhand: Never Stop Fighting
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 All is Lost
+3 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

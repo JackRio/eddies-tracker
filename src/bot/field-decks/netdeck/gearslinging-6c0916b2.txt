@@ -1,0 +1,29 @@
+# Gearslinging - by Laufh (netdeck.gg 6c0916b2-41cf-4ca9-9a4d-0699f9fbb6e9, 0 likes, 17 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+2 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Screw: Lovelorn Fool
+2 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Johnny Silverhand: Never Stop Fighting
+1 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+1 The Heist
+2 Cyberpsychosis
+2 Shattered Memories

@@ -1,0 +1,31 @@
+# Chrome Junkies - by xXAxel864Xx (netdeck.gg 2c4fec98-96be-4103-9644-f0a9f1595ba2, 0 likes, 17 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Caliber: Totentanz's Top Dog
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+2 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 The Heist
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Sketchy Ripper
+# side: 3 Detonate
+# side: 1 Bootleg Black Sapphire Show

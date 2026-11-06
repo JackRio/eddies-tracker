@@ -1,0 +1,25 @@
+# BBG Aggro Deletion - by Seal_ (netdeck.gg 99ea164d-3126-46b8-99a1-31024bb880d0, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+2 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MaxTac AV
+1 Placide: Voodoo Sentinel
+2 NetWatch Netdriver
+3 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens

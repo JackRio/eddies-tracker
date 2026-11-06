@@ -1,0 +1,25 @@
+# Beat on the Brat - by Stevie G (netdeck.gg 5e25ba72-2093-4a08-b9d2-d90c41f1ba49, 0 likes, 1 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+3 MaxTac Squadron
+2 Goro Takemura: Losing His Way
+2 Hanako Arasaka: In a Gilded Cage
+1 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Riot Shield
+3 Sandevistan
+3 Zetatech Berserk
+2 Peace Offering
+3 Synapse Burnout
+3 Take Control
+3 Cyberpsychosis

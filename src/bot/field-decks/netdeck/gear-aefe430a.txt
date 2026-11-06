@@ -1,0 +1,33 @@
+# Gear? - by Thor1024 (netdeck.gg aefe430a-22bd-41a2-a792-e136c6bce518, 1 likes, 41 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+1 MaxTac Suppression Team
+2 Screw: Lovelorn Fool
+2 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis
+2 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 1 Screw: Lovelorn Fool
+# side: 3 All is Lost
+# side: 1 Live with the Aftermath
+# side: 2 Shattered Memories

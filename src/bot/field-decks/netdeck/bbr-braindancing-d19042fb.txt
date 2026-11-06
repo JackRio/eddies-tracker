@@ -1,0 +1,35 @@
+# BBR Braindancing - by medy (netdeck.gg d19042fb-b5f8-4430-8211-dc7f78ce93e3, 0 likes, 11 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Floor It
+1 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 6th Street Recruits
+# side: 1 Maman Brigitte: Spirit of Death
+# side: 2 Mantis Blades
+# side: 1 Satori: Sword of Saburo
+# side: 1 NetWatch Netdriver
+# side: 1 Detonate

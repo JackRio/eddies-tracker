@@ -1,0 +1,30 @@
+# RRY midrange - by Sean (netdeck.gg 9b6c447e-6eb9-4c41-b51d-d305be797d1c, 0 likes, 35 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 V: Streetkid
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+3 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+2 Detonate
+3 Bonnie and Clyde
+2 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Mandibular Upgrade
+# side: 1 Detonate

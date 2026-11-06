@@ -1,0 +1,30 @@
+# V-Day - by Nazraghoul (netdeck.gg 4f847185-43c0-40f9-84f5-c1274a4c33a3, 0 likes, 12 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Sketchy Ripper
+3 6th Street Recruits
+2 Psycho Squad
+2 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Detonate
+3 Chrome Reverie
+2 Nocturne OP55 N1
+1 Over the Edge
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Over the Edge

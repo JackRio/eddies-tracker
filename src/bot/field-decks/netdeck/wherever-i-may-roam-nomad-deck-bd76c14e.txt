@@ -1,0 +1,31 @@
+# Wherever I May Roam (Nomad Deck) - by ? (netdeck.gg bd76c14e-0b98-4dd2-86d1-174593596f96, 0 likes, 3 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Corpo Security
+3 Japantown Jonin
+2 La Llorona: Ghost of the Past
+1 Swordwise Huscle
+1 Valentino Guerrera
+1 Valentino Street Racer
+2 Riding Nomad
+2 V: Roamer of the Badlands
+1 Wraith Marauders
+1 Panam Palmer: Strength Through Family
+1 Saul Bright: Stormrider
+2 Mantis Blades
+2 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+2 Synapse Burnout
+2 Fool on the Hill
+2 Take Control
+3 Over the Edge
+3 We Gotta Live Together
+1 Wild in the Streets
+1 (Don't Fear) The Reaper

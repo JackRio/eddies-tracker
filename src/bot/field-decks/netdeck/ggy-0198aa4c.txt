@@ -1,0 +1,31 @@
+# GGY - by mori (netdeck.gg 0198aa4c-14a5-42f8-93d5-6cb826c3c977, 0 likes, 67 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Padre: Man of the Cross
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 MaxTac Squadron
+2 Valentino Street Racer
+2 Maelstrom Zealots
+2 Offduty Malfini
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Wraith Marauders
+2 Nadia: Fighting Through Grief
+2 Sandayu Oda: Hanako's Guardian
+2 Riot Shield
+2 Zetatech Faceplate
+2 Sandevistan
+2 Zetatech Berserk
+2 Peace Offering
+2 Synapse Burnout
+1 Corporate Surveillance
+1 Fool on the Hill
+1 Take Control
+2 Memory Relapse
+2 We Gotta Live Together
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

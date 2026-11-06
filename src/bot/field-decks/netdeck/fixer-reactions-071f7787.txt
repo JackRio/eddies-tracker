@@ -1,0 +1,29 @@
+# Fixer Reactions - by Rats T. Rats Dave (netdeck.gg 071f7787-0785-4701-98f2-922b7a2c7ba2, 0 likes, 3 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Valentino Street Racer
+3 T-Bug: Amateur Philosopher
+2 MaxTac AV
+2 Trauma Team Operatives
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Zetatech Berserk
+3 All is Lost
+3 The Heist
+2 Over the Edge
+3 Memory Relapse
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 3 Viktor Vektor: You Might Feel a Little Pinch
+# side: 2 Hanako Arasaka: In a Gilded Cage
+# side: 2 Riot Shield

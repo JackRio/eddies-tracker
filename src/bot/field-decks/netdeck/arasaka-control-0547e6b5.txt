@@ -1,0 +1,24 @@
+# Arasaka Control - by MichaelP (netdeck.gg 0547e6b5-3159-4400-93c0-c0203466c3b5, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Swordwise Huscle
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 All is Lost
+3 Detonate
+3 Peace Offering
+3 Fool on the Hill
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

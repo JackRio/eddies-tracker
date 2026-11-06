@@ -1,0 +1,33 @@
+# Royce - by CadiaStands (netdeck.gg b41ec595-7f36-4748-85ba-376938a4990c, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+1 Maelstrom Goons
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Hanako Arasaka: In a Gilded Cage
+2 Kerry Eurodyne: The Last Rockerboy
+1 Caliber: Totentanz's Top Dog
+1 Royce: Don't Call Me Simon
+1 Screw: Lovelorn Fool
+1 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+2 Detonate
+1 Industrial Assembly
+3 The Heist
+2 Appetite for Destruction
+3 Cyberpsychosis
+2 Gunpoint Diplomacy
+1 Shattered Memories

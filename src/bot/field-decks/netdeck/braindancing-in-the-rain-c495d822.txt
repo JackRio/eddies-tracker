@@ -1,0 +1,28 @@
+# Braindancing in the rain - by Dawn Danbero (netdeck.gg c495d822-738f-460e-bf69-b1fc97355c4b, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Detonate
+2 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+1 Over the Edge
+3 Pyramid Song
+2 Shattered Memories
+2 Unlikely Bond
+2 Towerfall

@@ -1,0 +1,23 @@
+# New Deck - by knooke (netdeck.gg 7af65abb-208d-4d1e-b985-67f6dfc6d146, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Jackie Welles: Ride or Die Choom
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Bonnie and Clyde
+3 Cyberpsychosis
+1 Shattered Memories
+3 Carnage at the Colosseum

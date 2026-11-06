@@ -1,0 +1,28 @@
+# App - by PeaTheAuthor (netdeck.gg 7368a413-5813-476a-b9c7-76396413c233, 0 likes, 16 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Field Operator
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Sandayu Oda: Hanako's Guardian
+3 Placide: Voodoo Sentinel
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Trust No One
+3 Nocturne OP55 N1
+3 Memory Relapse
+2 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 Saul Bright: Stormrider
+# side: 3 NetWatch Netdriver

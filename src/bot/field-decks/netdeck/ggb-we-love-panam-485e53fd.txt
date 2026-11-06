@@ -1,0 +1,27 @@
+# GGB-We love Panam - by Stranger (netdeck.gg 485e53fd-9d63-4a6a-bd39-fe343d90fbdf, 0 likes, 42 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Mox Inciters
+2 Valentino Street Racer
+2 Maelstrom Zealots
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Riot Shield
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Floor It
+2 Peace Offering
+2 Corporate Surveillance
+3 Chrome Reverie
+2 Memory Relapse

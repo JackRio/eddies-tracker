@@ -1,0 +1,44 @@
+# The Heist - by SirJakeyPlays (netdeck.gg 536539a1-fecb-41db-95e9-1b6480c208e7, 1 likes, 26 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+1 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Hanako Arasaka: In a Gilded Cage
+3 Offduty Malfini
+2 Rita Wheeler: No Stupid Questions
+1 Lizzy Wizzy: Delicate Weapon
+1 MaxTac Suppression Team
+3 Rockn' Rockerboy
+1 Modded Kusanagi
+2 Alt Cunningham: Mother of Daemons
+1 Placide: Voodoo Sentinel
+1 Adrenaline Converter
+1 Dying Night: V's Pistol
+2 Zetatech Faceplate
+1 NetWatch Netdriver
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Floor It
+1 Trust No One
+2 Reboot Optics
+2 Safety Override
+1 Chrome Reverie
+2 Live with the Aftermath
+1 Nocturne OP55 N1
+2 Unlikely Bond
+
+# Sideboard (not loaded):
+# side: 1 Augmented Negotiators
+# side: 1 Psycho Squad
+# side: 1 Caliber: Totentanz's Top Dog
+# side: 1 MaxTac Suppression Team
+# side: 1 Dying Night: V's Pistol
+# side: 1 Gorilla Arms
+# side: 1 Reboot Optics

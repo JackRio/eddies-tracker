@@ -1,0 +1,23 @@
+# YGG - BC CWaZY - by Stranger (netdeck.gg e113d4b4-5ee8-40f5-9d60-4964db7d9d8c, 0 likes, 48 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Riding Nomad
+3 Jackie Welles: Ride or Die Choom
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 The Heist

@@ -1,0 +1,28 @@
+# Run 'em down - by Blue Frodo (netdeck.gg 0517ba5f-3823-48d9-9bfd-b1a30080c6db, 1 likes, 6 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Delamain Cab
+2 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+3 Royce: Don't Call Me Simon
+2 Placide: Voodoo Sentinel
+2 Mantis Blades
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+3 Chrome Reverie
+2 Over the Edge
+2 Pyramid Song
+2 Unlikely Bond
+3 Les Élémens
+2 Towerfall

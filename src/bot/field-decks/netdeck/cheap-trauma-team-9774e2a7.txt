@@ -1,0 +1,24 @@
+# Cheap Trauma Team - by Scorbutic (netdeck.gg 9774e2a7-df3e-444c-a112-08ac5c16e83a, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 Valentino Street Racer
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Trauma Team Operatives
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Afterparty at Lizzie's
+3 Detonate
+2 Synapse Burnout
+1 Take Control
+3 The Heist
+2 Memory Relapse
+3 We Gotta Live Together

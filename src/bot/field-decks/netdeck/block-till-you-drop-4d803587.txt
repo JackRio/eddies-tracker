@@ -1,0 +1,25 @@
+# Block Till You Drop - by GrizzlyG (netdeck.gg 4d803587-0dff-4c12-8404-1e28c10c76ff, 0 likes, 3 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Padre: Man of the Cross
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+1 Kerry Eurodyne: The Last Rockerboy
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+2 Memory Relapse

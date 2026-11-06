@@ -1,0 +1,29 @@
+# Braindancing in the Rain - by Blue Frodo (netdeck.gg 972b6e4e-564a-44e6-ab51-cf97494c25d5, 0 likes, 4 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Padre: Man of the Cross
+
+// Main deck
+1 Corpo Security
+3 Evelyn Parker: Scheming Siren
+2 Jacked-In Voodoo Boy
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Corporate Surveillance
+2 Take Control
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+1 Towerfall

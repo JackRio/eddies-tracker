@@ -1,0 +1,29 @@
+# Black Friday Removal - by Rats T. Rats Dave (netdeck.gg c906628c-bd42-464d-b9c4-f82cd012be32, 0 likes, 57 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Padre: Man of the Cross
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Field Operator
+3 Valentino Street Racer
+2 Pacifica Netrunner
+2 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Wraith Marauders
+3 Dying Night: V's Pistol
+2 Sandevistan
+3 Peace Offering
+2 Trust No One
+2 Fool on the Hill
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Westbrook Netrunner
+# side: 2 Rogue Amendiares: Queen of the Afterlife
+# side: 2 Riot Shield

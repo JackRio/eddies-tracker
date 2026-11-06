@@ -1,0 +1,24 @@
+# BBY - Gear Up, Shut Down - by buzzone (netdeck.gg b25e364f-cff0-4322-b3ef-60bc29943402, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Sketchy Ripper
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+1 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Les Élémens

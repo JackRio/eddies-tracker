@@ -1,0 +1,35 @@
+# Somewhat Damaged (Techie Deck) - by ? (netdeck.gg 8ce6038d-019a-4349-bcc2-03b3138801d8, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Ruthless Lowlife
+3 Secondhand Bombus
+1 Sketchy Ripper
+1 Augmented Negotiators
+2 Swordwise Huscle
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+2 Offduty Malfini
+1 Chrome Fang
+1 Royce: Don't Call Me Simon
+1 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Adrenaline Converter
+2 Zetatech Faceplate
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+1 Detonate
+1 Industrial Assembly
+2 Safety Override
+2 Cyberpsychosis
+1 Shattered Memories
+1 Bootleg Black Sapphire Show

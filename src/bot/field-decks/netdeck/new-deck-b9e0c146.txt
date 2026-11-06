@@ -1,0 +1,24 @@
+# New Deck - by GhostArya (netdeck.gg b9e0c146-b519-4438-b4fa-cb575fa6aa0a, 1 likes, 19 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Caliber: Totentanz's Top Dog
+3 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

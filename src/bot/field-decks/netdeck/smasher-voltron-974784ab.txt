@@ -1,0 +1,25 @@
+# Smasher Voltron - by Metallium (netdeck.gg 974784ab-33a8-4aed-977b-24c49eb13366, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 The Heist
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

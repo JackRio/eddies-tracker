@@ -1,0 +1,25 @@
+# Trauma Team Platinum - by WatsonSideJobs (netdeck.gg 0ffda0a2-049e-46f4-a3b6-0cdaa6780477, 0 likes, 3 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+3 Offduty Malfini
+3 Pepe Najarro: Working Doubles
+3 Riding Nomad
+3 Trauma Team Operatives
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Peace Offering
+1 Fool on the Hill
+3 The Heist
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

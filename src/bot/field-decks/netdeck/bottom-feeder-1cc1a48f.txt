@@ -1,0 +1,27 @@
+# Bottom Feeder - by Ryvian (netdeck.gg 1cc1a48f-33d3-4fbf-b71b-e64331e6889e, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Augmented Negotiators
+2 Mox Inciters
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+1 Rockn' Rockerboy
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Afterparty at Lizzie's
+3 Floor It
+2 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+3 Les Élémens
+1 Towerfall

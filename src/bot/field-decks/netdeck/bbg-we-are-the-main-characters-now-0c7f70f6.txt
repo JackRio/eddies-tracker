@@ -1,0 +1,29 @@
+# BBG - We Are The Main Characters Now - by Lash101 (netdeck.gg 0c7f70f6-2bc3-411b-b4f1-561ddfeedd01, 1 likes, 53 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+3 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 2 Memory Relapse
+# side: 1 Unlikely Bond
+# side: 2 Les Élémens

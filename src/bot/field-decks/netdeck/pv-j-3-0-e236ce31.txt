@@ -1,0 +1,25 @@
+# PV&J 3.0 - by RalphThePyro (netdeck.gg e236ce31-cba7-4273-b9b1-30b3c7a69b04, 0 likes, 27 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Tyger's Whisper
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 Panam Palmer: Strength Through Family
+3 Mantis Blades
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+3 Memory Relapse
+2 Wild in the Streets
+3 (Don't Fear) The Reaper

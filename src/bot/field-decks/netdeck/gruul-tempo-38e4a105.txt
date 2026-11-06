@@ -1,0 +1,30 @@
+# Gruul Tempo - by Mcgatsu (netdeck.gg 38e4a105-dc60-455d-bb42-9451d54b7f40, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Ruthless Lowlife
+3 MaxTac Squadron
+1 Goro Takemura: Losing His Way
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac AV
+2 Screw: Lovelorn Fool
+1 Johnny Silverhand: Never Stop Fighting
+1 Panam Palmer: Strength Through Family
+3 Sandayu Oda: Hanako's Guardian
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+1 Overwatch: Panam's Gift
+2 Zetatech Berserk
+2 All is Lost
+2 Detonate
+3 Peace Offering
+3 Synapse Burnout
+3 Fool on the Hill
+2 Shattered Memories
+1 (Don't Fear) The Reaper

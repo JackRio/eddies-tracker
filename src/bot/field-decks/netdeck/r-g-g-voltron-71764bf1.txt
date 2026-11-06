@@ -1,0 +1,23 @@
+# R/G/G Voltron - by Surgical Ninja (netdeck.gg 71764bf1-d54f-4263-a807-39459e7f71ce, 6 likes, 380 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Swordwise Huscle
+2 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Riding Nomad
+3 Royce: Don't Call Me Simon
+3 V: Roamer of the Badlands
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Wild in the Streets

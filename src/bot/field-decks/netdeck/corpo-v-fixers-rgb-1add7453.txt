@@ -1,0 +1,32 @@
+# Corpo V Fixers - RGB - by Pelikn (netdeck.gg 1add7453-b954-4aed-adf1-b2fc7454d4f6, 0 likes, 37 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+1 Field Operator
+2 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Johnny Silverhand: Never Stop Fighting
+1 Modded Kusanagi
+1 Nadia: Fighting Through Grief
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Floor It
+3 Peace Offering
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Over the Edge
+2 Memory Relapse
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Riot Shield
+# side: 3 Detonate

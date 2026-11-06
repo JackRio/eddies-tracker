@@ -1,0 +1,25 @@
+# New Deck - by Navarra (netdeck.gg 9a02731e-b52f-4273-b1ff-1bff8f01c695, 0 likes, 10 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+1 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 Safety Override

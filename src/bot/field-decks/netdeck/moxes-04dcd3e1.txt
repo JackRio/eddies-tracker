@@ -1,0 +1,30 @@
+# Moxes - by Jonfucius (netdeck.gg 04dcd3e1-5c84-40ac-91dd-d4128775ec5b, 0 likes, 19 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+1 Corpo Security
+3 Evelyn Parker: Scheming Siren
+1 Delamain: Rideshare AI
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Riot Shield
+3 Floor It
+3 Synapse Burnout
+2 Corporate Surveillance
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Unlikely Bond
+3 Les Élémens
+2 We Gotta Live Together
+1 Towerfall

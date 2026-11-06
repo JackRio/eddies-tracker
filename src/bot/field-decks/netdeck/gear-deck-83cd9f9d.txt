@@ -1,0 +1,26 @@
+# Gear deck - by The One (netdeck.gg 83cd9f9d-e5b5-4d27-9e04-eecfabc7dcdf, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Rita Wheeler: No Stupid Questions
+2 Rockn' Rockerboy
+2 Heywood Ripperdoc
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 The Heist
+1 Cyberpsychosis

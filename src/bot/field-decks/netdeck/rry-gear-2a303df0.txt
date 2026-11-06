@@ -1,0 +1,23 @@
+# RRY Gear - by ShatteringSkullz (netdeck.gg 2a303df0-904e-4347-be67-e0ace1380bc6, 0 likes, 1 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Dum Dum: Maelstrom Triggerman
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+2 Augmented Negotiators
+3 Maelstrom Goons
+3 Swordwise Huscle
+3 Caliber: Totentanz's Top Dog
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Cyberpsychosis

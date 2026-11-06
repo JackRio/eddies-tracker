@@ -1,0 +1,23 @@
+# RGB #1 - by RareTotem (netdeck.gg fd282946-5dfb-4448-b74d-46518a02aad4, 21 likes, 1027 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 MaxTac AV
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Floor It
+3 Synapse Burnout
+3 Nocturne OP55 N1
+3 Memory Relapse

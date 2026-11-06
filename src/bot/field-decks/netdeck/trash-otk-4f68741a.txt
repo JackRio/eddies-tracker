@@ -1,0 +1,23 @@
+# Trash OTK - by Vindious (netdeck.gg 4f68741a-0718-4fbf-a49c-49a475b8adcc, 0 likes, 17 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+3 Field Operator
+3 Valentino Street Racer
+3 Screw: Lovelorn Fool
+3 Wraith Marauders
+3 Trauma Team Operatives
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 All is Lost
+3 Peace Offering
+1 Corporate Surveillance
+3 Over the Edge
+3 Shattered Memories
+3 We Gotta Live Together

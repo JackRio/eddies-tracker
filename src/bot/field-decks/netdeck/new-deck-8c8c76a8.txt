@@ -1,0 +1,28 @@
+# New Deck - by GhostX7A5 (netdeck.gg 8c8c76a8-82f2-4254-8e7f-d7c9642b114c, 1 likes, 64 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Kiroshi Optics
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 Cyberpsychosis
+
+# Sideboard (not loaded):
+# side: 3 6th Street Recruits
+# side: 3 Safety Override
+# side: 1 Live with the Aftermath

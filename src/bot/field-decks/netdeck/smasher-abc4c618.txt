@@ -1,0 +1,24 @@
+# Smasher - by H.Sentry (netdeck.gg abc4c618-7e56-47e1-a6e4-6c9508334c83, 0 likes, 13 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+2 Jackie Welles: Ride or Die Choom
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+3 Safety Override
+1 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

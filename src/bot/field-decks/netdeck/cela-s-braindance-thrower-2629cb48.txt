@@ -1,0 +1,31 @@
+# Cela's Braindance Thrower - by Celamelon (netdeck.gg 2629cb48-9beb-41f0-a281-b96a64b6a9e5, 0 likes, 31 views, updated 2026-10-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Corpo Security
+2 Evelyn Parker: Scheming Siren
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Corporate Surveillance
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+2 Les Élémens
+
+# Sideboard (not loaded):
+# side: 1 Jacked-In Voodoo Boy
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Unlikely Bond

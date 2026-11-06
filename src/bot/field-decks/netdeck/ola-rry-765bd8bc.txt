@@ -1,0 +1,24 @@
+# ola RRY - by vxquero01 (netdeck.gg 765bd8bc-6f5f-4e17-996b-c9993f2af2a2, 2 likes, 54 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Industrial Assembly
+3 Bonnie and Clyde
+1 Gunpoint Diplomacy
+3 Shattered Memories
+3 Carnage at the Colosseum

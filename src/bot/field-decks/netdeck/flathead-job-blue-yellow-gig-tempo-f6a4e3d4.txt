@@ -1,0 +1,23 @@
+# Flathead Job — Blue/Yellow Gig Tempo - by ntr0py (netdeck.gg f6a4e3d4-9f57-4100-8760-899a07f119f3, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Dexter DeShawn: One Last Chance
+3 Delamain Cab
+3 Offduty Malfini
+3 T-Bug: Amateur Philosopher
+3 MT0D12 Flathead
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Floor It
+3 Reboot Optics
+3 Chrome Reverie

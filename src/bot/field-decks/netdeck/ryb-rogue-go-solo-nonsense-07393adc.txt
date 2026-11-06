@@ -1,0 +1,23 @@
+# RYB Rogue Go Solo nonsense - by ? (netdeck.gg 07393adc-0f6f-40e7-b53a-55e7c237fdb2, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Sasha Yakovleva: Won't Let You Down
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 All is Lost
+3 Industrial Assembly
+3 The Heist
+3 Nocturne OP55 N1
+2 Over the Edge

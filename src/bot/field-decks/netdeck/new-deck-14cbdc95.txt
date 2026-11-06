@@ -1,0 +1,23 @@
+# New Deck - by RefuseResist (netdeck.gg 14cbdc95-42ad-4d68-9b59-f42f93938a2a, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Detonate
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

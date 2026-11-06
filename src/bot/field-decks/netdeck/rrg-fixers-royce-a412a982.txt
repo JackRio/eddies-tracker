@@ -1,0 +1,35 @@
+# RRG - Fixers & Royce - by GeneLantern (netdeck.gg a412a982-fe4a-4c19-bf64-73439cb99865, 1 likes, 88 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Valentino Street Racer
+2 6th Street Recruits
+3 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+2 El Sombrerón: La Venganza Lenta
+2 Animals Wrecker
+1 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Deadman Transmitter
+2 Zetatech Berserk
+2 Industrial Assembly
+2 Peace Offering
+1 Synapse Burnout
+2 Appetite for Destruction
+2 Gunpoint Diplomacy
+3 Memory Relapse
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Chrome Fang
+# side: 1 Synapse Burnout
+# side: 2 Corporate Surveillance
+# side: 1 Bonnie and Clyde
+# side: 1 Over the Edge

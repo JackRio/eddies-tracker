@@ -1,0 +1,25 @@
+# Choom - by FatherNature (netdeck.gg ca73cebd-3dc6-4d8a-b011-3e2a9bba063f, 0 likes, 17 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Secondhand Bombus
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+2 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 All is Lost
+2 Appetite for Destruction
+3 Bonnie and Clyde
+2 Over the Edge
+3 Carnage at the Colosseum

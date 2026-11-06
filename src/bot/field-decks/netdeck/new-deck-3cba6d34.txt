@@ -1,0 +1,24 @@
+# New Deck - by Shad0wen (netdeck.gg 3cba6d34-ec4f-4606-b88a-e83ddbb7aff5, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 All is Lost
+3 Detonate
+2 Floor It
+3 Industrial Assembly
+2 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Shattered Memories
+3 Les Élémens
+3 Towerfall

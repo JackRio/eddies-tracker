@@ -1,0 +1,28 @@
+# Leximoto - by RoAnoake_UT (netdeck.gg 19d58744-63d0-4a73-8d01-c56bf2e31c85, 0 likes, 7 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

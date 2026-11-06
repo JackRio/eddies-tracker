@@ -1,0 +1,28 @@
+# Gears - by JimBobthe4 (netdeck.gg 2a57c42c-c93f-484b-906c-4ce4ca0852f4, 0 likes, 12 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Swordwise Huscle
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+1 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+1 Gorilla Arms
+3 Detonate
+2 Industrial Assembly
+3 The Heist

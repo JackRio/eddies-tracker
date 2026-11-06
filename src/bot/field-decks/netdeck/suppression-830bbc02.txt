@@ -1,0 +1,25 @@
+# Suppression - by pollomancer (netdeck.gg 830bbc02-d16d-4df7-b7e8-890e79e6fbc0, 4 likes, 133 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Sketchy Ripper
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+1 MaxTac Suppression Team
+3 Panam Palmer: Strength Through Family
+3 Trauma Team Operatives
+2 Sandayu Oda: Hanako's Guardian
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Peace Offering
+3 Synapse Burnout
+3 Memory Relapse
+1 Wild in the Streets
+3 (Don't Fear) The Reaper

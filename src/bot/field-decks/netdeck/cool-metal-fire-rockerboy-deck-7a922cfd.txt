@@ -1,0 +1,30 @@
+# ..Cool Metal Fire (Rockerboy Deck) - by ? (netdeck.gg 7a922cfd-9f81-4b2f-9c7f-dc30db267523, 0 likes, 9 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+1 Caliber: Totentanz's Top Dog
+3 Rockn' Rockerboy
+1 V: Roamer of the Badlands
+1 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+2 Mandibular Upgrade
+1 Mantis Blades
+2 Adrenaline Converter
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+1 Afterparty at Lizzie's
+2 All is Lost
+2 Industrial Assembly
+2 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

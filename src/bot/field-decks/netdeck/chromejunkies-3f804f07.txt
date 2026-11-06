@@ -1,0 +1,27 @@
+# chromejunkies - by Holo7 (netdeck.gg 3f804f07-1d31-4cc5-9411-2da28233b131, 0 likes, 23 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Corpo Security
+2 Sketchy Ripper
+2 Maelstrom Goons
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Pepe Najarro: Working Doubles
+3 Viktor Vektor: Drop Your Illusions
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+2 Zetatech Faceplate
+2 Gorilla Arms
+3 Safety Override
+2 The Heist
+2 Memory Relapse
+2 Bootleg Black Sapphire Show

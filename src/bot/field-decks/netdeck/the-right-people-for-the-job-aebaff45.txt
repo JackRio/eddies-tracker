@@ -1,0 +1,28 @@
+# The right people for the job - by Dawn Danbero (netdeck.gg aebaff45-82fb-42b6-a809-59bf401298cd, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Field Operator
+2 MaxTac Squadron
+3 Mox Inciters
+3 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Riding Nomad
+2 MaxTac Heavy
+1 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+3 Corporate Surveillance
+3 Fool on the Hill
+3 Nocturne OP55 N1
+3 We Gotta Live Together
+2 (Don't Fear) The Reaper

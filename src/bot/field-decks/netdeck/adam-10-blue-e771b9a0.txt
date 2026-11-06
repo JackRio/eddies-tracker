@@ -1,0 +1,25 @@
+# Adam 10+ blue - by buzzone (netdeck.gg e771b9a0-030a-4e20-85fc-74eb0a27806c, 0 likes, 4 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Detonate
+3 Floor It
+2 Industrial Assembly
+3 Bonnie and Clyde
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Carnage at the Colosseum

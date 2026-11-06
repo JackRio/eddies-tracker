@@ -1,0 +1,27 @@
+# Min GIg BD Deck - by The Great Goblin King (netdeck.gg cca3f54e-1267-4d0a-96eb-a2dc9512eea6, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+2 Modded Kusanagi
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+2 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

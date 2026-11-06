@@ -1,0 +1,28 @@
+# Arasaka RRG - by Phooey (netdeck.gg 44fa165f-7fb2-4f27-a4c7-f070d6e3106a, 0 likes, 16 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+2 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+1 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+1 V: Roamer of the Badlands
+2 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+2 Sandayu Oda: Hanako's Guardian
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+2 Bonnie and Clyde
+3 Carnage at the Colosseum

@@ -1,0 +1,23 @@
+# Overwatch control - by Awerule (netdeck.gg 6ee7b6bc-c4bb-42dd-80ff-d3df713cabf0, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+3 Panam Palmer: Strength Through Family
+2 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+3 Synapse Burnout
+2 Chrome Reverie
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

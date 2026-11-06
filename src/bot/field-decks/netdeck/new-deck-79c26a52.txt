@@ -1,0 +1,24 @@
+# New Deck - by DonMonkey (netdeck.gg 79c26a52-a87c-48c4-906f-31ce8938502e, 0 likes, 14 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+1 Tetratronic Rippler
+3 Peace Offering
+3 Trust No One
+1 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall

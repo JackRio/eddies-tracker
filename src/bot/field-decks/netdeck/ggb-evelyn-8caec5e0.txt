@@ -1,0 +1,31 @@
+# GGB Evelyn - by picklemire (netdeck.gg 8caec5e0-a4f0-4e0a-9e57-e84ed255ec4d, 0 likes, 8 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+2 Mox Inciters
+1 Valentino Street Racer
+3 Goro Takemura: Losing His Way
+3 Rita Wheeler: No Stupid Questions
+2 MaxTac AV
+3 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+1 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Reboot Optics
+3 Take Control
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 1 Maelstrom Zealots
+# side: 3 Psycho Squad
+# side: 2 Riding Nomad
+# side: 1 Riot Shield

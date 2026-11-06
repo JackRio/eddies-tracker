@@ -1,0 +1,30 @@
+# RYY Gear Midrange - by FloridaMan (netdeck.gg 2138c22d-1ec0-4697-9772-046981b1ec33, 0 likes, 70 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+1 Gorilla Arms
+2 Detonate
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Heywood Ripperdoc
+# side: 1 Detonate

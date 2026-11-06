@@ -1,0 +1,23 @@
+# Night City Lockdown - by Brakdrud (netdeck.gg 504e6d82-86e8-4b3a-880a-012e53b0a8d4, 0 likes, 29 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Tetratronic Rippler
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song

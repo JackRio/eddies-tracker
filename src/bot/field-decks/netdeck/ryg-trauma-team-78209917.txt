@@ -1,0 +1,32 @@
+# RYG Trauma team - by Boulder_Builder (netdeck.gg 78209917-c87b-49e0-8ed9-f9544d003a82, 1 likes, 71 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Field Operator
+3 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 MaxTac Suppression Team
+3 Trauma Team Operatives
+1 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Zetatech Faceplate
+1 Afterparty at Lizzie's
+3 Industrial Assembly
+2 Over the Edge
+3 Memory Relapse
+1 Shattered Memories
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 Riot Shield
+# side: 1 Shattered Memories

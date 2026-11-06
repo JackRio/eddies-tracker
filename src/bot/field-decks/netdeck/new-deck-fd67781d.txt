@@ -1,0 +1,24 @@
+# New Deck - by ? (netdeck.gg fd67781d-c2b4-4112-b212-6f8a5cc8cb6d, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+3 El Sombrerón: La Venganza Lenta
+3 Wraith Marauders
+2 Johnny Silverhand: Never Stop Fighting
+2 Sandayu Oda: Hanako's Guardian
+2 Mantis Blades
+2 Zetatech Berserk
+3 Industrial Assembly
+3 Peace Offering
+2 Corporate Surveillance
+3 Appetite for Destruction
+3 Gunpoint Diplomacy
+3 Memory Relapse

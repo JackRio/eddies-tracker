@@ -1,0 +1,28 @@
+# Programm Control - by Prospere (netdeck.gg 7541073b-58da-422c-9c25-f20a897d418a, 0 likes, 23 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Hacked Corpo
+2 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+2 Mantis Blades
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

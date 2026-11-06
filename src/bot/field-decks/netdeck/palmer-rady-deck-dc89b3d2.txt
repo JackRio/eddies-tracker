@@ -1,0 +1,25 @@
+# Palmer Rady Deck - by WatsonSideJobs (netdeck.gg dc89b3d2-c42d-4b65-8700-fbb011f81cf3, 0 likes, 5 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Pepe Najarro: Working Doubles
+2 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+2 We Gotta Live Together

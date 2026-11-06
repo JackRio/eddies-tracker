@@ -1,0 +1,23 @@
+# New Deck - by Primpod (netdeck.gg b60752fe-dbd8-406e-b80b-c571ed5af2cd, 0 likes, 7 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Yorinobu Arasaka: Steel Dragon
+3 NetWatch Netdriver
+3 All is Lost
+3 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Reboot Optics
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Carnage at the Colosseum

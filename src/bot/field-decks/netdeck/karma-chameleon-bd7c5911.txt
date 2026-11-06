@@ -1,0 +1,25 @@
+# Karma Chameleon - by Nat20Brett (netdeck.gg bd7c5911-42c8-4e47-bd72-46037864f41f, 0 likes, 2 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Augmented Negotiators
+3 Mox Inciters
+3 Psycho Squad
+2 Jackie Welles: Ride or Die Choom
+2 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+3 Dying Night: V's Pistol
+3 Riot Shield
+1 Zetatech Berserk
+3 Floor It
+3 Synapse Burnout
+3 The Heist
+3 Cyberpsychosis
+3 We Gotta Live Together

@@ -1,0 +1,28 @@
+# Block, Spend, Kill - by NobodyToBeKnown (netdeck.gg e32fa947-0939-4292-925e-71187f5e5eb4, 1 likes, 41 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Maelstrom Zealots
+3 Caliber: Totentanz's Top Dog
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Synapse Burnout
+3 Take Control
+3 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 2 MaxTac Heavy
+# side: 2 Cyberpsychosis

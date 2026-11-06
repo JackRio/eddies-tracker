@@ -1,0 +1,24 @@
+# Yellow Red Gear - by TimtheEnchanter (netdeck.gg 2f49f1c8-5e91-4928-9a00-a8b2e57335be, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+2 T-Bug: Amateur Philosopher
+3 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+3 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Bootleg Black Sapphire Show

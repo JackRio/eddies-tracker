@@ -1,0 +1,33 @@
+# The best BBG - by Lionhart (netdeck.gg 8ac6b2f1-9dc1-4422-a9c4-350c8d2b6f8f, 0 likes, 53 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+1 Placide: Voodoo Sentinel
+2 Riot Shield
+2 Floor It
+2 Peace Offering
+3 Synapse Burnout
+2 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Mox Inciters
+# side: 1 Modded Kusanagi
+# side: 1 Placide: Voodoo Sentinel
+# side: 1 Riot Shield
+# side: 1 Floor It
+# side: 1 Towerfall

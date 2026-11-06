@@ -1,0 +1,29 @@
+# Mono Green ARASAKA - by Boffin777 (netdeck.gg 4149b142-9efe-44de-8ad4-457515a7b4e7, 0 likes, 3 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+2 Ruthless Lowlife
+3 Field Operator
+2 Kerry Eurodyne: The Last Rockerboy
+2 Royce: Don't Call Me Simon
+1 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Yorinobu Arasaka: Steel Dragon
+2 Arasaka Emergency Radioport
+2 Riot Shield
+2 Deadman Transmitter
+2 Industrial Assembly
+2 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Take Control
+2 Appetite for Destruction
+2 Memory Relapse
+2 Shattered Memories
+2 Carnage at the Colosseum

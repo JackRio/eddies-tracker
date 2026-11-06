@@ -1,0 +1,24 @@
+# Technomancer - by WizardLizard_ (netdeck.gg fba5faa9-e356-4f72-865a-931ce9fa79a1, 0 likes, 14 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Wakako Okada: Peace and Harmony
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 NetWatch Netdriver
+3 All is Lost
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+1 Shattered Memories
+2 Towerfall

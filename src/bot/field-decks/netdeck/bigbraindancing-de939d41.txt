@@ -1,0 +1,40 @@
+# BigBraindancing - by Deauhhan (netdeck.gg de939d41-e605-466a-a022-daa81c2b9057, 1 likes, 41 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+1 Jacked-In Voodoo Boy
+1 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+1 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+1 Psycho Squad
+1 Rita Wheeler: No Stupid Questions
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Royce: Don't Call Me Simon
+1 Screw: Lovelorn Fool
+1 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Tetratronic Rippler
+1 Arasaka Emergency Radioport
+1 Dying Night: V's Pistol
+1 Satori: Sword of Saburo
+1 NetWatch Netdriver
+2 All is Lost
+2 Detonate
+1 Floor It
+1 Trust No One
+1 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+1 Shattered Memories
+1 Unlikely Bond
+1 Towerfall

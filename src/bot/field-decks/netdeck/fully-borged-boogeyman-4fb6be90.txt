@@ -1,0 +1,27 @@
+# Fully Borged Boogeyman - by Ossifiedd (netdeck.gg 4fb6be90-2654-4d4f-b322-70c406d45224, 1 likes, 9 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+1 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+1 Hanako Arasaka: In a Gilded Cage
+1 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+3 Cyberpsychosis
+3 Bootleg Black Sapphire Show

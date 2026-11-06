@@ -1,0 +1,25 @@
+# No Save Point - by Knightwish (netdeck.gg 60dedfba-cc69-417b-92cf-60911401c1b0, 0 likes, 22 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Augmented Negotiators
+2 Goro Takemura: Losing His Way
+2 Offduty Malfini
+3 Pepe Najarro: Working Doubles
+1 MaxTac AV
+3 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+2 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+3 Synapse Burnout
+2 Take Control
+3 Memory Relapse

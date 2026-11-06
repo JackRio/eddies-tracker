@@ -1,0 +1,30 @@
+# New Deck - by HuskySp00n (netdeck.gg b163bb91-f6f6-431d-9f68-0814696c73f2, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Corpo Security
+2 Evelyn Parker: Scheming Siren
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Rogue Amendiares: Queen of the Afterlife
+2 Nadia: Fighting Through Grief
+2 Placide: Voodoo Sentinel
+2 Saul Bright: Stormrider
+2 Dying Night: V's Pistol
+1 NetWatch Netdriver
+2 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 We Gotta Live Together
+1 Towerfall

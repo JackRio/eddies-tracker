@@ -1,0 +1,31 @@
+# Braindancing on your grave - by Blackhand (netdeck.gg 49ac58ac-5def-46c1-b793-dc5e9c0e5b70, 0 likes, 3 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 La Llorona: Ghost of the Past
+1 Misty Olszewski: Mender of Broken Spirits
+2 Hacked Corpo
+2 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 Rogue Amendiares: Queen of the Afterlife
+1 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+1 Dying Night: V's Pistol
+1 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Pyramid Song
+3 Shattered Memories
+2 Les Élémens
+1 Towerfall

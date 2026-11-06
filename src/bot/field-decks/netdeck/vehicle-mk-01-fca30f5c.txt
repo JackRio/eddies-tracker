@@ -1,0 +1,28 @@
+# Vehicle mk.01 - by Kross-Hare (netdeck.gg fca30f5c-cdf4-4f46-985e-3a03e23cc0cd, 0 likes, 1 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+2 Emergency Atlus
+2 Valentino Street Racer
+2 Delamain Cab
+2 MaxTac AV
+2 Modded Muramasa
+2 Riding Nomad
+2 Wraith Marauders
+2 Modded Kusanagi
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 Tetratronic Rippler
+2 Riot Shield
+2 NetWatch Netdriver
+2 Sandevistan
+1 Overwatch: Panam's Gift
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+1 We Gotta Live Together

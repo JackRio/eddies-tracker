@@ -1,0 +1,32 @@
+# GGB Aggro - by Ho0LiG4n (netdeck.gg 39f117e5-7af0-47fb-8391-849749ba478d, 1 likes, 68 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 Tyger's Whisper
+2 MaxTac Squadron
+2 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 Rogue Amendiares: Queen of the Afterlife
+2 Panam Palmer: Strength Through Family
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Corporate Surveillance
+2 Nocturne OP55 N1
+3 Memory Relapse
+2 Wild in the Streets
+1 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Riding Nomad
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Chrome Reverie
+# side: 1 (Don't Fear) The Reaper

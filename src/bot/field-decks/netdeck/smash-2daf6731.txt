@@ -1,0 +1,31 @@
+# SMASH - by LKPanda (netdeck.gg 2daf6731-5f4b-48b5-ac3e-106c2efff55b, 0 likes, 0 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Offduty Malfini
+2 T-Bug: Amateur Philosopher
+2 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+1 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+1 Safety Override
+3 The Heist
+2 Cyberpsychosis
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

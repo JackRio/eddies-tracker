@@ -1,0 +1,24 @@
+# Mono Yellow - by Vex (netdeck.gg 5aca9155-b5ea-4b7a-8b8e-cd548ee1f1c9, 0 likes, 108 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Augmented Negotiators
+2 Hanako Arasaka: In a Gilded Cage
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,26 @@
+# YYY Smasher - by MrMoranz (netdeck.gg b9af07a7-3ab3-43d1-95fc-16c53c7806c5, 0 likes, 38 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show

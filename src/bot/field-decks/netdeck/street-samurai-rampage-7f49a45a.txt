@@ -1,0 +1,30 @@
+# Street Samurai Rampage - by Fusionbug (netdeck.gg 7f49a45a-b52b-4ad5-ab54-28a2fe6f2270, 0 likes, 1 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Ruthless Lowlife
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 El Sombrerón: La Venganza Lenta
+1 Rockn' Rockerboy
+2 Viktor Vektor: Drop Your Illusions
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+2 Afterparty at Lizzie's
+2 The Heist
+2 Appetite for Destruction

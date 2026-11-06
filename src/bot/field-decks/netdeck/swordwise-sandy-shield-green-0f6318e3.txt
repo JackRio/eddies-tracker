@@ -1,0 +1,29 @@
+# Swordwise sandy shield green - by Kyle (netdeck.gg 0f6318e3-e967-4f21-b6d6-e0d3f7ca498d, 0 likes, 34 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Nadia: Fighting Through Grief
+3 MaxTac Heavy
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+1 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 2 Kerry Eurodyne: The Last Rockerboy
+# side: 2 Shattered Memories
+# side: 1 (Don't Fear) The Reaper

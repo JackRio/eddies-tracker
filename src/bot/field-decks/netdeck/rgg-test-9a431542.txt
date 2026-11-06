@@ -1,0 +1,24 @@
+# RGG test - by Throwawayyeti (netdeck.gg 9a431542-b937-430c-8bf8-d86d4baed21b, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Tyger's Whisper
+2 MaxTac Squadron
+2 Meredith Stout: Stone Cold Corpo
+3 Riding Nomad
+3 Nadia: Fighting Through Grief
+2 Saul Bright: Stormrider
+3 Mantis Blades
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 All is Lost
+3 Industrial Assembly
+3 Fool on the Hill
+3 Memory Relapse
+3 Shattered Memories

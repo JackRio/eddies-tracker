@@ -1,0 +1,24 @@
+# YYR (Not great) - by Vex (netdeck.gg 86dc821c-b61d-43fb-8ff6-e9853f3e3a24, 0 likes, 6 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Heist
+3 Live with the Aftermath

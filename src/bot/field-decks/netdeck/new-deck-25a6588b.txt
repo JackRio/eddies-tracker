@@ -1,0 +1,23 @@
+# New Deck - by EviLevi (netdeck.gg 25a6588b-c923-41e5-9e34-c10554883c26, 0 likes, 22 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+3 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Shattered Memories
+3 Carnage at the Colosseum

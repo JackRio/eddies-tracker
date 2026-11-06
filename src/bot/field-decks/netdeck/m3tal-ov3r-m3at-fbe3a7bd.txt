@@ -1,0 +1,30 @@
+# M3TAL_OV3R_M3AT\\ - by TimFandango (netdeck.gg fbe3a7bd-71bd-478d-8c83-90d1186bfa36, 11 likes, 287 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+2 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+2 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 1 Adam Smasher: Metal Over Meat
+# side: 1 The Heist
+# side: 2 Cyberpsychosis

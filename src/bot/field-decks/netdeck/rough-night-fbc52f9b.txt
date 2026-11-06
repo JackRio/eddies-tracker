@@ -1,0 +1,36 @@
+# Rough Night - by tsundokugames (netdeck.gg fbc52f9b-d471-46cb-9f1b-d3d6372f57cc, 0 likes, 115 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Hanako Arasaka: In a Gilded Cage
+2 MaxTac Suppression Team
+1 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Dexter DeShawn: One Last Chance
+# side: 1 Hanako Arasaka: In a Gilded Cage
+# side: 2 Offduty Malfini
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 1 Adam Smasher: Metal Over Meat

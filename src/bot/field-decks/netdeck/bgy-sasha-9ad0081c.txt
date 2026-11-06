@@ -1,0 +1,23 @@
+# BGY - Sasha - by Mischief (netdeck.gg 9ad0081c-5d1a-49cd-9466-eff3f00bbbea, 0 likes, 1 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Sasha Yakovleva: Won't Let You Down
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Dexter DeShawn: One Last Chance
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 Rogue Amendiares: Queen of the Afterlife
+3 Tetratronic Rippler
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse

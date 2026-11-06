@@ -1,0 +1,28 @@
+# R.G.B. - by CyberGuy (netdeck.gg 49ddfc49-150e-412d-b5aa-8ebe3a81b67e, 0 likes, 17 views, updated 2026-10-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Field Operator
+3 Valentino Street Racer
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Over the Edge
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 3 La Llorona: Ghost of the Past
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Detonate

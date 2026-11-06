@@ -1,0 +1,25 @@
+# Night City's Bravest - by ? (netdeck.gg dbb41436-b160-4b28-b710-ea6b795a4779, 0 likes, 18 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Emergency Atlus
+3 MaxTac Squadron
+2 MaxTac AV
+2 MaxTac Suppression Team
+2 Nadia: Fighting Through Grief
+2 Trauma Team Operatives
+2 MaxTac Heavy
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Sandevistan
+3 Zetatech Berserk
+3 Corporate Surveillance
+2 Cyberpsychosis
+2 Wild in the Streets

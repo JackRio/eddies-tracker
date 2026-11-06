@@ -1,0 +1,29 @@
+# Voodoo Delux - by AaronTheQuill (netdeck.gg 53148865-404c-4ab3-8341-1dc54ccbb5ae, 0 likes, 21 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Ruthless Lowlife
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Floor It
+# side: 3 Nocturne OP55 N1
+# side: 1 Pyramid Song

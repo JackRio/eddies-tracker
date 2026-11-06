@@ -1,0 +1,31 @@
+# .Hack//GGR - by DJTriEdge (netdeck.gg 24df13ef-ad9e-42ef-bd76-ceb24ab4af17, 4 likes, 232 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 Riding Nomad
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+2 Memory Relapse
+
+# Sideboard (not loaded):
+# side: 2 Detonate
+# side: 2 Take Control
+# side: 1 Memory Relapse
+# side: 2 (Don't Fear) The Reaper

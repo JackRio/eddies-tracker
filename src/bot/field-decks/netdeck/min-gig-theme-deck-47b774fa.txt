@@ -1,0 +1,23 @@
+# Min Gig Theme Deck - by Analog_V (netdeck.gg 47b774fa-75b0-4727-8210-068d6d958d84, 1 likes, 29 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens

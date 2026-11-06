@@ -1,0 +1,26 @@
+# Never Fade Away - by Ghu (netdeck.gg 10b0a654-7a74-4b76-99b8-0b8d9b0ab3ba, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Ruthless Lowlife
+3 Secondhand Bombus
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Kerry Eurodyne: The Last Rockerboy
+3 Screw: Lovelorn Fool
+3 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+3 Minotaur
+3 Octant
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 Detonate
+3 Bonnie and Clyde
+3 Over the Edge
+3 Carnage at the Colosseum

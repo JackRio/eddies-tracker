@@ -1,0 +1,27 @@
+# YYB_TURB0\\ - by TimFandango (netdeck.gg 9a0ad5a2-6675-4668-a6b0-9532fb4e2d9f, 101 likes, 3890 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac Suppression Team
+3 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Afterparty at Lizzie's
+3 Trust No One
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 3 Rockn' Rockerboy

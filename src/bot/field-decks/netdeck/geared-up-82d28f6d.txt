@@ -1,0 +1,24 @@
+# Geared Up - by SeaOtterChaos (netdeck.gg 82d28f6d-6ae7-4277-b489-88e6a6caa1fc, 0 likes, 5 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 MaxTac Squadron
+3 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 Royce: Don't Call Me Simon
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Detonate
+3 Synapse Burnout
+3 (Don't Fear) The Reaper

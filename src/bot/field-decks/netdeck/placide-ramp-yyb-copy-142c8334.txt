@@ -1,0 +1,30 @@
+# Placide Ramp YYB (Copy) - by sl.chiu (netdeck.gg 142c8334-d225-4ae6-9381-9eb60ff21f98, 0 likes, 21 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Caliber: Totentanz's Top Dog
+3 Lizzy Wizzy: Delicate Weapon
+2 MaxTac Suppression Team
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Safety Override
+1 Cyberpsychosis
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+2 Unlikely Bond
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 Secondhand Bombus
+# side: 2 Modded Kusanagi
+# side: 2 Cyberpsychosis

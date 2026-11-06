@@ -1,0 +1,27 @@
+# Braindance Control Deck - by Nivalex (netdeck.gg b75ad593-d63d-4f2b-8275-016c93c04d6c, 0 likes, 0 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 La Llorona: Ghost of the Past
+2 Mox Inciters
+2 Swordwise Huscle
+2 Valentino Guerrera
+3 6th Street Recruits
+2 Hacked Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Chrome Fang
+1 El Sombrerón: La Venganza Lenta
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Trust No One
+3 Bonnie and Clyde
+2 Chrome Reverie
+2 Shattered Memories
+2 Carnage at the Colosseum

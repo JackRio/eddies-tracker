@@ -1,0 +1,26 @@
+# New Deck - by NX (netdeck.gg 8542f672-4103-4f5c-b883-ec2a42a9b9ba, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Secondhand Bombus
+2 Swordwise Huscle
+1 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Detonate
+3 Synapse Burnout
+2 Corporate Surveillance
+2 Cyberpsychosis

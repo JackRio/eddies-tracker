@@ -1,0 +1,23 @@
+# Arasaka and Corps - by NobodyToBeKnown (netdeck.gg 814eb702-20f2-48ea-a47d-4c0583b7b7a1, 2 likes, 69 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 Nadia: Fighting Through Grief
+1 Minotaur
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Zetatech Berserk
+3 Industrial Assembly
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

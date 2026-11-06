@@ -1,0 +1,26 @@
+# Arasaka Reanimator. - by Pierogi (netdeck.gg a28ba037-dc68-460a-9088-30a7b9171c81, 0 likes, 64 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Tyger's Whisper
+3 Field Operator
+3 6th Street Recruits
+1 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+1 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+1 Memory Relapse
+2 Carnage at the Colosseum

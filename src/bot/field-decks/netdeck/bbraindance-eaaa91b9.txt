@@ -1,0 +1,32 @@
+# BBRaindance - by MrMoranz (netdeck.gg eaaa91b9-0f4d-4010-ac57-356a4d4242f7, 1 likes, 47 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+1 Unlikely Bond
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 V: Roamer of the Badlands
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 1 Modded Kusanagi
+# side: 2 Detonate

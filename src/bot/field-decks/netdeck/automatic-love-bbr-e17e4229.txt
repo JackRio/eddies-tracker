@@ -1,0 +1,24 @@
+# Automatic Love BBR - by Viserion (netdeck.gg e17e4229-19b1-47fb-8c20-4145526d4871, 0 likes, 2 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Detonate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Pyramid Song
+3 Les Élémens
+2 Towerfall

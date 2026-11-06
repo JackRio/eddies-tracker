@@ -1,0 +1,30 @@
+# YYY, Beta Box Deck 1 - by Xeno Sov (netdeck.gg eba2bc1a-4de3-4185-847f-63ea92130f4d, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Hanako Arasaka: In a Gilded Cage
+2 T-Bug: Amateur Philosopher
+1 Caliber: Totentanz's Top Dog
+1 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+1 Alt Cunningham: Mother of Daemons
+1 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+1 Zetatech Faceplate
+2 Gorilla Arms
+3 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show

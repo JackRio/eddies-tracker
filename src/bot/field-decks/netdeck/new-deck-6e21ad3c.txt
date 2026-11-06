@@ -1,0 +1,24 @@
+# New Deck - by ? (netdeck.gg 6e21ad3c-a29d-4466-8dba-25d992e32e23, 0 likes, 4 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Field Operator
+1 Valentino Street Racer
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+2 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+2 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum

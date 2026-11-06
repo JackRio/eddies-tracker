@@ -1,0 +1,25 @@
+# New Deck - by Fish_Wiggler (netdeck.gg b667d9b4-4109-4b74-8260-df5b9590df8a, 0 likes, 0 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Industrial Assembly
+3 Synapse Burnout
+2 Memory Relapse
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

@@ -1,0 +1,25 @@
+# Slam Yorinobu - by Matt (netdeck.gg 96857dc2-7d91-426b-aa4f-825e1ff0a76a, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+3 6th Street Recruits
+2 Maelstrom Zealots
+2 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+1 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+3 Synapse Burnout
+2 Appetite for Destruction
+3 Bonnie and Clyde
+2 Shattered Memories

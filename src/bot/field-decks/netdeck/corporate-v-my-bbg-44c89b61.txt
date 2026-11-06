@@ -1,0 +1,29 @@
+# Corporate V my BBG - by indysint (netdeck.gg 44c89b61-94cc-4269-8ac3-3b2d12a4ec34, 1 likes, 30 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Corporate Exile
+
+// Main deck
+3 Mox Inciters
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Modded Kusanagi
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Take Control
+# side: 3 Chrome Reverie
+# side: 2 Les Élémens

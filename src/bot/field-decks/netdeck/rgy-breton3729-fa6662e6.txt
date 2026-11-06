@@ -1,0 +1,26 @@
+# RGY breton3729 - by Breton3729 (netdeck.gg fa6662e6-2500-4f88-ab8b-7ab53667090d, 0 likes, 12 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+1 Tyger's Whisper
+2 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 MaxTac Suppression Team
+1 Johnny Silverhand: Never Stop Fighting
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 We Gotta Live Together

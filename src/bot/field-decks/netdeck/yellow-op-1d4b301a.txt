@@ -1,0 +1,27 @@
+# Yellow op? - by riddance (netdeck.gg 1d4b301a-e9e0-4d6d-98f1-e70cd7490d0c, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+1 Corpo Security
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Gilded Matón
+2 Nadia: Fighting Through Grief
+1 Alt Cunningham: Mother of Daemons
+3 Saul Bright: Stormrider
+1 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Zetatech Berserk
+1 Afterparty at Lizzie's
+2 Safety Override
+3 The Heist
+2 Bootleg Black Sapphire Show

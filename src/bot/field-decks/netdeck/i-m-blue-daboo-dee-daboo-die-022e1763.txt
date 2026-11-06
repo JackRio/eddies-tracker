@@ -1,0 +1,30 @@
+# I'm Blue Daboo dee daboo die - by CamWill (netdeck.gg 022e1763-c4fc-4b61-a604-e93999de68f8, 0 likes, 28 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Mox Inciters
+# side: 1 Maman Brigitte: Spirit of Death
+# side: 1 Modded Muramasa
+# side: 2 Reboot Optics

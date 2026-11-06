@@ -1,0 +1,26 @@
+# Corpo Sellout - by LegitDrew (netdeck.gg 64feca48-4fc5-406f-b780-ef1ccf06c584, 0 likes, 3 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Hands Unclean
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+2 Field Operator
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+3 Wraith Marauders
+2 Modded Kusanagi
+3 Riot Shield
+3 NetWatch Netdriver
+2 Zetatech Berserk
+2 Floor It
+2 Synapse Burnout
+2 Trust No One
+2 Corporate Surveillance
+2 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie

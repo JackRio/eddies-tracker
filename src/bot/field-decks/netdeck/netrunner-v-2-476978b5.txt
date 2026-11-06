@@ -1,0 +1,29 @@
+# Netrunner V.2 - by ? (netdeck.gg 476978b5-5626-4611-b70b-b7e88000c1da, 0 likes, 0 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Unlikely Bond
+3 Les Élémens
+3 Towerfall

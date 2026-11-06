@@ -1,0 +1,25 @@
+# Dance With Me - by NatCat (netdeck.gg 2b2a102d-bb52-4653-8778-52320f12da45, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Mox Inciters
+2 Rita Wheeler: No Stupid Questions
+2 Maman Brigitte: Spirit of Death
+3 Modded Muramasa
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+2 Pyramid Song
+3 Towerfall

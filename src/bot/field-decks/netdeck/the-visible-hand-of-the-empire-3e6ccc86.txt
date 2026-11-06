@@ -1,0 +1,30 @@
+# The visible hand of the empire - by Dawn Danbero (netdeck.gg 3e6ccc86-85aa-4080-a092-c43f26b4db9c, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Japantown Jonin
+3 Swordwise Huscle
+1 Meredith Stout: Stone Cold Corpo
+3 El Sombrerón: La Venganza Lenta
+3 Royce: Don't Call Me Simon
+1 Screw: Lovelorn Fool
+3 Octant
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+2 Appetite for Destruction
+2 Bonnie and Clyde
+1 Over the Edge
+1 Gunpoint Diplomacy
+1 Shattered Memories
+3 Carnage at the Colosseum

@@ -1,0 +1,23 @@
+# New Deck - by sea.wav (netdeck.gg 7935432c-4144-42a0-a0a6-d32ff4d52eff, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Padre: Man of the Cross
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+3 Rogue Amendiares: Queen of the Afterlife
+3 Nadia: Fighting Through Grief
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Trust No One
+3 Fool on the Hill
+3 Reboot Optics
+3 Take Control
+3 Chrome Reverie
+3 We Gotta Live Together
+2 Wild in the Streets
+3 (Don't Fear) The Reaper

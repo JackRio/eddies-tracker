@@ -1,0 +1,28 @@
+# New Deck - by Deadlock (netdeck.gg e5556285-ab0a-4280-bbfd-2e0dfa9d517f, 0 likes, 0 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Dexter DeShawn: One Last Chance
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+2 MT0D12 Flathead
+3 Placide: Voodoo Sentinel
+2 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Zetatech Faceplate
+1 NetWatch Netdriver
+1 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+2 Cyberpsychosis
+1 Pyramid Song
+3 Unlikely Bond
+2 Les Élémens

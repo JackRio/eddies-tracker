@@ -1,0 +1,35 @@
+# FINAL ACT v2 - by tsundokugames (netdeck.gg e62b5b01-5d60-4849-bd6d-7fa55a5fc231, 0 likes, 11 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+2 T-Bug: Amateur Philosopher
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+1 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+2 Mantis Blades
+2 Tetratronic Rippler
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Afterparty at Lizzie's
+2 Detonate
+2 Industrial Assembly
+2 Trust No One
+2 Reboot Optics
+2 Chrome Reverie
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 1 V: Roamer of the Badlands
+# side: 2 Dying Night: V's Pistol
+# side: 2 The Heist

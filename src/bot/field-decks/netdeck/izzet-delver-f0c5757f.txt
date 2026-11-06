@@ -1,0 +1,30 @@
+# Izzet Delver - by CowboyKatakuri (netdeck.gg f0c5757f-77fe-4bb9-93ac-293fdc13007f, 0 likes, 14 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Japantown Jonin
+3 Delamain: Rideshare AI
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+2 Mantis Blades
+2 Dying Night: V's Pistol
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Shattered Memories
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Floor It
+# side: 2 Unlikely Bond
+# side: 1 Les Élémens

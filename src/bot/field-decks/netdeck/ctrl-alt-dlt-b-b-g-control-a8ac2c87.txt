@@ -1,0 +1,26 @@
+# Ctrl Alt Dlt B,B,G Control - by CyberDad (netdeck.gg a8ac2c87-0a29-4b72-aaae-775f311f84a8, 0 likes, 22 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Mox Inciters
+3 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall

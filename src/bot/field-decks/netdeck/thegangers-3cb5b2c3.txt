@@ -1,0 +1,24 @@
+# TheGangers - by AleTered (netdeck.gg 3cb5b2c3-ad3b-4696-997b-759b7c067181, 0 likes, 3 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rogue Amendiares: Queen of the Afterlife
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 NetWatch Netdriver
+2 All is Lost
+2 Detonate
+3 Floor It
+3 Industrial Assembly
+3 Reboot Optics
+3 Bonnie and Clyde
+1 Over the Edge
+2 Carnage at the Colosseum

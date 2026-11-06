@@ -1,0 +1,25 @@
+# Fixer Control - by Brakdrud (netdeck.gg 92aa6fee-9f88-4d08-927b-e45e7b437f32, 0 likes, 15 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Corpo Security
+2 Augmented Negotiators
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+2 Offduty Malfini
+2 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+2 Rogue Amendiares: Queen of the Afterlife
+3 Tetratronic Rippler
+3 Riot Shield
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Corporate Surveillance
+3 Reboot Optics
+2 Take Control

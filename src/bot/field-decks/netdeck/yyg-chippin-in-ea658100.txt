@@ -1,0 +1,24 @@
+# YYG Chippin' in - by TheGreatLake0_0 (netdeck.gg ea658100-7d9c-406e-ae86-8e8c719816de, 0 likes, 4 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 Hanako Arasaka: In a Gilded Cage
+3 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Riot Shield
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Zetatech Berserk
+3 Peace Offering
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

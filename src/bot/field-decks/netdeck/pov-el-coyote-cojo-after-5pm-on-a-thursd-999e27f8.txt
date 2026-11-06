@@ -1,0 +1,28 @@
+# POV El Coyote Cojo after 5PM on a Thursday - by Rats T. Rats Dave (netdeck.gg 999e27f8-ffe4-4f40-81ef-cb311ffb83cc, 0 likes, 20 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Field Operator
+3 La Llorona: Ghost of the Past
+3 MaxTac Squadron
+3 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+2 Wraith Marauders
+3 Mantis Blades
+3 Riot Shield
+3 All is Lost
+3 Peace Offering
+3 Over the Edge
+3 Memory Relapse
+3 We Gotta Live Together
+3 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 2 MaxTac AV
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 3 Detonate

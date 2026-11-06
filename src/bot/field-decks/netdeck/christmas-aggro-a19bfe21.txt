@@ -1,0 +1,26 @@
+# Christmas Aggro - by Chronocoretcg (netdeck.gg a19bfe21-e340-40d7-8633-f17a34e8b108, 0 likes, 5 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Swordwise Huscle
+2 Goro Takemura: Losing His Way
+2 Meredith Stout: Stone Cold Corpo
+2 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+2 Satori: Sword of Saburo
+3 Sandevistan
+3 Industrial Assembly
+2 Peace Offering
+2 Corporate Surveillance
+3 Memory Relapse
+2 (Don't Fear) The Reaper

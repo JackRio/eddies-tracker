@@ -1,0 +1,23 @@
+# Landfill - by BlacknWhite07 (netdeck.gg 0a59f43e-eb25-40de-81ee-b447648024dc, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Detonate
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,25 @@
+# YELLOW SMASH - by Snapquester Mage (netdeck.gg 8bea5c49-843c-457d-bbe8-18722ad087d2, 0 likes, 27 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Offduty Malfini
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

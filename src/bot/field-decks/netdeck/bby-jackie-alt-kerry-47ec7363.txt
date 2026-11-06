@@ -1,0 +1,28 @@
+# BBY Jackie Alt Kerry - by bashyCorvidae (netdeck.gg 47ec7363-8737-4e04-ab90-8df7b1d7068d, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Augmented Negotiators
+1 Delamain: Rideshare AI
+3 Dexter DeShawn: One Last Chance
+2 Mox Inciters
+3 Offduty Malfini
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Trauma Team Operatives
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Afterparty at Lizzie's
+2 Floor It
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Towerfall

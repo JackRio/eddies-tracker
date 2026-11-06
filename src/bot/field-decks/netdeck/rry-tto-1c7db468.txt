@@ -1,0 +1,30 @@
+# RRY TTO - by Kardia (netdeck.gg 1c7db468-0f12-41f6-ac4c-b60d149f9a9a, 2 likes, 64 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+1 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+2 V: Roamer of the Badlands
+3 Trauma Team Operatives
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Industrial Assembly
+3 The Heist
+2 Bonnie and Clyde
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 3 Valentino Guerrera
+# side: 2 Detonate

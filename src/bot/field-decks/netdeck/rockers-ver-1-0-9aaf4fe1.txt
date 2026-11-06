@@ -1,0 +1,29 @@
+# Rockers ver 1.0 - by ShaiTan (netdeck.gg 9aaf4fe1-9ef2-47f0-95c6-49ee96abf8a0, 0 likes, 13 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Corporate Exile
+
+// Main deck
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 Floor It
+3 Industrial Assembly
+3 Trust No One
+2 Reboot Optics
+2 Chrome Reverie
+
+# Sideboard (not loaded):
+# side: 3 Meredith Stout: Stone Cold Corpo
+# side: 2 Detonate
+# side: 2 Unlikely Bond

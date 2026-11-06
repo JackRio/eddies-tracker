@@ -1,0 +1,26 @@
+# Chooms & Gears - by Helades (netdeck.gg edb36ef6-85d0-44d7-8194-a9651e0b13e2, 0 likes, 1 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+2 Ruthless Lowlife
+2 Sketchy Ripper
+2 La Llorona: Ghost of the Past
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 Saul Bright: Stormrider
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+2 Cyberpsychosis
+2 Shattered Memories
+2 We Gotta Live Together

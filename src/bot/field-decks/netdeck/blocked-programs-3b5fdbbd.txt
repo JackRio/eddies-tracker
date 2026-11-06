@@ -1,0 +1,30 @@
+# Blocked Programs - by Gorarath (netdeck.gg 3b5fdbbd-05b9-495f-b781-ca6c390b1497, 5 likes, 202 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Floor It
+3 Peace Offering
+3 Trust No One
+1 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Valentino Street Racer
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Riot Shield
+# side: 1 We Gotta Live Together

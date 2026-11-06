@@ -1,0 +1,23 @@
+# Gearing Up - by mirelz19 (netdeck.gg c445e83b-9ff9-4d2b-b2c5-d37be7742b1c, 0 likes, 1 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+3 Jackie Welles: Ride or Die Choom
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Cyberpsychosis

@@ -1,0 +1,26 @@
+# BBG Comp - by Xeno Sov (netdeck.gg e138f0f2-2c76-42bc-94ee-dd1820717d80, 0 likes, 25 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+1 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+1 Placide: Voodoo Sentinel
+2 Zetatech Berserk
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens

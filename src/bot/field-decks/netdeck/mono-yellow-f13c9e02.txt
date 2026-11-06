@@ -1,0 +1,26 @@
+# Mono-Yellow - by Brakdrud (netdeck.gg f13c9e02-b4b4-4d58-afa4-ea2629350750, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 Hanako Arasaka: In a Gilded Cage
+2 T-Bug: Amateur Philosopher
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist

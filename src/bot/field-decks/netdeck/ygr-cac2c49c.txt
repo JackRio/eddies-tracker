@@ -1,0 +1,23 @@
+# YGR - by Oni0nIt (netdeck.gg cac2c49c-60f3-423b-aeaa-3c6f02949b44, 0 likes, 1 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Goro Takemura: Vengeful Bodyguard
+1 V: Streetkid
+
+// Main deck
+3 Ruthless Lowlife
+3 Field Operator
+3 Swordwise Huscle
+3 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+3 Shattered Memories
+3 We Gotta Live Together

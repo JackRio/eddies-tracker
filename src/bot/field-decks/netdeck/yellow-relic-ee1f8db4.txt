@@ -1,0 +1,23 @@
+# Yellow Relic - by Vindious (netdeck.gg ee1f8db4-d7b4-4c01-bfbe-86615d17913a, 0 likes, 0 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Viktor Vektor: Drop Your Illusions
+3 Trauma Team Operatives
+3 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+2 Adrenaline Converter
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show

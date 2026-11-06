@@ -1,0 +1,29 @@
+# New Deck - by Erebius (netdeck.gg 5210dcaf-bcfc-4206-9447-4f114327608e, 1 likes, 18 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Ruthless Lowlife
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Offduty Malfini
+3 Rockn' Rockerboy
+1 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+1 Johnny Silverhand: Never Stop Fighting
+1 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Industrial Assembly
+3 Safety Override
+3 Live with the Aftermath
+2 Bootleg Black Sapphire Show

@@ -1,0 +1,24 @@
+# Blue Deck (ew) - by L1nk x_X (netdeck.gg d2fced5d-62aa-4925-be3f-f8da81ccdfef, 2 likes, 64 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Corpo Security
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+2 Rita Wheeler: No Stupid Questions
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+1 Sandayu Oda: Hanako's Guardian
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+2 Unlikely Bond
+3 Towerfall

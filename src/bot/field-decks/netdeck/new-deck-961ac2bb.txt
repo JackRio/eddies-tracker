@@ -1,0 +1,28 @@
+# New Deck - by The_Legion999 (netdeck.gg 961ac2bb-9c9b-459a-89e0-bde85ceb9bc8, 1 likes, 3 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+
+// Main deck
+2 Secondhand Bombus
+3 Swordwise Huscle
+2 Kerry Eurodyne: The Last Rockerboy
+2 Caliber: Totentanz's Top Dog
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Industrial Assembly
+2 Appetite for Destruction
+2 Bonnie and Clyde
+2 Cyberpsychosis
+2 Shattered Memories
+2 Carnage at the Colosseum

@@ -1,0 +1,25 @@
+# Incited - by Sansdiem (netdeck.gg 965ebeb0-c36e-4f58-bf33-c999d169daef, 0 likes, 2 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Mox Inciters
+2 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+3 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Take Control
+3 Chrome Reverie

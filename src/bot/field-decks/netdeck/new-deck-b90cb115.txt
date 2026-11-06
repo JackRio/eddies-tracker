@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg b90cb115-d31c-408e-8dc5-c4eff1c68c00, 0 likes, 16 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Mox Inciters
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 All is Lost
+3 Detonate
+3 Trust No One
+3 Pyramid Song
+3 Shattered Memories
+3 Towerfall

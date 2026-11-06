@@ -1,0 +1,26 @@
+# Blitz - by Sagramore (netdeck.gg 07affe59-b468-45f0-b4cb-e7c59cf3e1cd, 0 likes, 42 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+2 Augmented Negotiators
+2 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+3 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+3 Mandibular Upgrade
+2 Mantis Blades
+3 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+2 Afterparty at Lizzie's
+3 All is Lost
+2 Detonate
+2 Safety Override
+2 The Heist
+2 Bootleg Black Sapphire Show

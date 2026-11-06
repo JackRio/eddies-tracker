@@ -1,0 +1,24 @@
+# Armed to the Teeth - by Ryuzaki (netdeck.gg 3b359391-9df5-4626-a989-189985246302, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Dum Dum: Maelstrom Triggerman
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Ruthless Lowlife
+3 Sketchy Ripper
+2 Augmented Negotiators
+3 Maelstrom Goons
+2 El Sombrerón: La Venganza Lenta
+2 Viktor Vektor: Drop Your Illusions
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 Appetite for Destruction
+3 Cyberpsychosis
+2 Gunpoint Diplomacy

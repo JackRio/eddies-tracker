@@ -1,0 +1,29 @@
+# RYG - Gearheads - by Lash101 (netdeck.gg d6da6f8a-e6ae-43b7-b109-c417b91c1abd, 0 likes, 87 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Viktor Vektor: Sit Down and Relax
+1 Goro Takemura: Hands Unclean
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Maelstrom Goons
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+1 Saul Bright: Stormrider
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Take Control
+3 Cyberpsychosis
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 1 Heywood Ripperdoc
+# side: 2 Detonate
+# side: 2 Over the Edge

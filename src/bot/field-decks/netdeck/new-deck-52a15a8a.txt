@@ -1,0 +1,25 @@
+# New Deck - by Kyle Sev (netdeck.gg 52a15a8a-3a49-44e0-ba94-db6440c57ebc, 0 likes, 6 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+3 Corpo Security
+3 Emergency Atlus
+3 Field Operator
+3 Swordwise Huscle
+2 Pacifica Netrunner
+2 Wraith Marauders
+3 Johnny Silverhand: Never Stop Fighting
+3 Nadia: Fighting Through Grief
+2 Saul Bright: Stormrider
+3 Mantis Blades
+2 Riot Shield
+2 Satori: Sword of Saburo
+3 Peace Offering
+2 Bonnie and Clyde
+2 Memory Relapse
+2 Carnage at the Colosseum

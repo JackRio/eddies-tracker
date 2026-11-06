@@ -1,0 +1,31 @@
+# A Rusty Dream - by eelnoside (netdeck.gg 89fe6591-e42c-42bc-966f-7f4a40778635, 1 likes, 76 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Synapse Burnout
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Maman Brigitte: Spirit of Death
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 Riot Shield
+# side: 1 Towerfall

@@ -1,0 +1,25 @@
+# For Arasaka - by Xi-G105 (netdeck.gg 0cc342f6-2415-4f70-88f6-df52c2e5233d, 0 likes, 0 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Swordwise Huscle
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+1 Screw: Lovelorn Fool
+2 V: Roamer of the Badlands
+3 Sandayu Oda: Hanako's Guardian
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Industrial Assembly
+2 Peace Offering
+3 Fool on the Hill
+3 Memory Relapse
+3 (Don't Fear) The Reaper

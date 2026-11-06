@@ -1,0 +1,24 @@
+# Panam - by ajr25rex (netdeck.gg 9f8e1145-fbc9-4136-8e0f-9d67d4d5effa, 2 likes, 43 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Rogue Amendiares: Queen of the Afterlife
+2 Nadia: Fighting Through Grief
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+1 Zetatech Berserk
+3 Peace Offering
+3 Trust No One
+3 Memory Relapse
+3 (Don't Fear) The Reaper

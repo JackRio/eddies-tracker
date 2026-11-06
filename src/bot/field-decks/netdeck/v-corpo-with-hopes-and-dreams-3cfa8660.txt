@@ -1,0 +1,26 @@
+# V corpo with hopes and dreams - by Splati (netdeck.gg 3cfa8660-fd75-4a8a-986a-d617c2ebf031, 0 likes, 44 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+1 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+2 Pyramid Song
+2 Unlikely Bond
+2 Towerfall

@@ -1,0 +1,27 @@
+# Merc Gear - by Trujillobr1 (netdeck.gg 40229202-12a5-4fec-bbcc-d055dd857bc3, 0 likes, 0 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Pepe Najarro: Working Doubles
+2 Caliber: Totentanz's Top Dog
+1 Alt Cunningham: Mother of Daemons
+2 Saul Bright: Stormrider
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+1 Afterparty at Lizzie's
+2 The Heist
+2 Live with the Aftermath
+2 Memory Relapse
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,30 @@
+# Ra1nb0w_TTO_Turb0\\ - by TimFandango (netdeck.gg c8495d1d-c4b0-4b98-b1cb-8d9c107addde, 6 likes, 165 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+1 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Trauma Team Operatives
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Afterparty at Lizzie's
+3 All is Lost
+2 Floor It
+3 Industrial Assembly
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Shattered Memories
+
+# Sideboard (not loaded):
+# side: 1 Hacked Corpo
+# side: 3 MaxTac Suppression Team
+# side: 2 Detonate
+# side: 1 Shattered Memories

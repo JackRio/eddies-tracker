@@ -1,0 +1,24 @@
+# The Sun GGY - by Viserion (netdeck.gg 53194ee9-a59f-435c-8f68-80659752a452, 2 likes, 109 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Pepe Najarro: Working Doubles
+3 Rockn' Rockerboy
+2 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+2 Fool on the Hill
+3 The Heist
+3 Memory Relapse
+2 Wild in the Streets

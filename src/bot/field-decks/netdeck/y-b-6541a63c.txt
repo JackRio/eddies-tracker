@@ -1,0 +1,27 @@
+# Y/B - by Matwau (netdeck.gg 6541a63c-e041-4078-952c-8f822f6fe463, 0 likes, 1 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Sasha Yakovleva: Won't Let You Down
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+2 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+2 Placide: Voodoo Sentinel
+2 Adrenaline Converter
+2 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 Safety Override
+2 The Heist
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show

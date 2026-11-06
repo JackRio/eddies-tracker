@@ -1,0 +1,23 @@
+# RGY Blocker Control - by Gorarath (netdeck.gg b18498ff-3788-4cda-bfd9-1027315ad6f6, 0 likes, 1 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 We Gotta Live Together

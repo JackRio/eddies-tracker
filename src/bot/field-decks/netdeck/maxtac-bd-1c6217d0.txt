@@ -1,0 +1,31 @@
+# maxtac BD - by icebearw (netdeck.gg 1c6217d0-125d-4126-bb93-fad5b561194b, 0 likes, 11 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Ruthless Lowlife
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+2 Maelstrom Goons
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Industrial Assembly
+2 The Heist
+2 Cyberpsychosis

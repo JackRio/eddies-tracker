@@ -1,0 +1,25 @@
+# Red Red Whine - by frenchy (netdeck.gg 895cc261-5b1c-4db8-928b-f42c57549552, 0 likes, 30 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+2 Bonnie and Clyde
+2 Gunpoint Diplomacy
+2 Shattered Memories
+2 Carnage at the Colosseum

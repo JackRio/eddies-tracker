@@ -1,0 +1,30 @@
+# Braindance Baronets (WIP) - by Soul (netdeck.gg c8b7d7db-094a-4894-90ee-0cf286693172, 1 likes, 22 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+3 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Delamain Cab
+# side: 3 Floor It
+# side: 2 Reboot Optics

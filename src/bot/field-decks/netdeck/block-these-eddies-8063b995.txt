@@ -1,0 +1,23 @@
+# Block These Eddies - by Grebbles (netdeck.gg 8063b995-6eb1-482e-9685-da81f4c496d9, 0 likes, 19 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Emergency Atlus
+3 MaxTac Squadron
+3 Mox Inciters
+3 Delamain Cab
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Floor It
+3 Peace Offering
+2 Corporate Surveillance
+3 Chrome Reverie
+2 (Don't Fear) The Reaper

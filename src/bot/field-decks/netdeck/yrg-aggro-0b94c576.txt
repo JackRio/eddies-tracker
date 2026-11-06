@@ -1,0 +1,27 @@
+# YRG - Aggro - by Rip Studwell (netdeck.gg 0b94c576-c90f-4ebc-881b-b9206c7e63c6, 0 likes, 5 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Memory Relapse

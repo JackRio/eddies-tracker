@@ -1,0 +1,29 @@
+# Corporate braindancing - by IR-Kakashi (netdeck.gg c0bfe58b-4ea2-4ce9-af91-2285169a9263, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+2 Towerfall

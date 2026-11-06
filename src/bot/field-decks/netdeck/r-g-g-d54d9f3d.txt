@@ -1,0 +1,24 @@
+# R/G/G - by The_Legion999 (netdeck.gg d54d9f3d-93fe-4a79-8d67-e68570d32fb1, 0 likes, 4 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Corpo Security
+3 Swordwise Huscle
+2 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+3 Corporate Surveillance
+2 Memory Relapse

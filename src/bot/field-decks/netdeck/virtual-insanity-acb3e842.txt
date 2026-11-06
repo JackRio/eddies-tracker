@@ -1,0 +1,26 @@
+# Virtual Insanity - by ? (netdeck.gg acb3e842-628a-46ac-a9a6-d4cb533ba410, 0 likes, 6 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Delamain: Rideshare AI
+2 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Arasaka Emergency Radioport
+1 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Towerfall

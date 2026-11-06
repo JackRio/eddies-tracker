@@ -1,0 +1,25 @@
+# Reaper - by RootsOfOneTree (netdeck.gg 2cd935a9-ddff-4e7a-916e-ecd4efeb654e, 0 likes, 8 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Hands Unclean
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Screw: Lovelorn Fool
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Industrial Assembly
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

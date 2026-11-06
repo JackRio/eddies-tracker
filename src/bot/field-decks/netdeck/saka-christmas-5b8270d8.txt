@@ -1,0 +1,28 @@
+# Saka Christmas - by SwarmOfBears (netdeck.gg 5b8270d8-9748-41ec-985c-094046d6b04b, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Japantown Jonin
+3 Field Operator
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+2 Maelstrom Zealots
+2 Pacifica Netrunner
+3 El Sombrerón: La Venganza Lenta
+2 V: Roamer of the Badlands
+2 Animals Wrecker
+2 Nadia: Fighting Through Grief
+2 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Synapse Burnout
+3 Appetite for Destruction

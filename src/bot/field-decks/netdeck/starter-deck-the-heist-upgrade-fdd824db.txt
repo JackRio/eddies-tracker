@@ -1,0 +1,25 @@
+# Starter Deck - The Heist - Upgrade - by dtv_denis (netdeck.gg fdd824db-c5f2-49d2-8249-ee060bd87dd2, 0 likes, 20 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+2 Secondhand Bombus
+2 Dexter DeShawn: One Last Chance
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Rockn' Rockerboy
+2 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+2 Les Élémens

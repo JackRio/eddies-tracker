@@ -1,0 +1,26 @@
+# HGM - by GoodlyMike (netdeck.gg f908709f-9ded-4d55-acfe-e4895d63b823, 0 likes, 3 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+
+// Main deck
+1 Secondhand Bombus
+2 Augmented Negotiators
+3 MaxTac Squadron
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Rockn' Rockerboy
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+2 Synapse Burnout
+2 Fool on the Hill
+2 Memory Relapse
+2 Wild in the Streets
+3 (Don't Fear) The Reaper

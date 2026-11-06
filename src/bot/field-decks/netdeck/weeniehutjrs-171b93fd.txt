@@ -1,0 +1,33 @@
+# WeenieHutJRs - by Stiggy (netdeck.gg 171b93fd-5b25-4198-800b-55514ea7bc0a, 0 likes, 15 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Japantown Jonin
+1 Ruthless Lowlife
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Maelstrom Goons
+1 Swordwise Huscle
+1 Kerry Eurodyne: The Last Rockerboy
+2 T-Bug: Amateur Philosopher
+2 Jackie Welles: Ride or Die Choom
+1 Alt Cunningham: Mother of Daemons
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+1 Industrial Assembly
+2 The Heist
+2 Cyberpsychosis
+1 Bootleg Black Sapphire Show

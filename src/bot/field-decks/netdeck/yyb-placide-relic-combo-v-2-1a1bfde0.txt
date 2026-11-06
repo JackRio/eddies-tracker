@@ -1,0 +1,32 @@
+# YYB Placide Relic Combo V.2 - by WailordEX (netdeck.gg 1a1bfde0-b1f1-43d1-bef8-3c9bd40ef639, 0 likes, 40 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Viktor Vektor: Drop Your Illusions
+1 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+1 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Floor It
+3 Trust No One
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 1 MaxTac Suppression Team
+# side: 1 Rogue Amendiares: Queen of the Afterlife
+# side: 1 Modded Kusanagi
+# side: 2 Safety Override

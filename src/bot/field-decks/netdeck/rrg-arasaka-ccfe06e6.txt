@@ -1,0 +1,30 @@
+# RRG Arasaka - by HungSpellboundGames (netdeck.gg ccfe06e6-7ca0-453c-9ae4-13bcc95942d3, 0 likes, 16 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+1 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 3 Royce: Don't Call Me Simon
+# side: 2 Gunpoint Diplomacy

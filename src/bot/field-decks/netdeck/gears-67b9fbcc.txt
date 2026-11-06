@@ -1,0 +1,25 @@
+# Gears - by CJacobsen (netdeck.gg 67b9fbcc-4db7-4c51-b649-f63fe66c0ba9, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Ruthless Lowlife
+3 Sketchy Ripper
+2 Augmented Negotiators
+2 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Screw: Lovelorn Fool
+2 Trauma Team Operatives
+2 Kiroshi Optics
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 All is Lost
+3 Cyberpsychosis
+2 Live with the Aftermath

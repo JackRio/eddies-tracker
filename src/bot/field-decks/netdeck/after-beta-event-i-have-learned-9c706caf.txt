@@ -1,0 +1,29 @@
+# After Beta event... I have learned... - by TBrine (netdeck.gg 9c706caf-a46f-43d6-b283-5aa3c0a8f9ba, 0 likes, 0 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+2 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+1 Meredith Stout: Stone Cold Corpo
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+1 Satori: Sword of Saburo
+1 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 All is Lost
+2 Detonate
+3 Safety Override
+3 The Heist
+3 Cyberpsychosis
+3 Bootleg Black Sapphire Show

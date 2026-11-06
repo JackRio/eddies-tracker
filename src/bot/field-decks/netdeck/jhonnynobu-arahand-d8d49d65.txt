@@ -1,0 +1,24 @@
+# Jhonnynobu Arahand - by Mochudo (netdeck.gg d8d49d65-e2ea-4283-ac2a-6a031f33c4d7, 1 likes, 15 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Dexter DeShawn: One Last Chance
+2 Valentino Guerrera
+2 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+2 Gunpoint Diplomacy
+3 Carnage at the Colosseum

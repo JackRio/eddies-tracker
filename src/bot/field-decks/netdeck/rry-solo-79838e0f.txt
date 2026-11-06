@@ -1,0 +1,30 @@
+# RRY Solo - by Ender (netdeck.gg 79838e0f-d2f7-4837-a6a6-f2c969c7dab2, 2 likes, 29 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Maelstrom Goons
+3 Meredith Stout: Stone Cold Corpo
+1 Jackie Welles: Ride or Die Choom
+1 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+3 Afterparty at Lizzie's
+3 All is Lost
+3 Industrial Assembly
+2 Cyberpsychosis
+1 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 3 Johnny Silverhand: Never Stop Fighting
+# side: 2 Detonate

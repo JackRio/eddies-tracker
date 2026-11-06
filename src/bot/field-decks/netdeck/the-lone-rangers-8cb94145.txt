@@ -1,0 +1,29 @@
+# The Lone Rangers - by RareTotem (netdeck.gg 8cb94145-e766-4f7a-bb1e-347796268067, 6 likes, 298 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Safety Override
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 1 MaxTac Suppression Team
+# side: 3 Trauma Team Operatives
+# side: 3 The Heist

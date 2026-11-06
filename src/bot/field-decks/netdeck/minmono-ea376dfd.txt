@@ -1,0 +1,30 @@
+# MinMono - by artifice (netdeck.gg ea376dfd-e448-40dd-a8a1-74de286bdf1a, 0 likes, 20 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Jacked-In Voodoo Boy
+2 Mox Inciters
+2 Hacked Corpo
+2 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+2 Pyramid Song
+1 Towerfall

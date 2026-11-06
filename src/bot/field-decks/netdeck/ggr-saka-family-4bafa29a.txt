@@ -1,0 +1,39 @@
+# GGR Saka family - by ShaiTan (netdeck.gg 4bafa29a-dd29-4c7c-b04b-836a8c71d0b3, 1 likes, 133 views, updated 2026-10-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Field Operator
+2 6th Street Recruits
+2 Goro Takemura: Losing His Way
+2 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+2 Arasaka Emergency Radioport
+3 Riot Shield
+2 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+2 Fool on the Hill
+2 Take Control
+2 Memory Relapse
+2 Shattered Memories
+2 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 MaxTac Heavy
+# side: 1 Saul Bright: Stormrider
+# side: 2 Detonate

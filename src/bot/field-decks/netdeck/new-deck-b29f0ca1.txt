@@ -1,0 +1,26 @@
+# New Deck - by DunDarach (netdeck.gg b29f0ca1-2c1f-4a44-a796-5d1752d58a5a, 0 likes, 13 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Sketchy Ripper
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Screw: Lovelorn Fool
+2 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Mantis Blades
+3 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+2 Shattered Memories

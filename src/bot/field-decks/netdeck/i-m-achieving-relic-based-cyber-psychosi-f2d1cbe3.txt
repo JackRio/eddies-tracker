@@ -1,0 +1,24 @@
+# I'm achieving Relic based cyber psychosis babey - by Rats T. Rats Dave (netdeck.gg f2d1cbe3-9f21-4d4a-a607-80e548c8210f, 2 likes, 149 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 Japantown Jonin
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Johnny Silverhand: Never Stop Fighting
+3 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+2 Mantis Blades
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 All is Lost
+3 The Heist
+3 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

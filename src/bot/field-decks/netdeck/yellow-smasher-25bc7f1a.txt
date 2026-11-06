@@ -1,0 +1,25 @@
+# Yellow Smasher - by ShatteringSkullz (netdeck.gg 25bc7f1a-fcbd-4dfc-9fb9-d134d4e8b0f2, 0 likes, 0 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Caliber: Totentanz's Top Dog
+2 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 The Relic: Experimental Biochip
+3 The Heist
+3 Cyberpsychosis
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show

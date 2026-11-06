@@ -1,0 +1,27 @@
+# Dancing with violence - by Eradcliffe (netdeck.gg 9a125d45-55ab-4b9b-85af-6f5c3b5244b7, 0 likes, 3 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+2 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+1 Screw: Lovelorn Fool
+1 V: Roamer of the Badlands
+2 Minotaur
+2 Placide: Voodoo Sentinel
+2 Detonate
+2 Floor It
+3 Industrial Assembly
+3 Trust No One
+3 Bonnie and Clyde
+3 Chrome Reverie
+1 Nocturne OP55 N1
+2 Gunpoint Diplomacy
+3 Shattered Memories
+3 Carnage at the Colosseum

@@ -1,0 +1,30 @@
+# Queens of the Afterlife - by Valjean (netdeck.gg e451eb07-0ce0-46ba-bdc9-3b454188e252, 4 likes, 65 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac Suppression Team
+2 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Mox Inciters
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Cyberpsychosis
+# side: 2 Pyramid Song

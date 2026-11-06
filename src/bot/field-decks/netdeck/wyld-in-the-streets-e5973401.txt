@@ -1,0 +1,31 @@
+# Wyld in the Streets - by Nazraghoul (netdeck.gg e5973401-1b06-422f-ac66-4ffa028bf0e0, 1 likes, 19 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+3 Rockn' Rockerboy
+2 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Heist
+2 Cyberpsychosis
+2 Live with the Aftermath
+1 Over the Edge
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 1 Viktor Vektor: Drop Your Illusions
+# side: 2 The Relic: Experimental Biochip
+# side: 3 Detonate
+# side: 1 Over the Edge

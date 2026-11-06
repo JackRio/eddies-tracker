@@ -1,0 +1,25 @@
+# Bringing Them Down - by MaskedUpMan (netdeck.gg c2043ff0-c2fc-4650-b3fa-bfa3e90ff12e, 0 likes, 2 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Sasha Yakovleva: Won't Let You Down
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 MaxTac Squadron
+2 Goro Takemura: Losing His Way
+3 Pepe Najarro: Working Doubles
+2 Rogue Amendiares: Queen of the Afterlife
+2 Wraith Marauders
+1 Panam Palmer: Strength Through Family
+3 MaxTac Heavy
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 Sandevistan
+3 Zetatech Berserk
+2 Synapse Burnout
+3 Reboot Optics
+2 Chrome Reverie
+3 (Don't Fear) The Reaper

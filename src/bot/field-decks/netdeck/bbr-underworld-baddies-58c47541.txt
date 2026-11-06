@@ -1,0 +1,35 @@
+# BBR / Underworld Baddies - by yaahamm (netdeck.gg 58c47541-57cc-4ffd-8b95-9d1e35b2dd28, 4 likes, 149 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Japantown Jonin
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Swordwise Huscle
+2 Westbrook Netrunner
+2 Chrome Fang
+1 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+2 Mantis Blades
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 Detonate
+2 Floor It
+2 Industrial Assembly
+3 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Shattered Memories
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 1 All is Lost
+# side: 1 Trust No One

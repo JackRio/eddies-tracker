@@ -1,0 +1,31 @@
+# It's gonna Hurt - by Tres (netdeck.gg 444d9db4-aeb7-4486-a31f-cd55a3cddd9f, 0 likes, 31 views, updated 2026-10-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+
+// Main deck
+2 Augmented Negotiators
+2 Field Operator
+2 Maelstrom Goons
+1 Mox Inciters
+2 Maelstrom Zealots
+2 Offduty Malfini
+1 Rita Wheeler: No Stupid Questions
+1 Wraith Marauders
+1 Sandayu Oda: Hanako's Guardian
+1 Placide: Voodoo Sentinel
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Zetatech Berserk
+1 Trust No One
+2 Corporate Surveillance
+2 Reboot Optics
+2 Take Control
+2 Cyberpsychosis
+1 Unlikely Bond
+1 We Gotta Live Together

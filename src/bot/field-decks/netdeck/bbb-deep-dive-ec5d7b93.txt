@@ -1,0 +1,26 @@
+# BBB Deep Dive - by Pilgrimzero (netdeck.gg ec5d7b93-72e3-46c9-ba24-cc0c1c7aaaa3, 0 likes, 0 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+2 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+2 Towerfall

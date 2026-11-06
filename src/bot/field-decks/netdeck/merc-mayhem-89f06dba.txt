@@ -1,0 +1,24 @@
+# Merc Mayhem - by RootsOfOneTree (netdeck.gg 89f06dba-0cbd-421d-8693-814c5580c161, 1 likes, 78 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Screw: Lovelorn Fool
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Zetatech Berserk
+2 Floor It
+2 Synapse Burnout
+2 Reboot Optics
+3 Over the Edge
+3 Memory Relapse

@@ -1,0 +1,31 @@
+# BBG - by XDim11 (netdeck.gg c2edd518-0bd4-4d53-b141-38a6f8600f43, 0 likes, 23 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+1 Psycho Squad
+3 Maman Brigitte: Spirit of Death
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Valentino Street Racer
+# side: 2 Modded Kusanagi
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Riot Shield
+# side: 1 Take Control

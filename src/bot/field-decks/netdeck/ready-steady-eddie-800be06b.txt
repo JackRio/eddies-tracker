@@ -1,0 +1,24 @@
+# Ready Steady Eddie - by Neb (netdeck.gg 800be06b-e080-4754-a45a-c2b12d76c57b, 0 likes, 3 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Mox Inciters
+3 Goro Takemura: Losing His Way
+3 Rita Wheeler: No Stupid Questions
+3 Wraith Marauders
+2 Sandayu Oda: Hanako's Guardian
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+3 Zetatech Berserk
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Take Control

@@ -1,0 +1,32 @@
+# Claude Fable 5.1 ~ RRB - by JackRio (netdeck.gg 3b23229d-c7d0-421d-a5eb-0439a05ccb90, 0 likes, 21 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Chrome Fang
+3 Animals Wrecker
+2 Modded Kusanagi
+2 Minotaur
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+3 NetWatch Netdriver
+3 Floor It
+3 Industrial Assembly
+1 Bonnie and Clyde
+2 Nocturne OP55 N1
+2 Over the Edge
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Chrome Fang
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Detonate
+# side: 2 Bonnie and Clyde

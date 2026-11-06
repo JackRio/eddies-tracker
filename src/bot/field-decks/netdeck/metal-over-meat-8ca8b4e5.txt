@@ -1,0 +1,40 @@
+# Metal Over Meat - by Afrobane (netdeck.gg 8ca8b4e5-baf8-40cb-b965-dee9a5064abc, 0 likes, 3 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+1 Secondhand Bombus
+1 Sketchy Ripper
+1 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+1 Maelstrom Goons
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Gilded Matón
+1 Hanako Arasaka: In a Gilded Cage
+1 Offduty Malfini
+1 T-Bug: Amateur Philosopher
+1 Caliber: Totentanz's Top Dog
+1 MaxTac Suppression Team
+1 Rockn' Rockerboy
+1 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Jackie Welles: Ride or Die Choom
+1 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist
+2 Cyberpsychosis
+2 Live with the Aftermath
+2 Bootleg Black Sapphire Show

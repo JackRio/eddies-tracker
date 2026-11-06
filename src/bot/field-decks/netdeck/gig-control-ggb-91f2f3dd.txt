@@ -1,0 +1,27 @@
+# Gig Control (GGB) - by LilT (netdeck.gg 91f2f3dd-fd80-4a07-ada1-c1a900b952b1, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Padre: Man of the Cross
+
+// Main deck
+2 Corpo Security
+2 Tyger's Whisper
+2 MaxTac Squadron
+2 Goro Takemura: Losing His Way
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 MaxTac AV
+2 Panam Palmer: Strength Through Family
+2 MaxTac Heavy
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Sandevistan
+3 Peace Offering
+3 Trust No One
+2 Reboot Optics
+2 Chrome Reverie
+2 (Don't Fear) The Reaper

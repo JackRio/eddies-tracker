@@ -1,0 +1,29 @@
+# GRB Tri-deck - by Holo7 (netdeck.gg dfa3c773-fba5-4c16-939b-2efed23f7aa1, 0 likes, 9 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+2 La Llorona: Ghost of the Past
+2 Mox Inciters
+3 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Screw: Lovelorn Fool
+2 Mantis Blades
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Industrial Assembly
+2 Peace Offering
+2 Trust No One
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Memory Relapse
+2 Shattered Memories
+2 Unlikely Bond

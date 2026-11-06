@@ -1,0 +1,33 @@
+# Braindance - by ? (netdeck.gg 5259be3c-3c15-485a-a10a-cfcf0d78502f, 2 likes, 301 views, updated 2026-10-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Corpo Security
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+2 Tetratronic Rippler
+2 Riot Shield
+3 Peace Offering
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+2 Memory Relapse
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Evelyn Parker: Scheming Siren
+# side: 2 Floor It
+# side: 2 Corporate Surveillance

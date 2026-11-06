@@ -1,0 +1,30 @@
+# RRY Curve - by picklemire (netdeck.gg 4c9f8ebf-51d2-425a-8b49-474cb0844b47, 0 likes, 5 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+2 Over the Edge
+1 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Minotaur
+# side: 1 Deadman Transmitter

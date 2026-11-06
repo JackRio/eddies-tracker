@@ -1,0 +1,24 @@
+# Line Go Up - by Dinoavatar (netdeck.gg b9ae72a2-a036-43aa-8f65-fb7b619af0b2, 0 likes, 11 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 V: Corporate Exile
+
+// Main deck
+2 Ruthless Lowlife
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+3 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+2 NetWatch Netdriver
+3 Industrial Assembly
+3 Appetite for Destruction
+3 Gunpoint Diplomacy
+3 Carnage at the Colosseum

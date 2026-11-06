@@ -1,0 +1,32 @@
+# Overwatch Control - by JollyGreen (netdeck.gg 046489ed-80f7-4ca6-befa-54e87c68cb9c, 0 likes, 5 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+2 Psycho Squad
+3 MaxTac AV
+2 Riding Nomad
+1 Nadia: Fighting Through Grief
+1 Sandayu Oda: Hanako's Guardian
+3 NetWatch Netdriver
+2 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+1 Corporate Surveillance
+3 Fool on the Hill
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse
+2 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Mox Inciters
+# side: 1 Sandayu Oda: Hanako's Guardian
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Riot Shield

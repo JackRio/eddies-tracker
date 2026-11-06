@@ -1,0 +1,24 @@
+# Reaper Smash - by Invictus (netdeck.gg 80dbc25c-6762-49f5-9bb3-436cad265226, 0 likes, 2 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Swordwise Huscle
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+2 Mantis Blades
+3 Riot Shield
+2 Satori: Sword of Saburo
+3 Sandevistan
+3 Zetatech Berserk
+3 Synapse Burnout
+3 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

@@ -1,0 +1,25 @@
+# R/B/B Control - by o3o (netdeck.gg 6ba83e51-d487-46b8-a532-26f9e707afee, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

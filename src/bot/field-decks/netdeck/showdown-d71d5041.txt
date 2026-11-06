@@ -1,0 +1,26 @@
+# Showdown - by ArcaneVi (netdeck.gg d71d5041-f178-45fd-ac68-b47bbd8678a6, 0 likes, 6 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Japantown Jonin
+2 Field Operator
+3 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Kerry Eurodyne: The Last Rockerboy
+3 Maelstrom Zealots
+2 Panam Palmer: Strength Through Family
+2 Mantis Blades
+2 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Detonate
+2 Corporate Surveillance
+2 Over the Edge
+3 Memory Relapse
+3 We Gotta Live Together
+2 Wild in the Streets

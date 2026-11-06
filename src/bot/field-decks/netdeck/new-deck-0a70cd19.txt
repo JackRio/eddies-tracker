@@ -1,0 +1,24 @@
+# New Deck - by orcawala (netdeck.gg 0a70cd19-fcb7-4bab-a639-099fbd5766bd, 0 likes, 0 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+1 MaxTac Suppression Team
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+2 Mandibular Upgrade
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+1 Cyberpsychosis
+3 Live with the Aftermath

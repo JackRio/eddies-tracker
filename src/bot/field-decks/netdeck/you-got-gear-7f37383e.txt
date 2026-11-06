@@ -1,0 +1,28 @@
+# You got Gear - by ? (netdeck.gg 7f37383e-4bfb-4abb-a1a8-ae94c79379f0, 0 likes, 1 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 6th Street Recruits
+2 Offduty Malfini
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 3 Meredith Stout: Stone Cold Corpo
+# side: 2 Gorilla Arms
+# side: 2 Detonate

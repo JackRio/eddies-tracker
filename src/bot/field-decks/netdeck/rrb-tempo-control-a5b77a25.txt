@@ -1,0 +1,28 @@
+# RRB Tempo Control - by cardoGGs (netdeck.gg a5b77a25-8eec-4640-b85a-59fecd87719d, 0 likes, 52 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Floor It
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Animals Wrecker
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 3 Detonate

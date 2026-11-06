@@ -1,0 +1,28 @@
+# YYR Adam - by picklemire (netdeck.gg 1c58fb7a-9982-4021-a5d5-4349367bc35b, 1 likes, 153 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Industrial Assembly
+3 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Secondhand Bombus
+# side: 3 MaxTac Suppression Team
+# side: 2 Shattered Memories

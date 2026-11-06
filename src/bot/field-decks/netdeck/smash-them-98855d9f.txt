@@ -1,0 +1,24 @@
+# Smash Them - by Nivelis (netdeck.gg 98855d9f-d005-4717-aea2-4c8a66853476, 0 likes, 19 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 MaxTac Suppression Team
+3 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+1 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

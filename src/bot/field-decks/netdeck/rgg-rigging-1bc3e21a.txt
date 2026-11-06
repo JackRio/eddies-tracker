@@ -1,0 +1,28 @@
+# RGG Rigging - by Norpaw (netdeck.gg 1bc3e21a-5aad-4adb-9ade-6b205f067e87, 0 likes, 3 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+3 La Llorona: Ghost of the Past
+2 Maelstrom Zealots
+2 Pacifica Netrunner
+2 MaxTac AV
+2 V: Roamer of the Badlands
+2 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+2 Satori: Sword of Saburo
+2 Overwatch: Panam's Gift
+1 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+2 Corporate Surveillance
+3 Fool on the Hill
+2 Memory Relapse
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

@@ -1,0 +1,29 @@
+# GB Gig Control - by DakDaSnac (netdeck.gg 1722c0b8-3588-4b93-a5be-f336afc8b08f, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Corpo Security
+3 Tyger's Whisper
+3 Mox Inciters
+3 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+2 Pacifica Netrunner
+2 Rita Wheeler: No Stupid Questions
+1 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+1 Placide: Voodoo Sentinel
+3 Riot Shield
+3 Sandevistan
+2 Floor It
+3 Peace Offering
+2 Synapse Burnout
+1 Corporate Surveillance
+3 Reboot Optics
+2 Nocturne OP55 N1
+1 Wild in the Streets
+3 (Don't Fear) The Reaper

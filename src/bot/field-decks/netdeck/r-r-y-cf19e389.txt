@@ -1,0 +1,29 @@
+# R.R.Y. - by CyberGuy (netdeck.gg cf19e389-e412-4be8-8771-2471cabae276, 0 likes, 80 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 V: Streetkid
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 All is Lost
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+2 Gunpoint Diplomacy
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 La Llorona: Ghost of the Past
+# side: 2 MaxTac Suppression Team
+# side: 3 Detonate

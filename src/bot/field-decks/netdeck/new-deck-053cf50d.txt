@@ -1,0 +1,29 @@
+# New Deck - by bobatears (netdeck.gg 053cf50d-26b6-4828-b37b-82fb7706ebf0, 0 likes, 14 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Johnny Silverhand: Rocking Renegade
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Maelstrom Goons
+3 Swordwise Huscle
+2 Valentino Guerrera
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Kerry Eurodyne: The Last Rockerboy
+3 Lizzy Wizzy: Delicate Weapon
+2 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+2 All is Lost
+3 The Heist
+3 Cyberpsychosis
+2 Shattered Memories

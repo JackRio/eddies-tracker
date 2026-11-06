@@ -1,0 +1,25 @@
+# Jackie’s gear - by Eradcliffe (netdeck.gg 082861dd-71b3-47c4-a96c-e6f127bb681c, 0 likes, 1 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Jackie Welles: Pour One Out For Me
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Mox Inciters
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+2 Modded Muramasa
+3 Rogue Amendiares: Queen of the Afterlife
+2 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Zetatech Faceplate
+3 NetWatch Netdriver
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Towerfall

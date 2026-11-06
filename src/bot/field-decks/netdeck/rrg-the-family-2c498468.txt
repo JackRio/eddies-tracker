@@ -1,0 +1,24 @@
+# RRG- The Family - by Virtues (netdeck.gg 2c498468-6069-41a7-b467-1940c9cc17de, 0 likes, 5 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Field Operator
+2 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Animals Wrecker
+3 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Synapse Burnout
+2 Bonnie and Clyde
+3 Gunpoint Diplomacy
+1 Shattered Memories
+3 Carnage at the Colosseum

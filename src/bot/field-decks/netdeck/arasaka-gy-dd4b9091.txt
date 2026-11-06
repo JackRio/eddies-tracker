@@ -1,0 +1,23 @@
+# Arasaka GY - by Faux (netdeck.gg dd4b9091-5dc8-4c8f-8eef-ed5e1624611c, 0 likes, 2 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+2 Corpo Security
+3 Tyger's Whisper
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+3 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Zetatech Faceplate
+3 Sandevistan
+3 Afterparty at Lizzie's
+3 Peace Offering
+3 Corporate Surveillance
+3 Fool on the Hill
+3 (Don't Fear) The Reaper

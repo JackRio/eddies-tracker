@@ -1,0 +1,32 @@
+# V and Judy's Night Out - by TalynK17 (netdeck.gg dfd8c1fa-54d3-4129-af8f-4412d313c328, 3 likes, 76 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Delamain: Rideshare AI
+2 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Modded Kusanagi
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Detonate
+# side: 1 Towerfall

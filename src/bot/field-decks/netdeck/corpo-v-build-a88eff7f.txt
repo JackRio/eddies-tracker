@@ -1,0 +1,27 @@
+# Corpo V Build - by ajvito03 (netdeck.gg a88eff7f-fc7a-491d-8a1f-52d913956a1a, 0 likes, 2 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Sketchy Ripper
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Hanako Arasaka: In a Gilded Cage
+2 Nadia: Fighting Through Grief
+2 Saul Bright: Stormrider
+2 Kiroshi Optics
+3 Mandibular Upgrade
+3 Dying Night: V's Pistol
+3 Riot Shield
+2 NetWatch Netdriver
+1 Zetatech Berserk
+2 Floor It
+2 Peace Offering
+2 Trust No One
+2 Corporate Surveillance
+2 Cyberpsychosis
+3 Nocturne OP55 N1

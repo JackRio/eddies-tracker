@@ -1,0 +1,24 @@
+# GGY Blockers/Gear - by Shmeeth (netdeck.gg 7384d632-5826-4182-a26a-2f54f40f6bab, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Augmented Negotiators
+3 MaxTac Squadron
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Maelstrom Zealots
+2 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+2 Sandevistan
+3 Peace Offering
+3 Fool on the Hill
+2 Memory Relapse
+2 (Don't Fear) The Reaper

@@ -1,0 +1,29 @@
+# YYR Generalist - by RareTotem (netdeck.gg dc94f5d2-bcfc-45cd-baab-ba233335861f, 1 likes, 247 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Augmented Negotiators
+3 6th Street Recruits
+1 Hanako Arasaka: In a Gilded Cage
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Detonate

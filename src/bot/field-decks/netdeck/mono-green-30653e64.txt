@@ -1,0 +1,26 @@
+# Mono Green - by Chopper (netdeck.gg 30653e64-726f-4924-a954-7878de8aac6a, 0 likes, 4 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Emergency Atlus
+3 MaxTac Squadron
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+2 Overwatch: Panam's Gift
+1 Zetatech Berserk
+3 Peace Offering
+2 Corporate Surveillance
+3 Fool on the Hill
+2 We Gotta Live Together
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

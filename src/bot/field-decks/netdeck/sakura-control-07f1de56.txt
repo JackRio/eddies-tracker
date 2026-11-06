@@ -1,0 +1,34 @@
+# Sakura Control - by tsundokugames (netdeck.gg 07f1de56-805f-4a4d-b3d0-b1b314fa5e86, 1 likes, 59 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+2 Emergency Atlus
+2 MaxTac Squadron
+3 Goro Takemura: Losing His Way
+2 MaxTac AV
+2 Nadia: Fighting Through Grief
+2 MaxTac Heavy
+3 Sandayu Oda: Hanako's Guardian
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+2 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Fool on the Hill
+2 Take Control
+2 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 2 Corpo Security
+# side: 1 Emergency Atlus
+# side: 1 MaxTac Squadron
+# side: 1 MaxTac AV
+# side: 1 Nadia: Fighting Through Grief
+# side: 1 MaxTac Heavy

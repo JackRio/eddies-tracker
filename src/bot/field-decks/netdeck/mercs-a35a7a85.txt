@@ -1,0 +1,28 @@
+# Mercs _ - by Leokula (netdeck.gg a35a7a85-912e-4318-985f-7390b1eb99f9, 0 likes, 24 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Streetkid
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Japantown Jonin
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Emergency Atlus
+2 Swordwise Huscle
+2 Valentino Street Racer
+2 Hanako Arasaka: In a Gilded Cage
+2 MaxTac AV
+2 Johnny Silverhand: Never Stop Fighting
+1 Saul Bright: Stormrider
+2 Mandibular Upgrade
+3 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+2 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 Take Control
+3 Memory Relapse
+2 Shattered Memories
+1 We Gotta Live Together

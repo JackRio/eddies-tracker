@@ -1,0 +1,26 @@
+# Upgraded Heist - by KingDaddy (netdeck.gg 5553eb78-a988-4d00-9c82-d4feca8cd804, 0 likes, 5 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Secondhand Bombus
+1 Dexter DeShawn: One Last Chance
+3 Delamain Cab
+2 Offduty Malfini
+2 Psycho Squad
+2 T-Bug: Amateur Philosopher
+2 MT0D12 Flathead
+2 Heywood Ripperdoc
+3 Kiroshi Optics
+3 Mandibular Upgrade
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Floor It
+2 Reboot Optics

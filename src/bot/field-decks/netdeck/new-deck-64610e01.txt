@@ -1,0 +1,25 @@
+# New Deck - by Spooky29 (netdeck.gg 64610e01-0346-465d-b117-0ede5ee2e1e4, 0 likes, 1 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+3 All is Lost
+3 Detonate
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+1 Over the Edge
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

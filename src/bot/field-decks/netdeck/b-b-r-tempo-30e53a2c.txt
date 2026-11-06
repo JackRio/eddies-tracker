@@ -1,0 +1,27 @@
+# {B}{B}{R} Tempo - by DJ Double-Darkness (netdeck.gg 30e53a2c-ed1d-4cf6-87ac-1e0e2b3b516f, 0 likes, 0 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Swordwise Huscle
+2 Meredith Stout: Stone Cold Corpo
+1 Psycho Squad
+1 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 All is Lost
+3 Trust No One
+1 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Shattered Memories
+2 Towerfall

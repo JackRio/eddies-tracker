@@ -1,0 +1,24 @@
+# BBR Control - by Husmof (netdeck.gg 8e10fb0f-c613-4195-aeed-e12290246334, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Misty Olszewski: Mender of Broken Spirits
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 Screw: Lovelorn Fool
+3 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Unlikely Bond
+2 Les Élémens

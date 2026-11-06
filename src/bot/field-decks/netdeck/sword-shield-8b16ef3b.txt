@@ -1,0 +1,27 @@
+# Sword & Shield - by Blaziken_x (netdeck.gg 8b16ef3b-4bec-4463-a285-4375ae517013, 0 likes, 4 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Corpo Security
+2 Swordwise Huscle
+2 Goro Takemura: Losing His Way
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Zetatech Berserk
+2 Detonate
+3 Synapse Burnout
+3 Fool on the Hill
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

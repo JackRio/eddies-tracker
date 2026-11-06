@@ -1,0 +1,24 @@
+# Mono Blue - by Vehzir (netdeck.gg 7c2bbb91-a02c-4a2f-ac74-9583bb602629, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Floor It
+3 Three Mouths, One Desire
+3 Pyramid Song
+2 Unlikely Bond
+3 Les Élémens
+2 Towerfall

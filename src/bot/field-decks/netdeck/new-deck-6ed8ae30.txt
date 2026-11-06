@@ -1,0 +1,24 @@
+# New Deck - by MoTheMonster (netdeck.gg 6ed8ae30-7cdb-4091-9f28-da7df5121943, 0 likes, 4 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+3 Psycho Squad
+1 Lizzy Wizzy: Delicate Weapon
+2 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+3 Adrenaline Converter
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Floor It
+3 Reboot Optics
+3 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

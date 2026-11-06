@@ -1,0 +1,29 @@
+# .Gimme Danger (Solo Deck) - by ? (netdeck.gg ab0ebd49-4d75-495a-a721-56a192dd12e6, 0 likes, 6 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+2 Secondhand Bombus
+1 Dexter DeShawn: One Last Chance
+1 Viktor Vektor: You Might Feel a Little Pinch
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+1 MT0D12 Flathead
+2 Rockn' Rockerboy
+1 Rogue Amendiares: Queen of the Afterlife
+1 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+1 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+1 Nocturne OP55 N1
+2 Pyramid Song
+2 Les Élémens

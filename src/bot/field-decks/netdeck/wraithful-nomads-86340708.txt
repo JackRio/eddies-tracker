@@ -1,0 +1,29 @@
+# Wraithful Nomads - by Rats T. Rats Dave (netdeck.gg 86340708-b545-43f8-8752-b1d2c5cc78c1, 2 likes, 90 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 Field Operator
+3 La Llorona: Ghost of the Past
+2 Pacifica Netrunner
+3 MaxTac AV
+3 Wraith Marauders
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Riot Shield
+3 Industrial Assembly
+3 Peace Offering
+3 Fool on the Hill
+3 Over the Edge
+3 Memory Relapse
+2 We Gotta Live Together
+2 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 2 Screw: Lovelorn Fool
+# side: 3 Nadia: Fighting Through Grief
+# side: 2 Corporate Surveillance

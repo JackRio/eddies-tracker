@@ -1,0 +1,25 @@
+# YYR - Royce Gears - by ? (netdeck.gg 52ec5823-baab-488c-a6e8-805ab810df9d, 0 likes, 0 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Ruthless Lowlife
+3 Sketchy Ripper
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 6th Street Recruits
+3 Royce: Don't Call Me Simon
+2 Viktor Vektor: Drop Your Illusions
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+1 Cyberpsychosis
+3 Live with the Aftermath

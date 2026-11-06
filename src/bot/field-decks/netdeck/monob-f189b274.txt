@@ -1,0 +1,25 @@
+# MonoB - by D1N054UT1ZM (netdeck.gg f189b274-1270-4c30-a67c-c433e24c8a28, 0 likes, 35 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Delamain: Rideshare AI
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+2 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+2 Les Élémens
+2 Towerfall

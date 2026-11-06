@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 81b17448-9039-41a7-8da8-8f18d46c5eb3, 0 likes, 0 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Swordwise Huscle
+3 Delamain Cab
+2 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Towerfall

@@ -1,0 +1,27 @@
+# GBB New - by Buenosdiaz (netdeck.gg 8257e685-81b5-4bd8-a526-06c4b40f745f, 1 likes, 37 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+2 Three Mouths, One Desire
+2 Chrome Reverie
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall

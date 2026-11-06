@@ -1,0 +1,28 @@
+# New Deck - by BrygonSan (netdeck.gg 36b1a2c1-ebd5-4041-960d-7482839f67d1, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Delamain: Rideshare AI
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Johnny Silverhand: Never Stop Fighting
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+2 All is Lost
+2 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+2 Over the Edge
+2 Pyramid Song
+3 Les Élémens
+1 Towerfall

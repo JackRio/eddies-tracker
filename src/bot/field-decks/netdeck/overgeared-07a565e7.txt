@@ -1,0 +1,25 @@
+# OVERGEARED - by Zumoari (netdeck.gg 07a565e7-c13f-4329-a8d5-2a94158d6f81, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 T-Bug: Amateur Philosopher
+3 Caliber: Totentanz's Top Dog
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Safety Override
+2 The Heist

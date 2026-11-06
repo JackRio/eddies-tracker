@@ -1,0 +1,29 @@
+# Chrome Dome - by Craunch (netdeck.gg 7e7ae0ff-5d3e-4684-9cac-656903a83610, 42 likes, 1299 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 All is Lost
+2 Safety Override
+2 The Heist
+3 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 2 Viktor Vektor: You Might Feel a Little Pinch
+# side: 2 V: Roamer of the Badlands
+# side: 3 Afterparty at Lizzie's

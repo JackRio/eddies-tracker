@@ -1,0 +1,23 @@
+# Red Red Yellow Gear - by MoTheMonster (netdeck.gg 7f84dd1e-ca29-490a-9255-4b27f39bde91, 0 likes, 123 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 6th Street Recruits
+2 Offduty Malfini
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Safety Override

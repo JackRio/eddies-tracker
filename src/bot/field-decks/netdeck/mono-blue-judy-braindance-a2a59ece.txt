@@ -1,0 +1,26 @@
+# Mono Blue - Judy Braindance - by Rip Studwell (netdeck.gg a2a59ece-aa01-47c8-9efa-c63e6e6da458, 1 likes, 2 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+1 Towerfall

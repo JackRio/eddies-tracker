@@ -1,0 +1,27 @@
+# New Deck - by Nahara974 (netdeck.gg 06ad13c9-d571-4a25-91dd-dc757c258c88, 0 likes, 3 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 MaxTac Suppression Team
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

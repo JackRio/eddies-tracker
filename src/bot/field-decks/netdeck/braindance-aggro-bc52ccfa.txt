@@ -1,0 +1,23 @@
+# Braindance Aggro - by MKT_SkelliBoi (netdeck.gg bc52ccfa-8c8e-4134-a712-28958a08a113, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Japantown Jonin
+3 Delamain: Rideshare AI
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Mantis Blades
+3 Tetratronic Rippler
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Shattered Memories
+2 Towerfall

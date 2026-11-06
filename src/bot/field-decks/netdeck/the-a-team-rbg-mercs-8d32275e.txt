@@ -1,0 +1,29 @@
+# The A Team (RBG Mercs) - by Black ICE Barry (netdeck.gg 8d32275e-2f74-47eb-862f-2d2ef5c262a6, 0 likes, 18 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 Screw: Lovelorn Fool
+1 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Peace Offering
+3 Chrome Reverie
+3 Memory Relapse
+
+# Sideboard (not loaded):
+# side: 1 Sandayu Oda: Hanako's Guardian
+# side: 3 Detonate
+# side: 3 Shattered Memories

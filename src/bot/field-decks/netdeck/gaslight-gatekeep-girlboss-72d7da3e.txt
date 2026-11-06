@@ -1,0 +1,32 @@
+# Gaslight Gatekeep Girlboss - by ghostshark (netdeck.gg 72d7da3e-d305-4e6b-aa4a-5fe5a9657990, 0 likes, 11 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Wakako Okada: Peace and Harmony
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+1 Misty Olszewski: Mender of Broken Spirits
+1 Mox Inciters
+2 Hanako Arasaka: In a Gilded Cage
+2 Rita Wheeler: No Stupid Questions
+3 T-Bug: Amateur Philosopher
+2 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 Rogue Amendiares: Queen of the Afterlife
+1 Kiroshi Optics
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+2 Afterparty at Lizzie's
+1 Floor It
+1 Trust No One
+2 The Heist
+2 Three Mouths, One Desire
+1 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Unlikely Bond

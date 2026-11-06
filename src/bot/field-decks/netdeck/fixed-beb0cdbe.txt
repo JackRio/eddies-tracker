@@ -1,0 +1,23 @@
+# fixed - by Darkoscar5 (netdeck.gg beb0cdbe-7aa6-4d6d-869f-4699bce9969b, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+3 Field Operator
+3 MaxTac Squadron
+3 Goro Takemura: Losing His Way
+3 Pacifica Netrunner
+3 T-Bug: Amateur Philosopher
+1 Caliber: Totentanz's Top Dog
+3 Wraith Marauders
+3 Heywood Ripperdoc
+3 Sandayu Oda: Hanako's Guardian
+3 Overwatch: Panam's Gift
+3 Synapse Burnout
+3 Take Control
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

@@ -1,0 +1,25 @@
+# I crave the certainty of steel - by Dawn Danbero (netdeck.gg 58a1de2f-87b6-4930-a0ed-e41c3b712949, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+1 Trauma Team Operatives
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,25 @@
+# Braindance storm - by Righteouspenguin (netdeck.gg 0aba74ee-8712-451e-882a-a1e22a44cde5, 0 likes, 4 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Japantown Jonin
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Screw: Lovelorn Fool
+3 Johnny Silverhand: Never Stop Fighting
+3 Dying Night: V's Pistol
+3 Detonate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+2 Towerfall

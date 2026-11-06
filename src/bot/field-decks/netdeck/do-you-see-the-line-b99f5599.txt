@@ -1,0 +1,23 @@
+# Do you see the line? - by RootsOfOneTree (netdeck.gg b99f5599-14c1-4722-bc26-8b88f65c8f86, 0 likes, 21 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 V: Roamer of the Badlands
+3 Animals Wrecker
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Detonate
+3 Industrial Assembly
+3 Gunpoint Diplomacy
+3 Memory Relapse
+3 Carnage at the Colosseum

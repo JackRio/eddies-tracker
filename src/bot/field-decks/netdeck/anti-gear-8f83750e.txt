@@ -1,0 +1,29 @@
+# Anti-Gear - by ANDRESELPRO (netdeck.gg 8f83750e-b0d5-4498-91b6-af8fda56c7ad, 0 likes, 4 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+3 Gilded Matón
+2 Screw: Lovelorn Fool
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Zetatech Faceplate
+3 Detonate
+3 Safety Override
+2 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 2 Viktor Vektor: Drop Your Illusions
+# side: 3 Trauma Team Operatives

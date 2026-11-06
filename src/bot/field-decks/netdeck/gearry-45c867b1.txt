@@ -1,0 +1,28 @@
+# GeaRRY - by DoBayo (netdeck.gg 45c867b1-32d3-489a-941e-518161558111, 0 likes, 14 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 3 Viktor Vektor: You Might Feel a Little Pinch
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 3 The Heist

@@ -1,0 +1,25 @@
+# 🔵🔵🟡 EVR - by J4y (netdeck.gg 3c073253-e546-47c7-aab1-8c6a82f6cc83, 0 likes, 17 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Rockn' Rockerboy
+3 Rogue Amendiares: Queen of the Afterlife
+1 Heywood Ripperdoc
+2 Mandibular Upgrade
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song

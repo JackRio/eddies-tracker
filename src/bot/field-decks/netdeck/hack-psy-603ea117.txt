@@ -1,0 +1,28 @@
+# .hack//psy - by TiredOldCat (netdeck.gg 603ea117-e3cb-4c9e-9ae3-b928590adfdd, 0 likes, 3 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+1 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+1 Placide: Voodoo Sentinel
+1 Mantis Blades
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+1 NetWatch Netdriver
+3 Industrial Assembly
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+1 Shattered Memories
+1 Towerfall

@@ -1,0 +1,26 @@
+# My Wives - by SeaOtterChaos (netdeck.gg d86105db-e413-4fe7-b217-2daa72167c6a, 1 likes, 4 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Misty Olszewski: Mender of Broken Spirits
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+3 Sandayu Oda: Hanako's Guardian
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 NetWatch Netdriver
+3 Synapse Burnout
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

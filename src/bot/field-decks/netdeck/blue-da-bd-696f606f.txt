@@ -1,0 +1,25 @@
+# Blue Da BD - by sinny (netdeck.gg 696f606f-d352-4335-9b90-c7e20cbf52eb, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Mox Inciters
+2 Hacked Corpo
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+2 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Towerfall

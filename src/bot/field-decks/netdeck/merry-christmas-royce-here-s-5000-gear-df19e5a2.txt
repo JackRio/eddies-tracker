@@ -1,0 +1,28 @@
+# Merry Christmas Royce, Here's 5000 Gear - by amblyornis (netdeck.gg df19e5a2-623a-4349-84b7-45fbdcf4c1a4, 0 likes, 49 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Valentino Guerrera
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+1 MaxTac Suppression Team
+2 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Riot Shield
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Zetatech Berserk
+3 Industrial Assembly
+2 Peace Offering
+2 Corporate Surveillance
+2 The Heist
+1 Cyberpsychosis
+3 Memory Relapse
+1 We Gotta Live Together

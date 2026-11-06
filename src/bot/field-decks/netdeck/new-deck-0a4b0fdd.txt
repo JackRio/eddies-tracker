@@ -1,0 +1,26 @@
+# New Deck - by Djnato10 (netdeck.gg 0a4b0fdd-2557-41fe-99a3-57170fbe3707, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Augmented Negotiators
+3 Mox Inciters
+3 T-Bug: Amateur Philosopher
+3 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+2 Viktor Vektor: Drop Your Illusions
+3 Kiroshi Optics
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Floor It
+3 Three Mouths, One Desire
+3 Cyberpsychosis
+3 Pyramid Song
+3 Unlikely Bond
+3 Towerfall

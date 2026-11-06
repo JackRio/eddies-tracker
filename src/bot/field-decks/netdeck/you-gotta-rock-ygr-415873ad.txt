@@ -1,0 +1,23 @@
+# You Gotta Rock (YGR) - by Pawnsolo (netdeck.gg 415873ad-0f9b-4294-92ec-e2a5056039eb, 0 likes, 1 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Japantown Jonin
+3 Secondhand Bombus
+3 Kerry Eurodyne: The Last Rockerboy
+3 MaxTac AV
+3 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Industrial Assembly
+3 Peace Offering
+2 Over the Edge
+3 Shattered Memories
+3 We Gotta Live Together

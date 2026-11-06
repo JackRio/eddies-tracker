@@ -1,0 +1,27 @@
+# BBBB - by PedroArasakaSanchez (netdeck.gg 3751d2fa-e1b3-4771-aefc-63019d721c07, 1 likes, 97 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+2 NetWatch Netdriver
+1 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+1 Towerfall

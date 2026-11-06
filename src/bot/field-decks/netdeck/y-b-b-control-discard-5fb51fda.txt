@@ -1,0 +1,26 @@
+# Y/B/B Control / Discard - by o3o (netdeck.gg 5fb51fda-80ae-4c76-95d6-234b8273cc27, 0 likes, 5 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Augmented Negotiators
+2 Hanako Arasaka: In a Gilded Cage
+2 Caliber: Totentanz's Top Dog
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Zetatech Faceplate
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

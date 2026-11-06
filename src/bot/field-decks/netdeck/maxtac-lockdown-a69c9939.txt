@@ -1,0 +1,27 @@
+# Maxtac Lockdown - by MaxxFolder (netdeck.gg a69c9939-682b-4865-90a5-438316093f67, 0 likes, 2 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+3 MaxTac Squadron
+3 MaxTac AV
+3 MaxTac Suppression Team
+3 Trauma Team Operatives
+2 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Zetatech Berserk
+3 Synapse Burnout
+3 The Heist
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

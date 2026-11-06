@@ -1,0 +1,23 @@
+# Heavy Metal - by Will K (netdeck.gg 75b939f3-b3e0-4dda-9561-80b7f3c64a92, 0 likes, 1 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Hanako Arasaka: In a Gilded Cage
+2 Viktor Vektor: Drop Your Illusions
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

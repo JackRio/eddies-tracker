@@ -1,0 +1,26 @@
+# The Heist - by kwantonsoup (netdeck.gg 7636db43-bf7e-4a57-8819-b6dc50878ff5, 1 likes, 64 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+1 Dexter DeShawn: One Last Chance
+1 Misty Olszewski: Mender of Broken Spirits
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Delamain Cab
+2 T-Bug: Amateur Philosopher
+3 MT0D12 Flathead
+2 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Kiroshi Optics
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Trust No One
+3 The Heist
+2 Towerfall

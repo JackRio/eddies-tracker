@@ -1,0 +1,25 @@
+# Mox Block Mono Blue Tempo - by Gemino (netdeck.gg 87cb7491-4a42-436d-869b-ac0643500473, 0 likes, 2 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Mox Inciters
+2 Psycho Squad
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

@@ -1,0 +1,26 @@
+# New Deck - by TavelVI (netdeck.gg aefa1f1d-d0b1-40c5-be62-15ca8a23bee7, 0 likes, 0 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+2 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 The Heist
+2 Cyberpsychosis
+1 Live with the Aftermath
+2 Bootleg Black Sapphire Show

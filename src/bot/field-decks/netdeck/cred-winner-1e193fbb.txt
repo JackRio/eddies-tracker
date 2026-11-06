@@ -1,0 +1,27 @@
+# Cred Winner - by JoKari (netdeck.gg 1e193fbb-f4e5-4f99-ba78-41dd312ab481, 0 likes, 22 views, updated 2026-11-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 V: Corporate Exile
+
+// Main deck
+2 La Llorona: Ghost of the Past
+2 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+2 Rogue Amendiares: Queen of the Afterlife
+2 Royce: Don't Call Me Simon
+3 V: Roamer of the Badlands
+2 Minotaur
+2 Octant
+2 Mantis Blades
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 NetWatch Netdriver
+2 Industrial Assembly
+2 Appetite for Destruction
+2 Bonnie and Clyde
+2 Nocturne OP55 N1
+2 Gunpoint Diplomacy
+2 Carnage at the Colosseum

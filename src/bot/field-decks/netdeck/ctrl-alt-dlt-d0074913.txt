@@ -1,0 +1,27 @@
+# Ctrl Alt Dlt - by Cyber_Dad22 (netdeck.gg d0074913-53ff-49a6-9355-a1522c4b35a9, 0 likes, 1 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MaxTac AV
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+3 Les Élémens

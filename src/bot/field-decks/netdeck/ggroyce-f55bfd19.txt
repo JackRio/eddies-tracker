@@ -1,0 +1,29 @@
+# GGRoyce - by StrixBalefulGonk (netdeck.gg f55bfd19-e6f5-444b-a8db-2eb597cf070f, 0 likes, 32 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Field Operator
+3 6th Street Recruits
+1 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+2 Johnny Silverhand: Never Stop Fighting
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Corporate Surveillance
+2 Fool on the Hill
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Valentino Street Racer
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 Riot Shield

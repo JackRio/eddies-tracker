@@ -1,0 +1,28 @@
+# New Deck - by Redskarr (netdeck.gg b251a0da-d2d9-4e0f-8bfe-4809268b2777, 2 likes, 61 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 Detonate
+3 Industrial Assembly
+2 Safety Override
+3 Live with the Aftermath
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 3 Heywood Ripperdoc
+# side: 2 Mandibular Upgrade

@@ -1,0 +1,29 @@
+# Valentino Gang - by Dan Rebellion (netdeck.gg 2ec215d6-6701-48c4-8ce9-c74c8c26807f, 0 likes, 19 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 Valentino Guerrera
+3 Valentino Street Racer
+1 Pepe Najarro: Working Doubles
+3 El Sombrerón: La Venganza Lenta
+3 V: Roamer of the Badlands
+3 Octant
+3 Mantis Blades
+3 Riot Shield
+2 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Peace Offering
+3 Synapse Burnout
+3 Take Control
+3 Appetite for Destruction
+1 Over the Edge
+1 Gunpoint Diplomacy
+1 Carnage at the Colosseum

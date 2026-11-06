@@ -1,0 +1,23 @@
+# Cyberpsycho - by GHammer (netdeck.gg 41deb3d5-3e34-4ce5-ad4b-abf87c9d28a6, 1 likes, 36 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Japantown Jonin
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Maelstrom Zealots
+2 Johnny Silverhand: Never Stop Fighting
+2 Nadia: Fighting Through Grief
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Zetatech Berserk
+3 Take Control
+3 Cyberpsychosis

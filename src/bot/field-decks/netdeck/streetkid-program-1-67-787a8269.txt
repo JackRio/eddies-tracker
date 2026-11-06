@@ -1,0 +1,29 @@
+# Streetkid Program 1.67 - by seesaw (netdeck.gg 787a8269-1f23-4674-bd63-e98a08d5667e, 0 likes, 34 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Dying Night: V's Pistol
+2 Detonate
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Modded Kusanagi
+# side: 3 Over the Edge

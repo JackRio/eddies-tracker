@@ -1,0 +1,23 @@
+# New Deck - by Root (netdeck.gg cacad065-a21f-47a4-804c-b48cb45d6765, 1 likes, 58 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Field Operator
+3 Mox Inciters
+3 Hacked Corpo
+2 Rita Wheeler: No Stupid Questions
+3 Tetratronic Rippler
+3 Riot Shield
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Synapse Burnout
+3 The Heist
+2 Memory Relapse
+3 We Gotta Live Together

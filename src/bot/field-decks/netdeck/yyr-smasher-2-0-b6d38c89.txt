@@ -1,0 +1,32 @@
+# YYR Smasher 2.0 - by AJ Mock (netdeck.gg b6d38c89-4a36-42bb-87cb-142832999bac, 0 likes, 131 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+1 Gorilla Arms
+1 Detonate
+2 Safety Override
+2 Live with the Aftermath
+1 Over the Edge
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Heywood Ripperdoc
+# side: 2 Detonate

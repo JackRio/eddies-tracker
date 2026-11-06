@@ -1,0 +1,24 @@
+# Chrome Voltron - by Stump (netdeck.gg 397f0bea-8b1f-442d-8a18-2b3fcee6d24d, 0 likes, 3 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Swordwise Huscle
+3 Valentino Guerrera
+2 Viktor Vektor: You Might Feel a Little Pinch
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 Detonate
+3 Industrial Assembly
+2 Safety Override
+2 Live with the Aftermath

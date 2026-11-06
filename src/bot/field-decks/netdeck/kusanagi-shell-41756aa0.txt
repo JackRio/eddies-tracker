@@ -1,0 +1,23 @@
+# Kusanagi Shell - by RootsOfOneTree (netdeck.gg 41756aa0-c79c-49b3-a41d-3430bc015d6c, 1 likes, 22 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Augmented Negotiators
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Modded Kusanagi
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Chrome Reverie

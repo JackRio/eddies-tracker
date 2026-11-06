@@ -1,0 +1,26 @@
+# GGR - by Yasuyan (netdeck.gg e11bf22b-d51b-4eb1-90c7-918466da64dd, 4 likes, 72 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+2 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 MaxTac AV
+1 Royce: Don't Call Me Simon
+3 Johnny Silverhand: Never Stop Fighting
+2 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+1 Detonate
+3 Industrial Assembly
+3 Synapse Burnout
+3 Fool on the Hill
+2 (Don't Fear) The Reaper

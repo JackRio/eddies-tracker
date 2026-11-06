@@ -1,0 +1,30 @@
+# New Deck - by TCGKing (netdeck.gg 98bc9237-58f2-4564-9cdd-032624294061, 0 likes, 1 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Viktor Vektor: Sit Down and Relax
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Mox Inciters
+2 Delamain Cab
+2 Rita Wheeler: No Stupid Questions
+2 T-Bug: Amateur Philosopher
+2 Westbrook Netrunner
+2 Maman Brigitte: Spirit of Death
+2 MaxTac Suppression Team
+2 MT0D12 Flathead
+1 Rockn' Rockerboy
+1 Kiroshi Optics
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Floor It
+2 Reboot Optics
+2 The Heist
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+1 Unlikely Bond

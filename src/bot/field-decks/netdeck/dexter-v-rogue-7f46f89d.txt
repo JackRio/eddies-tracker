@@ -1,0 +1,32 @@
+# Dexter/V/Rogue - by Vince95 (netdeck.gg 7f46f89d-0b37-445c-9aba-575082a7373a, 0 likes, 23 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Zetatech Faceplate
+2 Deadman Transmitter
+2 Afterparty at Lizzie's
+2 Detonate
+2 Industrial Assembly
+3 Bonnie and Clyde
+2 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Heywood Ripperdoc
+# side: 1 Afterparty at Lizzie's
+# side: 1 Detonate
+# side: 1 Industrial Assembly

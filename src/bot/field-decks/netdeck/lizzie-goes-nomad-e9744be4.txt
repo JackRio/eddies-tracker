@@ -1,0 +1,26 @@
+# Lizzie Goes Nomad - by Violentn3on (netdeck.gg e9744be4-84b6-4748-9bef-8c346695b1a3, 0 likes, 5 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 Tyger's Whisper
+2 Emergency Atlus
+2 Mox Inciters
+2 Valentino Street Racer
+2 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+2 Wraith Marauders
+2 Nadia: Fighting Through Grief
+2 Saul Bright: Stormrider
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Synapse Burnout
+3 Reboot Optics
+2 Nocturne OP55 N1
+3 We Gotta Live Together
+2 Towerfall

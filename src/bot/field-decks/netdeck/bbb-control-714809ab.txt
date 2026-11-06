@@ -1,0 +1,23 @@
+# BBB control - by ? (netdeck.gg 714809ab-d4f3-41e1-9920-ec6d272e5163, 1 likes, 48 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

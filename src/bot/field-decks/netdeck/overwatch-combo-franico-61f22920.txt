@@ -1,0 +1,23 @@
+# Overwatch Combo (FraNico) - by PascoloTCG (netdeck.gg 61f22920-2259-4e02-b8ac-d229a8de7030, 3 likes, 122 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 MaxTac Squadron
+3 Pepe Najarro: Working Doubles
+3 Riding Nomad
+3 Modded Kusanagi
+3 Sandayu Oda: Hanako's Guardian
+3 NetWatch Netdriver
+3 Overwatch: Panam's Gift
+3 Peace Offering
+3 Trust No One
+3 Fool on the Hill
+3 Take Control
+3 Nocturne OP55 N1
+2 Memory Relapse
+2 (Don't Fear) The Reaper

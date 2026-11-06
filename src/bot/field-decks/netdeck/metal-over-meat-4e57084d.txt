@@ -1,0 +1,25 @@
+# Metal Over Meat - by JoKari (netdeck.gg 4e57084d-b9ad-4a12-b98b-49472ff7b2c7, 0 likes, 4 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Caliber: Totentanz's Top Dog
+2 MaxTac Suppression Team
+3 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+2 Cyberpsychosis
+3 Bootleg Black Sapphire Show

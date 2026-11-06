@@ -1,0 +1,30 @@
+# Heist Upgrade - by Eke (netdeck.gg e7a3ce17-bcaf-4987-b7d2-c43c8de9acc7, 1 likes, 123 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Secondhand Bombus
+2 Dexter DeShawn: One Last Chance
+2 Delamain Cab
+2 Offduty Malfini
+1 Psycho Squad
+2 T-Bug: Amateur Philosopher
+1 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Zetatech Faceplate
+2 Afterparty at Lizzie's
+3 Floor It
+1 Trust No One
+1 The Heist
+1 Nocturne OP55 N1
+1 Towerfall

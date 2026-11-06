@@ -1,0 +1,25 @@
+# RRG Beatdown - by dreadful_SPILLER (netdeck.gg 39b377be-1639-4138-802d-ba4af996f200, 0 likes, 11 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+2 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+2 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+2 Memory Relapse
+3 Carnage at the Colosseum

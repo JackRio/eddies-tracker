@@ -1,0 +1,27 @@
+# Mono blue - by Floodhammer (netdeck.gg ba247d2a-6525-4d06-bb5e-e689dc18ddba, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+3 Hacked Corpo
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Pyramid Song
+1 Unlikely Bond
+3 Les Élémens
+3 Towerfall

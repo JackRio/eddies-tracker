@@ -1,0 +1,24 @@
+# Smashy 2.0 - by AleTered (netdeck.gg 44e748bb-8b36-46d4-a021-c773a06c94b2, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+2 MaxTac Suppression Team
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

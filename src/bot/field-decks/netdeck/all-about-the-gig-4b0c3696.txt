@@ -1,0 +1,26 @@
+# All About the Gig - by UberToadsMedic (netdeck.gg 4b0c3696-2166-4f43-ad01-6e7ee64b2264, 1 likes, 21 views, updated 2026-09-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Padre: Man of the Cross
+
+// Main deck
+3 Corpo Security
+3 Dexter DeShawn: One Last Chance
+3 Field Operator
+3 Pacifica Netrunner
+2 MaxTac AV
+2 Nadia: Fighting Through Grief
+1 Panam Palmer: Strength Through Family
+3 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Peace Offering
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

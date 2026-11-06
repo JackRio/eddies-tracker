@@ -1,0 +1,24 @@
+# New Deck - by LilSmilodonBravo (netdeck.gg 672b8d09-bec2-47c2-afad-dad00465c8d4, 0 likes, 9 views, updated 2026-10-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+2 Corpo Security
+2 Ruthless Lowlife
+2 Field Operator
+3 La Llorona: Ghost of the Past
+3 Pepe Najarro: Working Doubles
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 All is Lost
+3 Detonate
+3 Take Control
+3 Appetite for Destruction
+3 Carnage at the Colosseum

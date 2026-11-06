@@ -1,0 +1,23 @@
+# RRG - by Nautical Nigel (netdeck.gg 8f2d105c-60aa-43c6-97a1-fa2fe6dec71c, 0 likes, 15 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Field Operator
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum

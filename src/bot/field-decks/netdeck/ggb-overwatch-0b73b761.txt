@@ -1,0 +1,32 @@
+# GGB Overwatch - by JC (netdeck.gg 0b73b761-cf91-4462-9932-f2b8cb286125, 0 likes, 67 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+1 Riding Nomad
+3 Panam Palmer: Strength Through Family
+1 Sandayu Oda: Hanako's Guardian
+1 Placide: Voodoo Sentinel
+2 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Synapse Burnout
+3 Trust No One
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Riding Nomad
+# side: 1 Nadia: Fighting Through Grief
+# side: 1 Placide: Voodoo Sentinel
+# side: 3 Riot Shield

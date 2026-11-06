@@ -1,0 +1,23 @@
+# New Deck - by thepate (netdeck.gg b8f2d108-d15f-4291-9788-2577d1610150, 0 likes, 2 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Tyger's Whisper
+3 Hanako Arasaka: In a Gilded Cage
+3 MaxTac AV
+2 Viktor Vektor: Drop Your Illusions
+3 Trauma Team Operatives
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Zetatech Berserk
+3 Safety Override
+3 The Heist
+2 Bootleg Black Sapphire Show

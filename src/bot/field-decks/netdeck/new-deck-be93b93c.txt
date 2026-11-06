@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg be93b93c-e463-4ee6-ae11-e3be911d9caa, 0 likes, 2 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Ruthless Lowlife
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Valentino Guerrera
+3 Meredith Stout: Stone Cold Corpo
+1 Octant
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Detonate
+3 The Heist

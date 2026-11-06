@@ -1,0 +1,31 @@
+# Rockers! - by Kifunk (netdeck.gg 40ab0067-4051-4079-b551-b61821dfa990, 0 likes, 6 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Japantown Jonin
+2 Dexter DeShawn: One Last Chance
+2 Mox Inciters
+3 Valentino Guerrera
+2 Hanako Arasaka: In a Gilded Cage
+3 Kerry Eurodyne: The Last Rockerboy
+3 Rita Wheeler: No Stupid Questions
+2 T-Bug: Amateur Philosopher
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+2 Placide: Voodoo Sentinel
+2 Mandibular Upgrade
+2 Tetratronic Rippler
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Reboot Optics
+2 Over the Edge
+1 Shattered Memories
+2 Unlikely Bond

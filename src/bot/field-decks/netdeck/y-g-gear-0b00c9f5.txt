@@ -1,0 +1,25 @@
+# Y/G Gear - by uglypoodle (netdeck.gg 0b00c9f5-2323-42fe-8185-b9dd57713df1, 0 likes, 2 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Sketchy Ripper
+3 Tyger's Whisper
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Hanako Arasaka: In a Gilded Cage
+2 Alt Cunningham: Mother of Daemons
+1 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Zetatech Berserk
+2 The Heist
+2 Bootleg Black Sapphire Show

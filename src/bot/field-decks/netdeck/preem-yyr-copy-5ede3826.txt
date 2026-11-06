@@ -1,0 +1,24 @@
+# PREEM YYR (Copy) - by ? (netdeck.gg 5ede3826-7262-4a20-b308-6994d5b8eb15, 0 likes, 0 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Augmented Negotiators
+2 Swordwise Huscle
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+2 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

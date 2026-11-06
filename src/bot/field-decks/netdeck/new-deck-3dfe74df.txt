@@ -1,0 +1,33 @@
+# New Deck - by XDim11 (netdeck.gg 3dfe74df-675d-4635-b62b-94f57b4b6abb, 0 likes, 18 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Valentino Street Racer
+3 6th Street Recruits
+1 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+1 Riot Shield
+3 Satori: Sword of Saburo
+1 Detonate
+2 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Riot Shield
+# side: 1 Detonate
+# side: 1 Synapse Burnout
+# side: 1 Gunpoint Diplomacy

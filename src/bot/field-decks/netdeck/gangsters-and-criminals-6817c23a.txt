@@ -1,0 +1,27 @@
+# Gangsters and Criminals - by Cyberlich96 (netdeck.gg 6817c23a-3d89-4d7f-9ef2-0d7697f756ca, 0 likes, 2 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Mox Inciters
+3 Hacked Corpo
+3 Maelstrom Zealots
+3 Rita Wheeler: No Stupid Questions
+3 Sandayu Oda: Hanako's Guardian
+3 Placide: Voodoo Sentinel
+3 Riot Shield
+3 Zetatech Berserk
+3 Peace Offering
+2 Trust No One
+3 Corporate Surveillance
+2 Take Control
+2 Nocturne OP55 N1
+2 Les Élémens
+3 We Gotta Live Together
+3 Towerfall

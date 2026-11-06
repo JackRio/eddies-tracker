@@ -1,0 +1,23 @@
+# GaY(GreenAndYellow) - by LaughingLamb (netdeck.gg 8eb0222e-1e99-4315-bcd3-54aa994c8621, 0 likes, 27 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Maelstrom Zealots
+3 Jackie Welles: Ride or Die Choom
+3 Nadia: Fighting Through Grief
+3 MaxTac Heavy
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

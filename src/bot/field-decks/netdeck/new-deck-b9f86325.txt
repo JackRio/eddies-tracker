@@ -1,0 +1,30 @@
+# New Deck - by ? (netdeck.gg b9f86325-557d-470c-b753-26752aef4d46, 0 likes, 6 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Corpo Security
+2 Secondhand Bombus
+1 Augmented Negotiators
+2 Field Operator
+2 Pepe Najarro: Working Doubles
+2 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+1 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+1 Kiroshi Optics
+2 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Peace Offering
+3 Fool on the Hill
+3 Memory Relapse
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

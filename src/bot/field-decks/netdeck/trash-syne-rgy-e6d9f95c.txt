@@ -1,0 +1,29 @@
+# Trash Syne"RGY" - by Rats T. Rats Dave (netdeck.gg e6d9f95c-edc1-40ac-812f-e0623b5b8fa8, 1 likes, 24 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 V: Streetkid
+
+// Main deck
+2 Augmented Negotiators
+3 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Trauma Team Operatives
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Riot Shield
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+2 Cyberpsychosis
+2 Shattered Memories
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 3 Maelstrom Goons
+# side: 2 Zetatech Berserk
+# side: 2 Memory Relapse

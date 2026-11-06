@@ -1,0 +1,26 @@
+# Konpeki Disaster - by Big Roon (netdeck.gg a84353f7-b069-475a-a2be-313000c38402, 0 likes, 5 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+2 Corpo Security
+2 Japantown Jonin
+3 Field Operator
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Detonate
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Fool on the Hill
+2 Wild in the Streets

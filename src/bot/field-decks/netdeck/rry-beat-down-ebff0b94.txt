@@ -1,0 +1,23 @@
+# RRY BEAT DOWN - by Surgical Ninja (netdeck.gg ebff0b94-61d7-48c4-9b8f-29ddcf05fc56, 3 likes, 181 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+3 Carnage at the Colosseum

@@ -1,0 +1,28 @@
+# Judy Slot Machine - by Korlash1990 (netdeck.gg 0c27eeaa-0f12-4c25-9e29-843c4abc4f80, 2 likes, 117 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Wakako Okada: Peace and Harmony
+1 V: Corporate Exile
+
+// Main deck
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+2 Modded Kusanagi
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Mox Inciters
+# side: 2 Reboot Optics
+# side: 2 Unlikely Bond

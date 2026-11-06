@@ -1,0 +1,28 @@
+# Million Edd13 Man - by SIRMCVILLAIN (netdeck.gg cab57435-26be-455b-a044-ea3488be75c8, 0 likes, 10 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Gilded Matón
+3 MaxTac Suppression Team
+2 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+3 The Heist
+2 Cyberpsychosis
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

@@ -1,0 +1,31 @@
+# Metal over Meat - by Choombatta (netdeck.gg b1a26755-06bb-459a-bb0f-ed9c3a933b8a, 0 likes, 16 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 MaxTac Suppression Team
+2 Heywood Ripperdoc
+3 Adam Smasher: Metal Over Meat
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Sketchy Ripper
+# side: 2 Trauma Team Operatives
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 1 Gorilla Arms
+# side: 1 Safety Override

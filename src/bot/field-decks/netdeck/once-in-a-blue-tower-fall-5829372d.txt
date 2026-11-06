@@ -1,0 +1,26 @@
+# Once in a Blue Tower Fall - by TimeLapseGS (netdeck.gg 5829372d-b439-49d3-9d45-5f35cc2d66ff, 0 likes, 6 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+3 Mox Inciters
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+1 Modded Kusanagi
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

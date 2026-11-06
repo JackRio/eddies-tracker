@@ -1,0 +1,24 @@
+# red blue corpo ganger theme - by JonB25 (netdeck.gg 9870daf0-e86d-4c60-a9a2-b5fabedf4f55, 1 likes, 32 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Sasha Yakovleva: Won't Let You Down
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+3 La Llorona: Ghost of the Past
+3 Mox Inciters
+2 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+3 Placide: Voodoo Sentinel
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

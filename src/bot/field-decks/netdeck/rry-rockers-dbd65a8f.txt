@@ -1,0 +1,28 @@
+# RRY Rockers - by underviolets (netdeck.gg dbd65a8f-dbbb-490c-bbf4-afd183513c0f, 0 likes, 8 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+1 La Llorona: Ghost of the Past
+2 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+1 MaxTac Suppression Team
+2 Rockn' Rockerboy
+3 Animals Wrecker
+1 Mandibular Upgrade
+3 Mantis Blades
+2 Satori: Sword of Saburo
+2 Afterparty at Lizzie's
+3 All is Lost
+2 Detonate
+2 Industrial Assembly
+3 Appetite for Destruction
+2 Bonnie and Clyde
+2 Over the Edge
+3 Carnage at the Colosseum

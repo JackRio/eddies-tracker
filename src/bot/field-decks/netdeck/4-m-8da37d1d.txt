@@ -1,0 +1,31 @@
+# 4æm - by drwnd (netdeck.gg 8da37d1d-be04-475b-ae61-7c15698b75fa, 0 likes, 22 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Misty Olszewski: Mender of Broken Spirits
+2 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Detonate
+# side: 3 Les Élémens

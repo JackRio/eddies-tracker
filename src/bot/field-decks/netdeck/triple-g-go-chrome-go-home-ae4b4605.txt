@@ -1,0 +1,31 @@
+# Triple G - Go Chrome / Go Home - by Lash101 (netdeck.gg ae4b4605-d6e7-4ebc-aba9-8722814cca0b, 1 likes, 76 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Field Operator
+3 MaxTac Squadron
+2 Goro Takemura: Losing His Way
+3 MaxTac AV
+1 Panam Palmer: Strength Through Family
+3 MaxTac Heavy
+2 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Riot Shield
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Corporate Surveillance
+3 Fool on the Hill
+3 Take Control
+2 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Corpo Security
+# side: 2 Nadia: Fighting Through Grief
+# side: 1 Sandayu Oda: Hanako's Guardian
+# side: 2 Memory Relapse

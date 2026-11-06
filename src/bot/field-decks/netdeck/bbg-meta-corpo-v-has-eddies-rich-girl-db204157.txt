@@ -1,0 +1,26 @@
+# BBG Meta Corpo V has Eddies (Rich Girl)) - by Stranger (netdeck.gg db204157-080b-458a-8d0a-334b3250dfd5, 0 likes, 13 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+3 Corpo Security
+3 Rita Wheeler: No Stupid Questions
+3 MaxTac AV
+2 Modded Kusanagi
+2 Saul Bright: Stormrider
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 Riot Shield
+3 NetWatch Netdriver
+2 Zetatech Berserk
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Reboot Optics
+2 Chrome Reverie
+2 Memory Relapse
+2 Les Élémens

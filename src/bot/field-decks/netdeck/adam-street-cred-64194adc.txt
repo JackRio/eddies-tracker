@@ -1,0 +1,24 @@
+# Adam Street Cred - by Tumakhan (netdeck.gg 64194adc-2e61-4c4b-8af2-619b1c3e427c, 0 likes, 34 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+2 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+2 Minotaur
+3 Octant
+2 Sandayu Oda: Hanako's Guardian
+2 Yorinobu Arasaka: Steel Dragon
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Corporate Surveillance
+2 Appetite for Destruction

@@ -1,0 +1,25 @@
+# BBG Meta - by X0TCG (netdeck.gg 9bfe2589-3057-48ee-801d-18db21142ad6, 0 likes, 64 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+1 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+1 Placide: Voodoo Sentinel
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+1 Memory Relapse
+3 Les Élémens
+3 Towerfall

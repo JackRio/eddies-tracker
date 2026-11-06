@@ -1,0 +1,29 @@
+# Adrenalize Me - by Keith Olenchak (netdeck.gg f16d3fd0-3573-4d3a-a6ef-30fbec8841ec, 0 likes, 24 views, updated 2026-10-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Valentino Street Racer
+3 Psycho Squad
+3 Riding Nomad
+3 Modded Kusanagi
+2 Nadia: Fighting Through Grief
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+2 Synapse Burnout
+3 Reboot Optics
+1 Take Control
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Goro Takemura: Losing His Way
+# side: 3 Riot Shield
+# side: 2 Take Control

@@ -1,0 +1,23 @@
+# New Deck - by ? (netdeck.gg 159dccc8-d0d2-41ab-ac54-6cae846aefac, 0 likes, 9 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Tyger's Whisper
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac AV
+2 Screw: Lovelorn Fool
+3 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+3 Trust No One
+3 Chrome Reverie
+3 Memory Relapse
+3 Shattered Memories
+3 Unlikely Bond

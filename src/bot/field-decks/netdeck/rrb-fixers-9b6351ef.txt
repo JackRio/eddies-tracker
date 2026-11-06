@@ -1,0 +1,29 @@
+# RRB Fixers - by Ender (netdeck.gg 9b6351ef-0d34-4f84-8532-4ebb0433adbf, 6 likes, 187 views, updated 2026-09-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Rogue Amendiares: Queen of the Afterlife
+# side: 2 Screw: Lovelorn Fool
+# side: 1 Johnny Silverhand: Never Stop Fighting
+# side: 3 Detonate

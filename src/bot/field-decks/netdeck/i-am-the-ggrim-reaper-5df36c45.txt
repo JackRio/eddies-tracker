@@ -1,0 +1,28 @@
+# I AM THE GGRIM REAPER - by RootsOfOneTree (netdeck.gg 5df36c45-0a09-41cd-b38b-d7fadd83c095, 0 likes, 58 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Nadia: Fighting Through Grief
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Synapse Burnout
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 6th Street Recruits
+# side: 2 Sandayu Oda: Hanako's Guardian
+# side: 2 Peace Offering

@@ -1,0 +1,24 @@
+# Red, Yellow, Blue Fixers - by ? (netdeck.gg 4d122d8f-a508-40ff-a038-790d952b37a2, 0 likes, 12 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Secondhand Bombus
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 NetWatch Netdriver
+2 Floor It
+3 Reboot Optics
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Shattered Memories

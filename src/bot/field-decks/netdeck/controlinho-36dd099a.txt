@@ -1,0 +1,26 @@
+# Controlinho - by MrWesLee (netdeck.gg 36dd099a-747a-46b3-bda6-d4a07e38d16a, 1 likes, 4 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Secondhand Bombus
+3 Augmented Negotiators
+1 Delamain: Rideshare AI
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+2 Afterparty at Lizzie's
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

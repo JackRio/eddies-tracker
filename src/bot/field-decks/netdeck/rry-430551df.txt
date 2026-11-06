@@ -1,0 +1,25 @@
+# RRY - by X0TCG (netdeck.gg 430551df-f887-4685-aaef-a5e2e919650f, 0 likes, 32 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Secondhand Bombus
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Rockn' Rockerboy
+2 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 All is Lost
+3 Industrial Assembly
+2 Appetite for Destruction
+3 Bonnie and Clyde
+2 Over the Edge
+3 Carnage at the Colosseum

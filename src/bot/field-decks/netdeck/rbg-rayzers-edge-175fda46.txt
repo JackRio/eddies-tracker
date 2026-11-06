@@ -1,0 +1,24 @@
+# RBG Rayzers Edge - by XellosMK2 (netdeck.gg 175fda46-c8d3-442f-ac03-4cbfd7578dbf, 0 likes, 14 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+2 Emergency Atlus
+3 Valentino Street Racer
+3 Delamain Cab
+3 MaxTac AV
+2 Modded Muramasa
+2 Wraith Marauders
+3 Modded Kusanagi
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+3 Floor It
+3 Peace Offering
+3 Chrome Reverie
+3 Memory Relapse

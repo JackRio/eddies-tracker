@@ -1,0 +1,29 @@
+# DB Editors - by Aeseiri (netdeck.gg c0dc412a-2e1c-4042-80c5-fbf8c461aefc, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+1 Hacked Corpo
+3 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+1 MT0D12 Flathead
+1 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+1 Dying Night: V's Pistol
+3 NetWatch Netdriver
+1 Detonate
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+2 Towerfall

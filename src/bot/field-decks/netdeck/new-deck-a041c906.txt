@@ -1,0 +1,39 @@
+# New Deck - by LilSmilodonBravo (netdeck.gg a041c906-4f2e-4d7b-bff8-4369f4173e89, 0 likes, 8 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+1 Corpo Security
+1 Misty Olszewski: Mender of Broken Spirits
+1 Hacked Corpo
+1 Maelstrom Zealots
+1 Pepe Najarro: Working Doubles
+1 Psycho Squad
+2 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+2 MaxTac AV
+1 Modded Kusanagi
+1 Nadia: Fighting Through Grief
+1 Sandayu Oda: Hanako's Guardian
+1 Placide: Voodoo Sentinel
+1 Saul Bright: Stormrider
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+1 NetWatch Netdriver
+2 Zetatech Berserk
+1 Floor It
+2 Peace Offering
+2 Trust No One
+2 Corporate Surveillance
+1 Reboot Optics
+1 Take Control
+2 Three Mouths, One Desire
+1 Nocturne OP55 N1
+1 Pyramid Song
+2 Unlikely Bond
+1 Les Élémens
+1 We Gotta Live Together

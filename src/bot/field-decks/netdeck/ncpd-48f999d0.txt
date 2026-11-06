@@ -1,0 +1,23 @@
+# NCPD - by ? (netdeck.gg 48f999d0-3398-4185-8bf0-957c51fd3e97, 0 likes, 6 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 Saburo Arasaka: Stubborn Patriarch
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 MaxTac Squadron
+3 MaxTac AV
+3 MaxTac Suppression Team
+3 MaxTac Heavy
+3 Mandibular Upgrade
+3 Riot Shield
+3 Sandevistan
+2 Zetatech Berserk
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Cyberpsychosis
+2 (Don't Fear) The Reaper

@@ -1,0 +1,25 @@
+# New Deck - by IMCALLEDJAMIE (netdeck.gg 7cc1219b-3dc8-466a-939a-f40fe2ef54cc, 0 likes, 16 views, updated 2026-10-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Sandayu Oda: Hanako's Guardian
+2 Placide: Voodoo Sentinel
+2 NetWatch Netdriver
+2 Peace Offering
+2 Synapse Burnout
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

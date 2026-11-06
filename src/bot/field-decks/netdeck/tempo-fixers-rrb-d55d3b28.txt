@@ -1,0 +1,31 @@
+# Tempo Fixers - RRB - by Pelikn (netdeck.gg d55d3b28-cbf7-49b0-84be-67a80dadc4f9, 0 likes, 30 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+1 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+1 Modded Kusanagi
+3 Yorinobu Arasaka: Steel Dragon
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Detonate
+# side: 2 Floor It

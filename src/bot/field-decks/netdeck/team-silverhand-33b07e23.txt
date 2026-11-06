@@ -1,0 +1,31 @@
+# Team Silverhand - by Naythin (netdeck.gg 33b07e23-1b41-4837-a093-454edbfb0eb0, 0 likes, 3 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Wakako Okada: Peace and Harmony
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Japantown Jonin
+1 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+2 Mox Inciters
+3 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Johnny Silverhand: Never Stop Fighting
+1 Modded Kusanagi
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+1 NetWatch Netdriver
+2 Floor It
+3 Industrial Assembly
+3 Bonnie and Clyde
+1 Chrome Reverie
+2 Nocturne OP55 N1
+1 Shattered Memories
+2 Unlikely Bond
+2 Carnage at the Colosseum

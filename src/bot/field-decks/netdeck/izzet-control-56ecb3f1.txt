@@ -1,0 +1,28 @@
+# Izzet Control - by Mcgatsu (netdeck.gg 56ecb3f1-c3cc-46ab-b9d9-4a2b678fb4cd, 0 likes, 2 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Ruthless Lowlife
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+1 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+1 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 All is Lost
+2 Detonate
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+1 Towerfall

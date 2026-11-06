@@ -1,0 +1,31 @@
+# Cyberpsycho - by Catsnakethng (netdeck.gg e4ea7c6a-26a4-40b7-9d45-4dc90d0043e2, 0 likes, 18 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+2 Maelstrom Goons
+2 Delamain Cab
+2 Hacked Corpo
+2 Offduty Malfini
+2 Psycho Squad
+1 Lizzy Wizzy: Delicate Weapon
+2 Modded Kusanagi
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Tetratronic Rippler
+2 Adrenaline Converter
+2 Zetatech Faceplate
+1 NetWatch Netdriver
+2 Gorilla Arms
+2 Floor It
+1 Trust No One
+2 Reboot Optics
+2 Safety Override
+2 The Heist
+3 Cyberpsychosis
+3 Bootleg Black Sapphire Show

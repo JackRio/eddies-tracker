@@ -1,0 +1,31 @@
+# New Deck - by PedroCosta (netdeck.gg c86e902f-ded8-47af-ab57-9f47101cdd07, 0 likes, 18 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+1 Field Operator
+2 6th Street Recruits
+1 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Maelstrom Zealots
+# side: 3 Royce: Don't Call Me Simon
+# side: 1 Riot Shield
+# side: 2 Detonate

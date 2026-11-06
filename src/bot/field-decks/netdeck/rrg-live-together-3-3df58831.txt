@@ -1,0 +1,29 @@
+# RRG Live Together.3 - by TimberWolf (netdeck.gg 3df58831-e2f2-4d2f-8b4e-9c7a3ad3edf8, 0 likes, 90 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+1 V: Streetkid
+
+// Main deck
+3 Field Operator
+2 Valentino Street Racer
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+3 Memory Relapse
+2 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 3 Nadia: Fighting Through Grief
+# side: 2 Detonate
+# side: 2 Carnage at the Colosseum

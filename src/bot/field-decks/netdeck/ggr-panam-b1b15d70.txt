@@ -1,0 +1,28 @@
+# GGR Panam - by Korlash1990 (netdeck.gg b1b15d70-1031-4717-a140-c2f1770a82d5, 1 likes, 260 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Goro Takemura: Hands Unclean
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Johnny Silverhand: Never Stop Fighting
+3 Panam Palmer: Strength Through Family
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 All is Lost
+3 Peace Offering
+3 Synapse Burnout
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Detonate
+# side: 3 Corporate Surveillance
+# side: 1 (Don't Fear) The Reaper

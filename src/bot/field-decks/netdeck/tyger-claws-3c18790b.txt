@@ -1,0 +1,23 @@
+# Tyger Claws - by HungSpellboundGames (netdeck.gg 3c18790b-7c42-4cdc-b8e9-9b0c05313468, 0 likes, 17 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Japantown Jonin
+3 Tyger's Whisper
+3 Chrome Fang
+3 Modded Kusanagi
+2 Minotaur
+3 Mantis Blades
+2 NetWatch Netdriver
+3 Detonate
+3 Floor It
+3 Peace Offering
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Over the Edge
+3 Unlikely Bond

@@ -1,0 +1,25 @@
+# One Kick Royce - by Prospere (netdeck.gg daf87ff1-f6fa-488f-878d-1e760ca6cb2d, 0 likes, 14 views, updated 2026-10-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Cyberpsychosis

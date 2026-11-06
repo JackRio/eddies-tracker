@@ -1,0 +1,24 @@
+# BBG Tempo Judy - by HungSpellboundGames (netdeck.gg 9ccd0cde-6245-4fe7-b470-c7b57afa9469, 2 likes, 435 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Tyger's Whisper
+3 Delamain: Rideshare AI
+2 Valentino Street Racer
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Memory Relapse
+2 Unlikely Bond
+2 Les Élémens
+2 Towerfall

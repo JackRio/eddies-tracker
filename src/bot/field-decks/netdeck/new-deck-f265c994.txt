@@ -1,0 +1,30 @@
+# New Deck - by Czr763 (netdeck.gg f265c994-e361-4eb3-aea5-071bda2322ae, 0 likes, 27 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Muamar Reyes: El Capitán
+1 V: Streetkid
+
+// Main deck
+3 Augmented Negotiators
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 V: Roamer of the Badlands
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+2 Over the Edge
+1 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Heywood Ripperdoc
+# side: 2 Deadman Transmitter
+# side: 1 Appetite for Destruction

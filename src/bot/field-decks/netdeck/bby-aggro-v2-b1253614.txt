@@ -1,0 +1,29 @@
+# BBY Aggro v2 - by Bromyos (netdeck.gg b1253614-bdc2-4991-9382-aec76863e9d4, 0 likes, 19 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+2 Augmented Negotiators
+3 Delamain: Rideshare AI
+2 Dexter DeShawn: One Last Chance
+3 Lizzy Wizzy: Delicate Weapon
+3 Afterparty at Lizzie's
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 2 Jackie Welles: Ride or Die Choom
+# side: 2 Placide: Voodoo Sentinel

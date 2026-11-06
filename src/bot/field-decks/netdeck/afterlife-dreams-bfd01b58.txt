@@ -1,0 +1,32 @@
+# Afterlife Dreams - by Diz_Chrome Dealer (netdeck.gg bfd01b58-49a4-4c99-8c5b-6463380ead9a, 2 likes, 160 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+1 Hacked Corpo
+2 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+3 V: Roamer of the Badlands
+2 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Nocturne OP55 N1
+1 Shattered Memories
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Westbrook Netrunner
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Modded Kusanagi
+# side: 2 Detonate
+# side: 1 Over the Edge

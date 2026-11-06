@@ -1,0 +1,24 @@
+# RRY - by JohnnyK (netdeck.gg 2c58f203-09d3-4320-8c50-d992914c0185, 0 likes, 0 views, updated 2026-09-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+3 Swordwise Huscle
+3 6th Street Recruits
+2 Offduty Malfini
+3 Jackie Welles: Ride or Die Choom
+2 Yorinobu Arasaka: Steel Dragon
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Detonate
+3 Industrial Assembly
+1 Appetite for Destruction
+3 Bonnie and Clyde
+2 Over the Edge

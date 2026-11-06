@@ -1,0 +1,24 @@
+# BBBraindance Version 2.0 - by Hiyoma (netdeck.gg 3fdd9fa6-ee7c-4b98-a72b-7f2ad7e8beff, 0 likes, 1 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Misty Olszewski: Mender of Broken Spirits
+3 Psycho Squad
+2 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Pyramid Song
+2 Unlikely Bond
+3 Les Élémens
+3 Towerfall

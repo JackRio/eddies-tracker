@@ -1,0 +1,23 @@
+# New Deck - by sosa (netdeck.gg 6db5e187-e34c-4f84-9764-313b55f7c448, 0 likes, 9 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Sasha Yakovleva: Won't Let You Down
+1 V: Corporate Exile
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Psycho Squad
+2 Maman Brigitte: Spirit of Death
+3 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Towerfall

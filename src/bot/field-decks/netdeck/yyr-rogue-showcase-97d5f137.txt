@@ -1,0 +1,28 @@
+# YYR Rogue Showcase - by Dracowyrd (netdeck.gg 97d5f137-458f-4a30-817c-fe2939633bff, 2 likes, 41 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Chrome Fang
+2 Viktor Vektor: Drop Your Illusions
+2 Jackie Welles: Ride or Die Choom
+3 Mantis Blades
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Shattered Memories
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 2 Hanako Arasaka: In a Gilded Cage
+# side: 3 Adrenaline Converter

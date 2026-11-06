@@ -1,0 +1,23 @@
+# RRY Yaaaarg - by Stelio Kontos (netdeck.gg 4b511a16-54fd-4254-8c11-0122abd0479c, 0 likes, 0 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Rockn' Rockerboy
+3 Animals Wrecker
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+3 Appetite for Destruction
+2 Bonnie and Clyde
+2 Cyberpsychosis

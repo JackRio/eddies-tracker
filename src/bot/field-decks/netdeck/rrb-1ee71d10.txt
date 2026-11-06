@@ -1,0 +1,29 @@
+# RRB - by Ho0LiG4n (netdeck.gg 1ee71d10-3db5-4fd8-a1cd-ae5c4d2cb7af, 0 likes, 48 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Psycho Squad
+2 Lizzy Wizzy: Delicate Weapon
+3 Yorinobu Arasaka: Steel Dragon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Lizzy Wizzy: Delicate Weapon
+# side: 2 Animals Wrecker
+# side: 2 NetWatch Netdriver
+# side: 2 Detonate

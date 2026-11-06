@@ -1,0 +1,27 @@
+# bby programs - by Gnart (netdeck.gg c0701b75-c423-4efd-9ccd-ee8068cd2daf, 0 likes, 1 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Augmented Negotiators
+2 Misty Olszewski: Mender of Broken Spirits
+3 Hanako Arasaka: In a Gilded Cage
+3 Rita Wheeler: No Stupid Questions
+2 MaxTac Suppression Team
+1 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+2 Placide: Voodoo Sentinel
+3 Kiroshi Optics
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song

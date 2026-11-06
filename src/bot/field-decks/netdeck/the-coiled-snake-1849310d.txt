@@ -1,0 +1,31 @@
+# The Coiled Snake - by Avincry (netdeck.gg 1849310d-2595-431b-92af-754bdf9e2b32, 5 likes, 273 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Valentino Street Racer
+2 6th Street Recruits
+2 Goro Takemura: Losing His Way
+2 Riding Nomad
+3 Royce: Don't Call Me Simon
+2 Nadia: Fighting Through Grief
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Take Control
+2 Over the Edge
+2 Shattered Memories
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 Meredith Stout: Stone Cold Corpo
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Detonate

@@ -1,0 +1,24 @@
+# Doll House - by PewPewPew (netdeck.gg 6f5f138f-b718-4351-9eff-b1131a80369f, 0 likes, 0 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Floor It
+2 Industrial Assembly
+3 Reboot Optics
+3 Pyramid Song
+2 Towerfall

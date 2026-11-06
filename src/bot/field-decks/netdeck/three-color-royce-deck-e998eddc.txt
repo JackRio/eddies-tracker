@@ -1,0 +1,33 @@
+# Three Color Royce Deck - by gutg1 (netdeck.gg e998eddc-f102-49cd-a3cb-1ba0222786b7, 0 likes, 1 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+1 Secondhand Bombus
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+1 Kerry Eurodyne: The Last Rockerboy
+1 Meredith Stout: Stone Cold Corpo
+3 Offduty Malfini
+3 MaxTac AV
+1 Viktor Vektor: Drop Your Illusions
+1 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+1 Arasaka Emergency Radioport
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Zetatech Berserk
+1 Afterparty at Lizzie's
+1 All is Lost
+3 Industrial Assembly
+2 Peace Offering
+1 Corporate Surveillance
+1 Take Control
+1 The Heist
+1 Memory Relapse

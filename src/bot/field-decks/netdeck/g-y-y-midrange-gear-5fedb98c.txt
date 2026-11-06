@@ -1,0 +1,23 @@
+# (G/Y/Y) Midrange Gear - by DenkiFox (netdeck.gg 5fedb98c-611d-4898-9caa-18120c50ab69, 0 likes, 15 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Zealots
+2 Alt Cunningham: Mother of Daemons
+2 Saul Bright: Stormrider
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Safety Override
+3 The Heist
+3 Bootleg Black Sapphire Show

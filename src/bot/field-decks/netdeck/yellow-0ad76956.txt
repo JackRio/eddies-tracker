@@ -1,0 +1,26 @@
+# Yellow - by Gonezoetv (netdeck.gg 0ad76956-cde2-471f-9a58-d47e4b3ca023, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Viktor Vektor: Sit Down and Relax
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Dexter DeShawn: One Last Chance
+3 Hanako Arasaka: In a Gilded Cage
+2 T-Bug: Amateur Philosopher
+3 Caliber: Totentanz's Top Dog
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

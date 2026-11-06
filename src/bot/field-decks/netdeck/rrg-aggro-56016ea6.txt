@@ -1,0 +1,33 @@
+# RRG Aggro - by Ho0LiG4n (netdeck.gg 56016ea6-c82b-47ae-b7be-32396fe238ee, 0 likes, 20 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+1 Field Operator
+2 Valentino Street Racer
+3 6th Street Recruits
+1 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+1 Animals Wrecker
+2 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+1 Riot Shield
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Bonnie and Clyde
+2 Over the Edge
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 1 Riot Shield
+# side: 2 Detonate
+# side: 2 Corporate Surveillance
+# side: 1 Gunpoint Diplomacy

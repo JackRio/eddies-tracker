@@ -1,0 +1,32 @@
+# The Gang's All Here 💝 (4B/2R) - by Sekhmet (netdeck.gg 207f0a2d-047c-41de-aa0f-29df5dc222d5, 0 likes, 58 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 V: Streetkid
+
+// Main deck
+1 Evelyn Parker: Scheming Siren
+1 Misty Olszewski: Mender of Broken Spirits
+2 Valentino Guerrera
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+1 Screw: Lovelorn Fool
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Trust No One
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+2 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Rita Wheeler: No Stupid Questions
+# side: 2 Modded Kusanagi
+# side: 3 Detonate

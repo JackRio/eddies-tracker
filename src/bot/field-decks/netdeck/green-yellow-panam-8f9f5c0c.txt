@@ -1,0 +1,28 @@
+# Green/Yellow Panam - by EviLevi (netdeck.gg 8f9f5c0c-c956-41b9-9f51-b7aed0426a3d, 0 likes, 2 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Maelstrom Goons
+3 Hanako Arasaka: In a Gilded Cage
+2 Heywood Ripperdoc
+2 Jackie Welles: Ride or Die Choom
+2 Panam Palmer: Strength Through Family
+3 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+3 Mandibular Upgrade
+3 Riot Shield
+2 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Afterparty at Lizzie's
+3 Fool on the Hill
+3 Wild in the Streets
+2 (Don't Fear) The Reaper

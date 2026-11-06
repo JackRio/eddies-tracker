@@ -1,0 +1,23 @@
+# Two of a Kind - by Seananigans (netdeck.gg 6e19d343-1ee3-42d0-8cf8-6c8b0820056d, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Muamar Reyes: El Capitán
+1 Padre: Man of the Cross
+
+// Main deck
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+3 Caliber: Totentanz's Top Dog
+3 MaxTac AV
+2 Jackie Welles: Ride or Die Choom
+3 Sandayu Oda: Hanako's Guardian
+3 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Zetatech Berserk
+3 Peace Offering
+3 Corporate Surveillance
+3 Fool on the Hill
+2 The Heist

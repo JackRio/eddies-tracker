@@ -1,0 +1,29 @@
+# We go Bur - by The_Legion999 (netdeck.gg 6d2c9386-8862-44b1-ad9e-13024d8108db, 0 likes, 2 views, updated 2026-09-12)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Secondhand Bombus
+2 Delamain: Rideshare AI
+2 Dexter DeShawn: One Last Chance
+2 Mox Inciters
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+2 Afterparty at Lizzie's
+2 Floor It
+2 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Nocturne OP55 N1
+2 Unlikely Bond

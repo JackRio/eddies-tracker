@@ -1,0 +1,23 @@
+# BBR Braindance - by ariel (netdeck.gg e6d991e1-654c-4f20-a891-4b577c6ff056, 0 likes, 6 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Delamain: Rideshare AI
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Placide: Voodoo Sentinel
+3 All is Lost
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+2 Towerfall

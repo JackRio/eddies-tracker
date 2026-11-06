@@ -1,0 +1,26 @@
+# THE SMASHING MACHINE - by theRoist (netdeck.gg 7847a4aa-0d02-4910-bf0d-3ca25378a536, 0 likes, 1 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 MaxTac Suppression Team
+2 Trauma Team Operatives
+1 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+1 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+1 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+1 Live with the Aftermath

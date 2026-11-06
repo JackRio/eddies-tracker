@@ -1,0 +1,31 @@
+# GGR - Saka Reaper - by Nomatic_Kiwi (netdeck.gg b30fe7e7-d215-4dd6-b54c-e8fe5afc314c, 0 likes, 17 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Valentino Street Racer
+2 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+3 Minotaur
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+1 Riot Shield
+3 Satori: Sword of Saburo
+1 Detonate
+2 Peace Offering
+3 Synapse Burnout
+1 Over the Edge
+3 Memory Relapse
+2 Shattered Memories
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 3 Royce: Don't Call Me Simon
+# side: 2 Detonate

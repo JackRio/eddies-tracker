@@ -1,0 +1,26 @@
+# Peace Offering - by Spiero (netdeck.gg 6c55fdf8-eeef-4e11-a4a6-cd4c5bd1e510, 0 likes, 31 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 V: Streetkid
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+2 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+1 Panam Palmer: Strength Through Family
+1 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Memory Relapse
+3 Shattered Memories
+1 (Don't Fear) The Reaper

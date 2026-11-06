@@ -1,0 +1,32 @@
+# The Minimalist Gig - by ShoopGame (netdeck.gg 711bff01-7868-4bae-8bad-14650d3a3cb5, 0 likes, 48 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Mox Inciters
+2 Delamain Cab
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Floor It
+2 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+2 Unlikely Bond
+2 Les Élémens
+1 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Maelstrom Zealots
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Riot Shield

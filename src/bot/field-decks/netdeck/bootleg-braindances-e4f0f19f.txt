@@ -1,0 +1,26 @@
+# Bootleg Braindances - by PresidentSquee (netdeck.gg e4f0f19f-23b6-4b81-b346-d57ac75cca74, 0 likes, 4 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Streetkid
+
+// Main deck
+3 Swordwise Huscle
+3 Hacked Corpo
+2 Meredith Stout: Stone Cold Corpo
+3 Westbrook Netrunner
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Modded Muramasa
+1 MT0D12 Flathead
+3 NetWatch Netdriver
+3 All is Lost
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+3 Towerfall

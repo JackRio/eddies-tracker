@@ -1,0 +1,30 @@
+# Braindancer - by KayTMo (netdeck.gg 6dff9235-e60c-4e16-88c6-e9efe8547be6, 3 likes, 215 views, updated 2026-10-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Evelyn Parker: Scheming Siren
+2 Delamain: Rideshare AI
+2 Swordwise Huscle
+2 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+3 Mantis Blades
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+2 NetWatch Netdriver
+2 Industrial Assembly
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Les Élémens
+2 Towerfall

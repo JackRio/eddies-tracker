@@ -1,0 +1,24 @@
+# BBR Braindance - by ShatteringSkullz (netdeck.gg 0310ba71-9490-46ae-9894-84332fa4a2d8, 0 likes, 16 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 All is Lost
+2 Detonate
+3 Floor It
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+2 Shattered Memories
+3 Les Élémens
+1 Towerfall

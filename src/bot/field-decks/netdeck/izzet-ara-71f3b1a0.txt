@@ -1,0 +1,25 @@
+# Izzet Ara - by ? (netdeck.gg 71f3b1a0-13f1-425a-9d92-7d9188693fca, 0 likes, 7 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+2 Appetite for Destruction
+2 Bonnie and Clyde
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Carnage at the Colosseum

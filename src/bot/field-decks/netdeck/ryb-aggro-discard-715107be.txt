@@ -1,0 +1,23 @@
+# RYB Aggro/Discard - by gantas (netdeck.gg 715107be-5216-4457-8f1b-308aad770d77, 0 likes, 5 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Corporate Exile
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Swordwise Huscle
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Dying Night: V's Pistol
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Detonate
+2 Floor It
+3 The Heist

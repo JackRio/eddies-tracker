@@ -1,0 +1,26 @@
+# Embracing Power Starter Deck (Base) - by Vex (netdeck.gg f52a3d2d-3b3c-4008-9c65-747ed0091b48, 1 likes, 26 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Corpo Security
+3 Ruthless Lowlife
+2 Emergency Atlus
+2 Field Operator
+2 Swordwise Huscle
+2 Goro Takemura: Losing His Way
+2 Chrome Fang
+2 MaxTac AV
+2 Minotaur
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Industrial Assembly
+3 Corporate Surveillance
+2 Over the Edge
+2 Shattered Memories

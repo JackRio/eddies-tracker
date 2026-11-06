@@ -1,0 +1,24 @@
+# New Deck - by Deejayorr97 (netdeck.gg 3b15230a-af43-48a6-9196-7dcfd7d42c45, 0 likes, 4 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+2 Corpo Security
+2 Tyger's Whisper
+3 La Llorona: Ghost of the Past
+3 Meredith Stout: Stone Cold Corpo
+3 Royce: Don't Call Me Simon
+3 V: Roamer of the Badlands
+2 Saul Bright: Stormrider
+3 Mantis Blades
+3 Riot Shield
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Corporate Surveillance
+3 Fool on the Hill
+3 Memory Relapse
+2 (Don't Fear) The Reaper

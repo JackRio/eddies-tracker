@@ -1,0 +1,29 @@
+# Chrome junky - by kagari (netdeck.gg b3184ab3-bd32-4fd0-b25f-61725aa91e6f, 2 likes, 64 views, updated 2026-10-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 MaxTac AV
+2 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Corporate Surveillance
+3 Safety Override
+3 The Heist
+
+# Sideboard (not loaded):
+# side: 2 Viktor Vektor: Drop Your Illusions
+# side: 3 Heywood Ripperdoc
+# side: 2 Take Control

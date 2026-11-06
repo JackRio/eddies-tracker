@@ -1,0 +1,31 @@
+# Some Decks are more equal than others - by Rats T. Rats Dave (netdeck.gg d892c25c-2c86-4c59-aa18-38e3334a4fb0, 26 likes, 1099 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+3 La Llorona: Ghost of the Past
+2 MaxTac Squadron
+3 Valentino Street Racer
+2 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Sandayu Oda: Hanako's Guardian
+2 Mantis Blades
+2 Sandevistan
+3 All is Lost
+3 Peace Offering
+3 Fool on the Hill
+3 Memory Relapse
+2 Shattered Memories
+3 We Gotta Live Together
+2 Wild in the Streets
+
+# Sideboard (not loaded):
+# side: 2 Nadia: Fighting Through Grief
+# side: 2 MaxTac Heavy
+# side: 2 Riot Shield
+# side: 1 Wild in the Streets

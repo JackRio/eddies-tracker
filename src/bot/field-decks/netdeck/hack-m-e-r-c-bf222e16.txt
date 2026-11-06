@@ -1,0 +1,26 @@
+# .Hack//M.E.R.C. - by DJTriEdge (netdeck.gg bf222e16-3aa0-4a8d-a913-f333c4d37756, 0 likes, 15 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Panam Palmer: Nomad Cavalry
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+1 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 Riot Shield
+2 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Peace Offering
+2 Take Control
+2 Chrome Reverie
+2 Nocturne OP55 N1
+3 Memory Relapse
+2 We Gotta Live Together

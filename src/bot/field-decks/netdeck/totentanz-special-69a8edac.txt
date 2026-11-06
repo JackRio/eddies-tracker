@@ -1,0 +1,25 @@
+# Totentanz Special - by Nazraghoul (netdeck.gg 69a8edac-5c03-4c31-87c5-2aad860119d4, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Dexter DeShawn: One Last Chance
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+2 Detonate
+3 Industrial Assembly
+2 Cyberpsychosis
+2 Carnage at the Colosseum

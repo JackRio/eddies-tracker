@@ -1,0 +1,28 @@
+# Gear Control - by CagedCrusader (netdeck.gg 01b434d9-6a6d-4992-8cb2-a2d93f18c9a2, 0 likes, 18 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Jackie Welles: Ride or Die Choom
+3 Trauma Team Operatives
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+1 Gorilla Arms
+3 Peace Offering
+3 Synapse Burnout
+3 Live with the Aftermath
+3 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 3 Safety Override
+# side: 3 The Heist

@@ -1,0 +1,25 @@
+# Programs n Trash - by nolanxa (netdeck.gg be58750a-4241-4bce-8651-5370a445fe95, 0 likes, 2 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+2 Meredith Stout: Stone Cold Corpo
+1 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

@@ -1,0 +1,29 @@
+# Cyberpsycho Sasha - by Rats T. Rats Dave (netdeck.gg c4266c7b-f08f-46fd-b88d-d9f73d0b6039, 1 likes, 117 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Johnny Silverhand: Never Stop Fighting
+3 Octant
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Industrial Assembly
+3 Reboot Optics
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Japantown Jonin
+# side: 2 6th Street Recruits
+# side: 1 Nocturne OP55 N1
+# side: 2 Unlikely Bond

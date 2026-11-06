@@ -1,0 +1,31 @@
+# Small cost - by the__ryno (netdeck.gg b34eba3d-9a1b-4b1a-95ba-beeb327b27d5, 0 likes, 17 views, updated 2026-09-22)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Corpo Security
+3 Secondhand Bombus
+3 Tyger's Whisper
+2 Augmented Negotiators
+2 Emergency Atlus
+2 Maelstrom Goons
+3 MaxTac Squadron
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+2 Sandevistan
+2 Afterparty at Lizzie's
+2 Peace Offering
+1 Synapse Burnout
+2 Corporate Surveillance
+2 The Heist
+2 Cyberpsychosis
+1 Wild in the Streets

@@ -1,0 +1,34 @@
+# Rockers and braindances - by Saboteur 1230 (netdeck.gg c8046c7d-3517-44b1-b190-99a1fb5f96be, 0 likes, 32 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+
+// Main deck
+2 La Llorona: Ghost of the Past
+3 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Deadman Transmitter
+1 Afterparty at Lizzie's
+2 Detonate
+2 Industrial Assembly
+2 Appetite for Destruction
+2 Bonnie and Clyde
+2 Over the Edge
+1 Shattered Memories
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 La Llorona: Ghost of the Past
+# side: 1 Zetatech Faceplate
+# side: 1 Afterparty at Lizzie's
+# side: 1 Shattered Memories

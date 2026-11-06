@@ -1,0 +1,30 @@
+# GRY - Pre Beta Deck - by Stranger (netdeck.gg 4c2f70b5-8a49-48f5-8de1-0117a17342f4, 1 likes, 22 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Corpo Security
+2 Augmented Negotiators
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+2 Jackie Welles: Ride or Die Choom
+2 Minotaur
+2 Saul Bright: Stormrider
+2 Kiroshi Optics
+2 Mandibular Upgrade
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Zetatech Berserk
+3 All is Lost
+3 Detonate
+2 The Heist
+2 Cyberpsychosis
+2 Memory Relapse

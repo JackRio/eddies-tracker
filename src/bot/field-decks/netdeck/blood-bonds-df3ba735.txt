@@ -1,0 +1,23 @@
+# Blood Bonds - by Khalt (netdeck.gg df3ba735-3628-4f66-9670-c81f386c0446, 0 likes, 4 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Field Operator
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+2 Goro Takemura: Losing His Way
+3 Chrome Fang
+3 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Sandevistan
+3 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Take Control
+2 Memory Relapse

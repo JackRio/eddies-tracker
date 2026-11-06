@@ -1,0 +1,28 @@
+# G G R Royce - by ? (netdeck.gg d18413a4-b83e-4cf1-84fb-a31116321f90, 0 likes, 36 views, updated 2026-10-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Corpo Security
+2 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+2 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Sandevistan
+2 Overwatch: Panam's Gift
+2 Detonate
+2 Corporate Surveillance
+2 Fool on the Hill
+2 Take Control
+2 We Gotta Live Together
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

@@ -1,0 +1,28 @@
+# Gears 4 Years - by ? (netdeck.gg 1680ac1a-a750-4157-8be3-a8d6036c698c, 0 likes, 11 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Jackie Welles: Mama's Favorite
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+1 La Llorona: Ghost of the Past
+2 Gilded Matón
+3 Meredith Stout: Stone Cold Corpo
+2 Viktor Vektor: Drop Your Illusions
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+2 Zetatech Berserk
+2 All is Lost
+2 Detonate
+3 The Heist
+2 Cyberpsychosis
+2 Over the Edge

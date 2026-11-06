@@ -1,0 +1,26 @@
+# PUNK ROCK - by Mr. Thacker (netdeck.gg f8ec5a46-0b34-4b7f-9865-1a5ef503603f, 0 likes, 1 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Ruthless Lowlife
+2 La Llorona: Ghost of the Past
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Jackie Welles: Ride or Die Choom
+2 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Deadman Transmitter
+3 All is Lost
+1 Detonate
+3 Industrial Assembly
+2 Carnage at the Colosseum

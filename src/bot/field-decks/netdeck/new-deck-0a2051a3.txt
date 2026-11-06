@@ -1,0 +1,26 @@
+# New Deck - by Dowg_of_war (netdeck.gg 0a2051a3-a679-47f1-8215-ed2c5e6d1233, 0 likes, 2 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Jackie Welles: Pour One Out For Me
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Rockn' Rockerboy
+2 Mandibular Upgrade
+2 Adrenaline Converter
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+2 Safety Override
+3 The Heist
+2 Cyberpsychosis

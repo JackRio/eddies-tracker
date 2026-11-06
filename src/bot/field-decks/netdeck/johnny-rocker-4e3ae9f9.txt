@@ -1,0 +1,24 @@
+# Johnny Rocker - by Aknos (netdeck.gg 4e3ae9f9-5c51-4bef-87c4-3d495308c5a2, 0 likes, 14 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Satori: Sword of Saburo
+1 Zetatech Faceplate
+1 Deadman Transmitter
+3 Afterparty at Lizzie's
+3 Industrial Assembly
+3 Appetite for Destruction

@@ -1,0 +1,25 @@
+# dimir midrange - by Zykles (netdeck.gg ab5f04bb-b322-44ab-8241-79dd5757f919, 0 likes, 5 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+1 Field Operator
+3 Lizzy Wizzy: Delicate Weapon
+2 Placide: Voodoo Sentinel
+1 Riot Shield
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Pyramid Song
+3 Memory Relapse
+2 Les Élémens
+2 Towerfall

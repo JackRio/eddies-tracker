@@ -1,0 +1,33 @@
+# Deck Drawin - by Slimeyfwiend (netdeck.gg 0885119c-31cd-4999-8abd-9dfb42c828ac, 0 likes, 22 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+3 Maelstrom Goons
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Offduty Malfini
+2 T-Bug: Amateur Philosopher
+1 Caliber: Totentanz's Top Dog
+3 MaxTac Suppression Team
+1 Rockn' Rockerboy
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+1 Adam Smasher: Metal Over Meat
+1 Kiroshi Optics
+1 Mandibular Upgrade
+1 Adrenaline Converter
+3 Zetatech Faceplate
+2 Safety Override
+3 The Heist
+1 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

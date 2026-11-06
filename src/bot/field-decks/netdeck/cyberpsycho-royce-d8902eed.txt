@@ -1,0 +1,23 @@
+# Cyberpsycho Royce - by Auren (netdeck.gg d8902eed-fa21-4bae-b4f2-be2949ce4e85, 0 likes, 0 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+2 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 The Heist
+3 Cyberpsychosis
+2 Bootleg Black Sapphire Show

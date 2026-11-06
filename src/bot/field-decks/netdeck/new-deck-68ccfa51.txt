@@ -1,0 +1,27 @@
+# New Deck - by TCGKing (netdeck.gg 68ccfa51-810a-41e4-a2cb-7f93e34e8f96, 0 likes, 4 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Yorinobu Arasaka: Embracing Destruction
+1 Goro Takemura: Hands Unclean
+
+// Main deck
+3 Ruthless Lowlife
+2 Valentino Street Racer
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+2 V: Roamer of the Badlands
+2 Johnny Silverhand: Never Stop Fighting
+2 Minotaur
+3 Mantis Blades
+2 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Over the Edge
+2 Shattered Memories
+2 Carnage at the Colosseum

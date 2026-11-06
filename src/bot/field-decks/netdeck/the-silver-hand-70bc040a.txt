@@ -1,0 +1,28 @@
+# The Silver Hand - by Unpaidd (netdeck.gg 70bc040a-99eb-427e-8c33-c986d3dede8b, 1 likes, 29 views, updated 2026-10-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Secondhand Bombus
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+3 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Dexter DeShawn: One Last Chance
+# side: 2 MaxTac Suppression Team
+# side: 3 Industrial Assembly

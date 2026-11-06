@@ -1,0 +1,24 @@
+# RareTotem's Regional Deck (Mark 1) - by RareTotem (netdeck.gg 57634358-ed1f-4cd3-a9c2-48313f88e70f, 2 likes, 127 views, updated 2026-10-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+1 Valentino Street Racer
+2 Pepe Najarro: Working Doubles
+1 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 Floor It
+3 Trust No One
+3 Take Control
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Memory Relapse
+3 Les Élémens
+3 Towerfall

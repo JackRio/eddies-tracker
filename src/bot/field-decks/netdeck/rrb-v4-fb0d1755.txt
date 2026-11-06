@@ -1,0 +1,31 @@
+# RRB V4 - by N-SyKlope (netdeck.gg fb0d1755-81f1-4c3d-9d12-153f4b09a21a, 1 likes, 10 views, updated 2026-11-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Evelyn Parker: Beautiful Enigma
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+2 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+1 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 NetWatch Netdriver
+3 Floor It
+2 Industrial Assembly
+3 Bonnie and Clyde
+3 Nocturne OP55 N1
+2 Over the Edge
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Placide: Voodoo Sentinel
+# side: 2 Detonate
+# side: 2 Reboot Optics

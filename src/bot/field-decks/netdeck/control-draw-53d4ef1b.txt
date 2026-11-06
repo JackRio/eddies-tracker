@@ -1,0 +1,24 @@
+# Control / Draw - by o3o (netdeck.gg 53d4ef1b-927f-4622-b405-89b0278b2c32, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Jacked-In Voodoo Boy
+3 Mox Inciters
+3 Pepe Najarro: Working Doubles
+2 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

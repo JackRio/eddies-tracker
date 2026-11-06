@@ -1,0 +1,30 @@
+# New Deck - by GoblinTrash (netdeck.gg 1ccb2202-5594-4302-9ee8-855c4a4b8f33, 1 likes, 14 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+
+// Main deck
+2 Field Operator
+3 La Llorona: Ghost of the Past
+2 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+2 Chrome Fang
+2 Sandayu Oda: Hanako's Guardian
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+3 Peace Offering
+2 Synapse Burnout
+3 Corporate Surveillance
+2 Memory Relapse
+3 Wild in the Streets
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Riot Shield
+# side: 2 Detonate
+# side: 3 Take Control

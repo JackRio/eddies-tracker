@@ -1,0 +1,24 @@
+# If I had good pulls...... - by TBrine (netdeck.gg c0e6aa97-65bf-4fe0-8349-5a53ee519fd0, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Sasha Yakovleva: Won't Let You Down
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Misty Olszewski: Mender of Broken Spirits
+2 Valentino Guerrera
+1 El Sombrerón: La Venganza Lenta
+3 Rogue Amendiares: Queen of the Afterlife
+1 Screw: Lovelorn Fool
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Detonate
+3 Floor It
+3 Reboot Optics
+3 Appetite for Destruction
+3 Chrome Reverie
+3 Gunpoint Diplomacy

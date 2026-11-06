@@ -1,0 +1,29 @@
+# blue red program control max cards - by JonB25 (netdeck.gg 75621db3-786d-47f1-ac4e-f607bfcd5047, 0 likes, 12 views, updated 2026-10-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+1 Misty Olszewski: Mender of Broken Spirits
+1 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Westbrook Netrunner
+3 Chrome Fang
+3 Lizzy Wizzy: Delicate Weapon
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+1 Over the Edge
+3 Pyramid Song
+2 Shattered Memories
+2 Towerfall

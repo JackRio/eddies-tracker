@@ -1,0 +1,32 @@
+# Hold Me Gear - by ShoopGame (netdeck.gg 2e99424e-5793-4ab5-b6ce-9841e9675bad, 0 likes, 25 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Augmented Negotiators
+2 Maelstrom Goons
+2 Valentino Street Racer
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Rockn' Rockerboy
+2 Alt Cunningham: Mother of Daemons
+1 Saul Bright: Stormrider
+3 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Safety Override
+2 The Heist
+3 Live with the Aftermath
+3 Memory Relapse
+2 Bootleg Black Sapphire Show
+2 We Gotta Live Together
+
+# Sideboard (not loaded):
+# side: 2 Caliber: Totentanz's Top Dog
+# side: 2 MaxTac Suppression Team
+# side: 1 Saul Bright: Stormrider
+# side: 2 The Relic: Experimental Biochip

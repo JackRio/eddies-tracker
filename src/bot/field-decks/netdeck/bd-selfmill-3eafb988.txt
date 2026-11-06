@@ -1,0 +1,26 @@
+# BD Selfmill - by Laufh (netdeck.gg 3eafb988-8707-4428-9024-4d5d0ff55c60, 0 likes, 4 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+2 Misty Olszewski: Mender of Broken Spirits
+2 Hacked Corpo
+3 Meredith Stout: Stone Cold Corpo
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Screw: Lovelorn Fool
+2 Placide: Voodoo Sentinel
+3 All is Lost
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+2 Shattered Memories
+1 Towerfall

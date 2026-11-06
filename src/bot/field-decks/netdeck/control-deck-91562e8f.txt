@@ -1,0 +1,32 @@
+# Control Deck? - by Sheaf (netdeck.gg 91562e8f-666b-424f-97a8-b71677971a2f, 0 likes, 47 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Jacked-In Voodoo Boy
+2 Maelstrom Zealots
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Pyramid Song
+2 Memory Relapse
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Riot Shield
+# side: 1 NetWatch Netdriver
+# side: 2 Synapse Burnout
+# side: 2 Reboot Optics

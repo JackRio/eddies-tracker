@@ -1,0 +1,29 @@
+# RRB Aggro BDs - by ManWasBrother (netdeck.gg 495f319d-6b48-4282-b85f-db8a3f8c6b0d, 0 likes, 45 views, updated 2026-10-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 La Llorona: Ghost of the Past
+2 6th Street Recruits
+2 Hacked Corpo
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+1 V: Roamer of the Badlands
+2 Animals Wrecker
+3 Johnny Silverhand: Never Stop Fighting
+2 Modded Kusanagi
+3 Tetratronic Rippler
+2 Dying Night: V's Pistol
+3 Deadman Transmitter
+3 NetWatch Netdriver
+3 Industrial Assembly
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Chrome Reverie
+2 Nocturne OP55 N1
+2 Shattered Memories
+3 Carnage at the Colosseum

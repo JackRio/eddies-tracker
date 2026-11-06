@@ -1,0 +1,23 @@
+# Mirror Breaker V - by RootsOfOneTree (netdeck.gg 1b3ce4e7-ea3f-4b42-8e88-f3d850a1045d, 0 likes, 8 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Delamain: Rideshare AI
+3 Meredith Stout: Stone Cold Corpo
+2 MT0D12 Flathead
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Mantis Blades
+3 Dying Night: V's Pistol
+3 NetWatch Netdriver
+3 Trust No One
+3 Three Mouths, One Desire
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

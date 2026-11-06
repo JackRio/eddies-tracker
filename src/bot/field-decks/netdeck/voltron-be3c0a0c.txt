@@ -1,0 +1,25 @@
+# Voltron - by LOTUS1019 (netdeck.gg be3c0a0c-a97e-4891-b35c-8a60cd7399d2, 0 likes, 7 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Royce: Psycho on the Edge
+1 Rogue Amendiares: Preem Solo
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Japantown Jonin
+3 Secondhand Bombus
+3 La Llorona: Ghost of the Past
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 T-Bug: Amateur Philosopher
+3 Royce: Don't Call Me Simon
+3 Animals Wrecker
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Deadman Transmitter
+3 Detonate
+3 The Heist
+3 Bonnie and Clyde
+3 Cyberpsychosis
+3 Shattered Memories

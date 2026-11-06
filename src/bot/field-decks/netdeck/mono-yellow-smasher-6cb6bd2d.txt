@@ -1,0 +1,24 @@
+# Mono Yellow Smasher - by Play or Draw Surprise (netdeck.gg 6cb6bd2d-8d56-436b-9e6b-59c0d4ae085e, 0 likes, 39 views, updated 2026-10-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Muamar Reyes: El Capitán
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Hanako Arasaka: In a Gilded Cage
+2 Heywood Ripperdoc
+2 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

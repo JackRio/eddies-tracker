@@ -1,0 +1,23 @@
+# Mono red - by Babasrian (netdeck.gg 223039f4-aa9f-4f91-a480-74d361082bc9, 0 likes, 2 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 V: Streetkid
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Japantown Jonin
+3 Ruthless Lowlife
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 El Sombrerón: La Venganza Lenta
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+1 All is Lost
+3 Appetite for Destruction
+3 Over the Edge
+3 Gunpoint Diplomacy
+3 Shattered Memories
+3 Carnage at the Colosseum

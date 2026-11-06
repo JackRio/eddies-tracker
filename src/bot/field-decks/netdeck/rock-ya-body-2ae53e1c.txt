@@ -1,0 +1,24 @@
+# Rock ya body - by ? (netdeck.gg 2ae53e1c-028e-4a4e-b1fa-6221474f35d9, 0 likes, 23 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+2 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+3 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Detonate
+3 Industrial Assembly
+3 Bonnie and Clyde
+3 Over the Edge
+2 Gunpoint Diplomacy
+3 Carnage at the Colosseum

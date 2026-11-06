@@ -1,0 +1,24 @@
+# New Deck - by LOTUS1019 (netdeck.gg 2b883613-fdf8-4e7b-bdf5-10b9dc60a7c2, 0 likes, 9 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+2 T-Bug: Amateur Philosopher
+3 MaxTac Suppression Team
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 NetWatch Netdriver
+3 Afterparty at Lizzie's
+3 The Heist
+3 Les Élémens
+3 Towerfall

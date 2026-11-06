@@ -1,0 +1,28 @@
+# Not your Mama's Netrunners - by Rats T. Rats Dave (netdeck.gg 22763de6-33fe-4a5b-824a-702f1fbc892a, 0 likes, 65 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+3 Ruthless Lowlife
+2 Field Operator
+3 Pacifica Netrunner
+3 Chrome Fang
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Appetite for Destruction
+3 Bonnie and Clyde
+3 Gunpoint Diplomacy
+3 Memory Relapse
+
+# Sideboard (not loaded):
+# side: 2 All is Lost
+# side: 3 Corporate Surveillance
+# side: 2 Carnage at the Colosseum

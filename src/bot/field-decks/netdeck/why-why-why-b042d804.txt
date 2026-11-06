@@ -1,0 +1,30 @@
+# Why Why Why - by indysint (netdeck.gg b042d804-cdaa-41bd-9503-75010ec0e89e, 0 likes, 22 views, updated 2026-11-02)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 Jackie Welles: Ride or Die Choom
+2 Trauma Team Operatives
+2 Adam Smasher: Metal Over Meat
+2 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+3 The Relic: Experimental Biochip
+2 Safety Override
+3 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Offduty Malfini
+# side: 3 Caliber: Totentanz's Top Dog
+# side: 2 Heywood Ripperdoc

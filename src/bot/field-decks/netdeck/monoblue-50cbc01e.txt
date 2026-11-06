@@ -1,0 +1,31 @@
+# MonoBlue - by ListlessScholar (netdeck.gg 50cbc01e-dac7-43e3-9bb8-55043db76272, 2 likes, 38 views, updated 2026-10-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Delamain: Rideshare AI
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+1 Judy Álvarez: Nothing to Doubt
+2 Modded Kusanagi
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 1 Maman Brigitte: Spirit of Death
+# side: 2 Placide: Voodoo Sentinel
+# side: 1 Floor It
+# side: 3 Unlikely Bond

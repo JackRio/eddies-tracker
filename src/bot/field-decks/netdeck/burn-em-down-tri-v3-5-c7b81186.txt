@@ -1,0 +1,23 @@
+# Burn em Down Tri V3.5 - by Shadai (netdeck.gg c7b81186-cc1d-4e91-80cf-2e7077da60b7, 1 likes, 7 views, updated 2026-09-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Jackie Welles: Mama's Favorite
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 Pepe Najarro: Working Doubles
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Detonate
+3 Industrial Assembly
+3 Synapse Burnout
+3 Corporate Surveillance
+2 Memory Relapse

@@ -1,0 +1,23 @@
+# Secure Your Soul Smasher - by darksungwen (netdeck.gg b2b67ac0-e42f-4e8c-817d-f1d0e3250da2, 0 likes, 4 views, updated 2026-09-30)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Trauma Team Operatives
+2 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

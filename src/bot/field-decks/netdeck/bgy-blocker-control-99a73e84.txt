@@ -1,0 +1,23 @@
+# BGY Blocker Control - by Gorarath (netdeck.gg 99a73e84-9590-4e44-b037-c19a8e8c33e6, 0 likes, 2 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Goro Takemura: Vengeful Bodyguard
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Corpo Security
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Rogue Amendiares: Queen of the Afterlife
+3 Afterparty at Lizzie's
+2 Floor It
+3 Peace Offering
+3 Trust No One
+3 Reboot Optics
+3 Unlikely Bond
+3 We Gotta Live Together

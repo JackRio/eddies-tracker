@@ -1,0 +1,25 @@
+# Rockerboy Riot - by NatCat (netdeck.gg 14a3e7ab-20e6-423b-a698-0eba5ab94a72, 0 likes, 3 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Mox Inciters
+3 Kerry Eurodyne: The Last Rockerboy
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Rockn' Rockerboy
+2 Rogue Amendiares: Queen of the Afterlife
+2 V: Roamer of the Badlands
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+2 Dying Night: V's Pistol
+2 Zetatech Faceplate
+3 Detonate
+3 Industrial Assembly
+3 Nocturne OP55 N1
+3 Over the Edge
+2 Shattered Memories

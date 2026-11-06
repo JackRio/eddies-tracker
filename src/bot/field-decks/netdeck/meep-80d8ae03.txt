@@ -1,0 +1,28 @@
+# Meep - by XSV (netdeck.gg 80d8ae03-6146-458b-af07-4cab506b9188, 0 likes, 97 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Sketchy Ripper
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+3 Kiroshi Optics
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Afterparty at Lizzie's
+2 Safety Override
+3 Live with the Aftermath
+2 Shattered Memories
+
+# Sideboard (not loaded):
+# side: 2 MaxTac Suppression Team
+# side: 3 Mandibular Upgrade
+# side: 2 Detonate

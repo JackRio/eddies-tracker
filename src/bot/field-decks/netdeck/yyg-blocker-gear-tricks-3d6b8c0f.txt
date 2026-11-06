@@ -1,0 +1,27 @@
+# YYG Blocker/ Gear Tricks - by sawft_pawz (netdeck.gg 3d6b8c0f-3977-48a6-8b1c-9bcd62e4450c, 0 likes, 12 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Tyger's Whisper
+3 Augmented Negotiators
+3 Emergency Atlus
+3 Rockn' Rockerboy
+1 Nadia: Fighting Through Grief
+1 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Riot Shield
+3 Zetatech Faceplate
+3 Peace Offering
+3 Synapse Burnout
+2 Safety Override
+2 Take Control
+2 Memory Relapse
+3 Bootleg Black Sapphire Show
+1 We Gotta Live Together

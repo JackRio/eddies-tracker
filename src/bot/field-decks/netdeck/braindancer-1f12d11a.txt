@@ -1,0 +1,26 @@
+# Braindancer - by Ghostryder200 (netdeck.gg 1f12d11a-1674-4187-bbd9-8cb0bf211306, 1 likes, 30 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Misty Olszewski: Mender of Broken Spirits
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 Placide: Voodoo Sentinel
+1 Mantis Blades
+2 Tetratronic Rippler
+2 NetWatch Netdriver
+2 All is Lost
+2 Floor It
+3 Trust No One
+3 Chrome Reverie
+2 Nocturne OP55 N1
+3 Pyramid Song
+1 Les Élémens
+3 Towerfall

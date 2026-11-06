@@ -1,0 +1,26 @@
+# New Deck - by Ang_slasha (netdeck.gg b35debb0-59ff-483c-8ae5-4b89d10afa77, 0 likes, 29 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+3 Swordwise Huscle
+3 Rita Wheeler: No Stupid Questions
+3 Mantis Blades
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 Satori: Sword of Saburo
+3 Floor It
+2 Industrial Assembly
+2 Trust No One
+3 Reboot Optics
+1 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+1 Shattered Memories

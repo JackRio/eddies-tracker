@@ -1,0 +1,39 @@
+# Go Wide Goons - by ImTyrd (netdeck.gg 8fa4ef1d-da96-4bb8-9c25-98ddaada76e0, 2 likes, 48 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+1 Corpo Security
+1 Secondhand Bombus
+2 Sketchy Ripper
+1 Tyger's Whisper
+2 Augmented Negotiators
+2 Emergency Atlus
+1 Field Operator
+2 Maelstrom Goons
+2 Valentino Street Racer
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 Maelstrom Zealots
+1 Viktor Vektor: Drop Your Illusions
+1 Heywood Ripperdoc
+1 Alt Cunningham: Mother of Daemons
+1 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Riot Shield
+2 Zetatech Faceplate
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Zetatech Berserk
+1 Corporate Surveillance
+1 Safety Override
+2 The Heist
+1 Cyberpsychosis
+1 Live with the Aftermath
+2 We Gotta Live Together

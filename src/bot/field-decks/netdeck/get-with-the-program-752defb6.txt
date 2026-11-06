@@ -1,0 +1,29 @@
+# Get with the program - by icebearw (netdeck.gg 752defb6-87da-4b48-a23d-b2eeccaa3504, 0 likes, 17 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+2 Mox Inciters
+2 Rita Wheeler: No Stupid Questions
+2 Westbrook Netrunner
+2 Lizzy Wizzy: Delicate Weapon
+2 Modded Muramasa
+2 MT0D12 Flathead
+2 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+2 Tetratronic Rippler
+2 Dying Night: V's Pistol
+2 Floor It
+2 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Unlikely Bond
+2 Les Élémens
+2 Towerfall

@@ -1,0 +1,32 @@
+# GGB Sniper - by Bromyos (netdeck.gg a58e08c5-bf08-4635-b962-e41fd48e0f73, 0 likes, 36 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+1 Riding Nomad
+2 Nadia: Fighting Through Grief
+1 Riot Shield
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Corporate Surveillance
+3 Fool on the Hill
+2 Take Control
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Memory Relapse
+1 Wild in the Streets
+3 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 2 Riding Nomad
+# side: 1 Modded Kusanagi
+# side: 2 Placide: Voodoo Sentinel
+# side: 2 Riot Shield

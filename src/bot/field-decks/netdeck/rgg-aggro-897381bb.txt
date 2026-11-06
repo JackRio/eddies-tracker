@@ -1,0 +1,25 @@
+# RGG Aggro - by Trujillobr1 (netdeck.gg 897381bb-068e-4451-9802-1822385e4f1c, 0 likes, 2 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Padre: Man of the Cross
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Valentino Street Racer
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Chrome Fang
+3 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+2 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+3 Fool on the Hill
+2 Wild in the Streets
+2 (Don't Fear) The Reaper

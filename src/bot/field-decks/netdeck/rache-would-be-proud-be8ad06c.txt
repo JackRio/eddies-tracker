@@ -1,0 +1,28 @@
+# Rache would be proud! - by TBrine (netdeck.gg be8ad06c-fd7f-45ae-8c77-a0dec1d6335d, 0 likes, 0 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Misty Olszewski: Mender of Broken Spirits
+1 Delamain Cab
+3 Hacked Corpo
+3 Lizzy Wizzy: Delicate Weapon
+1 Maman Brigitte: Spirit of Death
+3 Modded Muramasa
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+1 Placide: Voodoo Sentinel
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+3 Towerfall

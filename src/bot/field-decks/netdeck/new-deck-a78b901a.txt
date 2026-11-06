@@ -1,0 +1,30 @@
+# New Deck - by AzureZombie (netdeck.gg a78b901a-4a89-403e-8886-da7385ce83d7, 0 likes, 42 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+
+// Main deck
+2 MaxTac Squadron
+2 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+3 Panam Palmer: Strength Through Family
+2 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+3 Tetratronic Rippler
+3 Dying Night: V's Pistol
+2 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+2 Floor It
+3 Chrome Reverie
+3 Nocturne OP55 N1
+2 Memory Relapse
+2 (Don't Fear) The Reaper
+
+# Sideboard (not loaded):
+# side: 3 MaxTac AV
+# side: 2 Peace Offering
+# side: 2 Trust No One

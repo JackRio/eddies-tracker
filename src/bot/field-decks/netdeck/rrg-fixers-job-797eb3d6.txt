@@ -1,0 +1,35 @@
+# RRG - Fixers Job - by Nomatic_Kiwi (netdeck.gg 797eb3d6-aafd-41c0-8ba3-80a5c61cc537, 0 likes, 33 views, updated 2026-10-29)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+1 Field Operator
+1 Valentino Street Racer
+2 6th Street Recruits
+2 Maelstrom Zealots
+3 Pepe Najarro: Working Doubles
+1 Royce: Don't Call Me Simon
+2 Animals Wrecker
+1 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+1 Industrial Assembly
+2 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 1 Animals Wrecker
+# side: 2 Nadia: Fighting Through Grief
+# side: 1 Detonate
+# side: 1 Synapse Burnout

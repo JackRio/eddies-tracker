@@ -1,0 +1,25 @@
+# Malestrom Gear - by Highzombieking (netdeck.gg 09ca7823-bc13-4d41-8dc5-93100f783545, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+2 Swordwise Huscle
+2 Hanako Arasaka: In a Gilded Cage
+3 Meredith Stout: Stone Cold Corpo
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 The Heist
+2 Live with the Aftermath
+3 Bootleg Black Sapphire Show

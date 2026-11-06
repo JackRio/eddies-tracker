@@ -1,0 +1,31 @@
+# Fireball - by LemonAid (netdeck.gg eaefc982-58ef-44ce-8137-d40408d68510, 0 likes, 0 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Padre: Man of the Cross
+1 V: Streetkid
+
+// Main deck
+2 Corpo Security
+2 La Llorona: Ghost of the Past
+2 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 V: Roamer of the Badlands
+2 Animals Wrecker
+3 Johnny Silverhand: Never Stop Fighting
+1 Minotaur
+2 Saul Bright: Stormrider
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+2 All is Lost
+3 Industrial Assembly
+3 Peace Offering
+2 Synapse Burnout
+2 Take Control
+2 Bonnie and Clyde
+3 Memory Relapse

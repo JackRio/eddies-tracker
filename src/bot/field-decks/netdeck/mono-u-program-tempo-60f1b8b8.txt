@@ -1,0 +1,29 @@
+# Mono U Program Tempo - by Sean (netdeck.gg 60f1b8b8-ad0d-4fbc-9d76-61f8dcb779ac, 0 likes, 48 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Hacked Corpo
+3 Psycho Squad
+3 Maman Brigitte: Spirit of Death
+3 Rogue Amendiares: Queen of the Afterlife
+1 Modded Kusanagi
+1 Placide: Voodoo Sentinel
+2 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 2 Westbrook Netrunner
+# side: 2 Lizzy Wizzy: Delicate Weapon
+# side: 3 Les Élémens

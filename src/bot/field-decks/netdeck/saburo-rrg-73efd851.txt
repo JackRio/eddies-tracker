@@ -1,0 +1,31 @@
+# Saburo RRG - by Pelikn (netdeck.gg 73efd851-f562-4d10-89f9-d7c4724587d9, 0 likes, 66 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 6th Street Recruits
+2 Maelstrom Zealots
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+1 Animals Wrecker
+2 Johnny Silverhand: Never Stop Fighting
+1 Minotaur
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Detonate
+3 Peace Offering
+2 Synapse Burnout
+3 Bonnie and Clyde
+3 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Valentino Street Racer
+# side: 3 Royce: Don't Call Me Simon
+# side: 2 Arasaka Emergency Radioport

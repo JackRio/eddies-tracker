@@ -1,0 +1,23 @@
+# New Deck - by LewisW94 (netdeck.gg f5290b54-3455-4d41-a38e-3cc96735d126, 0 likes, 21 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+2 Caliber: Totentanz's Top Dog
+3 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 Afterparty at Lizzie's
+2 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath
+3 Nocturne OP55 N1
+3 Bootleg Black Sapphire Show

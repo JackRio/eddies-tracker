@@ -1,0 +1,29 @@
+# NC Legends - by icebearw (netdeck.gg 7dae8d77-b307-474b-860c-cbffaf370125, 0 likes, 7 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Hands Unclean
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Corpo Security
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Mox Inciters
+2 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+2 Rogue Amendiares: Queen of the Afterlife
+2 Trauma Team Operatives
+2 Mandibular Upgrade
+2 Dying Night: V's Pistol
+2 Riot Shield
+2 Zetatech Faceplate
+2 NetWatch Netdriver
+2 Zetatech Berserk
+2 Afterparty at Lizzie's
+2 Floor It
+2 Peace Offering
+2 Synapse Burnout
+2 Corporate Surveillance
+2 Reboot Optics

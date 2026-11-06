@@ -1,0 +1,25 @@
+# Pure Saka (RGG) - by ? (netdeck.gg 6b3ac532-8b21-4ce5-b109-44e1d996db3e, 0 likes, 2 views, updated 2026-09-09)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Goro Takemura: Losing His Way
+2 Meredith Stout: Stone Cold Corpo
+2 Chrome Fang
+2 Nadia: Fighting Through Grief
+3 Sandayu Oda: Hanako's Guardian
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Industrial Assembly
+3 Peace Offering
+3 Corporate Surveillance
+3 Over the Edge
+2 Shattered Memories
+2 (Don't Fear) The Reaper

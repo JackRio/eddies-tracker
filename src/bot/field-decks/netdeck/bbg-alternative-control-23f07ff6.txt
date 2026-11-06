@@ -1,0 +1,27 @@
+# BBG - ALTernative Control - by d3rivr (netdeck.gg 23f07ff6-5492-496d-b09a-834487f91adb, 0 likes, 16 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Pepe Najarro: Working Doubles
+2 Psycho Squad
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+2 MT0D12 Flathead
+2 Placide: Voodoo Sentinel
+3 Floor It
+2 Peace Offering
+2 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+2 Unlikely Bond
+2 Les Élémens

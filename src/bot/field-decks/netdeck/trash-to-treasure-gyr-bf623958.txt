@@ -1,0 +1,23 @@
+# Trash to Treasure GYR - by ? (netdeck.gg bf623958-ba9e-4e9f-b176-74eeabf5771d, 0 likes, 1 views, updated 2026-09-28)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Augmented Negotiators
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+2 Screw: Lovelorn Fool
+3 Trauma Team Operatives
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 All is Lost
+3 The Heist
+3 Cyberpsychosis
+2 Shattered Memories

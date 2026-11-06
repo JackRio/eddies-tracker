@@ -1,0 +1,32 @@
+# Yyr gears - by Saboteur 1230 (netdeck.gg 200919fd-b8fd-4eb9-a965-42e1daf57c9e, 1 likes, 184 views, updated 2026-10-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+2 Maelstrom Goons
+2 Swordwise Huscle
+2 Gilded Matón
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac Suppression Team
+1 Viktor Vektor: Drop Your Illusions
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+1 The Relic: Experimental Biochip
+2 Detonate
+2 The Heist
+2 Cyberpsychosis
+
+# Sideboard (not loaded):
+# side: 2 Viktor Vektor: You Might Feel a Little Pinch
+# side: 1 Alt Cunningham: Mother of Daemons
+# side: 2 Safety Override
+# side: 2 Live with the Aftermath

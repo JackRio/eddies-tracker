@@ -1,0 +1,27 @@
+# Posers, No Cred - by Lorchie (netdeck.gg bd03f56e-7d38-4382-b475-eecf95a4a23c, 0 likes, 3 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+2 Corpo Security
+2 Evelyn Parker: Scheming Siren
+2 Mox Inciters
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+2 MaxTac AV
+3 MT0D12 Flathead
+1 Placide: Voodoo Sentinel
+2 Dying Night: V's Pistol
+2 Riot Shield
+3 Floor It
+3 Synapse Burnout
+3 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+2 Pyramid Song
+2 Memory Relapse
+2 Towerfall

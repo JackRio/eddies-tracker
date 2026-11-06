@@ -1,0 +1,24 @@
+# Mono blue Judy - by DohnDohnson (netdeck.gg 29619b48-09c1-48d9-8740-33ee685233e1, 0 likes, 0 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+3 Rogue Amendiares: Queen of the Afterlife
+2 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+1 Chrome Reverie
+3 Nocturne OP55 N1
+1 Pyramid Song
+3 Towerfall

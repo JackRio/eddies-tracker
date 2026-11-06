@@ -1,0 +1,23 @@
+# Yellow+Placide - by 5elMic (netdeck.gg 126a88bc-ea50-4140-add4-d5a943caeb8b, 0 likes, 8 views, updated 2026-09-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 V: Corporate Exile
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Secondhand Bombus
+3 Augmented Negotiators
+3 Caliber: Totentanz's Top Dog
+3 Rockn' Rockerboy
+3 Jackie Welles: Ride or Die Choom
+2 Placide: Voodoo Sentinel
+3 Adrenaline Converter
+2 Dying Night: V's Pistol
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Floor It
+3 Safety Override
+3 Chrome Reverie
+3 Live with the Aftermath

@@ -1,0 +1,25 @@
+# R/G Rebel Yell - by MaelstromMitch (netdeck.gg 7778852d-d695-428e-a29d-966c19b2786a, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 Johnny Silverhand: Rocking Renegade
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+2 MaxTac AV
+2 V: Roamer of the Badlands
+2 Animals Wrecker
+3 Johnny Silverhand: Never Stop Fighting
+3 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+2 Mantis Blades
+2 Satori: Sword of Saburo
+2 Deadman Transmitter
+3 Industrial Assembly
+3 Peace Offering
+3 Corporate Surveillance
+3 Appetite for Destruction
+2 Gunpoint Diplomacy

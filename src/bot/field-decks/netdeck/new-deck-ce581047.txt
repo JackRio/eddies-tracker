@@ -1,0 +1,31 @@
+# New Deck - by Lionhart (netdeck.gg ce581047-dd63-447c-9e91-cbd437dfbd4e, 0 likes, 25 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Secondhand Bombus
+3 Dexter DeShawn: One Last Chance
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+2 MaxTac Suppression Team
+2 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Adrenaline Converter
+3 Gorilla Arms
+2 Industrial Assembly
+3 Safety Override
+3 Live with the Aftermath
+2 Over the Edge
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 1 MaxTac Suppression Team
+# side: 1 Rockn' Rockerboy
+# side: 1 V: Roamer of the Badlands
+# side: 2 Minotaur
+# side: 2 The Relic: Experimental Biochip

@@ -1,0 +1,31 @@
+# RRB Hanako+V - by Pelikn (netdeck.gg 07989c6e-95c5-4827-909f-978262859c46, 2 likes, 145 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 V: Streetkid
+
+// Main deck
+1 Field Operator
+2 Valentino Street Racer
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+1 Animals Wrecker
+1 Johnny Silverhand: Never Stop Fighting
+1 Nadia: Fighting Through Grief
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Peace Offering
+3 Bonnie and Clyde
+2 Over the Edge
+3 Gunpoint Diplomacy
+2 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Animals Wrecker
+# side: 3 Riot Shield
+# side: 3 Detonate

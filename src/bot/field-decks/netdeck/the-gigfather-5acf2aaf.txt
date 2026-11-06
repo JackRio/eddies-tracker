@@ -1,0 +1,28 @@
+# The Gigfather - by Streesil (netdeck.gg 5acf2aaf-d5a6-44f6-a4b3-46179297fda1, 0 likes, 2 views, updated 2026-09-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Padre: Man of the Cross
+1 Panam Palmer: Nomad Cavalry
+
+// Main deck
+1 Emergency Atlus
+3 Field Operator
+2 Offduty Malfini
+2 Pepe Najarro: Working Doubles
+2 MaxTac AV
+3 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+1 Panam Palmer: Strength Through Family
+3 Sandayu Oda: Hanako's Guardian
+3 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+1 Zetatech Faceplate
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Peace Offering
+2 Take Control
+1 The Heist

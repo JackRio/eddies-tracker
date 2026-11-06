@@ -1,0 +1,23 @@
+# High Value man! - by TBrine (netdeck.gg 5f68e601-0bcf-4e7b-a4d7-14d33299bf05, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 Valentino Guerrera
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+3 El Sombrerón: La Venganza Lenta
+2 Royce: Don't Call Me Simon
+2 Octant
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 Industrial Assembly
+3 Over the Edge
+3 Gunpoint Diplomacy
+3 Carnage at the Colosseum

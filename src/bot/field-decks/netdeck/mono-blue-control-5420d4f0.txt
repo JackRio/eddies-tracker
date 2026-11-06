@@ -1,0 +1,28 @@
+# Mono Blue Control - by morsdraconis (netdeck.gg 5420d4f0-718c-471d-a2a5-0bd68ba151ec, 4 likes, 145 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Evelyn Parker: Scheming Siren
+3 Jacked-In Voodoo Boy
+3 Delamain: Rideshare AI
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Westbrook Netrunner
+# side: 3 Maman Brigitte: Spirit of Death
+# side: 1 Modded Kusanagi

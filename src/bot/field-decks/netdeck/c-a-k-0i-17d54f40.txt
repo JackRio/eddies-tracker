@@ -1,0 +1,23 @@
+# ~ C|A)K:0I+ - by LokoThtcaT (netdeck.gg 17d54f40-856b-4b3e-b1c2-e3ff1dfd2322, 1 likes, 129 views, updated 2026-10-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Judy Álvarez: Braindance Maestro
+1 River Ward: Detective on the Hunt
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+3 Augmented Negotiators
+3 Delamain: Rideshare AI
+3 Mox Inciters
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MaxTac Suppression Team
+3 Rockn' Rockerboy
+3 Heywood Ripperdoc
+3 Kiroshi Optics
+3 Tetratronic Rippler
+3 Afterparty at Lizzie's
+3 Floor It
+3 Les Élémens

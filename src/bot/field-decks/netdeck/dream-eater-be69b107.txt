@@ -1,0 +1,24 @@
+# Dream Eater - by Jelo_Art (netdeck.gg be69b107-ebfc-4156-9393-1afa3dcc8a84, 0 likes, 48 views, updated 2026-10-31)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Hanako Arasaka: In a Gilded Cage
+3 Jackie Welles: Ride or Die Choom
+3 Alt Cunningham: Mother of Daemons
+3 Adam Smasher: Metal Over Meat
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

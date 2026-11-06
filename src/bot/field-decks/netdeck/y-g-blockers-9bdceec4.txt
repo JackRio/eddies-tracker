@@ -1,0 +1,23 @@
+# Y/G Blockers - by uglypoodle (netdeck.gg 9bdceec4-7d7e-4a15-b151-cd97033a9294, 0 likes, 1 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Panam Palmer: Nomad Cavalry
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Tyger's Whisper
+3 Augmented Negotiators
+3 MaxTac Squadron
+3 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 Overwatch: Panam's Gift
+2 Zetatech Berserk
+3 Cyberpsychosis

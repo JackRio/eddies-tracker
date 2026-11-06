@@ -1,0 +1,27 @@
+# New Deck - by Thandiego (netdeck.gg 05c03ccf-0bd6-4f4d-b16d-fe3063023e46, 0 likes, 0 views, updated 2026-09-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+2 Dexter DeShawn: One Last Chance
+2 6th Street Recruits
+2 Offduty Malfini
+2 Animals Wrecker
+1 Heywood Ripperdoc
+2 Yorinobu Arasaka: Steel Dragon
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 Deadman Transmitter
+3 All is Lost
+2 Industrial Assembly
+2 Bonnie and Clyde
+2 Over the Edge
+3 Carnage at the Colosseum

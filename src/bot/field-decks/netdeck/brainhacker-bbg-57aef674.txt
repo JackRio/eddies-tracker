@@ -1,0 +1,28 @@
+# BrainHacker BBG - by R4cc00n (netdeck.gg 57aef674-c655-4786-a6fe-84bb42119811, 0 likes, 0 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+2 Corpo Security
+1 Evelyn Parker: Scheming Siren
+1 Pepe Najarro: Working Doubles
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 MT0D12 Flathead
+1 Rogue Amendiares: Queen of the Afterlife
+1 Sandayu Oda: Hanako's Guardian
+3 Floor It
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+2 Take Control
+3 Three Mouths, One Desire
+1 Chrome Reverie
+2 Nocturne OP55 N1
+2 Pyramid Song
+2 Memory Relapse
+2 Towerfall

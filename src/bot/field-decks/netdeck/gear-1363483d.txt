@@ -1,0 +1,29 @@
+# Gear - by Helheim (netdeck.gg 1363483d-8226-4872-8267-3a0e0689c31f, 0 likes, 19 views, updated 2026-10-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Maelstrom Goons
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+3 Mantis Blades
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 The Heist
+2 Over the Edge
+2 Shattered Memories
+
+# Sideboard (not loaded):
+# side: 2 Johnny Silverhand: Never Stop Fighting
+# side: 2 Safety Override
+# side: 3 Live with the Aftermath

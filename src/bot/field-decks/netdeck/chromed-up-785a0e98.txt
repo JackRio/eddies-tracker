@@ -1,0 +1,29 @@
+# Chromed Up - by Avincry (netdeck.gg 785a0e98-4ea2-4698-b362-1db6bec17451, 0 likes, 56 views, updated 2026-10-27)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Secondhand Bombus
+3 Sketchy Ripper
+2 Dexter DeShawn: One Last Chance
+3 6th Street Recruits
+3 Rockn' Rockerboy
+3 Johnny Silverhand: Never Stop Fighting
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+2 Safety Override
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 3 MaxTac Suppression Team
+# side: 2 Heywood Ripperdoc
+# side: 2 Detonate

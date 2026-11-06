@@ -1,0 +1,24 @@
+# BBG Aggro Control - by Yasuyan (netdeck.gg 5734231b-aea6-4bf0-a4f1-cfc4cc2814a3, 0 likes, 16 views, updated 2026-10-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Peace Offering
+3 Trust No One
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Les Élémens
+3 Towerfall

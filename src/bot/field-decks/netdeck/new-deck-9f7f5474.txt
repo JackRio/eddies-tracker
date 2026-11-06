@@ -1,0 +1,24 @@
+# New Deck - by scar (netdeck.gg 9f7f5474-1864-4613-ac50-df0cdadec853, 0 likes, 0 views, updated 2026-09-21)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+3 Augmented Negotiators
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Caliber: Totentanz's Top Dog
+3 Viktor Vektor: Drop Your Illusions
+3 Jackie Welles: Ride or Die Choom
+3 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+3 The Relic: Experimental Biochip
+3 The Heist
+2 Cyberpsychosis

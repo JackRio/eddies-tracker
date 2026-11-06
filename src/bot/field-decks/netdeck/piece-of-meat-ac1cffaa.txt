@@ -1,0 +1,25 @@
+# Piece of Meat - by wOPtimusPrime (netdeck.gg ac1cffaa-27e9-479f-9bdb-5d31d0d2f4db, 0 likes, 1 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Royce: Psycho on the Edge
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Maelstrom Goons
+3 Swordwise Huscle
+3 Caliber: Totentanz's Top Dog
+3 Royce: Don't Call Me Simon
+2 Screw: Lovelorn Fool
+2 Animals Wrecker
+2 Heywood Ripperdoc
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Deadman Transmitter
+2 Bonnie and Clyde
+3 Cyberpsychosis

@@ -1,0 +1,29 @@
+# Rolls Royce - by L1nk x_X (netdeck.gg 4d0004b0-50d1-4045-884b-c4a241e0c442, 0 likes, 57 views, updated 2026-10-05)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+2 Meredith Stout: Stone Cold Corpo
+2 Offduty Malfini
+2 V: Roamer of the Badlands
+2 Viktor Vektor: Drop Your Illusions
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Detonate
+2 Industrial Assembly
+2 Safety Override
+3 The Heist
+2 Shattered Memories

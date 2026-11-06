@@ -1,0 +1,23 @@
+# GGb overwatch control - by MDsouthpaw (netdeck.gg ada25020-71b3-44da-b6b2-6361e657e7bc, 0 likes, 3 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 V: Corporate Exile
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 Valentino Street Racer
+3 Pepe Najarro: Working Doubles
+3 Lizzy Wizzy: Delicate Weapon
+2 Panam Palmer: Strength Through Family
+2 Saul Bright: Stormrider
+3 NetWatch Netdriver
+3 Sandevistan
+3 Overwatch: Panam's Gift
+3 Floor It
+3 Chrome Reverie
+3 Nocturne OP55 N1
+3 Memory Relapse
+3 Wild in the Streets
+3 (Don't Fear) The Reaper

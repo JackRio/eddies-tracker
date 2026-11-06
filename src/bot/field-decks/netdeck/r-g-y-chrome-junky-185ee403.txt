@@ -1,0 +1,23 @@
+# R/G/Y Chrome Junky - by MaelstromMitch (netdeck.gg 185ee403-ab19-486a-8301-4e75aabfac42, 0 likes, 2 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Dexter DeShawn: One Last Chance
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+2 Sandayu Oda: Hanako's Guardian
+3 Kiroshi Optics
+3 Mantis Blades
+3 Riot Shield
+2 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Heist
+3 Cyberpsychosis

@@ -1,0 +1,28 @@
+# GGR Arasaka - by Gorarath (netdeck.gg 0fc3d232-94cd-49f6-8077-af336f7f7663, 0 likes, 1 views, updated 2026-09-07)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 La Llorona: Ghost of the Past
+3 Goro Takemura: Losing His Way
+3 Meredith Stout: Stone Cold Corpo
+1 Screw: Lovelorn Fool
+2 Minotaur
+2 Sandayu Oda: Hanako's Guardian
+1 Arasaka Emergency Radioport
+3 Satori: Sword of Saburo
+3 Sandevistan
+1 Overwatch: Panam's Gift
+2 All is Lost
+1 Detonate
+2 Industrial Assembly
+3 Fool on the Hill
+1 Memory Relapse
+2 Wild in the Streets
+1 (Don't Fear) The Reaper

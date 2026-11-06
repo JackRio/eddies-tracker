@@ -1,0 +1,24 @@
+# Mono blue judy - by Tarranga (netdeck.gg a9b234e1-725c-46a4-a47b-c5457e279af6, 0 likes, 0 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 NetWatch Netdriver
+3 Floor It
+3 Trust No One
+3 Three Mouths, One Desire
+3 Chrome Reverie
+1 Nocturne OP55 N1
+3 Pyramid Song
+3 Towerfall

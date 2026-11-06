@@ -1,0 +1,26 @@
+# RRY Max Gigs - by Ara (netdeck.gg 95447509-55bc-4a73-8cc6-c56b31338ac7, 0 likes, 6 views, updated 2026-09-26)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+
+// Main deck
+2 Dexter DeShawn: One Last Chance
+2 Kerry Eurodyne: The Last Rockerboy
+2 Offduty Malfini
+2 MaxTac Suppression Team
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+2 Animals Wrecker
+2 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+2 Industrial Assembly
+3 Over the Edge
+3 Gunpoint Diplomacy
+3 Carnage at the Colosseum

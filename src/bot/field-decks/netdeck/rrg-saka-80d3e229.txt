@@ -1,0 +1,30 @@
+# RRG Saka - by picklemire (netdeck.gg 80d3e229-9ee7-4309-9e75-fac2a1f3e78b, 0 likes, 12 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Saburo Arasaka: Stubborn Patriarch
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Field Operator
+3 6th Street Recruits
+2 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 Animals Wrecker
+3 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Detonate
+3 Industrial Assembly
+3 Synapse Burnout
+3 Bonnie and Clyde
+2 Over the Edge
+2 Memory Relapse
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Royce: Don't Call Me Simon
+# side: 2 Riot Shield
+# side: 1 Deadman Transmitter
+# side: 2 Shattered Memories

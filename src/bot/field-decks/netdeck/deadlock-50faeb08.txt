@@ -1,0 +1,23 @@
+# DEADLOCK - by Conus (netdeck.gg 50faeb08-adb9-456d-9f71-976e4e44d96a, 0 likes, 3 views, updated 2026-09-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Mama's Favorite
+
+// Main deck
+3 La Llorona: Ghost of the Past
+3 6th Street Recruits
+3 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 MaxTac AV
+3 Mantis Blades
+3 Riot Shield
+3 Satori: Sword of Saburo
+3 Sandevistan
+2 Overwatch: Panam's Gift
+3 Detonate
+3 Synapse Burnout
+2 Memory Relapse
+3 Wild in the Streets

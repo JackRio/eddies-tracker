@@ -1,0 +1,37 @@
+# BBG MrCrabs67 - by Mr_CRabs67 (netdeck.gg 8899fea7-64f5-46ce-91b2-41207e8081cd, 0 likes, 3 views, updated 2026-09-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Jackie Welles: Pour One Out For Me
+1 Wakako Okada: Peace and Harmony
+
+// Main deck
+2 Corpo Security
+2 Emergency Atlus
+2 Field Operator
+1 Delamain Cab
+1 Pacifica Netrunner
+1 Psycho Squad
+1 Rita Wheeler: No Stupid Questions
+1 Maman Brigitte: Spirit of Death
+1 MaxTac AV
+2 Modded Muramasa
+2 MT0D12 Flathead
+1 Modded Kusanagi
+1 Nadia: Fighting Through Grief
+2 Tetratronic Rippler
+1 Riot Shield
+1 NetWatch Netdriver
+2 Zetatech Berserk
+1 Floor It
+2 Peace Offering
+2 Synapse Burnout
+1 Trust No One
+2 Reboot Optics
+2 Three Mouths, One Desire
+1 Chrome Reverie
+2 Nocturne OP55 N1
+1 Pyramid Song
+1 Memory Relapse
+1 We Gotta Live Together

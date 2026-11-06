@@ -1,0 +1,30 @@
+# Arasaka Control - by Helades (netdeck.gg a1558e8e-1bd1-42f8-9763-625f6c1edaa6, 0 likes, 3 views, updated 2026-09-19)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Hanako Arasaka: Daughter of the Emperor
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Field Operator
+2 La Llorona: Ghost of the Past
+2 Swordwise Huscle
+2 Valentino Street Racer
+2 Goro Takemura: Losing His Way
+1 Meredith Stout: Stone Cold Corpo
+3 Royce: Don't Call Me Simon
+2 V: Roamer of the Badlands
+1 Minotaur
+1 Sandayu Oda: Hanako's Guardian
+2 Mantis Blades
+2 Arasaka Emergency Radioport
+2 Satori: Sword of Saburo
+3 Sandevistan
+2 Detonate
+2 Industrial Assembly
+2 Peace Offering
+2 Memory Relapse
+2 We Gotta Live Together
+1 (Don't Fear) The Reaper

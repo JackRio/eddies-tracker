@@ -1,0 +1,33 @@
+# Holo7s MONO Y deck - by Holo7 (netdeck.gg 93d00c9c-696c-4c5e-94dc-ef9e566c0bca, 0 likes, 7 views, updated 2026-11-03)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Muamar Reyes: El Capitán
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+2 Secondhand Bombus
+2 Augmented Negotiators
+2 Maelstrom Goons
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 MaxTac Suppression Team
+2 Rockn' Rockerboy
+2 Jackie Welles: Ride or Die Choom
+2 Adam Smasher: Metal Over Meat
+2 Kiroshi Optics
+3 Mandibular Upgrade
+2 Adrenaline Converter
+2 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Safety Override
+2 The Heist
+2 Cyberpsychosis
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show
+
+# Sideboard (not loaded):
+# side: 2 Gilded Matón
+# side: 2 Viktor Vektor: Drop Your Illusions
+# side: 2 Afterparty at Lizzie's

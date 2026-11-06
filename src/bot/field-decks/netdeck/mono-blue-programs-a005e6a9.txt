@@ -1,0 +1,26 @@
+# Mono Blue programs - by DrainBamage (netdeck.gg a005e6a9-d29d-46d8-bae5-bbccc2cc5741, 0 likes, 0 views, updated 2026-09-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Evelyn Parker: Beautiful Enigma
+1 Judy Álvarez: Braindance Maestro
+
+// Main deck
+3 Jacked-In Voodoo Boy
+2 Misty Olszewski: Mender of Broken Spirits
+2 Delamain Cab
+2 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Judy Álvarez: Nothing to Doubt
+2 Placide: Voodoo Sentinel
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+2 Pyramid Song
+2 Les Élémens
+2 Towerfall

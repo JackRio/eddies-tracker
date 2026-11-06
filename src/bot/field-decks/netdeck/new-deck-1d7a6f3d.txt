@@ -1,0 +1,30 @@
+# New Deck - by Mr.Counterfeit (netdeck.gg 1d7a6f3d-5b9f-4b7c-b8da-d780c60e88e2, 0 likes, 58 views, updated 2026-10-20)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Secondhand Bombus
+3 Swordwise Huscle
+3 6th Street Recruits
+3 Rockn' Rockerboy
+2 Johnny Silverhand: Never Stop Fighting
+2 Yorinobu Arasaka: Steel Dragon
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+1 Detonate
+3 Industrial Assembly
+1 Appetite for Destruction
+3 Bonnie and Clyde
+2 Over the Edge
+3 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 2 Valentino Guerrera
+# side: 3 Meredith Stout: Stone Cold Corpo
+# side: 2 Detonate

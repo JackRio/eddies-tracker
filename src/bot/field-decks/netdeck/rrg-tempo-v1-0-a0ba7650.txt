@@ -1,0 +1,29 @@
+# RRG Tempo v1.0 - by Calcifer050 (netdeck.gg a0ba7650-e465-4ac9-9ce3-e00eb0521a4d, 0 likes, 13 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 V: Streetkid
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 6th Street Recruits
+3 Meredith Stout: Stone Cold Corpo
+3 Pepe Najarro: Working Doubles
+3 MaxTac AV
+2 Screw: Lovelorn Fool
+3 Animals Wrecker
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Riot Shield
+3 Industrial Assembly
+3 Peace Offering
+2 Corporate Surveillance
+3 Bonnie and Clyde
+2 Memory Relapse
+2 Carnage at the Colosseum
+
+# Sideboard (not loaded):
+# side: 1 Nadia: Fighting Through Grief
+# side: 3 Detonate
+# side: 3 Shattered Memories

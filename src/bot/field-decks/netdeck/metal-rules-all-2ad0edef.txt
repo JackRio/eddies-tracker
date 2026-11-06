@@ -1,0 +1,28 @@
+# Metal Rules All - by Fusionbug (netdeck.gg 2ad0edef-610c-4123-8bd2-dedbbb4ab966, 0 likes, 1 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Viktor Vektor: Sit Down and Relax
+
+// Main deck
+3 Secondhand Bombus
+2 Sketchy Ripper
+3 Augmented Negotiators
+1 Dexter DeShawn: One Last Chance
+2 Maelstrom Goons
+1 Viktor Vektor: You Might Feel a Little Pinch
+1 Viktor Vektor: Drop Your Illusions
+2 Alt Cunningham: Mother of Daemons
+2 Adam Smasher: Metal Over Meat
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Adrenaline Converter
+3 Zetatech Faceplate
+2 Gorilla Arms
+1 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+3 Safety Override
+2 The Heist
+2 Bootleg Black Sapphire Show

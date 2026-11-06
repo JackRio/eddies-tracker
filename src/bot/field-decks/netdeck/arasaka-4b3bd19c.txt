@@ -1,0 +1,25 @@
+# Arasaka - by Chile (netdeck.gg 4b3bd19c-1a76-4213-af02-888edb884c90, 0 likes, 47 views, updated 2026-10-11)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Corpo Security
+2 Ruthless Lowlife
+3 Swordwise Huscle
+2 Chrome Fang
+2 Minotaur
+2 Yorinobu Arasaka: Steel Dragon
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Riot Shield
+3 Satori: Sword of Saburo
+2 Deadman Transmitter
+3 Detonate
+2 Peace Offering
+3 Synapse Burnout
+3 Corporate Surveillance
+3 Take Control

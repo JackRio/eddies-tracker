@@ -1,0 +1,25 @@
+# BBRaindance - by Hiyoma (netdeck.gg 7bfd045f-84f6-4d57-8c2a-d8b217cddbe0, 0 likes, 3 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 V: Streetkid
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+3 Meredith Stout: Stone Cold Corpo
+2 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+1 Johnny Silverhand: Never Stop Fighting
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Pyramid Song
+3 Les Élémens
+3 Towerfall

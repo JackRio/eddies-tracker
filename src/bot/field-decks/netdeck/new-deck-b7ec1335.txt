@@ -1,0 +1,23 @@
+# New Deck - by CyberSoup (netdeck.gg b7ec1335-fd79-4f8d-b18e-90cbbcadf216, 0 likes, 4 views, updated 2026-09-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+3 6th Street Recruits
+2 Hanako Arasaka: In a Gilded Cage
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Heist
+3 Live with the Aftermath
+3 Bootleg Black Sapphire Show

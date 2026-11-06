@@ -1,0 +1,33 @@
+# Rocking sweet Gear - by NerdwithoutFear (netdeck.gg 326f52e9-249b-444c-b31a-0fe4f1f655db, 0 likes, 14 views, updated 2026-11-06)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Royce: Psycho on the Edge
+
+// Main deck
+2 Secondhand Bombus
+3 Kerry Eurodyne: The Last Rockerboy
+2 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 Viktor Vektor: Drop Your Illusions
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 Deadman Transmitter
+2 Afterparty at Lizzie's
+2 Detonate
+3 The Heist
+2 Cyberpsychosis
+2 Gunpoint Diplomacy
+
+# Sideboard (not loaded):
+# side: 1 Secondhand Bombus
+# side: 1 Sketchy Ripper
+# side: 2 Augmented Negotiators
+# side: 1 Swordwise Huscle
+# side: 1 Meredith Stout: Stone Cold Corpo
+# side: 1 Minotaur

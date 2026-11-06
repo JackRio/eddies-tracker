@@ -1,0 +1,24 @@
+# BBG Corpo’s - by DeadUniverseTCG (netdeck.gg f5c432a6-2076-4f11-a7db-fc47b49a4755, 1 likes, 27 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Evelyn Parker: Beautiful Enigma
+1 Padre: Man of the Cross
+1 V: Corporate Exile
+
+// Main deck
+3 Field Operator
+2 Valentino Street Racer
+3 Rita Wheeler: No Stupid Questions
+2 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+3 Peace Offering
+3 Synapse Burnout
+3 Trust No One
+3 Reboot Optics
+2 Take Control
+3 Three Mouths, One Desire
+3 Nocturne OP55 N1
+3 Pyramid Song
+2 Memory Relapse
+2 Les Élémens

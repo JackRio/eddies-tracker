@@ -1,0 +1,37 @@
+# New Deck - by Silverpunk (netdeck.gg aa95675c-8e2b-440e-a068-89d8dba12a62, 0 likes, 3 views, updated 2026-11-04)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+
+// Main deck
+3 Corpo Security
+2 Jacked-In Voodoo Boy
+2 Tyger's Whisper
+2 Field Operator
+1 MaxTac Squadron
+1 Misty Olszewski: Mender of Broken Spirits
+2 Mox Inciters
+1 Lizzy Wizzy: Delicate Weapon
+1 Modded Muramasa
+2 Wraith Marauders
+1 Sandayu Oda: Hanako's Guardian
+2 Saul Bright: Stormrider
+1 Riot Shield
+2 NetWatch Netdriver
+2 Sandevistan
+1 Overwatch: Panam's Gift
+2 Zetatech Berserk
+2 Floor It
+2 Synapse Burnout
+3 Trust No One
+2 Corporate Surveillance
+2 Fool on the Hill
+2 Reboot Optics
+2 Chrome Reverie
+2 Nocturne OP55 N1
+2 We Gotta Live Together
+1 Wild in the Streets
+2 (Don't Fear) The Reaper

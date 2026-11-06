@@ -1,0 +1,31 @@
+# VDB Control - by wrthfulhammer (netdeck.gg 68c8bd8d-c949-4ff7-881d-847d263b8e00, 1 likes, 55 views, updated 2026-10-17)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Jackie Welles: Pour One Out For Me
+1 V: Corporate Exile
+
+// Main deck
+2 Delamain Cab
+2 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+2 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Rogue Amendiares: Queen of the Afterlife
+3 Judy Álvarez: Nothing to Doubt
+3 Placide: Voodoo Sentinel
+3 Dying Night: V's Pistol
+2 Floor It
+3 Trust No One
+2 Reboot Optics
+3 Three Mouths, One Desire
+2 Chrome Reverie
+2 Pyramid Song
+2 Les Élémens
+3 Towerfall
+
+# Sideboard (not loaded):
+# side: 3 Westbrook Netrunner
+# side: 3 Nocturne OP55 N1
+# side: 1 Les Élémens

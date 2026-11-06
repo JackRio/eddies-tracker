@@ -1,0 +1,24 @@
+# Jhonny - by Nivelis (netdeck.gg 8ebcb23b-aef8-4e54-a5e0-6a3decae6ab5, 0 likes, 18 views, updated 2026-10-14)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dexter DeShawn: Off the Grid
+1 Johnny Silverhand: Rocking Renegade
+1 River Ward: Detective on the Hunt
+
+// Main deck
+3 Augmented Negotiators
+2 Kerry Eurodyne: The Last Rockerboy
+3 Meredith Stout: Stone Cold Corpo
+3 Rockn' Rockerboy
+2 V: Roamer of the Badlands
+3 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mantis Blades
+3 Satori: Sword of Saburo
+3 Deadman Transmitter
+3 All is Lost
+2 Detonate
+3 Industrial Assembly
+1 The Heist
+3 Carnage at the Colosseum

@@ -1,0 +1,25 @@
+# New Deck - by TrtleNek (netdeck.gg 73ba6a63-2d59-4366-81d2-3e3c84ab0a14, 0 likes, 2 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Judy Álvarez: Braindance Maestro
+1 Muamar Reyes: El Capitán
+
+// Main deck
+3 Jacked-In Voodoo Boy
+3 Secondhand Bombus
+2 Augmented Negotiators
+3 Mox Inciters
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Afterparty at Lizzie's
+3 Floor It
+3 Trust No One
+3 Reboot Optics
+3 Three Mouths, One Desire
+3 Chrome Reverie
+3 Pyramid Song
+3 Les Élémens
+2 Towerfall

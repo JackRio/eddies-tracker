@@ -1,0 +1,32 @@
+# Gear Infinite Gear - by pavlovs.bell (netdeck.gg 1e63e6a4-3d6c-4f65-892b-187840a3d231, 0 likes, 24 views, updated 2026-10-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+1 Corpo Security
+2 Secondhand Bombus
+2 Tyger's Whisper
+3 Maelstrom Goons
+1 Valentino Street Racer
+1 Viktor Vektor: You Might Feel a Little Pinch
+2 Gilded Matón
+1 T-Bug: Amateur Philosopher
+2 MaxTac Suppression Team
+1 Viktor Vektor: Drop Your Illusions
+2 Heywood Ripperdoc
+2 Nadia: Fighting Through Grief
+3 Alt Cunningham: Mother of Daemons
+1 Saul Bright: Stormrider
+3 Mandibular Upgrade
+1 Adrenaline Converter
+3 Riot Shield
+3 Zetatech Berserk
+1 Synapse Burnout
+1 Corporate Surveillance
+1 Safety Override
+1 The Heist
+2 Cyberpsychosis

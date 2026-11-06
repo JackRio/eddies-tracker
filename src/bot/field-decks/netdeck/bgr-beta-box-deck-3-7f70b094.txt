@@ -1,0 +1,44 @@
+# BGR, Beta Box Deck 3 - by Xeno Sov (netdeck.gg 7f70b094-ec0e-48f2-b5f8-3aad3af494ca, 0 likes, 13 views, updated 2026-09-18)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Padre: Man of the Cross
+1 Wakako Okada: Peace and Harmony
+1 V: Streetkid
+
+// Main deck
+1 Corpo Security
+2 Japantown Jonin
+1 Tyger's Whisper
+1 Misty Olszewski: Mender of Broken Spirits
+1 Swordwise Huscle
+1 Valentino Street Racer
+1 Kerry Eurodyne: The Last Rockerboy
+1 Rita Wheeler: No Stupid Questions
+1 Westbrook Netrunner
+1 Chrome Fang
+1 MaxTac AV
+1 Rogue Amendiares: Queen of the Afterlife
+1 Screw: Lovelorn Fool
+1 Modded Kusanagi
+1 Sandayu Oda: Hanako's Guardian
+1 Saul Bright: Stormrider
+1 Mantis Blades
+1 Dying Night: V's Pistol
+1 Riot Shield
+2 Satori: Sword of Saburo
+2 Zetatech Berserk
+1 All is Lost
+2 Detonate
+1 Floor It
+1 Industrial Assembly
+1 Trust No One
+1 Corporate Surveillance
+1 Reboot Optics
+2 Take Control
+1 Chrome Reverie
+1 Nocturne OP55 N1
+1 Over the Edge
+1 Memory Relapse
+1 Unlikely Bond
+1 We Gotta Live Together

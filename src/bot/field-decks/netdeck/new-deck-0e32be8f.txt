@@ -1,0 +1,23 @@
+# New Deck - by TheScaryLamb (netdeck.gg 0e32be8f-01b4-4c85-a417-b428c6b53825, 0 likes, 1 views, updated 2026-09-15)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Saburo Arasaka: Stubborn Patriarch
+1 Yorinobu Arasaka: Embracing Destruction
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Corpo Security
+3 Field Operator
+3 Swordwise Huscle
+3 Meredith Stout: Stone Cold Corpo
+1 Johnny Silverhand: Never Stop Fighting
+3 Yorinobu Arasaka: Steel Dragon
+3 Saul Bright: Stormrider
+3 Arasaka Emergency Radioport
+3 Riot Shield
+3 Deadman Transmitter
+3 Synapse Burnout
+3 Take Control
+3 Shattered Memories
+3 We Gotta Live Together

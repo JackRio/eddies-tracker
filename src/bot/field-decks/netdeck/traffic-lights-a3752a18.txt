@@ -1,0 +1,29 @@
+# traffic lights - by Outsider (netdeck.gg a3752a18-fbe6-431f-a40d-4af7625190ac, 0 likes, 11 views, updated 2026-10-01)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 River Ward: Detective on the Hunt
+1 Goro Takemura: Hands Unclean
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+2 Sketchy Ripper
+2 Augmented Negotiators
+2 La Llorona: Ghost of the Past
+2 Viktor Vektor: You Might Feel a Little Pinch
+2 Chrome Fang
+2 Screw: Lovelorn Fool
+2 Kiroshi Optics
+2 Mandibular Upgrade
+3 Mantis Blades
+3 Arasaka Emergency Radioport
+2 Riot Shield
+2 Satori: Sword of Saburo
+2 Zetatech Faceplate
+3 All is Lost
+2 Detonate
+2 Industrial Assembly
+2 Corporate Surveillance
+2 Take Control
+2 Over the Edge
+2 We Gotta Live Together

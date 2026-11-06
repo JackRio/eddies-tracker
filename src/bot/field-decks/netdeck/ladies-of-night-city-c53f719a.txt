@@ -1,0 +1,25 @@
+# Ladies of Night City - by wOPtimusPrime (netdeck.gg c53f719a-e626-48f2-af36-1165b5c2daa7, 0 likes, 2 views, updated 2026-09-13)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Sasha Yakovleva: Won't Let You Down
+
+// Main deck
+2 Misty Olszewski: Mender of Broken Spirits
+3 Mox Inciters
+3 Rita Wheeler: No Stupid Questions
+2 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+2 Rogue Amendiares: Queen of the Afterlife
+1 Judy Álvarez: Nothing to Doubt
+3 Tetratronic Rippler
+3 NetWatch Netdriver
+3 Reboot Optics
+3 Three Mouths, One Desire
+2 Nocturne OP55 N1
+3 Pyramid Song
+3 Unlikely Bond
+3 Les Élémens
+1 Towerfall

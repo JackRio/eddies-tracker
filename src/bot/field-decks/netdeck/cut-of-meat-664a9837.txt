@@ -1,0 +1,26 @@
+# Cut of meat - by Plunk (netdeck.gg 664a9837-8d8f-429a-89b7-46d952d1b477, 0 likes, 3 views, updated 2026-09-24)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Alt Cunningham: Soulkiller Architect
+1 Judy Álvarez: Braindance Maestro
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Hacked Corpo
+3 Rita Wheeler: No Stupid Questions
+3 Lizzy Wizzy: Delicate Weapon
+3 Maman Brigitte: Spirit of Death
+3 MT0D12 Flathead
+2 Johnny Silverhand: Never Stop Fighting
+3 Placide: Voodoo Sentinel
+2 NetWatch Netdriver
+3 All is Lost
+3 Detonate
+3 Three Mouths, One Desire
+2 Chrome Reverie
+3 Nocturne OP55 N1
+3 Over the Edge
+3 Pyramid Song
+3 Les Élémens
+3 Towerfall

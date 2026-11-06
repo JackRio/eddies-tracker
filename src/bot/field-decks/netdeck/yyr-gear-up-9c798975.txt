@@ -1,0 +1,27 @@
+# YYR gear up - by LordDustBunny (netdeck.gg 9c798975-f2ca-4dd0-8917-70c557ded377, 0 likes, 2 views, updated 2026-09-25)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Sketchy Ripper
+3 Augmented Negotiators
+3 Maelstrom Goons
+3 Swordwise Huscle
+3 Viktor Vektor: You Might Feel a Little Pinch
+3 Gilded Matón
+3 Meredith Stout: Stone Cold Corpo
+1 Viktor Vektor: Drop Your Illusions
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 Gorilla Arms
+2 The Relic: Experimental Biochip
+3 The Heist
+3 Cyberpsychosis
+2 Shattered Memories

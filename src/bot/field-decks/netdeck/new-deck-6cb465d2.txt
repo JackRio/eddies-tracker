@@ -1,0 +1,24 @@
+# New Deck - by LilSmilodonBravo (netdeck.gg 6cb465d2-19e0-44af-84a0-dc96aea51462, 0 likes, 16 views, updated 2026-10-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Dum Dum: Maelstrom Triggerman
+1 River Ward: Detective on the Hunt
+1 Royce: Psycho on the Edge
+
+// Main deck
+3 Japantown Jonin
+3 Ruthless Lowlife
+3 Secondhand Bombus
+3 Sketchy Ripper
+3 La Llorona: Ghost of the Past
+3 Swordwise Huscle
+2 Meredith Stout: Stone Cold Corpo
+3 Kiroshi Optics
+3 Mandibular Upgrade
+3 Mantis Blades
+3 Adrenaline Converter
+3 Satori: Sword of Saburo
+3 Gorilla Arms
+3 The Heist
+3 Cyberpsychosis

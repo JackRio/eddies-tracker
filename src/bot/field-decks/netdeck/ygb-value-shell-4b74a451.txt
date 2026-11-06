@@ -1,0 +1,23 @@
+# YGB Value Shell - by RootsOfOneTree (netdeck.gg 4b74a451-139f-4195-b1f7-562ef2a7ec75, 1 likes, 25 views, updated 2026-10-16)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Jackie Welles: Pour One Out For Me
+1 Panam Palmer: Nomad Cavalry
+1 River Ward: Detective on the Hunt
+
+// Main deck
+2 Augmented Negotiators
+3 Pepe Najarro: Working Doubles
+3 Psycho Squad
+3 Rockn' Rockerboy
+2 Rogue Amendiares: Queen of the Afterlife
+3 Sandayu Oda: Hanako's Guardian
+3 Mandibular Upgrade
+3 Riot Shield
+3 Zetatech Faceplate
+3 NetWatch Netdriver
+3 Synapse Burnout
+3 Trust No One
+3 Chrome Reverie
+3 Memory Relapse

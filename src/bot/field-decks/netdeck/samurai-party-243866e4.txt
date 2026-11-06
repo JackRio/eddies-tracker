@@ -1,0 +1,25 @@
+# Samurai Party - by Ghostboy96 (netdeck.gg 243866e4-d046-42d7-b7d1-fec3fad16a4a, 0 likes, 0 views, updated 2026-09-08)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+3 Augmented Negotiators
+3 Kerry Eurodyne: The Last Rockerboy
+3 Rockn' Rockerboy
+1 V: Roamer of the Badlands
+1 Jackie Welles: Ride or Die Choom
+3 Johnny Silverhand: Never Stop Fighting
+3 Mandibular Upgrade
+2 Mantis Blades
+3 Satori: Sword of Saburo
+3 Zetatech Faceplate
+3 The Relic: Experimental Biochip
+3 Afterparty at Lizzie's
+2 Detonate
+3 Industrial Assembly
+1 Safety Override
+3 Bootleg Black Sapphire Show

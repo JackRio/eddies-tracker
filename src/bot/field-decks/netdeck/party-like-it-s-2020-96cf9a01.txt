@@ -1,0 +1,28 @@
+# Party like it's 2020 - by wOPtimusPrime (netdeck.gg 96cf9a01-a5ba-4897-8252-17c876171562, 0 likes, 4 views, updated 2026-09-23)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Johnny Silverhand: Rocking Renegade
+1 Kerry Eurodyne: Axe, Attitude, Audience
+1 Rogue Amendiares: Preem Solo
+
+// Main deck
+2 Swordwise Huscle
+2 Offduty Malfini
+3 Rockn' Rockerboy
+2 Heywood Ripperdoc
+2 Johnny Silverhand: Never Stop Fighting
+2 Trauma Team Operatives
+3 Alt Cunningham: Mother of Daemons
+2 Kiroshi Optics
+2 Mantis Blades
+2 Adrenaline Converter
+2 Satori: Sword of Saburo
+2 Gorilla Arms
+2 The Relic: Experimental Biochip
+2 Afterparty at Lizzie's
+2 Industrial Assembly
+2 Safety Override
+2 The Heist
+2 Live with the Aftermath
+2 Shattered Memories

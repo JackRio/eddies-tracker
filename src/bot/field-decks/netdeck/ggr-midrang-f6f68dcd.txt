@@ -1,0 +1,23 @@
+# GGR MidRang? - by CrankyPants (netdeck.gg f6f68dcd-16c3-4445-8ca3-cb8fa71251c6, 0 likes, 1 views, updated 2026-09-10)
+// imported by scripts/fetch-netdeck.js - a public community list, training opponent only
+
+// Legends
+1 Goro Takemura: Vengeful Bodyguard
+1 Hanako Arasaka: Daughter of the Emperor
+1 Adam Smasher: Ender of Legends
+
+// Main deck
+3 Ruthless Lowlife
+3 MaxTac Squadron
+3 Maelstrom Zealots
+3 Meredith Stout: Stone Cold Corpo
+3 Screw: Lovelorn Fool
+2 Johnny Silverhand: Never Stop Fighting
+3 Riot Shield
+3 Sandevistan
+3 Zetatech Berserk
+2 Detonate
+3 Peace Offering
+3 Synapse Burnout
+3 Shattered Memories
+3 We Gotta Live Together
