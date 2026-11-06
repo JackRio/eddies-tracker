@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play · Eddies Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="board.css">
+<link rel="stylesheet" href="play.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ctcg-swap" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 -1.0725 0 0 0.992  0 -1 0 0 0.925  0 -0.0212 0 0 0.0196  0 0 0 1 0"/></filter></svg>
+<header class="top">
+  <h1>Play <b>vs Bot</b></h1>
+  <a class="btn" href="index.html">Replays</a>
+  <div id="match-info" class="match-info"></div>
+</header>
+
+<main class="layout">
+  <section class="board-col">
+    <div id="table" class="table" hidden></div>
+    <div id="empty" class="empty"><p>Pick decks and a bot on the left, then <b>Start game</b>.</p></div>
+  </section>
+
+  <aside class="left">
+    <details class="panel" id="setup-box" open>
+      <summary><h2>New game</h2></summary>
+      <form id="setup" class="setup">
+        <label>Mode <select id="mode"><option value="play">I play the bot</option><option value="watch">Watch bot vs bot</option></select></label>
+        <fieldset><legend id="p1-label">You</legend>
+          <label class="bot-p1" hidden>Bot <select id="bot-p1"></select></label>
+          <label>Deck <select id="deck-p1"></select></label></fieldset>
+        <fieldset><legend>Opponent</legend>
+          <label>Bot <select id="bot-p2"></select></label>
+          <label>Deck <select id="deck-p2"></select></label></fieldset>
+        <div id="bot-about" class="about"></div>
+        <label>First <select id="first"><option value="random">Random</option><option value="p1">You / left bot</option><option value="p2">Opponent</option></select></label>
+        <button class="btn primary" type="submit">Start game</button>
+      </form>
+    </details>
+    <div class="turn-box" id="turn-box"></div>
+    <div class="pblock" id="rival-block"></div>
+    <div class="pblock" id="me-block"></div>
+    <div class="panel" id="decision-box" hidden>
+      <h2 id="decision-title">Your move</h2>
+      <div id="decision-prompt" class="prompt"></div>
+      <div id="decision" class="choices"></div>
+    </div>
+    <div class="panel" id="watch-box" hidden>
+      <h2>Bot vs bot</h2>
+      <div class="watch-ctl">
+        <button class="btn" id="w-step" type="button">Next move</button>
+        <button class="btn" id="w-turn" type="button">Finish turn</button>
+        <button class="btn play" id="w-run" type="button">Auto ▶</button>
+      </div>
+    </div>
+    <div class="panel" id="think-box" hidden>
+      <h2>Bot's thinking <span id="think-at" class="sub"></span></h2>
+      <div id="think"></div>
+    </div>
+  </aside>
+
+  <aside class="side">
+    <div class="log-box">
+      <h2>Game log</h2>
+      <ol id="log" class="log"></ol>
+    </div>
+  </aside>
+</main>
+
+<footer class="timeline" id="timeline" hidden>
+  <button class="btn" id="turn-prev" title="Previous turn (Shift+←)">⏮</button>
+  <button class="btn" id="step-prev" title="Previous action (←)">◀</button>
+  <button class="btn play" id="play" title="Replay from here (Space)">▶</button>
+  <button class="btn" id="step-next" title="Next action (→)">▶︎|</button>
+  <button class="btn" id="turn-next" title="Next turn (Shift+→)">⏭</button>
+  <div class="scrub-wrap"><input id="scrub" type="range" min="0" value="0" aria-label="Timeline"><div id="coach-marks" class="coach-marks"></div></div>
+  <span id="counter" class="counter"></span>
+</footer>
+
+<div id="zoom" class="zoom" hidden></div>
+<dialog id="pile-dialog" class="pile-dialog"><h2 id="pile-title"></h2><div id="pile-cards" class="pile-cards"></div><button class="btn" id="pile-close">Close</button></dialog>
+
+<script src="replay.js"></script>
+<script src="logfmt.js"></script>
+<script src="app.js"></script>
+<script src="live.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@
 //   /api/replays          list of cyberpunk-tcg-sim replay files in ~/Downloads and board/replays
 //   /api/replays/<name>   one replay file
 //   /api/coach/<name>     Replay Coach result for that replay (board/replays/coach/, from scripts/coach.js)
+//   /api/play/...         live games vs the bots for board/play.html (see playApi below)
 // Run: node scripts/serve-board.js   (port 4181)
 const http = require('http');
 const fs = require('fs');
@@ -30,7 +31,7 @@ const letters = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().re
 function buildImageIndex() {
   imageIndex = new Map();
   let cards = [];
-  try { cards = JSON.parse(fs.readFileSync(path.join(userData, 'cards-cache.json'), 'utf8')).cards; } catch { return; }
+  try { cards = JSON.parse(fs.readFileSync(path.join(userData, 'cards-cache.json'), 'utf8')).cards; } catch { /* no Eddies cache */ }
   const rank = p => (/retail/i.test(p.set?.code || '') ? 0 : 100) + Math.max(0, RARITY.indexOf(p.rarity));
   const bySlug = new Map();
   for (const p of cards) {
@@ -41,6 +42,9 @@ function buildImageIndex() {
     if (!prev || rank(p) < prev.r) bySlug.set(key, { r: rank(p), file });
   }
   for (const [k, v] of bySlug) imageIndex.set(k, v.file);
+  // fallback: board/card-art/ (node scripts/fetch-card-art.js - one image per card from the official database)
+  const art = path.join(root, 'card-art');
+  try { for (const f of fs.readdirSync(art)) if (f.endsWith('.webp') && !imageIndex.has(letters(f.slice(0, -5)))) imageIndex.set(letters(f.slice(0, -5)), path.join(art, f)); } catch { /* not fetched */ }
 }
 
 function send(res, code, body, type = 'text/plain') {
@@ -48,8 +52,35 @@ function send(res, code, body, type = 'text/plain') {
   res.end(body);
 }
 
+// Play vs bot / watch bot vs bot (board/play.html, src/bot/play.js):
+//   GET  /api/play/config            bots, decks, defaults
+//   POST /api/play/new               { mode, you, bots: {p1,p2}, decks: {p1,p2}, first, seed } -> { id }
+//   GET  /api/play/<id>?from=N       board steps since N + the current decision
+//   POST /api/play/<id>/move         { i } - you play option i
+//   POST /api/play/<id>/advance      the bot to act makes one decision
+let PLAY = null;
+const play = () => (PLAY ||= require('../src/bot/play'));
+const readBody = req => new Promise(ok => { let d = ''; req.on('data', c => { d += c; if (d.length > 1e5) req.destroy(); }); req.on('end', () => { try { ok(JSON.parse(d || '{}')); } catch { ok({}); } }); });
+async function playApi(req, res, url) {
+  const json = (code, o) => send(res, code, JSON.stringify(o), MIME['.json']);
+  try {
+    if (url === '/api/play/config') return json(200, play().config());
+    if (url === '/api/play/new' && req.method === 'POST') return json(200, { id: play().create(await readBody(req)) });
+    const m = url.match(/^\/api\/play\/(\d+)(\/move|\/advance)?$/);
+    if (!m) return json(404, { error: 'no such route' });
+    if (!m[2]) { const from = +(new URLSearchParams(req.url.split('?')[1] || '').get('from') || 0); const p = play().poll(m[1], from); return p ? json(200, p) : json(404, { error: 'no such game' }); }
+    if (req.method !== 'POST') return json(405, { error: 'POST only' });
+    const r = m[2] === '/move' ? play().move(m[1], (await readBody(req)).i) : play().advance(m[1]);
+    return json(r.error ? 400 : 200, r);
+  } catch (e) {
+    console.error(e);
+    return json(500, { error: e.message });
+  }
+}
+
 http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
+  if (url.startsWith('/api/play/')) return playApi(req, res, url);
 
   if (url.startsWith('/card/')) {
     if (!imageIndex) buildImageIndex();

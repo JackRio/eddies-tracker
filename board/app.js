@@ -1,4 +1,5 @@
 // Replay viewer UI: renders one replay step on the two-mat board, plus hand, log and timeline.
+// Also drives live games (board/play.html): window.Board.openLive / extend.
 // Moving one step at a time animates the change (FLIP: cards glide from where they were).
 'use strict';
 (() => {
@@ -32,7 +33,8 @@
   const back = (cls = '', style = '', cid = '') => `<div class="card back ${cls}"${cid ? ` data-cid="${esc(cid)}"` : ''} style="${style}"></div>`;
 
   function unitHtml(u, isLegend = false) {
-    if (isLegend && u.faceDown) return `<div class="unit${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:0">${back('legend host', '', u.id)}</div>`;
+    // live games (board/play.html): your own face-down Legends are known to you - shown dimmed, not as backs
+    if (isLegend && u.faceDown && !u.known) return `<div class="unit${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:0">${back('legend host', '', u.id)}</div>`;
     const gear = u.attachments || [];
     const power = u.attackPower ?? u.power ?? 0, base = u.basePower ?? u.power ?? 0;
     const delta = power - base;
@@ -42,7 +44,7 @@
     // hover shows every Gear card. Units on the Field show the Gear's bottom strip under the card instead.
     if (isLegend && u.zone !== 'field') {
       return `<div class="unit lg${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:0">
-        ${gear.map((g, i) => face(g, 'gear tucked', `--i:${i}`)).join('')}${face(u, 'host')}${badge}
+        ${gear.map((g, i) => face(g, 'gear tucked', `--i:${i}`)).join('')}${face(u, u.faceDown ? 'host fd' : 'host')}${badge}
         ${gear.length ? `<span class="gear-badge" title="${esc(gear.map(g => short(g.name)).join(', '))}">⚙ ${gear.length}</span>` : ''}</div>`;
     }
     return `<div class="unit${u.exhausted ? ' spent' : ''}" data-uid="${esc(u.id)}" style="--n:${gear.length}">
@@ -384,6 +386,7 @@
 
   function matchInfo() {
     const m = R.match, res = m.result;
+    if (R.live) { document.dispatchEvent(new CustomEvent('board:matchinfo')); return; }
     const won = res?.winnerId === R.me;
     $('match-info').innerHTML = `<span class="who"><b>${esc(R.labels[R.me])}</b> vs ${esc(R.labels[R.rival])}</span>
       <span>${new Date(m.startedAt).toLocaleString()}</span>
@@ -431,6 +434,46 @@
   // for board/coach.js: jump to a step
   window.BoardNav = { go: i => go(i) };
 
+  // Live games (board/play.html + live.js): R is built by the page, steps arrive as the game goes on.
+  const walkNames = o => {
+    if (Array.isArray(o)) o.forEach(walkNames);
+    else if (o && typeof o === 'object') {
+      if (o.name && o.cardId) { nameToId.set(o.name, o.cardId); nameToId.set(short(o.name), o.cardId); }
+      for (const v of Object.values(o)) if (v && typeof v === 'object') walkNames(v);
+    }
+  };
+  function turnStartsOf(steps) {
+    const ts = [];
+    steps.forEach((s, i) => { if (!ts.length || ts[ts.length - 1].turn !== s.turn) ts.push({ turn: s.turn, step: i }); });
+    return ts;
+  }
+  window.Board = {
+    openLive(r) {
+      R = { ...r, live: true, turnStarts: turnStartsOf(r.steps) };
+      nameToId = new Map();
+      R.steps.forEach(s => walkNames(s.state.players));
+      fmt = LogFmt.makeFormatter([...nameToId.keys()], R.labels);
+      togglePlay(false);
+      $('empty').hidden = true; $('table').hidden = false; $('timeline').hidden = false;
+      $('scrub').max = R.steps.length - 1;
+      matchInfo(); buildLog();
+      cur = R.steps.length - 1; render();
+    },
+    // append steps; follow the game if you were watching the latest step
+    extend(steps, log) {
+      if (!R || !steps.length) return;
+      const follow = cur >= R.steps.length - 1;
+      R.steps.push(...steps); R.log.push(...log);
+      steps.forEach(s => walkNames(s.state.players));
+      fmt = LogFmt.makeFormatter([...nameToId.keys()], R.labels);
+      R.turnStarts = turnStartsOf(R.steps);
+      $('scrub').max = R.steps.length - 1;
+      buildLog();
+      if (follow) go(R.steps.length - 1); else render(0);
+    },
+    current: () => cur, total: () => (R ? R.steps.length : 0), step: i => R?.steps[i],
+  };
+
   // ── wiring ──────────────────────────────────────────────────────────────
   $('step-prev').onclick = () => go(cur - 1);
   $('step-next').onclick = () => go(cur + 1);
@@ -467,7 +510,12 @@
     const el = e.target.closest('.card.face, .ctag[data-img]');
     if (!el || !el.dataset.img) { zoom.hidden = true; return; }
     // hovering a Unit's Gear strip shows the Gear; hovering the Unit shows the Unit with its status
-    zoom.innerHTML = `<div class="zimg" style="background-image:url('${el.dataset.img}')"></div>${infoHtml(cardsById.get(el.dataset.cid))}`;
+    // no art on this machine (live games carry the card text): show the card as text instead
+    const c = cardsById.get(el.dataset.cid);
+    const art = el.classList.contains('no-img') && c?.text != null
+      ? `<div class="ztext"><b>${esc(c.name)}</b><span>${esc([c.color, c.type, c.cost != null && `cost ${c.cost}`, c.ram != null && `RAM ${c.ram}`, c.power != null && `power ${c.power}`].filter(Boolean).join(' · '))}</span><p>${esc(c.text).replace(/\{([^}]+)\}/g, '<i>$1</i>')}</p></div>`
+      : `<div class="zimg" style="background-image:url('${el.dataset.img}')"></div>`;
+    zoom.innerHTML = `${art}${infoHtml(c)}`;
     zoom.hidden = false;
   });
   document.addEventListener('mousemove', e => {
@@ -505,6 +553,7 @@
   $('pile-close').onclick = () => $('pile-dialog').close();
 
   // loading: list from ~/Downloads (via the dev server), file picker, drag & drop
+  if (!$('replay-pick')) return;   // the live-game page (board/play.html) has no replay loading
   fetch('/api/replays').then(r => r.json()).then(list => {
     for (const f of list) {
       const m = f.name.match(/replay-(\d{4}-\d\d-\d\d)-(.+)-[0-9a-f]{8}\.json$/);

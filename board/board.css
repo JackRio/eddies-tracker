@@ -326,3 +326,4 @@ button, select, input { font: inherit; color: inherit; }
 .cd-cmp th { font-weight: 600; color: var(--dim); }
 .cd-cmp td.up { color: var(--green); font-weight: 600; } .cd-cmp td.down { color: var(--red); font-weight: 600; }
 .cd-foot { margin-top: 10px; font-size: 11.5px; color: var(--dim); } .cd-foot summary { cursor: pointer; } .cd-foot p { margin: 4px 0; }
+.card.fd { filter: brightness(.5) saturate(.6); }   /* your own face-down Legend in a live game */

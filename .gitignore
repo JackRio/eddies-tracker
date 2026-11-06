@@ -3,3 +3,12 @@ dist/
 release/
 *.log
 screenshot.png
+
+# bot self-play training data (scripts/bot-data.js), regenerable
+notes/bot-data*.jsonl
+src/bot/eval-weights.json
+notes/value-data*.jsonl
+notes/policy-data*.jsonl
+
+# card images from the official database (node scripts/fetch-card-art.js)
+board/card-art/

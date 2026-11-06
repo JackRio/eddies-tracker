@@ -97,12 +97,15 @@ function moves(wf, b) {
           for (const host of [...Z.field, ...Z.legends.filter(l => l.face === 'face_up')]) out.push([...pay, { step: 'play_card', iid: h.iid, equip_to: host.iid }]);
         } else if (c.type === 'Unit' || c.type === 'Program') out.push([...pay, { step: 'play_card', iid: h.iid }]);
       }
+      // Face-down Legends are hidden from their owner too: a Call flips a random one, so there is
+      // ONE call option (the first face-down slot - setup shuffled them), never a choice of Legend
+      const down = Z.legends.find(l => l.face !== 'face_up');
+      if (down && !p.called_legend_this_turn) {
+        let cost = 1; try { cost = legendCallCost(b, pid); } catch { /* default */ }
+        const pay = taps(b, pid, cost);
+        if (pay) out.push([...pay, { step: 'call_legend', iid: down.iid }]);
+      }
       for (const l of Z.legends) {
-        if (l.face !== 'face_up' && !p.called_legend_this_turn) {
-          let cost = 1; try { cost = legendCallCost(b, pid); } catch { /* default */ }
-          const pay = taps(b, pid, cost);
-          if (pay) out.push([...pay, { step: 'call_legend', iid: l.iid }]);
-        }
         if (l.face === 'face_up') {
           let kw = []; try { kw = effectiveKeywords(b, pid, l); } catch { /* none */ }
           if (kw.includes('GO_SOLO')) {
@@ -123,7 +126,7 @@ function moves(wf, b) {
     }
     case 'defensive_step': {
       for (const x of wf.blocker_iids || []) out.push([{ step: 'blocker', iid: x }]);
-      if (wf.can_call_legend) for (const l of Z.legends.filter(l => l.face !== 'face_up')) out.push([{ step: 'call_legend_defensive', iid: l.iid, pay_iids: (wf.call_legend_payable_iids || []).slice(0, wf.call_legend_cost ?? 1) }]);
+      if (wf.can_call_legend) for (const l of Z.legends.filter(l => l.face !== 'face_up').slice(0, 1)) out.push([{ step: 'call_legend_defensive', iid: l.iid, pay_iids: (wf.call_legend_payable_iids || []).slice(0, wf.call_legend_cost ?? 1) }]);
       for (const x of wf.interrupt_castable_iids || []) out.push([{ step: 'play_card_interrupt_cast', iid: x }]);
       for (const x of wf.interrupt_spendable_iids || []) out.push([{ step: 'activate_asset_spend', iid: x.iid, ability_idx: x.ability_idx }]);
       out.push([{ step: 'pass_defensive' }]);

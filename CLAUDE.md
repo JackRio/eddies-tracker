@@ -1028,6 +1028,154 @@ plus marks on the timeline. `node scripts/coach-check.js [--coverage] [--bot]` i
   within one detail on the 15 shared replays; the misses are mid-turn draws (a new deal draws
   different cards) and lines the bot didn't try, not rules disagreements.
 
+## Game bot (`src/bot/`, `scripts/arena.js`, `scripts/tune-greedy.js`)
+
+A stronger player than the coach's rollout bot, built and measured separately (the coach still uses
+`src/coach/policy.js` unchanged). Nothing in the app or board uses it yet; next step is a play-vs-bot mode.
+
+- **Arena** (`scripts/arena.js <botA> <botB> [--pairs N] [--seed S] [--decks meta|all]`): bot-vs-bot
+  over the 8 ChoomBattler lists in `board/meta-decks/` (`--decks all` adds the engine's test decks).
+  Games come in **pairs** - same seed, decks, seats and first player, bots swapped - so deck and deal
+  luck cancel; prints A's score with a 95% interval and Elo. Two identical deterministic bots score
+  exactly 50.0%. Use a fresh `--seed` range when validating anything tuned on arena games. Bot specs:
+  `greedy` (coach bot), `greedyw` (same, exposed weights - must stay identical to `greedy`), `greedyt`
+  (tuned weights), `noisy`, `strong[:key=value...]`.
+- **Tuned weights** (`src/bot/tuned.js`, `src/bot/tuned-weights.json`): the coach's `sideScore`
+  constants as named weights, tuned by SPSA on greedy-vs-greedy win rate (`node scripts/tune-greedy.js
+  --iters 300 --pairs 32`, ~7 min, games capped at 40 turns). Biggest moves: an Eddie 2.6 -> 13.4,
+  a Gig 11 -> 19, Rival side weighted 1.25x. `greedyt` beats `greedy` 78.1% (+221 Elo, 400 held-out
+  pairs). Re-tune after card pool / meta-deck changes (`--from tuned` continues from the current set).
+- **Strong bot** (`src/bot/strong.js`): per-decision Monte Carlo. Every decision with a choice: the
+  greedy (tuned) policy ranks options, the top `k` (+ end turn) are played on `deals` worlds where
+  everything the bot can't see is re-dealt (`determinize()`: Rival hand+deck reshuffled together, own
+  deck shuffled, engine RNG reseeded - the bot never peeks), each played out with tuned greedy for
+  `horizon` turns (99 = to the end of the game), averaging win chance (`leaf: 'prob'`; a won world
+  counts 1, not +1000 - averaging raw scores let single wins swamp the mean). `ctx.last` holds every
+  option's value for UIs. Results vs `greedyt` (66 pairs), before the value net:
+  horizon 1 = 50%, horizon 2 = 59%, play-to-end k 3 / 4 worlds = 65% (+109 Elo); the default
+  (6 worlds, k 4) = 72.7% (+170 Elo, 66 pairs) at ~1.9 s per decision (one thread).
+- **What didn't work** (don't retry blind): Texel-fitting the score to outcomes
+  (`scripts/bot-data.js` + `scripts/fit-eval.js`; held-out log loss 0.57 -> 0.50, but a card in hand
+  predicts winning better than the same card on the field, so greedy driven by it stopped playing
+  cards: 1.7% vs greedy; as a search leaf it was worse than hand weights too). Whole-turn plan search
+  (greedy/noisy plans scored after the Rival's reply) was only ~+50 Elo. More worlds/options at
+  horizon 1 didn't help - the leaf score was the limit, not sample count.
+- **Speed**: `step()` copies the board with `src/engine/lib/clone.js` instead of `structuredClone`
+  (was 72% of all time; 3.4x faster, identical results - 50 tests + 3200-game fuzz pass). A plain tree
+  copy is exact when `effect_stack` is empty (no shared references anywhere else on a board);
+  otherwise `copyShared()` keeps the halted effect's shared objects shared. Keep that invariant if
+  the engine ever stores the same object in two places outside the effect stack.
+- **Value net** (`src/bot/value.js` + `value-net.json`, the `leaf=net` option): predicts the acting
+  player's win chance at the start of their turn - exactly where `horizon=1` playouts stop. Input
+  (`src/bot/vfeatures.js`): the 45 aggregate features + per-card counts in 13 zone "bags" (my hand,
+  field, ready units, Legends up/down, Gear, deck contents, both trashes; Rival field/ready/Legends
+  up/Gear) over the 150 legal cards (Rebecca PRM01-005 is a no-text promo, `legal: false`, excluded).
+  Never the Rival's hand cards or any deck order. Model: EmbeddingBag(sparse)+Linear(dense) -> 256 ->
+  64 -> 1. Pipeline: `node scripts/value-data.js --games 60000` (tuned-greedy self-play, 25% noisy
+  games, turn-start positions labelled with the winner; ~16 min, 749k positions,
+  `notes/value-data.jsonl`, gitignored) -> `D:/Codebase/venv/nitorch/Scripts/python.exe
+  scripts/train-value.py` (GPU, RTX 2080; that venv has torch+CUDA - don't install into others)
+  -> `node src/bot/value.js` (checks the JS forward pass against PyTorch outputs saved in the JSON;
+  ~1e-4 from 5-decimal weights is expected). Held-out: log loss 0.429 / 78.8% vs 0.544 / 69.8% for a
+  dense-only logistic. Plain-JS forward pass ~0.1 ms, no GPU at play time.
+  `strong:leaf=net:horizon=1:deals=8:k=5` (now the `strong` default) vs `greedyt`: 81.1% (+253 Elo,
+  66 pairs), 0.48 s/decision; vs the play-to-end version: 64.8% (+106 Elo, 44 pairs).
+- **Coverage decks** (`src/bot/train-decks/coverage-NN.txt`, `node scripts/coverage-decks.js`): the
+  12 real lists use only 77 of the 150 legal cards and 11 of 26 Legends (Panam, Judy, Takemura...
+  never appear), so the nets could never learn the rest. 24 generated legal lists put every legal card
+  and Legend in play at least twice (meta lists included): Legends from the least-used ones (built
+  around any high-RAM card still uncovered, e.g. Judy: Nothing to Doubt needs 5 blue RAM), least-used
+  fitting cards first, then filled toward the meta cost curve. Training data (`value-data.js`,
+  `policy-data.js`) uses `TRAIN_DIRS` = real + coverage (`--meta-only` to skip them); the arena and the
+  deck guesser use real lists only. Regenerate when new cards/sets arrive.
+  `src/bot/value-net-cov.json` = value net trained on real + coverage games (753k positions; held-out
+  0.405 / 80.6%). Head to head vs the default meta-trained net (`strong:vnet=src/bot/value-net-cov.json`,
+  44 pairs each): 46.6% on real lists, 55.7% on coverage decks (`arena.js --decks coverage`) - both
+  within noise. Default stays `value-net.json`; use the coverage net for off-meta decks.
+- **Intuition net / expert iteration** (`src/bot/pnet.js` + `policy-net.json`, `src/bot/menc.js`):
+  combos aren't taught one by one - the search discovers them and a policy net learns to recognise
+  them. Loop: (1) `node scripts/policy-data.js --games 1500` - strong-vs-strong self-play with
+  `explore=2` (each decision also searches 2 random moves outside the shortlist, so lines whose first
+  step looks bad to greedy still get tested); every decision is recorded: position (vfeatures), all
+  legal moves (`menc.js`: move type, acting card, target card by owner, picked cards, taps), greedy
+  rank, shortlist flag, search value per move tried. (2) `train-policy.py` (GPU) fits a
+  (position, move) scorer to softmax(search value / 0.03) and prints the strategy metrics below
+  (also `notes/policy-report.json`). (3) `strong:prior=net` shortlists by the net instead of greedy;
+  `cont=net` lets the net play the rest of the bot's own turn inside playouts (so a combo's follow-up
+  is played and its first step gets credit). (4) Repeat with the new bot generating the data.
+  `node src/bot/pnet.js` checks the JS forward pass against PyTorch.
+  **Strategy metrics** (held-out games, net vs the greedy ranking): agreement with the search's pick;
+  agreement on *non-obvious* decisions (search overruled greedy's top move - greedy scores 0% by
+  definition); **discovery recall@k** - decisions where the search's pick came only from exploration
+  and beat greedy's move by >= 3% win chance: does the net now rank it top-k (i.e. would shortlist it
+  without exploration)? That is the "did it learn the combo" number; regret (win chance lost vs the
+  search's best); agreement by move type (equip, Spend, interrupt, block, attack...).
+  Round 1 (1,500 meta-only games, 125k decisions, `notes/policy-report.json`): discovery recall@5
+  59% vs greedy 0% (342 discoveries), non-obvious agreement 25.7%, better than greedy at blocks
+  (73% vs 35%) and choosing attack targets (52% vs 26%), but worse overall (47.5% vs 62.5%) - it
+  is weak on routine moves. Arena vs `strong` (44 pairs): `prior=mix` 53.4% (+24, not significant);
+  `prior=mix:cont=net` 38.6% (-80: the net plays routine moves worse than greedy, so don't use
+  `cont=net` until overall agreement beats greedy). Next: round 2 on coverage decks with
+  `prior=mix:explore=2` generating, more games, and/or greedy rank as a move input.
+- **Data checks**: `node scripts/data-log.js notes/policy-data[-r2].jsonl [--games N | --g ID,...]` re-plays
+  dataset games (same seed/decks/bot; round-1 files use the real lists only, `-r2` files all 36 decks)
+  into a readable turn-by-turn log (`notes/data-log-*.txt`): board each turn, every searched move with
+  its win-chance estimate, greedy rank and an exploration flag, each decision checked against the
+  dataset (0 differences on 4 games). Findings (Nov 2026): the value net is well calibrated on tuned-greedy
+  games (says 90-100% -> 95% won, 40-50% -> 49%), but because playouts are greedy-vs-greedy, early leads
+  snowball - one turn-3 position with 1 Gig each was won 100/100 by greedy playouts - so 43% of recorded
+  decisions are "decided" (every move <5% or >95%) and only 44% are informative (best 5-95% and moves
+  >= 1% apart). Fixes to try: train only on informative decisions, noisier/stronger playouts, more
+  worlds per decision.
+- **Deck guessing** (`src/bot/belief.js`, `strong` option `belief=1`, the default): the bot no longer
+  peeks at the Rival's list. Candidates = the 12 known lists, prior = ChoomBattler play counts from
+  each meta file's "over N games" header (others 300), evidence = every card the Rival has shown face up
+  (a list missing a shown card is penalised 0.01 per copy; more copies of shown cards = likelier),
+  plus a "custom deck" hypothesis (8% prior) built from the rules: Legends drawn so their RAM per colour
+  covers every shown card (a 4-RAM green card forces >= 4 green Legend RAM), the rest filled with legal
+  cards of those colours weighted by meta play rate. Each world re-deals the Rival's hand, deck,
+  face-down Eddies AND face-down Legends from one list drawn from that posterior (before, Legends and
+  Eddies kept their real identities and the list itself leaked). `ctx.belief` = top 3 guesses.
+  `node scripts/belief-check.js`: top guess right 60% by game turn 4, 77% by turn 8, 86% late; with the
+  real list hidden, "custom deck" holds 20-33%. `belief=0` is the old leaky re-deal; `loo=1` hides the
+  real list from the candidates (testing only). Adding lists to `board/meta-decks/` sharpens it.
+  Strength cost of honesty: none measurable - honest vs leaky head to head 51.1% (44 pairs); vs
+  `greedyt` on the same seeds 82.6% honest / 81.1% leaky, and 83.3% with the real list hidden (`loo=1`).
+  Retrain after re-tuning the weights or changing the decks/features (indices shift with the vocab).
+  Next step if more strength is needed: expert iteration - generate data with the net-leaf bot itself
+  (slow: ~0.5 s/decision) or relabel greedy positions with net-leaf search values.
+
+## Play vs bot (`board/play.html` + `live.js` + `play.css`, `src/bot/play.js`)
+
+`node scripts/serve-board.js` then http://localhost:4181/play.html. The same two-mat board as the
+replay viewer, driven live: play a bot, or watch two bots ("Next move" / "Finish turn" / "Auto").
+- Server: `src/bot/play.js` holds sessions (engine board, bots, log) behind `/api/play/*` in
+  `serve-board.js` (config, new, poll `?from=N`, `move {i}`, `advance` = the bot makes ONE decision,
+  so each bot move lands on the board as it happens; Bot A ~0.3 s, Bot B up to ~2 s per decision).
+  `src/bot/simview.js` turns engine boards into the sim-replay state shape `app.js` draws, hiding the
+  opponent's hand / deck / face-down Legends from you (spectators and game-over see everything).
+  Face-down Legends are hidden from their OWNER too (a Call flips a random one): only your last
+  face-down Legend shows (dimmed, `.card.fd`, `known: true` - known by elimination). `policy.moves`
+  offers one call option, and bots act on a board with their own face-down Legends shuffled
+  (`hideOwnLegends()` in strong.js), so they only choose when to Call.
+- Card art: `node scripts/fetch-card-art.js` fills `board/card-art/` (gitignored) from the official
+  database; `serve-board.js` falls back to it when the Eddies image cache is missing.
+- `app.js` gained `window.Board.openLive(R)` / `extend(steps, log)` and skips replay loading when the
+  page has no `#replay-pick`; replays are unchanged. No card art on this machine (no Eddies image
+  cache in %APPDATA%), so cards show as name tiles and hover shows a text card (`.ztext`).
+- Your options are the engine's legal macro moves (`policy.moves`, taps chosen automatically, "pay N"),
+  in plain English from `src/bot/describe.js` (effect choices are prefixed with their source card -
+  `play.js` `cnOf()` carries it over follow-up prompts; cards an effect reveals are named and shown in
+  the decision box; Legend "call" prompts read "Draw 1 (instead of: ...)"); forced
+  single-option prompts are auto-played. "Bot's thinking" lists every bot decision of the turn on screen:
+  the moves it compared with estimated win chance, how many it didn't search, and its deck guess.
+- Bots offered: **Bot A - Net Searcher** (`strong`), **Bot B - Playout Searcher**
+  (`strong:leaf=prob:horizon=99:deals=6:k=4`), tuned greedy. Defaults: you = Adam/River/Viktor
+  (Yellow 4 / Red 2), Bot A deck = Dexter/Padre/V (Red 4 / Green 2), Bot B = Alt/Hanako/Jackie
+  (Blue 4 / Green 2). All training datasets were deleted on 2026-11-06 (bad data: greedy playouts
+  snowballed; the value net learned that selling is bad - see "Data checks"); the plan is to verify
+  the bots by playing them here before generating data again.
+
 ## Known CSS gotchas (already solved, don't reintroduce)
 
 - **`overflow-x: auto` + `overflow-y: visible` silently forces vertical

@@ -4,6 +4,7 @@ const { fireEventResume, fireOrHalt, fireEventChain, effectiveKeywords, goSoloCo
 const { resolveEffects, resumeEffects } = require('./effects');
 const { trace } = require('./trace');
 const { randFloat } = require('./rng');
+const { cloneBoard } = require('./clone');
 const { effectivePlayCost, consumeNextPlayDiscount } = require('./cost');
 const P = require('./primitives');
 const { applyMulligan } = require('./setup');
@@ -325,7 +326,7 @@ function _checkCardConservation(b) {
 }
 
 function step(board, input) {
-  const b = structuredClone(board);
+  const b = cloneBoard(board);
   _checkCardConservation(b);
   if (b.phase === 'between_turns') return beginTurn(b);
   switch (b.phase) {
