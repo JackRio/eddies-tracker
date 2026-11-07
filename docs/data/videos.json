@@ -78,6 +78,30 @@
   ],
   "videos": [
     {
+      "id": "GpLAutV8h-c",
+      "title": "Two of my favorite decks face off to see who is the best red legend! | Cyberpunk TCG Gameplay",
+      "published": "2026-11-07T01:00:31+00:00",
+      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
+    },
+    {
+      "id": "q25HJ0DCZbk",
+      "title": "NCC 15 LIVE AT the Creator Invitational Weekend!",
+      "published": "2026-11-07T00:13:30+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "nDzsL5vKSHw",
+      "title": "5 CRAZY DECKS 🔴🟡🟢🔵 | Cyberdeck Podcast Episode 30 | Cyberpunk Trading Card Game",
+      "published": "2026-11-06T17:00:21+00:00",
+      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
+    },
+    {
+      "id": "rlbROBTfyS0",
+      "title": "Retail Booster Box Battle Ep1 - Our First ISR!",
+      "published": "2026-11-06T17:00:19+00:00",
+      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
+    },
+    {
       "id": "6nR8oZLwGOQ",
       "title": "How to Deal With YYR In Cyberpunk TCG - A guide on how to beat YYR.",
       "published": "2026-11-05T12:39:06+00:00",
@@ -232,12 +256,6 @@
       "title": "Early Retail Box Opening for the Cyberpunk Trading Card Game!",
       "published": "2026-10-27T17:12:53+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
-      "id": "cfGtND0TMIY",
-      "title": "Safety Override is Nuts! 🤯 | Silv4n vs @AiboAcademy | Round 1 Creator Invitational | Cyberpunk TCG",
-      "published": "2026-10-27T17:00:28+00:00",
-      "channelId": "UCLck5Q8W5awRJp_qmoa2msg"
     },
     {
       "id": "hikJslcs1l4",
@@ -402,12 +420,6 @@
       "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
     },
     {
-      "id": "ukXnUbZVBPA",
-      "title": "Playing some live Cyberpunk!",
-      "published": "2026-10-18T05:34:09+00:00",
-      "channelId": "UCB4pVmDx7Iaxv-61oeWSYEg"
-    },
-    {
       "id": "UzJIUfijxI8",
       "title": "VARZ TCG ONLINE Community Play Night LIVE!",
       "published": "2026-10-17T19:16:13+00:00",
@@ -462,12 +474,6 @@
       "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
-      "id": "38Cfxe-bjzU",
-      "title": "GAMEPLAY: 🟡🟡🔵 vs 🔴🔴🟢 Someone Getting their BUTT KICKED in Cyberpunk TCG!",
-      "published": "2026-10-10T23:28:29+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "8J4gdFDty7A",
       "title": "CTCGs BEST BEARDS - Top 10 Moustaches in Set 1",
       "published": "2026-10-10T15:00:08+00:00",
@@ -520,12 +526,6 @@
       "title": "The Metagame Cycle: Who Beats Who?",
       "published": "2026-09-30T01:26:19+00:00",
       "channelId": "UCm_S8OR3ZJtJuVYdN83JHdQ"
-    },
-    {
-      "id": "DaN0e76Dvd8",
-      "title": "We Open More Beta Event Kits at our LGS",
-      "published": "2026-09-29T18:00:11+00:00",
-      "channelId": "UCJavloH4k2Wyyf4eElRac2A"
     },
     {
       "id": "vduxEAfU5FY",
@@ -850,10 +850,6 @@
       "short": false
     },
     {
-      "id": "DaN0e76Dvd8",
-      "short": false
-    },
-    {
       "id": "nFqK24shZM4",
       "short": false
     },
@@ -962,10 +958,6 @@
       "short": false
     },
     {
-      "id": "38Cfxe-bjzU",
-      "short": false
-    },
-    {
       "id": "8J4gdFDty7A",
       "short": false
     },
@@ -1011,10 +1003,6 @@
     },
     {
       "id": "T16nIRJSDfA",
-      "short": false
-    },
-    {
-      "id": "ukXnUbZVBPA",
       "short": false
     },
     {
@@ -1130,10 +1118,6 @@
       "short": false
     },
     {
-      "id": "cfGtND0TMIY",
-      "short": false
-    },
-    {
       "id": "2fa1-VfcSuU",
       "short": false
     },
@@ -1228,7 +1212,23 @@
     {
       "id": "uxT9SroA3vY",
       "short": false
+    },
+    {
+      "id": "GpLAutV8h-c",
+      "short": false
+    },
+    {
+      "id": "q25HJ0DCZbk",
+      "short": false
+    },
+    {
+      "id": "nDzsL5vKSHw",
+      "short": false
+    },
+    {
+      "id": "rlbROBTfyS0",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-05T14:45:42.393Z"
+  "updatedAt": "2026-11-07T13:13:32.828Z"
 }
