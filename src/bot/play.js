@@ -35,6 +35,10 @@ const BOTS = [
     about: ['Plays each option out to the end of the game', 'Guesses your hidden cards too', 'Strong but slow; never learns'] },
   { id: 'G', name: 'Gonk', spec: 'greedyt',
     about: ['Only looks one move ahead', 'Instant, and the easiest to beat'] },
+  // AlphaZero-style bot (src/bot/mcts.js): tree search with nets trained only by self-play (branch play-vs-mcts,
+  // Nov 8 2026 champion). vs Daemon 39.5% (-74 Elo; it thinks about half as long per move), vs Gonk 77% (+210 Elo).
+  { id: 'Z', name: 'Wraith', spec: 'mcts:pnet=src/bot/policy-net-az3.json:vnet=src/bot/value-net-az3.json',
+    about: ['Taught itself by playing thousands of games against itself', 'Searches a tree of moves for both players', 'Guesses your hidden cards'] },
 ];
 // default match: Bot A vs Bot A, YYR (River / Viktor / Adam, ChoomBattler list) vs BBG (Alt / Hanako / Jackie);
 // in "I play the bot" you get YYR and the bot BBG

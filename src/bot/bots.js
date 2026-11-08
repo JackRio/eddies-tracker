@@ -13,6 +13,8 @@ const BOTS = {
   greedyt: (o) => { const W = T.loadTuned(); if (!W) throw new Error('no src/bot/tuned-weights.json yet'); return weighted('greedyt', W, o); },
   // greedy with softmax noise (weaker; useful as a sanity opponent)
   noisy: () => ({ name: 'noisy', act: (b, wf, pid, ctx) => chooseMove(wf, b, { rng: ctx.rng, noise: 6 }) }),
+  // AlphaZero-style tree search, nets only (src/bot/mcts.js)
+  mcts: (o) => require('./mcts').make(o),
 };
 
 function makeBot(spec) {
