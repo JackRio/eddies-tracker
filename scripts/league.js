@@ -49,7 +49,7 @@ const args = process.argv.slice(2);
 const flag = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : d; };
 const matches = +flag('--matches', 40);
 const workers = Math.min(+flag('--workers', Math.max(1, os.cpus().length - 1)), matches);
-const botSpec = flag('--bot', 'strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix');   // the current best Bot A
+const botSpec = flag('--bot', 'strong:vnet=src/bot/value-net-r3.json:pnet=src/bot/policy-net-r3.json:prior=mix:gb=1:alt=1:tb=1');   // the current best Bot A
 const pilotIds = flag('--pilots', 'BBG,YYR,RRG,RGB').split(',');
 const mix = +flag('--mix', 0.5), mirror = +flag('--mirror', 0.1);
 const record = args.includes('--record');
@@ -58,7 +58,7 @@ const record = args.includes('--record');
 // rounds). Their decisions are never recorded and their side learns nothing (pilot stats stay clean).
 const PAST = (flag('--past', '') || '').split(',').filter(Boolean), pastShare = +flag('--past-share', 0.2);
 // --teach R: a deeper search re-scores a share R of the undecided decisions (training targets + 'mistakes')
-const teach = +flag('--teach', 0), teacherSpec = flag('--teacher', 'strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix:deals=24:k=10');
+const teach = +flag('--teach', 0), teacherSpec = flag('--teacher', 'strong:vnet=src/bot/value-net-r3.json:pnet=src/bot/policy-net-r3.json:prior=mix:gb=1:alt=1:tb=1:deals=24:k=10');
 const outDir = path.resolve(flag('--out', path.join(ROOT, 'notes', 'league')));
 const seed0 = +flag('--seed', Date.now() % 1e6);
 fs.mkdirSync(outDir, { recursive: true });
@@ -95,7 +95,20 @@ const pickNet = () => { let x = rng() * netTotal; for (const f of netField) { x 
 console.log(`league: ${matches} matches, ${workers} workers, bot ${botSpec}, pilots ${pilotIds.join(' ')}, field ${field.length} decks + ${netField.length} netdeck lists${record ? ', recording' : ''}${PAST.length ? `, past bots ${PAST.join(' | ')} in ${Math.round(100 * pastShare)}% of matches` : ''}`);
 
 // a job: pilot A vs (pilot B | itself | field deck)
+// --general G: a share G of matches is two decks from the whole pool (field lists + netdeck lists, liked
+// ones more often), both sides recording - the bot practises every deck, not just the pilots'. The rest
+// are the usual pilot matches (pilots keep learning go-first and deck tuning).
+const generalShare = +flag('--general', 0);
+const pickPool = () => (netField.length && rng() < netShare ? pickNet() : field[Math.floor(rng() * field.length)]);
 function makeJob(k) {
+  if (generalShare && rng() < generalShare) {
+    const fa = pickPool(); let fb = pickPool();
+    for (let t = 0; t < 5 && fb.key === fa.key; t++) fb = pickPool();
+    const A = { key: fa.key, bot: botSpec, deck: { legends: fa.legends, main: fa.main, side: {} }, state: null, opp: fb.key };
+    const B = { key: fb.key, bot: botSpec, deck: { legends: fb.legends, main: fb.main, side: {} }, state: null, opp: fa.key };
+    if (PAST.length && rng() < pastShare) { B.bot = PAST[Math.floor(rng() * PAST.length)]; B.record = false; B.past = true; }
+    return { k, A, B, seed: seed0 + k * 7919, general: true };
+  }
   const a = pilotIds[k % pilotIds.length];
   const SA = states[a];
   const regA = P.registerDeck(SA, rng);
@@ -140,7 +153,7 @@ function learn(job, m) {
       const plan = who === 'A' ? g.planA : g.planB;
       if (plan) P.recordSideboard(st, s.opp, plan, won);
     }
-    if (who === 'A' && !s.mirror && !job.B.mirror) {
+    if (who === 'A' && s.pilot && !s.mirror && !job.B.mirror) {
       const v = P.recordTuning(st, !!s.challenger, meWon, rng);
       if (v) { const h = st.history[st.history.length - 1]; console.log(`  ${st.id} ${v}: ${h.change.kind} -${h.change.outName} +${h.change.inName} (challenger ${h.chall[0]}/${h.chall[1]} vs champion ${h.champ[0]}/${h.champ[1]}, P(better) ${h.p})`); }
     }
@@ -173,7 +186,7 @@ for (let w = 0; w < workers; w++) {
     else {
       games += m.games.length;
       learn(job, m);
-      matchesFile.write(JSON.stringify({ k: job.k, seed: job.seed, A: job.A.key, B: job.B.key, challenger: !!job.A.challenger, ...(job.B.past ? { pastBot: job.B.bot } : {}), winner: m.winner, score: m.score, ms,
+      matchesFile.write(JSON.stringify({ k: job.k, seed: job.seed, A: job.A.key, B: job.B.key, challenger: !!job.A.challenger, ...(job.general ? { general: true } : {}), ...(job.B.past ? { pastBot: job.B.bot } : {}), winner: m.winner, score: m.score, ms,
         games: m.games.map(g => ({ g: g.g, d20: g.d20, chooser: g.chooser, aFirst: g.aFirst, winner: g.winner, turns: g.turns, planA: g.planA, planB: g.planB, seed: g.seed, error: g.error })),
         decks: { A: job.A.deck, B: job.B.deck } }) + '\n');
       if (gamesFile) for (const g of m.games) if (g.actions) gamesFile.write(JSON.stringify({ g: g.seed, match: job.k, A: job.A.key, B: job.B.key, first: g.first, winner: g.winner, decks: g.decks, actions: g.actions }) + '\n');

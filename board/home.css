@@ -1,0 +1,61 @@
+/* Board landing page (board/home.html). Colours and fonts come from board.css's :root. */
+body.home { display: block; overflow: auto; height: auto; min-height: 100%;
+  background: radial-gradient(1200px 500px at 15% -10%, rgba(63,212,255,.08), transparent 60%),
+              radial-gradient(900px 400px at 100% 0%, rgba(245,228,0,.06), transparent 60%), var(--bg); }
+.home a { color: inherit; text-decoration: none; }
+.home .dim { color: var(--dim); }
+
+.h-top { display: flex; align-items: center; gap: 24px; padding: 14px clamp(16px, 4vw, 48px); border-bottom: 1px solid var(--line); background: rgba(11,11,17,.85); position: sticky; top: 0; z-index: 2; backdrop-filter: blur(6px); }
+.h-logo { font: 700 1.5rem var(--head); letter-spacing: .08em; text-transform: uppercase; }
+.h-logo b { color: var(--yellow); }
+.h-nav { margin-left: auto; display: flex; gap: 4px; }
+.h-nav a { font: 700 .9rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); padding: 6px 12px; border-bottom: 2px solid transparent; }
+.h-nav a:hover { color: var(--text); border-bottom-color: var(--cyan); }
+
+.h-main { max-width: 1180px; margin: 0 auto; padding: clamp(20px, 4vw, 44px) clamp(16px, 4vw, 48px) 60px; }
+
+/* the three actions */
+.h-acts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+.act { --c: var(--cyan); position: relative; display: grid; gap: 6px; padding: 26px 24px 24px; min-height: 160px; align-content: end;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--c) 10%, #0d141a), #0a0e13 70%);
+  border: 1px solid color-mix(in srgb, var(--c) 40%, transparent);
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  transition: transform .15s, border-color .15s, background .15s; }
+.act:hover { transform: translateY(-3px); border-color: var(--c); background: linear-gradient(160deg, color-mix(in srgb, var(--c) 18%, #0d141a), #0a0e13 70%); }
+.act:focus-visible { outline: 2px solid var(--c); outline-offset: 3px; }
+.act b { font: 700 1.7rem/1.05 var(--head); letter-spacing: .04em; text-transform: uppercase; color: var(--c); }
+.act span:not(.act-k) { color: var(--dim); font-size: 13.5px; }
+.act-k { position: absolute; top: 14px; right: 20px; font: 700 2.4rem/1 var(--head); color: color-mix(in srgb, var(--c) 22%, transparent); }
+.act-review { --c: var(--yellow); }
+.act-play { --c: var(--red); }
+
+/* your games */
+.h-games { margin-top: 40px; }
+.h-games-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; }
+.h-games h2 { margin: 0; font: 700 1.05rem var(--head); letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); }
+.g-list { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); }
+.g-list li { display: grid; grid-template-columns: 96px minmax(0, 1fr) 56px 120px auto; align-items: center; gap: 14px; padding: 10px 14px; border-bottom: 1px solid #1a1a24; }
+.g-list li:last-child { border-bottom: 0; }
+.g-list li:hover { background: rgba(63,212,255,.05); }
+.g-list li.dim { display: block; }
+.g-date { color: var(--dim); font-variant-numeric: tabular-nums; font-size: 13px; }
+.g-who { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.g-who i { color: var(--dim); font-style: normal; margin: 0 4px; }
+.g-list .res { font: 700 .78rem var(--head); letter-spacing: .08em; text-transform: uppercase; padding: 1px 0; border-radius: 4px; text-align: center; }
+.g-state { text-align: right; }
+.acc-n { font: 700 1.35rem/1 var(--head); color: var(--yellow); font-variant-numeric: tabular-nums; }
+.acc-n::after { content: ' acc'; font-size: .7rem; letter-spacing: .1em; color: var(--dim); text-transform: uppercase; }
+.tag { font: 700 .72rem var(--head); letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+.tag.old { color: #ffb347; }
+.g-acts { display: flex; gap: 6px; justify-content: flex-end; }
+.hb { font: 700 .78rem var(--head); letter-spacing: .08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid rgba(63,212,255,.45); background: #0f1a21;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px); white-space: nowrap; }
+.hb:hover { border-color: var(--cyan); color: #fff; background: #15283a; }
+.hb.pri { background: var(--yellow); color: #111; border-color: var(--yellow); }
+.hb.pri:hover { background: #fff36b; color: #111; }
+
+@media (max-width: 720px) {
+  .g-list li { grid-template-columns: 1fr auto; row-gap: 4px; }
+  .g-date { grid-column: 1 / -1; }
+  .g-list .res, .g-state { display: none; }
+}

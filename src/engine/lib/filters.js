@@ -83,6 +83,10 @@ function matchFilter(ref, filter, b, ctx) {
     const other = ctx?.bindings?.[filter.exclude_binding];
     if (other && other.iid === ref.iid) return false;
   }
+  if (filter.holds_value_of !== undefined && !globalThis.__eddiesLegacy?.on) {
+    const src = ctx?.bindings?.[filter.holds_value_of];
+    if (src && typeof src.value === 'number' && typeof ref.sides === 'number' && src.value > ref.sides) return false;
+  }
   if (filter.opposite_side_of !== undefined) {
     const other = ctx?.bindings?.[filter.opposite_side_of];
     if (!other || !other._pid || other._pid === ref._pid) return false;

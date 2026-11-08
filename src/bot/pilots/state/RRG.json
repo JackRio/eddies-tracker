@@ -76,7 +76,7 @@
    "WNTC-086": 3,
    "WNTC-080": 1,
    "WNTC-007": 2,
-   "WNTC-022": 3,
+   "WNTC-022": 2,
    "WNTC-025": 3,
    "WNTC-094": 1,
    "WNTC-026": 2,
@@ -85,11 +85,11 @@
    "WNTC-033": 1,
    "WNTC-101": 1,
    "WNTC-102": 3,
-   "WNTC-029": 1,
-   "WNTC-032": 1,
+   "WNTC-029": 2,
+   "WNTC-032": 2,
    "WNTC-100": 2,
    "WNTC-030": 3,
-   "WNTC-079": 2
+   "WNTC-079": 1
   },
   "side": {
    "WNTC-100": 1,
@@ -102,8 +102,8 @@
   },
   "change": {
    "kind": "main",
-   "out": "WNTC-029",
-   "in": "WNTC-079"
+   "out": "WNTC-022",
+   "in": "WNTC-032"
   }
  },
  "tune": {
@@ -112,39 +112,39 @@
    24
   ],
   "chall": [
-   9,
-   14
+   2,
+   3
   ]
  },
  "first": {
   "YYR": {
    "first": [
-    53,
-    97
+    90,
+    162
    ],
    "second": [
-    41,
-    108
+    74,
+    171
    ]
   },
   "BBG": {
    "first": [
-    83,
-    107
+    117,
+    146
    ],
    "second": [
-    60,
-    103
+    83,
+    140
    ]
   },
   "RGB": {
    "first": [
-    57,
-    83
+    88,
+    140
    ],
    "second": [
-    39,
-    78
+    59,
+    131
    ]
   },
   "deck:choombattler-alt-dexter-v": {
@@ -159,12 +159,12 @@
   },
   "RRG": {
    "first": [
-    36,
-    58
+    52,
+    87
    ],
    "second": [
-    22,
-    58
+    35,
+    89
    ]
   },
   "deck:choombattler-dexter-muamar-v": {
@@ -279,18 +279,18 @@
   },
   "pub:River's Closet": {
    "first": [
-    6,
-    6
+    8,
+    10
    ],
    "second": [
-    0,
-    0
+    1,
+    4
    ]
   },
   "pub:Panam Panam Panam": {
    "first": [
     3,
-    5
+    7
    ],
    "second": [
     0,
@@ -369,12 +369,12 @@
   },
   "pub:YYR-RRR": {
    "first": [
-    2,
-    3
+    3,
+    5
    ],
    "second": [
-    0,
-    0
+    1,
+    1
    ]
   },
   "pub:The Lone Rangers": {
@@ -449,18 +449,18 @@
   },
   "deck:coverage-24": {
    "first": [
-    3,
-    3
+    7,
+    7
    ],
    "second": [
     1,
-    1
+    2
    ]
   },
   "pub:BBG ~ Mirror Match": {
    "first": [
-    1,
-    1
+    3,
+    3
    ],
    "second": [
     1,
@@ -549,12 +549,12 @@
   },
   "deck:coverage-17": {
    "first": [
-    1,
-    1
+    2,
+    2
    ],
    "second": [
-    1,
-    1
+    2,
+    3
    ]
   },
   "deck:coverage-12": {
@@ -570,7 +570,7 @@
   "deck:choombattler-alt-hanako-jackie-bo3": {
    "first": [
     3,
-    3
+    5
    ],
    "second": [
     1,
@@ -589,8 +589,8 @@
   },
   "deck:choombattler-adam-dexter-saburo": {
    "first": [
-    0,
-    0
+    1,
+    3
    ],
    "second": [
     2,
@@ -639,7 +639,27 @@
   },
   "pub:Adam Smasher ~ YYR": {
    "first": [
-    0,
+    1,
+    5
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-03": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    3
+   ]
+  },
+  "deck:coverage-08": {
+   "first": [
+    2,
     2
    ],
    "second": [
@@ -647,7 +667,207 @@
     0
    ]
   },
-  "deck:coverage-03": {
+  "net:yyb-turb0-9a0ad5a2": {
+   "first": [
+    1,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:adam-smash-you-147e0930": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:hanako-control-7b1ba5d2": {
+   "first": [
+    3,
+    5
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:coverage-01": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:bbbraindance-version-2-0-3fdd9fa6": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "deck:coverage-23": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-21": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:rry-aggro-meta-8f6ace55": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:new-deck-f5b474c5": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:the-big-leagues-3dad4ad4": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:first-time-1a2163d8": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:new-deck-fec9d243": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:afterlife-a1ebdd02": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:new-deck-858fd62f": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "deck:choombattler-dexter-padre-wakako": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:panam-panam-panam-5b2777de": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:controlinho-36dd099a": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:ladies-of-the-blackwall-ef072595": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:rrb-aggro-bds-495f319d": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:braindance-ladies-7b5c3661": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "pub:Adam's River": {
    "first": [
     1,
     1
@@ -1588,8 +1808,108 @@
     52
    ],
    "p": 0.86
+  },
+  {
+   "at": 366,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-029",
+    "in": "WNTC-079",
+    "outName": "Bonnie and Clyde",
+    "inName": "Maelstrom Zealots"
+   },
+   "chall": [
+    16,
+    24
+   ],
+   "champ": [
+    21,
+    24
+   ],
+   "p": 0.04
+  },
+  {
+   "at": 404,
+   "verdict": "rejected",
+   "change": {
+    "kind": "side",
+    "out": "WNTC-031",
+    "in": "WNTC-027",
+    "outName": "Detonate",
+    "inName": "All is Lost"
+   },
+   "chall": [
+    13,
+    24
+   ],
+   "champ": [
+    21,
+    24
+   ],
+   "p": 0
+  },
+  {
+   "at": 445,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-080",
+    "in": "WNTC-078",
+    "outName": "MaxTac AV",
+    "inName": "Field Operator"
+   },
+   "chall": [
+    13,
+    24
+   ],
+   "champ": [
+    21,
+    24
+   ],
+   "p": 0.01
+  },
+  {
+   "at": 482,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-031",
+    "in": "WNTC-079",
+    "outName": "Detonate",
+    "inName": "Maelstrom Zealots"
+   },
+   "chall": [
+    13,
+    24
+   ],
+   "champ": [
+    21,
+    24
+   ],
+   "p": 0.01
+  },
+  {
+   "at": 522,
+   "verdict": "rejected",
+   "change": {
+    "kind": "side",
+    "out": "WNTC-029",
+    "in": "WNTC-026",
+    "outName": "Bonnie and Clyde",
+    "inName": "Satori: Sword of Saburo"
+   },
+   "chall": [
+    14,
+    24
+   ],
+   "champ": [
+    21,
+    24
+   ],
+   "p": 0.02
   }
  ],
  "version": 3,
- "matches": 349
+ "matches": 527
 }

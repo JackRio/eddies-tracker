@@ -1,0 +1,1797 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-13-jackrio-vs-omegabone-972812ac.json",
+ "matchId": "972812ac-7fbc-4777-89b8-5641cb15c539",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "omegabone",
+ "result": {
+  "loserId": "player1",
+  "reason": "omegabone reached 7 Gig dice.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Muamar Reyes: El Capitán",
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid"
+   ]
+  },
+  "rival": {
+   "source": "18 cards seen in the game, rest from meta deck \"Alt Cunningham / Hanako Arasaka / Jackie Welles (4 Blue / 2 Green)\"",
+   "legends": [
+    "Hanako Arasaka: Daughter of the Emperor",
+    "Alt Cunningham: Soulkiller Architect",
+    "Jackie Welles: Pour One Out For Me"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 23,
+ "summary": {
+  "counts": {
+   "great": 2,
+   "good": 16,
+   "okay": 3,
+   "misplay": 2,
+   "mistake": 2,
+   "blunder": 1
+  },
+  "moves": 26,
+  "avgLoss": 3.6,
+  "accuracy": 64
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "moves": [
+    {
+     "from": 8,
+     "to": 9,
+     "end": false,
+     "log": [
+      "JackRio sold Zetatech Faceplate into Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 53.1
+     },
+     "best": {
+      "text": "Play Unit Augmented Negotiators",
+      "p": 62.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "a3ce1c14"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "cf5bed81"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "cc240dce"
+       },
+       {
+        "step": "play_card",
+        "iid": "be10b980"
+       }
+      ]
+     },
+     "loss": 9.1,
+     "se": 2.2,
+     "options": [
+      {
+       "text": "Play Unit Augmented Negotiators",
+       "p": 62.2,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 62.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 54,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 53.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 53.1,
+       "yours": true
+      },
+      {
+       "text": "Sell Detonate",
+       "p": 51.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Zetatech Faceplate.",
+       "The better move plays Augmented Negotiators.",
+       "You start your next turn with 6.9 cards in hand, instead of 6."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.7083333333333334,
+        "rivalUnits": 0.875,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.7083333333333334,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 6.875
+       }
+      },
+      "better": "Play Unit Augmented Negotiators"
+     }
+    },
+    {
+     "from": 9,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio played Augmented Negotiators by spending 1 Eddie and 2 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Augmented Negotiators",
+      "p": 64.2
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 2.7,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 64.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Augmented Negotiators",
+       "p": 64.2,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 53.6,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 37.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 30.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 10,
+     "to": 12,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Muamar Reyes — El Capitán was revealed.",
+      "JackRio drew Carnage at the Colosseum with Muamar Reyes — El Capitán."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 3 face-down\n  skip ()",
+      "p": 63.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 63.6,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 51.9,
+       "yours": false
+      },
+      {
+       "text": "Play Program Detonate",
+       "p": 46.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move calls Muamar Reyes.",
+       "You start your next turn with 6.9 cards in hand, instead of 6."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.7083333333333334,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 6.875
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.7083333333333334,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 6
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 12,
+     "to": 13,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 69
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 69,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 19,
+   "moves": [
+    {
+     "from": 19,
+     "to": 20,
+     "end": false,
+     "log": [
+      "JackRio sold Detonate into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Detonate",
+      "p": 76.9
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Augmented Negotiators",
+      "p": 79,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "be10b980",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 2.1,
+     "se": 0.4,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Augmented Negotiators",
+       "p": 79,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 79,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 79,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 78.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Detonate",
+       "p": 76.9,
+       "yours": true
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 76.5,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move sells Detonate.",
+       "The better move takes 1 Gig."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 3.0416666666666665,
+        "units": 1.6666666666666667,
+        "rivalUnits": 1.75,
+        "hand": 6.791666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 3.0416666666666665,
+        "units": 1.6666666666666667,
+        "rivalUnits": 1.75,
+        "hand": 6.791666666666667
+       }
+      },
+      "better": "Attack opponent's Gigs with Augmented Negotiators"
+     }
+    },
+    {
+     "from": 20,
+     "to": 21,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 2 Eddies and 2 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 82.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Augmented Negotiators",
+       "p": 82.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 82.3,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 82.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 72.4,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Augmented Negotiators",
+       "p": 67.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 36.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 21,
+     "to": 22,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. V — Streetkid was revealed.",
+      "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, but had no Braindance Program in trash to recover."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 86.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3.6,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Augmented Negotiators",
+       "p": 82.7,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 82.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 78.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 22,
+     "to": 23,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 84.4
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Augmented Negotiators",
+      "p": 86.7,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "be10b980",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 2.3,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Augmented Negotiators",
+       "p": 86.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 84.4,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": "You ended the turn with a useful play left.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "The better move takes 1 Gig.",
+       "The Rival has 3.1 Gigs by your next turn on average, instead of 4.1.",
+       "You hold 2.9 Gigs at your next turn on average, instead of 1.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9166666666666667,
+        "rivalGigs": 4.083333333333333,
+        "units": 1.5833333333333333,
+        "rivalUnits": 1.7916666666666667,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.875,
+        "rivalGigs": 3.125,
+        "units": 1.6666666666666667,
+        "rivalUnits": 1.8333333333333333,
+        "hand": 6
+       }
+      },
+      "better": "Attack opponent's Gigs with Augmented Negotiators"
+     }
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 38,
+   "moves": [
+    {
+     "from": 38,
+     "to": 39,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to V — Streetkid by spending 2 Eddies."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on V",
+      "p": 31.2
+     },
+     "best": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 64.6,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "43c4c831"
+       }
+      ]
+     },
+     "loss": 33.4,
+     "se": 4.2,
+     "options": [
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 64.6,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 63.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 63.5,
+       "yours": false
+      },
+      {
+       "text": "V goes Solo",
+       "p": 60.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 52.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 26,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The better move sells Zetatech Faceplate."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.875,
+        "rivalGigs": 5.125,
+        "units": 0.625,
+        "rivalUnits": 2,
+        "hand": 5.041666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.875,
+        "rivalGigs": 5.125,
+        "units": 0.5416666666666666,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 5
+       }
+      },
+      "better": "Sell Zetatech Faceplate"
+     }
+    },
+    {
+     "from": 39,
+     "to": 40,
+     "end": false,
+     "log": [
+      "JackRio sold Bonnie and Clyde into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bonnie and Clyde",
+      "p": 35.6
+     },
+     "best": {
+      "text": "Sell Carnage at the Colosseum",
+      "p": 36.6,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "6c6dd41e"
+       }
+      ]
+     },
+     "loss": 1,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 36.6,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 35.6,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 10.4,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 9.5,
+       "yours": false
+      },
+      {
+       "text": "Call Dexter DeShawn - last face-down Legend",
+       "p": 8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Bonnie and Clyde.",
+       "The better move sells Carnage at the Colosseum."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 5.041666666666667,
+        "units": 0.75,
+        "rivalUnits": 2.0833333333333335,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 5.041666666666667,
+        "units": 0.75,
+        "rivalUnits": 2.0833333333333335,
+        "hand": 5
+       }
+      },
+      "better": "Sell Carnage at the Colosseum"
+     }
+    },
+    {
+     "from": 40,
+     "to": 42,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Dexter DeShawn — Off the Grid was revealed.",
+      "JackRio drew Detonate with Dexter DeShawn — Off the Grid."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call Dexter DeShawn - last face-down Legend\n  skip ()",
+      "p": 11.4
+     },
+     "best": {
+      "text": "Play Unit Meredith Stout",
+      "p": 29.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "859df414"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "cc240dce"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "a3ce1c14"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "cf5bed81"
+       },
+       {
+        "step": "play_card",
+        "iid": "d7dd8256"
+       }
+      ]
+     },
+     "loss": 18.5,
+     "se": 4.3,
+     "options": [
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 29.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 11.4,
+       "yours": false
+      },
+      {
+       "text": "Call Dexter DeShawn - last face-down Legend",
+       "p": 11.4,
+       "yours": true
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 9.9,
+       "yours": false
+      },
+      {
+       "text": "Play Program Carnage at the Colosseum",
+       "p": 7.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move calls Dexter DeShawn.",
+       "The better move plays Meredith Stout.",
+       "You keep 0.5 Units through their turn on average, instead of 0."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 0,
+        "rivalUnits": 1.875,
+        "hand": 6.041666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 0.5,
+        "rivalUnits": 2,
+        "hand": 5.083333333333333
+       }
+      },
+      "better": "Play Unit Meredith Stout"
+     }
+    },
+    {
+     "from": 42,
+     "to": 45,
+     "end": false,
+     "log": [
+      "JackRio used Dexter DeShawn — Off the Grid to increase JackRio's d8 from 1 to 3."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use Dexter DeShawn\n  picks own d8 (1)\n  amount → 2",
+      "p": 11
+     },
+     "best": {
+      "text": "End turn",
+      "p": 11.6,
+      "seq": [
+       {
+        "step": "end_turn"
+       }
+      ]
+     },
+     "loss": 0.6,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 11.6,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 11.6,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 11.6,
+       "yours": false
+      },
+      {
+       "text": "Play Program Detonate",
+       "p": 6.9,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Stopping here was better: the rest of the turn costs more than it gains.",
+      "reasons": [],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.875,
+        "rivalGigs": 5.125,
+        "units": 0,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.875,
+        "rivalGigs": 5.125,
+        "units": 0,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 6
+       }
+      },
+      "better": "End turn"
+     }
+    },
+    {
+     "from": 45,
+     "to": 48,
+     "end": false,
+     "log": [
+      "JackRio played Detonate by spending 1 Legend.",
+      "JackRio's Detonate had no rival Gear with power 2 or less to defeat.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 3 to 4.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Yorinobu Arasaka — Steel Dragon."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 11.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 11.1,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 11.1,
+       "yours": false
+      },
+      {
+       "text": "Play Program Detonate",
+       "p": 6.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 48,
+     "to": 49,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 10.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 10.4,
+       "yours": true
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 10.4,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 67,
+   "moves": [
+    {
+     "from": 67,
+     "to": 68,
+     "end": false,
+     "log": [
+      "JackRio sold Carnage at the Colosseum into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Carnage at the Colosseum",
+      "p": 2.7
+     },
+     "best": null,
+     "loss": 0.3,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "Sell Mantis Blades",
+       "p": 3,
+       "yours": false
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 2.7,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 1.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "V goes Solo",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 68,
+     "to": 74,
+     "end": false,
+     "log": [
+      "JackRio played Yorinobu Arasaka — Steel Dragon by spending 4 Eddies and 3 Legends.",
+      "JackRio used Zetatech Faceplate to adjust omegabone's d4 from 1 to 2.",
+      "JackRio may play a cheap Unit from hand or trash for free with Yorinobu Arasaka — Steel Dragon.",
+      "JackRio played Augmented Negotiators for free."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Yorinobu Arasaka\n  picks a hidden card\n  picks opponent's d4 (1)\n  amount → 1\n  yes ()\n  picks Augmented Negotiators",
+      "p": 5.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.2,
+     "options": [
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 2.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 2.4,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "V goes Solo",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 74,
+     "to": 75,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 6,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 96,
+   "moves": [
+    {
+     "from": 96,
+     "to": 97,
+     "end": false,
+     "log": [
+      "JackRio sold Shattered Memories into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Shattered Memories",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Mantis Blades",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Shattered Memories",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 97,
+     "to": 100,
+     "end": false,
+     "log": [
+      "JackRio sent V — Streetkid GO SOLO onto the field.",
+      "JackRio used Zetatech Faceplate to adjust omegabone's d6 from 1 to 2.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew 6th Street Recruits."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 18.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "V goes Solo",
+       "p": 16.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Mantis Blades on Yorinobu Arasaka",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 100,
+     "to": 101,
+     "end": false,
+     "log": [
+      "JackRio equipped Mantis Blades to V — Streetkid by spending 1 Eddie."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Mantis Blades on V",
+      "p": 41.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3.9,
+     "options": [
+      {
+       "text": "Play Mantis Blades on V",
+       "p": 41.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with V",
+       "p": 23.9,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 20.1,
+       "yours": false
+      },
+      {
+       "text": "Play Mantis Blades on Yorinobu Arasaka",
+       "p": 19.9,
+       "yours": false
+      },
+      {
+       "text": "Attack Pepe Najarro with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Jacked-In Voodoo Boy with V",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Mantis Blades.",
+       "The bot's pick takes 1 Gig.",
+       "The Rival has 7.7 Gigs by your next turn on average, instead of 8.5.",
+       "You hold 4.3 Gigs at your next turn on average, instead of 3.5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.333333333333333,
+        "rivalGigs": 7.666666666666667,
+        "units": 1,
+        "rivalUnits": 3.125,
+        "hand": 6.791666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.5416666666666665,
+        "rivalGigs": 8.458333333333334,
+        "units": 1,
+        "rivalUnits": 2.375,
+        "hand": 6.791666666666667
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 101,
+     "to": 104,
+     "end": false,
+     "log": [
+      "JackRio used Dexter DeShawn — Off the Grid to increase omegabone's d8 from 1 to 3."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use Dexter DeShawn\n  picks opponent's d8 (1)\n  amount → 2",
+      "p": 25.6
+     },
+     "best": {
+      "text": "Play Program Industrial Assembly",
+      "p": 38.6,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "a3ce1c14"
+       },
+       {
+        "step": "play_card",
+        "iid": "e435fff0"
+       }
+      ]
+     },
+     "loss": 13,
+     "se": 3.2,
+     "options": [
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 41.7,
+       "yours": true
+      },
+      {
+       "text": "Play Program Industrial Assembly",
+       "p": 38.6,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with V",
+       "p": 37.3,
+       "yours": false
+      },
+      {
+       "text": "Attack Pepe Najarro with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Jacked-In Voodoo Boy with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.375,
+        "rivalGigs": 7.625,
+        "units": 1,
+        "rivalUnits": 3.1666666666666665,
+        "hand": 6.875
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.333333333333333,
+        "rivalGigs": 7.666666666666667,
+        "units": 1,
+        "rivalUnits": 3.0416666666666665,
+        "hand": 6.708333333333333
+       }
+      },
+      "better": "Play Program Industrial Assembly"
+     }
+    },
+    {
+     "from": 104,
+     "to": 107,
+     "end": false,
+     "log": [
+      "JackRio played Industrial Assembly by spending 1 Legend.",
+      "JackRio used Industrial Assembly to increase omegabone's d12 from 1 to 5.",
+      "JackRio controlled a Gig with 8+ value and drew Satori — Sword of Saburo."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Industrial Assembly\n  picks own d12 (1)\n  amount → 4",
+      "p": 22.2
+     },
+     "best": {
+      "text": "Use Muamar Reyes",
+      "p": 24.4,
+      "seq": [
+       {
+        "step": "activate_anytime_spend",
+        "iid": "a3ce1c14",
+        "ability_idx": 0
+       }
+      ]
+     },
+     "loss": 2.2,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "Use Muamar Reyes",
+       "p": 24.4,
+       "yours": false
+      },
+      {
+       "text": "Play Program Industrial Assembly",
+       "p": 21.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with V",
+       "p": 20.8,
+       "yours": false
+      },
+      {
+       "text": "Attack Pepe Najarro with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Jacked-In Voodoo Boy with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.458333333333333,
+        "rivalGigs": 7.541666666666667,
+        "units": 1,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 7
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.458333333333333,
+        "rivalGigs": 7.541666666666667,
+        "units": 1,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 7
+       }
+      },
+      "better": "Use Muamar Reyes"
+     }
+    },
+    {
+     "from": 107,
+     "to": 116,
+     "end": false,
+     "log": [
+      "JackRio chose V — Streetkid to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with V — Streetkid. omegabone must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust omegabone's d4 from 2 to 3.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew 6th Street Recruits.",
+      "omegabone played Take Control by spending 2 Legends.",
+      "omegabone used Take Control to make V — Streetkid steal 1 fewer Gig this turn.",
+      "V — Streetkid made a Gig attack on omegabone and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from omegabone.",
+      "JackRio stole d4 (3) from omegabone. JackRio now has 4 Gig dice."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 12.2
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with V",
+      "p": 22.5,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "cf5bed81",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 10.3,
+     "se": 7.2,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with V",
+       "p": 22.5,
+       "yours": false
+      },
+      {
+       "text": "Attack Pepe Najarro with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Jacked-In Voodoo Boy with V",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "The Rival has 7.4 Gigs by your next turn on average, instead of 8.5.",
+       "You hold 4.6 Gigs at your next turn on average, instead of 3.5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.4583333333333335,
+        "rivalGigs": 8.541666666666666,
+        "units": 1,
+        "rivalUnits": 3,
+        "hand": 7
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.583333333333333,
+        "rivalGigs": 7.416666666666667,
+        "units": 1,
+        "rivalUnits": 3.2083333333333335,
+        "hand": 7
+       }
+      },
+      "better": "Attack opponent's Gigs with V"
+     }
+    },
+    {
+     "from": 116,
+     "to": 117,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 8.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 8.3,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 12,
+   "stepA": 144,
+   "moves": [
+    {
+     "from": 144,
+     "to": 145,
+     "end": false,
+     "log": [
+      "JackRio sold Detonate into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Detonate",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Detonate",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 145,
+     "to": 148,
+     "end": false,
+     "log": [
+      "JackRio played Yorinobu Arasaka — Steel Dragon by spending 6 Eddies and 1 Legend.",
+      "JackRio may play a cheap Unit from hand or trash for free with Yorinobu Arasaka — Steel Dragon.",
+      "JackRio played 6th Street Recruits for free."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Yorinobu Arasaka\n  yes ()\n  picks 6th Street Recruits",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Yorinobu Arasaka",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 148,
+     "to": 150,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio's last action was undone by agreement."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 150,
+     "to": 153,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared 6th Street Recruits against Jacked-In Voodoo Boy. omegabone must respond after attack effects resolve.",
+      "6th Street Recruits (6) fought Jacked-In Voodoo Boy (2) and won.",
+      "Jacked-In Voodoo Boy was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 153,
+     "to": 154,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

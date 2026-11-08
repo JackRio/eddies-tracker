@@ -28,31 +28,95 @@
   const blank = { state: { game: { turnNumber: 0, stageLabel: 'Setup' }, players: { player1: emptyP('player1'), player2: emptyP('player2') } }, action: { label: 'Pick decks and a bot, then Start game' }, newLog: [], turn: 0 };
   Board.openLive({ match: { startedAt: Date.now() }, me: 'player1', rival: 'player2', labels: { player1: 'You', player2: 'Bot' }, steps: [blank], log: [] });
 
+  // deck menus: Random first, then ChoomBattler's meta lists, then the standard lists; a line under each
+  // menu shows the deck's colours / RAM and win rate, so the menu entries stay short
+  const variant = f => (/bo3/.test(f) ? ' · Bo3 list' : /-b\.txt$/.test(f) ? ' · list B' : '');
+  const deckName = d => `${d.tag} · ${d.legends.join(' / ')}${variant(d.file)}`;
+  const pips = cols => cols.map(([c, r]) => `<span class="pip ${c.toLowerCase()}"></span>${esc(c)} ${r}`).join('<span class="sep"></span>');
   fetch('/api/play/config').then(r => r.json()).then(c => {
     cfg = c;
-    const deckOpts = c.decks.map(d => `<option value="${esc(d.file)}">${esc(d.label)}${d.rate ? ` · ${esc(d.rate)}` : ''}</option>`).join('');
+    // a server started before Nov 7 2026 sends only file/label/rate: fill in what the menus need
+    for (const d of c.decks) {
+      d.group ||= d.file.startsWith('choombattler') ? 'meta' : 'standard';
+      d.legends ||= d.label.replace(/\s*\(.*$/, '').split(' / ');
+      d.colors ||= ((d.label.match(/\(([^)]*)\)/) || [])[1] || '').split(' / ').filter(Boolean).map(x => { const [col, r] = x.split(' '); return [col, +r]; });
+      d.tag ||= d.colors.map(([col, r]) => col[0].repeat(r >= 4 ? 2 : 1)).join('');
+    }
+    comm = c.sample || [];
+    // first menu = which list (an old server, without `community`, has no Random / Community)
+    const srcOpts = [['meta', `ChoomBattler meta (${c.decks.filter(d => d.group === 'meta').length})`], ['standard', `Standard (${c.decks.filter(d => d.group === 'standard').length})`],
+      ...('community' in c ? [['community', `Community (${c.community.toLocaleString()} · 8 at a time)`], ['random', '🎲 Random']] : [])];
+    for (const p of ['p1', 'p2']) $(`src-${p}`).innerHTML = srcOpts.map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
     const botOpts = c.bots.map(b => `<option value="${b.id}">${esc(b.name)}</option>`).join('');
-    for (const k of ['deck-p1', 'deck-p2']) $(k).innerHTML = deckOpts;
     for (const k of ['bot-p1', 'bot-p2']) $(k).innerHTML = botOpts;
-    $('mode').value = c.defaults.mode || 'watch';
+    $('mode').value = localStorage.getItem('eddies_setup_mode') || c.defaults.mode || 'watch';
     setMode();
   });
+  // segmented buttons drive the hidden <select>s the rest of the page reads
+  function seg(id, sel) {
+    const sync = () => { for (const b of $(id).children) b.classList.toggle('on', b.dataset.v === $(sel).value); };
+    $(id).onclick = e => { const b = e.target.closest('button'); if (!b) return; $(sel).value = b.dataset.v; $(sel).dispatchEvent(new Event('change')); sync(); };
+    return sync;
+  }
+  const syncMode = seg('mode-seg', 'mode'), syncFirst = seg('first-seg', 'first');
   function setMode() {
     const watch = $('mode').value === 'watch';
+    localStorage.setItem('eddies_setup_mode', $('mode').value);
     document.querySelector('.bot-p1').hidden = !watch;
     $('p1-label').textContent = watch ? 'Left bot' : 'You';
+    $('first-p1').textContent = watch ? 'Left' : 'You';
     const D = cfg.defaults;
-    $('deck-p1').value = D.p1;
+    // bot vs bot: both sides start on "any deck from the lists" (a fresh matchup each game)
+    setDeck('p1', watch ? 'random' : D.p1);
     $('bot-p1').value = D.bot;
     $('bot-p2').value = D.bot;
-    $('deck-p2').value = D.p2;
+    setDeck('p2', watch ? 'random' : D.p2);
+    syncMode(); syncFirst(); about();
+  }
+  // two menus per side: the list (#src-pN), then a deck from it (#deck-pN, what the game starts with).
+  // Community shows 8 decks at a time; ↻ swaps in 8 others (a deck already picked on either side stays).
+  let comm = [];
+  function deckOpts(src) {
+    if (src === 'random') return `<option value="random">Any deck from the lists</option>${cfg.community ? '<option value="random-net">Any community deck</option>' : ''}`;
+    if (src === 'community') return comm.map(d => `<option value="${esc(d.file)}">${esc(d.tag + ' · ' + (d.title || d.legends.join(' / ')))}</option>`).join('');
+    return cfg.decks.filter(d => d.group === src).map(d => `<option value="${esc(d.file)}">${esc(deckName(d))}</option>`).join('');
+  }
+  const srcOf = f => (/^random/.test(f) ? 'random' : comm.some(d => d.file === f) ? 'community' : cfg.decks.find(d => d.file === f)?.group || 'meta');
+  function fillDecks(p, src) {
+    const keep = $(`deck-${p}`).value;
+    $(`src-${p}`).value = src;
+    $(`deck-${p}`).innerHTML = deckOpts(src);
+    if ([...$(`deck-${p}`).options].some(o => o.value === keep)) $(`deck-${p}`).value = keep;
+    document.querySelector(`.reroll[data-p=${p}]`).hidden = src !== 'community';
+  }
+  function setDeck(p, f) { fillDecks(p, srcOf(f)); $(`deck-${p}`).value = f; }
+  for (const p of ['p1', 'p2']) $(`src-${p}`).onchange = () => { fillDecks(p, $(`src-${p}`).value); about(); };
+  for (const b of document.querySelectorAll('.reroll')) b.onclick = async () => {
+    const keep = ['p1', 'p2'].map(p => $(`deck-${p}`).value), kept = comm.filter(d => keep.includes(d.file));
+    const fresh = await fetch(`/api/play/community?skip=${encodeURIComponent(comm.map(d => d.file).join(','))}`).then(r => r.json());
+    comm = [...kept, ...fresh];
+    for (const p of ['p1', 'p2']) if ($(`src-${p}`).value === 'community') fillDecks(p, 'community');
+    $(`deck-${b.dataset.p}`).value = fresh[0].file;    // show one of the new ones on the side you clicked
     about();
+  };
+  function deckInfo(p) {
+    const f = $(`deck-${p}`).value, c = comm.find(x => x.file === f);
+    if (c) { $(`info-${p}`).innerHTML = pips(c.colors) + `<span class="rate">${esc(c.legends.join(' / '))}${c.likes ? ` · ♥ ${c.likes}` : ''}</span>`; return; }
+    const d = cfg.decks.find(x => x.file === f);
+    $(`info-${p}`).innerHTML = f === 'random' ? `One of the ${cfg.decks.length} meta / standard lists, picked at the start`
+      : f === 'random-net' ? `One of ${cfg.community.toLocaleString()} public netdeck.gg lists`
+      : d ? pips(d.colors) + (d.rate ? `<span class="rate">${esc(d.rate.replace(' over ', ' win · '))}</span>` : '') : '';
   }
   function about() {
-    const ids = [$('mode').value === 'watch' && $('bot-p1').value, $('bot-p2').value].filter(Boolean);
-    $('bot-about').innerHTML = [...new Set(ids)].map(i => { const b = cfg.bots.find(x => x.id === i); return `<p><b>${esc(b.name)}</b>: ${esc(b.about)}</p>`; }).join('');
+    for (const p of ['p1', 'p2']) {
+      deckInfo(p);
+      const isBot = p === 'p2' || $('mode').value === 'watch';
+      const b = isBot && cfg.bots.find(x => x.id === $(`bot-${p}`).value);
+      $(`about-${p}`).innerHTML = b ? `<ul>${[].concat(b.about).map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+    }
   }
   $('mode').onchange = setMode;
+  for (const k of ['deck-p1', 'deck-p2', 'bot-p1', 'bot-p2']) $(k).addEventListener('change', about);
   // ── undo (play mode): the server restores the game before your last decision; the board reloads there ──
   async function undoMove() {
     if (!id || !last || last.mode !== 'play') return;
@@ -93,6 +157,7 @@
     $('watch-box').hidden = !watch;
     $('undo').hidden = watch;
     document.body.classList.toggle('playing', !watch);   // no replay timeline / match header while you play
+    document.body.classList.toggle('watching', watch);   // bot vs bot: the board's own labels say who is who
     $('think-box').hidden = false;
     panels(q);
     loop(my);
@@ -291,4 +356,81 @@
     const L = last.match.labels, D = last.match.decks;
     $('match-info').innerHTML = `<span class="who"><b>${esc(L.player1)}</b> <small>${esc(D.player1)}</small> vs <b>${esc(L.player2)}</b> <small>${esc(D.player2)}</small></span>`;
   });
+
+  // ── flag a log line: ⚑ -> Misplay (what the bot did wrong), Good play (what made it good) or UI issue (the
+  // board / log showed something wrong), a grade, reasons and a note, saved by the server (notes/bot-flags/flags.jsonl; scripts/flags.js lists them)
+  let flagKinds = {}, flags = {}, flagGame = null, flagStep = null, flagDraft = null;
+  async function loadFlags() {
+    if (!id) return;
+    const r = await fetch(`/api/play/${id}/flags`).then(r => r.json()).catch(() => null);
+    if (!r) return;
+    flagKinds = r.kinds || {}; flags = r.flags; flagGame = id;
+    markFlags();
+  }
+  const kindOf = f => (f && f.kind) || 'misplay';
+  function markFlags() {
+    if (!id) return;
+    if (flagGame !== id) { flags = {}; loadFlags(); return; }
+    for (const li of $('log').querySelectorAll('.e')) {
+      let b = li.querySelector('.flag-btn');
+      if (!b) { b = document.createElement('button'); b.type = 'button'; b.className = 'flag-btn'; b.textContent = '⚑'; li.appendChild(b); }
+      const f = flags[li.dataset.step], k = f && kindOf(f);
+      li.classList.toggle('flagged', k === 'misplay');
+      li.classList.toggle('flagged-good', k === 'good');
+      li.classList.toggle('flagged-ui', k === 'ui');
+      b.title = f ? [`${flagKinds[k]?.label || k}${f.grade ? ` · ${f.grade}` : ''}`, f.tags.join(', '), f.note].filter(Boolean).join(' - ') : 'Flag this play';
+    }
+  }
+  document.addEventListener('board:log', markFlags);
+  // one draft per kind, so switching Misplay <-> Good play keeps what you picked on each side
+  function drawFlagDlg() {
+    const k = flagDraft.kind, K = flagKinds[k] || { grades: [], tags: [] }, d = flagDraft[k];
+    $('flag-dlg').dataset.kind = k;
+    for (const b of $('flag-kind').querySelectorAll('button')) b.classList.toggle('on', b.dataset.kind === k);
+    $('flag-grade').innerHTML = K.grades.map(g => `<button type="button" class="${d.grade === g ? 'on' : ''}">${esc(g)}</button>`).join('');
+    $('flag-why').textContent = k === 'good' ? 'What was good' : k === 'ui' ? 'What looks wrong' : 'What was wrong';
+    // a server started before these groups existed sends none: say so instead of empty rows
+    const old = !K.grades.length;
+    $('flag-old').hidden = !old;
+    for (const x of ['flag-kind', 'flag-save', 'flag-note']) $(x).hidden = old;
+    for (const x of document.querySelectorAll('.flag-sec')) x.hidden = old;
+    $('flag-tags').innerHTML = K.tags.map(t => `<button type="button" class="chip${d.tags.includes(t) ? ' on' : ''}">${esc(t)}</button>`).join('');
+    $('flag-note').placeholder = K.ask || '';
+    $('flag-note').value = d.note;
+  }
+  const keepNote = () => { flagDraft[flagDraft.kind].note = $('flag-note').value; };
+  $('log').addEventListener('click', e => {
+    const b = e.target.closest('.flag-btn');
+    if (!b) return;
+    e.stopPropagation();                               // don't also jump the board to this step
+    const li = b.closest('.e');
+    flagStep = li.dataset.step;
+    const f = flags[flagStep], k = f ? kindOf(f) : 'misplay';
+    const blank = kk => ({ grade: flagKinds[kk]?.grades[1], tags: [], note: '' });
+    flagDraft = { kind: k, misplay: blank('misplay'), good: blank('good'), ui: blank('ui') };
+    // older flags kept the grade among their tags
+    if (f) flagDraft[k] = { grade: f.grade || flagKinds[k]?.grades.find(g => f.tags.includes(g)) || flagDraft[k].grade,
+      tags: f.tags.filter(t => flagKinds[k]?.tags.includes(t)), note: f.note || '' };
+    $('flag-line').textContent = li.title || li.textContent.replace('⚑', '').trim();
+    $('flag-remove').hidden = !f;
+    drawFlagDlg();
+    $('flag-dlg').showModal();
+    $('flag-note').focus();
+  }, true);
+  $('flag-kind').onclick = e => { const b = e.target.closest('button'); if (!b) return; keepNote(); flagDraft.kind = b.dataset.kind; drawFlagDlg(); };
+  $('flag-grade').onclick = e => { const b = e.target.closest('button'); if (!b) return; keepNote(); flagDraft[flagDraft.kind].grade = b.textContent; drawFlagDlg(); };
+  $('flag-tags').onclick = e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    const d = flagDraft[flagDraft.kind], t = c.textContent;
+    d.tags = d.tags.includes(t) ? d.tags.filter(x => x !== t) : [...d.tags, t];
+    c.classList.toggle('on');
+  };
+  $('flag-cancel').onclick = () => $('flag-dlg').close();
+  async function sendFlag(body) {
+    const r = await post(`/api/play/${id}/flags`, { step: +flagStep, ...body });
+    if (r.error) { $('flag-line').textContent = r.error; return; }
+    flags = r.flags; markFlags(); $('flag-dlg').close();
+  }
+  $('flag-save').onclick = () => { const k = flagDraft.kind, d = flagDraft[k]; sendFlag({ kind: k, grade: d.grade, tags: d.tags, note: $('flag-note').value }); };
+  $('flag-remove').onclick = () => sendFlag({ remove: true });
 })();

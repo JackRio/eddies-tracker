@@ -1,0 +1,1558 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-01-jackrio-vs-puzonyyx-bc2f6f98.json",
+ "matchId": "bc2f6f98-4711-47a2-86cd-6c42930ceb9a",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "puzonyyx",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio reached 7 Gig dice.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax",
+    "River Ward: Detective on the Hunt"
+   ]
+  },
+  "rival": {
+   "source": "12 cards seen in the game, rest from meta deck \"Adam Smasher / River Ward / Viktor Vektor (4 Yellow / 2 Red)\"",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax",
+    "Adam Smasher: Ender of Legends"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 35,
+ "summary": {
+  "counts": {
+   "great": 3,
+   "good": 13,
+   "okay": 1,
+   "misplay": 2,
+   "mistake": 2,
+   "blunder": 1
+  },
+  "moves": 22,
+  "avgLoss": 3.7,
+  "accuracy": 63
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "moves": [
+    {
+     "from": 8,
+     "to": 9,
+     "end": false,
+     "log": [
+      "JackRio sold Arasaka Emergency Radioport into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Arasaka Emergency Radioport",
+      "p": 56
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 56,
+       "yours": true
+      },
+      {
+       "text": "Sell Satori",
+       "p": 54.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 54.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 54.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 52.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 19.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 9,
+     "to": 12,
+     "end": false,
+     "log": [
+      "JackRio played Dexter DeShawn: One Last Chance by spending 1 Eddie and 2 Legends.",
+      "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d12 from 9 to 10."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Dexter DeShawn\n  picks own d12 (9)\n  amount → 1",
+      "p": 58.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 58.3,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 57.3,
+       "yours": false
+      },
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 39.6,
+       "yours": false
+      },
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 39.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 26.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 12,
+     "to": 13,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Adam Smasher: Ender of Legends was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 3 face-down",
+      "p": 58.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 58.2,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 49.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 13,
+     "to": 14,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 59.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 59.8,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 23,
+   "moves": [
+    {
+     "from": 23,
+     "to": 24,
+     "end": false,
+     "log": [
+      "JackRio sold Satori: Sword of Saburo into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Satori",
+      "p": 61.2
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with Dexter DeShawn",
+      "p": 74.2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "701233cf",
+        "target": {
+         "kind": "unit",
+         "iid": "6dfc774d"
+        }
+       }
+      ]
+     },
+     "loss": 13,
+     "se": 1.4,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Dexter DeShawn",
+       "p": 74.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 61.2,
+       "yours": true
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 61,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 61,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 59.4,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 59.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Dexter DeShawn (4) beats Sketchy Ripper (0).",
+       "Your move sells Satori.",
+       "The better move removes the Rival's Sketchy Ripper.",
+       "The Rival is down to 1.8 Units, instead of 2.8."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.625,
+        "rivalGigs": 3.375,
+        "units": 1.9583333333333333,
+        "rivalUnits": 2.7916666666666665,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9583333333333333,
+        "rivalGigs": 4.041666666666667,
+        "units": 2,
+        "rivalUnits": 1.8333333333333333,
+        "hand": 5
+       }
+      },
+      "better": "Attack Sketchy Ripper with Dexter DeShawn"
+     }
+    },
+    {
+     "from": 24,
+     "to": 29,
+     "end": false,
+     "log": [
+      "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+      "JackRio declared Dexter DeShawn: One Last Chance against Sketchy Ripper. puzonyyx must respond after attack effects resolve.",
+      "JackRio used Dexter DeShawn: One Last Chance to decrease JackRio's d10 from 10 to 9.",
+      "Dexter DeShawn: One Last Chance (4) fought Sketchy Ripper (0) and won.",
+      "Sketchy Ripper was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Sketchy Ripper with Dexter DeShawn\n  picks own d10 (10)\n  amount → -1\n  Don't block / don't respond",
+      "p": 71.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Dexter DeShawn",
+       "p": 72.6,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 58.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 58.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 48.5,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 48.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 22.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Dexter DeShawn (4) beats Sketchy Ripper (0).",
+       "Your move removes the Rival's Sketchy Ripper.",
+       "The bot's pick takes 1 Gig.",
+       "The Rival is down to 1.9 Units, instead of 2.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 4,
+        "units": 2,
+        "rivalUnits": 1.875,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.75,
+        "rivalGigs": 3.25,
+        "units": 2,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 5
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 29,
+     "to": 32,
+     "end": false,
+     "log": [
+      "JackRio played Live with the Aftermath by spending 2 Eddies and 1 Legend.",
+      "Dexter DeShawn: One Last Chance was defeated. Live with the Aftermath required JackRio to defeat one of their Units.",
+      "Rockn' Rockerboy was defeated. Live with the Aftermath required puzonyyx to defeat one of their Units."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Live with the Aftermath",
+      "p": 35
+     },
+     "best": {
+      "text": "Play Unit Rockn' Rockerboy",
+      "p": 73.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "cc0661c9"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "96ffb894"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "0a7277b0"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "e202db6a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "4c927bd0"
+       },
+       {
+        "step": "play_card",
+        "iid": "860e0d1f"
+       }
+      ]
+     },
+     "loss": 38.3,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 73.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 66.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 43.4,
+       "yours": false
+      },
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 35,
+       "yours": false
+      },
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 35,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 28.9,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move removes the Rival's Rockn' Rockerboy and loses your Dexter DeShawn.",
+       "The better move plays Rockn' Rockerboy.",
+       "You keep 2 Units through their turn on average, instead of 1.",
+       "You start your next turn with 5 cards in hand, instead of 4."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0.9583333333333334,
+        "rivalUnits": 0.7916666666666666,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 4,
+        "units": 2,
+        "rivalUnits": 1.6666666666666667,
+        "hand": 5
+       }
+      },
+      "better": "Play Unit Rockn' Rockerboy"
+     }
+    },
+    {
+     "from": 32,
+     "to": 34,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Viktor Vektor: Sit Down and Relax was revealed.",
+      "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+      "JackRio revealed Zetatech Faceplate and Adrenaline Converter with Viktor Vektor and added them to hand."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 2 face-down\n  picks Mantis Blades, Zetatech Faceplate",
+      "p": 23.9
+     },
+     "best": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 36.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "0a7277b0"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "4c927bd0"
+       },
+       {
+        "step": "play_card",
+        "iid": "40376169"
+       }
+      ]
+     },
+     "loss": 12.9,
+     "se": 1.9,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 36.9,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 26,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 22.4,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Adam Smasher",
+       "p": 12.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move calls Viktor Vektor.",
+       "The better move plays Secondhand Bombus.",
+       "You keep 0.9 Units through their turn on average, instead of 0."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 5.333333333333333
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0.9166666666666666,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 4
+       }
+      },
+      "better": "Play Unit Secondhand Bombus"
+     }
+    },
+    {
+     "from": 34,
+     "to": 35,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 31.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 31.3,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 40,
+   "moves": [
+    {
+     "from": 40,
+     "to": 41,
+     "end": false,
+     "log": [
+      "JackRio sold Zetatech Faceplate into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 70.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 70.8,
+       "yours": true
+      },
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 70.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 70.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 68.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 36.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 41,
+     "to": 43,
+     "end": false,
+     "log": [
+      "JackRio played Live with the Aftermath by spending 3 Eddies.",
+      "JackRio had no Unit to defeat with Live with the Aftermath.",
+      "Johnny Silverhand: Never Stop Fighting was defeated. Live with the Aftermath required puzonyyx to defeat one of their Units."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Live with the Aftermath",
+      "p": 68.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.2,
+     "options": [
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 68.1,
+       "yours": true
+      },
+      {
+       "text": "Call River Ward - last face-down Legend",
+       "p": 61.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 41.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 38.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 24.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 43,
+     "to": 44,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. River Ward: Detective on the Hunt was revealed."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call River Ward - last face-down Legend",
+      "p": 61.9
+     },
+     "best": {
+      "text": "Play Unit Dexter DeShawn",
+      "p": 69.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "e202db6a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "4c927bd0"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "0a7277b0"
+       },
+       {
+        "step": "play_card",
+        "iid": "305661ce"
+       }
+      ]
+     },
+     "loss": 8,
+     "se": 1.8,
+     "options": [
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 69.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 61.9,
+       "yours": false
+      },
+      {
+       "text": "Call River Ward - last face-down Legend",
+       "p": 61.9,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 37.5,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Adam Smasher",
+       "p": 12.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move calls River Ward.",
+       "The better move plays Dexter DeShawn."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 4,
+        "units": 0.9166666666666666,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 4,
+        "units": 0.9166666666666666,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 5
+       }
+      },
+      "better": "Play Unit Dexter DeShawn"
+     }
+    },
+    {
+     "from": 44,
+     "to": 45,
+     "end": false,
+     "log": [
+      "JackRio played Secondhand Bombus by spending 2 Legends."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 61
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.2,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 61,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 39.1,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 18,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on River Ward",
+       "p": 13.3,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Viktor Vektor",
+       "p": 13.3,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Adam Smasher",
+       "p": 13.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Secondhand Bombus.",
+       "You keep 0.8 Units through their turn on average, instead of 0."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.9583333333333335,
+        "rivalGigs": 4.041666666666667,
+        "units": 0.8333333333333334,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.9583333333333335,
+        "rivalGigs": 4.041666666666667,
+        "units": 0,
+        "rivalUnits": 0.9583333333333334,
+        "hand": 5.958333333333333
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 45,
+     "to": 46,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 54.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 54.7,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 57,
+   "moves": [
+    {
+     "from": 57,
+     "to": 58,
+     "end": false,
+     "log": [
+      "JackRio sold Zetatech Faceplate into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 54.3
+     },
+     "best": {
+      "text": "Sell Adrenaline Converter",
+      "p": 57.7,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "bd32c0e3"
+       }
+      ]
+     },
+     "loss": 3.5,
+     "se": 3.4,
+     "options": [
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 57.7,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 55.4,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 54.3,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 54.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 54.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 54.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Zetatech Faceplate.",
+       "The better move sells Adrenaline Converter.",
+       "You start your next turn with 4 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 5,
+        "units": 1.9583333333333333,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.958333333333333,
+        "rivalGigs": 5.041666666666667,
+        "units": 2,
+        "rivalUnits": 2,
+        "hand": 4
+       }
+      },
+      "better": "Sell Adrenaline Converter"
+     }
+    },
+    {
+     "from": 58,
+     "to": 59,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 4 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 55.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 55.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 55.6,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 55.2,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Secondhand Bombus",
+       "p": 55.2,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 55.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 29.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 59,
+     "to": 62,
+     "end": false,
+     "log": [
+      "JackRio played Dexter DeShawn: One Last Chance by spending 3 Legends.",
+      "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d10 from 9 to 10."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Dexter DeShawn\n  picks own d10 (9)\n  amount → 1",
+      "p": 53.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.7,
+     "options": [
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 53.3,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 40.3,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Secondhand Bombus",
+       "p": 35.1,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 23.7,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 23.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 23.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Dexter DeShawn."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 6,
+        "units": 2.9583333333333335,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 3.0833333333333335
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 6,
+        "units": 3,
+        "rivalUnits": 2,
+        "hand": 3
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 62,
+     "to": 63,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 60.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3.4,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 60.1,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 51.6,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 77,
+   "moves": [
+    {
+     "from": 77,
+     "to": 78,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand: Never Stop Fighting by spending 4 Eddies and 2 Legends."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 86.8
+     },
+     "best": {
+      "text": "Attack Dexter DeShawn with 6th Street Recruits",
+      "p": 92.2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "b580116b",
+        "target": {
+         "kind": "unit",
+         "iid": "d43542fe"
+        }
+       }
+      ]
+     },
+     "loss": 5.5,
+     "se": 2.4,
+     "options": [
+      {
+       "text": "Attack Dexter DeShawn with 6th Street Recruits",
+       "p": 92.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 86.8,
+       "yours": true
+      },
+      {
+       "text": "Use River Ward",
+       "p": 81.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 78.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 78.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 78.9,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "6th Street Recruits (6) beats Dexter DeShawn (4).",
+       "Your move plays Johnny Silverhand.",
+       "The better move removes the Rival's Dexter DeShawn.",
+       "The Rival is down to 2.3 Units, instead of 3.3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.75,
+        "rivalGigs": 6.25,
+        "units": 3.1666666666666665,
+        "rivalUnits": 3.2916666666666665,
+        "hand": 2.0833333333333335
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.916666666666667,
+        "rivalGigs": 6.083333333333333,
+        "units": 3.0416666666666665,
+        "rivalUnits": 2.3333333333333335,
+        "hand": 2
+       }
+      },
+      "better": "Attack Dexter DeShawn with 6th Street Recruits"
+     }
+    },
+    {
+     "from": 78,
+     "to": 81,
+     "end": false,
+     "log": [
+      "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Johnny Silverhand",
+      "p": 98.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1,
+     "options": [
+      {
+       "text": "Attack Dexter DeShawn with 6th Street Recruits",
+       "p": 94.9,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 93.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 85.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 85.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 85.9,
+       "yours": false
+      },
+      {
+       "text": "Attack Dexter DeShawn with Dexter DeShawn",
+       "p": 68.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 81,
+     "to": 84,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared Johnny Silverhand: Never Stop Fighting against Dexter DeShawn: One Last Chance. puzonyyx must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting (11) fought Dexter DeShawn: One Last Chance (4) and won.",
+      "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+      "Dexter DeShawn: One Last Chance was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Dexter DeShawn with Johnny Silverhand\n  Don't block / don't respond",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Attack Dexter DeShawn with Johnny Silverhand",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack Dexter DeShawn with 6th Street Recruits",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 98,
+       "yours": false
+      },
+      {
+       "text": "Attack Dexter DeShawn with Dexter DeShawn",
+       "p": 97.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 87.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 87.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 84,
+     "to": 91,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. puzonyyx must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting made a Gig attack on puzonyyx and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from puzonyyx.",
+      "JackRio stole d12 (5) from puzonyyx. JackRio now has 6 Gig dice.",
+      "JackRio stole d6 (6) from puzonyyx. JackRio now has 6 Gig dice.",
+      "JackRio used 6th Street Recruits to increase puzonyyx's d10 from 3 to 9."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 99.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 99.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 97.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 97.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 71.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 91,
+     "to": 97,
+     "end": false,
+     "log": [
+      "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Dexter DeShawn: One Last Chance. puzonyyx must respond after attack effects resolve.",
+      "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d12 from 10 to 11.",
+      "Dexter DeShawn: One Last Chance made a Gig attack on puzonyyx and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from puzonyyx.",
+      "JackRio stole d10 (9) from puzonyyx. JackRio now has 7 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Dexter DeShawn\n  picks own d12 (10)\n  amount → 1\n  Don't block / don't respond\n  Steal opponent's d10 (9)",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 95.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 97,
+     "to": 103,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with 6th Street Recruits. puzonyyx must respond after attack effects resolve.",
+      "6th Street Recruits made a Gig attack on puzonyyx and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from puzonyyx.",
+      "JackRio stole d6 (5) from puzonyyx. JackRio now has 8 Gig dice.",
+      "JackRio used 6th Street Recruits to increase JackRio's d12 from 5 to 11."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with 6th Street Recruits\n  Don't block / don't respond\n  Steal opponent's d6 (5)\n  yes ()\n  picks opponent's d12 (5)\n  amount → 6",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.5,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 99.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 103,
+     "to": 104,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.8,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

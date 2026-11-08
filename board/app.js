@@ -52,12 +52,47 @@
   }
   const back = (cls = '', style = '', cid = '') => `<div class="card back ${cls}"${cid ? ` data-cid="${esc(cid)}"` : ''} style="${style}"></div>`;
 
-  // an attack lock (a Program like Chrome Reverie / Nocturne) shows on the card as a crossed-out sword;
-  // hovering it says until when. The only status shown ON the card - the rest stay in the hover panel.
-  const SWORD_OFF = '<svg viewBox="0 0 24 24"><path d="M14.5 3.5 20.5 3.5 20.5 9.5 10 20 4 14Z M6.5 15.5 3 19 5 21 8.5 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3 3 21 21" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
-  function noAttackHtml(u) {
-    const e = (u.currentEffects || []).find(x => x.kind === 'CANNOT_ATTACK' || x.kind === 'CANNOT_ATTACK_GIGS');
-    return e ? `<span class="no-atk" title="${esc(`${e.label} - ${e.description}`)}">${SWORD_OFF}</span>` : '';
+  // statuses as small icons in a row along the card's top-left edge (lag, Adrenaline, can't attack / ready,
+  // must attack...), each with a short hover text. Live games and replays use different kind names, so they
+  // are mapped onto one icon set. Power changes stay on the power badge; spent is the card's rotation.
+  const ICON = (() => {
+    const sv = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+    const sword = '<path d="M14.5 3.5h6v6L10 20l-6-6Z"/><path d="M6.5 15.5 3 19l2 2 3.5-3.5"/>';
+    const shield = '<path d="M12 3 4.5 6v5.5c0 4.6 3.2 8 7.5 9.5 4.3-1.5 7.5-4.9 7.5-9.5V6Z"/>';
+    const bolt = '<path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12Z"/>';
+    const slash = '<path d="M3 3 21 21" stroke-width="2.8"/>';
+    return {
+      lag: sv('<path d="M6 3h12M6 21h12M7 3c0 5 10 5 10 9s-10 4-10 9M17 3c0 5-10 5-10 9s10 4 10 9"/>'),
+      bolt: sv(bolt), noBolt: sv(bolt + slash),
+      noSword: sv(sword + slash),
+      mustSword: sv(sword + '<path d="M20 15v3M20 21v.01" stroke-width="2.6"/>'),
+      targetSword: sv(sword + '<circle cx="18.5" cy="18.5" r="2.5"/>'),
+      noReady: sv('<path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v4.5h-4.5"/>' + slash),
+      shield: sv(shield), noShield: sv(shield + slash), shieldPlus: sv(shield + '<path d="M12 9v6M9 12h6"/>'),
+    };
+  })();
+  const STATUS = {
+    LAG: ['lag', 'warn'], ADRENALINE: ['bolt', 'good'], HASTE_VS_GIGS: ['bolt', 'good'], HASTE_VS_SPENT: ['bolt', 'good'],
+    NO_HASTE: ['noBolt', 'bad'], CANNOT_ATTACK: ['noSword', 'bad'], ATTACK_LOCK: ['noSword', 'bad'], CANNOT_ATTACK_GIGS: ['noSword', 'bad'],
+    CANNOT_READY: ['noReady', 'bad'], READY_LOCK: ['noReady', 'bad'], MUST_ATTACK: ['mustSword', 'bad'],
+    UNBLOCKABLE: ['noShield', 'good'], FIGHT_IMMUNE: ['shieldPlus', 'good'], BLOCKER: ['shield', 'good'],
+    ATTACK_READY_BLOCKERS: ['targetSword', 'good'], ATTACK_READY_UNITS: ['targetSword', 'good'],
+  };
+  const SHORT = { LAG: "Arrived this turn - can't attack yet", ADRENALINE: 'Can attack the turn it arrived', READY_LOCK: "Won't ready",
+    CANNOT_READY: "Won't ready", ATTACK_LOCK: "Can't attack", CANNOT_ATTACK: "Can't attack", MUST_ATTACK: 'Must attack if able' };
+  function statusIconsHtml(u) {
+    const out = [], seen = new Set();
+    for (const e of u.currentEffects || []) {
+      const k = String(e.kind || '').toUpperCase().replace(/-/g, '_'), st = STATUS[k];
+      if (!st || seen.has(st[0] + e.label)) continue;
+      seen.add(st[0] + e.label);
+      const label = /^[A-Z ]+$/.test(e.label || '') ? e.label[0] + e.label.slice(1).toLowerCase() : (e.label || k);
+      // replays carry the simulator's long rules text; keep the hover short
+      const d = e.description && e.description.length <= 48 ? e.description : SHORT[k] || '';
+      const tip = d ? `${label} - ${d}` : label;
+      out.push(`<span class="st ${st[1]}" title="${esc(tip)}">${ICON[st[0]]}</span>`);
+    }
+    return out.length ? `<span class="sticons">${out.join('')}</span>` : '';
   }
   function unitHtml(u, isLegend = false) {
     // live games (board/play.html): your own face-down Legends are known to you - shown dimmed, not as backs
@@ -66,7 +101,7 @@
     const power = u.attackPower ?? u.power ?? 0, base = u.basePower ?? u.power ?? 0;
     const delta = power - base;
     // power shows only when an effect changed it, like a counter on a real table
-    const badge = (delta && (!isLegend || u.zone === 'field') ? `<span class="badge ${delta > 0 ? 'up' : 'down'}">${power}</span>` : '') + noAttackHtml(u);
+    const badge = (delta && (!isLegend || u.zone === 'field') ? `<span class="badge ${delta > 0 ? 'up' : 'down'}">${power}</span>` : '') + statusIconsHtml(u);
     // A Legend keeps its full size: its Gear sits tucked just behind it (thin edges) with a count badge;
     // hover shows every Gear card. Units on the Field show the Gear's bottom strip under the card instead.
     if (isLegend && u.zone !== 'field') {
@@ -251,11 +286,47 @@
     const id = nameToId.get(p.card) || nameToId.get(short(p.card));
     return `<span class="ctag"${id ? ` data-img="${esc(imgUrl(id))}"` : ''}>${esc(short(p.card))}</span>`;
   }
-  function entryHtml(o) {
-    if (!o.v) return `<span class="lt">${esc(o.raw)}</span>`;
-    return `<span class="lv">${esc(o.v)}</span> ${o.a.map(tag).join(' ')}`
-      + (o.d ? ` <span class="ld">· ${esc(o.d)}</span>` : '')
-      + (o.via ? ` <span class="ld">· via</span> ${tag(o.via)}` : '');
+  function entryHtml(o, who) {
+    const html = !o.v ? `<span class="lt">${esc(o.raw)}</span>`
+      : `<span class="lv">${esc(o.v)}</span> ${o.a.map(tag).join(' ')}`
+        + (o.d ? ` <span class="ld">· ${esc(o.d)}</span>` : '')
+        + (o.via ? ` <span class="ld">· via</span> ${tag(o.via)}` : '');
+    return tone(html, who || o.actor);
+  }
+  // Who owns what, by colour: player names in their side's colour (yours yellow, the Rival's red, like the
+  // mats) and dice / "friendly"/"rival" Gigs in the Gig dice colours (green yours, red the Rival's).
+  // "own d6" / a bare "d6" belong to the line's player, "opponent's d6" / "rival Gig" to the other one.
+  const sideCls = p => (p === R.me ? 'mine' : 'theirs');
+  let toneRe = null, toneKey = '';
+  function tone(html, who) {
+    const pids = Object.keys(R.labels || {});
+    if (!pids.length) return html;
+    const key = JSON.stringify(R.labels) + R.me;
+    if (key !== toneKey) {
+      toneKey = key;
+      const rx = s => esc(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const names = pids.map(p => R.labels[p]).filter(l => l && l !== 'You').sort((a, b) => b.length - a.length).map(rx);
+      const L = names.length ? names.join('|') : '(?!)';
+      const you = R.labels[R.me] === 'You' ? '|\\b([Yy]our?)\\b' : '|(?!)()';
+      toneRe = new RegExp(`(?:(${L})'s |\\b(your|own|opponent's) )?\\bd(4|6|8|10|12|20)\\b(?: \\((\\d+)\\))?`
+        + `|\\b(friendly|rival|own|opponent's) (Gigs?)\\b|(${L})${you}`, 'g');
+    }
+    const byLabel = l => pids.find(p => esc(R.labels[p]) === l);
+    const other = who && pids.find(p => p !== who);
+    const nm = (p, t) => `<span class="lp ${sideCls(p)}">${t}</span>`;
+    const die = (p, t) => `<span class="ldie ${p ? sideCls(p) : ''}">${t}</span>`;
+    return html.split(/(<[^>]+>)/).map(seg => seg.startsWith('<') ? seg : seg.replace(toneRe,
+      (m, lab, pos, sides, val, fr, gig, name, you) => {
+        if (sides) {
+          const owner = lab ? byLabel(lab) : pos === 'your' ? R.me : pos === "opponent's" ? other : who;
+          const pre = lab ? `${nm(owner, lab)}'s ` : pos ? `${pos} ` : '';
+          return pre + die(owner, `d${sides}${val ? ` (${val})` : ''}`);
+        }
+        if (fr) return die(fr === 'friendly' || fr === 'own' ? who : other, `${fr} ${gig}`);
+        if (name) return nm(byLabel(name), name);
+        if (you) return nm(R.me, you);
+        return m;
+      })).join('');
   }
   function buildLog() {
     let lastTurn = null, html = '', lastLine = '';
@@ -269,13 +340,14 @@
       }
       const who = o.actor || e.turnOwnerPlayerId;
       // name the player only when it isn't the turn's owner (setup, defensive Calls, Blockers…)
-      const name = o.actor && o.actor !== e.turnOwnerPlayerId ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : '';
-      const line = name + entryHtml(o);
+      const name = o.actor && o.actor !== e.turnOwnerPlayerId ? `<span class="lp ${sideCls(o.actor)}">${esc(R.labels[o.actor])}</span> ` : '';
+      const line = name + entryHtml(o, who);
       if (line === lastLine) continue;               // the sim sometimes logs the same thing twice
       lastLine = line;
       html += `<li class="e ${who ? (who === R.me ? 'mine' : 'theirs') : ''}" data-step="${e.step}" title="${esc(e.message)}">${line}</li>`;
     }
     $('log').innerHTML = html;
+    document.dispatchEvent(new CustomEvent('board:log'));   // live.js adds its flag buttons
   }
 
   // ── animation (FLIP) ────────────────────────────────────────────────────
@@ -390,12 +462,17 @@
     clearPops();
     if (reduceMotion) return;
     const was = cardLocations(prevState), now = cardLocations(st);
+    // a search takes the top cards out of the deck one step and puts the rest back the next (Sketchy Ripper,
+    // River Ward, V), so the deck count can go UP on the step the found card arrives: any change counts
+    const deckMoved = pid => (prevState.players[pid]?.deckCount ?? 0) !== (st.players[pid]?.deckCount ?? 0);
+    const hiddenHand = pid => { const p = prevState.players[pid]; return !!p && (p.hand || []).length < (p.handCount ?? 0); };
     const arrivals = [];
     for (const [id, n] of now) {
       if (!POP_ZONES.has(n.zone)) continue;
-      if (n.zone === 'hand' && n.pid !== R.me) continue;              // the Rival's hand is hidden
+      // (a hidden hand has no card ids here, so only hands drawn face up - yours, or both when watching - pop)
       const w = was.get(id);
       if (w && (w.zone === n.zone || w.zone === 'field' || w.zone === 'gear' || w.zone === 'legends')) continue;
+      if (!w && n.zone === 'hand' && hiddenHand(n.pid) && !deckMoved(n.pid)) continue;   // a hidden hand shown at game end
       arrivals.push({ id, ...n, from: w?.zone || null });
     }
     // sales: a card that left a hand for the Eddies pile (live games name it in game.sold, since the
@@ -407,17 +484,30 @@
       const c = sold ? { id: e.id, cardId: sold.cardId, name: sold.name } : w?.zone === 'hand' ? w.c : null;
       if (c) arrivals.push({ id: e.id, pid, zone: 'eddies', c, from: 'hand' });
     }
+    // deck -> trash -> hand in one step (V: Streetkid's "Trash 3, then add a Program from your trash"): show it
+    // trashed with the others first, then going from the trash to the hand, last
+    const rec = new Set(st.game?.recovered || []);
+    if (rec.size) {
+      const back = [];
+      for (const a of arrivals.filter(x => rec.has(x.id) && x.zone === 'hand')) {
+        arrivals.splice(arrivals.indexOf(a), 1);
+        arrivals.push({ ...a, id: `${a.id}~trash`, zone: 'trash', from: 'deck' });
+        back.push({ ...a, from: 'trash' });
+      }
+      arrivals.push(...back);
+    }
     if (!arrivals.length) return;
-    const shown = arrivals.slice(0, 6);
+    const shown = arrivals.slice(-6);
     const T = $('table').getBoundingClientRect();
     const k = shown.length, gap = 14;
     const W = Math.min(200, (T.width * .9 - gap * (k - 1)) / k), H = W * CARD_H;
     const rowLeft = T.left + T.width / 2 - (k * W + (k - 1) * gap) / 2, top = T.top + T.height / 2 - H / 2;
     // where it comes from: its trash or hand if it was seen there, else (hidden) the deck when the deck
-    // shrank this step (draws, top-of-deck trashes), else the hand (the Rival's hidden hand)
+    // count changed this step (draws, top-of-deck trashes, searches) or it lands in a hand shown face up,
+    // else the hand (Gear / Programs from the Rival's hidden hand)
     const srcEl = a => {
       let from = a.from;
-      if (!from) from = (prevState.players[a.pid]?.deckCount ?? 0) > (st.players[a.pid]?.deckCount ?? 0) ? 'deck' : 'hand';
+      if (!from) from = deckMoved(a.pid) || (a.zone === 'hand' && !hiddenHand(a.pid)) ? 'deck' : 'hand';
       return (from === 'trash' && document.querySelector(`#table [data-trash="${a.pid}"]`))
         || (from === 'hand' && document.querySelector(`#table [data-zone="${a.pid}-hand"]`))
         || document.querySelector(`#table [data-zone="${a.pid}-deck"]`);
@@ -648,6 +738,13 @@
       el.getAnimations().forEach(a => a.cancel());
       const size = Math.min(T.width, T.height) * .16, d = el.getBoundingClientRect(), S = src.getBoundingClientRect();
       const x = T.left + T.width / 2 - size / 2 + k * size * 1.2, y = T.top + T.height / 2 - size / 2;
+      // 3D: a real die thrown across the table, landing on the engine's number; then the 2D die slides
+      // from the middle into its Gig row (board/dice3d.js; falls back to the 2D tumble below)
+      if (window.Dice3D && window.Dice3D.ok !== false) {
+        roll3d(el, g, pid, d, x, y, size, k);
+        k++;
+        continue;
+      }
       const clone = el.cloneNode(true);
       clone.removeAttribute('data-gid');
       clone.classList.add('roll-die');
@@ -673,6 +770,32 @@
       anim.onfinish = () => { clearInterval(iv); clone.remove(); el.style.visibility = ''; pops = pops.filter(q => q.clone !== clone); };
       k++;
     }
+  }
+
+  async function roll3d(el, g, pid, d, x, y, size, k) {
+    el.style.visibility = 'hidden';
+    busyFor(1800 + k * 500);    // a throw (board/dice3d.js: ~1.8 s); several dice 0.5 s apart
+    if (k) await new Promise(ok => setTimeout(ok, k * 500));
+    snd('roll', ST().roll3dSound ?? 0);
+    const ran = await window.Dice3D.roll(g.sides || 6, g.value, (g.originalOwnerId || pid) === R.me ? 'mine' : 'theirs', { x, y, size });
+    if (!document.contains(el)) return;
+    if (!ran) { el.style.visibility = ''; return; }
+    busyFor(750 * SPD);
+    const clone = el.cloneNode(true);
+    clone.removeAttribute('data-gid');
+    clone.classList.add('roll-die');
+    clone.style.cssText = `position:fixed; z-index:41; left:${x}px; top:${y}px; width:${size}px; height:${size}px; --gs:${size}px`;
+    document.body.appendChild(clone);
+    pops.push({ clone, dest: el });
+    const to = `translate(${d.left + d.width / 2 - (x + size / 2)}px, ${d.top + d.height / 2 - (y + size / 2)}px) scale(${d.width / size})`;
+    busyFor(700 * SPD);
+    const anim = clone.animate([
+      { transform: 'scale(.6)', opacity: 0 },
+      { transform: 'scale(1.08)', opacity: 1, offset: .3 },
+      { transform: 'scale(1)', opacity: 1, offset: .45, easing: 'cubic-bezier(.5,0,.3,1)' },
+      { transform: to, opacity: 1 },
+    ], { duration: 700 * SPD, fill: 'both' });
+    anim.onfinish = () => { clone.remove(); el.style.visibility = ''; pops = pops.filter(q => q.clone !== clone); };
   }
 
   // A Legend turned face up this step flips over (back -> face); edge-on exactly on the flip sound's snap.
@@ -779,7 +902,7 @@
     const side = actor ? (actor === R.me ? 'mine' : 'theirs') : '';
     const head = `<span class="bn-h">${g.turnNumber ? `T${g.turnNumber} · ` : ''}${esc(R.labels[actor] || 'Setup')}</span>`;
     const body = lines.length
-      ? lines.map(o => `<span class="bn-l">${o.actor && o.actor !== actor ? `<span class="lp">${esc(R.labels[o.actor])}</span> ` : ''}${entryHtml(o)}</span>`).join('<span class="bn-sep">›</span>')
+      ? lines.map(o => `<span class="bn-l">${o.actor && o.actor !== actor ? `<span class="lp ${sideCls(o.actor)}">${esc(R.labels[o.actor])}</span> ` : ''}${entryHtml(o, o.actor || actor)}</span>`).join('<span class="bn-sep">›</span>')
       : `<span class="bn-l ld">${esc(s.action?.label || 'Start of the match')}</span>`;
     const tip = lines.length ? s.newLog.map(e => e.message).join('\n') : '';
     return `<div class="banner ${side}${Math.abs(dir) === 1 ? ' show' : ''}" aria-live="polite" title="${esc(tip)}">${head}<span class="bn-body">${body}</span></div>`;
@@ -883,6 +1006,44 @@
         if (cur !== at) return;   // you moved the timeline meanwhile
       }
     },
+    // Game Review (board/review.js): open a replay; show another line from step `at` (the board plays
+    // `steps` after it, `gap` ms apart; lines' `step` counts from 1 = the first new step); unbranch()
+    // puts the game back and jumps to `to`.
+    open,
+    async branch(at, steps, log, gap = 1100) {
+      if (!R) return;
+      if (!R.main) R.main = { steps: R.steps, log: R.log, turnStarts: R.turnStarts };
+      const M = R.main, token = (R.branchToken = (R.branchToken || 0) + 1);
+      R.steps = M.steps.slice(0, at + 1).concat(steps);
+      R.log = M.log.filter(e => e.step <= at).concat(log.map(l => ({ ...l, step: at + l.step })));
+      R.turnStarts = turnStartsOf(R.steps);
+      steps.forEach(s => walkNames(s.state.players));
+      fmt = LogFmt.makeFormatter([...nameToId.keys()], R.labels);
+      $('scrub').max = R.steps.length - 1;
+      buildLog(); document.body.classList.add('branch');
+      if (cur !== at) go(at);
+      return this.playTo(R.steps.length - 1, gap, token);
+    },
+    unbranch(to) {
+      if (!R?.main) return;
+      Object.assign(R, R.main); delete R.main; R.branchToken = (R.branchToken || 0) + 1;
+      fmt = LogFmt.makeFormatter([...nameToId.keys()], R.labels);
+      $('scrub').max = R.steps.length - 1;
+      buildLog(); document.body.classList.remove('branch');
+      cur = Math.min(cur, R.steps.length - 1); go(to ?? cur);
+    },
+    branched: () => !!R?.main,
+    // step forward to `to`, one animated step every `gap` ms; stops if you move the timeline meanwhile
+    async playTo(to, gap = 1100, token = R?.branchToken) {
+      const wait = ms => new Promise(ok => setTimeout(ok, ms));
+      while (R && cur < to && R.branchToken === token) {
+        await wait(cur === to ? 0 : 120);
+        const at = cur + 1; go(at);
+        await wait(Math.max(gap, animUntil - performance.now()));
+        if (cur !== at) return;
+      }
+    },
+    logHtml(msg) { if (!fmt) return esc(msg); const o = fmt(msg); return o ? entryHtml(o) : ''; },   // '' = a line the log hides
     setSpeed(k) { SPD = k; document.documentElement.style.setProperty('--spd', k); },
     current: () => cur, total: () => (R ? R.steps.length : 0), step: i => R?.steps[i],
   };
@@ -984,6 +1145,9 @@
       const m = f.name.match(/replay-(\d{4}-\d\d-\d\d)-(.+)-[0-9a-f]{8}\.json$/);
       $('replay-pick').insertAdjacentHTML('beforeend', `<option value="${esc(f.name)}">${m ? `${m[1]} · ${esc(m[2].replace(/-vs-/, ' vs '))}` : esc(f.name)}</option>`);
     }
+    // ?r=<replay name> (links from the home page) opens that replay
+    const q = new URLSearchParams(location.search).get('r');
+    if (q && list.some(f => f.name === q)) { $('replay-pick').value = q; $('replay-pick').onchange({ target: $('replay-pick') }); }
   }).catch(() => {});
   $('replay-pick').onchange = e => {
     const name = e.target.value; if (!name) return;

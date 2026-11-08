@@ -49,7 +49,7 @@ function _resolveChoiceResponse(b, input, defaultOwner) {
   const frame = b.effect_stack.pop();
   if (!frame) throw new Error('No halted effect to resume');
 
-  trace(b, `T${b.turn_number}/choice ${defaultOwner} ${JSON.stringify(input.response)}`);
+  if (b._trace) trace(b, `T${b.turn_number}/choice ${defaultOwner} ${JSON.stringify(input.response)}`);
 
   const result = frame.kind === 'resume_fire_event'
     ? fireEventResume(frame.halted_state, input.response, b)
@@ -326,8 +326,10 @@ function _checkCardConservation(b) {
   }
 }
 
-function step(board, input) {
-  const b = cloneBoard(board);
+// inPlace: mutate `board` instead of copying it first - only for a board nobody else holds (the
+// in-between boards of a multi-step move in coach/policy.js apply(); a throw leaves it half-changed)
+function step(board, input, inPlace) {
+  const b = inPlace ? board : cloneBoard(board);
   _checkCardConservation(b);
   if (b.phase === 'between_turns') return beginTurn(b);
   switch (b.phase) {

@@ -7,6 +7,7 @@
 const { CARDS } = require('../engine');
 const { features } = require('./features');
 const { opp } = require('../coach/policy');
+const gig = require('./gigfeatures');
 
 // legal cards only: Rebecca: Having a Moment (PRM01-005) is a no-text promo marked legal: false
 const VOCAB = CARDS.filter(c => c.legal !== false).map(c => c.number).sort();
@@ -16,15 +17,18 @@ const BAGS = ['myHand', 'myField', 'myReady', 'myLegUp', 'myLegDown', 'myGear', 
   'rvField', 'rvReady', 'rvLegUp', 'rvGear', 'myTrash', 'rvTrash'];
 const DENSE = 45;
 const SIZE = DENSE + BAGS.length * V;
+// nets trained with the Gig language (src/bot/gigfeatures.js) take DENSE_GIG dense inputs; the card bags
+// then start at DENSE_GIG. encode(b, pid, D) builds whichever the net expects (its `dense` size).
+const DENSE_GIG = DENSE + gig.N;
 
-// -> { dense: number[45], sparse: [[index, count], ...] } (index into the full SIZE vector)
-function encode(b, pid) {
+// -> { dense: number[D], sparse: [[index, count], ...] } (index into the full D + bags vector)
+function encode(b, pid, D = DENSE) {
   const me = b[pid].zones, rv = b[opp(pid)].zones;
   const counts = new Map();
   const add = (bag, card) => {
     const i = INDEX.get(card);
     if (i === undefined) return;
-    const k = DENSE + BAGS.indexOf(bag) * V + i;
+    const k = D + BAGS.indexOf(bag) * V + i;
     counts.set(k, (counts.get(k) || 0) + 1);
   };
   for (const c of me.hand) add('myHand', c.card_id);
@@ -43,7 +47,7 @@ function encode(b, pid) {
       for (const g of l.equipped_gear || []) add(gear, g.card_id);
     }
   }
-  return { dense: features(b, pid), sparse: [...counts] };
+  return { dense: D > DENSE ? [...features(b, pid), ...gig.gigFeatures(b, pid)] : features(b, pid), sparse: [...counts] };
 }
 
-module.exports = { encode, VOCAB, BAGS, DENSE, SIZE, V };
+module.exports = { encode, VOCAB, BAGS, DENSE, DENSE_GIG, SIZE, V };

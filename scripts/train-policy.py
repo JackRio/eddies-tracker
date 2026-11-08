@@ -41,6 +41,9 @@ ap.add_argument('--grank', type=int, default=900, help='move-table offset for th
 # --init: start from an existing net (its weights and input normalization); --teach-only / --informative-only
 # pick which decisions train (league data: teacher re-scored ones / best 5-95% and top two >= 1 point apart)
 ap.add_argument('--init', default=None)
+# --gig-moves: data has menc.js's Gig slots (650-685); with --init from an older net those rows start at zero
+# and the saved net is marked gigMoves (pnet.js only feeds Gig slots to nets marked so)
+ap.add_argument('--gig-moves', action='store_true')
 ap.add_argument('--teach-only', action='store_true')
 ap.add_argument('--informative-only', action='store_true')
 args = ap.parse_args()
@@ -144,6 +147,7 @@ if INIT:
         net.d.weight.copy_(T_(INIT['Wd'])); net.d.bias.copy_(T_(INIT['b1'])); net.e.weight.copy_(T_(INIT['E']))
         net.s2.weight.copy_(T_(INIT['S2'])); net.s2.bias.copy_(T_(INIT['s2b']))
         Mi = np.zeros((MSIZE, args.mhidden), np.float32); Mi[:len(INIT['M'])] = np.asarray(INIT['M'], np.float32)
+        if args.gig_moves and not INIT.get('gigMoves'): Mi[650:686] = 0   # Gig slots never trained in the old net
         net.m.weight.copy_(T_(Mi)); net.mb.copy_(T_(INIT['mb']))
         net.j.weight.copy_(T_(INIT['J'])); net.j.bias.copy_(T_(INIT['jb']))
         net.o.weight.copy_(T_([INIT['o']])); net.o.bias.copy_(T_([INIT['ob']]))
@@ -257,7 +261,7 @@ out = {'format': 'eddies-policy-net', 'version': 1, 'dense': DENSE, 'sparse': NS
        'mean': r(mean), 'std': r(std), 'Wd': r(sd['d.weight']), 'b1': r(sd['d.bias']), 'E': r(sd['e.weight']),
        'S2': r(sd['s2.weight']), 's2b': r(sd['s2.bias']), 'M': r(sd['m.weight']), 'mb': r(sd['mb']),
        'J': r(sd['j.weight']), 'jb': r(sd['j.bias']), 'o': r(sd['o.weight'][0]), 'ob': float(sd['o.bias'][0]),
-       'checks': checks, 'metrics': M, 'trainedOn': int(len(tr)), 'tau': args.tau}
+       'checks': checks, 'metrics': M, 'trainedOn': int(len(tr)), 'tau': args.tau, 'gigMoves': bool(args.gig_moves or (INIT or {}).get('gigMoves'))}
 with open(args.out, 'w') as fh:
     json.dump(out, fh, separators=(',', ':'))
 os.makedirs(os.path.dirname(args.report), exist_ok=True)

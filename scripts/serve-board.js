@@ -6,6 +6,7 @@
 //   /api/replays/<name>   one replay file
 //   /api/coach/<name>     Replay Coach result for that replay (board/replays/coach/, from scripts/coach.js)
 //   /api/play/...         live games vs the bots for board/play.html (see playApi below)
+//   /api/review/...       Game Review for board/review.html (see reviewApi below)
 // Run: node scripts/serve-board.js   (port 4181)
 const http = require('http');
 const fs = require('fs');
@@ -13,7 +14,7 @@ const os = require('os');
 const path = require('path');
 
 const root = path.join(__dirname, '..', 'board');
-const port = 4181;
+const port = +process.env.PORT || 4181;
 const userData = path.join(process.env.APPDATA || path.join(os.homedir(), '.config'), 'cyberpunk-tcg-tracker');
 const downloads = path.join(os.homedir(), 'Downloads');
 const replaysDir = path.join(root, 'replays');
@@ -53,12 +54,14 @@ function send(res, code, body, type = 'text/plain') {
 }
 
 // Play vs bot / watch bot vs bot (board/play.html, src/bot/play.js):
-//   GET  /api/play/config            bots, decks, defaults
+//   GET  /api/play/config            bots, decks, defaults (+ 8 community lists)
+//   GET  /api/play/community?skip=a,b  8 other community lists for the deck menu
 //   POST /api/play/new               { mode, you, bots: {p1,p2}, decks: {p1,p2}, first, seed } -> { id }
 //   GET  /api/play/<id>?from=N       board steps since N + the current decision
 //   POST /api/play/<id>/move         { i, pay? } - you play option i, paid with the iids in pay
 //   POST /api/play/<id>/advance      the bot to act makes one decision
 //   POST /api/play/<id>/undo         take back your last decision (and the bot moves after it)
+//   GET  /api/play/<id>/flags        tags + this game's flags;  POST { step, tags, note } or { step, remove: true }
 let PLAY = null;
 const play = () => (PLAY ||= require('../src/bot/play'));
 const readBody = req => new Promise(ok => { let d = ''; req.on('data', c => { d += c; if (d.length > 1e5) req.destroy(); }); req.on('end', () => { try { ok(JSON.parse(d || '{}')); } catch { ok({}); } }); });
@@ -66,9 +69,15 @@ async function playApi(req, res, url) {
   const json = (code, o) => send(res, code, JSON.stringify(o), MIME['.json']);
   try {
     if (url === '/api/play/config') return json(200, play().config());
+    if (url === '/api/play/community') return json(200, play().community(8, (new URLSearchParams(req.url.split('?')[1] || '').get('skip') || '').split(',')));
     if (url === '/api/play/new' && req.method === 'POST') return json(200, { id: play().create(await readBody(req)) });
-    const m = url.match(/^\/api\/play\/(\d+)(\/move|\/advance|\/undo)?$/);
+    const m = url.match(/^\/api\/play\/(\d+)(\/move|\/advance|\/undo|\/flags)?$/);
     if (!m) return json(404, { error: 'no such route' });
+    if (m[2] === '/flags') {
+      if (req.method !== 'POST') return json(200, play().flagsOf(m[1]));
+      const r = play().flag(m[1], await readBody(req));
+      return json(r.error ? 400 : 200, r);
+    }
     if (!m[2]) { const from = +(new URLSearchParams(req.url.split('?')[1] || '').get('from') || 0); const p = play().poll(m[1], from); return p ? json(200, p) : json(404, { error: 'no such game' }); }
     if (req.method !== 'POST') return json(405, { error: 'POST only' });
     const body = m[2] === '/move' ? await readBody(req) : null;
@@ -80,9 +89,53 @@ async function playApi(req, res, url) {
   }
 }
 
+// Game Review (board/review.html, src/coach/review-service.js):
+//   GET  /api/review/list               replays (uploads, ~/Downloads, shared) + whether reviewed
+//   POST /api/review/upload             body = replay JSON -> { ok, checks, info, name }
+//   GET  /api/review/check/<name>       validation of a stored replay
+//   POST /api/review/run/<name>[?force] start (or reuse) a review -> { job }
+//   GET  /api/review/job/<id>           progress
+//   GET  /api/review/result/<name>      the finished review
+//   GET  /api/review/branch/<name>?from=N   the better move at step N, played out (board steps + log)
+let REVIEW = null;
+const review = () => (REVIEW ||= require('../src/coach/review-service'));
+const readText = (req, cap) => new Promise((ok, no) => { let d = ''; req.setEncoding('utf8'); req.on('data', c => { d += c; if (d.length > cap) { no(new Error('too large')); req.destroy(); } }); req.on('end', () => ok(d)); });
+async function reviewApi(req, res, url) {
+  const json = (code, o) => send(res, code, JSON.stringify(o), MIME['.json']);
+  const q = new URLSearchParams(req.url.split('?')[1] || '');
+  const S = review();
+  try {
+    if (url === '/api/review/list') return json(200, S.list());
+    if (url === '/api/review/upload' && req.method === 'POST') {
+      let j;
+      try { j = JSON.parse(await readText(req, 50e6)); }
+      catch { return json(200, { ok: false, checks: [{ level: 'error', text: "That isn't a replay file. Export the match's replay (.json) from the simulator." }] }); }
+      const v = S.validate(j);
+      if (v.ok) v.name = S.save(j);
+      return json(200, v);
+    }
+    let m = url.match(/^\/api\/review\/(check|run|result|branch)\/(.+)$/);
+    if (m) {
+      const name = path.basename(m[2]);
+      if (!S.REPLAY_RE.test(name)) return json(400, { error: 'bad name' });
+      if (m[1] === 'check') { const f = S.findReplay(name); if (!f) return json(404, { error: 'not found' }); const v = S.validate(JSON.parse(fs.readFileSync(f, 'utf8'))); return json(200, { ...v, name }); }
+      if (m[1] === 'run') return json(200, { job: S.start(name, { force: q.has('force') }) });
+      if (m[1] === 'result') { const r = S.load(name); return r ? json(200, r) : json(404, { error: 'not reviewed' }); }
+      if (m[1] === 'branch') { const r = S.branch(name, +q.get('from')); return r ? json(200, r) : json(404, { error: 'no better move here' }); }
+    }
+    m = url.match(/^\/api\/review\/job\/(\d+)$/);
+    if (m) { const j = S.job(m[1]); return j ? json(200, j) : json(404, { error: 'no such job' }); }
+    return json(404, { error: 'no such route' });
+  } catch (e) {
+    console.error(e);
+    return json(500, { error: e.message });
+  }
+}
+
 http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
   if (url.startsWith('/api/play/')) return playApi(req, res, url);
+  if (url.startsWith('/api/review/')) return reviewApi(req, res, url);
 
   if (url.startsWith('/card/')) {
     if (!imageIndex) buildImageIndex();
@@ -122,6 +175,7 @@ http.createServer((req, res) => {
 
   let filePath = path.join(root, url);
   if (!filePath.startsWith(root)) return send(res, 403, 'forbidden');
-  if (url.endsWith('/')) filePath = path.join(filePath, 'index.html');
+  if (url === '/') filePath = path.join(root, 'home.html');   // landing page; the replay viewer is index.html
+  else if (url.endsWith('/')) filePath = path.join(filePath, 'index.html');
   fs.readFile(filePath, (err, data) => err ? send(res, 404, 'Not found') : send(res, 200, data, MIME[path.extname(filePath)] || 'application/octet-stream'));
 }).listen(port, () => console.log(`Board viewer at http://localhost:${port}`));

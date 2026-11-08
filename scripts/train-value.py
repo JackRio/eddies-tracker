@@ -34,9 +34,13 @@ ap.add_argument('--init', default=None)
 # --aux W: weight of the auxiliary 'turns left' head (rows from league-to-value.js); it only shapes the
 # hidden layers during training and is not saved (the bot never uses it)
 ap.add_argument('--aux', type=float, default=0.1)
+# --dense N: dense inputs per position (45; 123 = with the Gig language, src/bot/gigfeatures.js). Rows with
+# fewer dense numbers (older data) get the rest filled with the mean - they teach everything but those inputs.
+# With --init from a smaller net, the new inputs start with zero weights: the net starts out unchanged.
+ap.add_argument('--dense', type=int, default=45)
 args = ap.parse_args()
 
-DENSE = 45
+DENSE = args.dense
 dev = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print('device', dev, torch.cuda.get_device_name(0) if dev.type == 'cuda' else '')
 
@@ -51,9 +55,11 @@ for f in args.files:
             hold = o['g'] % 10 == 0
             for row in o['rows']:
                 y, d, s = row[:3]
+                off = len(d)   # this row's sparse offset (its own dense size)
+                d = d + [float('nan')] * (DENSE - len(d))
                 ys.append(y); dense.append(d); test.append(hold)
                 wons.append(row[3] if len(row) > 3 else y); tl.append(row[4] if len(row) > 4 else -1)
-                sp_idx.append([i - DENSE for i, _ in s]); sp_val.append([n for _, n in s])
+                sp_idx.append([i - off for i, _ in s]); sp_val.append([n for _, n in s])
 N = len(ys)
 P = max(len(s) for s in sp_idx)
 NSP = args.sparse  # = vfeatures.js SIZE - DENSE (13 zone bags x 150 cards)
@@ -61,16 +67,19 @@ assert max(max(s) if s else 0 for s in sp_idx) < NSP, 'card index beyond --spars
 idx = np.zeros((N, P), dtype=np.int64); val = np.zeros((N, P), dtype=np.float32)
 for r, (a, b) in enumerate(zip(sp_idx, sp_val)):
     idx[r, :len(a)] = a; val[r, :len(b)] = b
-X = np.asarray(dense, dtype=np.float32); Y = np.asarray(ys, dtype=np.float32); T = np.asarray(test)
+X = np.asarray(dense, dtype=np.float32); KNOWN = ~np.isnan(X[:, -1]); Y = np.asarray(ys, dtype=np.float32); T = np.asarray(test)
 W = np.asarray(wons, dtype=np.float32); TL = np.asarray(tl, dtype=np.float32) / 10   # turns left / 10, -0.1 = unknown
 print(f'{N} positions ({T.sum()} held out), max {P} cards/position, sparse table {NSP}, loaded in {time.time() - t0:.0f}s')
 
 INIT = json.load(open(args.init)) if args.init else None
+mean = np.nanmean(X[~T], 0); std = np.nanstd(X[~T], 0); std[~(std >= 1e-6)] = 1; mean[np.isnan(mean)] = 0
+D0 = DENSE
 if INIT:
-    mean = np.asarray(INIT['mean'], dtype=np.float32); std = np.asarray(INIT['std'], dtype=np.float32)
+    D0 = INIT.get('dense', 45)
+    mean[:D0] = np.asarray(INIT['mean'], dtype=np.float32); std[:D0] = np.asarray(INIT['std'], dtype=np.float32)
     args.hidden, args.hidden2 = len(INIT['b1']), len(INIT['b2'])
-else:
-    mean = X[~T].mean(0); std = X[~T].std(0); std[std < 1e-6] = 1
+X = np.where(np.isnan(X), mean, X).astype(np.float32)
+print(f'{int(KNOWN.sum())} positions carry all {DENSE} dense inputs ({int((KNOWN & T).sum())} held out)')
 Xn = (X - mean) / std
 to = lambda a: torch.from_numpy(a).to(dev)
 Xtr, Itr, Vtr, Ytr, TLtr = to(Xn[~T]), to(idx[~T]), to(val[~T]), to(Y[~T]), to(TL[~T])
@@ -151,11 +160,21 @@ net = Net(args.hidden, args.hidden2).to(dev)
 if INIT:
     T_ = lambda a: torch.tensor(np.asarray(a, dtype=np.float32), device=dev)
     with torch.no_grad():
-        net.d.weight.copy_(T_(INIT['Wd'])); net.d.bias.copy_(T_(INIT['b1'])); net.e.weight.copy_(T_(INIT['E']))
+        net.d.weight.zero_(); net.d.weight[:, :D0].copy_(T_(INIT['Wd'])); net.d.bias.copy_(T_(INIT['b1'])); net.e.weight.copy_(T_(INIT['E']))
         net.l2.weight.copy_(T_(INIT['W2'])); net.l2.bias.copy_(T_(INIT['b2']))
         net.l3.weight.copy_(T_([INIT['w3']])); net.l3.bias.copy_(T_([INIT['b3']]))
     l0, a0 = evaluate(net)
     print(f'  starting from {args.init}: held-out log loss {l0:.4f}  accuracy {100 * a0:.1f}%')
+
+
+KT = torch.from_numpy(KNOWN[T]).to(dev)
+def evaluate_known(m):   # held-out positions that carry every dense input (e.g. the Gig language)
+    if not KT.any(): return float('nan')
+    m.eval()
+    with torch.no_grad():
+        z = m(Xte[KT], Ite[KT], Vte[KT]); l = nn.functional.binary_cross_entropy_with_logits(z, Yte[KT]).item()
+    m.train(); return l
+k0 = evaluate_known(net)
 ll, acc = train(net, args.epochs, args.lr)
 print(f'\nheld-out log loss: coin flip 0.6931 | logistic {base[0]:.4f} ({100 * base[1]:.1f}%) | net {ll:.4f} ({100 * acc:.1f}%)')
 
@@ -177,4 +196,5 @@ out = {
 }
 with open(args.out, 'w') as fh:
     json.dump(out, fh, separators=(',', ':'))
+print(f'held-out positions with all {DENSE} inputs: log loss before {k0:.4f} -> after {evaluate_known(net):.4f}')
 print('wrote', args.out, f'({os.path.getsize(args.out) / 1e6:.1f} MB)')

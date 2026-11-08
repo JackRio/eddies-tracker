@@ -28,19 +28,48 @@ const BY = new Map(CARDS.map(c => [c.number, c]));
 const short = n => (BY.get(n)?.name || n).split(':')[0];
 
 const BOTS = [
-  { id: 'A', name: 'Bot A - Net Searcher', spec: 'strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix',   // league round 2 nets: +89 Elo over the old Bot A in Bo3 (62.5% of 40 match pairs)
+  { id: 'A', name: 'Daemon', spec: 'strong:vnet=src/bot/value-net-r3.json:pnet=src/bot/policy-net-r3.json:prior=mix:gb=1:alt=1:tb=1',   // r3 nets + search fixes (gb/alt/tb): vs r3 Daemon 60.0% / 60.0% pilot, 58.1% pool (3 gates, Nov 8 2026)
    
-    about: 'Every decision: tries its top 5 moves (greedy shortlist) in 8 imagined games with your hidden cards guessed from what you showed, plays out this turn and your reply, then asks the value net who is winning. Strongest measured: 82.6% vs tuned greedy, 64.8% vs Bot B. Known weakness: the value net under-rates selling.' },
-  { id: 'B', name: 'Bot B - Playout Searcher', spec: 'strong:leaf=prob:horizon=99:deals=6:k=4',
-    about: 'Every decision: tries its top 4 moves in 6 imagined games and plays each one to the end of the game with the tuned greedy bot - no neural net. 72.7% vs tuned greedy.' },
-  { id: 'G', name: 'Tuned greedy (fast)', spec: 'greedyt',
-    about: 'One move ahead with the tuned position score. Instant; the baseline the others are measured against.' },
+    about: ['The strongest bot', 'Learned from thousands of bot games', 'Guesses your hand and deck from what you show', 'Looks a few turns ahead before each move'] },
+  { id: 'B', name: 'Black ICE', spec: 'strong:leaf=prob:horizon=99:deals=6:k=4',
+    about: ['Plays each option out to the end of the game', 'Guesses your hidden cards too', 'Strong but slow; never learns'] },
+  { id: 'G', name: 'Gonk', spec: 'greedyt',
+    about: ['Only looks one move ahead', 'Instant, and the easiest to beat'] },
 ];
 // default match: Bot A vs Bot A, YYR (River / Viktor / Adam, ChoomBattler list) vs BBG (Alt / Hanako / Jackie);
 // in "I play the bot" you get YYR and the bot BBG
 const DEFAULTS = { mode: 'watch', bot: 'A', p1: 'choombattler-adam-river-viktor.txt', p2: '4-blue-2-green-standard.txt' };
 
-let DECKS = null;
+let DECKS = null, NETDECKS = null;
+const NET_DIR = path.join(__dirname, 'field-decks', 'netdeck');
+function deckEntry(d) {
+    const L = d.legends.map(n => BY.get(n));
+    const ram = {};
+    for (const l of L) ram[l.color] = (ram[l.color] || 0) + (l.ram || 0);
+    const colors = Object.entries(ram).sort((a, b) => b[1] - a[1]);
+    const n = {}; for (const l of L) n[l.color] = (n[l.color] || 0) + 1;
+    const tag = Object.entries(n).sort((a, b) => b[1] - a[1]).map(([c, k]) => (c[0]).repeat(k)).join('');   // YYR, BBG...
+    return { file: d.name, deck: d, legends: L.map(l => l.name.split(':')[0]), colors, tag,
+      label: `${L.map(l => l.name.split(':')[0]).join(' / ')} (${colors.map(([c, r]) => `${c} ${r}`).join(' / ')})` };
+}
+// the 1,600 public netdeck.gg lists (scripts/fetch-netdeck.js): only for "random community deck"
+function netDecks() {
+  return (NETDECKS ||= loadDecks([NET_DIR]).map(d => {
+    const e = deckEntry(d);
+    const head = fs.readFileSync(path.join(NET_DIR, d.name), 'utf8').split('\n')[0];
+    e.title = (head.match(/^#\s*(.+?)\s+-\s+by\s+(\S+)/) || []).slice(1).join(' by ') || null;   // "12 unit BBG - SIde Gig by alexkrez"
+    if (e.title) e.label += ` · "${e.title}"`;
+    e.likes = +((head.match(/, (\d+) likes/) || [])[1] || 0);
+    return e;
+  }));
+}
+// 'random' = a random list from the menu, 'random-net' = a random community list; picked from the game's seed
+function resolveDeck(f, rng) {
+  const D = decks().filter(d => !d.coverage);
+  if (f === 'random') return D[Math.floor(rng() * D.length)];
+  if (f === 'random-net') { const N = netDecks(); return N.length ? N[Math.floor(rng() * N.length)] : D[Math.floor(rng() * D.length)]; }
+  return decks().find(d => d.file === f) || netDecks().find(d => d.file === f) || D[0];
+}
 function decks() {
   if (DECKS) return DECKS;
   DECKS = loadDecks(TRAIN_DIRS).map(d => {
@@ -56,8 +85,10 @@ function decks() {
   return DECKS;
 }
 function config() {
-  return { bots: BOTS.map(({ id, name, about }) => ({ id, name, about })), defaults: DEFAULTS,
-    decks: decks().filter(d => !d.coverage).map(({ file, label, rate }) => ({ file, label, rate })) };
+  return { bots: BOTS.map(({ id, name, about }) => ({ id, name, about })), defaults: DEFAULTS, community: netDecks().length, sample: community(8),
+    decks: decks().filter(d => !d.coverage).map(d => { const e = deckEntry(d.deck);
+      return { file: d.file, label: d.label, rate: d.rate, legends: e.legends, colors: e.colors, tag: e.tag,
+        group: d.file.startsWith('choombattler') ? 'meta' : 'standard' }; }) };
 }
 
 const SESSIONS = new Map();
@@ -66,10 +97,9 @@ let nextId = 1;
 // opts: { mode: 'play'|'watch', you: 'p1'|'p2', bots: { p1, p2 } (bot ids; the human's side null),
 //         decks: { p1, p2 } (file names), first: 'p1'|'p2'|'random', seed }
 function create(opts) {
-  const D = decks();
-  const deckOf = f => (D.find(d => d.file === f) || D[0]);
   const seed = Number.isFinite(+opts.seed) && opts.seed !== '' ? +opts.seed : Math.floor(Math.random() * 1e9);
   const rng = mulberry(seed);
+  const deckOf = f => resolveDeck(f, rng);
   const first = opts.first === 'p1' || opts.first === 'p2' ? opts.first : (rng() < 0.5 ? 'p1' : 'p2');
   const s = { id: String(nextId++), mode: opts.mode === 'watch' ? 'watch' : 'play', you: opts.mode === 'watch' ? null : (opts.you || 'p1'),
     seed, first, decks: { p1: deckOf(opts.decks?.p1), p2: deckOf(opts.decks?.p2) }, bots: {}, ctx: {}, log: [], over: false };
@@ -81,6 +111,7 @@ function create(opts) {
   }
   const r = step(setupGame(s.decks.p1.deck, s.decks.p2.deck, first, { seed }), undefined);
   s.b = r.board; s.wf = r.waitingFor; s.b._trace = null;
+  if (s.you) s.b.ask_single = { [s.you]: true };   // you see every target pick, even a single one
   s.labels = { p1: name(s, 'p1'), p2: name(s, 'p2') };
   s.steps = []; s.rlog = [];
   record(s, { turn: 0, kind: 'info', text: `${first === s.you ? 'You go' : name(s, first) + ' goes'} first. Seed ${seed}.` });
@@ -97,6 +128,7 @@ function colourTag(deck) {
   return Object.entries(n).sort((a, b) => b[1] - a[1]).map(([c, k]) => c[0].toUpperCase().repeat(k)).join('');
 }
 function name(s, p) {
+  if (s.names) return s.names[p];   // review branches (branch() below): the replay's player names
   const q = p === 'p1' ? 'p2' : 'p1', n = baseName(s, p);
   if (n !== baseName(s, q)) return n;
   const a = colourTag(s.decks[p].deck), b = colourTag(s.decks[q].deck);
@@ -222,8 +254,8 @@ function describeSrc(cn) {
 // Dice are named by their OWNER (both players have a d6) and old value; the board rings the die.
 // Hidden cards stay hidden: the Rival's draws read "draws a card" unless you may see them.
 const OPP = { p1: 'p2', p2: 'p1' };
-function results(s, before, after, seq, subj) {
-  const inline = [], start = [], drawnBy = {};
+function results(s, before, after, seq, subj, trace = []) {
+  const inline = [], start = [], drawnBy = {}, recovered = [];
   const see = p => s.mode === 'watch' || p === s.you;
   const who = p => name(s, p);
   // "draws X" for the subject, "you draw X" / "Bot A draws X" for the other player
@@ -302,9 +334,16 @@ function results(s, before, after, seq, subj) {
     }
     // cards that moved between hidden / known zones
     // from the deck - or from nowhere visible: a card an effect was looking at (River Ward's top 2) has left the deck
-    const drawn = A.hand.filter(c => where.get(c.iid) === `${p}:deck` || where.get(c.iid) === undefined);
+    let drawn = A.hand.filter(c => where.get(c.iid) === `${p}:deck` || where.get(c.iid) === undefined);
     const fromTrash = A.hand.filter(c => where.get(c.iid) === `${p}:trash`);
     const milled = A.trash.filter(c => where.get(c.iid) === `${p}:deck`);
+    // "Trash 3, then add a Program from your trash to your hand" (V: Streetkid) in one step: the card went
+    // deck -> trash -> hand, not drawn. Only when this player's effects milled + recovered and drew nothing.
+    const tr = x => trace.some(l => new RegExp(`^T\\d+/\\S+ ${p}/\\S+ ${x}\\b.* ok$`).test(l));
+    if (drawn.length && tr('Mill') && tr('RecoverFromTrash') && !tr('Draw')) {
+      milled.push(...drawn); fromTrash.push(...drawn);
+      recovered.push(...drawn.map(c => ({ pid: p, iid: c.iid }))); drawn = [];
+    }
     const discarded = A.trash.filter(c => where.get(c.iid) === `${p}:hand` && !played.has(c.iid));
     if (mulligan && p === subj) inline.push(see(p) ? `draws a new hand: ${list(A.hand)}` : 'draws a new hand');
     else if (drawn.length) {
@@ -312,8 +351,8 @@ function results(s, before, after, seq, subj) {
       if (turnChanged && p === after.active_player) start.push(`draws ${what}`);
       else { const item = `${act(p, 'draws', 'draw')} ${what}`; inline.push(item); drawnBy[p] = { names: drawn.map(c => short(c.card_id)), item }; }
     }
-    if (fromTrash.length) inline.push(`${act(p, 'returns', 'return')} ${list(fromTrash)} from the trash to hand`);
     if (milled.length) inline.push(`${act(p, 'trashes', 'trash')} ${list(milled)} from the deck`);
+    if (fromTrash.length) inline.push(`${act(p, 'returns', 'return')} ${list(fromTrash)} from the trash to hand`);
     if (discarded.length) inline.push(`${act(p, 'discards', 'discard')} ${list(discarded)}`);
   }
   // a new turn: the turn player readied everything (8.6.3)
@@ -322,7 +361,7 @@ function results(s, before, after, seq, subj) {
     const spent = [...Z.field, ...Z.legends, ...Z.eddies].filter(c => c.state === 'spent').length;
     if (spent) start.unshift(`readies ${spent} spent card${spent === 1 ? '' : 's'}`);
   }
-  return { inline, start, drawn: drawnBy };
+  return { inline, start, drawn: drawnBy, recovered };
 }
 
 // The engine's trace for one move -> the Draw effects that ran, in order: [{ pid, card, n }]
@@ -338,12 +377,28 @@ function traceDraws(lines) {
   return out;
 }
 
+// An effect that resolved on a move whose log never names its card gets its own line ("Evelyn Parker:
+// readies an Eddie"), so nothing looks like it didn't trigger. scripts/log-audit.js finds the gaps.
+const ownCards = (b, p) => [...b[p].zones.field, ...b[p].zones.legends];
+const SILENT = {
+  Draw: (p, a) => { const n = +((a.match(/n:(\d+)/) || [])[1] || 1); return n ? `draws ${n === 1 ? 'a card' : `${n} cards`}` : null; },
+  ReadyEddie: (p, a) => { const n = +((a.match(/n:(\d+)/) || [])[1] || 1); return n ? `readies ${n === 1 ? 'an Eddie' : `${n} Eddies`}` : null; },
+  Ready: (p, a, b0, b1) => {
+    const was = new Map(ownCards(b0, p).map(c => [c.iid, c.state]));
+    const up = ownCards(b1, p).filter(c => was.get(c.iid) === 'spent' && c.state !== 'spent' && c.face !== 'face_down').map(c => short(c.card_id));
+    return up.length ? `readies ${up.join(', ')}` : null;
+  },
+  RivalDiscards: () => 'makes the Rival discard',
+  MarkPeeked: () => 'looks at a face-down Legend',
+};
+
 function apply(s, seq, entry) {
   s.b._trace = [];   // the engine logs every effect it runs (card + action): used to split the log by source
   const r = policy.tryApply(s.b, s.wf, seq);
   const trace = r?.board._trace || [];
   s.b._trace = null;
   if (!r) return false;
+  (s.moves ||= []).push(seq);
   // a sale shows the card (the log names it): the board pops it up before it flies to the Eddies
   const sell = seq.find(x => x.step === 'sell_card');
   if (sell) { const pid = s.b.active_player, h = s.b[pid].zones.hand.find(c => c.iid === sell.iid); if (h) entry.sold = { pid, iid: h.iid, card_id: h.card_id }; }
@@ -354,7 +409,8 @@ function apply(s, seq, entry) {
       .replace(/\bopponent's d(\d+)/g, (_, n) => `${mineOr(entry.who === 'p1' ? 'p2' : 'p1')} d${n}`);
   }
   const subj = entry.who || s.b.active_player;
-  const R = results(s, s.b, r.board, seq, subj), res = R.inline;
+  const R = results(s, s.b, r.board, seq, subj, trace), res = R.inline;
+  if (R.recovered.length) entry.recovered = R.recovered;
   // a roll's result reads "Roll the d6 → 4" rather than "→ rolled d6 → 4"
   const roll = res.findIndex(x => /^rolled d\d+ → /.test(x));
   if (roll >= 0 && /^Roll the d/.test(entry.text)) { entry.text += ` → ${res[roll].split(' → ')[1]}`; res.splice(roll, 1); }
@@ -416,16 +472,41 @@ function apply(s, seq, entry) {
     });
   }
   if (res.length) entry.text += ` → ${res.join(' · ')}`;
+  // a search of the top of the deck that found nothing resolves without a prompt - say so, or it looks
+  // like the ability never triggered (Sketchy Ripper with no Gear in the top 3)
+  for (const l of trace) {
+    const m = l.match(/^T\d+\/trig (p[12])\/([^#\s]+)\S* SearchTopN\{n:(\d+)[^}]*\} ok$/);
+    if (!m) continue;
+    const js = JSON.stringify(SCRIPTS[m[2]] || {}), kind = js.match(/"filter":\{"type":"(\w+)"/);
+    const rest = /"trash_remainder":true/.test(js) ? 'trashes them' : 'puts them on the bottom of the deck';
+    extra.push({ who: m[1], text: `${short(m[2])}: searches the top ${m[3]} - no ${kind ? kind[1] : 'match'} found, ${rest}` });
+  }
   if (s.wf.step === 'main_phase' || s.wf.step === 'defensive_step') s.lastSrc = null;
   const flip = res.find(x => x.startsWith('flips ')) || flipped;
   if (flip) s.lastSrc = flip.slice(6);   // the Called Legend's prompts that follow belong to it
+  // effects nobody's line names yet (start-of-turn ones go under the new turn's start line)
+  const said = [entry.text, ...extra.map(x => x.text), ...(R.start || [])].join(' | ');
+  const silent = [];
+  for (const l of trace) {
+    const m = l.match(/^T(\d+)\/trig (p[12])\/([^#\s]+)\S* (\w+)(\{[^}]*\})? ok$/);
+    if (!m || !SILENT[m[4]]) continue;
+    const nm = short(m[3]);
+    if (said.includes(nm) || silent.some(x => x.text.startsWith(nm + ':'))) continue;
+    const phrase = SILENT[m[4]](m[2], m[5] || '', s.b, r.board);
+    if (phrase) silent.push({ who: m[2], text: `${nm}: ${phrase}`, turn: +m[1] });
+  }
   entry.active = s.b.active_player;   // whose turn the move was made in (end turn flips it)
   s.b = r.board; s.wf = r.waitingFor; s.b._trace = null;
   if (s.b.winner || !s.wf) s.over = true;
+  const logFrom = s.rlog.length;
   record(s, entry);
   for (const x of extra) record(s, { turn: entry.turn, who: x.who, kind: 'info', text: x.text, active: entry.active });
+  const startTurn = s.b.turn_number !== entry.turn ? s.b.turn_number : null;
+  for (const x of silent.filter(x => x.turn !== startTurn)) record(s, { turn: entry.turn, who: x.who, kind: 'info', text: x.text, active: entry.active });
+  if (s.audit) s.audit.push({ trace, from: logFrom });   // scripts/log-audit.js
   // the next turn's start phase (ready, draw) as its own line, under the new turn
   if (R.start.length && !s.over) record(s, { turn: s.b.turn_number, who: s.b.active_player, kind: 'info', text: `Turn ${s.b.turn_number} starts: ${R.start.join(' · ')}`, active: s.b.active_player });
+  if (!s.over) for (const x of silent.filter(x => x.turn === startTurn)) record(s, { turn: s.b.turn_number, who: x.who, kind: 'info', text: x.text, active: s.b.active_player });
   if (s.over) record(s, { turn: s.b.turn_number, kind: 'info', text: s.b.winner ? `${name(s, s.b.winner)} won.` : 'Game ended.' });
   return true;
 }
@@ -435,13 +516,15 @@ function record(s, entry) {
   s.log.push(entry);
   const viewer = s.mode === 'watch' ? 'p1' : s.you;
   const state = simState(s.b, viewer, s.labels, s.mode === 'watch' || s.over, s.over);
+  // cards that went deck -> trash -> hand in this step: the board shows them trashed first, then returned
+  if (entry.recovered) state.game.recovered = entry.recovered.map(x => x.iid);
   if (entry.sold) state.game.sold = { player: PID[entry.sold.pid], id: entry.sold.iid, cardId: artId(entry.sold.card_id), name: BY.get(entry.sold.card_id)?.name || entry.sold.card_id };
   const i = s.steps.length;
   const turnOf = entry.active || s.b.active_player;
   const who = entry.who ? `${s.labels[entry.who]}: ` : '';
   // the line names its actor itself, so tag it with the actor (app.js adds a name only for other players)
   const line = { id: `l${i}`, message: `${who}${entry.text}`, turnNumber: entry.turn, turnOwnerPlayerId: PID[entry.who || turnOf], turnOwnerLabel: s.labels[turnOf], step: i };
-  s.steps.push({ state, action: { label: line.message }, newLog: [line], turn: s.b.turn_number, think: entry.kind === 'bot' ? entry : null });
+  s.steps.push({ state, action: { label: line.message }, newLog: [line], turn: s.b.turn_number, think: entry.kind === 'bot' ? entry : null, mv: (s.moves || []).length, who: entry.who || null });
   s.rlog.push(line);
 }
 
@@ -450,6 +533,7 @@ function autoForced(s) {
   for (let i = 0; i < 50 && !s.over && s.wf && owner(s) === s.you; i++) {
     const o = options(s);
     if (o.length !== 1 || s.wf.step === 'main_phase') return;
+    if (s.wf.choice_needed?.available_iids?.length) return;   // a target pick is yours to click, even with one option
     apply(s, o[0], { turn: s.b.turn_number, who: s.you, kind: 'forced', text: describe(s.b, s.you, o[0], cnOf(s)) });
   }
 }
@@ -469,7 +553,7 @@ function move(id, i, pay) {
   const text = o.text || describe(s.b, s.you, seq, cnOf(s));
   // undo: the game as it was before this decision of yours (bot moves after it are undone with it)
   (s.undo ||= []).push({ b: cloneBoard(s.b), wf: JSON.parse(JSON.stringify(s.wf)), log: s.log.length, steps: s.steps.length,
-    rlog: s.rlog.length, lastSrc: s.lastSrc, over: s.over });
+    rlog: s.rlog.length, lastSrc: s.lastSrc, over: s.over, moves: (s.moves || []).length });
   if (s.undo.length > 200) s.undo.shift();
   if (!apply(s, seq, { turn: s.b.turn_number, who: s.you, kind: 'you', text, onTurn: s.b.active_player === s.you })) return { error: 'engine refused the move' };
   autoForced(s);
@@ -499,7 +583,8 @@ function undo(id) {
   const u = s.undo?.pop();
   if (!u) return { error: 'nothing to undo' };
   s.b = u.b; s.wf = u.wf; s.lastSrc = u.lastSrc; s.over = u.over;
-  s.log.length = u.log; s.steps.length = u.steps; s.rlog = s.rlog.filter(l => l.step < u.steps);
+  s.log.length = u.log; s.steps.length = u.steps; if (s.moves) s.moves.length = u.moves;
+  for (const k of Object.keys(s.flags || {})) if (+k >= u.steps) delete s.flags[k]; s.rlog = s.rlog.filter(l => l.step < u.steps);
   return { ok: true, total: s.steps.length };
 }
 
@@ -611,4 +696,107 @@ function poll(id, from = 0) {
   };
 }
 
-module.exports = { config, create, view, poll, move, advance, undo, BOTS, _sessions: SESSIONS };   // _sessions: debugging only
+// Game Review (src/coach/review-service.js): from an engine position in `pid`'s turn, play `first`
+// (the better move), then let Bot A finish the turn - recorded as board steps + log lines like a live
+// game, seen by `pid` (the Rival's hand stays hidden). Stops before ending the turn.
+function branch(b, wf, pid, first, labels, maxMoves = 16) {
+  const rv = pid === 'p1' ? 'p2' : 'p1';
+  const B = BOTS[0];
+  const s = { id: 'review', mode: 'play', you: pid, names: labels, labels, seed: 0, first: b.first_player, bots: { [rv]: { ...B, bot: makeBot('greedyt') } },
+    ctx: { [pid]: { rng: mulberry(7) }, [rv]: { rng: mulberry(8) } }, log: [], over: false, steps: [], rlog: [], b, wf };
+  const me = makeBot(B.spec), turn = b.turn_number;
+  const startTurn = s.steps.length;
+  s.steps.push({ state: simState(b, pid, labels), action: { label: 'start' }, newLog: [], turn });
+  if (!apply(s, first, { turn, who: pid, kind: 'best', text: describe(b, pid, first, cnOf(s)) })) return { steps: [], log: [] };
+  let n = 1;
+  for (let i = 0; i < 60 && !s.over && s.wf && s.b.turn_number === turn; i++) {
+    const p = owner(s), before = s.b, prompt = cnOf(s);
+    let seq = null;
+    try { seq = (p === pid ? me : s.bots[rv].bot).act(botView(s.b, p, s.ctx[p].rng), s.wf, p, s.ctx[p]); } catch { seq = null; }
+    if (!seq || !policy.tryApply(s.b, s.wf, seq)) seq = options(s)[0];
+    if (!seq) break;
+    const isMain = s.wf.step === 'main_phase' && p === pid;
+    if (isMain && seq[seq.length - 1].step === 'end_turn') break;
+    if (isMain && ++n > maxMoves) break;
+    apply(s, seq, { turn, who: p, kind: p === pid ? 'plan' : 'bot', text: describe(before, p, seq, prompt) });
+  }
+  return { steps: s.steps.slice(startTurn + 1), log: s.rlog };
+}
+
+// ---- flags: you mark a log line as a bot misplay or a good play (board/play.html ⚑); saved for later review ----
+// notes/bot-flags/flags.jsonl, one record per flag: the game (seed, decks, bots, first player, every move so
+// far - enough to rebuild any position with scripts/flags.js), the flagged line, its step and turn, the move
+// count before it (mvBefore: replay that many moves to stand just before it), what the bot compared, your tags + note.
+// Removing a flag appends { remove: id }.
+const FLAG_FILE = path.join(__dirname, '..', '..', 'notes', 'bot-flags', 'flags.jsonl');
+// three groups: a bot misplay (what was wrong), a good play (what made it good) or a UI issue (the board/log
+// showed something wrong), each with a grade + reasons.
+// Older records have no kind: they are misplays (their grade was one of the tags).
+const FLAG_KINDS = {
+  misplay: { label: 'Misplay', grades: ['Inaccuracy', 'Mistake', 'Blunder'],
+    tags: ['Wrong order', 'Missed play', 'Bad attack', 'Bad block', 'Wrong target', 'Wasted card', 'Bad payment', 'Too passive', 'Overextended', 'Rules bug', 'Log text'],
+    ask: 'What was wrong? What should it have done?' },
+  good: { label: 'Good play', grades: ['Good', 'Great', 'Brilliant'],
+    tags: ['Good order', 'Good attack', 'Good block', 'Good target', 'Good timing', 'Efficient payment', 'Saved a card', 'Set up next turn', 'Read the Rival', 'Found a combo', 'Took the Gig race'],
+    ask: 'What made it good?' },
+  ui: { label: 'UI issue', grades: ['Minor', 'Confusing', 'Broken'],
+    tags: ['Wrong text', 'Log wording', 'Wrong card shown', 'Missing info', 'Wrong highlight', 'Layout / overlap', 'Animation', 'Hover / tooltip', 'Controls', 'Sound'],
+    ask: 'What looks wrong? What did you expect?' },
+};
+const FLAG_TAGS = [...new Set(Object.values(FLAG_KINDS).flatMap(k => [...k.grades, ...k.tags]))];
+function flag(id, body) {
+  const s = SESSIONS.get(id);
+  if (!s) return { error: 'no game' };
+  const st = s.steps[+body.step];
+  if (!st) return { error: 'no such line' };
+  s.flags ||= {};
+  if (body.remove) {
+    const f = s.flags[body.step];
+    if (!f) return { error: 'not flagged' };
+    delete s.flags[body.step];
+    fs.appendFileSync(FLAG_FILE, JSON.stringify({ remove: f.id, at: new Date().toISOString() }) + '\n');
+    return { ok: true, flags: s.flags };
+  }
+  const kind = FLAG_KINDS[body.kind] ? body.kind : 'misplay', K = FLAG_KINDS[kind];
+  const grade = K.grades.includes(body.grade) ? body.grade : K.grades[1];
+  const tags = (Array.isArray(body.tags) ? body.tags : []).filter(t => K.tags.includes(t));
+  const note = String(body.note || '').slice(0, 2000);
+  // the move that produced this line: lines after a move share its count, so step back to the first line of it
+  let first = +body.step;
+  while (first > 0 && s.steps[first - 1].mv === st.mv) first--;
+  const f = { id: `${s.seed}-${body.step}-${Date.now()}`, at: new Date().toISOString(), kind, grade, tags, note,
+    step: +body.step, turn: st.newLog[0].turnNumber, line: st.newLog[0].message, who: st.who, whoName: st.who ? s.labels[st.who] : null,
+    mvBefore: Math.max(0, st.mv - 1), firstLineOfMove: s.steps[first].newLog[0].message,
+    think: s.steps[first].think ? { considered: s.steps[first].think.considered || null, notSearched: s.steps[first].think.notSearched ?? null, belief: s.steps[first].think.belief || null, note: s.steps[first].think.note || null } : null,
+    game: { seed: s.seed, first: s.first, you: s.you, mode: s.mode,
+      decks: { p1: s.decks.p1.file, p2: s.decks.p2.file }, deckLabels: { p1: s.decks.p1.label, p2: s.decks.p2.label },
+      bots: Object.fromEntries(Object.entries(s.bots).map(([q, B]) => [q, { id: B.id, name: B.name, spec: B.spec }])) },
+    moves: s.moves || [] };
+  s.flags[body.step] = { id: f.id, kind, grade, tags, note };
+  fs.mkdirSync(path.dirname(FLAG_FILE), { recursive: true });
+  fs.appendFileSync(FLAG_FILE, JSON.stringify(f) + '\n');
+  return { ok: true, flags: s.flags };
+}
+// rebuild a flagged game's engine position after its first n moves (scripts/flags.js) -> { b, wf }
+function rebuild(game, n) {
+  const deckOf = f => resolveDeck(f, () => 0).deck;
+  let r = step(setupGame(deckOf(game.decks.p1), deckOf(game.decks.p2), game.first, { seed: game.seed }), undefined);
+  for (const seq of game.moves.slice(0, n)) { r = policy.tryApply(r.board, r.waitingFor, seq); if (!r) return null; }
+  return { b: r.board, wf: r.waitingFor };
+}
+const flagsOf = id => ({ kinds: FLAG_KINDS, flags: SESSIONS.get(id)?.flags || {} });
+
+// n community lists for the new-game menu (popular ones more often: weight sqrt(1 + likes)), excluding `skip` files
+function community(n = 8, skip = []) {
+  const no = new Set(skip), pool = netDecks().filter(d => !no.has(d.file)), out = [];
+  const w = pool.map(d => Math.sqrt(1 + (d.likes || 0)));
+  for (let k = 0; k < n && pool.length; k++) {
+    let u = Math.random() * w.reduce((a, b) => a + b, 0), i = 0;
+    while (i < pool.length - 1 && (u -= w[i]) > 0) i++;
+    const d = pool.splice(i, 1)[0]; w.splice(i, 1);
+    out.push({ file: d.file, title: d.title, legends: d.legends, colors: d.colors, tag: d.tag, likes: d.likes || 0 });
+  }
+  return out;
+}
+
+module.exports = { community, flag, flagsOf, rebuild, FLAG_FILE, FLAG_TAGS, FLAG_KINDS, branch, config, create, view, poll, move, advance, undo, BOTS, _sessions: SESSIONS };   // _sessions: debugging only

@@ -170,7 +170,8 @@ function moves(wf, b) {
 // ─── running the engine ─────────────────────────────────────────────────────
 function apply(b, wf, seq) {
   let w = wf;
-  for (const a of seq) { const r = step(b, a); b = r.board; w = r.waitingFor; if (!w) break; }
+  // the first step copies the caller's board; later steps work on that private copy in place
+  for (let i = 0; i < seq.length; i++) { const r = step(b, seq[i], i > 0); b = r.board; w = r.waitingFor; if (!w) break; }
   return { board: b, waitingFor: w };
 }
 function tryApply(b, wf, seq) {
@@ -207,7 +208,10 @@ function settle(b, wf, pid, cap = 30) {
 }
 
 // ─── the bot ────────────────────────────────────────────────────────────────
-// opts: { rng, noise (0 = pure greedy), maxMoves }
+// opts: { rng, noise (0 = pure greedy), maxMoves, resolve }
+// opts.resolve: score every choice after it plays out (settle). Without it a block is scored before the fight,
+// looks worse than passing, and greedy never blocks (search fix, Nov 2026).
+const FIGHT = new Set(['defensive_step', 'attacker_interrupt_step']);   // resolve: 'fight' settles only these
 function chooseMove(wf, b, opts = {}) {
   if (wf.step === 'mulligan_decision' && opts.mull !== 'old') return require('../bot/mulligan').choose(b, wf, opts.rng || Math.random);
   const pid = wf.owner || b.active_player;
@@ -219,7 +223,7 @@ function chooseMove(wf, b, opts = {}) {
     if (seq[seq.length - 1].step === 'end_turn') { scored.push({ seq, s: evaluate(b, pid) }); continue; }
     const r = tryApply(b, wf, seq);
     if (!r) continue;
-    const st = wf.step === 'main_phase' ? settle(r.board, r.waitingFor, pid) : r;
+    const st = wf.step === 'main_phase' || (opts.resolve === 'fight' ? FIGHT.has(wf.step) : opts.resolve) ? settle(r.board, r.waitingFor, pid) : r;
     let s = evaluate(st.board, pid);
     if (seq.some(a => a.step === 'sell_card')) s += 0.6;            // selling early in the turn keeps options open
     scored.push({ seq, s });

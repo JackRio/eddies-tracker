@@ -22,7 +22,7 @@ const flag = (k, d) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] 
 const file = args.find(a => a.endsWith('.jsonl')) || path.join(__dirname, '..', 'notes', 'league', 'data-2001.jsonl');
 const reFile = file.replace(/\.jsonl$/, '-re.jsonl');
 const bot = makeBot(flag('--bot', 'strong'));
-const N = +flag('--games', 4), MIN = +flag('--min', 3) / 100;
+const N = +flag('--games', 4), MIN = +flag('--min', 3) / 100, MAX = +flag('--max', 100) / 100;   // --max: only gaps below this
 const outFile = flag('--out', path.join(path.dirname(file), 'reanalyse-examples.txt'));
 const rng = mulberry(+flag('--seed', 7));
 const BY = new Map(CARDS.map(c => [c.number, c]));
@@ -48,7 +48,7 @@ for (const l of fs.readFileSync(reFile, 'utf8').split('\n')) {
 function best(c) { let b = -1; c.forEach((x, k) => { if (x[3] != null && (b < 0 || x[3] > c[b][3])) b = k; }); return b; }
 function changed(oldR, newR) {
   const nb = best(newR.c), np = newR.c[oldR.pick]?.[3];
-  return nb >= 0 && nb !== oldR.pick && np != null && newR.c[nb][3] - np >= MIN;
+  return nb >= 0 && nb !== oldR.pick && np != null && newR.c[nb][3] - np >= MIN && newR.c[nb][3] - np < MAX;
 }
 
 const add = (m, id, k) => { const r = { ...m }; r[id] = (r[id] || 0) + k; if (r[id] <= 0) delete r[id]; return r; };

@@ -6,12 +6,15 @@ const { defaultPassAction } = require('../engine');
 const policy = require('../coach/policy');
 
 // policy.chooseMove with a pluggable evaluation
+const FIGHT = new Set(['defensive_step', 'attacker_interrupt_step']);   // resolve: 'fight' settles only these
 function chooseMove(wf, b, opts = {}) {
   // keep/mulligan by hand quality (src/bot/mulligan.js); opts.mull === 'old': the old score-based tie (always keeps)
   if (wf.step === 'mulligan_decision' && opts.mull !== 'old') return require('./mulligan').choose(b, wf, opts.rng || Math.random);
   const ev = opts.ev || policy.evaluate;
   const pid = wf.owner || b.active_player;
-  const cands = policy.moves(wf, b);
+  // opts.filter(seq): only these moves (strong.js alt=1 plays the rest of a turn without attacks)
+  const all = policy.moves(wf, b), kept = opts.filter ? all.filter(opts.filter) : all;
+  const cands = kept.length ? kept : all;
   if (!cands.length) { const d = defaultPassAction(wf); return d ? [d] : null; }
   if (cands.length === 1) return cands[0];
   const scored = [];
@@ -19,7 +22,9 @@ function chooseMove(wf, b, opts = {}) {
     if (seq[seq.length - 1].step === 'end_turn') { scored.push({ seq, s: ev(b, pid) }); continue; }
     const r = policy.tryApply(b, wf, seq);
     if (!r) continue;
-    const st = wf.step === 'main_phase' ? policy.settle(r.board, r.waitingFor, pid) : r;
+    // opts.resolve: score every choice after it plays out (settle) - without it a block is scored before the
+    // fight happens, so greedy (almost) never blocks; strong.js gb=1 turns it on inside playouts
+    const st = wf.step === 'main_phase' || (opts.resolve === 'fight' ? FIGHT.has(wf.step) : opts.resolve) ? policy.settle(r.board, r.waitingFor, pid) : r;
     let s = ev(st.board, pid);
     if (seq.some(a => a.step === 'sell_card')) s += opts.sell ?? 0.6;
     scored.push({ seq, s });

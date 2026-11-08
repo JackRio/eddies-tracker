@@ -1,0 +1,1977 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-01-jackrio-vs-puzonyyx-c4874210.json",
+ "matchId": "c4874210-b763-4c87-a6a9-6492e7f71e90",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "puzonyyx",
+ "result": {
+  "loserId": "player1",
+  "reason": "puzonyyx reached 7 Gig dice.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax"
+   ]
+  },
+  "rival": {
+   "source": "17 cards seen in the game, rest from meta deck \"Adam Smasher / River Ward / Viktor Vektor (4 Yellow / 2 Red)\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 49,
+ "summary": {
+  "counts": {
+   "great": 0,
+   "good": 15,
+   "okay": 5,
+   "misplay": 1,
+   "mistake": 3,
+   "blunder": 1
+  },
+  "moves": 25,
+  "avgLoss": 4.1,
+  "accuracy": 60
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "moves": [
+    {
+     "from": 8,
+     "to": 9,
+     "end": false,
+     "log": [
+      "JackRio sold Satori: Sword of Saburo into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Satori",
+      "p": 26.2
+     },
+     "best": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 28.1,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "97b1cb7a"
+       }
+      ]
+     },
+     "loss": 1.9,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 28.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 28.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 26.2,
+       "yours": true
+      },
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 24.4,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 15.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 9.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Satori.",
+       "The better move sells Mandibular Upgrade."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 6.708333333333333
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0,
+        "rivalUnits": 0.9166666666666666,
+        "hand": 6.708333333333333
+       }
+      },
+      "better": "Sell Mandibular Upgrade"
+     }
+    },
+    {
+     "from": 9,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. River Ward: Detective on the Hunt was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 27.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 26.9,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 26.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 14.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 10,
+     "to": 12,
+     "end": false,
+     "log": [
+      "JackRio played Live with the Aftermath by spending 3 Legends.",
+      "JackRio had no Unit to defeat with Live with the Aftermath.",
+      "Sketchy Ripper was defeated. Live with the Aftermath required puzonyyx to defeat one of their Units."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Live with the Aftermath",
+      "p": 28.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.4,
+     "options": [
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 28.7,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 19.2,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on River Ward",
+       "p": 16.3,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 16,
+       "yours": false
+      },
+      {
+       "text": "Play Arasaka Emergency Radioport on River Ward",
+       "p": 10.2,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 10.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 12,
+     "to": 13,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 29.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 29.6,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 19,
+   "moves": [
+    {
+     "from": 19,
+     "to": 20,
+     "end": false,
+     "log": [
+      "JackRio sold Arasaka Emergency Radioport into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Arasaka Emergency Radioport",
+      "p": 16.1
+     },
+     "best": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 18.3,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "97b1cb7a"
+       }
+      ]
+     },
+     "loss": 2.2,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 18.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 18.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 16.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 16.1,
+       "yours": true
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 4.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 4.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Arasaka Emergency Radioport.",
+       "The better move sells Mandibular Upgrade."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0,
+        "rivalUnits": 0.75,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0,
+        "rivalUnits": 0.75,
+        "hand": 6
+       }
+      },
+      "better": "Sell Mandibular Upgrade"
+     }
+    },
+    {
+     "from": 20,
+     "to": 22,
+     "end": false,
+     "log": [
+      "JackRio played Live with the Aftermath by spending 2 Eddies and 1 Legend.",
+      "JackRio had no Unit to defeat with Live with the Aftermath.",
+      "6th Street Recruits was defeated. Live with the Aftermath required puzonyyx to defeat one of their Units."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Live with the Aftermath",
+      "p": 14.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.3,
+     "options": [
+      {
+       "text": "Play Program Live with the Aftermath",
+       "p": 14.7,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 13.3,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 8,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on River Ward",
+       "p": 6.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 22,
+     "to": 23,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Adam Smasher: Ender of Legends was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 2 face-down",
+      "p": 13.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.8,
+     "options": [
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 13.2,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 9.8,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 9.2,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 9.1,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 9.1,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on River Ward",
+       "p": 6.9,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 23,
+     "to": 26,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to River Ward: Detective on the Hunt for free."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Zetatech Faceplate\n  picks River Ward",
+      "p": 12.2
+     },
+     "best": {
+      "text": "End turn",
+      "p": 17.5,
+      "seq": [
+       {
+        "step": "end_turn"
+       }
+      ]
+     },
+     "loss": 5.4,
+     "se": 0.9,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 17.5,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Adam Smasher",
+       "p": 11.8,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Adam Smasher",
+       "p": 11.8,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 11.8,
+       "yours": true
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 11.8,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on River Ward",
+       "p": 11.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Stopping here was better: the rest of the turn costs more than it gains.",
+      "reasons": [
+       "You start your next turn with 5 cards in hand, instead of 4."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0,
+        "rivalUnits": 0.75,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0,
+        "rivalUnits": 0.75,
+        "hand": 5
+       }
+      },
+      "better": "End turn"
+     }
+    },
+    {
+     "from": 26,
+     "to": 27,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 16.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 16.7,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 33,
+   "moves": [
+    {
+     "from": 33,
+     "to": 34,
+     "end": false,
+     "log": [
+      "JackRio sold Mandibular Upgrade into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 48.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 48.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 48.1,
+       "yours": true
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 46.4,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 6.5,
+       "yours": false
+      },
+      {
+       "text": "Call Viktor Vektor - last face-down Legend",
+       "p": 6.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 3.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 34,
+     "to": 36,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Viktor Vektor: Sit Down and Relax was revealed.",
+      "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+      "JackRio revealed Zetatech Faceplate and Mantis Blades with Viktor Vektor and added them to hand."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call Viktor Vektor - last face-down Legend\n  picks Mandibular Upgrade, Zetatech Faceplate",
+      "p": 7.9
+     },
+     "best": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 54.6,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "5a920ded"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7dc6b7c2"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "9fcb5ef7"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d727521d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dce328d8"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7ae9c049"
+       },
+       {
+        "step": "play_card",
+        "iid": "7904bf28"
+       }
+      ]
+     },
+     "loss": 46.8,
+     "se": 2.9,
+     "options": [
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 54.6,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 9.4,
+       "yours": false
+      },
+      {
+       "text": "Call Viktor Vektor - last face-down Legend",
+       "p": 8.3,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 6.1,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on River Ward",
+       "p": 3.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move calls Viktor Vektor.",
+       "The better move plays Johnny Silverhand.",
+       "You keep 1 Units through their turn on average, instead of 0."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.6666666666666665,
+        "rivalGigs": 4.333333333333333,
+        "units": 0,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 4.75
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.6666666666666665,
+        "rivalGigs": 4.333333333333333,
+        "units": 0.9583333333333334,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 4
+       }
+      },
+      "better": "Play Unit Johnny Silverhand"
+     }
+    },
+    {
+     "from": 36,
+     "to": 41,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to Adam Smasher: Ender of Legends for free.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 2 to 3.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Johnny Silverhand: Never Stop Fighting."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Zetatech Faceplate\n  picks Adam Smasher\n  picks own d8 (2)\n  amount → 1",
+      "p": 10.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.7,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on Adam Smasher",
+       "p": 8.7,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on River Ward",
+       "p": 8.7,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Viktor Vektor",
+       "p": 8.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 8.7,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 8.3,
+       "yours": true
+      }
+     ]
+    },
+    {
+     "from": 41,
+     "to": 44,
+     "end": false,
+     "log": [
+      "JackRio equipped Mandibular Upgrade to Adam Smasher: Ender of Legends by spending 1 Legend.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 3 to 4.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Adrenaline Converter."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 3
+     },
+     "best": {
+      "text": "Play Gorilla Arms on River Ward",
+      "p": 4.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "5a920ded"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7dc6b7c2"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dce328d8"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d727521d"
+       },
+       {
+        "step": "play_card",
+        "iid": "aa46827c",
+        "equip_to": "7ae9c049"
+       }
+      ]
+     },
+     "loss": 2,
+     "se": 3,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on River Ward",
+       "p": 4.9,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Viktor Vektor",
+       "p": 4.9,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Adam Smasher",
+       "p": 4.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 4.7,
+       "yours": false
+      },
+      {
+       "text": "Play Mantis Blades on Adam Smasher",
+       "p": 1.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.5833333333333335,
+        "rivalGigs": 4.416666666666667,
+        "units": 0,
+        "rivalUnits": 1.75,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.7083333333333335,
+        "rivalGigs": 4.291666666666667,
+        "units": 0,
+        "rivalUnits": 1.75,
+        "hand": 6
+       }
+      },
+      "better": "Play Gorilla Arms on River Ward"
+     }
+    },
+    {
+     "from": 44,
+     "to": 45,
+     "end": false,
+     "log": [
+      "JackRio equipped Mantis Blades to Adam Smasher: Ender of Legends by spending 1 Eddie."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Mantis Blades on Adam Smasher",
+      "p": 2
+     },
+     "best": {
+      "text": "End turn",
+      "p": 4.4,
+      "seq": [
+       {
+        "step": "end_turn"
+       }
+      ]
+     },
+     "loss": 2.4,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 4.4,
+       "yours": false
+      },
+      {
+       "text": "Play Mantis Blades on Viktor Vektor",
+       "p": 2,
+       "yours": false
+      },
+      {
+       "text": "Play Mantis Blades on River Ward",
+       "p": 2,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Viktor Vektor",
+       "p": 1.7,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on River Ward",
+       "p": 1.7,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Adam Smasher",
+       "p": 1.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Stopping here was better: the rest of the turn costs more than it gains.",
+      "reasons": [
+       "You start your next turn with 6 cards in hand, instead of 5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.8333333333333335,
+        "rivalGigs": 4.166666666666667,
+        "units": 0,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.8333333333333335,
+        "rivalGigs": 4.166666666666667,
+        "units": 0,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 6
+       }
+      },
+      "better": "End turn"
+     }
+    },
+    {
+     "from": 45,
+     "to": 46,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1.6,
+       "yours": true
+      },
+      {
+       "text": "Play Adrenaline Converter on Viktor Vektor",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on River Ward",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Adam Smasher",
+       "p": 0.4,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 61,
+   "moves": [
+    {
+     "from": 61,
+     "to": 69,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand: Never Stop Fighting by spending 3 Eddies and 3 Legends.",
+      "JackRio's last action was undone by agreement.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 4 to 5.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Johnny Silverhand: Never Stop Fighting.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 5 to 6.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Bootleg Black Sapphire Show."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 0.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 0.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 69,
+     "to": 70,
+     "end": false,
+     "log": [
+      "JackRio sold Bootleg Black Sapphire Show into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bootleg Black Sapphire Show",
+      "p": 0.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 0.9,
+       "yours": true
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 70,
+     "to": 71,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1.1,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 93,
+   "moves": [
+    {
+     "from": 93,
+     "to": 96,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to Johnny Silverhand: Never Stop Fighting by spending 1 Eddie and 1 Legend.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 1 to 2."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 1.5
+     },
+     "best": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 4,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "5a920ded"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7dc6b7c2"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "9fcb5ef7"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "3b9de21c"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dce328d8"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7ae9c049"
+       },
+       {
+        "step": "play_card",
+        "iid": "7904bf28"
+       }
+      ]
+     },
+     "loss": 2.5,
+     "se": 3,
+     "options": [
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 4,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 3.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 3.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 2.6,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Johnny Silverhand",
+       "p": 1.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The Rival has 9 Gigs by your next turn on average, instead of 10.",
+       "You hold 3 Gigs at your next turn on average, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 10,
+        "units": 1.6666666666666667,
+        "rivalUnits": 2.5833333333333335,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 9,
+        "units": 1.8333333333333333,
+        "rivalUnits": 2.9583333333333335,
+        "hand": 4
+       }
+      },
+      "better": "Play Unit Johnny Silverhand"
+     }
+    },
+    {
+     "from": 96,
+     "to": 102,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared Johnny Silverhand: Never Stop Fighting against Sketchy Ripper. puzonyyx must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 2 to 3.",
+      "Johnny Silverhand: Never Stop Fighting (10) fought Secondhand Bombus (0) and won.",
+      "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+      "Secondhand Bombus was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 1.4
+     },
+     "best": {
+      "text": "Play Gorilla Arms on Johnny Silverhand",
+      "p": 4.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "5a920ded"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7dc6b7c2"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "9fcb5ef7"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "7ae9c049"
+       },
+       {
+        "step": "play_card",
+        "iid": "aa46827c",
+        "equip_to": "47ba8331"
+       }
+      ]
+     },
+     "loss": 3.5,
+     "se": 3,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on Johnny Silverhand",
+       "p": 4.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 1,
+       "yours": false
+      },
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Johnny Silverhand",
+       "p": 0.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The Rival has 9 Gigs by your next turn on average, instead of 10.",
+       "You hold 3 Gigs at your next turn on average, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 10,
+        "units": 1.7916666666666667,
+        "rivalUnits": 2.625,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 9,
+        "units": 1.5,
+        "rivalUnits": 2.5416666666666665,
+        "hand": 3
+       }
+      },
+      "better": "Play Gorilla Arms on Johnny Silverhand"
+     }
+    },
+    {
+     "from": 102,
+     "to": 103,
+     "end": false,
+     "log": [
+      "JackRio sold Gorilla Arms into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Gorilla Arms",
+      "p": 1.2
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with Johnny Silverhand",
+      "p": 12.4,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "47ba8331",
+        "target": {
+         "kind": "unit",
+         "iid": "e474fbcd"
+        }
+       }
+      ]
+     },
+     "loss": 11.2,
+     "se": 1.7,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 12.4,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Johnny Silverhand",
+       "p": 6.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 1.2,
+       "yours": true
+      },
+      {
+       "text": "Play Adrenaline Converter on Johnny Silverhand",
+       "p": 0.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Johnny Silverhand (10) beats Sketchy Ripper (2).",
+       "Your move sells Gorilla Arms.",
+       "The better move removes the Rival's Sketchy Ripper.",
+       "The Rival has 9 Gigs by your next turn on average, instead of 10.",
+       "You hold 3 Gigs at your next turn on average, instead of 2.",
+       "The Rival is down to 2 Units, instead of 2.7."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 10,
+        "units": 1.75,
+        "rivalUnits": 2.6666666666666665,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 9,
+        "units": 1.9583333333333333,
+        "rivalUnits": 2,
+        "hand": 5
+       }
+      },
+      "better": "Attack Sketchy Ripper with Johnny Silverhand"
+     }
+    },
+    {
+     "from": 103,
+     "to": 106,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand: Never Stop Fighting by spending 4 Eddies and 2 Legends.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d4 from 4 to 3."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Johnny Silverhand\n  picks own d4 (4)\n  amount → -1",
+      "p": 0.9
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with Johnny Silverhand",
+      "p": 11.7,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "47ba8331",
+        "target": {
+         "kind": "unit",
+         "iid": "e474fbcd"
+        }
+       }
+      ]
+     },
+     "loss": 10.8,
+     "se": 1.9,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 11.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.9,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Johnny Silverhand",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 0.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Johnny Silverhand (10) beats Sketchy Ripper (2).",
+       "Your move plays Johnny Silverhand.",
+       "The better move removes the Rival's Sketchy Ripper.",
+       "The Rival has 9 Gigs by your next turn on average, instead of 10.",
+       "You hold 3 Gigs at your next turn on average, instead of 2.",
+       "You start your next turn with 5 cards in hand, instead of 4."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 10,
+        "units": 1.5,
+        "rivalUnits": 2.3333333333333335,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 9,
+        "units": 1.875,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 5
+       }
+      },
+      "better": "Attack Sketchy Ripper with Johnny Silverhand"
+     }
+    },
+    {
+     "from": 106,
+     "to": 113,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. puzonyyx must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 3 to 4.",
+      "Johnny Silverhand: Never Stop Fighting made a Gig attack on puzonyyx and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from puzonyyx.",
+      "JackRio stole d12 (10) from puzonyyx. JackRio now has 4 Gig dice.",
+      "JackRio stole d10 (10) from puzonyyx. JackRio now has 4 Gig dice."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 0.9
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with Johnny Silverhand",
+      "p": 11,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "47ba8331",
+        "target": {
+         "kind": "unit",
+         "iid": "e474fbcd"
+        }
+       }
+      ]
+     },
+     "loss": 10.1,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 11,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Rockn' Rockerboy with Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Johnny Silverhand (10) beats Sketchy Ripper (2).",
+       "The Rival has 9 Gigs by your next turn on average, instead of 10.",
+       "You hold 3 Gigs at your next turn on average, instead of 2.",
+       "The Rival is down to 2 Units, instead of 2.8."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 10,
+        "units": 1.7083333333333333,
+        "rivalUnits": 2.75,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 9,
+        "units": 1.8333333333333333,
+        "rivalUnits": 2.0416666666666665,
+        "hand": 4
+       }
+      },
+      "better": "Attack Sketchy Ripper with Johnny Silverhand"
+     }
+    },
+    {
+     "from": 113,
+     "to": 114,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1.4,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 12,
+   "stepA": 134,
+   "moves": [
+    {
+     "from": 134,
+     "to": 135,
+     "end": false,
+     "log": [
+      "JackRio sold Adrenaline Converter into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Adrenaline Converter",
+      "p": 0
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with Johnny Silverhand",
+      "p": 3.2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "7904bf28",
+        "target": {
+         "kind": "unit",
+         "iid": "e474fbcd"
+        }
+       }
+      ]
+     },
+     "loss": 3.2,
+     "se": 1,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 3.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Viktor Vektor",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Johnny Silverhand (8) beats Sketchy Ripper (2).",
+       "Your move sells Adrenaline Converter.",
+       "The better move removes the Rival's Sketchy Ripper.",
+       "The Rival wins on their next turn in 100% of the imagined replies after your move, 0% after this one.",
+       "You start your next turn with 7 cards in hand, instead of 6."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 1,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 2,
+        "rivalUnits": 2,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.375,
+        "rivalGigs": 8.625,
+        "units": 1.3333333333333333,
+        "rivalUnits": 2.7916666666666665,
+        "hand": 7
+       }
+      },
+      "better": "Attack Sketchy Ripper with Johnny Silverhand"
+     }
+    },
+    {
+     "from": 135,
+     "to": 144,
+     "end": false,
+     "log": [
+      "JackRio sent Adam Smasher: Ender of Legends GO SOLO onto the field.",
+      "Rockn' Rockerboy was defeated and sent to trash with 2 attached Gear cards. Adam Smasher: Ender of Legends's PLAY effect defeated it.",
+      "puzonyyx trashed Zetatech Faceplate from River Ward's search.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 11 to 12.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Mantis Blades.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d20 from 11 to 12.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Secondhand Bombus."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 4.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 1.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Viktor Vektor",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Adam Smasher goes Solo",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 144,
+     "to": 148,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared Johnny Silverhand: Never Stop Fighting against Sketchy Ripper. puzonyyx must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting (8) fought Sketchy Ripper (2) and won.",
+      "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+      "Sketchy Ripper was defeated and sent to trash with 1 attached Gear card. JackRio's attack won the fight.",
+      "puzonyyx trashed Johnny Silverhand: Never Stop Fighting from River Ward's search."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Sketchy Ripper with Johnny Silverhand\n  Don't block / don't respond\n  picks Johnny Silverhand",
+      "p": 5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.6,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 3.5,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 3.5,
+       "yours": false
+      },
+      {
+       "text": "Attack Sketchy Ripper with Adam Smasher",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 148,
+     "to": 152,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. puzonyyx must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting made a Gig attack on puzonyyx and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from puzonyyx.",
+      "JackRio stole d10 (10) from puzonyyx. JackRio now has 5 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Johnny Silverhand\n  Don't block / don't respond\n  Steal opponent's d10 (10)",
+      "p": 5.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 5.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 5.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 152,
+     "to": 158,
+     "end": false,
+     "log": [
+      "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. puzonyyx must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d12 from 4 to 5.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Arasaka Emergency Radioport.",
+      "Adam Smasher: Ender of Legends (13) fought Secondhand Bombus (0) and won.",
+      "Secondhand Bombus was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Adam Smasher\n  picks own d12 (4)\n  amount → 1\n  Block with Secondhand Bombus\n  Don't block / don't respond",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 8,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 158,
+     "to": 159,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

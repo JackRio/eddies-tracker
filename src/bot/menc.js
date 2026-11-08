@@ -7,6 +7,10 @@
 //   target    - the card it points at (Gear host, attacked Unit, picked card), split by owner
 //   selected  - every card picked in a multi-pick choice
 //   taps      - how many resources it spends (bucketed), die sides
+//   gig       - every Gig the move picks (steal, swap, raise / lower, set...), described in the Gig language
+//               (src/bot/gigfeatures.js), per owner: size, even / odd, max / min / 8+, shares a value with
+//               another of its owner's Gigs (a value-pair) or with one of the other side's, value quarter,
+//               stolen. Nets trained before this (no meta.gigMoves) never see these slots (pnet.js drops them).
 // Card indices use the value net's vocabulary (150 legal cards).
 'use strict';
 const { VOCAB } = require('./vfeatures');
@@ -18,10 +22,13 @@ const KINDS = ['sell', 'play_unit', 'play_program', 'equip_unit', 'equip_legend'
   'attack_gigs', 'attack_unit', 'block', 'call_defensive', 'interrupt', 'asset_spend', 'pass_defensive',
   'pass_interrupt', 'end_turn', 'die', 'steal', 'mulligan_keep', 'mulligan_redraw',
   'resp_accept', 'resp_decline', 'resp_pick', 'resp_pick_none', 'resp_multi', 'resp_amount', 'resp_type', 'resp_ack', 'other'];
+const SIZES = [4, 6, 8, 10, 12, 20];
+const GIG = 18;
 const OFF = {};
 let o = 0;
-for (const [k, n] of [['kind', KINDS.length], ['actor', V], ['tgtMine', V], ['tgtRival', V], ['selected', V], ['taps', 8], ['die', 6], ['amount', 6]]) { OFF[k] = o; o += n; }
+for (const [k, n] of [['kind', KINDS.length], ['actor', V], ['tgtMine', V], ['tgtRival', V], ['selected', V], ['taps', 8], ['die', 6], ['amount', 6], ['gigMine', GIG], ['gigRival', GIG]]) { OFF[k] = o; o += n; }
 const SIZE = o;
+const GIG_FROM = OFF.gigMine;   // 650: first Gig slot (the table size before the Gig language)
 
 function locate(b, iid) {
   for (const p of ['p1', 'p2']) {
@@ -36,6 +43,24 @@ function locate(b, iid) {
   return null;
 }
 
+function findGig(b, iid) {
+  for (const p of ['p1', 'p2']) { const g = (b[p].zones.gigs || []).find(x => x.iid === iid); if (g) return { g, owner: p }; }
+  return null;
+}
+// a picked Gig -> slot offsets (relative to its owner's block)
+function gigSlots(b, g, owner) {
+  const v = g.value, out = [Math.max(0, SIZES.indexOf(g.sides)), 6 + (v % 2 === 0 ? 0 : 1)];
+  if (v === g.sides) out.push(8);
+  if (v === 1) out.push(9);
+  if (v >= 8) out.push(10);
+  if (b[owner].zones.gigs.some(x => x !== g && x.value === v)) out.push(11);
+  const other = owner === 'p1' ? 'p2' : 'p1';
+  if (b[other].zones.gigs.some(x => x.value === v)) out.push(12);
+  out.push(13 + Math.min(3, Math.floor((v / g.sides) * 4)));
+  if (!String(g.iid).startsWith(owner)) out.push(17);
+  return out;
+}
+
 // -> [[index, value], ...]
 function encodeMove(b, pid, seq) {
   const out = new Map();
@@ -48,6 +73,12 @@ function encodeMove(b, pid, seq) {
     if (i === undefined) return;
     if (slot === 'target') put((f.owner === pid ? OFF.tgtMine : OFF.tgtRival) + i);
     else put(OFF[slot] + i);
+  };
+  const gigAt = iid => {
+    const f = iid != null && findGig(b, iid);
+    if (!f) return false;
+    for (const k of gigSlots(b, f.g, f.owner)) put((f.owner === pid ? OFF.gigMine : OFF.gigRival) + k);
+    return true;
   };
   const taps = seq.filter(a => a.step === 'tap_resource').length;
   put(OFF.taps + Math.min(taps, 7));
@@ -74,7 +105,7 @@ function encodeMove(b, pid, seq) {
     case 'pass_attacker_interrupt': kind('pass_interrupt'); break;
     case 'end_turn': kind('end_turn'); break;
     case 'choose_gig_die': kind('die'); put(OFF.die + Math.min(5, Math.max(0, (a.sides - 2) / 2 | 0))); break;
-    case 'choose_gig_to_steal': kind('steal'); put(OFF.amount + Math.min(5, a.iids.length)); break;
+    case 'choose_gig_to_steal': kind('steal'); put(OFF.amount + Math.min(5, a.iids.length)); for (const i of a.iids) gigAt(i); break;
     case 'mulligan': kind(a.mulligan ? 'mulligan_redraw' : 'mulligan_keep'); break;
     case 'effect_choice_response': {
       const r = a.response || {};
@@ -83,8 +114,8 @@ function encodeMove(b, pid, seq) {
       else if (r.accept === false) kind('resp_decline');
       else if (r.card_type) kind('resp_type');
       else if (r.amount !== undefined) { kind('resp_amount'); put(OFF.amount + Math.min(5, Math.max(0, r.amount))); }
-      else if (r.selected_iids) { kind('resp_multi'); for (const i of r.selected_iids) cardAt('selected', i); }
-      else if (r.iid) { kind('resp_pick'); cardAt('target', r.iid); }
+      else if (r.selected_iids) { kind('resp_multi'); for (const i of r.selected_iids) if (!gigAt(i)) cardAt('selected', i); }
+      else if (r.iid) { kind('resp_pick'); if (!gigAt(r.iid)) cardAt('target', r.iid); }
       else kind('resp_pick_none');
       break;
     }
@@ -102,4 +133,4 @@ function kindOf(seq) {
   return a.step;
 }
 
-module.exports = { encodeMove, kindOf, SIZE, KINDS, OFF };
+module.exports = { encodeMove, kindOf, SIZE, KINDS, OFF, GIG_FROM };

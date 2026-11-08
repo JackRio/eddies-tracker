@@ -7,7 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="board.css?v=20261107f">
+<link rel="stylesheet" href="board.css?v=20261107u">
+<link rel="stylesheet" href="play.css?v=20261107r">
 </head>
 <body>
 <!-- The official Legend back is yellow on black; non-Legend backs are the same art with yellow and black swapped. -->
@@ -22,9 +23,10 @@
 
   <!-- right panel: Replay Coach, then the log -->
   <aside class="side">
-    <div class="side-top"><select id="replay-pick" aria-label="Replay file"><option value="">Choose a replay…</option></select>
+    <div class="side-top"><a class="btn home" href="/" title="Home">⌂ Home</a><select id="replay-pick" aria-label="Replay file"><option value="">Choose a replay…</option></select>
   <label class="btn file-btn">Open file…<input id="replay-file" type="file" accept=".json,application/json" hidden></label>
   <div id="match-info" class="match-info"></div>
+      <a class="btn" href="review.html">Review</a>
       <a class="btn" href="play.html">Play</a>
       <span class="snd"><button class="btn" id="snd-btn" type="button">🔊</button><input id="snd-vol" type="range" min="0" max="100" aria-label="Volume"></span></div>
     <div class="coach-box" id="coach-box" hidden>
@@ -52,10 +54,11 @@
 <div id="zoom" class="zoom" hidden></div>
 <dialog id="pile-dialog" class="pile-dialog"><h2 id="pile-title"></h2><div id="pile-cards" class="pile-cards"></div><button class="btn" id="pile-close">Close</button></dialog>
 
-<script src="sfx.js?v=20261107f"></script>
-<script src="replay.js?v=20261107f"></script>
-<script src="logfmt.js?v=20261107f"></script>
-<script src="app.js?v=20261107f"></script>
-<script src="coach.js?v=20261107f"></script>
+<script src="sfx.js?v=20261107q"></script>
+<script src="dice3d.js?v=20261107za"></script>
+<script src="replay.js?v=20261107q"></script>
+<script src="logfmt.js?v=20261107q"></script>
+<script src="app.js?v=20261108a"></script>
+<script src="coach.js?v=20261107q"></script>
 </body>
 </html>

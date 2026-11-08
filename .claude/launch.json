@@ -4,21 +4,42 @@
     {
       "name": "docs-preview",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["scripts/serve-docs.js"],
+      "runtimeArgs": [
+        "scripts/serve-docs.js"
+      ],
       "port": 4173
     },
     {
       "name": "board",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["scripts/serve-board.js"],
+      "runtimeArgs": [
+        "scripts/serve-board.js"
+      ],
       "port": 4181
     },
     {
       "name": "marble-run",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8791", "--directory", "D:/projects/marble-racing/flag-war-marble-run"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--directory",
+        "D:/projects/marble-racing/flag-war-marble-run"
+      ],
       "port": 8791,
       "autoPort": false
+    },
+    {
+      "name": "board-alt",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "scripts/serve-board.js"
+      ],
+      "port": 4182,
+      "env": {
+        "PORT": "4182"
+      }
     }
   ]
 }

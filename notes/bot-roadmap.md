@@ -200,3 +200,92 @@ Converter / Gorilla Arms on Johnny AFTER his attacks). Cause: the search shortli
 rarely includes Gear while an attack is available, because the one-ply score rewards an immediate steal.
 Fix: shortlist always includes the best move of EACH kind (attack, equip, program, unit, call, sell...),
 affordable with sh=1. Not card-specific.
+
+## Results Nov 7 2026 (round 3)
+- r3 nets (re-searched round 2 + round 3 data) vs r2: 51.2% of Bo3 matches [42.3, 60.2], +9 Elo (tie).
+  vs the original Bot A: 72.9% [62.7, 83.1], +172 Elo (r2 got 62.5%, +89). Promoted (user's call) - Daemon.
+- sh=1 (sequential halving, same budget) vs plain: 46.9% [37.2, 56.5], -22 Elo - kept off. Likely cause: ~2
+  worlds per move in round 1 drops good moves on noise; retest with a minimum of 4-6 worlds per move once the
+  shortlist is wider.
+- Next priorities: search quality (Rival reply in playouts is greedy; payment automatic; narrow shortlist),
+  then a general (not pilot-centred) league.
+
+## OVERNIGHT PLAN (started Nov 7 2026 ~02:30; user asleep, "go ham": GPU, data, training)
+Status log at the bottom of this section - append a line after every step (time, result, next).
+New search options in src/bot/strong.js (all default off; D = Daemon = r3 nets spec):
+  pay=1 (alternative payments per costed move), noop=1 (drop do-nothing Programs), kinds=1 (shortlist has
+  the best move of every kind), opp=net|look (smarter Rival inside playouts; look = top `ol` options played
+  to the end of the turn). Verified by hand: pay=1 finds "pay with Jackie (Merc), then attack with Pepe";
+  noop=1 drops turn-1 Synapse Burnout but keeps it with Jacked-In Voodoo Boy on the field.
+Steps:
+ 1. Arena (pilot-arena, 40 pairs each, vs D): pay+noop; pay+noop+kinds  -> notes/league/arena-moves.log
+ 2. Arena: opp=net vs D; opp=look vs D (on top of the best of step 1)  -> notes/league/arena-opp.log
+ 3. Daemon spec = D + the winners (play.js BOTS 'A', league.js default --bot, teacher = same + deals=24:k=10)
+ 4. General league (round 4): matchmaking from the WHOLE pool (netdeck 1,600 weighted by likes + coverage +
+    meta), pilots a small share; --past r2 nets; record + teach 0.15; ~400 matches -> data-4001.jsonl,
+    games-4001.jsonl (move lists)
+ 5. Train r4 on GPU (D:/Codebase/venv/nitorch): value + policy, --init r3, data = 2001-re + 3001/3301/3302 + 4001
+ 6. General gate: r4 vs r3 on random pool decks (pilot-arena --pool) + the pilot decks; promote if better
+ 7. Deck guesser over netdeck lists (belief.js candidates) - arena test before switching
+Status:
+- 02:50 built: pay/noop/kinds/opp=net|look/bpool options, league --general, pilot-arena --pool. Arena pay+noop & +kinds running (notes/league/arena-moves.log). Next: opp + bpool arena tests, then league round 4.
+- 02:33 pay+noop 45.0% [38.2,51.8] -35 Elo; +kinds 47.5% [37.6,57.4] - both off. Cause guess: payment variants filled the shortlist. Fixed: variants added AFTER the shortlist (and listed in lastSearch.ranked for training). Queued: pay2+noop, opp=look, opp=net, bpool(--pool) -> notes/league/arena-opp.log
+- [04:25] Arena (40 pairs vs Daemon): pay2+noop 47.5% [38.9,56.1]; opp=look 49.4% [41.8,56.9]; opp=net 43.8% [35.0,52.5]; bpool (--pool decks) 51.2% [44.7,57.8]. None better -> Daemon spec unchanged. bpool=1 kept for the general league only (no cost, better guesses on community decks). Launched league r4: seed 4001, 400 matches, --general 0.75, --past r2 0.15, bot+teacher = r3+bpool -> notes/league/run-4001.log
+- [04:45] League r4 running (~60/400 at 04:41, ETA ~06:20). Waiter re-armed on '400/400 matches'.
+- [06:26] League r4 done: 400 matches/969 games, 77,335 decisions, 7,093 teacher, 271 mistakes (3.8%). Training r4 (init r3, value --mix 0.5 on 2001re/3001re/3301re/3302re/4001; policy --informative-only).
+- [06:32] r4 trained: value held-out 0.4651 / 76.6%; policy best-move 69.9% (greedy 62.2%), regret 2.48 vs 3.13; JS checks OK; copied to src/bot/*-r4.json. Gating r4 vs r3 (pilot 40 pairs seed 1100000, pool 40 pairs seed 1120000) -> notes/league/gate-r4.log
+- [07:14] Gate r4 vs r3: pilot 45.0% [35.8,54.2] -35 Elo; pool 51.2% [43.0,59.5] +9. Not promoted - Daemon stays r3. Testing split nets (r4 value+r3 policy, r3 value+r4 policy; 40 pairs each, pool decks) -> notes/league/gate-r4-split.log
+- [08:01] Split nets vs r3 (pool, 40 pairs): r4 value+r3 policy 50.0% [43.0,57.0]; r3 value+r4 policy 56.3% [51.1,61.4] +44 Elo. Confirming the latter on fresh seeds (pilot 40 pairs seed 1180000, pool 40 pairs seed 1200000) -> notes/league/gate-r4-confirm.log
+- [08:43] Confirm (fresh seeds) r3 value + r4 policy vs r3: pilot 50.0% [45.0,55.0]; pool 42.5% [35.9,49.1] -53 Elo. The 56.3% was luck (4th test in a row). NOTHING PROMOTED - Daemon stays r3. r4 nets kept in src/bot/*-r4.json for reference.
+- CONCLUSION (overnight): r3 -> r4 better offline metrics (value 0.470->0.465, policy regret 2.2->2.5 pts on a harder mix) but no strength gain in 5 gates; search options pay/noop/kinds/opp=look/opp=net/bpool all neutral. Nets are no longer the limit. Next ideas need the user: (a) much more data per round (league ~2h = 1k games; r3->r4 added only ~1/3 new positions), (b) stronger playouts (a cheap net-driven Rival tried as opp=net was -44 Elo - maybe needs its own small fast net), (c) more worlds/options per decision at play time (costs speed). Stopped here rather than burn more GPU/CPU on the same loop.
+
+## GIG LANGUAGE (Nov 7 2026, afternoon)
+- User: Gigs have their own language (even/odd, pairs, high/low, count, specific dice). r3 nets saw only Gig count + sum. Added src/bot/gigfeatures.js (78 value inputs), menc Gig move slots (650-685), scripts/gig-value-rows.js, train-value.py --dense, train-policy.py --gig-moves.
+- value-net-gig1 (round-4 games): held-out Gig positions 0.474 vs no-Gig control 0.481 - inconclusive. League round 5 (seed 5101, 400 matches, 12 workers) running -> then retrain both nets and gate vs r3.
+- [16:52] League r5 (seed 5101) done: 400 matches / 958 games, 73,470 decisions (no teacher this round). Value rows with Gig inputs from 4001 + 5101 + aborted 5001: 1,943 games, 23,003 positions (notes/league/value-rows-gig-45.jsonl; no-Gig control = value-rows-nogig-45.jsonl).
+- value-net-gig2 (r3 rows + Gig rows, --dense 123, init r3): held-out Gig positions 0.4175 / 79.6% vs no-Gig control (nogig2) 0.4186 / 79.2% vs r3 0.4461 / 78.5%. Gig inputs barely matter offline; most of the gain is the new data.
+- policy-net-gig2 (2001re/3001re/3301re/3302re/4001/5101, --informative-only --gig-moves, init r3): best-move 69.5% (greedy 61.2%), regret 2.55 vs 3.26; steals 69.4% vs greedy 62.3%, die choices 83.8% vs 72.6%. JS checks OK.
+- Gating gig2 vs r3 (pilot 40 pairs seed 1300000, pool 40 pairs seed 1320000) -> notes/league/gate-gig2.log
+- [18:05] Gate gig2 vs r3: pilot 48.8% [42.2, 55.3] -9 Elo (games 46.7%); pool 52.5% [44.7, 60.3] +17 (games 55.4%). A tie - not promoted, Daemon stays r3. gig2 nets kept in src/bot for reference. Same pattern as r4: better offline, no measurable play gain -> the limit is the search (greedy Rival reply in playouts, end-of-turn ties, 1-turn horizon), not what the nets can read.
+
+## SEARCH FIXES (Nov 7 2026 evening, user: "fix the search")
+- Found: greedy (eval.js / coach policy.js chooseMove) scores non-main-phase choices BEFORE they play out. A block is
+  scored before the fight, and that looks slightly worse than passing, so greedy (almost) never blocks. Inside every
+  playout the Rival never blocked, so attacks into a ready blocker looked free (flags "Bad attack", Bombus into Meredith).
+  Fix: eval.js `opts.resolve` (settle every choice); strong option `gb=1` turns it on in playouts + shortlist ranking.
+  Plain greedy / greedyw / greedyt unchanged (Gonk and the coach rollouts still block blind - follow-up).
+- `alt=1`: own-turn moves are also scored with a no-more-attacks continuation (greedy filtered), max of the two means.
+  `tb=1`: near-ties (< 0.3 pts) go to a non-attack move. On the flagged positions these rarely change the pick; gb=1 does
+  (Dexter +2 power now chosen 94.7 vs 61.0; Bombus no longer developed into Meredith; no Mantis Blades on spent Wrecker).
+- `node scripts/flag-decide.js [--id X] <spec>...` re-searches flagged positions with any specs.
+- Gate (pilot, 40 pairs, seed 1400000): gb=1 and gb=1:alt=1:tb=1 vs r3 -> notes/league/gate-search.log
+
+Gate (seed 1400000, pilot decks, 40 pairs vs Daemon r3): gb=1 alone 55.0% [45.8, 64.2] (+35, n.s.);
+gb=1:alt=1:tb=1 60.0% [52.0, 68.0], +70 Elo, games 56.7%. Confirming on fresh seeds (pilot 1500000,
+pool 1600000) -> notes/league/gate-search-confirm.log before promoting.
+- Gate vs r3 Daemon (40 pairs, pilot decks, seed 1400000, notes/league/gate-search.log): gb=1 55.0% [45.8, 64.2];
+  gb=1:alt=1:tb=1 60.0% [52.0, 68.0], +70 Elo, games 56.7%. Confirming on fresh seeds (pilot 2600000 + pool 2700000,
+  notes/league/gate-search-confirm.log): pilot 60.0% [49.4, 70.6], pool 58.1% [51.5, 64.8], +57 Elo -> PROMOTED
+  (Nov 8 2026) to Daemon (play.js) and the league bot + teacher (league.js). Game Review (review.js NETOPTS) now uses it too. Greedy alone with it is worse (greedy:gb=1 42.1%, greedyt:gb=1
+  48.1%, gb=2 fight-only the same; 400 pairs): one-ply greedy can't see the spent blocker being attacked next. Gonk and
+  coach rollouts unchanged.
+Confirmation (fresh seeds): pilot 60.0% [49.4, 70.6] +70 Elo (games 57.9%); pool 57.5% [49.2, 65.8] +53 Elo
+(games 52.5%). All three runs point the same way (~59% over 120 pairs); not yet promoted.
+
+## NO-GREEDY SELF-PLAY (Nov 8 2026, user: "get rid of greedy", "improve by playing itself")
+- Speed: Daemon 593 -> ~400 ms/decision (in-place multi-step moves, cheaper copies with a halted effect, no trace
+  strings when off, AuraKeyword-only keyword scan, shared deck cards). scripts/bench-bot.js = speed + move hash.
+- after=1 (score at the Rival's turn start with 1 - value(Rival); no imagined reply): 3.9x faster, lost to Daemon
+  26.7% [15.4, 37.9] (pilot, 30 pairs, seq). Gate 2 (after=1:deals=16:k=8) stopped - moving to nogreedy.
+- policy-net-nog.json: r3 policy retrained without greedy's rank input (rounds 2-5 data, --informative-only):
+  best move 67.1% vs greedy 61.2%.
+- nogreedy=1 (policy net plays every playout decision, after=1 leaf): 140 ms -> 98 ms (skip-zero/ordered JS net)
+  -> 53 ms (wasm SIMD nets, src/bot/nnwasm.js). Daemon ~400 ms.
+- Experiment started 05:15: scripts/experiment.js --baseline --rounds 3 (log notes/league/exp-nogreedy.log).
+  Question: does its score vs the fixed Daemon rise round over round? Flat after 3 rounds = not at this scale.
+- RESULT (07:07, ~2 h): flat. vs Daemon (pilot decks, seq, 30 pairs each): round 0 11.7% [?], ng1 8.3% [1.6, 15.1],
+  ng2 10.0% [2.7, 17.3], ng3 11.7% [4.0, 19.4] (~-350 to -420 Elo). ~970 recorded games per round. Policy picks the
+  search's best move 57.0 -> 55.6 -> 54.3% and value held-out loss 0.445 -> 0.466 -> 0.470 (measured on its own,
+  harder data each round, so not directly comparable). Conclusion: at 400 matches/round the nets don't lift a
+  greedy-free bot; it starts ~350 Elo below Daemon and stays there. Nets ng1-ng3 kept in src/bot for reference.
+  Batch 1 (scripts/batch.js, Daemon + teacher, greedy kept) not started yet.

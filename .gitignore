@@ -18,3 +18,7 @@ notes/league*/value-rows*.jsonl
 notes/decks/netdeck-raw/
 notes/nets/
 notes/league*/*.skip
+
+# Game Review uploads (your own replays) - board/review.html
+board/replays/uploads/
+notes/league/remote/tmp-*/

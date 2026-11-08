@@ -54,11 +54,11 @@
   "side": {
    "WNTC-100": 1,
    "WNTC-034": 1,
-   "WNTC-117": 1,
    "WNTC-091": 1,
    "WNTC-132": 1,
    "WNTC-083": 1,
-   "WNTC-123": 1
+   "WNTC-123": 1,
+   "WNTC-080": 1
   }
  },
  "challenger": {
@@ -71,7 +71,7 @@
    "WNTC-080": 1,
    "WNTC-011": 2,
    "WNTC-083": 1,
-   "WNTC-123": 2,
+   "WNTC-123": 1,
    "WNTC-025": 3,
    "WNTC-026": 3,
    "WNTC-129": 1,
@@ -80,63 +80,62 @@
    "WNTC-102": 3,
    "WNTC-131": 3,
    "WNTC-134": 3,
-   "WNTC-034": 1,
+   "WNTC-034": 2,
    "WNTC-100": 2
   },
   "side": {
    "WNTC-100": 1,
    "WNTC-034": 1,
-   "WNTC-117": 1,
    "WNTC-091": 1,
    "WNTC-132": 1,
-   "WNTC-083": 1,
+   "WNTC-083": 2,
    "WNTC-123": 1
   },
   "change": {
-   "kind": "main",
-   "out": "WNTC-034",
-   "in": "WNTC-123"
+   "kind": "side",
+   "out": "WNTC-080",
+   "in": "WNTC-083"
   }
  },
  "tune": {
   "champ": [
-   26,
-   49
+   18,
+   24
   ],
   "chall": [
-   29,
-   51
+   13,
+   20
   ]
  },
  "first": {
   "BBG": {
    "first": [
-    48,
-    90
+    68,
+    117
    ],
    "second": [
-    45,
-    90
+    76,
+    136
    ]
   },
   "RRG": {
    "first": [
-    39,
-    78
+    68,
+    123
    ],
    "second": [
-    26,
-    83
+    50,
+    136
    ]
   },
   "RGB": {
    "first": [
-    40,
-    72
+    51,
+    97
    ],
    "second": [
-    32,
-    72
+    46,
+    97
    ]
   },
   "pub:Against BBG #2 ~ RareTotem": {
@@ -151,22 +150,22 @@
   },
   "YYR": {
    "first": [
-    39,
-    91
+    71,
+    149
    ],
    "second": [
-    22,
-    77
+    47,
+    143
    ]
   },
   "pub:River's Closet": {
    "first": [
-    1,
-    2
+    2,
+    4
    ],
    "second": [
-    1,
-    1
+    2,
+    2
    ]
   },
   "deck:choombattler-adam-muamar-river": {
@@ -191,12 +190,12 @@
   },
   "deck:coverage-08": {
    "first": [
-    4,
-    4
+    6,
+    7
    ],
    "second": [
-    2,
-    2
+    4,
+    4
    ]
   },
   "pub:RRB ~ Fixers": {
@@ -211,8 +210,8 @@
   },
   "deck:coverage-12": {
    "first": [
-    4,
-    7
+    6,
+    9
    ],
    "second": [
     3,
@@ -252,11 +251,11 @@
   "pub:Adam's River": {
    "first": [
     2,
-    4
+    5
    ],
    "second": [
     0,
-    2
+    3
    ]
   },
   "deck:choombattler-adam-dexter-saburo": {
@@ -341,12 +340,12 @@
   },
   "pub:YYR Generalist": {
    "first": [
-    0,
-    0
+    1,
+    1
    ],
    "second": [
-    2,
-    6
+    3,
+    7
    ]
   },
   "pub:BBG ~ Alt": {
@@ -361,12 +360,12 @@
   },
   "pub:YYR - TTO": {
    "first": [
-    1,
-    3
+    3,
+    7
    ],
    "second": [
-    1,
-    2
+    3,
+    9
    ]
   },
   "deck:coverage-14": {
@@ -391,12 +390,12 @@
   },
   "deck:choombattler-adam-saburo-v": {
    "first": [
-    1,
-    2
+    2,
+    4
    ],
    "second": [
-    0,
-    1
+    1,
+    2
    ]
   },
   "deck:coverage-04": {
@@ -411,8 +410,8 @@
   },
   "deck:coverage-03": {
    "first": [
-    4,
-    4
+    6,
+    6
    ],
    "second": [
     4,
@@ -521,8 +520,8 @@
   },
   "deck:coverage-23": {
    "first": [
-    3,
-    3
+    5,
+    7
    ],
    "second": [
     1,
@@ -551,12 +550,12 @@
   },
   "deck:choombattler-alt-dexter-v": {
    "first": [
-    0,
-    0
+    2,
+    4
    ],
    "second": [
-    0,
-    2
+    1,
+    3
    ]
   },
   "pub:Panam Panam Panam": {
@@ -581,8 +580,8 @@
   },
   "deck:4-red-2-green-standard": {
    "first": [
-    0,
-    2
+    2,
+    4
    ],
    "second": [
     0,
@@ -591,8 +590,8 @@
   },
   "pub:The Lone Rangers": {
    "first": [
-    1,
-    3
+    5,
+    9
    ],
    "second": [
     0,
@@ -612,21 +611,21 @@
   "deck:choombattler-alt-hanako-jackie": {
    "first": [
     1,
-    1
+    2
    ],
    "second": [
     1,
-    1
+    2
    ]
   },
   "deck:4-yellow-2-red-standard": {
    "first": [
     1,
-    1
+    2
    ],
    "second": [
     1,
-    1
+    2
    ]
   },
   "pub:YYB ~ Turbo Placide": {
@@ -641,12 +640,12 @@
   },
   "deck:choombattler-adam-river-viktor": {
    "first": [
-    0,
-    1
+    1,
+    3
    ],
    "second": [
     0,
-    1
+    2
    ]
   },
   "pub:Adam Smasher ~ YYR": {
@@ -681,12 +680,352 @@
   },
   "deck:coverage-09": {
    "first": [
+    1,
+    1
+   ],
+   "second": [
+    3,
+    3
+   ]
+  },
+  "deck:choombattler-dexter-padre-wakako": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "net:yellow-relic-ee1f8db4": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:raretotem-s-yyr-deck-fcf5872c": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:new-deck-98f41bc4": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:bait-and-switch-e035af68": {
+   "first": [
     0,
     0
    ],
    "second": [
     2,
     2
+   ]
+  },
+  "net:never-fade-away-0f0f47bc": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:yyr-tto-1c961723": {
+   "first": [
+    1,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:hanako-control-7b1ba5d2": {
+   "first": [
+    5,
+    9
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "net:ggr-e11bf22b": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:rgg-rigging-1bc3e21a": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:i-m-blue-da-ba-dee-b1ed4e99": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:braindancer-6dff9235": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:braindance-brutality-reconstructed-6149c61d": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:chrome-dome-7e7ae0ff": {
+   "first": [
+    4,
+    4
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:rrg-9b2b8489": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "net:truly-embracing-power-5d1c9c8f": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:arasaka-reanimator-a28ba037": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:rogue-punk-b4e3e09e": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:y-y-r-royce-86fb5978": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:ggb-overwatch-control-ada25020": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:rrb-fixers-9b6351ef": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "net:new-deck-fa9177c5": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:ladies-of-night-city-c53f719a": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:yyy-relic-b7966b80": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-07": {
+   "first": [
+    3,
+    3
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "pub:Against BBG ~ RareTotem": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "deck:coverage-10": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:from-the-ashes-76461d72": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    2
+   ]
+  },
+  "net:royce-unleashed-ba3bac0b": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:dice-manipulation-a3fd949d": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:rrg-m1drang3-f9ba193d": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:chrome-armageddon-sapiens-modded-dd82e544": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:jhonnynobu-arahand-d8d49d65": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "pub:YYR-RRR": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
    ]
   }
  },
@@ -1668,8 +2007,68 @@
     30
    ],
    "p": 0.17
+  },
+  {
+   "at": 416,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-034",
+    "in": "WNTC-123",
+    "outName": "Over the Edge",
+    "inName": "Placide: Voodoo Sentinel"
+   },
+   "chall": [
+    49,
+    80
+   ],
+   "champ": [
+    43,
+    79
+   ],
+   "p": 0.8
+  },
+  {
+   "at": 453,
+   "verdict": "promoted",
+   "change": {
+    "kind": "side",
+    "out": "WNTC-117",
+    "in": "WNTC-080",
+    "outName": "Lizzy Wizzy: Delicate Weapon",
+    "inName": "MaxTac AV"
+   },
+   "chall": [
+    18,
+    24
+   ],
+   "champ": [
+    43,
+    79
+   ],
+   "p": 0.97
+  },
+  {
+   "at": 485,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-080",
+    "in": "WNTC-129",
+    "outName": "MaxTac AV",
+    "inName": "NetWatch Netdriver"
+   },
+   "chall": [
+    14,
+    24
+   ],
+   "champ": [
+    18,
+    24
+   ],
+   "p": 0.09
   }
  ],
- "version": 2,
- "matches": 331
+ "version": 3,
+ "matches": 523
 }

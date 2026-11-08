@@ -24,10 +24,11 @@ function trace(b, line) {
   if (b._trace.length > MAX_FRAMES) b._trace.splice(0, b._trace.length - MAX_FRAMES);
 }
 
-function fmtArgs(effect) {
+function fmtArgs(effect, result) {
   const parts = [];
   for (const k of SUMMARY_KEYS) {
-    const v = effect[k];
+    // a computed count ("draw 1 for each value-pair") is logged as the value it came to
+    const v = k === 'n' && result && result.n !== undefined ? result.n : effect[k];
     if (v === undefined) continue;
     parts.push(`${k}:${typeof v === 'object' ? '…' : v}`);
   }
@@ -53,13 +54,15 @@ function fmtCtx(b, ctx) {
 }
 
 function traceEffect(b, ctx, effect, result) {
+  if (!b || !b._trace) return;   // tracing off: don't build the line
   const head    = fmtCtx(b, ctx);
-  const args    = fmtArgs(effect);
+  const args    = fmtArgs(effect, result);
   const outcome = result.continue ? 'ok' : `HALT:${result.choice_needed?.kind || '?'}`;
   trace(b, `${head} ${effect.action}${args} ${outcome}`);
 }
 
 function traceEventFired(b, event, baseCtx) {
+  if (!b || !b._trace) return;   // tracing off: don't build the line
   const t   = b.turn_number ?? 0;
   const pid = baseCtx.source_pid || '-';
   const cid = baseCtx.source_card_id || '-';
@@ -68,6 +71,7 @@ function traceEventFired(b, event, baseCtx) {
 }
 
 function traceListener(b, event, pid, ref, outcome) {
+  if (!b || !b._trace) return;   // tracing off: don't build the line
   const t = b.turn_number ?? 0;
   trace(b, `T${t}/lis ${pid}/${ref.card_id}#${ref.iid} ${event} ${outcome}`);
 }

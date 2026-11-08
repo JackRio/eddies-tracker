@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Review · Eddies Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="board.css?v=20261107u">
+<link rel="stylesheet" href="play.css?v=20261107s">
+<link rel="stylesheet" href="review.css?v=20261107s">
+</head>
+<body class="review">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ctcg-swap" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 -1.0725 0 0 0.992  0 -1 0 0 0.925  0 -0.0212 0 0 0.0196  0 0 0 1 0"/></filter><linearGradient id="die-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".45" stop-color="#fff" stop-opacity=".04"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient></svg>
+
+<main class="layout">
+  <section class="board-col">
+    <div id="table" class="table" hidden></div>
+    <div id="empty" class="empty"><p>Pick a game to review.</p></div>
+  </section>
+
+  <!-- right panel: the move under review, then the log -->
+  <aside class="side">
+    <div class="side-top">
+      <a class="btn home" href="/" title="Home">⌂ Home</a>
+      <select id="game-pick" aria-label="Switch game"><option value="">Switch game…</option></select>
+      <div id="match-info" class="match-info"></div>
+      <button class="btn" id="to-summary" type="button">Summary</button>
+      <button class="btn" id="to-pick" type="button">Games</button>
+      <a class="btn" href="play.html">Play</a>
+      <span class="snd"><button class="btn" id="snd-btn" type="button">🔊</button><input id="snd-vol" type="range" min="0" max="100" aria-label="Volume"></span>
+    </div>
+    <div class="panel info-panel" id="move-box" hidden></div>
+    <div class="log-box">
+      <h2>Game log</h2>
+      <ol id="log" class="log"></ol>
+    </div>
+  </aside>
+</main>
+
+<footer class="timeline" id="timeline" hidden>
+  <button class="btn" id="turn-prev" title="Previous turn (Q / Shift+←)">⏮</button>
+  <button class="btn" id="step-prev" title="Previous action (A / ←)">◀</button>
+  <button class="btn play" id="play" title="Play / pause (S / Space)">▶</button>
+  <button class="btn" id="step-next" title="Next action (D / →)">▶︎|</button>
+  <button class="btn" id="turn-next" title="Next turn (E / Shift+→)">⏭</button>
+  <div class="scrub-wrap"><input id="scrub" type="range" min="0" value="0" aria-label="Timeline"><div id="coach-marks" class="coach-marks"></div></div>
+  <span id="counter" class="counter"></span>
+</footer>
+
+<div id="zoom" class="zoom" hidden></div>
+<dialog id="pile-dialog" class="pile-dialog"><h2 id="pile-title"></h2><div id="pile-cards" class="pile-cards"></div><button class="btn" id="pile-close">Close</button></dialog>
+
+<!-- pick → check → analyze → summary -->
+<dialog class="setup-dlg rv-dlg" id="rv-dlg"><div id="rv-body"></div></dialog>
+
+<script src="sfx.js?v=20261107s"></script>
+<script src="dice3d.js?v=20261107za"></script>
+<script src="replay.js?v=20261107s"></script>
+<script src="logfmt.js?v=20261107s"></script>
+<script src="app.js?v=20261108a"></script>
+<script src="review.js?v=20261107s"></script>
+</body>
+</html>

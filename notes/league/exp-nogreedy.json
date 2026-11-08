@@ -1,0 +1,76 @@
+{
+ "current": {
+  "name": "ng3",
+  "value": "src/bot/value-net-ng3.json",
+  "policy": "src/bot/policy-net-ng3.json"
+ },
+ "past": [
+  "strong:vnet=src/bot/value-net-ng2.json:pnet=src/bot/policy-net-ng2.json:nogreedy=1:alt=1:tb=1",
+  "strong:vnet=src/bot/value-net-ng1.json:pnet=src/bot/policy-net-ng1.json:nogreedy=1:alt=1:tb=1"
+ ],
+ "rounds": [
+  {
+   "name": "ng1",
+   "from": "ng0",
+   "seed": 7101,
+   "data": "notes/league/data-7101.jsonl",
+   "games": 974,
+   "valueLoss": [
+    0.445,
+    77.7
+   ],
+   "policyBest": "57.0%",
+   "vsDaemon": {
+    "score": 8.3,
+    "lo": 1.6,
+    "hi": 15.1,
+    "elo": -417
+   },
+   "minutes": 36
+  },
+  {
+   "name": "ng2",
+   "from": "ng1",
+   "seed": 7201,
+   "data": "notes/league/data-7201.jsonl",
+   "games": 957,
+   "valueLoss": [
+    0.466,
+    76.6
+   ],
+   "policyBest": "55.6%",
+   "vsDaemon": {
+    "score": 10,
+    "lo": 2.7,
+    "hi": 17.3,
+    "elo": -382
+   },
+   "minutes": 32
+  },
+  {
+   "name": "ng3",
+   "from": "ng2",
+   "seed": 7301,
+   "data": "notes/league/data-7301.jsonl",
+   "games": 987,
+   "valueLoss": [
+    0.4704,
+    76.2
+   ],
+   "policyBest": "54.3%",
+   "vsDaemon": {
+    "score": 11.7,
+    "lo": 4,
+    "hi": 19.4,
+    "elo": -352
+   },
+   "minutes": 34
+  }
+ ],
+ "baseline": {
+  "score": 11.7,
+  "lo": 4,
+  "hi": 19.4,
+  "elo": -352
+ }
+}

@@ -1,0 +1,3019 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-01-wozy-vs-jackrio-eddecd55.json",
+ "matchId": "eddecd55-0955-4ab4-acb6-afacc0537670",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "wozy",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "Viktor Vektor: Sit Down and Relax",
+    "River Ward: Detective on the Hunt"
+   ]
+  },
+  "rival": {
+   "source": "23 cards seen in the game, rest from meta deck \"Adam Smasher / River Ward / Viktor Vektor (4 Yellow / 2 Red)\"",
+   "legends": [
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax",
+    "Royce: Psycho on the Edge"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 65,
+ "summary": {
+  "counts": {
+   "great": 5,
+   "good": 12,
+   "okay": 8,
+   "misplay": 7,
+   "mistake": 1,
+   "blunder": 2
+  },
+  "moves": 35,
+  "avgLoss": 3.7,
+  "accuracy": 63
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "moves": [
+    {
+     "from": 8,
+     "to": 9,
+     "end": false,
+     "log": [
+      "JackRio sold Mandibular Upgrade into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 48.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 48.6,
+       "yours": true
+      },
+      {
+       "text": "Sell Satori",
+       "p": 46,
+       "yours": false
+      },
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 45.5,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 44.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 37.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 13.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 9,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 52.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 52.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 52.4,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 47.3,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 43.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 21,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 51.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 51.7,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 24,
+   "moves": [
+    {
+     "from": 24,
+     "to": 25,
+     "end": false,
+     "log": [
+      "JackRio sold Satori: Sword of Saburo into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Satori",
+      "p": 36
+     },
+     "best": {
+      "text": "Attack Sketchy Ripper with 6th Street Recruits",
+      "p": 39.1,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "9bf3a1f6",
+        "target": {
+         "kind": "unit",
+         "iid": "705fd6f1"
+        }
+       }
+      ]
+     },
+     "loss": 3,
+     "se": 2.1,
+     "options": [
+      {
+       "text": "Attack Sketchy Ripper with 6th Street Recruits",
+       "p": 39.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 36,
+       "yours": true
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 34.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 33,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 32.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 32.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "6th Street Recruits (6) beats Sketchy Ripper (0).",
+       "Your move sells Satori.",
+       "The better move removes the Rival's Sketchy Ripper.",
+       "The Rival is down to 1.7 Units, instead of 2.6."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.7083333333333335,
+        "rivalGigs": 3.2916666666666665,
+        "units": 0.9583333333333334,
+        "rivalUnits": 2.625,
+        "hand": 7.916666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 4,
+        "units": 1,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 5.875
+       }
+      },
+      "better": "Attack Sketchy Ripper with 6th Street Recruits"
+     }
+    },
+    {
+     "from": 25,
+     "to": 28,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared 6th Street Recruits against Sketchy Ripper. wozy must respond after attack effects resolve.",
+      "6th Street Recruits (6) fought Sketchy Ripper (0) and won.",
+      "Sketchy Ripper was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Sketchy Ripper with 6th Street Recruits\n  Don't block / don't respond",
+      "p": 47.2
+     },
+     "best": {
+      "text": "Play Adrenaline Converter on 6th Street Recruits",
+      "p": 48,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "24b6426d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d15f8f94"
+       },
+       {
+        "step": "play_card",
+        "iid": "46ef4b36",
+        "equip_to": "9bf3a1f6"
+       }
+      ]
+     },
+     "loss": 0.8,
+     "se": 3,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 48,
+       "yours": false
+      },
+      {
+       "text": "Attack Sketchy Ripper with 6th Street Recruits",
+       "p": 47.2,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 42.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 41.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 40.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 39.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "This attack could wait - or not happen.",
+      "reasons": [
+       "Your move removes the Rival's Sketchy Ripper.",
+       "The better move equips Adrenaline Converter.",
+       "The Rival has 3.4 Gigs by your next turn on average, instead of 4.",
+       "You hold 2.6 Gigs at your next turn on average, instead of 2.",
+       "You keep 1.8 Units through their turn on average, instead of 1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 4,
+        "units": 1,
+        "rivalUnits": 1.7916666666666667,
+        "hand": 5.791666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.625,
+        "rivalGigs": 3.375,
+        "units": 1.75,
+        "rivalUnits": 2.4166666666666665,
+        "hand": 4.5
+       }
+      },
+      "better": "Play Adrenaline Converter on 6th Street Recruits"
+     }
+    },
+    {
+     "from": 28,
+     "to": 29,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Adam Smasher: Ender of Legends was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 3 face-down",
+      "p": 54.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 54.7,
+       "yours": true
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 54.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 53.8,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 53,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bootleg Black Sapphire Show",
+       "p": 42.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 30.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 29,
+     "to": 30,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 56.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 56.3,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 55,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 53.4,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 42.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 33.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 30,
+     "to": 31,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 58.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 58.6,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 47,
+   "moves": [
+    {
+     "from": 47,
+     "to": 48,
+     "end": false,
+     "log": [
+      "JackRio sold Bootleg Black Sapphire Show into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bootleg Black Sapphire Show",
+      "p": 16.3
+     },
+     "best": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 17.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "24b6426d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d15f8f94"
+       },
+       {
+        "step": "play_card",
+        "iid": "9c984656"
+       }
+      ]
+     },
+     "loss": 0.9,
+     "se": 2,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 17.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 16.3,
+       "yours": true
+      },
+      {
+       "text": "Play Program Bootleg Black Sapphire Show",
+       "p": 14.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 14.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 14.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 13,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Bootleg Black Sapphire Show.",
+       "The better move plays Secondhand Bombus.",
+       "You start your next turn with 3.6 cards in hand, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.75,
+        "rivalGigs": 3.25,
+        "units": 2,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 2
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.708333333333333,
+        "rivalGigs": 3.2916666666666665,
+        "units": 2,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 3.625
+       }
+      },
+      "better": "Play Unit Secondhand Bombus"
+     }
+    },
+    {
+     "from": 48,
+     "to": 50,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Viktor Vektor: Sit Down and Relax was revealed.",
+      "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+      "JackRio revealed Zetatech Faceplate with Viktor Vektor and added it to hand."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 12.2
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with 6th Street Recruits",
+      "p": 15.5,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "78cb3e0c",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 3.3,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 15.5,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 15.5,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 14.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 14.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 9.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 2.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The Rival's Blocker (Secondhand Bombus 0) loses the fight to 6th Street Recruits (6).",
+       "The Rival has 3.5 Gigs by your next turn on average, instead of 5.5.",
+       "You hold 4.5 Gigs at your next turn on average, instead of 2.5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.5,
+        "rivalGigs": 5.5,
+        "units": 2,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.458333333333333,
+        "rivalGigs": 3.5416666666666665,
+        "units": 2,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 2
+       }
+      },
+      "better": "Attack opponent's Gigs with 6th Street Recruits"
+     }
+    },
+    {
+     "from": 50,
+     "to": 51,
+     "end": false,
+     "log": [
+      "JackRio played Secondhand Bombus by spending 2 Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 7.5
+     },
+     "best": {
+      "text": "Play Unit Sketchy Ripper",
+      "p": 13.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "24b6426d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d15f8f94"
+       },
+       {
+        "step": "play_card",
+        "iid": "80120cee"
+       }
+      ]
+     },
+     "loss": 5.7,
+     "se": 1.3,
+     "options": [
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 13.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 12.4,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 12.4,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 9.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 7.5,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 2.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Secondhand Bombus.",
+       "The better move plays Sketchy Ripper.",
+       "You keep 2 Units through their turn on average, instead of 1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.666666666666667,
+        "rivalGigs": 3.3333333333333335,
+        "units": 1,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 4
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.6666666666666665,
+        "rivalGigs": 5.333333333333333,
+        "units": 2,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 4
+       }
+      },
+      "better": "Play Unit Sketchy Ripper"
+     }
+    },
+    {
+     "from": 51,
+     "to": 52,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Legends."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on 6th Street Recruits",
+      "p": 20.8
+     },
+     "best": {
+      "text": "Play Unit Sketchy Ripper",
+      "p": 23.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "871e3604"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "4548899f"
+       },
+       {
+        "step": "play_card",
+        "iid": "80120cee"
+       }
+      ]
+     },
+     "loss": 2.9,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 23.8,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 11.8,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Adam Smasher",
+       "p": 11.6,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 10.1,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Secondhand Bombus",
+       "p": 10.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 3.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Zetatech Faceplate.",
+       "The better move plays Sketchy Ripper.",
+       "You keep 2 Units through their turn on average, instead of 1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.833333333333333,
+        "rivalGigs": 3.1666666666666665,
+        "units": 1,
+        "rivalUnits": 2.9583333333333335,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.833333333333333,
+        "rivalGigs": 3.1666666666666665,
+        "units": 2,
+        "rivalUnits": 2.9583333333333335,
+        "hand": 4
+       }
+      },
+      "better": "Play Unit Sketchy Ripper"
+     }
+    },
+    {
+     "from": 52,
+     "to": 58,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with 6th Street Recruits. wozy must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 7 to 8.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Arasaka Emergency Radioport.",
+      "6th Street Recruits (8) fought Secondhand Bombus (0) and won.",
+      "Secondhand Bombus was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with 6th Street Recruits\n  picks own d8 (7)\n  amount → 1\n  Block with Secondhand Bombus\n  Don't block / don't respond",
+      "p": 21.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.5,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 19.5,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 4.2,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with 6th Street Recruits",
+       "p": 0.5,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The Rival's Blocker (Secondhand Bombus 0) loses the fight to 6th Street Recruits (8).",
+       "Your move removes the Rival's Secondhand Bombus.",
+       "The Rival has 4 Gigs by your next turn on average, instead of 6.3.",
+       "You hold 4 Gigs at your next turn on average, instead of 1.7.",
+       "The Rival is down to 1.7 Units, instead of 2.8.",
+       "You start your next turn with 4.8 cards in hand, instead of 4."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 4,
+        "units": 1,
+        "rivalUnits": 1.6666666666666667,
+        "hand": 4.833333333333333
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.7083333333333333,
+        "rivalGigs": 6.291666666666667,
+        "units": 2,
+        "rivalUnits": 2.75,
+        "hand": 4
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 58,
+     "to": 59,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 28.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 28.3,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 73,
+   "moves": [
+    {
+     "from": 73,
+     "to": 74,
+     "end": false,
+     "log": [
+      "JackRio sold Arasaka Emergency Radioport into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Arasaka Emergency Radioport",
+      "p": 7.1
+     },
+     "best": {
+      "text": "Play Zetatech Faceplate on 6th Street Recruits",
+      "p": 17.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "24b6426d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d15f8f94"
+       },
+       {
+        "step": "play_card",
+        "iid": "596e2b74",
+        "equip_to": "78cb3e0c"
+       }
+      ]
+     },
+     "loss": 10.8,
+     "se": 2.5,
+     "options": [
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 17.9,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 10.4,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on 6th Street Recruits",
+       "p": 10,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 8.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 7.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 7.1,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Arasaka Emergency Radioport.",
+       "The better move equips Zetatech Faceplate.",
+       "The Rival has 6.8 Gigs by your next turn on average, instead of 7.8.",
+       "You hold 3.3 Gigs at your next turn on average, instead of 2.3.",
+       "You start your next turn with 4.4 cards in hand, instead of 3.8."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.25,
+        "rivalGigs": 7.75,
+        "units": 1.875,
+        "rivalUnits": 2.75,
+        "hand": 3.75
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.25,
+        "rivalGigs": 6.75,
+        "units": 1.8333333333333333,
+        "rivalUnits": 2.7916666666666665,
+        "hand": 4.416666666666667
+       }
+      },
+      "better": "Play Zetatech Faceplate on 6th Street Recruits"
+     }
+    },
+    {
+     "from": 74,
+     "to": 75,
+     "end": false,
+     "log": [
+      "JackRio played Sketchy Ripper by spending 2 Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Sketchy Ripper",
+      "p": 6.6
+     },
+     "best": {
+      "text": "Use River Ward",
+      "p": 13.2,
+      "seq": [
+       {
+        "step": "activate_anytime_spend",
+        "iid": "871e3604",
+        "ability_idx": 0
+       }
+      ]
+     },
+     "loss": 6.6,
+     "se": 2.7,
+     "options": [
+      {
+       "text": "Use River Ward",
+       "p": 13.2,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 13.2,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on 6th Street Recruits",
+       "p": 10.5,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 8.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 6.6,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 4.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Sketchy Ripper.",
+       "The better move equips Adrenaline Converter.",
+       "The Rival has 6.8 Gigs by your next turn on average, instead of 7.8.",
+       "You hold 3.2 Gigs at your next turn on average, instead of 2.3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.25,
+        "rivalGigs": 7.75,
+        "units": 2.125,
+        "rivalUnits": 3.125,
+        "hand": 3.625
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.1666666666666665,
+        "rivalGigs": 6.833333333333333,
+        "units": 2.0416666666666665,
+        "rivalUnits": 3,
+        "hand": 2.7916666666666665
+       }
+      },
+      "better": "Use River Ward"
+     }
+    },
+    {
+     "from": 75,
+     "to": 76,
+     "end": false,
+     "log": [
+      "JackRio equipped Satori: Sword of Saburo to 6th Street Recruits by spending 2 Eddies."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Satori on 6th Street Recruits",
+      "p": 13
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.7,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 8.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 8.2,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 6.3,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Sketchy Ripper",
+       "p": 5.5,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Sketchy Ripper",
+       "p": 5.4,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Sketchy Ripper",
+       "p": 3.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Satori.",
+       "The bot's pick equips Adrenaline Converter."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.0833333333333335,
+        "rivalGigs": 6.916666666666667,
+        "units": 2.0416666666666665,
+        "rivalUnits": 3.0833333333333335,
+        "hand": 2.9583333333333335
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.0833333333333335,
+        "rivalGigs": 6.916666666666667,
+        "units": 2.0833333333333335,
+        "rivalUnits": 3.0833333333333335,
+        "hand": 3.7083333333333335
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 76,
+     "to": 77,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Legends."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on 6th Street Recruits",
+      "p": 24.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.8,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 17.8,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Sketchy Ripper",
+       "p": 17.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 14.5,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 14.5,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Sketchy Ripper",
+       "p": 11.4,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Viktor Vektor",
+       "p": 7.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Zetatech Faceplate.",
+       "The bot's pick equips Adrenaline Converter.",
+       "You start your next turn with 3.8 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 7,
+        "units": 1.9166666666666667,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 3.8333333333333335
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 7,
+        "units": 1.875,
+        "rivalUnits": 2.6666666666666665,
+        "hand": 2.9583333333333335
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 77,
+     "to": 86,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared 6th Street Recruits against Swordwise Huscle. wozy must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d10 from 2 to 3.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Dexter DeShawn: One Last Chance.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d10 from 3 to 4.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Rockn' Rockerboy.",
+      "6th Street Recruits (12) fought Swordwise Huscle (10) and won.",
+      "6th Street Recruits won the fight with Satori equipped and JackRio drew Adrenaline Converter.",
+      "Swordwise Huscle was defeated and sent to trash with 3 attached Gear cards. JackRio's attack won the fight.",
+      "wozy trashed Bootleg Black Sapphire Show from River Ward's search."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 44.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 7.8,
+     "options": [
+      {
+       "text": "Attack Swordwise Huscle with 6th Street Recruits",
+       "p": 42.1,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 21.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 12.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 3.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 86,
+     "to": 87,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 38.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use River Ward",
+       "p": 38.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 38.4,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 108,
+   "moves": [
+    {
+     "from": 108,
+     "to": 109,
+     "end": false,
+     "log": [
+      "JackRio played Rockn' Rockerboy by spending 4 Eddies and 1 Legend."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Rockn' Rockerboy",
+      "p": 59.1
+     },
+     "best": {
+      "text": "Play Adrenaline Converter on Sketchy Ripper",
+      "p": 81.1,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "24b6426d"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "d15f8f94"
+       },
+       {
+        "step": "play_card",
+        "iid": "46ef4b36",
+        "equip_to": "80120cee"
+       }
+      ]
+     },
+     "loss": 22,
+     "se": 1.9,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on Sketchy Ripper",
+       "p": 81.1,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 81.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 66.6,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 59.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 59.1,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 59.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Rockn' Rockerboy.",
+       "The better move equips Adrenaline Converter.",
+       "The Rival has 6 Gigs by your next turn on average, instead of 7.",
+       "You hold 6 Gigs at your next turn on average, instead of 5.",
+       "You start your next turn with 3 cards in hand, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 3,
+        "rivalUnits": 2.25,
+        "hand": 2
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 6,
+        "rivalGigs": 6,
+        "units": 2,
+        "rivalUnits": 2.25,
+        "hand": 3
+       }
+      },
+      "better": "Play Adrenaline Converter on Sketchy Ripper"
+     }
+    },
+    {
+     "from": 109,
+     "to": 110,
+     "end": false,
+     "log": [
+      "JackRio sold Adrenaline Converter into Eddies."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Adrenaline Converter",
+      "p": 63.4
+     },
+     "best": {
+      "text": "Play Adrenaline Converter on Sketchy Ripper",
+      "p": 85.5,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "4548899f"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "871e3604"
+       },
+       {
+        "step": "play_card",
+        "iid": "46ef4b36",
+        "equip_to": "80120cee"
+       }
+      ]
+     },
+     "loss": 22.1,
+     "se": 2.7,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on Sketchy Ripper",
+       "p": 85.5,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 85.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 71.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 63.4,
+       "yours": true
+      },
+      {
+       "text": "Play Adrenaline Converter on Rockn' Rockerboy",
+       "p": 48.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 44,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Adrenaline Converter.",
+       "The better move equips Adrenaline Converter.",
+       "The Rival has 6 Gigs by your next turn on average, instead of 7.",
+       "You hold 6 Gigs at your next turn on average, instead of 5.",
+       "You start your next turn with 3 cards in hand, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 3,
+        "rivalUnits": 2.2916666666666665,
+        "hand": 2
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 6,
+        "rivalGigs": 6,
+        "units": 1.9583333333333333,
+        "rivalUnits": 2.2916666666666665,
+        "hand": 3
+       }
+      },
+      "better": "Play Adrenaline Converter on Sketchy Ripper"
+     }
+    },
+    {
+     "from": 110,
+     "to": 113,
+     "end": false,
+     "log": [
+      "JackRio played Dexter DeShawn: One Last Chance by spending 1 Eddie and 2 Legends.",
+      "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d4 from 2 to 3."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Dexter DeShawn\n  picks own d4 (2)\n  amount → 1",
+      "p": 66.9
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper",
+      "p": 76.5,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "80120cee",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 9.6,
+     "se": 2.3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 76.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Dexter DeShawn",
+       "p": 67,
+       "yours": true
+      },
+      {
+       "text": "Use River Ward",
+       "p": 24.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 24.9,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move plays Dexter DeShawn.",
+       "You start your next turn with 2.8 cards in hand, instead of 2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 2.9583333333333335,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 2
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 3,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 2.8333333333333335
+       }
+      },
+      "better": "Attack opponent's Gigs with Sketchy Ripper"
+     }
+    },
+    {
+     "from": 113,
+     "to": 117,
+     "end": false,
+     "log": [
+      "JackRio chose Sketchy Ripper to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Sketchy Ripper. wozy must respond after attack effects resolve.",
+      "JackRio attacked with Sketchy Ripper and is searching the top 3 cards for Gear.",
+      "JackRio revealed Mandibular Upgrade with Sketchy Ripper and added it to hand.",
+      "Sketchy Ripper made a Gig attack on wozy, but did not have enough power to steal a Gig."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper\n  picks Mandibular Upgrade\n  Don't block / don't respond",
+      "p": 73.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.7,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 76.3,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 69.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your attack on the Gigs couldn't be blocked: the Rival had no ready Blocker."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 2.9583333333333335,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 2.375
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5,
+        "rivalGigs": 7,
+        "units": 2.9583333333333335,
+        "rivalUnits": 1.9166666666666667,
+        "hand": 2
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 117,
+     "to": 118,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 75.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 75.4,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 12,
+   "stepA": 131,
+   "moves": [
+    {
+     "from": 131,
+     "to": 132,
+     "end": false,
+     "log": [
+      "JackRio sold Mandibular Upgrade into Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 66
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper",
+      "p": 71.3,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "80120cee",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 5.4,
+     "se": 1.4,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 71.3,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 66,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 66,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 66,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 66,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move sells Mandibular Upgrade.",
+       "You start your next turn with 3.6 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.333333333333333,
+        "rivalGigs": 7.666666666666667,
+        "units": 3.3333333333333335,
+        "rivalUnits": 2.0833333333333335,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.333333333333333,
+        "rivalGigs": 7.666666666666667,
+        "units": 3.3333333333333335,
+        "rivalUnits": 2.0833333333333335,
+        "hand": 3.625
+       }
+      },
+      "better": "Attack opponent's Gigs with Sketchy Ripper"
+     }
+    },
+    {
+     "from": 132,
+     "to": 135,
+     "end": false,
+     "log": [
+      "JackRio sent Adam Smasher: Ender of Legends GO SOLO onto the field.",
+      "MaxTac Suppression Team was defeated and sent to trash with 2 attached Gear cards. Adam Smasher: Ender of Legends's PLAY effect defeated it.",
+      "wozy trashed Bootleg Black Sapphire Show from River Ward's search."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Adam Smasher goes Solo\n  picks MaxTac Suppression Team\n  picks Satori",
+      "p": 62.2
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper",
+      "p": 67.5,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "80120cee",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 5.3,
+     "se": 1.3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 67.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 62.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 62.2,
+       "yours": false
+      },
+      {
+       "text": "Adam Smasher goes Solo",
+       "p": 62.2,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move plays Adam Smasher and removes the Rival's MaxTac Suppression Team.",
+       "You start your next turn with 3.8 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.208333333333333,
+        "rivalGigs": 7.791666666666667,
+        "units": 3.2083333333333335,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.208333333333333,
+        "rivalGigs": 7.791666666666667,
+        "units": 3.2083333333333335,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 3.75
+       }
+      },
+      "better": "Attack opponent's Gigs with Sketchy Ripper"
+     }
+    },
+    {
+     "from": 135,
+     "to": 140,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. wozy must respond after attack effects resolve.",
+      "wozy called a Legend by spending 1 Legend. Royce: Psycho on the Edge was revealed.",
+      "Rockn' Rockerboy made a Gig attack on wozy and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from wozy.",
+      "JackRio stole d20 (13) from wozy. JackRio now has 4 Gig dice."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 93.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3.5,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 60.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 54.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 54.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 54.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The Rival has 7.2 Gigs by your next turn on average, instead of 7.8.",
+       "You hold 4.8 Gigs at your next turn on average, instead of 4.2.",
+       "You keep 4 Units through their turn on average, instead of 3.2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.791666666666667,
+        "rivalGigs": 7.208333333333333,
+        "units": 4,
+        "rivalUnits": 2.4166666666666665,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.208333333333333,
+        "rivalGigs": 7.791666666666667,
+        "units": 3.2083333333333335,
+        "rivalUnits": 2.0833333333333335,
+        "hand": 3.75
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 140,
+     "to": 146,
+     "end": false,
+     "log": [
+      "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Dexter DeShawn: One Last Chance. wozy must respond after attack effects resolve.",
+      "JackRio used Dexter DeShawn: One Last Chance to increase JackRio's d6 from 1 to 2.",
+      "Dexter DeShawn: One Last Chance made a Gig attack on wozy and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from wozy.",
+      "JackRio stole d10 (4) from wozy. JackRio now has 5 Gig dice."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Dexter DeShawn\n  picks own d6 (1)\n  amount → 1\n  Don't block / don't respond\n  Steal opponent's d10 (4)",
+      "p": 92.1
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper",
+      "p": 94.8,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "80120cee",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 2.8,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 94.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 93.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 92.9,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move takes 1 Gig.",
+       "You start your next turn with 3.9 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.75,
+        "rivalGigs": 7.25,
+        "units": 4,
+        "rivalUnits": 2.625,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.75,
+        "rivalGigs": 7.25,
+        "units": 4,
+        "rivalUnits": 2.625,
+        "hand": 3.9166666666666665
+       }
+      },
+      "better": "Attack opponent's Gigs with Sketchy Ripper"
+     }
+    },
+    {
+     "from": 146,
+     "to": 150,
+     "end": false,
+     "log": [
+      "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. wozy must respond after attack effects resolve.",
+      "Adam Smasher: Ender of Legends made a Gig attack on wozy and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from wozy.",
+      "JackRio stole d8 (8) from wozy. JackRio now has 6 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Adam Smasher\n  Don't block / don't respond\n  Steal opponent's d8 (8)",
+      "p": 94.3
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper",
+      "p": 96.1,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "80120cee",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 1.8,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 96.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 94.5,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move takes 1 Gig.",
+       "You start your next turn with 3.9 cards in hand, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.916666666666667,
+        "rivalGigs": 7.083333333333333,
+        "units": 4,
+        "rivalUnits": 2.375,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.916666666666667,
+        "rivalGigs": 7.083333333333333,
+        "units": 4,
+        "rivalUnits": 2.375,
+        "hand": 3.9166666666666665
+       }
+      },
+      "better": "Attack opponent's Gigs with Sketchy Ripper"
+     }
+    },
+    {
+     "from": 150,
+     "to": 154,
+     "end": false,
+     "log": [
+      "JackRio chose Sketchy Ripper to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Sketchy Ripper. wozy must respond after attack effects resolve.",
+      "JackRio attacked with Sketchy Ripper and is searching the top 3 cards for Gear.",
+      "JackRio revealed Satori: Sword of Saburo with Sketchy Ripper and added it to hand.",
+      "Sketchy Ripper made a Gig attack on wozy, but did not have enough power to steal a Gig."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 94.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 92.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 91.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 154,
+     "to": 155,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 94.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 94.6,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 14,
+   "stepA": 164,
+   "moves": [
+    {
+     "from": 164,
+     "to": 165,
+     "end": false,
+     "log": [
+      "JackRio sold Mantis Blades into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mantis Blades",
+      "p": 99.1
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Satori on Adam Smasher",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Mantis Blades",
+       "p": 99.1,
+       "yours": true
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 99.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 165,
+     "to": 166,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand: Never Stop Fighting by spending 6 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 99.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 99.2,
+       "yours": true
+      },
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Adam Smasher",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Sketchy Ripper",
+       "p": 99.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 166,
+     "to": 167,
+     "end": false,
+     "log": [
+      "JackRio equipped Satori: Sword of Saburo to Adam Smasher: Ender of Legends by spending 1 Eddie and 1 Legend."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Satori on Adam Smasher",
+      "p": 95.7
+     },
+     "best": {
+      "text": "Attack Swordwise Huscle with Dexter DeShawn",
+      "p": 99.2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "60aa311f",
+        "target": {
+         "kind": "unit",
+         "iid": "ccfd187b"
+        }
+       }
+      ]
+     },
+     "loss": 3.5,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Adam Smasher",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Sketchy Ripper",
+       "p": 99.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Dexter DeShawn (4) beats Swordwise Huscle (3).",
+       "Your move equips Satori.",
+       "The better move removes the Rival's Swordwise Huscle.",
+       "The Rival has 7.1 Gigs by your next turn on average, instead of 8.1.",
+       "You hold 4.9 Gigs at your next turn on average, instead of 3.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.875,
+        "rivalGigs": 8.125,
+        "units": 5,
+        "rivalUnits": 3.4166666666666665,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.875,
+        "rivalGigs": 7.125,
+        "units": 4.958333333333333,
+        "rivalUnits": 3.375,
+        "hand": 2.5833333333333335
+       }
+      },
+      "better": "Attack Swordwise Huscle with Dexter DeShawn"
+     }
+    },
+    {
+     "from": 167,
+     "to": 171,
+     "end": false,
+     "log": [
+      "JackRio chose Sketchy Ripper to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Sketchy Ripper. wozy must respond after attack effects resolve.",
+      "JackRio attacked with Sketchy Ripper and is searching the top 3 cards for Gear.",
+      "JackRio revealed Adrenaline Converter with Sketchy Ripper and added it to hand.",
+      "Sketchy Ripper made a Gig attack on wozy, but did not have enough power to steal a Gig."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Sketchy Ripper\n  picks Mantis Blades\n  Don't block / don't respond",
+      "p": 94.2
+     },
+     "best": {
+      "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+      "p": 98.8,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "4a4fb203",
+        "target": {
+         "kind": "unit",
+         "iid": "ccfd187b"
+        }
+       }
+      ]
+     },
+     "loss": 4.6,
+     "se": 0.5,
+     "options": [
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 98.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 98.8,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 98.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Sketchy Ripper",
+       "p": 94.9,
+       "yours": true
+      },
+      {
+       "text": "Attack Swordwise Huscle with Adam Smasher",
+       "p": 94.7,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 94.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Clear the Unit before going for Gigs.",
+      "reasons": [
+       "Rockn' Rockerboy (8) beats Swordwise Huscle (3).",
+       "The better move removes the Rival's Swordwise Huscle.",
+       "The Rival has 7.1 Gigs by your next turn on average, instead of 8.1.",
+       "You hold 4.9 Gigs at your next turn on average, instead of 3.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.875,
+        "rivalGigs": 8.125,
+        "units": 5,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 2.2916666666666665
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.875,
+        "rivalGigs": 7.125,
+        "units": 5,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 1
+       }
+      },
+      "better": "Attack Swordwise Huscle with Rockn' Rockerboy"
+     }
+    },
+    {
+     "from": 171,
+     "to": 175,
+     "end": false,
+     "log": [
+      "JackRio chose Adam Smasher: Ender of Legends to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Adam Smasher: Ender of Legends. wozy must respond after attack effects resolve.",
+      "Adam Smasher: Ender of Legends (11) fought Secondhand Bombus (0) and won.",
+      "Adam Smasher: Ender of Legends won the fight with Satori equipped and JackRio drew Dexter DeShawn: One Last Chance.",
+      "Secondhand Bombus was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Adam Smasher\n  Block with Secondhand Bombus\n  Don't block / don't respond",
+      "p": 95.6
+     },
+     "best": {
+      "text": "Attack Swordwise Huscle with Dexter DeShawn",
+      "p": 99.1,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "60aa311f",
+        "target": {
+         "kind": "unit",
+         "iid": "ccfd187b"
+        }
+       }
+      ]
+     },
+     "loss": 3.5,
+     "se": 0.5,
+     "options": [
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Adam Smasher",
+       "p": 99.1,
+       "yours": true
+      },
+      {
+       "text": "Attack Swordwise Huscle with Adam Smasher",
+       "p": 95.6,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 95.6,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 95.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Clear the Unit before going for Gigs.",
+      "reasons": [
+       "Dexter DeShawn (4) beats Swordwise Huscle (3).",
+       "The Rival's Blocker (Secondhand Bombus 0) loses the fight to Adam Smasher (11).",
+       "Your move removes the Rival's Secondhand Bombus.",
+       "The better move removes the Rival's Swordwise Huscle.",
+       "The Rival has 7.2 Gigs by your next turn on average, instead of 8.2.",
+       "You hold 4.8 Gigs at your next turn on average, instead of 3.8."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.8333333333333335,
+        "rivalGigs": 8.166666666666666,
+        "units": 4.833333333333333,
+        "rivalUnits": 3.0833333333333335,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.833333333333333,
+        "rivalGigs": 7.166666666666667,
+        "units": 4.833333333333333,
+        "rivalUnits": 3.0833333333333335,
+        "hand": 2
+       }
+      },
+      "better": "Attack Swordwise Huscle with Dexter DeShawn"
+     }
+    },
+    {
+     "from": 175,
+     "to": 181,
+     "end": false,
+     "log": [
+      "JackRio chose Dexter DeShawn: One Last Chance to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Dexter DeShawn: One Last Chance. wozy must respond after attack effects resolve.",
+      "JackRio used Dexter DeShawn: One Last Chance to decrease JackRio's d8 from 8 to 8.",
+      "Dexter DeShawn: One Last Chance made a Gig attack on wozy and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from wozy.",
+      "JackRio stole d20 (20) from wozy. JackRio now has 6 Gig dice."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Dexter DeShawn\n  choice\n  Don't block / don't respond\n  Steal opponent's d20 (20)",
+      "p": 93.6
+     },
+     "best": {
+      "text": "Play Mandibular Upgrade on Johnny Silverhand",
+      "p": 99.3,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "871e3604"
+       },
+       {
+        "step": "play_card",
+        "iid": "a27031c9",
+        "equip_to": "65966ac0"
+       }
+      ]
+     },
+     "loss": 5.6,
+     "se": 0.7,
+     "options": [
+      {
+       "text": "Play Mandibular Upgrade on Johnny Silverhand",
+       "p": 99.3,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Dexter DeShawn",
+       "p": 93.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 93.8,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Sketchy Ripper",
+       "p": 93.8,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Dexter DeShawn",
+       "p": 93.5,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 93.5,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "This attack could wait - or not happen.",
+      "reasons": [
+       "Your attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move takes 1 Gig.",
+       "The better move equips Mandibular Upgrade.",
+       "The Rival has 6.1 Gigs by your next turn on average, instead of 8.1.",
+       "You hold 5.9 Gigs at your next turn on average, instead of 3.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.875,
+        "rivalGigs": 8.125,
+        "units": 5,
+        "rivalUnits": 3.2083333333333335,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.875,
+        "rivalGigs": 6.125,
+        "units": 4,
+        "rivalUnits": 3.2083333333333335,
+        "hand": 3
+       }
+      },
+      "better": "Play Mandibular Upgrade on Johnny Silverhand"
+     }
+    },
+    {
+     "from": 181,
+     "to": 185,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. wozy must respond after attack effects resolve.",
+      "Rockn' Rockerboy made a Gig attack on wozy and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from wozy.",
+      "JackRio stole d12 (4) from wozy. JackRio now has 7 Gig dice."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Rockn' Rockerboy\n  Don't block / don't respond\n  Steal opponent's d12 (4)",
+      "p": 92.7
+     },
+     "best": {
+      "text": "Play Mandibular Upgrade on Rockn' Rockerboy",
+      "p": 94.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "871e3604"
+       },
+       {
+        "step": "play_card",
+        "iid": "a27031c9",
+        "equip_to": "4a4fb203"
+       }
+      ]
+     },
+     "loss": 2.1,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 94.8,
+       "yours": true
+      },
+      {
+       "text": "Play Mandibular Upgrade on Rockn' Rockerboy",
+       "p": 94.8,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Sketchy Ripper",
+       "p": 94.8,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 94.8,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Rockn' Rockerboy",
+       "p": 94.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 68.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "This attack could wait - or not happen.",
+      "reasons": [
+       "Your attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "Your move takes 1 Gig.",
+       "The better move equips Mandibular Upgrade."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.7916666666666665,
+        "rivalGigs": 8.208333333333334,
+        "units": 5,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.7916666666666665,
+        "rivalGigs": 8.208333333333334,
+        "units": 5,
+        "rivalUnits": 3.3333333333333335,
+        "hand": 3
+       }
+      },
+      "better": "Play Mandibular Upgrade on Rockn' Rockerboy"
+     }
+    },
+    {
+     "from": 185,
+     "to": 188,
+     "end": false,
+     "log": [
+      "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting for free."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Adrenaline Converter\n  picks Johnny Silverhand",
+      "p": 93.2
+     },
+     "best": {
+      "text": "Play Mandibular Upgrade on Johnny Silverhand",
+      "p": 99.3,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "871e3604"
+       },
+       {
+        "step": "play_card",
+        "iid": "a27031c9",
+        "equip_to": "65966ac0"
+       }
+      ]
+     },
+     "loss": 6.1,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Play Mandibular Upgrade on Johnny Silverhand",
+       "p": 99.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 91.3,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Sketchy Ripper",
+       "p": 91.3,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 91.3,
+       "yours": true
+      },
+      {
+       "text": "Play Mandibular Upgrade on Adam Smasher",
+       "p": 91.2,
+       "yours": false
+      },
+      {
+       "text": "Play Mandibular Upgrade on Rockn' Rockerboy",
+       "p": 91.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Adrenaline Converter.",
+       "The better move equips Mandibular Upgrade.",
+       "The Rival has 6.1 Gigs by your next turn on average, instead of 8.1.",
+       "You hold 5.9 Gigs at your next turn on average, instead of 3.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.9166666666666665,
+        "rivalGigs": 8.083333333333334,
+        "units": 5,
+        "rivalUnits": 3.4166666666666665,
+        "hand": 3
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.916666666666667,
+        "rivalGigs": 6.083333333333333,
+        "units": 4,
+        "rivalUnits": 3.4166666666666665,
+        "hand": 3
+       }
+      },
+      "better": "Play Mandibular Upgrade on Johnny Silverhand"
+     }
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="board.css?v=20261107f">
-<link rel="stylesheet" href="play.css?v=20261107f">
+<link rel="stylesheet" href="board.css?v=20261107u">
+<link rel="stylesheet" href="play.css?v=20261107x">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ctcg-swap" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 -1.0725 0 0 0.992  0 -1 0 0 0.925  0 -0.0212 0 0 0.0196  0 0 0 1 0"/></filter><linearGradient id="die-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".45" stop-color="#fff" stop-opacity=".04"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient></svg>
@@ -47,7 +47,9 @@
       <span class="snd"><button class="btn" id="snd-btn" type="button">🔊</button><input id="snd-vol" type="range" min="0" max="100" aria-label="Volume"></span>
       <button class="btn" id="undo" type="button" title="Take back your last move (U)" hidden>↶ Undo</button>
       <button class="btn" id="new-game" type="button">New game</button>
+      <a class="btn home" href="/" title="Home">⌂ Home</a>
       <a class="btn" href="index.html">Replays</a>
+      <a class="btn" href="review.html">Review</a>
     </div>
   </aside>
 </main>
@@ -55,16 +57,34 @@
 <dialog class="setup-dlg" id="setup-box" open>
   <h2>New game</h2>
   <form id="setup" class="setup">
-    <label>Mode <select id="mode"><option value="watch">Watch bot vs bot</option><option value="play">I play the bot</option></select></label>
-    <fieldset><legend id="p1-label">You</legend>
-      <label class="bot-p1" hidden>Bot <select id="bot-p1"></select></label>
-      <label>Deck <select id="deck-p1"></select></label></fieldset>
-    <fieldset><legend>Opponent</legend>
-      <label>Bot <select id="bot-p2"></select></label>
-      <label>Deck <select id="deck-p2"></select></label></fieldset>
-    <div id="bot-about" class="about"></div>
-    <label>First <select id="first"><option value="random">Random</option><option value="p1">You / left bot</option><option value="p2">Opponent</option></select></label>
-    <div class="dlg-ctl"><button class="btn" type="button" id="setup-cancel" hidden>Cancel</button><button class="btn primary" type="submit">Start game</button></div>
+    <select id="mode" hidden><option value="watch">Watch bot vs bot</option><option value="play">I play the bot</option></select>
+    <select id="first" hidden><option value="random">Random</option><option value="p1">Left</option><option value="p2">Opponent</option></select>
+    <div class="seg" id="mode-seg"><button type="button" data-v="play">I play the bot</button><button type="button" data-v="watch">Watch bot vs bot</button></div>
+    <div class="sides">
+      <section class="side-card p1">
+        <h3 id="p1-label">You</h3>
+        <label class="bot-p1" hidden><span>Bot</span><select id="bot-p1"></select></label>
+        <label><span>List</span><select id="src-p1" class="src"></select></label>
+        <label class="deck-row"><span>Deck</span><select id="deck-p1"></select><button type="button" class="reroll" data-p="p1" title="Show 8 other community decks">↻</button></label>
+        <div class="deck-info" id="info-p1"></div>
+        <div class="about" id="about-p1"></div>
+      </section>
+      <div class="vs">VS</div>
+      <section class="side-card p2">
+        <h3>Opponent</h3>
+        <label><span>Bot</span><select id="bot-p2"></select></label>
+        <label><span>List</span><select id="src-p2" class="src"></select></label>
+        <label class="deck-row"><span>Deck</span><select id="deck-p2"></select><button type="button" class="reroll" data-p="p2" title="Show 8 other community decks">↻</button></label>
+        <div class="deck-info" id="info-p2"></div>
+        <div class="about" id="about-p2"></div>
+      </section>
+    </div>
+    <div class="setup-foot">
+      <span class="foot-label">First</span>
+      <div class="seg small" id="first-seg"><button type="button" data-v="random">🎲 Random</button><button type="button" data-v="p1" id="first-p1">You</button><button type="button" data-v="p2">Opponent</button></div>
+      <span class="grow"></span>
+      <button class="btn" type="button" id="setup-cancel" hidden>Cancel</button><button class="btn primary" type="submit">Start game</button>
+    </div>
   </form>
 </dialog>
 
@@ -79,12 +99,32 @@
 </footer>
 
 <div id="zoom" class="zoom" hidden></div>
+<dialog id="flag-dlg" class="setup-dlg flag-dlg" data-kind="misplay">
+  <h2>Flag this play</h2>
+  <p id="flag-line" class="flag-line"></p>
+  <p id="flag-old" class="flag-old" hidden>The board server is running old code. Restart it (node scripts/serve-board.js), then reload this page.</p>
+  <div id="flag-kind" class="flag-kind">
+    <button type="button" data-kind="misplay"><span>✕</span> Misplay</button>
+    <button type="button" data-kind="good"><span>✓</span> Good play</button>
+    <button type="button" data-kind="ui"><span>▣</span> UI issue</button>
+  </div>
+  <div class="flag-sec"><span class="flag-lbl">Grade</span><div id="flag-grade" class="flag-grade"></div></div>
+  <div class="flag-sec"><span id="flag-why" class="flag-lbl">What was wrong</span><div id="flag-tags" class="flag-tags"></div></div>
+  <textarea id="flag-note" rows="3"></textarea>
+  <div class="flag-btns">
+    <button class="btn" id="flag-remove" type="button" hidden>Remove flag</button>
+    <span class="grow"></span>
+    <button class="btn" id="flag-cancel" type="button">Cancel</button>
+    <button class="btn play" id="flag-save" type="button">Save</button>
+  </div>
+</dialog>
 <dialog id="pile-dialog" class="pile-dialog"><h2 id="pile-title"></h2><div id="pile-cards" class="pile-cards"></div><button class="btn" id="pile-close">Close</button></dialog>
 
-<script src="sfx.js?v=20261107f"></script>
-<script src="replay.js?v=20261107f"></script>
-<script src="logfmt.js?v=20261107f"></script>
-<script src="app.js?v=20261107f"></script>
-<script src="live.js?v=20261107f"></script>
+<script src="sfx.js?v=20261107q"></script>
+<script src="dice3d.js?v=20261107za"></script>
+<script src="replay.js?v=20261107q"></script>
+<script src="logfmt.js?v=20261107q"></script>
+<script src="app.js?v=20261108a"></script>
+<script src="live.js?v=20261107y"></script>
 </body>
 </html>

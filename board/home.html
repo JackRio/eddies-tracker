@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eddies Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="board.css?v=20261107u">
+<link rel="stylesheet" href="home.css?v=20261107r">
+</head>
+<body class="home">
+<header class="h-top">
+  <a class="h-logo" href="/"><b>Eddies</b> Board</a>
+  <nav class="h-nav"><a href="review.html">Review</a><a href="play.html">Play</a><a href="index.html">Replays</a></nav>
+</header>
+
+<main class="h-main">
+  <section class="h-acts">
+    <a class="act act-review" href="review.html"><span class="act-k">01</span><b>Review a game</b><span id="act-review-sub">Every move graded</span></a>
+    <a class="act act-play" href="play.html"><span class="act-k">02</span><b>Play the bot</b><span>Daemon · Black ICE · Gonk</span></a>
+    <a class="act act-watch" href="index.html"><span class="act-k">03</span><b>Watch replays</b><span>Step through any game</span></a>
+  </section>
+
+  <section class="h-games">
+    <div class="h-games-head"><h2>Your games</h2><span id="g-count" class="dim"></span></div>
+    <ul id="games" class="g-list"><li class="dim">Loading…</li></ul>
+  </section>
+</main>
+
+<script src="home.js?v=20261107r"></script>
+</body>
+</html>

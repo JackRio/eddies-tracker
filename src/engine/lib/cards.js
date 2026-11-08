@@ -10,12 +10,29 @@ const CARD_SCRIPTS = require('../data/card_scripts.json');
   if (Array.isArray(node)) {
     node.forEach((e, i) => {
       const nx = node[i + 1];
+      // the Gig is named either { from_binding: 'g' } or a bare { bind: 'g' } (Trust No One, Jackie)
+      const gb = nx?.target && (nx.target.from_binding || (Object.keys(nx.target).length === 1 && nx.target.bind));
       if (e && e.action === 'ChooseAmount' && nx && /^(Increase|Decrease|Adjust)Gig$/.test(nx.action)
-        && nx.target?.from_binding && nx.amount?.op === 'ref' && nx.amount.name === (e.bind_to || e.bind))
-        e._gig = { binding: nx.target.from_binding, dir: nx.action === 'IncreaseGig' ? 'up' : nx.action === 'DecreaseGig' ? 'down' : 'adjust' };
+        && gb && nx.amount?.op === 'ref' && nx.amount.name === (e.bind_to || e.bind))
+        e._gig = { binding: gb, dir: nx.action === 'IncreaseGig' ? 'up' : nx.action === 'DecreaseGig' ? 'down' : 'adjust' };
       linkAmountsToGigs(e);
     });
   } else if (node && typeof node === 'object') for (const v of Object.values(node)) if (v && typeof v === 'object') linkAmountsToGigs(v);
+})(CARD_SCRIPTS);
+
+// "Set a Gig's value to another Gig's value" (Peace Offering, Padre): a die can't show a value above its
+// size (rule 6.4.4 - the set fails), so the Gig being set must be able to hold the copied value. Tag the
+// "set ON" pick with holds_value_of so a d8 isn't offered for a 9.
+(function linkSetTargets(node) {
+  if (Array.isArray(node)) {
+    node.forEach(e => {
+      if (e && e.action === 'SetGigValue' && e.amount?.op === 'gig_value' && e.amount.ref) {
+        const t = e.target?.from_binding ? node.find(x => x?.action === 'SelectTarget' && x.target?.bind === e.target.from_binding)?.target : e.target;
+        if (t && t.bind) t.filter = { ...(t.filter || {}), holds_value_of: e.amount.ref };
+      }
+      linkSetTargets(e);
+    });
+  } else if (node && typeof node === 'object') for (const v of Object.values(node)) if (v && typeof v === 'object') linkSetTargets(v);
 })(CARD_SCRIPTS);
 
 function deepFreeze(o) {

@@ -1,0 +1,1654 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-11-01-tssrct-vs-jackrio-aa6ea310.json",
+ "matchId": "aa6ea310-da14-492a-a326-36d6b6f38247",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "TSSRCT",
+ "result": {
+  "loserId": "player1",
+  "reason": "JackRio reached 7 Gig dice.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "42 cards seen in the game, rest from published deck \"Adam Smasher ~ YYR\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax"
+   ]
+  },
+  "rival": {
+   "source": "20 cards seen in the game, rest from meta deck \"Adam Smasher / Muamar Reyes / River Ward\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 45,
+ "summary": {
+  "counts": {
+   "great": 1,
+   "good": 27,
+   "okay": 1,
+   "misplay": 0,
+   "mistake": 0,
+   "blunder": 0
+  },
+  "moves": 29,
+  "avgLoss": 0.2,
+  "accuracy": 97
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 8,
+   "moves": [
+    {
+     "from": 8,
+     "to": 9,
+     "end": false,
+     "log": [
+      "JackRio sold Mantis Blades into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mantis Blades",
+      "p": 64
+     },
+     "best": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 65.7,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "15616c52"
+       }
+      ]
+     },
+     "loss": 1.8,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 65.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 65.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Mantis Blades",
+       "p": 64,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 58.6,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 57.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 23.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Mantis Blades.",
+       "The better move sells Zetatech Faceplate."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9583333333333333,
+        "rivalGigs": 2.0416666666666665,
+        "units": 0.9166666666666666,
+        "rivalUnits": 1.8333333333333333,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9583333333333333,
+        "rivalGigs": 2.0416666666666665,
+        "units": 0.9166666666666666,
+        "rivalUnits": 1.8333333333333333,
+        "hand": 6
+       }
+      },
+      "better": "Sell Zetatech Faceplate"
+     }
+    },
+    {
+     "from": 9,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 1 Eddie and 3 Legends."
+     ],
+     "grade": "great",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 66.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.5,
+     "options": [
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 66.5,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 50.8,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 48.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 30.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays 6th Street Recruits.",
+       "The bot's pick plays Secondhand Bombus."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9583333333333333,
+        "rivalGigs": 2.0416666666666665,
+        "units": 0.9166666666666666,
+        "rivalUnits": 1.625,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9166666666666667,
+        "rivalGigs": 2.0833333333333335,
+        "units": 0.9583333333333334,
+        "rivalUnits": 1.6666666666666667,
+        "hand": 6.416666666666667
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 68.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 68.7,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 23,
+   "moves": [
+    {
+     "from": 23,
+     "to": 24,
+     "end": false,
+     "log": [
+      "JackRio sold Arasaka Emergency Radioport into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Arasaka Emergency Radioport",
+      "p": 69.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 69.6,
+       "yours": true
+      },
+      {
+       "text": "Sell Satori",
+       "p": 66.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 65.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 55.5,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 53.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 19.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 24,
+     "to": 25,
+     "end": false,
+     "log": [
+      "JackRio played Rockn' Rockerboy by spending 2 Eddies and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Rockn' Rockerboy",
+      "p": 64.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.2,
+     "options": [
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 64.8,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 55,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 55,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 22.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 25,
+     "to": 26,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 67.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 67.8,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 37,
+   "moves": [
+    {
+     "from": 37,
+     "to": 38,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to Rockn' Rockerboy by spending 2 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on Rockn' Rockerboy",
+      "p": 84.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 2.7,
+     "options": [
+      {
+       "text": "Play Zetatech Faceplate on Rockn' Rockerboy",
+       "p": 84.6,
+       "yours": true
+      },
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 81.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 78.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 78.8,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 77.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 77.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 38,
+     "to": 39,
+     "end": false,
+     "log": [
+      "JackRio sold Mandibular Upgrade into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Mandibular Upgrade",
+      "p": 84.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 4.5,
+     "options": [
+      {
+       "text": "Sell Mandibular Upgrade",
+       "p": 84.4,
+       "yours": true
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 82.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 82.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 82.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 82.2,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 73.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 39,
+     "to": 40,
+     "end": false,
+     "log": [
+      "JackRio played Secondhand Bombus by spending 1 Eddie and 1 Legend."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 86.7
+     },
+     "best": {
+      "text": "Play Satori on Rockn' Rockerboy",
+      "p": 91.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "b9f6aba8"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "a45892c8"
+       },
+       {
+        "step": "play_card",
+        "iid": "9c9d858d",
+        "equip_to": "804994df"
+       }
+      ]
+     },
+     "loss": 4.5,
+     "se": 2.1,
+     "options": [
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 91.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 87.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 86.7,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 82.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 31.6,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Secondhand Bombus.",
+       "The better move equips Satori."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.083333333333333,
+        "rivalGigs": 2.9166666666666665,
+        "units": 1.7916666666666667,
+        "rivalUnits": 1.5833333333333333,
+        "hand": 4.166666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.333333333333333,
+        "rivalGigs": 2.6666666666666665,
+        "units": 1.5,
+        "rivalUnits": 1.4583333333333333,
+        "hand": 3
+       }
+      },
+      "better": "Play Satori on Rockn' Rockerboy"
+     }
+    },
+    {
+     "from": 40,
+     "to": 41,
+     "end": false,
+     "log": [
+      "JackRio equipped Satori: Sword of Saburo to Rockn' Rockerboy by spending 2 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Satori on Rockn' Rockerboy",
+      "p": 90
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.4,
+     "options": [
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 90,
+       "yours": true
+      },
+      {
+       "text": "Play Satori on Secondhand Bombus",
+       "p": 88,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 87.6,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 87.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 61.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 41,
+     "to": 50,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. TSSRCT must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d8 from 7 to 8.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew 6th Street Recruits.",
+      "TSSRCT called a Legend by spending 1 Legend. Viktor Vektor: Sit Down and Relax was revealed.",
+      "TSSRCT flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+      "TSSRCT revealed Satori: Sword of Saburo and Mantis Blades with Viktor Vektor and added them to hand.",
+      "JackRio discarded 6th Street Recruits. Discarded for Augmented Negotiators.",
+      "Rockn' Rockerboy (12) fought Augmented Negotiators (2) and won.",
+      "Rockn' Rockerboy won the fight with Satori equipped and JackRio drew Satori: Sword of Saburo.",
+      "Augmented Negotiators was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 93.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 88.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 59.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 50,
+     "to": 51,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 92.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 92.7,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 66,
+   "moves": [
+    {
+     "from": 66,
+     "to": 67,
+     "end": false,
+     "log": [
+      "JackRio sold Satori: Sword of Saburo into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Satori",
+      "p": 99.4
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 99.4,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 99.4,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.4,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 99.4,
+       "yours": false
+      },
+      {
+       "text": "Sell Satori",
+       "p": 99.4,
+       "yours": true
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 98,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 67,
+     "to": 68,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand: Never Stop Fighting by spending 4 Eddies and 2 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 99.1
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 99.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 99.1,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Secondhand Bombus",
+       "p": 98.6,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 96.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 83.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 68,
+     "to": 69,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Adam Smasher: Ender of Legends was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 3 face-down",
+      "p": 99.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 99.1,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 96.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 69,
+     "to": 76,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. TSSRCT must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 1 to 2.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Bootleg Black Sapphire Show.",
+      "Rockn' Rockerboy made a Gig attack on TSSRCT and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from TSSRCT.",
+      "JackRio stole d10 (10) from TSSRCT. JackRio now has 6 Gig dice.",
+      "JackRio stole d12 (9) from TSSRCT. JackRio now has 6 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Rockn' Rockerboy\n  picks own d6 (1)\n  amount → 1\n  Don't block / don't respond\n  Steal opponent's d12 (9) and opponent's d10 (10)",
+      "p": 99.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.5,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 95.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 76,
+     "to": 77,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 99.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 99.5,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Secondhand Bombus",
+       "p": 99.5,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 10,
+   "stepA": 93,
+   "moves": [
+    {
+     "from": 93,
+     "to": 94,
+     "end": false,
+     "log": [
+      "JackRio played Bootleg Black Sapphire Show by spending 4 Eddies and 1 Legend.",
+      "JackRio sold the top card of their deck into Eddies with Bootleg Black Sapphire Show.",
+      "JackRio controls even and odd Gig values and drew Secondhand Bombus and Live with the Aftermath with Bootleg Black Sapphire Show."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Bootleg Black Sapphire Show",
+      "p": 99.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bootleg Black Sapphire Show",
+       "p": 99.9,
+       "yours": true
+      },
+      {
+       "text": "Sell Satori",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 88.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 94,
+     "to": 95,
+     "end": false,
+     "log": [
+      "JackRio sold Live with the Aftermath into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Live with the Aftermath",
+      "p": 99.9
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Sell Live with the Aftermath",
+       "p": 99.9,
+       "yours": true
+      },
+      {
+       "text": "Sell Satori",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 95.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 95,
+     "to": 96,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. River Ward: Detective on the Hunt was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 2 face-down",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 92.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 96,
+     "to": 97,
+     "end": false,
+     "log": [
+      "JackRio played Secondhand Bombus by spending 1 Eddie and 1 Legend."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Secondhand Bombus",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.1,
+     "options": [
+      {
+       "text": "Play Unit Secondhand Bombus",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 99.9,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Johnny Silverhand",
+       "p": 99.8,
+       "yours": false
+      },
+      {
+       "text": "Play Satori on Rockn' Rockerboy",
+       "p": 99.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 94.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 97,
+     "to": 100,
+     "end": false,
+     "log": [
+      "JackRio equipped Satori: Sword of Saburo to Johnny Silverhand: Never Stop Fighting for free."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Johnny Silverhand",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 97.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 100,
+     "to": 105,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. TSSRCT must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting made a Gig attack on TSSRCT and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from TSSRCT.",
+      "JackRio stole d4 (2) from TSSRCT. JackRio now has 9 Gig dice.",
+      "JackRio stole d8 (7) from TSSRCT. JackRio now has 9 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Johnny Silverhand\n  Don't block / don't respond\n  Steal opponent's d8 (7) and opponent's d4 (2)",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 96.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 105,
+     "to": 112,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. TSSRCT must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d4 from 2 to 3.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Adrenaline Converter.",
+      "JackRio discarded 6th Street Recruits. Discarded for Augmented Negotiators.",
+      "Rockn' Rockerboy (12) fought Augmented Negotiators (2) and won.",
+      "Rockn' Rockerboy won the fight with Satori equipped and JackRio drew Rockn' Rockerboy.",
+      "Augmented Negotiators was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Rockn' Rockerboy\n  picks opponent's d4 (2)\n  amount → 1\n  Block with Augmented Negotiators\n  picks 6th Street Recruits\n  Don't block / don't respond",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 112,
+     "to": 113,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 12,
+   "stepA": 142,
+   "moves": [
+    {
+     "from": 142,
+     "to": 143,
+     "end": false,
+     "log": [
+      "JackRio equipped Adrenaline Converter to Johnny Silverhand: Never Stop Fighting by spending 2 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Adrenaline Converter on Johnny Silverhand",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack Adam Smasher with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Adam Smasher goes Solo",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Adrenaline Converter on Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 143,
+     "to": 148,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared Johnny Silverhand: Never Stop Fighting against Adam Smasher: Ender of Legends. TSSRCT must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting (13) fought Adam Smasher: Ender of Legends (11) and won.",
+      "Johnny Silverhand: Never Stop Fighting won the fight with Satori equipped and JackRio drew Johnny Silverhand: Never Stop Fighting.",
+      "Johnny Silverhand: Never Stop Fighting readied after winning its first fight this turn.",
+      "Adam Smasher: Ender of Legends was defeated, entered trash, and was removed from the game because Legends cannot remain there; its 1 Gear card remains in trash. JackRio's attack won the fight.",
+      "TSSRCT trashed Satori: Sword of Saburo from River Ward's search."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Adam Smasher with Johnny Silverhand\n  Don't block / don't respond\n  picks a hidden card\n  picks Detonate",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack Adam Smasher with Johnny Silverhand",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack Sketchy Ripper with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack Adam Smasher with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Use River Ward",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 148,
+     "to": 153,
+     "end": false,
+     "log": [
+      "JackRio chose Johnny Silverhand: Never Stop Fighting to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Johnny Silverhand: Never Stop Fighting. TSSRCT must respond after attack effects resolve.",
+      "Johnny Silverhand: Never Stop Fighting made a Gig attack on TSSRCT and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from TSSRCT.",
+      "JackRio stole d12 (12) from TSSRCT. JackRio now has 9 Gig dice.",
+      "JackRio stole d10 (10) from TSSRCT. JackRio now has 9 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Johnny Silverhand\n  Don't block / don't respond\n  Steal opponent's d10 (10) and opponent's d12 (12)",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Johnny Silverhand",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack Sketchy Ripper with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Attack Sketchy Ripper with Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 153,
+     "to": 160,
+     "end": false,
+     "log": [
+      "JackRio chose Rockn' Rockerboy to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Rockn' Rockerboy. TSSRCT must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust TSSRCT's d20 from 16 to 17.",
+      "JackRio controlled 3 or more different Gig values with Zetatech Faceplate and drew Arasaka Emergency Radioport.",
+      "Rockn' Rockerboy made a Gig attack on TSSRCT and will steal 2 Gigs if the defender cannot stop it.",
+      "JackRio must choose 2 Gigs to steal from TSSRCT.",
+      "JackRio stole d20 (17) from TSSRCT. JackRio now has 11 Gig dice.",
+      "JackRio stole d12 (9) from TSSRCT. JackRio now has 11 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Rockn' Rockerboy\n  picks opponent's d20 (16)\n  amount → 1\n  Don't block / don't respond\n  Steal opponent's d20 (16) and opponent's d12 (9)",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Rockn' Rockerboy",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Attack Sketchy Ripper with Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 160,
+     "to": 161,
+     "end": false,
+     "log": [
+      "JackRio played Rockn' Rockerboy by spending 4 Eddies and 1 Legend."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Rockn' Rockerboy",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Rockn' Rockerboy",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Call Viktor Vektor - last face-down Legend",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 161,
+     "to": 164,
+     "end": false,
+     "log": [
+      "JackRio equipped Arasaka Emergency Radioport to Rockn' Rockerboy for free."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use River Ward\n  picks Rockn' Rockerboy",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Arasaka Emergency Radioport",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Sketchy Ripper",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Call Viktor Vektor - last face-down Legend",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Arasaka Emergency Radioport on Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Play Arasaka Emergency Radioport on Rockn' Rockerboy",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 164,
+     "to": 166,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Viktor Vektor: Sit Down and Relax was revealed.",
+      "JackRio flipped Viktor Vektor and is searching the top 5 cards for Gear.",
+      "JackRio revealed Adrenaline Converter and Zetatech Faceplate with Viktor Vektor and added them to hand."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call Viktor Vektor - last face-down Legend\n  picks Mandibular Upgrade, Zetatech Faceplate",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Call Viktor Vektor - last face-down Legend",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 166,
+     "to": 167,
+     "end": false,
+     "log": [
+      "JackRio sold Zetatech Faceplate into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Zetatech Faceplate",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 100,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 100,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 167,
+     "to": 168,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 100
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 100,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

@@ -21,7 +21,7 @@ const { boardReasons, playoutReasons } = require('./explain');
 
 // depth: turns per rollout after yours. 40 = play to the end; the position score is only a
 // fallback for the rare game that runs longer (or a stuck rollout).
-const DEFAULTS = { samples: 24, plans: 6, keep: 4, depth: 40, noise: 3 };
+const DEFAULTS = { samples: 24, plans: 6, keep: 4, depth: 40, noise: 3, resolve: false };   // resolve: true/'fight' = greedy blocks after the fight; tested worse for one-ply greedy (Nov 8 2026)
 
 function start(state, ctx, seed) {
   const { board } = toBoard(state, ctx, seed);
@@ -58,7 +58,7 @@ function analyzeReplay(file, opts = {}) {
     const base = start(A, ctx, 1);
     const plans = new Map();
     for (let k = 0; k < o.plans; k++) {
-      const res = playTurn(base.board, base.waitingFor, pid, { rng: mulberry(1000 + k), noise: k === 0 ? 0 : o.noise + k });
+      const res = playTurn(base.board, base.waitingFor, pid, { rng: mulberry(1000 + k), noise: k === 0 ? 0 : o.noise + k, resolve: o.resolve });
       if (res.finished && !res.board.winner) continue;
       const sig = signature(res.board);
       if (!plans.has(sig)) plans.set(sig, { plan: res.plan, end: res.board, score: evaluate(res.board, pid) });
@@ -69,12 +69,12 @@ function analyzeReplay(file, opts = {}) {
     // 2. rollouts, one deal per sample shared by all options
     const actualR = [], candR = cands.map(() => []), diverged = cands.map(() => 0);
     for (let s = 1; s <= o.samples; s++) {
-      const ro = { rng: mulberry(50000 + s), noise: 2, depth: o.depth };
+      const ro = { rng: mulberry(50000 + s), noise: 2, depth: o.depth, resolve: o.resolve };
       const b = start(B, ctx, s);
       actualR.push(rollout(b.board, b.waitingFor, pid, { ...ro, rng: mulberry(50000 + s) }));
       cands.forEach((c, i) => {
         const a = start(A, ctx, s);
-        const r = replayPlan(a.board, a.waitingFor, pid, c.plan, { rng: mulberry(70000 + s), noise: 0 });
+        const r = replayPlan(a.board, a.waitingFor, pid, c.plan, { rng: mulberry(70000 + s), noise: 0, resolve: o.resolve });
         diverged[i] += r.diverged ? 1 : 0;
         candR[i].push(rollout(r.board, r.waitingFor, pid, { ...ro, rng: mulberry(50000 + s) }));
       });

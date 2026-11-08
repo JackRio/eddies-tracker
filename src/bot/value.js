@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { encode } = require('./vfeatures');
+const W = require('./nnwasm');   // SIMD forward pass (plain JS below is the fallback / reference)
 
 const FILE = path.join(__dirname, 'value-net.json');
 let NET = null;
@@ -17,12 +18,14 @@ function load(file = FILE) {
   const NET_ = { H, H2, D, mean: f32(j.mean), std: f32(j.std), Wd: f32(j.Wd), b1: f32(j.b1), E: f32(j.E),
     W2: f32(j.W2), b2: f32(j.b2), w3: f32(j.w3), b3: j.b3, meta: j };
   const net = NET_;
+  net.w = W.packValue(net);
   if (path.resolve(file) === path.resolve(FILE)) NET = net;
   return net;
 }
 
 // dense: number[D]; sparse: [[index (>= D), count], ...] as vfeatures.encode returns
 function forward(dense, sparse, net = NET || load()) {
+  if (net.w) return W.forwardValue(dense, sparse, net);
   const { H, H2, D, mean, std, Wd, b1, E, W2, b2, w3, b3 } = net;
   const h = Float32Array.from(b1);
   for (let i = 0; i < D; i++) {
@@ -47,8 +50,9 @@ function forward(dense, sparse, net = NET || load()) {
 // win chance for `pid` at board `b` (1/0 if the game is over)
 function value(b, pid, net) {
   if (b.winner) return b.winner === pid ? 1 : 0;
-  const x = encode(b, pid);
-  return forward(x.dense, x.sparse, net || NET || load());
+  const N = net || NET || load();
+  const x = encode(b, pid, N.D);   // a Gig-language net takes more dense inputs (vfeatures DENSE_GIG)
+  return forward(x.dense, x.sparse, N);
 }
 
 // compare against the PyTorch outputs stored with the weights; returns the largest difference
@@ -62,5 +66,5 @@ function selfCheck(file = FILE) {
 module.exports = { value, forward, load, selfCheck, FILE };
 if (require.main === module) {
   const d = selfCheck(process.argv[2] || FILE);
-  console.log(`value net self-check: max |js - torch| = ${d.toExponential(2)} ${d < 1e-3 ? 'OK' : 'MISMATCH'} (weights are stored to 5 decimals, so ~1e-4 is expected)`);
+  console.log(`value net self-check (${W.enabled ? 'wasm SIMD' : 'plain JS'}): max |js - torch| = ${d.toExponential(2)} ${d < 1e-3 ? 'OK' : 'MISMATCH'} (weights are stored to 5 decimals, so ~1e-4 is expected)`);
 }

@@ -1,0 +1,2013 @@
+{
+ "format": "eddies-game-review",
+ "version": 4,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-10-drmil-vs-jackrio-2a340cc3.json",
+ "matchId": "2a340cc3-48f5-4b93-8279-f9c0e1d1b947",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Drmil",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid",
+    "Evelyn Parker: Beautiful Enigma"
+   ]
+  },
+  "rival": {
+   "source": "14 cards seen in the game, rest from meta deck \"Adam Smasher / Muamar Reyes / River Ward\"",
+   "legends": [
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt",
+    "Royce: Psycho on the Edge"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r3.json:pnet=src/bot/policy-net-r3.json:prior=mix",
+ "seconds": 2259,
+ "summary": {
+  "counts": {
+   "great": 1,
+   "good": 14,
+   "okay": 3,
+   "misplay": 3,
+   "mistake": 1,
+   "blunder": 0
+  },
+  "moves": 22,
+  "avgLoss": 2.6,
+  "accuracy": 72
+ },
+ "turns": [
+  {
+   "turn": 1,
+   "stepA": 4,
+   "moves": [
+    {
+     "from": 4,
+     "to": 7,
+     "end": false,
+     "log": [
+      "JackRio played Industrial Assembly by spending 1 Legend.",
+      "JackRio used Industrial Assembly to increase JackRio's d12 from 6 to 10.",
+      "JackRio controlled a Gig with 8+ value and drew Bonnie and Clyde."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Industrial Assembly /   picks own d12 (6) /   amount → 4",
+      "p": 10.7
+     },
+     "best": {
+      "text": "Sell Industrial Assembly",
+      "p": 13.4,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "421fafbc"
+       }
+      ]
+     },
+     "loss": 2.7,
+     "se": 2.2,
+     "options": [
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 13.4,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 11.5,
+       "yours": false
+      },
+      {
+       "text": "Play Program Industrial Assembly",
+       "p": 10.7,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 9.5,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The better move sells Industrial Assembly."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 0,
+        "lose": 0,
+        "lost": [],
+        "attacks": [],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 0,
+        "lose": 0,
+        "lost": [],
+        "attacks": [],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Sell Industrial Assembly"
+     }
+    },
+    {
+     "from": 7,
+     "to": 8,
+     "end": false,
+     "log": [
+      "JackRio sold Bonnie and Clyde into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bonnie and Clyde",
+      "p": 8.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 8.3,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 7.7,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 8,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. V — Streetkid was revealed.",
+      "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, and may recover a Braindance Program from trash.",
+      "JackRio returned Industrial Assembly from trash to hand. Recovered with V Streetkid."
+     ],
+     "grade": "great",
+     "forced": false,
+     "verified": true,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 30.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 5.1,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 9.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 7.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 0,
+        "lose": 0,
+        "lost": [],
+        "attacks": [],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 0,
+        "lose": 0,
+        "lost": [],
+        "attacks": [],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": null
+     }
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "verified": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 50
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 50,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 3,
+   "stepA": 17,
+   "moves": [
+    {
+     "from": 17,
+     "to": 20,
+     "end": false,
+     "log": [
+      "JackRio played Industrial Assembly by spending 1 Eddie.",
+      "JackRio used Industrial Assembly to increase JackRio's d10 from 2 to 6.",
+      "JackRio controlled a Gig with 8+ value and drew Bonnie and Clyde."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Industrial Assembly /   picks own d10 (2) /   amount → 4",
+      "p": 0.8
+     },
+     "best": {
+      "text": "Play Unit Psycho Squad",
+      "p": 10.5,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "da08538a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "play_card",
+        "iid": "e5113115"
+       }
+      ]
+     },
+     "loss": 9.7,
+     "se": 4.2,
+     "options": [
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 10.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 10.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 8.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 2.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 1,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 1,
+       "yours": false
+      },
+      {
+       "text": "Play Program Industrial Assembly",
+       "p": 0.8,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 0.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The better move plays Psycho Squad."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 10,
+        "lose": 0,
+        "lost": [],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 10,
+        "lose": 0,
+        "lost": [],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Psycho Squad"
+     }
+    },
+    {
+     "from": 20,
+     "to": 21,
+     "end": false,
+     "log": [
+      "JackRio sold Bonnie and Clyde into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bonnie and Clyde",
+      "p": 4.8
+     },
+     "best": {
+      "text": "Play Program Bonnie and Clyde",
+      "p": 6.5,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "play_card",
+        "iid": "83eeaa94"
+       }
+      ]
+     },
+     "loss": 1.7,
+     "se": 2.9,
+     "options": [
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 6.5,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 6.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit La Llorona",
+       "p": 5.7,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 4.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 4.8,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 1.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Bonnie and Clyde.",
+       "The better move removes the Rival's Augmented Negotiators.",
+       "They steal a Gig in 10 of 10 games after your move, 0 of 10 after this one."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 10,
+        "lose": 0,
+        "lost": [],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 0,
+        "lose": 0,
+        "lost": [],
+        "attacks": [],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Program Bonnie and Clyde"
+     }
+    },
+    {
+     "from": 21,
+     "to": 22,
+     "end": false,
+     "log": [
+      "JackRio played La Llorona — Ghost of the Past by spending 1 Eddie and 2 Legends."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit La Llorona",
+      "p": 5.5
+     },
+     "best": {
+      "text": "Play Unit Psycho Squad",
+      "p": 12.5,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "83eeaa94"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "play_card",
+        "iid": "e5113115"
+       }
+      ]
+     },
+     "loss": 7.1,
+     "se": 2.4,
+     "options": [
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 12.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 12.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit La Llorona",
+       "p": 5.5,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 5.3,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 4.7,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 4.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays La Llorona.",
+       "The better move plays Psycho Squad.",
+       "They steal a Gig in 7 of 10 games after your move, 10 of 10 after this one.",
+       "You lose a Unit in 3 of 10 games after your move (La Llorona), 0 of 10 after this one."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 7,
+        "lose": 3,
+        "lost": [
+         [
+          "La Llorona",
+          3
+         ]
+        ],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 10,
+        "lose": 0,
+        "lost": [],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Psycho Squad"
+     }
+    },
+    {
+     "from": 22,
+     "to": 24,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+      "JackRio drew Animals Wrecker with Dexter DeShawn — Off the Grid."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 11.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 5,
+     "options": [
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 7.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 6.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 24,
+     "to": 25,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "verified": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 50
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 50,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 5,
+   "stepA": 31,
+   "moves": [
+    {
+     "from": 31,
+     "to": 32,
+     "end": false,
+     "log": [
+      "JackRio sold Industrial Assembly into Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Industrial Assembly",
+      "p": 1
+     },
+     "best": {
+      "text": "Play Unit Royce",
+      "p": 9.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "da08538a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "83eeaa94"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "play_card",
+        "iid": "aed8cec3"
+       }
+      ]
+     },
+     "loss": 8.8,
+     "se": 1.6,
+     "options": [
+      {
+       "text": "Play Unit Royce",
+       "p": 9.8,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 3.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "V goes Solo",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 1,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 0.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.7,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Industrial Assembly.",
+       "The better move plays Royce and removes the Rival's Augmented Negotiators.",
+       "They steal a Gig in 8 of 10 games after your move, 0 of 10 after this one."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 8,
+        "lose": 4,
+        "lost": [
+         [
+          "La Llorona",
+          4
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → your Gigs",
+          8
+         ],
+         [
+          "Augmented Negotiators → your Gigs",
+          7
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 0,
+        "lose": 4,
+        "lost": [
+         [
+          "La Llorona",
+          4
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → your Gigs",
+          4
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Royce"
+     }
+    },
+    {
+     "from": 32,
+     "to": 34,
+     "end": false,
+     "log": [
+      "JackRio played Royce — Don't Call Me Simon by spending 3 Eddies and 2 Legends.",
+      "Augmented Negotiators was defeated. Royce — Don't Call Me Simon's PLAY effect defeated it."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Royce",
+      "p": 4.2
+     },
+     "best": {
+      "text": "Play Unit Meredith Stout",
+      "p": 8.1,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "da08538a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "83eeaa94"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "6cd55fb3"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "play_card",
+        "iid": "4c5ce69f"
+       }
+      ]
+     },
+     "loss": 3.9,
+     "se": 4.8,
+     "options": [
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 8.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 7.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 5.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 5.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Royce",
+       "p": 4.2,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 2.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Royce and removes the Rival's Augmented Negotiators.",
+       "The better move plays Meredith Stout.",
+       "You lose a Unit in 2 of 10 games after your move (La Llorona), 7 of 10 after this one (Meredith Stout)."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 8,
+        "lose": 2,
+        "lost": [
+         [
+          "La Llorona",
+          2
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 9,
+        "lose": 7,
+        "lost": [
+         [
+          "Meredith Stout",
+          7
+         ]
+        ],
+        "attacks": [
+         [
+          "Augmented Negotiators → your Gigs",
+          9
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          7
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Meredith Stout"
+     }
+    },
+    {
+     "from": 34,
+     "to": 35,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 12.5
+     },
+     "best": {
+      "text": "Call Evelyn Parker - last face-down Legend",
+      "p": 13.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "call_legend",
+        "iid": "8d0ca9eb"
+       }
+      ]
+     },
+     "loss": 1.3,
+     "se": 5.3,
+     "options": [
+      {
+       "text": "Call Evelyn Parker - last face-down Legend",
+       "p": 13.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 12.5,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 5.9,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "You ended the turn with a better play left.",
+      "reasons": [
+       "The better move calls Evelyn Parker.",
+       "They steal a Gig in 0 of 10 games after your move, 5 of 10 after this one.",
+       "You lose a Unit in 7 of 10 games after your move (La Llorona), 2 of 10 after this one (La Llorona)."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 0,
+        "lose": 7,
+        "lost": [
+         [
+          "La Llorona",
+          7
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → your Gigs",
+          7
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 5,
+        "lose": 2,
+        "lost": [
+         [
+          "La Llorona",
+          2
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → your Gigs",
+          7
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Call Evelyn Parker - last face-down Legend"
+     }
+    }
+   ]
+  },
+  {
+   "turn": 7,
+   "stepA": 46,
+   "moves": [
+    {
+     "from": 46,
+     "to": 47,
+     "end": false,
+     "log": [
+      "JackRio sold Bonnie and Clyde into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bonnie and Clyde",
+      "p": 0.4
+     },
+     "best": {
+      "text": "Play Unit Animals Wrecker",
+      "p": 14.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "da08538a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "83eeaa94"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "6cd55fb3"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "play_card",
+        "iid": "be65d01f"
+       }
+      ]
+     },
+     "loss": 14.4,
+     "se": 5.1,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 14.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 9.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 9.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 0.4,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 0.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Bonnie and Clyde.",
+       "The better move plays Animals Wrecker.",
+       "You lose a Unit in 5 of 10 games after your move (La Llorona, Royce), 8 of 10 after this one (La Llorona, Animals Wrecker)."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 9,
+        "lose": 5,
+        "lost": [
+         [
+          "La Llorona",
+          4
+         ],
+         [
+          "Royce",
+          1
+         ],
+         [
+          "Animals Wrecker",
+          1
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          9
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          7
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 9,
+        "lose": 8,
+        "lost": [
+         [
+          "La Llorona",
+          6
+         ],
+         [
+          "Animals Wrecker",
+          2
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          9
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          9
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Animals Wrecker"
+     }
+    },
+    {
+     "from": 47,
+     "to": 48,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Evelyn Parker — Beautiful Enigma was revealed."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Call Evelyn Parker - last face-down Legend",
+      "p": 7.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 7.6,
+     "options": [
+      {
+       "text": "Call Evelyn Parker - last face-down Legend",
+       "p": 7.5,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 5.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 2.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 2.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 48,
+     "to": 49,
+     "end": false,
+     "log": [
+      "JackRio played Modded Kusanagi by spending 3 Eddies and 3 Legends."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Modded Kusanagi",
+      "p": 0.2
+     },
+     "best": {
+      "text": "Play Unit Animals Wrecker",
+      "p": 5.1,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "da08538a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "83eeaa94"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "6cd55fb3"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "8d0ca9eb"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "f625819a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "88c5aeed"
+       },
+       {
+        "step": "play_card",
+        "iid": "be65d01f"
+       }
+      ]
+     },
+     "loss": 5,
+     "se": 1.4,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 5.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 1.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 1.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 1.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.2,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 0.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays Modded Kusanagi.",
+       "The better move plays Animals Wrecker."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 10,
+        "lose": 9,
+        "lost": [
+         [
+          "La Llorona",
+          9
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          10
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 10,
+        "lose": 10,
+        "lost": [
+         [
+          "La Llorona",
+          7
+         ],
+         [
+          "Animals Wrecker",
+          3
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          10
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          8
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Play Unit Animals Wrecker"
+     }
+    },
+    {
+     "from": 49,
+     "to": 53,
+     "end": false,
+     "log": [
+      "JackRio chose Modded Kusanagi to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Modded Kusanagi. Drmil must respond after attack effects resolve.",
+      "Modded Kusanagi made a Gig attack on Drmil and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from Drmil.",
+      "JackRio stole d10 (9) from Drmil. JackRio now has 5 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Modded Kusanagi /   Don't block / don't respond /   Steal opponent's d10 (9)",
+      "p": 0.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.4,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Modded Kusanagi",
+       "p": 0.9,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Royce",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 53,
+     "to": 57,
+     "end": false,
+     "log": [
+      "JackRio chose Royce — Don't Call Me Simon to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Royce — Don't Call Me Simon. Drmil must respond after attack effects resolve.",
+      "Royce — Don't Call Me Simon (4) fought Meredith Stout — Stone Cold Corpo (5) and lost.",
+      "Royce — Don't Call Me Simon was defeated. Drmil's defender held the line."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Royce /   Block with Meredith Stout /   Don't block / don't respond",
+      "p": 0.1
+     },
+     "best": {
+      "text": "End turn",
+      "p": 1.1,
+      "seq": [
+       {
+        "step": "end_turn"
+       }
+      ]
+     },
+     "loss": 1,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Royce",
+       "p": 0.1,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": "Stopping here was better.",
+      "reasons": [
+       "Your attack spends Royce (4); on their turn the Rival's Meredith Stout (5) and Swordwise Huscle (5) can attack it.",
+       "Your move loses your Royce.",
+       "The better move loses your Modded Kusanagi.",
+       "You lose a Unit in 0 of 10 games after your move, 9 of 10 after this one (La Llorona)."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 10,
+        "lose": 0,
+        "lost": [],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          10
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          10
+         ],
+         [
+          "MaxTac Suppression Team → your Gigs",
+          1
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 9,
+        "lose": 9,
+        "lost": [
+         [
+          "La Llorona",
+          9
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          9
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          9
+         ],
+         [
+          "MaxTac Suppression Team → your Gigs",
+          1
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "End turn"
+     }
+    },
+    {
+     "from": 57,
+     "to": 58,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0.3
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with La Llorona",
+      "p": 2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "aaf5beb6",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 1.7,
+     "se": 0.8,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with La Llorona",
+       "p": 2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.3,
+       "yours": true
+      },
+      {
+       "text": "Attack Meredith Stout with La Llorona",
+       "p": 0.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "You ended the turn with a better play left.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "The better move spends La Llorona (3); on their turn the Rival's Meredith Stout (5) and Swordwise Huscle (5) can attack it. It still comes out ahead.",
+       "Your move loses your Modded Kusanagi.",
+       "The better move takes 1 Gig."
+      ],
+      "reply": {
+       "you": {
+        "n": 10,
+        "steal": 10,
+        "lose": 10,
+        "lost": [
+         [
+          "La Llorona",
+          10
+         ]
+        ],
+        "attacks": [
+         [
+          "Swordwise Huscle → your Gigs",
+          10
+         ],
+         [
+          "Meredith Stout → your Gigs",
+          10
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       },
+       "best": {
+        "n": 10,
+        "steal": 10,
+        "lose": 10,
+        "lost": [
+         [
+          "La Llorona",
+          10
+         ]
+        ],
+        "attacks": [
+         [
+          "Meredith Stout → La Llorona",
+          10
+         ],
+         [
+          "Swordwise Huscle → your Gigs",
+          10
+         ],
+         [
+          "Sketchy Ripper → your Gigs",
+          1
+         ]
+        ],
+        "rivalWins": 0,
+        "youWin": 0
+       }
+      },
+      "better": "Attack opponent's Gigs with La Llorona"
+     }
+    }
+   ]
+  },
+  {
+   "turn": 9,
+   "stepA": 74,
+   "moves": [
+    {
+     "from": 74,
+     "to": 75,
+     "end": false,
+     "log": [
+      "JackRio played Kerry Eurodyne — The Last Rockerboy by spending 4 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Kerry Eurodyne",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0.1,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Kerry Eurodyne",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 75,
+     "to": 76,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 11,
+   "stepA": 99,
+   "moves": [
+    {
+     "from": 99,
+     "to": 100,
+     "end": false,
+     "log": [
+      "JackRio played Meredith Stout — Stone Cold Corpo by spending 4 Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Meredith Stout",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Psycho Squad",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Kerry Eurodyne",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 100,
+     "to": 101,
+     "end": false,
+     "log": [
+      "JackRio used Kerry Eurodyne — The Last Rockerboy to draw Carnage at the Colosseum, La Llorona — Ghost of the Past."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Use Kerry Eurodyne",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Use Kerry Eurodyne",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Kerry Eurodyne",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Swordwise Huscle with Kerry Eurodyne",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack MaxTac Suppression Team with Kerry Eurodyne",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 101,
+     "to": 102,
+     "end": false,
+     "log": [
+      "JackRio played La Llorona — Ghost of the Past by spending 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit La Llorona",
+      "p": 0.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "Play Unit La Llorona",
+       "p": 0.8,
+       "yours": true
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 0.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 102,
+     "to": 103,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "verified": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0.4
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.4,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

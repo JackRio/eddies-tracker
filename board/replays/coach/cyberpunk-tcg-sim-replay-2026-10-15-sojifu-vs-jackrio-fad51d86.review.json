@@ -1,0 +1,1159 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-15-sojifu-vs-jackrio-fad51d86.json",
+ "matchId": "fad51d86-6343-455e-b37e-dd7ec2061b4c",
+ "me": "player2",
+ "you": "JackRio",
+ "rival": "Sojifu",
+ "result": {
+  "loserId": "player2",
+  "reason": "JackRio conceded the match.",
+  "winnerId": "player1"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "Dexter DeShawn: Off the Grid",
+    "Muamar Reyes: El Capitán",
+    "River Ward: Detective on the Hunt"
+   ]
+  },
+  "rival": {
+   "source": "10 cards seen in the game, rest from meta deck \"Adam Smasher / Muamar Reyes / River Ward\"",
+   "legends": [
+    "Muamar Reyes: El Capitán",
+    "River Ward: Detective on the Hunt",
+    "Viktor Vektor: Sit Down and Relax"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 25,
+ "summary": {
+  "counts": {
+   "great": 0,
+   "good": 7,
+   "okay": 3,
+   "misplay": 2,
+   "mistake": 2,
+   "blunder": 0
+  },
+  "moves": 14,
+  "avgLoss": 4.2,
+  "accuracy": 59
+ },
+ "turns": [
+  {
+   "turn": 2,
+   "stepA": 9,
+   "moves": [
+    {
+     "from": 9,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio sold Gorilla Arms into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Gorilla Arms",
+      "p": 48.4
+     },
+     "best": {
+      "text": "Sell Bootleg Black Sapphire Show",
+      "p": 51.1,
+      "seq": [
+       {
+        "step": "sell_card",
+        "iid": "14af330a"
+       }
+      ]
+     },
+     "loss": 2.7,
+     "se": 0.4,
+     "options": [
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 51.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 48.5,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 48.5,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 48.4,
+       "yours": true
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 48.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 16.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Gorilla Arms.",
+       "The better move sells Bootleg Black Sapphire Show."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.875,
+        "rivalUnits": 0.8333333333333334,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 2,
+        "units": 0.875,
+        "rivalUnits": 0.8333333333333334,
+        "hand": 6
+       }
+      },
+      "better": "Sell Bootleg Black Sapphire Show"
+     }
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "end": false,
+     "log": [
+      "JackRio played Meredith Stout — Stone Cold Corpo by spending 1 Eddie and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Meredith Stout",
+      "p": 50.9
+     },
+     "best": null,
+     "loss": 0.2,
+     "se": 0.7,
+     "options": [
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 51,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 50.9,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 28.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 21.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 11,
+     "to": 12,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 50.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 50.5,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 4,
+   "stepA": 17,
+   "moves": [
+    {
+     "from": 17,
+     "to": 18,
+     "end": false,
+     "log": [
+      "JackRio sold Gorilla Arms into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Gorilla Arms",
+      "p": 40.9
+     },
+     "best": {
+      "text": "Play Gorilla Arms on Meredith Stout",
+      "p": 59.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "612a18d9"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dfaef681"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "bb91243f"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "5b690f45"
+       },
+       {
+        "step": "play_card",
+        "iid": "a470a6d3",
+        "equip_to": "54ed064c"
+       }
+      ]
+     },
+     "loss": 18.9,
+     "se": 2.4,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on Meredith Stout",
+       "p": 59.8,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on Meredith Stout",
+       "p": 59.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 54.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 40.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Meredith Stout",
+       "p": 40.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 40.8,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Gorilla Arms.",
+       "The better move equips Gorilla Arms.",
+       "The Rival has 2 Gigs by your next turn on average, instead of 3.",
+       "You hold 4 Gigs at your next turn on average, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 0.9583333333333334,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 7.708333333333333
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 2,
+        "units": 0.9583333333333334,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 5.708333333333333
+       }
+      },
+      "better": "Play Gorilla Arms on Meredith Stout"
+     }
+    },
+    {
+     "from": 18,
+     "to": 19,
+     "end": false,
+     "log": [
+      "JackRio played 6th Street Recruits by spending 2 Eddies and 2 Legends."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit 6th Street Recruits",
+      "p": 48.1
+     },
+     "best": {
+      "text": "Play Gorilla Arms on Meredith Stout",
+      "p": 62.7,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "612a18d9"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "32c4f092"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dfaef681"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "bb91243f"
+       },
+       {
+        "step": "play_card",
+        "iid": "a470a6d3",
+        "equip_to": "54ed064c"
+       }
+      ]
+     },
+     "loss": 14.6,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on Meredith Stout",
+       "p": 62.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit 6th Street Recruits",
+       "p": 48.1,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 47.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Meredith Stout",
+       "p": 38.7,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bootleg Black Sapphire Show",
+       "p": 38.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 17.5,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move plays 6th Street Recruits.",
+       "The better move equips Gorilla Arms.",
+       "The Rival has 2.1 Gigs by your next turn on average, instead of 3.",
+       "You hold 3.9 Gigs at your next turn on average, instead of 3."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 3,
+        "units": 1.8333333333333333,
+        "rivalUnits": 1.8333333333333333,
+        "hand": 5.791666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.9166666666666665,
+        "rivalGigs": 2.0833333333333335,
+        "units": 0.9583333333333334,
+        "rivalUnits": 1.9583333333333333,
+        "hand": 5.791666666666667
+       }
+      },
+      "better": "Play Gorilla Arms on Meredith Stout"
+     }
+    },
+    {
+     "from": 19,
+     "to": 21,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+      "JackRio drew Meredith Stout — Stone Cold Corpo with Dexter DeShawn — Off the Grid."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 3 face-down\n  skip ()",
+      "p": 45
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Meredith Stout",
+       "p": 45,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 45,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 37.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 21,
+     "to": 22,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 45
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with Meredith Stout",
+      "p": 49.3,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "54ed064c",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 4.3,
+     "se": 0.8,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Meredith Stout",
+       "p": 49.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 45,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": "You ended the turn with a useful play left.",
+      "reasons": [
+       "This attack on the Gigs couldn't be blocked: the Rival had no ready Blocker.",
+       "The better move takes 1 Gig.",
+       "The Rival has 3.1 Gigs by your next turn on average, instead of 4.1.",
+       "You hold 2.9 Gigs at your next turn on average, instead of 1.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.9166666666666667,
+        "rivalGigs": 4.083333333333333,
+        "units": 2,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9166666666666665,
+        "rivalGigs": 3.0833333333333335,
+        "units": 2,
+        "rivalUnits": 1.7083333333333333,
+        "hand": 6
+       }
+      },
+      "better": "Attack opponent's Gigs with Meredith Stout"
+     }
+    }
+   ]
+  },
+  {
+   "turn": 6,
+   "stepA": 35,
+   "moves": [
+    {
+     "from": 35,
+     "to": 37,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. Muamar Reyes — El Capitán was revealed.",
+      "JackRio drew Jackie Welles — Ride or Die Choom with Muamar Reyes — El Capitán."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 2 face-down\n  skip ()",
+      "p": 7.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.7,
+     "options": [
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 7.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 7.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 7.1,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on 6th Street Recruits",
+       "p": 6.9,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bootleg Black Sapphire Show",
+       "p": 6.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 6.8,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 37,
+     "to": 38,
+     "end": false,
+     "log": [
+      "JackRio sold Bootleg Black Sapphire Show into Eddies."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bootleg Black Sapphire Show",
+      "p": 2.9
+     },
+     "best": {
+      "text": "Play Gorilla Arms on 6th Street Recruits",
+      "p": 6.9,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "612a18d9"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "5b690f45"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dfaef681"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "bb91243f"
+       },
+       {
+        "step": "play_card",
+        "iid": "a470a6d3",
+        "equip_to": "d9d00320"
+       }
+      ]
+     },
+     "loss": 4,
+     "se": 0.7,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on 6th Street Recruits",
+       "p": 6.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 6.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 5,
+       "yours": false
+      },
+      {
+       "text": "Sell Zetatech Faceplate",
+       "p": 5,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 4.2,
+       "yours": false
+      },
+      {
+       "text": "Sell Bootleg Black Sapphire Show",
+       "p": 2.9,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells Bootleg Black Sapphire Show.",
+       "The better move equips Gorilla Arms."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 4,
+        "units": 1,
+        "rivalUnits": 2.8333333333333335,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 1,
+        "rivalUnits": 2.8333333333333335,
+        "hand": 6
+       }
+      },
+      "better": "Play Gorilla Arms on 6th Street Recruits"
+     }
+    },
+    {
+     "from": 38,
+     "to": 39,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on 6th Street Recruits",
+      "p": 4.1
+     },
+     "best": {
+      "text": "Play Gorilla Arms on 6th Street Recruits",
+      "p": 12.3,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "612a18d9"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "14af330a"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "5b690f45"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dfaef681"
+       },
+       {
+        "step": "play_card",
+        "iid": "a470a6d3",
+        "equip_to": "d9d00320"
+       }
+      ]
+     },
+     "loss": 8.2,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Play Gorilla Arms on 6th Street Recruits",
+       "p": 12.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 4.8,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 4.8,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 4.1,
+       "yours": true
+      },
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 2.3,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Zetatech Faceplate.",
+       "The better move equips Gorilla Arms.",
+       "The Rival has 5 Gigs by your next turn on average, instead of 5.9.",
+       "You hold 3 Gigs at your next turn on average, instead of 2.1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.0833333333333335,
+        "rivalGigs": 5.916666666666667,
+        "units": 0.875,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 5.958333333333333
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 1,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 6
+       }
+      },
+      "better": "Play Gorilla Arms on 6th Street Recruits"
+     }
+    },
+    {
+     "from": 39,
+     "to": 40,
+     "end": false,
+     "log": [
+      "JackRio equipped Zetatech Faceplate to 6th Street Recruits by spending 2 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Zetatech Faceplate on 6th Street Recruits",
+      "p": 10
+     },
+     "best": {
+      "text": "Play Adrenaline Converter on 6th Street Recruits",
+      "p": 10.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "5b690f45"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "dfaef681"
+       },
+       {
+        "step": "play_card",
+        "iid": "1893eb03",
+        "equip_to": "d9d00320"
+       }
+      ]
+     },
+     "loss": 0.8,
+     "se": 1.2,
+     "options": [
+      {
+       "text": "Play Adrenaline Converter on 6th Street Recruits",
+       "p": 10.8,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on 6th Street Recruits",
+       "p": 10,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 5.2,
+       "yours": false
+      },
+      {
+       "text": "Use Muamar Reyes",
+       "p": 4.6,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 4.3,
+       "yours": false
+      },
+      {
+       "text": "Play Zetatech Faceplate on Dexter DeShawn",
+       "p": 2.4,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move equips Zetatech Faceplate.",
+       "The better move equips Adrenaline Converter.",
+       "The Rival is down to 2 Units, instead of 2.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 0.9583333333333334,
+        "rivalUnits": 2.9166666666666665,
+        "hand": 6.75
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1.875,
+        "rivalGigs": 6.125,
+        "units": 0.8333333333333334,
+        "rivalUnits": 2.0416666666666665,
+        "hand": 5.041666666666667
+       }
+      },
+      "better": "Play Adrenaline Converter on 6th Street Recruits"
+     }
+    },
+    {
+     "from": 40,
+     "to": 41,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1.3
+     },
+     "best": {
+      "text": "Attack opponent's Gigs with 6th Street Recruits",
+      "p": 6.9,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "d9d00320",
+        "target": {
+         "kind": "gigs"
+        }
+       }
+      ]
+     },
+     "loss": 5.6,
+     "se": 1,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 6.9,
+       "yours": false
+      },
+      {
+       "text": "Attack MaxTac Suppression Team with 6th Street Recruits",
+       "p": 1.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.3,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": "You ended the turn with a useful play left.",
+      "reasons": [
+       "The Rival's Blocker (Augmented Negotiators 2) loses the fight to 6th Street Recruits (10).",
+       "The better move removes the Rival's Augmented Negotiators.",
+       "The Rival has 5 Gigs by your next turn on average, instead of 7.",
+       "You hold 3 Gigs at your next turn on average, instead of 1.",
+       "You start your next turn with 6.8 cards in hand, instead of 5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 1,
+        "rivalGigs": 7,
+        "units": 0.9166666666666666,
+        "rivalUnits": 3.0416666666666665,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 5,
+        "units": 0.9583333333333334,
+        "rivalUnits": 3.0416666666666665,
+        "hand": 6.791666666666667
+       }
+      },
+      "better": "Attack opponent's Gigs with 6th Street Recruits"
+     }
+    }
+   ]
+  },
+  {
+   "turn": 8,
+   "stepA": 54,
+   "moves": [
+    {
+     "from": 54,
+     "to": 55,
+     "end": false,
+     "log": [
+      "JackRio played Johnny Silverhand — Never Stop Fighting by spending 3 Eddies and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Johnny Silverhand",
+      "p": 1.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Play Unit Johnny Silverhand",
+       "p": 1.6,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Jackie Welles",
+       "p": 0.6,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Gorilla Arms on 6th Street Recruits",
+       "p": 0.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 55,
+     "to": 56,
+     "end": false,
+     "log": [
+      "JackRio sold Gorilla Arms into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Gorilla Arms",
+      "p": 1.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Gorilla Arms",
+       "p": 1.8,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 1.8,
+       "yours": false
+      },
+      {
+       "text": "Sell Adrenaline Converter",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.8,
+       "yours": false
+      },
+      {
+       "text": "Attack MaxTac Suppression Team with 6th Street Recruits",
+       "p": 0.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 56,
+     "to": 66,
+     "end": false,
+     "log": [
+      "JackRio chose 6th Street Recruits to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with 6th Street Recruits. Sojifu must respond after attack effects resolve.",
+      "JackRio used Zetatech Faceplate to adjust Sojifu's d8 from 3 to 4.",
+      "JackRio used Zetatech Faceplate to adjust JackRio's d6 from 5 to 6.",
+      "JackRio discarded Meredith Stout — Stone Cold Corpo. Discarded for Augmented Negotiators.",
+      "6th Street Recruits (10) fought Augmented Negotiators (2) and won.",
+      "Augmented Negotiators was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 1.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with 6th Street Recruits",
+       "p": 1.2,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.5,
+       "yours": false
+      },
+      {
+       "text": "Attack MaxTac Suppression Team with 6th Street Recruits",
+       "p": 0.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 66,
+     "to": 67,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1.3,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}

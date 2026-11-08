@@ -57,6 +57,25 @@ function candidates() {
   for (const [n, v] of FREQ) FREQ.set(n, v / top);
   return CANDS;
 }
+// candidates(true): the meta lists plus every netdeck community list (src/bot/field-decks/netdeck), which
+// together get as much prior weight as the meta lists, split by sqrt(1 + likes) - so an off-meta Rival
+// usually has a close real list to be guessed from (strong option bpool=1)
+let POOL = null;
+function poolCandidates() {
+  if (POOL) return POOL;
+  const meta = candidates();
+  const dir = path.join(__dirname, 'field-decks', 'netdeck');
+  const net = loadDecks([dir]).map(d => {
+    const cards = new Map();
+    for (const { card_id, count } of d.cards) cards.set(card_id, (cards.get(card_id) || 0) + count);
+    const likes = +((fs.readFileSync(path.join(dir, d.name), 'utf8').split('\n')[0].match(/, (\d+) likes/) || [0, 0])[1]);
+    return { name: d.name, legends: d.legends.slice(), cards, games: Math.sqrt(1 + likes) };
+  });
+  const metaMass = meta.reduce((a, d) => a + d.games, 0), netMass = net.reduce((a, d) => a + d.games, 0) || 1;
+  for (const d of net) d.games *= metaMass / netMass;
+  POOL = [...meta, ...net];
+  return POOL;
+}
 
 // what `pid` has shown face up
 function shown(b, pid) {
@@ -72,7 +91,7 @@ function shown(b, pid) {
 
 // -> [{ deck, w }] sorted by weight (deck === 'custom' for the rules-built hypothesis)
 function posterior(seen, opts = {}) {
-  const C = candidates().filter(d => !opts.exclude || !opts.exclude(d));
+  const C = (opts.pool ? poolCandidates() : candidates()).filter(d => !opts.exclude || !opts.exclude(d));
   const logs = C.map(d => {
     let L = Math.log(d.games);
     for (const [n, k] of seen.cards) {
@@ -152,6 +171,7 @@ function redeal(d, me, rng, post, seen) {
   for (const [n, k] of seen.cards) left.set(n, Math.max(0, (left.get(n) || 0) - k));
   const pool = [];
   for (const [n, k] of left) for (let i = 0; i < k; i++) pool.push(n);
+  for (let i = 0; i < rv.deck.length; i++) rv.deck[i] = { ...rv.deck[i] };   // deck cards are shared between board copies (engine clone.js): replace, never edit
   const slots = [...rv.hand, ...rv.deck, ...rv.eddies.filter(e => legacy.on || !e.seen)];   // known sold cards keep their identity
   if (pool.length < slots.length) {
     const ceil = ceilings(deck.legends);

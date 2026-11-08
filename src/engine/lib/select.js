@@ -168,7 +168,10 @@ function selectTarget(target, b, ctx, bind) {
 
 
   const chooser = target.chooser || 'auto';
-  const askAnyway = target.optional && target.side === 'both';
+  // a player who wants every pick shown (the play page's human: b.ask_single = { p1: true }) is asked even
+  // when only one target fits - "give another friendly Unit Adrenaline" shouldn't happen silently
+  const askAnyway = (target.optional && target.side === 'both')
+    || (chooser === 'controller' && !!b.ask_single?.[ctx.self_pid] && !globalThis.__eddiesLegacy?.on);
   if (chooser === 'auto' || (pool.length === 1 && !askAnyway)) {
     const sorted = _sortAuto(pool, target, ctx);
     const picked = sorted[0];

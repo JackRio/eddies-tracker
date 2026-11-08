@@ -17,7 +17,7 @@ const os = require('os');
 const path = require('path');
 const { Worker, isMainThread, parentPort, workerData } = require('worker_threads');
 
-const NEW_BY = 'strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix:deals=24:k=10';
+const NEW_BY = 'strong:vnet=src/bot/value-net-r3.json:pnet=src/bot/policy-net-r3.json:prior=mix:deals=24:k=10';
 
 if (!isMainThread) {
   const { setupGame, step, defaultPassAction } = require('../src/engine');

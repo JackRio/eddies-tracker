@@ -142,7 +142,7 @@ function resolveEffect(effect, b, ctx) {
       const n = effect.n !== undefined ? evalExpr(effect.n, b, ctx) : 1;
       const pid = effect.side === 'opponent' ? P.opponent(ctx.self_pid) : ctx.self_pid;
       P.draw(b, pid, n);
-      return { continue: true };
+      return { continue: true, n };
     }
 
     case 'BindValue': {
@@ -641,7 +641,7 @@ function resolveEffect(effect, b, ctx) {
         if (readied >= n) break;
         if (e.state === 'spent') { e.state = 'ready'; readied++; }
       }
-      return { continue: true };
+      return { continue: true, n: readied };
     }
 
     // ─── Modifiers ──────────────────────────────────────────────────────────

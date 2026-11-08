@@ -427,6 +427,19 @@ function applyStaticPower(b, pid, unit, ctx) {
   return Math.max(0, Math.floor(power * mult));
 }
 
+// card_id -> its AuraKeyword statics (null if none), built on first use (scripts are final by then)
+const _AURA_KW = new Map();
+function _auraKeywords(cardId) {
+  let v = _AURA_KW.get(cardId);
+  if (v === undefined) {
+    const st = SCRIPTS[cardId]?.statics;
+    const list = st ? st.filter(s => s.kind === 'AuraKeyword') : [];
+    v = list.length ? list : null;
+    _AURA_KW.set(cardId, v);
+  }
+  return v;
+}
+
 function effectiveKeywords(b, pid, unit) {
   const out = new Set((unit._temp_keywords || []).map(k => k.toUpperCase()));
   for (const e of (unit._until_keywords || [])) out.add(e.kw);
@@ -443,19 +456,31 @@ function effectiveKeywords(b, pid, unit) {
     }
   }
 
-  const unitBinding = { ...unit, _pid: pid };
-  for (const { pid: srcPid, ref: srcRef } of _enumerateInPlay(b)) {
-    const srcScript = SCRIPTS[srcRef.card_id];
-    if (!srcScript?.statics) continue;
+  // only in-play cards with an AuraKeyword static can add one (same order as _enumerateInPlay)
+  let unitBinding = null;
+  const aura = (srcPid, srcRef) => {
+    const list = _auraKeywords(srcRef.card_id);
+    if (!list) return;
+    unitBinding ||= { ...unit, _pid: pid };
     const srcCtx = {
       self_pid: srcPid, self_iid: srcRef.iid, self_card_id: srcRef.card_id,
       bindings: {},
     };
-    for (const s of srcScript.statics) {
-      if (s.kind !== 'AuraKeyword') continue;
+    for (const s of list) {
       if (!matchAffects(s.affects, unitBinding, srcPid, b, srcRef.iid)) continue;
       if (s.condition && !evalCondition(s.condition, b, srcCtx)) continue;
       out.add(String(s.keyword).toUpperCase());
+    }
+  };
+  for (const srcPid of ['p1', 'p2']) {
+    for (const u of b[srcPid].zones.field) {
+      aura(srcPid, u);
+      for (const g of (u.equipped_gear || [])) aura(srcPid, g);
+    }
+    for (const l of b[srcPid].zones.legends) {
+      if (l.face !== 'face_up') continue;
+      aura(srcPid, l);
+      for (const g of (l.equipped_gear || [])) aura(srcPid, g);
     }
   }
 

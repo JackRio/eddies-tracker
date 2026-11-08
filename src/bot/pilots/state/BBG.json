@@ -61,46 +61,81 @@
    "WNTC-103": 1
   }
  },
- "challenger": null,
+ "challenger": {
+  "main": {
+   "WNTC-115": 3,
+   "WNTC-091": 2,
+   "WNTC-086": 3,
+   "WNTC-124": 1,
+   "WNTC-117": 1,
+   "WNTC-118": 3,
+   "WNTC-123": 1,
+   "WNTC-132": 1,
+   "WNTC-101": 3,
+   "WNTC-102": 2,
+   "WNTC-139": 3,
+   "WNTC-103": 1,
+   "WNTC-137": 3,
+   "WNTC-131": 3,
+   "WNTC-134": 3,
+   "WNTC-135": 1,
+   "WNTC-133": 3,
+   "WNTC-138": 3
+  },
+  "side": {
+   "WNTC-117": 1,
+   "WNTC-135": 1,
+   "WNTC-091": 1,
+   "WNTC-123": 1,
+   "WNTC-124": 1,
+   "WNTC-132": 1,
+   "WNTC-103": 1
+  },
+  "change": {
+   "kind": "main",
+   "out": "WNTC-135",
+   "in": "WNTC-118"
+  }
+ },
  "tune": {
   "champ": [
    20,
    29
   ],
   "chall": [
-   0,
-   0
+   1,
+   3
   ]
  },
  "first": {
   "RGB": {
    "first": [
-    45,
-    90
+    62,
+    136
    ],
    "second": [
-    42,
-    90
+    49,
+    114
    ]
   },
   "RRG": {
    "first": [
-    43,
-    103
+    58,
+    139
    ],
    "second": [
-    24,
-    107
+    29,
+    151
    ]
   },
   "YYR": {
    "first": [
-    52,
-    91
+    71,
+    129
    ],
    "second": [
-    40,
-    80
+    61,
+    130
    ]
   },
   "deck:coverage-08": {
@@ -125,22 +160,22 @@
   },
   "BBG": {
    "first": [
-    28,
-    50
+    38,
+    69
    ],
    "second": [
-    22,
-    50
+    30,
+    69
    ]
   },
   "pub:RRY ~ Fixers": {
    "first": [
     0,
-    0
+    2
    ],
    "second": [
     2,
-    2
+    4
    ]
   },
   "deck:choombattler-adam-river-viktor-bo3": {
@@ -195,8 +230,8 @@
   },
   "deck:4-yellow-2-red-standard-b": {
    "first": [
-    3,
-    6
+    5,
+    8
    ],
    "second": [
     2,
@@ -205,8 +240,8 @@
   },
   "deck:coverage-06": {
    "first": [
-    2,
-    4
+    6,
+    9
    ],
    "second": [
     1,
@@ -235,22 +270,22 @@
   },
   "deck:choombattler-adam-river-viktor": {
    "first": [
-    4,
-    7
+    5,
+    8
    ],
    "second": [
-    2,
-    3
+    3,
+    4
    ]
   },
   "deck:coverage-09": {
    "first": [
-    4,
-    4
+    5,
+    5
    ],
    "second": [
-    0,
-    1
+    1,
+    2
    ]
   },
   "deck:choombattler-alt-hanako-jackie": {
@@ -265,8 +300,8 @@
   },
   "deck:coverage-21": {
    "first": [
-    2,
-    3
+    4,
+    6
    ],
    "second": [
     1,
@@ -289,8 +324,8 @@
     2
    ],
    "second": [
-    0,
-    0
+    1,
+    3
    ]
   },
   "pub:YYR-RRR": {
@@ -325,18 +360,18 @@
   },
   "pub:Relic Smasher 3.1": {
    "first": [
-    0,
-    0
+    1,
+    1
    ],
    "second": [
-    2,
-    2
+    3,
+    3
    ]
   },
   "deck:choombattler-adam-dexter-padre": {
    "first": [
-    2,
-    2
+    4,
+    5
    ],
    "second": [
     0,
@@ -345,12 +380,12 @@
   },
   "deck:choombattler-dexter-padre-wakako": {
    "first": [
-    0,
-    2
+    2,
+    4
    ],
    "second": [
     0,
-    0
+    1
    ]
   },
   "deck:coverage-13": {
@@ -395,8 +430,8 @@
   },
   "pub:BBG ~ Alt": {
    "first": [
-    3,
-    3
+    5,
+    6
    ],
    "second": [
     1,
@@ -415,12 +450,12 @@
   },
   "deck:coverage-02": {
    "first": [
-    4,
-    4
+    6,
+    6
    ],
    "second": [
     2,
-    2
+    3
    ]
   },
   "deck:coverage-10": {
@@ -475,12 +510,12 @@
   },
   "deck:coverage-01": {
    "first": [
-    3,
-    3
+    4,
+    4
    ],
    "second": [
-    1,
-    1
+    2,
+    3
    ]
   },
   "pub:Placid YYB": {
@@ -496,16 +531,26 @@
   "deck:choombattler-adam-dexter-saburo": {
    "first": [
     2,
-    4
+    6
    ],
    "second": [
-    0,
-    0
+    1,
+    1
    ]
   },
   "deck:coverage-15": {
    "first": [
-    3,
+    7,
+    7
+   ],
+   "second": [
+    1,
+    3
+   ]
+  },
+  "pub:RRB ~ Fixers": {
+   "first": [
+    1,
     3
    ],
    "second": [
@@ -513,24 +558,14 @@
     1
    ]
   },
-  "pub:RRB ~ Fixers": {
-   "first": [
-    0,
-    2
-   ],
-   "second": [
-    0,
-    0
-   ]
-  },
   "pub:Adam's River": {
    "first": [
-    3,
-    6
+    5,
+    9
    ],
    "second": [
-    1,
-    3
+    3,
+    5
    ]
   },
   "deck:coverage-20": {
@@ -545,12 +580,12 @@
   },
   "deck:choombattler-alt-dexter-v": {
    "first": [
-    1,
-    2
+    3,
+    6
    ],
    "second": [
-    0,
-    1
+    1,
+    4
    ]
   },
   "pub:Hanako Control": {
@@ -565,12 +600,12 @@
   },
   "deck:4-yellow-2-red-standard": {
    "first": [
-    1,
-    2
+    2,
+    4
    ],
    "second": [
-    0,
-    1
+    1,
+    2
    ]
   },
   "pub:YYR - TTO": {
@@ -605,12 +640,12 @@
   },
   "deck:choombattler-adam-saburo-v": {
    "first": [
-    1,
-    4
+    2,
+    6
    ],
    "second": [
-    0,
-    3
+    1,
+    4
    ]
   },
   "deck:coverage-12": {
@@ -625,12 +660,12 @@
   },
   "deck:coverage-18": {
    "first": [
-    0,
-    1
+    3,
+    7
    ],
    "second": [
-    0,
-    1
+    2,
+    4
    ]
   },
   "pub:YYR Generalist": {
@@ -650,6 +685,326 @@
    ],
    "second": [
     0,
+    2
+   ]
+  },
+  "net:rry-beat-down-ebff0b94": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:red-green-tempo-288e3144": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:never-fade-away-10b0a654": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "pub:RED Cyberdeck Wins": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:new-deck-e8089ec7": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:new-deck-b35fab74": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:m3tal-ov3r-m3at-fbe3a7bd": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:bbg-control-a11637db": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:yyg-gear-00ed9bf1": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:panam-panam-panam-5b2777de": {
+   "first": [
+    2,
+    4
+   ],
+   "second": [
+    2,
+    2
+   ]
+  },
+  "net:flex-c78da9d1": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:scrapheap-inferno-bb5eea50": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:fixer-reactions-071f7787": {
+   "first": [
+    0,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "deck:coverage-05": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "pub:RED Deck Wins": {
+   "first": [
+    0,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:hack-psy-603ea117": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:braindance-dumpster-dive-b3c9bd95": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:hanako-control-7b1ba5d2": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    3
+   ]
+  },
+  "deck:choombattler-adam-hanako-padre": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:yyr-3d00f9a8": {
+   "first": [
+    2,
+    3
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:rrb-tempo-e8d6b2a6": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:rgb-1-fd282946": {
+   "first": [
+    3,
+    4
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:netrunner-63c163d0": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "deck:coverage-23": {
+   "first": [
+    0,
+    1
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:royce-b41ec595": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:detective-we-have-a-problem-8b8fa644": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:blue-deck-ew-d2fced5d": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:rry-beat-down-surgicalninja-fixed-45ba4dc5": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    0,
+    2
+   ]
+  },
+  "net:trash-to-treasure-gyr-bf623958": {
+   "first": [
+    2,
+    2
+   ],
+   "second": [
+    0,
+    0
+   ]
+  },
+  "net:full-borg-25caa5a6": {
+   "first": [
+    1,
+    2
+   ],
+   "second": [
+    0,
+    1
+   ]
+  },
+  "net:yellow-relic-ee1f8db4": {
+   "first": [
+    1,
+    1
+   ],
+   "second": [
+    1,
+    1
+   ]
+  },
+  "net:the-big-leagues-3dad4ad4": {
+   "first": [
+    0,
+    0
+   ],
+   "second": [
+    2,
     2
    ]
   }
@@ -1692,8 +2047,108 @@
     29
    ],
    "p": 0.06
+  },
+  {
+   "at": 386,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-137",
+    "in": "WNTC-103",
+    "outName": "Three Mouths, One Desire",
+    "inName": "Take Control"
+   },
+   "chall": [
+    12,
+    24
+   ],
+   "champ": [
+    20,
+    29
+   ],
+   "p": 0.12
+  },
+  {
+   "at": 421,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-103",
+    "in": "WNTC-120",
+    "outName": "Take Control",
+    "inName": "Modded Kusanagi"
+   },
+   "chall": [
+    9,
+    24
+   ],
+   "champ": [
+    20,
+    29
+   ],
+   "p": 0.02
+  },
+  {
+   "at": 454,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-091",
+    "in": "WNTC-117",
+    "outName": "Valentino Street Racer",
+    "inName": "Lizzy Wizzy: Delicate Weapon"
+   },
+   "chall": [
+    10,
+    24
+   ],
+   "champ": [
+    20,
+    29
+   ],
+   "p": 0.03
+  },
+  {
+   "at": 493,
+   "verdict": "rejected",
+   "change": {
+    "kind": "side",
+    "out": "WNTC-132",
+    "in": "WNTC-117",
+    "outName": "Floor It",
+    "inName": "Lizzy Wizzy: Delicate Weapon"
+   },
+   "chall": [
+    13,
+    24
+   ],
+   "champ": [
+    20,
+    29
+   ],
+   "p": 0.14
+  },
+  {
+   "at": 522,
+   "verdict": "rejected",
+   "change": {
+    "kind": "main",
+    "out": "WNTC-115",
+    "in": "WNTC-132",
+    "outName": "Jacked-In Voodoo Boy",
+    "inName": "Floor It"
+   },
+   "chall": [
+    12,
+    24
+   ],
+   "champ": [
+    20,
+    29
+   ],
+   "p": 0.09
   }
  ],
  "version": 2,
- "matches": 357
+ "matches": 526
 }

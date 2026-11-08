@@ -1,0 +1,1721 @@
+{
+ "format": "eddies-game-review",
+ "version": 1,
+ "replay": "cyberpunk-tcg-sim-replay-2026-10-10-jackrio-vs-keg-594629c1.json",
+ "matchId": "594629c1-e4cb-4abf-997e-4eb5cb5d515f",
+ "me": "player1",
+ "you": "JackRio",
+ "rival": "Keg",
+ "result": {
+  "loserId": "player1",
+  "reason": "Keg had 7 Gig dice when overtime would begin.",
+  "winnerId": "player2"
+ },
+ "decks": {
+  "you": {
+   "source": "all 43 cards seen in the game (exact)",
+   "legends": [
+    "V: Streetkid",
+    "Dexter DeShawn: Off the Grid",
+    "Evelyn Parker: Beautiful Enigma"
+   ]
+  },
+  "rival": {
+   "source": "17 cards seen in the game, rest from published deck \"Against BBG ~ RareTotem\"",
+   "legends": [
+    "V: Streetkid",
+    "Adam Smasher: Ender of Legends",
+    "River Ward: Detective on the Hunt"
+   ]
+  }
+ },
+ "bot": "strong:vnet=src/bot/value-net-r2.json:pnet=src/bot/policy-net-r2.json:prior=mix",
+ "seconds": 19,
+ "summary": {
+  "counts": {
+   "great": 0,
+   "good": 17,
+   "okay": 3,
+   "misplay": 2,
+   "mistake": 2,
+   "blunder": 1
+  },
+  "moves": 25,
+  "avgLoss": 2.8,
+  "accuracy": 70
+ },
+ "turns": [
+  {
+   "turn": 1,
+   "stepA": 4,
+   "moves": [
+    {
+     "from": 4,
+     "to": 7,
+     "end": false,
+     "log": [
+      "JackRio played Industrial Assembly by spending 1 Legend.",
+      "JackRio used Industrial Assembly to increase JackRio's d12 from 5 to 9.",
+      "JackRio controlled a Gig with 8+ value and drew Meredith Stout — Stone Cold Corpo."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Industrial Assembly\n  picks own d12 (5)\n  amount → 4",
+      "p": 24.8
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 24.2,
+       "yours": false
+      },
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 23.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 23.3,
+       "yours": false
+      },
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 22.4,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 15.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 7,
+     "to": 8,
+     "end": false,
+     "log": [
+      "JackRio sold Carnage at the Colosseum into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Carnage at the Colosseum",
+      "p": 20.3
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.2,
+     "options": [
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 20.3,
+       "yours": true
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 18.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 11.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 8,
+     "to": 10,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Eddie. V — Streetkid was revealed.",
+      "JackRio triggered V Streetkid, discarded 3 cards from the top of the deck, and may recover a Braindance Program from trash.",
+      "JackRio returned Industrial Assembly from trash to hand. Recovered with V Streetkid."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 17.9
+     },
+     "best": {
+      "text": "Call a Legend - random of 3 face-down",
+      "p": 21.8,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "71dd29f6"
+       },
+       {
+        "step": "call_legend",
+        "iid": "cdfdb099"
+       }
+      ]
+     },
+     "loss": 3.8,
+     "se": 4,
+     "options": [
+      {
+       "text": "Call a Legend - random of 3 face-down",
+       "p": 21.8,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 13.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 1,
+        "units": 0,
+        "rivalUnits": 0.875,
+        "hand": 8
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 1,
+        "units": 0,
+        "rivalUnits": 0.875,
+        "hand": 7.666666666666667
+       }
+      },
+      "better": "Call a Legend - random of 3 face-down"
+     }
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 11
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 11,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 3,
+   "stepA": 18,
+   "moves": [
+    {
+     "from": 18,
+     "to": 19,
+     "end": false,
+     "log": [
+      "JackRio sold NetWatch Netdriver into Eddies."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell NetWatch Netdriver",
+      "p": 4.7
+     },
+     "best": {
+      "text": "Play Unit Meredith Stout",
+      "p": 11.5,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "71dd29f6"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "ca481948"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "49e0b545"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "cdfdb099"
+       },
+       {
+        "step": "play_card",
+        "iid": "731efacc"
+       }
+      ]
+     },
+     "loss": 6.8,
+     "se": 1.5,
+     "options": [
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 11.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 11.5,
+       "yours": false
+      },
+      {
+       "text": "Sell NetWatch Netdriver",
+       "p": 4.7,
+       "yours": true
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 4,
+       "yours": false
+      },
+      {
+       "text": "Sell Industrial Assembly",
+       "p": 3.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "Your move sells NetWatch Netdriver.",
+       "The better move plays Meredith Stout.",
+       "The Rival has 2 Gigs by your next turn on average, instead of 3.",
+       "You hold 3 Gigs at your next turn on average, instead of 2.",
+       "You start your next turn with 7.8 cards in hand, instead of 7."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2,
+        "rivalGigs": 3,
+        "units": 1,
+        "rivalUnits": 1.875,
+        "hand": 7
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 2.0416666666666665,
+        "units": 1,
+        "rivalUnits": 1.875,
+        "hand": 7.75
+       }
+      },
+      "better": "Play Unit Meredith Stout"
+     }
+    },
+    {
+     "from": 19,
+     "to": 22,
+     "end": false,
+     "log": [
+      "JackRio played Industrial Assembly by spending 1 Eddie.",
+      "JackRio used Industrial Assembly to increase JackRio's d10 from 2 to 6.",
+      "JackRio controlled a Gig with 8+ value and drew Animals Wrecker."
+     ],
+     "grade": "misplay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Industrial Assembly\n  picks own d10 (2)\n  amount → 4",
+      "p": 7.5
+     },
+     "best": {
+      "text": "Play Unit Meredith Stout",
+      "p": 15.2,
+      "seq": [
+       {
+        "step": "tap_resource",
+        "iid": "71dd29f6"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "73d5814e"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "ca481948"
+       },
+       {
+        "step": "tap_resource",
+        "iid": "49e0b545"
+       },
+       {
+        "step": "play_card",
+        "iid": "6ed9812c"
+       }
+      ]
+     },
+     "loss": 7.7,
+     "se": 1.3,
+     "options": [
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 15.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 15.2,
+       "yours": false
+      },
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 7.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 5.1,
+       "yours": false
+      },
+      {
+       "text": "V goes Solo",
+       "p": 4.6,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": null,
+      "reasons": [
+       "The better move plays Meredith Stout."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 2.0416666666666665,
+        "units": 1,
+        "rivalUnits": 1.7916666666666667,
+        "hand": 7.041666666666667
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 2.0416666666666665,
+        "units": 1,
+        "rivalUnits": 1.7916666666666667,
+        "hand": 7.5
+       }
+      },
+      "better": "Play Unit Meredith Stout"
+     }
+    },
+    {
+     "from": 22,
+     "to": 25,
+     "end": false,
+     "log": [
+      "JackRio played Bonnie and Clyde by spending 1 Eddie and 2 Legends.",
+      "Augmented Negotiators was defeated. Bonnie and Clyde's PLAY effect defeated it.",
+      "JackRio used Bonnie and Clyde to defeat Augmented Negotiators."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Program Bonnie and Clyde",
+      "p": 5.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Program Bonnie and Clyde",
+       "p": 5.5,
+       "yours": true
+      },
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 5.5,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 4.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 4.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 25,
+     "to": 27,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Dexter DeShawn — Off the Grid was revealed.",
+      "JackRio drew Floor It with Dexter DeShawn — Off the Grid."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call a Legend - random of 2 face-down\n  skip ()",
+      "p": 6.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.9,
+     "options": [
+      {
+       "text": "Call a Legend - random of 2 face-down",
+       "p": 6.5,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 3.6,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 27,
+     "to": 28,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 10.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 10.6,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 5,
+   "stepA": 33,
+   "moves": [
+    {
+     "from": 33,
+     "to": 34,
+     "end": false,
+     "log": [
+      "JackRio sold Floor It into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Floor It",
+      "p": 1.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "Sell Floor It",
+       "p": 1.9,
+       "yours": true
+      },
+      {
+       "text": "V goes Solo",
+       "p": 0.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 0.2,
+       "yours": false
+      },
+      {
+       "text": "Call Evelyn Parker - last face-down Legend",
+       "p": 0.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 34,
+     "to": 35,
+     "end": false,
+     "log": [
+      "JackRio played Animals Wrecker by spending 3 Eddies and 3 Legends."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Animals Wrecker",
+      "p": 4.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 4.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 4.6,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Call Evelyn Parker - last face-down Legend",
+       "p": 0.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 35,
+     "to": 36,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 2.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 2.1,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 7,
+   "stepA": 45,
+   "moves": [
+    {
+     "from": 45,
+     "to": 46,
+     "end": false,
+     "log": [
+      "JackRio sold Bonnie and Clyde into Eddies."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Bonnie and Clyde",
+      "p": 13.9
+     },
+     "best": {
+      "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+      "p": 25.9,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "9ef3133c",
+        "target": {
+         "kind": "unit",
+         "iid": "ab2dcf0f"
+        }
+       }
+      ]
+     },
+     "loss": 12,
+     "se": 1.7,
+     "options": [
+      {
+       "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+       "p": 25.9,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 13.9,
+       "yours": false
+      },
+      {
+       "text": "Sell Bonnie and Clyde",
+       "p": 13.9,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 13.9,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.2,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Animals Wrecker (10) beats Rockn' Rockerboy (8).",
+       "Your move sells Bonnie and Clyde.",
+       "The better move removes the Rival's Rockn' Rockerboy.",
+       "The Rival is down to 2.1 Units, instead of 3.1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 5,
+        "units": 1.9583333333333333,
+        "rivalUnits": 3.125,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 6,
+        "units": 1.9583333333333333,
+        "rivalUnits": 2.125,
+        "hand": 6
+       }
+      },
+      "better": "Attack Rockn' Rockerboy with Animals Wrecker"
+     }
+    },
+    {
+     "from": 46,
+     "to": 47,
+     "end": false,
+     "log": [
+      "JackRio played Meredith Stout — Stone Cold Corpo by spending 4 Eddies."
+     ],
+     "grade": "blunder",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Meredith Stout",
+      "p": 1.4
+     },
+     "best": {
+      "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+      "p": 22.5,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "9ef3133c",
+        "target": {
+         "kind": "unit",
+         "iid": "ab2dcf0f"
+        }
+       }
+      ]
+     },
+     "loss": 21.1,
+     "se": 3.9,
+     "options": [
+      {
+       "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+       "p": 22.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 11.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 11.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.7,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Animals Wrecker (10) beats Rockn' Rockerboy (8).",
+       "Your move plays Meredith Stout.",
+       "The better move removes the Rival's Rockn' Rockerboy.",
+       "The Rival is down to 2.2 Units, instead of 3.2."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 5,
+        "units": 1.9166666666666667,
+        "rivalUnits": 3.1666666666666665,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3,
+        "rivalGigs": 6,
+        "units": 1.9583333333333333,
+        "rivalUnits": 2.2083333333333335,
+        "hand": 6
+       }
+      },
+      "better": "Attack Rockn' Rockerboy with Animals Wrecker"
+     }
+    },
+    {
+     "from": 47,
+     "to": 48,
+     "end": false,
+     "log": [
+      "JackRio called a Legend by spending 1 Legend. Evelyn Parker — Beautiful Enigma was revealed."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Call Evelyn Parker - last face-down Legend",
+      "p": 1.5
+     },
+     "best": {
+      "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+      "p": 4.4,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "9ef3133c",
+        "target": {
+         "kind": "unit",
+         "iid": "ab2dcf0f"
+        }
+       }
+      ]
+     },
+     "loss": 2.9,
+     "se": 0.6,
+     "options": [
+      {
+       "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+       "p": 4.4,
+       "yours": false
+      },
+      {
+       "text": "Call Evelyn Parker - last face-down Legend",
+       "p": 1.5,
+       "yours": true
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 1.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 1.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.3,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Animals Wrecker (10) beats Rockn' Rockerboy (8).",
+       "Your move calls Evelyn Parker.",
+       "The better move removes the Rival's Rockn' Rockerboy.",
+       "The Rival is down to 1.9 Units, instead of 2.9."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4,
+        "rivalGigs": 5,
+        "units": 1.875,
+        "rivalUnits": 2.875,
+        "hand": 6
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 2.9583333333333335,
+        "rivalGigs": 6.041666666666667,
+        "units": 1.875,
+        "rivalUnits": 1.875,
+        "hand": 6
+       }
+      },
+      "better": "Attack Rockn' Rockerboy with Animals Wrecker"
+     }
+    },
+    {
+     "from": 48,
+     "to": 51,
+     "end": false,
+     "log": [
+      "JackRio chose Animals Wrecker to attack and must lock a legal target before spending it.",
+      "JackRio declared Animals Wrecker against Rockn' Rockerboy. Keg must respond after attack effects resolve.",
+      "Animals Wrecker (10) fought Rockn' Rockerboy (8) and won.",
+      "Rockn' Rockerboy was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack Rockn' Rockerboy with Animals Wrecker\n  Don't block / don't respond",
+      "p": 5.7
+     },
+     "best": null,
+     "loss": 0,
+     "se": 1,
+     "options": [
+      {
+       "text": "Attack Rockn' Rockerboy with Animals Wrecker",
+       "p": 5.7,
+       "yours": true
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 1.9,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 1.9,
+       "yours": false
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 1.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.4,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 51,
+     "to": 53,
+     "end": false,
+     "log": [
+      "Evelyn Parker — Beautiful Enigma marked Heywood Ripperdoc, which must attack on its next turn if it can."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use Evelyn Parker",
+      "p": 6.6
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use Evelyn Parker",
+       "p": 6.6,
+       "yours": true
+      },
+      {
+       "text": "End turn",
+       "p": 6.6,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 6.5,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 53,
+     "to": 54,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 8.5
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 8.5,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 9,
+   "stepA": 72,
+   "moves": [
+    {
+     "from": 72,
+     "to": 73,
+     "end": false,
+     "log": [
+      "JackRio sold Satori — Sword of Saburo into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Satori",
+      "p": 14.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Sell Satori",
+       "p": 14.1,
+       "yours": true
+      },
+      {
+       "text": "Attack Heywood Ripperdoc with Animals Wrecker",
+       "p": 14.1,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 13.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 11.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.6,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.3,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 73,
+     "to": 74,
+     "end": false,
+     "log": [
+      "JackRio played Modded Kusanagi by spending 5 Eddies and 1 Legend."
+     ],
+     "grade": "mistake",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Modded Kusanagi",
+      "p": 1.1
+     },
+     "best": {
+      "text": "Attack Heywood Ripperdoc with Animals Wrecker",
+      "p": 12.2,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "9ef3133c",
+        "target": {
+         "kind": "unit",
+         "iid": "7cddc9a4"
+        }
+       }
+      ]
+     },
+     "loss": 11.1,
+     "se": 1.9,
+     "options": [
+      {
+       "text": "Attack Heywood Ripperdoc with Animals Wrecker",
+       "p": 12.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 12.2,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 10.7,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 2.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.4,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 1.1,
+       "yours": true
+      }
+     ],
+     "why": {
+      "headline": "Attack first.",
+      "reasons": [
+       "Animals Wrecker (10) beats Heywood Ripperdoc (8).",
+       "Your move plays Modded Kusanagi.",
+       "The better move removes the Rival's Heywood Ripperdoc.",
+       "You keep 2 Units through their turn on average, instead of 1."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.833333333333333,
+        "rivalGigs": 6.166666666666667,
+        "units": 1,
+        "rivalUnits": 2.4166666666666665,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 3.8333333333333335,
+        "rivalGigs": 7.166666666666667,
+        "units": 2,
+        "rivalUnits": 2.4166666666666665,
+        "hand": 4
+       }
+      },
+      "better": "Attack Heywood Ripperdoc with Animals Wrecker"
+     }
+    },
+    {
+     "from": 74,
+     "to": 78,
+     "end": false,
+     "log": [
+      "JackRio chose Modded Kusanagi to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Modded Kusanagi. Keg must respond after attack effects resolve.",
+      "Modded Kusanagi made a Gig attack on Keg and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from Keg.",
+      "JackRio stole d10 (6) from Keg. JackRio now has 5 Gig dice."
+     ],
+     "grade": "okay",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Modded Kusanagi\n  Don't block / don't respond\n  Steal opponent's d10 (6)",
+      "p": 0.5
+     },
+     "best": {
+      "text": "Attack Heywood Ripperdoc with Modded Kusanagi",
+      "p": 5.1,
+      "seq": [
+       {
+        "step": "declare_attack",
+        "attacker_iid": "1f0f746c",
+        "target": {
+         "kind": "unit",
+         "iid": "7cddc9a4"
+        }
+       }
+      ]
+     },
+     "loss": 4.6,
+     "se": 1.1,
+     "options": [
+      {
+       "text": "Attack Heywood Ripperdoc with Modded Kusanagi",
+       "p": 5.1,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Attack Heywood Ripperdoc with Animals Wrecker",
+       "p": 0.5,
+       "yours": false
+      },
+      {
+       "text": "Attack opponent's Gigs with Modded Kusanagi",
+       "p": 0.5,
+       "yours": true
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0.5,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.1,
+       "yours": false
+      }
+     ],
+     "why": {
+      "headline": "Clear the Unit before going for Gigs.",
+      "reasons": [
+       "Modded Kusanagi (8) beats Heywood Ripperdoc (8).",
+       "The Rival's Blocker (Augmented Negotiators 2) loses the fight to Modded Kusanagi (8).",
+       "Your move takes 1 Gig.",
+       "The better move removes the Rival's Heywood Ripperdoc and loses your Modded Kusanagi.",
+       "The Rival has 5 Gigs by your next turn on average, instead of 6.",
+       "You hold 6 Gigs at your next turn on average, instead of 5."
+      ],
+      "next": {
+       "you": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 4.958333333333333,
+        "rivalGigs": 6.041666666666667,
+        "units": 1,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 5
+       },
+       "best": {
+        "n": 24,
+        "lost": 0,
+        "won": 0,
+        "gigs": 5.958333333333333,
+        "rivalGigs": 5.041666666666667,
+        "units": 1,
+        "rivalUnits": 2.7083333333333335,
+        "hand": 5
+       }
+      },
+      "better": "Attack Heywood Ripperdoc with Modded Kusanagi"
+     }
+    },
+    {
+     "from": 78,
+     "to": 83,
+     "end": false,
+     "log": [
+      "JackRio chose Animals Wrecker to attack and must lock a legal target before spending it.",
+      "JackRio declared Animals Wrecker against Heywood Ripperdoc. Keg must respond after attack effects resolve.",
+      "JackRio discarded Modded Kusanagi. Discarded for Augmented Negotiators.",
+      "Animals Wrecker (10) fought Augmented Negotiators (2) and won.",
+      "Augmented Negotiators was defeated. JackRio's attack won the fight."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Attack opponent's Gigs with Animals Wrecker\n  Block with Augmented Negotiators\n  picks Modded Kusanagi\n  Don't block / don't respond",
+      "p": 0.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Animals Wrecker",
+       "p": 1.6,
+       "yours": true
+      },
+      {
+       "text": "Attack Heywood Ripperdoc with Animals Wrecker",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.2,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 83,
+     "to": 86,
+     "end": false,
+     "log": [
+      "JackRio used Dexter DeShawn — Off the Grid to increase JackRio's d6 from 1 to 3."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use Dexter DeShawn\n  picks own d6 (1)\n  amount → 2",
+      "p": 0.9
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0.9,
+       "yours": false
+      },
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 0.8,
+       "yours": true
+      }
+     ]
+    },
+    {
+     "from": 86,
+     "to": 87,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 1,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 11,
+   "stepA": 96,
+   "moves": [
+    {
+     "from": 96,
+     "to": 97,
+     "end": false,
+     "log": [
+      "JackRio played Animals Wrecker by spending 5 Eddies and 1 Legend."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Animals Wrecker",
+      "p": 2.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0.3,
+     "options": [
+      {
+       "text": "Play Unit Animals Wrecker",
+       "p": 2.2,
+       "yours": true
+      },
+      {
+       "text": "Play Unit Minotaur",
+       "p": 0.3,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 0.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0.2,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 97,
+     "to": 100,
+     "end": false,
+     "log": [
+      "JackRio used Dexter DeShawn — Off the Grid to increase JackRio's d10 from 6 to 8."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Use Dexter DeShawn\n  picks opponent's d10 (6)\n  amount → 2",
+      "p": 2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use Dexter DeShawn",
+       "p": 2,
+       "yours": true
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 1.9,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 1.9,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 100,
+     "to": 101,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": true,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 2.2
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 2.2,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "turn": 13,
+   "stepA": 110,
+   "moves": [
+    {
+     "from": 110,
+     "to": 111,
+     "end": false,
+     "log": [
+      "JackRio played Modded Kusanagi by spending 5 Eddies and 1 Legend."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Play Unit Modded Kusanagi",
+      "p": 0
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "V goes Solo",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Modded Kusanagi",
+       "p": 0,
+       "yours": true
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Minotaur",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Chrome Fang",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Play Unit Meredith Stout",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 111,
+     "to": 116,
+     "end": false,
+     "log": [
+      "JackRio chose Modded Kusanagi to attack and must lock a legal target before spending it.",
+      "JackRio declared a Gig attack with Modded Kusanagi. Keg must respond after attack effects resolve.",
+      "Keg called a Legend by spending 1 Legend. River Ward — Detective on the Hunt was revealed.",
+      "Modded Kusanagi made a Gig attack on Keg and will steal 1 Gig if the defender cannot stop it.",
+      "JackRio must choose 1 Gig to steal from Keg.",
+      "JackRio stole d20 (15) from Keg. JackRio now has 6 Gig dice."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": null,
+     "you": {
+      "text": null,
+      "p": 0.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 3,
+     "options": [
+      {
+       "text": "Attack opponent's Gigs with Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "Attack Rockn' Rockerboy with Modded Kusanagi",
+       "p": 0,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 116,
+     "to": 117,
+     "end": false,
+     "log": [
+      "JackRio sold Carnage at the Colosseum into Eddies."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "Sell Carnage at the Colosseum",
+      "p": 0.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "End turn",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "Sell Carnage at the Colosseum",
+       "p": 0.1,
+       "yours": true
+      },
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0.1,
+       "yours": false
+      }
+     ]
+    },
+    {
+     "from": 117,
+     "to": 118,
+     "end": true,
+     "log": [
+      "Ended the turn."
+     ],
+     "grade": "good",
+     "forced": false,
+     "matched": "exact",
+     "you": {
+      "text": "End turn",
+      "p": 0.1
+     },
+     "best": null,
+     "loss": 0,
+     "se": 0,
+     "options": [
+      {
+       "text": "Use Evelyn Parker",
+       "p": 0.1,
+       "yours": false
+      },
+      {
+       "text": "End turn",
+       "p": 0.1,
+       "yours": true
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "errors": []
+}
