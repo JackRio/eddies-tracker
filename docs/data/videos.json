@@ -78,8 +78,32 @@
   ],
   "videos": [
     {
+      "id": "VmpwRpdYMAw",
+      "title": "Cyberpunk TCG Night City Showdowns Are Here This Month!!",
+      "published": "2026-11-11T13:13:05+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
+      "id": "5Vu5Ex8pm6k",
+      "title": "We Analyze our SEMI-FINALS of the Cyberpunk TCG Warsaw Invitational",
+      "published": "2026-11-11T13:06:32+00:00",
+      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
+    },
+    {
+      "id": "GnuJk-RFv8o",
+      "title": "Cyberpunk TCG NA Creator Invitational THE DECK 🔥 AND GOODIES! 👀",
+      "published": "2026-11-11T02:11:51+00:00",
+      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
+    },
+    {
+      "id": "1T8zDbksOAw",
+      "title": "Win your Night City Showdown with these 3 decks! - Cyberpunk TCG",
+      "published": "2026-11-10T15:01:29+00:00",
+      "channelId": "UCGRtpjtxkby158dbitlcUkg"
+    },
+    {
       "id": "DastMCxSBbE",
-      "title": "Time to Throw Down At the CTCG Showdown!!! Cyberpunk TCG Showdowns.",
+      "title": "Time to Throw Down At the CyberpunkTCG Night City Showdown!!",
       "published": "2026-11-09T19:35:57+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
@@ -480,12 +504,6 @@
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
-      "id": "iTkN9vYAZnc",
-      "title": "OK This is REALLY Fun! 🟡🟡🔴 SMASHER! A Sweet Cyberpunk TCG Deck!",
-      "published": "2026-10-16T12:00:05+00:00",
-      "channelId": "UCOIo-OI9lHRQ89lX3yfzDhg"
-    },
-    {
       "id": "YAGv0KRC_gc",
       "title": "Streets of NC - CyberChoom TCG",
       "published": "2026-10-15T15:00:16+00:00",
@@ -502,18 +520,6 @@
       "title": "Johnny's Requiem - 1 | Cyberpunk TCG Decklist",
       "published": "2026-10-15T01:00:17+00:00",
       "channelId": "UCDS55f82q_js397_UKs6Izg"
-    },
-    {
-      "id": "VrpdMqqeTaw",
-      "title": "The BEST RED Cards in Cyberpunk TCG",
-      "published": "2026-10-13T15:18:54+00:00",
-      "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "-HrvdH85yG0",
-      "title": "programs, PrOgRAMs, PROGRAMS!! Our Cyberpunk TCG Final Programs Tier List",
-      "published": "2026-10-12T11:30:25+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
     },
     {
       "id": "8J4gdFDty7A",
@@ -760,12 +766,6 @@
       "title": "Rating Every GREEN & BLUE Card in Cyberpunk TCG",
       "published": "2026-07-15T13:22:05+00:00",
       "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
-    },
-    {
-      "id": "_KyL383QIY8",
-      "title": "We Rated Every RED & YELLOW Card in Cyberpunk TCG",
-      "published": "2026-07-12T13:23:11+00:00",
-      "channelId": "UCCwFBYm8CZGUjEGvq2_zz6Q"
     }
   ],
   "checked": [
@@ -882,10 +882,6 @@
       "short": false
     },
     {
-      "id": "_KyL383QIY8",
-      "short": false
-    },
-    {
       "id": "zE_WQl5m2mg",
       "short": false
     },
@@ -934,10 +930,6 @@
       "short": false
     },
     {
-      "id": "-HrvdH85yG0",
-      "short": false
-    },
-    {
       "id": "FbPSbFZ6WHE",
       "short": false
     },
@@ -950,15 +942,7 @@
       "short": false
     },
     {
-      "id": "VrpdMqqeTaw",
-      "short": false
-    },
-    {
       "id": "YAGv0KRC_gc",
-      "short": false
-    },
-    {
-      "id": "iTkN9vYAZnc",
       "short": false
     },
     {
@@ -1228,7 +1212,23 @@
     {
       "id": "DastMCxSBbE",
       "short": false
+    },
+    {
+      "id": "GnuJk-RFv8o",
+      "short": false
+    },
+    {
+      "id": "1T8zDbksOAw",
+      "short": false
+    },
+    {
+      "id": "VmpwRpdYMAw",
+      "short": false
+    },
+    {
+      "id": "5Vu5Ex8pm6k",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-10T14:59:11.866Z"
+  "updatedAt": "2026-11-11T14:30:13.976Z"
 }
