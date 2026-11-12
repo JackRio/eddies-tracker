@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T23:16:26.019Z",
+  "generatedAt": "2026-11-12T23:18:44.745Z",
   "pricesAsOf": "2026-11-12T02:51:41+0100",
   "cards": [
     {
@@ -73,6 +73,72 @@
       "price": 30,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
+    },
+    {
+      "id": "f8098004-7b14-4d5a-8398-85c5660e1d8f",
+      "name": "NetWatch Netdriver",
+      "subname": null,
+      "displayName": "NetWatch Netdriver",
+      "color": "Blue",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "017",
+      "qty": 1
+    },
+    {
+      "id": "d16f9b63-cc98-4b88-981e-258d1940aa04",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "color": "Yellow",
+      "cardType": "Gear",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "006",
+      "qty": 1,
+      "price": 0.1,
+      "priceGuess": true,
+      "cmName": "Mandibular Upgrade"
+    },
+    {
+      "id": "f997c534-5208-4c37-8aff-4f6587e606c2",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "007",
+      "qty": 1
+    },
+    {
+      "id": "b460b92c-c0fd-43ed-84db-8615032e47f4",
+      "name": "V",
+      "subname": "Roamer of the Badlands",
+      "displayName": "V: Roamer of the Badlands",
+      "color": "Red",
+      "cardType": "Unit",
+      "rarity": "Epic",
+      "set": {
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
+      },
+      "collectorNumber": "β020",
+      "qty": 1,
+      "price": 1.4,
+      "priceGuess": false,
+      "cmName": "V - Roamer of the Badlands"
     }
   ]
 }

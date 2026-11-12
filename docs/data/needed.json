@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T23:16:25.825Z",
+  "generatedAt": "2026-11-12T23:18:44.577Z",
   "pricesAsOf": "2026-11-12T02:51:41+0100",
   "main": [
     {
@@ -6152,8 +6152,8 @@
       "price": 0.1,
       "priceGuess": true,
       "cmName": "Mandibular Upgrade",
-      "have": 0,
-      "needed": 3
+      "have": 1,
+      "needed": 2
     },
     {
       "id": "34dd1e1b-5022-4858-91bc-1243ea7f4615",
@@ -6980,8 +6980,8 @@
       },
       "collectorNumber": "007",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 1,
+      "needed": 2
     },
     {
       "id": "86bc6f96-41d3-4639-b75b-25ae58202b3d",
@@ -13322,8 +13322,8 @@
       },
       "collectorNumber": "017",
       "cap": 3,
-      "have": 0,
-      "needed": 3
+      "have": 1,
+      "needed": 2
     },
     {
       "id": "fbe9274d-e4c4-415f-9914-0fbd5985c0b3",
