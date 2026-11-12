@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T09:26:28.469Z",
-  "pricesAsOf": "2026-11-02T02:50:02+0100",
+  "generatedAt": "2026-11-12T22:52:17.687Z",
+  "pricesAsOf": "2026-11-12T02:51:41+0100",
   "cards": [
     {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
@@ -16,7 +16,7 @@
       },
       "collectorNumber": "β164",
       "qty": 1,
-      "price": 11.5,
+      "price": 10,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian"
     },
@@ -34,7 +34,7 @@
       },
       "collectorNumber": "β147",
       "qty": 1,
-      "price": 59.98,
+      "price": 58,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán"
     },
@@ -52,7 +52,7 @@
       },
       "collectorNumber": "β004",
       "qty": 1,
-      "price": 25,
+      "price": 23.99,
       "priceGuess": false,
       "cmName": "Saburo Arasaka - Stubborn Patriarch"
     },
@@ -70,7 +70,7 @@
       },
       "collectorNumber": "β005",
       "qty": 1,
-      "price": 33,
+      "price": 29.99,
       "priceGuess": false,
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
@@ -88,7 +88,7 @@
       },
       "collectorNumber": "160",
       "qty": 1,
-      "price": 32,
+      "price": 30,
       "priceGuess": false,
       "cmName": "Adam Smasher - Metal Over Meat"
     }

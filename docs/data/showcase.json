@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T09:26:28.480Z",
+  "generatedAt": "2026-11-12T22:52:17.701Z",
   "cards": [
     {
       "id": "cb12d8c4-64b1-4e53-898e-8fd46aeac6bf",
@@ -10,19 +10,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Welcome to Night City",
-      "price": 1100,
-      "priceGuess": false
-    },
-    {
-      "id": "307de3c6-6bbd-4e44-8dde-07f4fac45db0",
-      "name": "Sasha Yakovleva",
-      "subname": "Won't Let You Down",
-      "displayName": "Sasha Yakovleva: Won't Let You Down",
-      "rarity": "Iconic Secret",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Welcome to Night City",
-      "price": 1100,
+      "price": 1150,
       "priceGuess": false
     },
     {
@@ -38,15 +26,15 @@
       "priceGuess": true
     },
     {
-      "id": "fe26a4ff-1076-4371-8ab5-3f31d0319a3f",
-      "name": "Judy Álvarez",
-      "subname": "Nothing to Doubt",
-      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "id": "307de3c6-6bbd-4e44-8dde-07f4fac45db0",
+      "name": "Sasha Yakovleva",
+      "subname": "Won't Let You Down",
+      "displayName": "Sasha Yakovleva: Won't Let You Down",
       "rarity": "Iconic Secret",
-      "cardType": "Unit",
+      "cardType": "Legend",
       "color": "Blue",
       "set": "Welcome to Night City",
-      "price": 930,
+      "price": 924.95,
       "priceGuess": false
     },
     {
@@ -58,7 +46,19 @@
       "cardType": "Unit",
       "color": "Green",
       "set": "Welcome to Night City",
-      "price": 850,
+      "price": 779.99,
+      "priceGuess": false
+    },
+    {
+      "id": "fe26a4ff-1076-4371-8ab5-3f31d0319a3f",
+      "name": "Judy Álvarez",
+      "subname": "Nothing to Doubt",
+      "displayName": "Judy Álvarez: Nothing to Doubt",
+      "rarity": "Iconic Secret",
+      "cardType": "Unit",
+      "color": "Blue",
+      "set": "Welcome to Night City",
+      "price": 750,
       "priceGuess": false
     },
     {
@@ -146,18 +146,6 @@
       "priceGuess": true
     },
     {
-      "id": "17517c74-9e61-423a-9d65-c7f4b56af29a",
-      "name": "Misty Olszewski",
-      "subname": "Mender of Broken Spirits",
-      "displayName": "Misty Olszewski: Mender of Broken Spirits",
-      "rarity": "Nova Rare",
-      "cardType": "Unit",
-      "color": "Blue",
-      "set": "Set 1 Promos",
-      "price": 145,
-      "priceGuess": false
-    },
-    {
       "id": "71a35836-e604-4d98-ab56-58bfb4581033",
       "name": "Rebecca",
       "subname": "Having a Moment",
@@ -166,7 +154,7 @@
       "cardType": "Legend",
       "color": "Red",
       "set": "Set 1 Promos",
-      "price": 119,
+      "price": 98.99,
       "priceGuess": true
     },
     {
@@ -182,14 +170,14 @@
       "priceGuess": true
     },
     {
-      "id": "e4e17d32-3ec4-4c74-927c-fd0911b86e72",
-      "name": "Jackie Welles",
-      "subname": "Pour One Out For Me",
-      "displayName": "Jackie Welles: Pour One Out For Me",
+      "id": "17517c74-9e61-423a-9d65-c7f4b56af29a",
+      "name": "Misty Olszewski",
+      "subname": "Mender of Broken Spirits",
+      "displayName": "Misty Olszewski: Mender of Broken Spirits",
       "rarity": "Nova Rare",
-      "cardType": "Legend",
+      "cardType": "Unit",
       "color": "Blue",
-      "set": "Box Toppers",
+      "set": "Set 1 Promos",
       "price": 33,
       "priceGuess": false
     },
@@ -206,6 +194,18 @@
       "priceGuess": true
     },
     {
+      "id": "e4e17d32-3ec4-4c74-927c-fd0911b86e72",
+      "name": "Jackie Welles",
+      "subname": "Pour One Out For Me",
+      "displayName": "Jackie Welles: Pour One Out For Me",
+      "rarity": "Nova Rare",
+      "cardType": "Legend",
+      "color": "Blue",
+      "set": "Box Toppers",
+      "price": 29.99,
+      "priceGuess": false
+    },
+    {
       "id": "f509ebd8-c8b7-4a22-8922-2d71c6df0b6f",
       "name": "V",
       "subname": "Corporate Exile",
@@ -214,7 +214,7 @@
       "cardType": "Legend",
       "color": "Blue",
       "set": "Box Toppers",
-      "price": 27,
+      "price": 25,
       "priceGuess": false
     },
     {
@@ -226,7 +226,7 @@
       "cardType": "Legend",
       "color": "Green",
       "set": "Box Toppers",
-      "price": 25,
+      "price": 23.99,
       "priceGuess": false
     },
     {
