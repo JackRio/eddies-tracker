@@ -78,6 +78,18 @@
   ],
   "videos": [
     {
+      "id": "nKYtUd6iGnY",
+      "title": "King of One Twenty- 5 | Cyberpunk TCG Decklist",
+      "published": "2026-11-12T04:30:10+00:00",
+      "channelId": "UCDS55f82q_js397_UKs6Izg"
+    },
+    {
+      "id": "QGRQVqo0TSU",
+      "title": "Let's Talk about BBG Vs YYR!",
+      "published": "2026-11-11T20:00:36+00:00",
+      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
+    },
+    {
       "id": "VmpwRpdYMAw",
       "title": "Cyberpunk TCG Night City Showdowns Are Here This Month!!",
       "published": "2026-11-11T13:13:05+00:00",
@@ -474,12 +486,6 @@
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
     },
     {
-      "id": "4UGvCdLgZDY",
-      "title": "What's Next?? Chrome Cardboard Channel Update",
-      "published": "2026-10-19T10:00:09+00:00",
-      "channelId": "UCnWc9kCmS-YwJE58KLpSXkg"
-    },
-    {
       "id": "FbPSbFZ6WHE",
       "title": "ONE CASE - 16 BOXES - of Haikyu!! Vobaca Break TCG!! - Box Opening Livestream",
       "published": "2026-10-18T17:38:02+00:00",
@@ -514,12 +520,6 @@
       "title": "Gear over Gonks? The BEST Yellow cards in Cyberpunk TCG  #cyberpunk  #cyberpunktcg",
       "published": "2026-10-15T14:00:35+00:00",
       "channelId": "UCGRtpjtxkby158dbitlcUkg"
-    },
-    {
-      "id": "OQVJxk5OsHQ",
-      "title": "Johnny's Requiem - 1 | Cyberpunk TCG Decklist",
-      "published": "2026-10-15T01:00:17+00:00",
-      "channelId": "UCDS55f82q_js397_UKs6Izg"
     },
     {
       "id": "8J4gdFDty7A",
@@ -934,10 +934,6 @@
       "short": false
     },
     {
-      "id": "OQVJxk5OsHQ",
-      "short": false
-    },
-    {
       "id": "Xg9odvIP2Nk",
       "short": false
     },
@@ -951,10 +947,6 @@
     },
     {
       "id": "2Nokg0ZOqqw",
-      "short": false
-    },
-    {
-      "id": "4UGvCdLgZDY",
       "short": false
     },
     {
@@ -1228,7 +1220,15 @@
     {
       "id": "5Vu5Ex8pm6k",
       "short": false
+    },
+    {
+      "id": "QGRQVqo0TSU",
+      "short": false
+    },
+    {
+      "id": "nKYtUd6iGnY",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-11T14:30:13.976Z"
+  "updatedAt": "2026-11-12T15:23:32.815Z"
 }
