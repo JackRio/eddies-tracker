@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T22:52:17.687Z",
+  "generatedAt": "2026-11-12T23:16:26.019Z",
   "pricesAsOf": "2026-11-12T02:51:41+0100",
   "cards": [
     {
@@ -37,24 +37,6 @@
       "price": 58,
       "priceGuess": false,
       "cmName": "Muamar Reyes - El Capitán"
-    },
-    {
-      "id": "0cb4ae83-a7ca-4ca6-9c83-6c0581baae57",
-      "name": "Saburo Arasaka",
-      "subname": "Stubborn Patriarch",
-      "displayName": "Saburo Arasaka: Stubborn Patriarch",
-      "color": "Green",
-      "cardType": "Legend",
-      "rarity": "Nova Rare",
-      "set": {
-        "code": "boxtoppersbeta",
-        "name": "Box Toppers — Beta"
-      },
-      "collectorNumber": "β004",
-      "qty": 1,
-      "price": 23.99,
-      "priceGuess": false,
-      "cmName": "Saburo Arasaka - Stubborn Patriarch"
     },
     {
       "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
