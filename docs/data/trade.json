@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-12T23:18:44.745Z",
-  "pricesAsOf": "2026-11-12T02:51:41+0100",
+  "generatedAt": "2026-11-14T07:30:26.625Z",
+  "pricesAsOf": "2026-11-13T02:44:35+0100",
   "cards": [
     {
       "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
@@ -87,7 +87,7 @@
         "name": "Night City Brawl S 1"
       },
       "collectorNumber": "017",
-      "qty": 1
+      "qty": 2
     },
     {
       "id": "d16f9b63-cc98-4b88-981e-258d1940aa04",
@@ -139,6 +139,39 @@
       "price": 1.4,
       "priceGuess": false,
       "cmName": "V - Roamer of the Badlands"
+    },
+    {
+      "id": "6b574386-2893-4236-86a4-68c48222ae9e",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "009",
+      "qty": 1,
+      "price": 0.1,
+      "priceGuess": true,
+      "cmName": "Corpo Security"
+    },
+    {
+      "id": "3a3900be-bbee-4218-8b58-0e5fa445ee46",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "013",
+      "qty": 1
     }
   ]
 }
