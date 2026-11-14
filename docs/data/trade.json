@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-11-14T07:31:31.563Z",
+  "generatedAt": "2026-11-14T11:50:57.126Z",
   "pricesAsOf": "2026-11-13T02:44:35+0100",
   "cards": [
     {
-      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
-      "name": "Sandayu Oda",
-      "subname": "Hanako's Guardian",
-      "displayName": "Sandayu Oda: Hanako's Guardian",
-      "color": "Green",
+      "id": "726b13d2-0d74-42db-a5e9-b8b852224a16",
+      "name": "Adam Smasher",
+      "subname": "Metal Over Meat",
+      "displayName": "Adam Smasher: Metal Over Meat",
+      "color": "Yellow",
       "cardType": "Unit",
       "rarity": "Iconic Other",
       "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
+        "code": "welcometonightcityretail",
+        "name": "Welcome to Night City — Retail"
       },
-      "collectorNumber": "β164",
+      "collectorNumber": "160",
       "qty": 1,
-      "price": 10,
+      "price": 30,
       "priceGuess": false,
-      "cmName": "Sandayu Oda - Hanako's Guardian"
+      "cmName": "Adam Smasher - Metal Over Meat"
     },
     {
       "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
@@ -39,22 +39,40 @@
       "cmName": "Jackie Welles - Pour One Out For Me"
     },
     {
-      "id": "726b13d2-0d74-42db-a5e9-b8b852224a16",
-      "name": "Adam Smasher",
-      "subname": "Metal Over Meat",
-      "displayName": "Adam Smasher: Metal Over Meat",
+      "id": "f997c534-5208-4c37-8aff-4f6587e606c2",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
       "color": "Yellow",
+      "cardType": "Program",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "007",
+      "qty": 1,
+      "price": 23,
+      "priceGuess": false,
+      "cmName": "Bootleg Black Sapphire Show"
+    },
+    {
+      "id": "b1db8654-6197-4e80-9555-8917dcba6dc7",
+      "name": "Sandayu Oda",
+      "subname": "Hanako's Guardian",
+      "displayName": "Sandayu Oda: Hanako's Guardian",
+      "color": "Green",
       "cardType": "Unit",
       "rarity": "Iconic Other",
       "set": {
-        "code": "welcometonightcityretail",
-        "name": "Welcome to Night City — Retail"
+        "code": "welcometonightcitybeta",
+        "name": "Welcome to Night City — Beta"
       },
-      "collectorNumber": "160",
+      "collectorNumber": "β164",
       "qty": 1,
-      "price": 30,
+      "price": 10,
       "priceGuess": false,
-      "cmName": "Adam Smasher - Metal Over Meat"
+      "cmName": "Sandayu Oda - Hanako's Guardian"
     },
     {
       "id": "f8098004-7b14-4d5a-8398-85c5660e1d8f",
@@ -69,7 +87,10 @@
         "name": "Night City Brawl S 1"
       },
       "collectorNumber": "017",
-      "qty": 2
+      "qty": 2,
+      "price": 9.99,
+      "priceGuess": false,
+      "cmName": "NetWatch Netdriver"
     },
     {
       "id": "d16f9b63-cc98-4b88-981e-258d1940aa04",
@@ -85,24 +106,45 @@
       },
       "collectorNumber": "006",
       "qty": 1,
-      "price": 0.1,
-      "priceGuess": true,
+      "price": 10,
+      "priceGuess": false,
       "cmName": "Mandibular Upgrade"
     },
     {
-      "id": "f997c534-5208-4c37-8aff-4f6587e606c2",
-      "name": "Bootleg Black Sapphire Show",
+      "id": "6b574386-2893-4236-86a4-68c48222ae9e",
+      "name": "Corpo Security",
       "subname": null,
-      "displayName": "Bootleg Black Sapphire Show",
-      "color": "Yellow",
+      "displayName": "Corpo Security",
+      "color": "Green",
+      "cardType": "Unit",
+      "rarity": "Nova Rare",
+      "set": {
+        "code": "nightcitybrawls1",
+        "name": "Night City Brawl S 1"
+      },
+      "collectorNumber": "009",
+      "qty": 1,
+      "price": 6.07,
+      "priceGuess": false,
+      "cmName": "Corpo Security"
+    },
+    {
+      "id": "3a3900be-bbee-4218-8b58-0e5fa445ee46",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "color": "Green",
       "cardType": "Program",
       "rarity": "Nova Rare",
       "set": {
         "code": "nightcitybrawls1",
         "name": "Night City Brawl S 1"
       },
-      "collectorNumber": "007",
-      "qty": 1
+      "collectorNumber": "013",
+      "qty": 1,
+      "price": 9.99,
+      "priceGuess": false,
+      "cmName": "We Gotta Live Together"
     },
     {
       "id": "b460b92c-c0fd-43ed-84db-8615032e47f4",
@@ -121,39 +163,6 @@
       "price": 1.4,
       "priceGuess": false,
       "cmName": "V - Roamer of the Badlands"
-    },
-    {
-      "id": "6b574386-2893-4236-86a4-68c48222ae9e",
-      "name": "Corpo Security",
-      "subname": null,
-      "displayName": "Corpo Security",
-      "color": "Green",
-      "cardType": "Unit",
-      "rarity": "Nova Rare",
-      "set": {
-        "code": "nightcitybrawls1",
-        "name": "Night City Brawl S 1"
-      },
-      "collectorNumber": "009",
-      "qty": 1,
-      "price": 0.1,
-      "priceGuess": true,
-      "cmName": "Corpo Security"
-    },
-    {
-      "id": "3a3900be-bbee-4218-8b58-0e5fa445ee46",
-      "name": "We Gotta Live Together",
-      "subname": null,
-      "displayName": "We Gotta Live Together",
-      "color": "Green",
-      "cardType": "Program",
-      "rarity": "Nova Rare",
-      "set": {
-        "code": "nightcitybrawls1",
-        "name": "Night City Brawl S 1"
-      },
-      "collectorNumber": "013",
-      "qty": 1
     }
   ]
 }

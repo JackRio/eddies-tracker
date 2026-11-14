@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T07:31:31.574Z",
+  "generatedAt": "2026-11-14T11:50:57.143Z",
   "cards": [
     {
       "id": "cb12d8c4-64b1-4e53-898e-8fd46aeac6bf",
@@ -98,42 +98,6 @@
       "priceGuess": true
     },
     {
-      "id": "a4271ab1-4688-4f98-b000-a186aadd7fee",
-      "name": "Minotaur",
-      "subname": null,
-      "displayName": "Minotaur",
-      "rarity": "Nova Rare",
-      "cardType": "Unit",
-      "color": "Red",
-      "set": "Night City Brawl S 1",
-      "price": 300,
-      "priceGuess": true
-    },
-    {
-      "id": "a9eb38f2-fe64-47c5-9938-9b6ecb01c913",
-      "name": "Sandevistan",
-      "subname": null,
-      "displayName": "Sandevistan",
-      "rarity": "Nova Rare",
-      "cardType": "Gear",
-      "color": "Green",
-      "set": "Night City Showdown S1",
-      "price": 300,
-      "priceGuess": true
-    },
-    {
-      "id": "c0a913fe-d3fc-4558-a35f-cfa34d4023c3",
-      "name": "Satori",
-      "subname": "Sword of Saburo",
-      "displayName": "Satori: Sword of Saburo",
-      "rarity": "Nova Rare",
-      "cardType": "Gear",
-      "color": "Red",
-      "set": "Night City Brawl S 1",
-      "price": 300,
-      "priceGuess": true
-    },
-    {
       "id": "23b81de3-abe3-4231-8dc3-7656de9d99db",
       "name": "Viktor Vektor",
       "subname": "Sit Down and Relax",
@@ -144,6 +108,30 @@
       "set": "Edgerunner Open S 1",
       "price": 300,
       "priceGuess": true
+    },
+    {
+      "id": "adf78727-f462-424c-8689-0b759794ee3c",
+      "name": "Jackie Welles",
+      "subname": "Ride or Die Choom",
+      "displayName": "Jackie Welles: Ride or Die Choom",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Yellow",
+      "set": "Night City Brawl S 1",
+      "price": 200,
+      "priceGuess": false
+    },
+    {
+      "id": "575138c0-4eae-4d61-abf7-028557a884c8",
+      "name": "Floor It",
+      "subname": null,
+      "displayName": "Floor It",
+      "rarity": "Nova Rare",
+      "cardType": "Program",
+      "color": "Blue",
+      "set": "Night City Brawl S 1",
+      "price": 150,
+      "priceGuess": false
     },
     {
       "id": "71a35836-e604-4d98-ab56-58bfb4581033",
@@ -158,6 +146,102 @@
       "priceGuess": true
     },
     {
+      "id": "9f7b3df5-721c-410f-8dec-5ce3bc4377c0",
+      "name": "Secondhand Bombus",
+      "subname": null,
+      "displayName": "Secondhand Bombus",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Yellow",
+      "set": "Night City Brawl S 1",
+      "price": 80,
+      "priceGuess": false
+    },
+    {
+      "id": "86bc6f96-41d3-4639-b75b-25ae58202b3d",
+      "name": "Bootleg Black Sapphire Show",
+      "subname": null,
+      "displayName": "Bootleg Black Sapphire Show",
+      "rarity": "Nova Rare",
+      "cardType": "Program",
+      "color": "Yellow",
+      "set": "Night City Brawl S 1",
+      "price": 74.99,
+      "priceGuess": false
+    },
+    {
+      "id": "c89b85cb-aa23-4fa6-b093-aad81bde74a4",
+      "name": "MaxTac Squadron",
+      "subname": null,
+      "displayName": "MaxTac Squadron",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Green",
+      "set": "Night City Brawl S 1",
+      "price": 70,
+      "priceGuess": false
+    },
+    {
+      "id": "6121b4c1-b899-4c69-a7d6-674bb6889e29",
+      "name": "(Don't Fear) The Reaper",
+      "subname": null,
+      "displayName": "(Don't Fear) The Reaper",
+      "rarity": "Nova Rare",
+      "cardType": "Program",
+      "color": "Green",
+      "set": "Night City Brawl S 1",
+      "price": 60,
+      "priceGuess": false
+    },
+    {
+      "id": "34dd1e1b-5022-4858-91bc-1243ea7f4615",
+      "name": "Mandibular Upgrade",
+      "subname": null,
+      "displayName": "Mandibular Upgrade",
+      "rarity": "Nova Rare",
+      "cardType": "Gear",
+      "color": "Yellow",
+      "set": "Night City Brawl S 1",
+      "price": 60,
+      "priceGuess": false
+    },
+    {
+      "id": "aea6c98e-6bc5-4912-b7d8-a6558fde5eaf",
+      "name": "We Gotta Live Together",
+      "subname": null,
+      "displayName": "We Gotta Live Together",
+      "rarity": "Nova Rare",
+      "cardType": "Program",
+      "color": "Green",
+      "set": "Night City Brawl S 1",
+      "price": 55,
+      "priceGuess": false
+    },
+    {
+      "id": "8c0cd775-71b6-43f9-af49-1d41386eb1ee",
+      "name": "Corpo Security",
+      "subname": null,
+      "displayName": "Corpo Security",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Green",
+      "set": "Night City Brawl S 1",
+      "price": 50,
+      "priceGuess": false
+    },
+    {
+      "id": "1f3e50a4-54ea-4e77-9ef3-0ceeb38d0278",
+      "name": "Delamain Cab",
+      "subname": null,
+      "displayName": "Delamain Cab",
+      "rarity": "Nova Rare",
+      "cardType": "Unit",
+      "color": "Blue",
+      "set": "Night City Brawl S 1",
+      "price": 50,
+      "priceGuess": false
+    },
+    {
       "id": "3f37a0e1-e31f-4c6b-b97e-bec9f929432c",
       "name": "Jackie Welles",
       "subname": "Pour One Out For Me",
@@ -168,90 +252,6 @@
       "set": "Edgerunner Open S 1",
       "price": 50,
       "priceGuess": true
-    },
-    {
-      "id": "17517c74-9e61-423a-9d65-c7f4b56af29a",
-      "name": "Misty Olszewski",
-      "subname": "Mender of Broken Spirits",
-      "displayName": "Misty Olszewski: Mender of Broken Spirits",
-      "rarity": "Nova Rare",
-      "cardType": "Unit",
-      "color": "Blue",
-      "set": "Set 1 Promos",
-      "price": 33,
-      "priceGuess": false
-    },
-    {
-      "id": "5b855c9c-bdf3-4743-9653-d6eb6ce3f6f5",
-      "name": "Jackie Welles",
-      "subname": "Ride or Die Choom",
-      "displayName": "Jackie Welles: Ride or Die Choom",
-      "rarity": "Nova Rare",
-      "cardType": "Unit",
-      "color": "Yellow",
-      "set": "Night City Brawl S 1",
-      "price": 30,
-      "priceGuess": true
-    },
-    {
-      "id": "e4e17d32-3ec4-4c74-927c-fd0911b86e72",
-      "name": "Jackie Welles",
-      "subname": "Pour One Out For Me",
-      "displayName": "Jackie Welles: Pour One Out For Me",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Box Toppers",
-      "price": 29.99,
-      "priceGuess": false
-    },
-    {
-      "id": "f509ebd8-c8b7-4a22-8922-2d71c6df0b6f",
-      "name": "V",
-      "subname": "Corporate Exile",
-      "displayName": "V: Corporate Exile",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Blue",
-      "set": "Box Toppers",
-      "price": 25,
-      "priceGuess": false
-    },
-    {
-      "id": "77e482f2-6090-47e9-9d03-be28417cb1cb",
-      "name": "Saburo Arasaka",
-      "subname": "Stubborn Patriarch",
-      "displayName": "Saburo Arasaka: Stubborn Patriarch",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Green",
-      "set": "Box Toppers",
-      "price": 23.99,
-      "priceGuess": false
-    },
-    {
-      "id": "1b6e44dd-d6e7-46eb-a5e5-24c38eed888b",
-      "name": "Goro Takemura",
-      "subname": "Hands Unclean",
-      "displayName": "Goro Takemura: Hands Unclean",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Green",
-      "set": "Box Toppers",
-      "price": 18,
-      "priceGuess": false
-    },
-    {
-      "id": "c9ceb0e7-c803-45d1-8da1-8c85c3b2e7e8",
-      "name": "Viktor Vektor",
-      "subname": "Sit Down and Relax",
-      "displayName": "Viktor Vektor: Sit Down and Relax",
-      "rarity": "Nova Rare",
-      "cardType": "Legend",
-      "color": "Yellow",
-      "set": "Box Toppers",
-      "price": 17.4,
-      "priceGuess": false
     }
   ]
 }
