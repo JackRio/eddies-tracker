@@ -14,7 +14,8 @@ const CM_PRICES_URL = `https://downloads.s3.cardmarket.com/productCatalog/priceG
 const PRICE_MAX_AGE_MS = 12 * 60 * 60 * 1000; // Cardmarket regenerates once a day
 
 // Our set code -> Cardmarket idExpansion. Cardmarket merges Retail/Beta
-// printings into one expansion, and all tournament-prize sets into another.
+// printings into one expansion, and the early tournament-prize sets into
+// another; Brawl/Showdown S1 and Judge Promos later got their own.
 // Inferred from card-name overlap between the two catalogs; if Cardmarket
 // adds a new expansion, printings in unmapped sets just fall back to
 // name-only candidates (manual pick).
@@ -31,9 +32,10 @@ const SET_TO_EXPANSION = {
   PRM01: 6719,
   mercdemodeck: 6720,
   arasakademodeck: 6721,
-  nightcitybrawls1: 6722,
   edgerunneropens1: 6722,
-  nightcityshowdowns1: 6722
+  judgepromos: 6952,
+  nightcitybrawls1: 6953,
+  nightcityshowdowns1: 6954
 };
 
 const EXPANSION_NAMES = {
@@ -45,7 +47,10 @@ const EXPANSION_NAMES = {
   6719: 'Promos',
   6720: 'Merc Demo Deck',
   6721: 'Arasaka Demo Deck',
-  6722: 'Tournament Prizes'
+  6722: 'Tournament Prizes',
+  6952: 'Judge Promos',
+  6953: 'Night City Brawl S1',
+  6954: 'Night City Showdown S1'
 };
 
 // Keep in sync with RARITY_ORDER in renderer.js.
