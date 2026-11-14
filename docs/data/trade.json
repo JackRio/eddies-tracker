@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T07:30:26.625Z",
+  "generatedAt": "2026-11-14T07:31:31.563Z",
   "pricesAsOf": "2026-11-13T02:44:35+0100",
   "cards": [
     {
@@ -19,24 +19,6 @@
       "price": 10,
       "priceGuess": false,
       "cmName": "Sandayu Oda - Hanako's Guardian"
-    },
-    {
-      "id": "2e06439f-fab6-4a65-a1fc-e5f4afc84eb0",
-      "name": "Muamar Reyes",
-      "subname": "El Capitán",
-      "displayName": "Muamar Reyes: El Capitán",
-      "color": "Yellow",
-      "cardType": "Legend",
-      "rarity": "Iconic Legend",
-      "set": {
-        "code": "welcometonightcitybeta",
-        "name": "Welcome to Night City — Beta"
-      },
-      "collectorNumber": "β147",
-      "qty": 1,
-      "price": 58,
-      "priceGuess": false,
-      "cmName": "Muamar Reyes - El Capitán"
     },
     {
       "id": "328cd3e4-4177-4d6a-86c0-00d1a5a12b38",
