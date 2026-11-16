@@ -13,6 +13,18 @@
   ],
   "videos": [
     {
+      "id": "BlUfbnI8TF8",
+      "title": "Catching Up on New Developments! - Month 2 Metagame Tier List (November 2026 Format)",
+      "published": "2026-11-16T10:05:29+00:00",
+      "channelId": "UCYEkVvvgmDsjNqdR6T7m_Hw"
+    },
+    {
+      "id": "9iCojXTnMsU",
+      "title": "My Showdown-Winning Deck Tech: Cyberpunk TCG - YYR (Turbo Smasher)",
+      "published": "2026-11-15T16:39:12+00:00",
+      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
+    },
+    {
       "id": "DastMCxSBbE",
       "title": "Time to Throw Down At the CyberpunkTCG Night City Showdown!!",
       "published": "2026-11-09T19:35:57+00:00",
@@ -52,12 +64,6 @@
       "id": "9j2ondicjPU",
       "title": "Cyberpunk TCG Blue Units Tier List for Set 1 \"Welcome to Night City\"",
       "published": "2026-10-09T02:26:26+00:00",
-      "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
-    },
-    {
-      "id": "gzjMxMv7EH8",
-      "title": "Cyberpunk TCG Green Units Tier List for Set 1 \"Welcome To Night City.\"",
-      "published": "2026-10-07T02:01:45+00:00",
       "channelId": "UCU7W0L3dYD9jA1WabLBBzJA"
     },
     {
@@ -117,10 +123,6 @@
       "short": false
     },
     {
-      "id": "gzjMxMv7EH8",
-      "short": false
-    },
-    {
       "id": "wTbbphbbXb8",
       "short": false
     },
@@ -163,7 +165,15 @@
     {
       "id": "DastMCxSBbE",
       "short": false
+    },
+    {
+      "id": "BlUfbnI8TF8",
+      "short": false
+    },
+    {
+      "id": "9iCojXTnMsU",
+      "short": false
     }
   ],
-  "updatedAt": "2026-11-13T14:40:56.541Z"
+  "updatedAt": "2026-11-16T15:58:37.402Z"
 }
